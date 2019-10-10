@@ -1,8 +1,8 @@
 package org.liufeng.course.menu;
 
 /**
- * view���͵İ�ť
- * 
+ * view类型的按钮
+ *
  * @author liuyq
  * @date 2013-10-14
  */

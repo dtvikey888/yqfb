@@ -1,13 +1,13 @@
 package org.liufeng.course.message.resp;
 
 /**
- * ÓïÒômodel
- * 
+ * è¯­éŸ³model
+ *
  * @author liufeng
  * @date 2013-09-11
  */
 public class Voice {
-	// Ã½ÌåÎÄ¼şid
+	// åª’ä½“æ–‡ä»¶id
 	private String MediaId;
 
 	public String getMediaId() {

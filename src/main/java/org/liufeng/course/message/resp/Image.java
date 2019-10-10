@@ -1,13 +1,13 @@
 package org.liufeng.course.message.resp;
 
 /**
- * ͼƬmodel
- * 
+ * 图片model
+ *
  * @author liufeng
  * @date 2013-09-11
  */
 public class Image {
-	// ý���ļ�id
+	// 媒体文件id
 	private String MediaId;
 
 	public String getMediaId() {

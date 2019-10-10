@@ -3,30 +3,30 @@ package org.liufeng.course.pojo;
 import java.util.List;
 /**
  * create table wxinterface_yqfbwx_articletotal
-(
-id int identity,
-ref_date varchar(50),
-msgid varchar(50),
-title varchar(2000)
-)
- * 
- * 
- * 
+ (
+ id int identity,
+ ref_date varchar(50),
+ msgid varchar(50),
+ title varchar(2000)
+ )
+ *
+ *
+ *
  */
 
-//Êı¾İÍ³¼Æ½Ó¿Ú_Í¼ÎÄ·ÖÎöÊı¾İ½Ó¿Ú_»ñÈ¡Í¼ÎÄÈº·¢×ÜÊı¾İpojo
+//æ•°æ®ç»Ÿè®¡æ¥å£_å›¾æ–‡åˆ†ææ•°æ®æ¥å£_è·å–å›¾æ–‡ç¾¤å‘æ€»æ•°æ®pojo
 public class ArticleTotal {
-	
-	//Êı¾İµÄÈÕÆÚ
+
+	//æ•°æ®çš„æ—¥æœŸ
 	private String ref_date;
 	private String msgid;
-	//Í¼ÎÄÏûÏ¢µÄ±êÌâ
+	//å›¾æ–‡æ¶ˆæ¯çš„æ ‡é¢˜
 	private String title;
-	// DetailsÁĞ±í
+	// Detailsåˆ—è¡¨
 	private List<ArticleTotal2> details;
-	
 
-	
+
+
 	public String getRef_date() {
 		return ref_date;
 	}
@@ -51,7 +51,7 @@ public class ArticleTotal {
 	public void setDetails(List<ArticleTotal2> details) {
 		this.details = details;
 	}
-	
-	
+
+
 
 }

@@ -1,28 +1,28 @@
 package org.liufeng.course.pojo;
-//Êı¾İÍ³¼Æ½Ó¿Ú_Í¼ÎÄ·ÖÎöÊı¾İ½Ó¿Ú_»ñÈ¡Í¼ÎÄ·ÖÏí×ª·¢Êı¾İpojo
+//æ•°æ®ç»Ÿè®¡æ¥å£_å›¾æ–‡åˆ†ææ•°æ®æ¥å£_è·å–å›¾æ–‡åˆ†äº«è½¬å‘æ•°æ®pojo
 /**
  *  create table wxinterface_yqfbwx_usershare
-(
-id int identity,
-ref_date varchar(50),
-share_scene int,
-share_user int,
-share_count int,
-)
+ (
+ id int identity,
+ ref_date varchar(50),
+ share_scene int,
+ share_user int,
+ share_count int,
+ )
  */
 public class UserShare {
-	
-	//Êı¾İµÄÈÕÆÚ
+
+	//æ•°æ®çš„æ—¥æœŸ
 	private String ref_date;
-	//·ÖÏíµÄ³¡¾°
-	//1´ú±íºÃÓÑ×ª·¢ 2´ú±íÅóÓÑÈ¦ 3´ú±íÌÚÑ¶Î¢²© 255´ú±íÆäËû
+	//åˆ†äº«çš„åœºæ™¯
+	//1ä»£è¡¨å¥½å‹è½¬å‘ 2ä»£è¡¨æœ‹å‹åœˆ 3ä»£è¡¨è…¾è®¯å¾®åš 255ä»£è¡¨å…¶ä»–
 	private int share_scene;
-	//·ÖÏíµÄ´ÎÊı
-	private int share_count; 
-	//·ÖÏíµÄÈËÊı
+	//åˆ†äº«çš„æ¬¡æ•°
+	private int share_count;
+	//åˆ†äº«çš„äººæ•°
 	private int share_user;
-	
-	
+
+
 	public String getRef_date() {
 		return ref_date;
 	}
@@ -47,8 +47,8 @@ public class UserShare {
 	public void setShare_user(int share_user) {
 		this.share_user = share_user;
 	}
-	
-	
-	
+
+
+
 
 }

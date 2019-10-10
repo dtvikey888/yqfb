@@ -1,8 +1,8 @@
 package org.liufeng.course.menu;
 
 /**
- * ¸´ºÏÀàĞÍµÄ°´Å¥
- * 
+ * å¤åˆç±»å‹çš„æŒ‰é’®
+ *
  * @author liufeng
  * @date 2013-08-08
  */

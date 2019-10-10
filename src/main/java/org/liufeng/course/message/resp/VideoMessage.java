@@ -1,13 +1,13 @@
 package org.liufeng.course.message.resp;
 
 /**
- * 视频消息
- * 
+ * 瑙嗛娑堟伅
+ *
  * @author liufeng
  * @date 2013-09-11
  */
 public class VideoMessage extends BaseMessage {
-	// 视频
+	// 瑙嗛
 	private Video Video;
 
 	public Video getVideo() {

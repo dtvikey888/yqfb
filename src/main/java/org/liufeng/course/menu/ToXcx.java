@@ -1,17 +1,17 @@
 package org.liufeng.course.menu;
 
 /**
- * ÀàÃû³Æ:ToXcx.java
- * ÀàÃèÊö:Ğ¡³ÌĞò²Ëµ¥ÊµÌåÀà
- * ×÷    Õß:why
- * Ê±    ¼ä:2017Äê4ÔÂ21ÈÕ
+ * ç±»åç§°:ToXcx.java
+ * ç±»æè¿°:å°ç¨‹åºèœå•å®ä½“ç±»
+ * ä½œ    è€…:why
+ * æ—¶    é—´:2017å¹´4æœˆ21æ—¥
  */
 public class ToXcx extends Button {
-	private String type;		//ÀàĞÍ
-	private String name;		//²Ëµ¥Ãû³Æ
-	private String url;			//²»Ö§³ÖĞ¡³ÌĞòÌø×ªµØÖ·
-	private String appid;		//Ğ¡³ÌĞòappid
-	private String pagepath;	//Ğ¡³ÌĞòÒ³ÃæÂ·¾¶
+	private String type;		//ç±»å‹
+	private String name;		//èœå•åç§°
+	private String url;			//ä¸æ”¯æŒå°ç¨‹åºè·³è½¬åœ°å€
+	private String appid;		//å°ç¨‹åºappid
+	private String pagepath;	//å°ç¨‹åºé¡µé¢è·¯å¾„
 	public String getType() {
 		return type;
 	}
@@ -42,5 +42,5 @@ public class ToXcx extends Button {
 	public void setPagepath(String pagepath) {
 		this.pagepath = pagepath;
 	}
-	
+
 }

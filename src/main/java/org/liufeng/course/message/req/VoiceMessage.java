@@ -1,17 +1,17 @@
 package org.liufeng.course.message.req;
 
 /**
- * 语音消息
- * 
+ * 璇煶娑堟伅
+ *
  * @author liufeng
  * @date 2013-09-11
  */
 public class VoiceMessage extends BaseMessage {
-	// 媒体ID
+	// 濯掍綋ID
 	private String MediaId;
-	// 语音格式
+	// 璇煶鏍煎紡
 	private String Format;
-	// 语音识别结果，UTF8编码
+	// 璇煶璇嗗埆缁撴灉锛孶TF8缂栫爜
 	private String Recognition;
 
 	public String getMediaId() {

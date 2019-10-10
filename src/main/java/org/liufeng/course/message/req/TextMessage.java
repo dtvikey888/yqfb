@@ -1,13 +1,13 @@
 package org.liufeng.course.message.req;
 
 /**
- * 文本消息
- * 
+ * 鏂囨湰娑堟伅
+ *
  * @author liufeng
  * @date 2013-09-11
  */
 public class TextMessage extends BaseMessage {
-	// 消息内容
+	// 娑堟伅鍐呭
 	private String Content;
 
 	public String getContent() {

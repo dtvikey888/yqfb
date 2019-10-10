@@ -64,7 +64,7 @@ if(ext.indexOf("m4a")!=-1){
  //更改文件名，取得当前上传时间的毫秒数值  
 Calendar calendar = Calendar.getInstance();
 String filename = String.valueOf(calendar.getTimeInMillis()); 
-saveurl = "C:\\webapp\\jsp\\"+url;
+saveurl = "E:\\webapp\\jsp\\"+url;
 
 System.out.println("dizhi:"+saveurl);
  saveurl+=filename+"."+ext2; //保存路径
@@ -105,7 +105,9 @@ String lb = mySmartUpload.getRequest().getParameter("lb");
 	
 		
 	}else{
+
     	out.print("<script type=\"text/javascript\">alert('"+AllValus.title4+"');document.location.href='UP2.jsp?openid="+openid+"';</script>");
+
 	}
 
 
@@ -139,7 +141,8 @@ String lb = mySmartUpload.getRequest().getParameter("lb");
  }  
  }  
  }catch (Exception e){
-    out.print(e.toString());  
+    out.print(e.toString());
+
  }
 %>   
 

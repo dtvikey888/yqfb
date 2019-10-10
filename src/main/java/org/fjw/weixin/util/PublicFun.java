@@ -175,6 +175,7 @@ public class PublicFun {
 		return b;
 	}
 
+
 	/**
 	 * @param urlAdd （url地址,及网页中的动态链接的地址）
 	 * @param fileName（生成文件的名称）
@@ -197,4 +198,5 @@ public class PublicFun {
 		encoder.encode(tag); // 近JPEG编码
 		out.close();
 	}
+
 }

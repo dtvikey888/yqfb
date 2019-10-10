@@ -1,8 +1,8 @@
 package org.liufeng.course.message.event;
 
 /**
- * 关注/取消关注事件
- * 
+ * 鍏虫敞/鍙栨秷鍏虫敞浜嬩欢
+ *
  * @author liufeng
  * @date 2013-11-04
  */

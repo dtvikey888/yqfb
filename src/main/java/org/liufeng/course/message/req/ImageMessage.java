@@ -1,13 +1,13 @@
 package org.liufeng.course.message.req;
 
 /**
- * ͼƬ��Ϣ
- * 
+ * 图片消息
+ *
  * @author liufeng
  * @date 2013-09-11
  */
 public class ImageMessage extends BaseMessage {
-	// ͼƬ����
+	// 图片链接
 	private String PicUrl;
 
 	public String getPicUrl() {

@@ -1,13 +1,13 @@
 package org.liufeng.course.message.resp;
 
 /**
- * ÓïÒôÏûÏ¢
- * 
+ * è¯­éŸ³æ¶ˆæ¯
+ *
  * @author liufeng
  * @date 2013-09-11
  */
 public class VoiceMessage extends BaseMessage {
-	// ÓïÒô
+	// è¯­éŸ³
 	private Voice Voice;
 
 	public Voice getVoice() {

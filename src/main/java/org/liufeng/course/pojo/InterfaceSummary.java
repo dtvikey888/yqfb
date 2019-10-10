@@ -1,28 +1,28 @@
 package org.liufeng.course.pojo;
-//Êı¾İÍ³¼Æ½Ó¿Ú_½Ó¿Ú·ÖÎöÊı¾İ½Ó¿Ú_»ñÈ¡½Ó¿Ú·ÖÎöÊı¾İpojo
+//æ•°æ®ç»Ÿè®¡æ¥å£_æ¥å£åˆ†ææ•°æ®æ¥å£_è·å–æ¥å£åˆ†ææ•°æ®pojo
 /**
  * create table wxinterface_yqfbwx_interfacesummary
-(
-id int identity,
-ref_date varchar(50),
-callback_count int,
-fail_count int,
-total_time_cost int,
-max_time_cost int
-)
+ (
+ id int identity,
+ ref_date varchar(50),
+ callback_count int,
+ fail_count int,
+ total_time_cost int,
+ max_time_cost int
+ )
  */
 public class InterfaceSummary {
-	//Êı¾İµÄÈÕÆÚ£¬ĞèÔÚbegin_dateºÍend_dateÖ®¼ä
+	//æ•°æ®çš„æ—¥æœŸï¼Œéœ€åœ¨begin_dateå’Œend_dateä¹‹é—´
 	private String ref_date;
-	//Í¨¹ı·şÎñÆ÷ÅäÖÃµØÖ·»ñµÃÏûÏ¢ºó£¬±»¶¯»Ø¸´ÓÃ»§ÏûÏ¢µÄ´ÎÊı
+	//é€šè¿‡æœåŠ¡å™¨é…ç½®åœ°å€è·å¾—æ¶ˆæ¯åï¼Œè¢«åŠ¨å›å¤ç”¨æˆ·æ¶ˆæ¯çš„æ¬¡æ•°
 	private int callback_count;
-	//ÉÏÊö¶¯×÷µÄÊ§°Ü´ÎÊı
+	//ä¸Šè¿°åŠ¨ä½œçš„å¤±è´¥æ¬¡æ•°
 	private int fail_count;
-	//×ÜºÄÊ±£¬³ıÒÔcallback_count¼´ÎªÆ½¾ùºÄÊ±
+	//æ€»è€—æ—¶ï¼Œé™¤ä»¥callback_countå³ä¸ºå¹³å‡è€—æ—¶
 	private int total_time_cost;
-	//×î´óºÄÊ±
+	//æœ€å¤§è€—æ—¶
 	private int max_time_cost;
-	
+
 	public String getRef_date() {
 		return ref_date;
 	}
@@ -53,8 +53,8 @@ public class InterfaceSummary {
 	public void setMax_time_cost(int max_time_cost) {
 		this.max_time_cost = max_time_cost;
 	}
-	
-	
-	
-   
+
+
+
+
 }

@@ -3,20 +3,20 @@ package org.liufeng.course.pojo;
 import java.util.List;
 
 /**
- * 关注用户列表
- * 
+ * 鍏虫敞鐢ㄦ埛鍒楄〃
+ *
  * @author liufeng
  * @date 2013-11-09
  */
 public class WeixinUserList {
-	
-	// 公众账号的总关注用户数
+
+	// 鍏紬璐﹀彿鐨勬�诲叧娉ㄧ敤鎴锋暟
 	private int total;
-	// 获取的OpenID个数
+	// 鑾峰彇鐨凮penID涓暟
 	private int count;
-	// OpenID列表
+	// OpenID鍒楄〃
 	private List<String> openIdList;
-	// 拉取列表的后一个用户的OPENID
+	// 鎷夊彇鍒楄〃鐨勫悗涓�涓敤鎴风殑OPENID
 	private String nextOpenId;
 
 	public int getTotal() {

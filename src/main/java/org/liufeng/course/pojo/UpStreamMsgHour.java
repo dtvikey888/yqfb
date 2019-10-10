@@ -1,29 +1,29 @@
 package org.liufeng.course.pojo;
-//Êı¾İÍ³¼Æ½Ó¿Ú_ÏûÏ¢·ÖÎöÊı¾İ½Ó¿Ú_»ñÈ¡ÏûÏ¢·ÖËÍ·ÖÊ±Êı¾İpojo
+//æ•°æ®ç»Ÿè®¡æ¥å£_æ¶ˆæ¯åˆ†ææ•°æ®æ¥å£_è·å–æ¶ˆæ¯åˆ†é€åˆ†æ—¶æ•°æ®pojo
 /**
  * create table wxinterface_yqfbwx_upstreammsghour
-(
-id int identity,
-ref_date varchar(50),
-ref_hour int,
-msg_type int,
-msg_user int,
-msg_count int
-)
+ (
+ id int identity,
+ ref_date varchar(50),
+ ref_hour int,
+ msg_type int,
+ msg_user int,
+ msg_count int
+ )
  */
 public class UpStreamMsgHour {
-	//Êı¾İµÄÈÕÆÚ
-	private String ref_date; 
-	//Êı¾İµÄĞ¡Ê±£¬°üÀ¨´Ó000µ½2300£¬·Ö±ğ´ú±íµÄÊÇ[000,100)µ½[2300,2400)£¬¼´Ã¿ÈÕµÄµÚ1Ğ¡Ê±ºÍ×îºó1Ğ¡Ê±
+	//æ•°æ®çš„æ—¥æœŸ
+	private String ref_date;
+	//æ•°æ®çš„å°æ—¶ï¼ŒåŒ…æ‹¬ä»000åˆ°2300ï¼Œåˆ†åˆ«ä»£è¡¨çš„æ˜¯[000,100)åˆ°[2300,2400)ï¼Œå³æ¯æ—¥çš„ç¬¬1å°æ—¶å’Œæœ€å1å°æ—¶
 	private int ref_hour;
-	//ÏûÏ¢ÀàĞÍ£¬´ú±íº¬ÒåÈçÏÂ£º
-	//1´ú±íÎÄ×Ö 2´ú±íÍ¼Æ¬ 3´ú±íÓïÒô 4´ú±íÊÓÆµ 6´ú±íµÚÈı·½Ó¦ÓÃÏûÏ¢£¨Á´½ÓÏûÏ¢£©
+	//æ¶ˆæ¯ç±»å‹ï¼Œä»£è¡¨å«ä¹‰å¦‚ä¸‹ï¼š
+	//1ä»£è¡¨æ–‡å­— 2ä»£è¡¨å›¾ç‰‡ 3ä»£è¡¨è¯­éŸ³ 4ä»£è¡¨è§†é¢‘ 6ä»£è¡¨ç¬¬ä¸‰æ–¹åº”ç”¨æ¶ˆæ¯ï¼ˆé“¾æ¥æ¶ˆæ¯ï¼‰
 	private int msg_type;
-	//ÉÏĞĞ·¢ËÍÁË£¨Ïò¹«ÖÚºÅ·¢ËÍÁË£©ÏûÏ¢µÄÓÃ»§Êı
+	//ä¸Šè¡Œå‘é€äº†ï¼ˆå‘å…¬ä¼—å·å‘é€äº†ï¼‰æ¶ˆæ¯çš„ç”¨æˆ·æ•°
 	private int msg_user;
-	//ÉÏĞĞ·¢ËÍÁËÏûÏ¢µÄÏûÏ¢×ÜÊı
+	//ä¸Šè¡Œå‘é€äº†æ¶ˆæ¯çš„æ¶ˆæ¯æ€»æ•°
 	private int msg_count;
-	
+
 	public String getRef_date() {
 		return ref_date;
 	}
@@ -54,6 +54,6 @@ public class UpStreamMsgHour {
 	public void setMsg_count(int msg_count) {
 		this.msg_count = msg_count;
 	}
-	
-	
+
+
 }

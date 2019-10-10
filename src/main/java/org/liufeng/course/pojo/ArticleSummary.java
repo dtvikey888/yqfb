@@ -1,46 +1,46 @@
 package org.liufeng.course.pojo;
-//Êı¾İÍ³¼Æ½Ó¿Ú_Í¼ÎÄ·ÖÎöÊı¾İ½Ó¿Ú_»ñÈ¡Í¼ÎÄÈº·¢Ã¿ÈÕÊı¾İpojo
+//æ•°æ®ç»Ÿè®¡æ¥å£_å›¾æ–‡åˆ†ææ•°æ®æ¥å£_è·å–å›¾æ–‡ç¾¤å‘æ¯æ—¥æ•°æ®pojo
 /**
  * create table wxinterface_yqfbwx_articlesummary
-(
-id int identity,
-ref_date varchar(50),
-msgid varchar(50),
-title varchar(2000),
-int_page_read_user int,
-int_page_read_count int,
-ori_page_read_user int,
-ori_page_read_count int,
-share_user int,
-share_count int,
-add_to_fav_user int,
-add_to_fav_count int
-)
+ (
+ id int identity,
+ ref_date varchar(50),
+ msgid varchar(50),
+ title varchar(2000),
+ int_page_read_user int,
+ int_page_read_count int,
+ ori_page_read_user int,
+ ori_page_read_count int,
+ share_user int,
+ share_count int,
+ add_to_fav_user int,
+ add_to_fav_count int
+ )
  */
 public class ArticleSummary {
-	//Êı¾İµÄÈÕÆÚ
+	//æ•°æ®çš„æ—¥æœŸ
 	private String ref_date;
 	private String msgid;
-	//Í¼ÎÄÏûÏ¢µÄ±êÌâ
+	//å›¾æ–‡æ¶ˆæ¯çš„æ ‡é¢˜
 	private String title;
-	//Í¼ÎÄÒ³£¨µã»÷Èº·¢Í¼ÎÄ¿¨Æ¬½øÈëµÄÒ³Ãæ£©µÄÔÄ¶ÁÈËÊı
+	//å›¾æ–‡é¡µï¼ˆç‚¹å‡»ç¾¤å‘å›¾æ–‡å¡ç‰‡è¿›å…¥çš„é¡µé¢ï¼‰çš„é˜…è¯»äººæ•°
 	private int int_page_read_user;
-	//Í¼ÎÄÒ³µÄÔÄ¶Á´ÎÊı
+	//å›¾æ–‡é¡µçš„é˜…è¯»æ¬¡æ•°
 	private int int_page_read_count;
-	//Ô­ÎÄÒ³£¨µã»÷Í¼ÎÄÒ³¡°ÔÄ¶ÁÔ­ÎÄ¡±½øÈëµÄÒ³Ãæ£©µÄÔÄ¶ÁÈËÊı£¬ÎŞÔ­ÎÄÒ³Ê±´Ë´¦Êı¾İÎª0
+	//åŸæ–‡é¡µï¼ˆç‚¹å‡»å›¾æ–‡é¡µâ€œé˜…è¯»åŸæ–‡â€è¿›å…¥çš„é¡µé¢ï¼‰çš„é˜…è¯»äººæ•°ï¼Œæ— åŸæ–‡é¡µæ—¶æ­¤å¤„æ•°æ®ä¸º0
 	private int ori_page_read_user;
-	//Ô­ÎÄÒ³µÄÔÄ¶Á´ÎÊı
+	//åŸæ–‡é¡µçš„é˜…è¯»æ¬¡æ•°
 	private int ori_page_read_count;
-	//·ÖÏíµÄ³¡¾°
-	//1´ú±íºÃÓÑ×ª·¢ 2´ú±íÅóÓÑÈ¦ 3´ú±íÌÚÑ¶Î¢²© 255´ú±íÆäËû
+	//åˆ†äº«çš„åœºæ™¯
+	//1ä»£è¡¨å¥½å‹è½¬å‘ 2ä»£è¡¨æœ‹å‹åœˆ 3ä»£è¡¨è…¾è®¯å¾®åš 255ä»£è¡¨å…¶ä»–
 	private int share_user;
-	//·ÖÏíµÄ´ÎÊı
+	//åˆ†äº«çš„æ¬¡æ•°
 	private int share_count;
-	//ÊÕ²ØµÄÈËÊı
+	//æ”¶è—çš„äººæ•°
 	private int add_to_fav_user;
-	//ÊÕ²ØµÄ´ÎÊı
+	//æ”¶è—çš„æ¬¡æ•°
 	private int add_to_fav_count;
-	
+
 	public String getRef_date() {
 		return ref_date;
 	}
@@ -107,7 +107,7 @@ public class ArticleSummary {
 	public void setAdd_to_fav_count(int add_to_fav_count) {
 		this.add_to_fav_count = add_to_fav_count;
 	}
-	
-	
+
+
 
 }

@@ -1,23 +1,23 @@
 package org.liufeng.course.pojo;
-//Êı¾İÍ³¼Æ½Ó¿Ú_ÏûÏ¢·ÖÎöÊı¾İ½Ó¿Ú_»ñÈ¡ÏûÏ¢·¢ËÍ·Ö²¼Êı¾İpojo
+//æ•°æ®ç»Ÿè®¡æ¥å£_æ¶ˆæ¯åˆ†ææ•°æ®æ¥å£_è·å–æ¶ˆæ¯å‘é€åˆ†å¸ƒæ•°æ®pojo
 /**
  * create table wxinterface_yqfbwx_upstreammsgdist
-(
-id int identity,
-ref_date varchar(50),
-count_interval int,
-msg_user int,
-)
+ (
+ id int identity,
+ ref_date varchar(50),
+ count_interval int,
+ msg_user int,
+ )
  */
 public class UpStreamMsgDist {
-	
-	//Êı¾İµÄÈÕÆÚ£¬ĞèÔÚbegin_dateºÍend_dateÖ®¼ä
+
+	//æ•°æ®çš„æ—¥æœŸï¼Œéœ€åœ¨begin_dateå’Œend_dateä¹‹é—´
 	private String ref_date;
-	//µ±ÈÕ·¢ËÍÏûÏ¢Á¿·Ö²¼µÄÇø¼ä£¬0´ú±í ¡°0¡±£¬1´ú±í¡°1-5¡±£¬2´ú±í¡°6-10¡±£¬3´ú±í¡°10´ÎÒÔÉÏ¡±
-    private int count_interval;
-    //ÉÏĞĞ·¢ËÍÁË£¨Ïò¹«ÖÚºÅ·¢ËÍÁË£©ÏûÏ¢µÄÓÃ»§Êı
-    private int msg_user;
-    
+	//å½“æ—¥å‘é€æ¶ˆæ¯é‡åˆ†å¸ƒçš„åŒºé—´ï¼Œ0ä»£è¡¨ â€œ0â€ï¼Œ1ä»£è¡¨â€œ1-5â€ï¼Œ2ä»£è¡¨â€œ6-10â€ï¼Œ3ä»£è¡¨â€œ10æ¬¡ä»¥ä¸Šâ€
+	private int count_interval;
+	//ä¸Šè¡Œå‘é€äº†ï¼ˆå‘å…¬ä¼—å·å‘é€äº†ï¼‰æ¶ˆæ¯çš„ç”¨æˆ·æ•°
+	private int msg_user;
+
 	public String getRef_date() {
 		return ref_date;
 	}
@@ -36,7 +36,7 @@ public class UpStreamMsgDist {
 	public void setMsg_user(int msg_user) {
 		this.msg_user = msg_user;
 	}
-    
-    
+
+
 
 }

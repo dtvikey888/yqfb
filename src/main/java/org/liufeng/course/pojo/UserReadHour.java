@@ -1,50 +1,50 @@
 package org.liufeng.course.pojo;
-//Êı¾İÍ³¼Æ½Ó¿Ú_Í¼ÎÄ·ÖÎöÊı¾İ½Ó¿Ú_»ñÈ¡Í¼ÎÄÍ³¼Æ·ÖÊ±Êı¾İpojo
+//æ•°æ®ç»Ÿè®¡æ¥å£_å›¾æ–‡åˆ†ææ•°æ®æ¥å£_è·å–å›¾æ–‡ç»Ÿè®¡åˆ†æ—¶æ•°æ®pojo
 /**
  * create table wxinterface_yqfbwx_userreadhour
-(
-id int identity,
-ref_date varchar(50),
-ref_hour int,
-user_source int,
-int_page_read_user int,
-int_page_read_count int,
-ori_page_read_user int,
-ori_page_read_count int,
-share_user int,
-share_count int,
-add_to_fav_user int,
-add_to_fav_count int
+ (
+ id int identity,
+ ref_date varchar(50),
+ ref_hour int,
+ user_source int,
+ int_page_read_user int,
+ int_page_read_count int,
+ ori_page_read_user int,
+ ori_page_read_count int,
+ share_user int,
+ share_count int,
+ add_to_fav_user int,
+ add_to_fav_count int
 
-)
+ )
  */
 public class UserReadHour {
-	
-	//Êı¾İµÄÈÕÆÚ
+
+	//æ•°æ®çš„æ—¥æœŸ
 	private String ref_date;
-	//Êı¾İµÄĞ¡Ê±£¬°üÀ¨´Ó000µ½2300£¬·Ö±ğ´ú±íµÄÊÇ[000,100)µ½[2300,2400)£¬¼´Ã¿ÈÕµÄµÚ1Ğ¡Ê±ºÍ×îºó1Ğ¡Ê±
+	//æ•°æ®çš„å°æ—¶ï¼ŒåŒ…æ‹¬ä»000åˆ°2300ï¼Œåˆ†åˆ«ä»£è¡¨çš„æ˜¯[000,100)åˆ°[2300,2400)ï¼Œå³æ¯æ—¥çš„ç¬¬1å°æ—¶å’Œæœ€å1å°æ—¶
 	private int ref_hour;
-	//ÔÚ»ñÈ¡Í¼ÎÄÔÄ¶Á·ÖÊ±Êı¾İÊ±²ÅÓĞ¸Ã×Ö¶Î£¬´ú±íÓÃ»§´ÓÄÄÀï½øÈëÀ´ÔÄ¶Á¸ÃÍ¼ÎÄ¡£0:»á»°;1.ºÃÓÑ;2.ÅóÓÑÈ¦;3.ÌÚÑ¶Î¢²©;4.ÀúÊ·ÏûÏ¢Ò³;5.ÆäËû
+	//åœ¨è·å–å›¾æ–‡é˜…è¯»åˆ†æ—¶æ•°æ®æ—¶æ‰æœ‰è¯¥å­—æ®µï¼Œä»£è¡¨ç”¨æˆ·ä»å“ªé‡Œè¿›å…¥æ¥é˜…è¯»è¯¥å›¾æ–‡ã€‚0:ä¼šè¯;1.å¥½å‹;2.æœ‹å‹åœˆ;3.è…¾è®¯å¾®åš;4.å†å²æ¶ˆæ¯é¡µ;5.å…¶ä»–
 	private int user_source;
-	//Í¼ÎÄÒ³£¨µã»÷Èº·¢Í¼ÎÄ¿¨Æ¬½øÈëµÄÒ³Ãæ£©µÄÔÄ¶ÁÈËÊı
+	//å›¾æ–‡é¡µï¼ˆç‚¹å‡»ç¾¤å‘å›¾æ–‡å¡ç‰‡è¿›å…¥çš„é¡µé¢ï¼‰çš„é˜…è¯»äººæ•°
 	private int int_page_read_user;
-	//Í¼ÎÄÒ³µÄÔÄ¶Á´ÎÊı
+	//å›¾æ–‡é¡µçš„é˜…è¯»æ¬¡æ•°
 	private int int_page_read_count;
-	//Ô­ÎÄÒ³£¨µã»÷Í¼ÎÄÒ³¡°ÔÄ¶ÁÔ­ÎÄ¡±½øÈëµÄÒ³Ãæ£©µÄÔÄ¶ÁÈËÊı£¬ÎŞÔ­ÎÄÒ³Ê±´Ë´¦Êı¾İÎª0
+	//åŸæ–‡é¡µï¼ˆç‚¹å‡»å›¾æ–‡é¡µâ€œé˜…è¯»åŸæ–‡â€è¿›å…¥çš„é¡µé¢ï¼‰çš„é˜…è¯»äººæ•°ï¼Œæ— åŸæ–‡é¡µæ—¶æ­¤å¤„æ•°æ®ä¸º0
 	private int ori_page_read_user;
-	//Ô­ÎÄÒ³µÄÔÄ¶Á´ÎÊı
+	//åŸæ–‡é¡µçš„é˜…è¯»æ¬¡æ•°
 	private int ori_page_read_count;
-	//·ÖÏíµÄÈËÊı
+	//åˆ†äº«çš„äººæ•°
 	private int share_user;
-	//·ÖÏíµÄ´ÎÊı
+	//åˆ†äº«çš„æ¬¡æ•°
 	private int share_count;
-	//ÊÕ²ØµÄÈËÊı
+	//æ”¶è—çš„äººæ•°
 	private int add_to_fav_user;
-	//ÊÕ²ØµÄ´ÎÊı
+	//æ”¶è—çš„æ¬¡æ•°
 	private int add_to_fav_count;
-	
-	
-	
+
+
+
 	public String getRef_date() {
 		return ref_date;
 	}
@@ -111,7 +111,7 @@ public class UserReadHour {
 	public void setAdd_to_fav_count(int add_to_fav_count) {
 		this.add_to_fav_count = add_to_fav_count;
 	}
-	
-	
+
+
 
 }

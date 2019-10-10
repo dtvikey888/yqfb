@@ -1,10 +1,10 @@
 package org.liufeng.course.pojo;
 
 public class Reply {
-	
-	public String content; //×÷Õß»Ø¸´ÄÚÈİ
-	
-	public String create_time; //×÷Õß»Ø¸´Ê±¼ä
+
+	public String content; //ä½œè€…å›å¤å†…å®¹
+
+	public String create_time; //ä½œè€…å›å¤æ—¶é—´
 
 	public String getContent() {
 		return content;
@@ -22,7 +22,7 @@ public class Reply {
 		this.create_time = create_time;
 	}
 
-	
-	
+
+
 
 }

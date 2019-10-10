@@ -1,15 +1,15 @@
 package org.liufeng.course.message.req;
 
 /**
- * 视频消息
- * 
+ * 瑙嗛娑堟伅
+ *
  * @author liufeng
  * @date 2013-09-11
  */
 public class VideoMessage extends BaseMessage {
-	// 视频消息媒体id
+	// 瑙嗛娑堟伅濯掍綋id
 	private String MediaId;
-	// 视频消息缩略图的媒体id
+	// 瑙嗛娑堟伅缂╃暐鍥剧殑濯掍綋id
 	private String ThumbMediaId;
 
 	public String getMediaId() {

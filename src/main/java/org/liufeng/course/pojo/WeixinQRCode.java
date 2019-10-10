@@ -1,15 +1,15 @@
 package org.liufeng.course.pojo;
 
 /**
- * ÁÙÊ±¶şÎ¬ÂëĞÅÏ¢
- * 
+ * ä¸´æ—¶äºŒç»´ç ä¿¡æ¯
+ *
  * @author liufeng
  * @date 2013-11-10
  */
 public class WeixinQRCode {
-	// »ñÈ¡µÄ¶şÎ¬Âëticket
+	// è·å–çš„äºŒç»´ç ticket
 	private String ticket;
-	// ¶şÎ¬ÂëµÄÓĞĞ§Ê±¼ä£¬µ¥Î»ÎªÃë£¬×î´ó²»³¬¹ı1800
+	// äºŒç»´ç çš„æœ‰æ•ˆæ—¶é—´ï¼Œå•ä½ä¸ºç§’ï¼Œæœ€å¤§ä¸è¶…è¿‡1800
 	private int expireSeconds;
 
 	public String getTicket() {

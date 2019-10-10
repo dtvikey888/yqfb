@@ -14,8 +14,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * ²Ëµ¥¹ÜÀíÆ÷Àà
- * 
+ * èœå•ç®¡ç†å™¨ç±»
+ *
  * @author liufeng
  * @date 2013-10-17
  */
@@ -23,159 +23,159 @@ public class MenuManager {
 	public static Logger log = LoggerFactory.getLogger(MenuManager.class);
 
 	/**
-	 * ¶¨Òå²Ëµ¥½á¹¹
-	 * 
+	 * å®šä¹‰èœå•ç»“æ„
+	 *
 	 * @return
 	 */
 	public static Menu getMenu() {
 		ViewButton btn11 = new ViewButton();
-		btn11.setName("ÍøÂçÎÊĞ§");
+		btn11.setName("ç½‘ç»œé—®æ•ˆ");
 		btn11.setType("view");
 		btn11.setUrl("http://wen.yqcn.com/wap/");
 
-		
+
 //		ViewButton btn21 = new ViewButton();
-//		btn21.setName("´´ÅÜÀÖÇå");
+//		btn21.setName("åˆ›è·‘ä¹æ¸…");
 //		btn21.setType("view");
 //		btn21.setUrl("https://file762d99333146.iamh5.cn/v3/idea/wUKCxQVS?from=singlemessage&isappinstalled=0&suid=9ABB0F03-0038-44BC-A7F4-764C7A07A3A2&sl=1");
 
-		
+
 //		ViewButton btn21 = new ViewButton();
-//		btn21.setName("»î¶¯Ö±²¥");
+//		btn21.setName("æ´»åŠ¨ç›´æ’­");
 //		btn21.setType("view");
 //		btn21.setUrl("http://1011.hlsplay.aodianyun.com/mobile/program_live_channel_21590_copy.m3u8");
-		
+
 		ViewButton btn21 = new ViewButton();
-		btn21.setName("2019ÍøÂçÎÄ»¯½Ú");
+		btn21.setName("2019ç½‘ç»œæ–‡åŒ–èŠ‚");
 		btn21.setType("view");
 		btn21.setUrl("https://file762d99333146.iamh5.cn/v3/idea/psEDU4DG");
-		
-		
+
+
 		ViewButton btn22 = new ViewButton();
-		btn22.setName("ÍøÂçÎÊĞ§");
+		btn22.setName("ç½‘ç»œé—®æ•ˆ");
 		btn22.setType("view");
 		btn22.setUrl("http://wen.yqcn.com/");
 
-		
+
 		ViewButton btn23 = new ViewButton();
-		btn23.setName("ÔÆ¹«ÒæÆ½Ì¨");
+		btn23.setName("äº‘å…¬ç›Šå¹³å°");
 		btn23.setType("view");
 		btn23.setUrl("http://zt1.yqcn.com/whlt/");
-		
+
 //		ViewButton btn23 = new ViewButton();
-//		btn23.setName("¿Æ¼¼³É¹û");
+//		btn23.setName("ç§‘æŠ€æˆæœ");
 //		btn23.setType("miniprogram");
 //		btn23.setUrl("http://www.shangxunapp.com/");
-		
-		
+
+
 		ToXcx xcxBtn1 = new ToXcx();
-		xcxBtn1.setName("¿Æ¼¼³É¹û");
+		xcxBtn1.setName("ç§‘æŠ€æˆæœ");
 		xcxBtn1.setType("miniprogram");
 		xcxBtn1.setUrl("http://www.shangxunapp.com/");
 		xcxBtn1.setAppid("wx03c88babaf6767ed");
 		xcxBtn1.setPagepath("pages/achi/achi");
-		
+
 //		ViewButton btn24 = new ViewButton();
-//		btn24.setName("ÃñÉúÊµÊÂ");
+//		btn24.setName("æ°‘ç”Ÿå®äº‹");
 //		btn24.setType("view");
 //		btn24.setUrl("http://xadmin.yqcn.com/zjxm/");
-		
+
 //		ViewButton btn25 = new ViewButton();
-//		btn25.setName("¿ìµãÎÂÖİÖ±²¥");
+//		btn25.setName("å¿«ç‚¹æ¸©å·ç›´æ’­");
 //		btn25.setType("view");
 //		btn25.setUrl("http://wzqmt.tw.live.hoge.cn/share/15iacybUUbRoeA0MgQ.shtml?_hgOutLink=tuwenol/tuwenoldetail&id=18335");
-		
+
 //		ViewButton btn25 = new ViewButton();
-//		btn25.setName("Áø´¨±­±¨Ãû");
+//		btn25.setName("æŸ³å·æ¯æŠ¥å");
 //		btn25.setType("view");
 //		btn25.setUrl("https://www.wjx.top/jq/43176712.aspx");
 
 
 		/**
-		ViewButton btn31 = new ViewButton();
-		btn31.setName("²é¿ìµİ");
-		btn31.setType("view");
-		btn31.setUrl("http://m.kuaidi100.com/");
+		 ViewButton btn31 = new ViewButton();
+		 btn31.setName("æŸ¥å¿«é€’");
+		 btn31.setType("view");
+		 btn31.setUrl("http://m.kuaidi100.com/");
 
-		ViewButton btn32 = new ViewButton();
-		btn32.setName("²éÌìÆø");
-		btn32.setType("view");
-		btn32.setUrl("http://m.3gv.ifeng.com/weather/guonei//iweather.f?vt=5&citycode=101210707&mid=7oavBS");
-		
-		*/
-		
+		 ViewButton btn32 = new ViewButton();
+		 btn32.setName("æŸ¥å¤©æ°”");
+		 btn32.setType("view");
+		 btn32.setUrl("http://m.3gv.ifeng.com/weather/guonei//iweather.f?vt=5&citycode=101210707&mid=7oavBS");
+
+		 */
+
 		ViewButton btn31 = new ViewButton();
-		btn31.setName("¼ûÖ¤40Äê");
+		btn31.setName("è§è¯40å¹´");
 		btn31.setType("view");
 		btn31.setUrl("https://zj.zjol.com.cn/subject.html?id=1023951&from=singlemessage&isappinstalled=0");
-		
-		
+
+
 		ViewButton btn32 = new ViewButton();
-		btn32.setName("´©Ô½Ê±¹â");
+		btn32.setName("ç©¿è¶Šæ—¶å…‰");
 		btn32.setType("view");
 		btn32.setUrl("http://xadmin.yqcn.com/ggkf/wap/index.php?from=singlemessage&isappinstalled=0");
-		
+
 		ViewButton btn33 = new ViewButton();
-		btn33.setName("Î¥·¨²éÑ¯");
+		btn33.setName("è¿æ³•æŸ¥è¯¢");
 		btn33.setType("view");
 		btn33.setUrl("http://zz.wzsjj.cn:6088/zscg/wz_wap/vehQuery.do?clpt=weixin&from=singlemessage&isappinstalled=0");
-		
+
 		ViewButton btn34 = new ViewButton();
-		btn34.setName("²é¹«½»³µ");
+		btn34.setName("æŸ¥å…¬äº¤è½¦");
 		btn34.setType("view");
 		btn34.setUrl("http://m.yqbus.cn/WeixinMP/WMPWeb/MPages/BM.GJ.ShiShiGJ/XianLuQuery.aspx");
-		
+
 		ViewButton btn35 = new ViewButton();
-		btn35.setName("Â·¿ö²éÑ¯");
+		btn35.setName("è·¯å†µæŸ¥è¯¢");
 		btn35.setType("view");
 		btn35.setUrl("http://node.wenzhousoft.cn/cloudvideo.html");
-		
+
 		ViewButton btn36 = new ViewButton();
-		btn36.setName("Á½»áÖ±²¥");
+		btn36.setName("ä¸¤ä¼šç›´æ’­");
 		btn36.setType("view");
 		btn36.setUrl("http://1011.hlsplay.aodianyun.com/mobile/program_live_channel_20569_copy.m3u8");
-		
+
 		ViewButton btn37 = new ViewButton();
-		btn37.setName("Á½»á×¨Ìâ");
+		btn37.setName("ä¸¤ä¼šä¸“é¢˜");
 		btn37.setType("view");
 		btn37.setUrl("https://zj.zjol.com.cn/subject.html?id=1121554");
 
 //		ComplexButton mainBtn1 = new ComplexButton();
-//		mainBtn1.setName("ÍøÂçÎÊĞ§");
+//		mainBtn1.setName("ç½‘ç»œé—®æ•ˆ");
 //		mainBtn1.setSub_button(new Button[] { btn11});
-		
+
 		ViewButton mainBtn1 = new ViewButton();
-		mainBtn1.setName("Êé¼ÇÊĞ³¤ÔÚÃ¦É¶");
+		mainBtn1.setName("ä¹¦è®°å¸‚é•¿åœ¨å¿™å•¥");
 		mainBtn1.setType("view");
 		//mainBtn1.setUrl("https://zj.zjol.com.cn/subject.html?id=867086&from=singlemessage");
 		mainBtn1.setUrl("https://zj.zjol.com.cn/subject.html?id=1110400");
-		
+
 		ComplexButton mainBtn2 = new ComplexButton();
-		mainBtn2.setName("ÔÚÏßÆ½Ì¨");
+		mainBtn2.setName("åœ¨çº¿å¹³å°");
 		mainBtn2.setSub_button(new Button[] { btn21,btn22,btn23,xcxBtn1 });
-		
+
 //		ViewButton mainBtn2 = new ViewButton();
-//		mainBtn2.setName("ÀÖÇå+");
+//		mainBtn2.setName("ä¹æ¸…+");
 //		mainBtn2.setType("view");
 //		mainBtn2.setUrl("http://ios.lifeyk.com/download/yueqing.html#rd");
 
-		
+
 //		ViewButton mainBtn3 = new ViewButton();
-//		mainBtn3.setName("Á½»áÖ±²¥");
+//		mainBtn3.setName("ä¸¤ä¼šç›´æ’­");
 //		mainBtn3.setType("view");
 //		mainBtn3.setUrl("https://zj.zjol.com.cn/news.html?id=853010&from=singlemessage");
 
 //
 		ComplexButton mainBtn3 = new ComplexButton();
-		mainBtn3.setName("±ãÃñ·şÎñ");
+		mainBtn3.setName("ä¾¿æ°‘æœåŠ¡");
 		mainBtn3.setSub_button(new Button[] { btn31, btn32, btn33, btn34, btn35 });
-		
+
 //		ComplexButton mainBtn3 = new ComplexButton();
-//		mainBtn3.setName("Á½»á²¥±¨");
+//		mainBtn3.setName("ä¸¤ä¼šæ’­æŠ¥");
 //		mainBtn3.setSub_button(new Button[] { btn36, btn37 });
-		
+
 //		ViewButton mainBtn3 = new ViewButton();
-//		mainBtn3.setName("½ğÅÆ½²Ê¦Ö±²¥");
+//		mainBtn3.setName("é‡‘ç‰Œè®²å¸ˆç›´æ’­");
 //		mainBtn3.setType("view");
 //		mainBtn3.setUrl("http://www.yqbtv.cn/index.php?s=/Mobile/Index/live/l_id/150.html");
 
@@ -187,31 +187,31 @@ public class MenuManager {
 	}
 
 	public static void main(String[] args) {
-	
-		
-//		// µÚÈı·½ÓÃ»§Î¨Ò»Æ¾Ö¤
+
+
+//		// ç¬¬ä¸‰æ–¹ç”¨æˆ·å”¯ä¸€å‡­è¯
 		String appId = AllValus.appid;
-//		// µÚÈı·½ÓÃ»§Î¨Ò»Æ¾Ö¤ÃÜÔ¿0
+//		// ç¬¬ä¸‰æ–¹ç”¨æˆ·å”¯ä¸€å‡­è¯å¯†é’¥0
 		String appSecret = AllValus.appsecret;
 
-		
-		// µ÷ÓÃ½Ó¿Ú»ñÈ¡Æ¾Ö¤
-		Token token = CommonUtil.getToken(appId, appSecret);
-		
-		
 
-		//É¾³ı²Ëµ¥
+		// è°ƒç”¨æ¥å£è·å–å‡­è¯
+		Token token = CommonUtil.getToken(appId, appSecret);
+
+
+
+		//åˆ é™¤èœå•
 		System.out.println(MenuUtil.deleteMenu(token.getAccessToken()));
 
 		if (null != token) {
-			// ´´½¨²Ëµ¥
+			// åˆ›å»ºèœå•
 			boolean result = MenuUtil.createMenu(getMenu(), token.getAccessToken());
 
-			// ÅĞ¶Ï²Ëµ¥´´½¨½á¹û
+			// åˆ¤æ–­èœå•åˆ›å»ºç»“æœ
 			if (result)
-				log.info("²Ëµ¥´´½¨³É¹¦£¡");
+				log.info("èœå•åˆ›å»ºæˆåŠŸï¼");
 			else
-				log.info("²Ëµ¥´´½¨Ê§°Ü£¡");
+				log.info("èœå•åˆ›å»ºå¤±è´¥ï¼");
 		}
 	}
 }

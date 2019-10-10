@@ -1,8 +1,8 @@
 package org.liufeng.course.menu;
 
 /**
- * click���͵İ�ť
- * 
+ * click类型的按钮
+ *
  * @author liufeng
  * @date 2013-10-14
  */

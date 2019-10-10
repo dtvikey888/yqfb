@@ -1,31 +1,31 @@
 package org.liufeng.course.pojo;
-//Êı¾İÍ³¼Æ½Ó¿Ú_Í¼ÎÄ·ÖÎöÊı¾İ½Ó¿Ú_»ñÈ¡Í¼ÎÄ·ÖÏí×ª·¢·ÖÊ±Êı¾İpojo
+//æ•°æ®ç»Ÿè®¡æ¥å£_å›¾æ–‡åˆ†ææ•°æ®æ¥å£_è·å–å›¾æ–‡åˆ†äº«è½¬å‘åˆ†æ—¶æ•°æ®pojo
 /**
  *  create table wxinterface_yqfbwx_usersharehour
-(
-id int identity,
-ref_date varchar(50),
-ref_hour int,
-share_scene int,
-share_user int,
-share_count int,
-)
+ (
+ id int identity,
+ ref_date varchar(50),
+ ref_hour int,
+ share_scene int,
+ share_user int,
+ share_count int,
+ )
  */
 public class UserShareHour {
-	
-	//Êı¾İµÄÈÕÆÚ
+
+	//æ•°æ®çš„æ—¥æœŸ
 	private String ref_date;
-	//Êı¾İµÄĞ¡Ê±£¬°üÀ¨´Ó000µ½2300£¬·Ö±ğ´ú±íµÄÊÇ[000,100)µ½[2300,2400)£¬¼´Ã¿ÈÕµÄµÚ1Ğ¡Ê±ºÍ×îºó1Ğ¡Ê±
+	//æ•°æ®çš„å°æ—¶ï¼ŒåŒ…æ‹¬ä»000åˆ°2300ï¼Œåˆ†åˆ«ä»£è¡¨çš„æ˜¯[000,100)åˆ°[2300,2400)ï¼Œå³æ¯æ—¥çš„ç¬¬1å°æ—¶å’Œæœ€å1å°æ—¶
 	private int ref_hour;
-	//·ÖÏíµÄ³¡¾°
-	//1´ú±íºÃÓÑ×ª·¢ 2´ú±íÅóÓÑÈ¦ 3´ú±íÌÚÑ¶Î¢²© 255´ú±íÆäËû
+	//åˆ†äº«çš„åœºæ™¯
+	//1ä»£è¡¨å¥½å‹è½¬å‘ 2ä»£è¡¨æœ‹å‹åœˆ 3ä»£è¡¨è…¾è®¯å¾®åš 255ä»£è¡¨å…¶ä»–
 	private int share_scene;
-	//·ÖÏíµÄ´ÎÊı
-	private int share_count; 
-	//·ÖÏíµÄÈËÊı
+	//åˆ†äº«çš„æ¬¡æ•°
+	private int share_count;
+	//åˆ†äº«çš„äººæ•°
 	private int share_user;
-	
-	
+
+
 	public String getRef_date() {
 		return ref_date;
 	}
@@ -56,7 +56,7 @@ public class UserShareHour {
 	public void setShare_user(int share_user) {
 		this.share_user = share_user;
 	}
-	
-	
+
+
 
 }

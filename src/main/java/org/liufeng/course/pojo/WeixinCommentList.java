@@ -3,23 +3,23 @@ package org.liufeng.course.pojo;
 import java.util.List;
 
 /**
- * ²é¿´Ö¸¶¨ÎÄÕÂµÄÆÀÂÛÊı¾İ£¨ĞÂÔö½Ó¿Ú£©
+ * æŸ¥çœ‹æŒ‡å®šæ–‡ç« çš„è¯„è®ºæ•°æ®ï¼ˆæ–°å¢æ¥å£ï¼‰
  * @author Administrator
  *
  */
 public class WeixinCommentList {
-	//ÓÃ»§ÆÀÂÛid
+	//ç”¨æˆ·è¯„è®ºid
 	private int user_comment_id;
-	//ÆÀÂÛÊ±¼ä
+	//è¯„è®ºæ—¶é—´
 	private String create_time;
-	//ÆÀÂÛÄÚÈİ
+	//è¯„è®ºå†…å®¹
 	private String content;
 	//openid
 	private String openid;
-	//ÊÇ·ñ¾«Ñ¡ÆÀÂÛ£¬0Îª¼´·Ç¾«Ñ¡£¬1Îªtrue£¬¼´¾«Ñ¡
+	//æ˜¯å¦ç²¾é€‰è¯„è®ºï¼Œ0ä¸ºå³éç²¾é€‰ï¼Œ1ä¸ºtrueï¼Œå³ç²¾é€‰
 	private int comment_type ;
 
-	// around replyÁĞ±í
+	// around replyåˆ—è¡¨
 	private List<Reply> reply;
 
 	public int getUser_comment_id() {
@@ -71,6 +71,6 @@ public class WeixinCommentList {
 	}
 
 
-	
-	
+
+
 }

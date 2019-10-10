@@ -1,21 +1,21 @@
 package org.liufeng.course.pojo;
-//Êı¾İÍ³¼Æ½Ó¿Ú_ÓÃ»§·ÖÎöÊı¾İ½Ó¿Ú_»ñÈ¡ÀÛ¼ÆÓÃ»§Êı¾İpojo
+//æ•°æ®ç»Ÿè®¡æ¥å£_ç”¨æˆ·åˆ†ææ•°æ®æ¥å£_è·å–ç´¯è®¡ç”¨æˆ·æ•°æ®pojo
 /**
- * 
+ *
  * create table wxinterface_yqfbwx_usercumulate
-(
-id int identity,
-ref_date varchar(50),
-cumulate_user int,
-)
+ (
+ id int identity,
+ ref_date varchar(50),
+ cumulate_user int,
+ )
  */
 public class UserCumulate {
-	
-	//Êı¾İµÄÈÕÆÚ
+
+	//æ•°æ®çš„æ—¥æœŸ
 	private String ref_date;
-	//×ÜÓÃ»§Á¿
+	//æ€»ç”¨æˆ·é‡
 	private int cumulate_user;
-	
+
 	public String getRef_date() {
 		return ref_date;
 	}
@@ -28,10 +28,10 @@ public class UserCumulate {
 	public void setCumulate_user(int cumulate_user) {
 		this.cumulate_user = cumulate_user;
 	}
-	
 
-	
-	
-	
-	
+
+
+
+
+
 }

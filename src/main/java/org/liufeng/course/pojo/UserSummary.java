@@ -1,27 +1,27 @@
 package org.liufeng.course.pojo;
-//Êı¾İÍ³¼Æ½Ó¿Ú_ÓÃ»§·ÖÎöÊı¾İ½Ó¿Ú_»ñÈ¡ÓÃ»§Ôö¼õÊı¾İpojo
+//æ•°æ®ç»Ÿè®¡æ¥å£_ç”¨æˆ·åˆ†ææ•°æ®æ¥å£_è·å–ç”¨æˆ·å¢å‡æ•°æ®pojo
 /**
  *
  *create table wxinterface_yqfbwx_usersummary
-(
-id int identity,
-ref_date varchar(50),
-user_source int,
-new_user int,
-cancel_user int
-)
+ (
+ id int identity,
+ ref_date varchar(50),
+ user_source int,
+ new_user int,
+ cancel_user int
+ )
  */
 public class UserSummary {
-	
-	//Êı¾İµÄÈÕÆÚ
+
+	//æ•°æ®çš„æ—¥æœŸ
 	private String ref_date;
-	//ÓÃ»§µÄÇşµÀ
+	//ç”¨æˆ·çš„æ¸ é“
 	private int user_source;
-	//ĞÂÔöµÄÓÃ»§ÊıÁ¿
+	//æ–°å¢çš„ç”¨æˆ·æ•°é‡
 	private int new_user;
-	//È¡Ïû¹Ø×¢µÄÓÃ»§ÊıÁ¿£¬new_user¼õÈ¥cancel_user¼´Îª¾»ÔöÓÃ»§ÊıÁ¿
+	//å–æ¶ˆå…³æ³¨çš„ç”¨æˆ·æ•°é‡ï¼Œnew_userå‡å»cancel_userå³ä¸ºå‡€å¢ç”¨æˆ·æ•°é‡
 	private int cancel_user;
-	
+
 	public String getRef_date() {
 		return ref_date;
 	}
@@ -46,7 +46,7 @@ public class UserSummary {
 	public void setCancel_user(int cancel_user) {
 		this.cancel_user = cancel_user;
 	}
-	
-	
+
+
 
 }

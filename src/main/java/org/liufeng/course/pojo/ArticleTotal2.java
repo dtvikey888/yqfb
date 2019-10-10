@@ -1,47 +1,47 @@
 package org.liufeng.course.pojo;
-//Êı¾İÍ³¼Æ½Ó¿Ú_Í¼ÎÄ·ÖÎöÊı¾İ½Ó¿Ú_»ñÈ¡Í¼ÎÄÈº·¢×ÜÊı¾İ_detailsµÄ pojo
+//æ•°æ®ç»Ÿè®¡æ¥å£_å›¾æ–‡åˆ†ææ•°æ®æ¥å£_è·å–å›¾æ–‡ç¾¤å‘æ€»æ•°æ®_detailsçš„ pojo
 /**
  * create table wxinterface_yqfbwx_articletotal2
-(
-id int identity,
-fid int,
-stat_date varchar(50),
-target_user int,
-int_page_read_user int,
-int_page_read_count int,
-ori_page_read_user int,
-ori_page_read_count int,
-share_user int,
-share_count int,
-add_to_fav_user int,
-add_to_fav_count int
-)
+ (
+ id int identity,
+ fid int,
+ stat_date varchar(50),
+ target_user int,
+ int_page_read_user int,
+ int_page_read_count int,
+ ori_page_read_user int,
+ ori_page_read_count int,
+ share_user int,
+ share_count int,
+ add_to_fav_user int,
+ add_to_fav_count int
+ )
  */
 
 
 public class ArticleTotal2 {
-	//Í³¼ÆµÄÈÕÆÚ£¬ÔÚgetarticletotal½Ó¿ÚÖĞ£¬ref_dateÖ¸µÄÊÇÎÄÕÂÈº·¢³öÈÕÆÚ£¬ ¶østat_dateÊÇÊı¾İÍ³¼ÆÈÕÆÚ
+	//ç»Ÿè®¡çš„æ—¥æœŸï¼Œåœ¨getarticletotalæ¥å£ä¸­ï¼Œref_dateæŒ‡çš„æ˜¯æ–‡ç« ç¾¤å‘å‡ºæ—¥æœŸï¼Œ è€Œstat_dateæ˜¯æ•°æ®ç»Ÿè®¡æ—¥æœŸ
 	public String stat_date;
-	//ËÍ´ïÈËÊı£¬Ò»°ãÔ¼µÈÓÚ×Ü·ÛË¿Êı£¨ĞèÅÅ³ıºÚÃûµ¥»òÆäËûÒì³£Çé¿öÏÂÎŞ·¨ÊÕµ½ÏûÏ¢µÄ·ÛË¿£©
+	//é€è¾¾äººæ•°ï¼Œä¸€èˆ¬çº¦ç­‰äºæ€»ç²‰ä¸æ•°ï¼ˆéœ€æ’é™¤é»‘åå•æˆ–å…¶ä»–å¼‚å¸¸æƒ…å†µä¸‹æ— æ³•æ”¶åˆ°æ¶ˆæ¯çš„ç²‰ä¸ï¼‰
 	public int target_user;
-	//Í¼ÎÄÒ³£¨µã»÷Èº·¢Í¼ÎÄ¿¨Æ¬½øÈëµÄÒ³Ãæ£©µÄÔÄ¶ÁÈËÊı
+	//å›¾æ–‡é¡µï¼ˆç‚¹å‡»ç¾¤å‘å›¾æ–‡å¡ç‰‡è¿›å…¥çš„é¡µé¢ï¼‰çš„é˜…è¯»äººæ•°
 	public int int_page_read_user;
-	//Í¼ÎÄÒ³µÄÔÄ¶Á´ÎÊı
+	//å›¾æ–‡é¡µçš„é˜…è¯»æ¬¡æ•°
 	public int int_page_read_count;
-	//Ô­ÎÄÒ³£¨µã»÷Í¼ÎÄÒ³¡°ÔÄ¶ÁÔ­ÎÄ¡±½øÈëµÄÒ³Ãæ£©µÄÔÄ¶ÁÈËÊı£¬ÎŞÔ­ÎÄÒ³Ê±´Ë´¦Êı¾İÎª0
+	//åŸæ–‡é¡µï¼ˆç‚¹å‡»å›¾æ–‡é¡µâ€œé˜…è¯»åŸæ–‡â€è¿›å…¥çš„é¡µé¢ï¼‰çš„é˜…è¯»äººæ•°ï¼Œæ— åŸæ–‡é¡µæ—¶æ­¤å¤„æ•°æ®ä¸º0
 	public int ori_page_read_user;
-	//Ô­ÎÄÒ³µÄÔÄ¶Á´ÎÊı
+	//åŸæ–‡é¡µçš„é˜…è¯»æ¬¡æ•°
 	public int ori_page_read_count;
-	//·ÖÏíµÄÈËÊı
+	//åˆ†äº«çš„äººæ•°
 	public int share_user;
-	//·ÖÏíµÄ´ÎÊı
+	//åˆ†äº«çš„æ¬¡æ•°
 	public int share_count;
-	//ÊÕ²ØµÄÈËÊı
+	//æ”¶è—çš„äººæ•°
 	public int add_to_fav_user;
-	//ÊÕ²ØµÄ´ÎÊı
+	//æ”¶è—çš„æ¬¡æ•°
 	public int add_to_fav_count;
-	
-	
+
+
 	public int int_page_from_friends_read_user;
 	public int feed_share_from_feed_user;
 	public int feed_share_from_feed_cnt;
@@ -58,9 +58,9 @@ public class ArticleTotal2 {
 	public int int_page_from_other_read_user;
 	public int feed_share_from_other_user;
 	public int int_page_from_session_read_user;
-	
-	
-	
+
+
+
 	public int getInt_page_from_friends_read_user() {
 		return int_page_from_friends_read_user;
 	}
@@ -223,9 +223,9 @@ public class ArticleTotal2 {
 	public void setAdd_to_fav_count(int add_to_fav_count) {
 		this.add_to_fav_count = add_to_fav_count;
 	}
-	
-	
-	
-	
+
+
+
+
 
 }
