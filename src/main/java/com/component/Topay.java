@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.fjw.weixin.util.AllValus;
 import org.fjw.weixin.yy.WeixinChaOpenId;
 import com.utils.GetWxOrderno;
 import com.utils.RequestHandler;
