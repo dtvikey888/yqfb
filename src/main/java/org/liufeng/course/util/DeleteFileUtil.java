@@ -1,111 +1,111 @@
 package org.liufeng.course.util;
 
-import java.io.File;     
+import java.io.File;
 
 
-/**   
- *    
- * @author XWZ   
+/**
+ *
+ * @author XWZ
  * 2009-11-27   
- * É¾³ıÎÄ¼ş»òÄ¿Â¼   
- */    
-public class DeleteFileUtil {     
-    /**   
-     * É¾³ıÎÄ¼ş£¬¿ÉÒÔÊÇµ¥¸öÎÄ¼ş»òÎÄ¼ş¼Ğ   
-     * @param   fileName    ´ıÉ¾³ıµÄÎÄ¼şÃû   
-     * @return ÎÄ¼şÉ¾³ı³É¹¦·µ»Øtrue,·ñÔò·µ»Øfalse   
-     */    
-    public static boolean delete(String fileName){     
-        File file = new File(fileName);     
-        if(!file.exists()){     
-            System.out.println("É¾³ıÎÄ¼şÊ§°Ü£º"+fileName+"ÎÄ¼ş²»´æÔÚ");     
-            return false;     
-        }else{     
-            if(file.isFile()){     
-                     
-                return deleteFile(fileName);     
-            }else{     
-                return deleteDirectory(fileName);     
-            }     
-        }     
-    }     
-         
-    /**   
-     * É¾³ıµ¥¸öÎÄ¼ş   
-     * @param   fileName    ±»É¾³ıÎÄ¼şµÄÎÄ¼şÃû   
-     * @return µ¥¸öÎÄ¼şÉ¾³ı³É¹¦·µ»Øtrue,·ñÔò·µ»Øfalse   
-     */    
-    public static boolean deleteFile(String fileName){     
-        File file = new File(fileName);     
-        if(file.isFile() && file.exists()){     
-            file.delete();     
-            System.out.println("É¾³ıµ¥¸öÎÄ¼ş"+fileName+"³É¹¦£¡");     
-            return true;     
-        }else{     
-            System.out.println("É¾³ıµ¥¸öÎÄ¼ş"+fileName+"Ê§°Ü£¡");     
-            return false;     
-        }     
-    }     
-         
-    /**   
-     * É¾³ıÄ¿Â¼£¨ÎÄ¼ş¼Ğ£©ÒÔ¼°Ä¿Â¼ÏÂµÄÎÄ¼ş   
-     * @param   dir ±»É¾³ıÄ¿Â¼µÄÎÄ¼şÂ·¾¶   
-     * @return  Ä¿Â¼É¾³ı³É¹¦·µ»Øtrue,·ñÔò·µ»Øfalse   
-     */    
-    public static boolean deleteDirectory(String dir){     
-        //Èç¹ûdir²»ÒÔÎÄ¼ş·Ö¸ô·û½áÎ²£¬×Ô¶¯Ìí¼ÓÎÄ¼ş·Ö¸ô·û     
-        if(!dir.endsWith(File.separator)){     
-            dir = dir+File.separator;     
-        }     
-        File dirFile = new File(dir);     
-        //Èç¹ûdir¶ÔÓ¦µÄÎÄ¼ş²»´æÔÚ£¬»òÕß²»ÊÇÒ»¸öÄ¿Â¼£¬ÔòÍË³ö     
-        if(!dirFile.exists() || !dirFile.isDirectory()){     
-            System.out.println("É¾³ıÄ¿Â¼Ê§°Ü"+dir+"Ä¿Â¼²»´æÔÚ£¡");     
-            return false;     
-        }     
-        boolean flag = true;     
-        //É¾³ıÎÄ¼ş¼ĞÏÂµÄËùÓĞÎÄ¼ş(°üÀ¨×ÓÄ¿Â¼)     
-        File[] files = dirFile.listFiles();     
-        for(int i=0;i<files.length;i++){     
-            //É¾³ı×ÓÎÄ¼ş     
-            if(files[i].isFile()){     
-                flag = deleteFile(files[i].getAbsolutePath());     
-                if(!flag){     
-                    break;     
-                }     
-            }     
-            //É¾³ı×ÓÄ¿Â¼     
-            else{     
-                flag = deleteDirectory(files[i].getAbsolutePath());     
-                if(!flag){     
-                    break;     
-                }     
-            }     
-        }     
-             
-        if(!flag){     
-            System.out.println("É¾³ıÄ¿Â¼Ê§°Ü");     
-            return false;     
-        }     
-             
-        //É¾³ıµ±Ç°Ä¿Â¼     
-        if(dirFile.delete()){     
-            System.out.println("É¾³ıÄ¿Â¼"+dir+"³É¹¦£¡");     
-            return true;     
-        }else{     
-            System.out.println("É¾³ıÄ¿Â¼"+dir+"Ê§°Ü£¡");     
-            return false;     
-        }     
-    }     
-         
-    public static void main(String[] args) {     
-    	
-    	String fileName = "D:/wwwroot/ftp/site1/yqrb/html/aa.zip"; 
-    	System.out.println(fileName);       
-        DeleteFileUtil.deleteFile(fileName);     
+ * åˆ é™¤æ–‡ä»¶æˆ–ç›®å½•
+ */
+public class DeleteFileUtil {
+    /**
+     * åˆ é™¤æ–‡ä»¶ï¼Œå¯ä»¥æ˜¯å•ä¸ªæ–‡ä»¶æˆ–æ–‡ä»¶å¤¹
+     * @param   fileName    å¾…åˆ é™¤çš„æ–‡ä»¶å
+     * @return æ–‡ä»¶åˆ é™¤æˆåŠŸè¿”å›true,å¦åˆ™è¿”å›false
+     */
+    public static boolean delete(String fileName){
+        File file = new File(fileName);
+        if(!file.exists()){
+            System.out.println("åˆ é™¤æ–‡ä»¶å¤±è´¥ï¼š"+fileName+"æ–‡ä»¶ä¸å­˜åœ¨");
+            return false;
+        }else{
+            if(file.isFile()){
+
+                return deleteFile(fileName);
+            }else{
+                return deleteDirectory(fileName);
+            }
+        }
+    }
+
+    /**
+     * åˆ é™¤å•ä¸ªæ–‡ä»¶
+     * @param   fileName    è¢«åˆ é™¤æ–‡ä»¶çš„æ–‡ä»¶å
+     * @return å•ä¸ªæ–‡ä»¶åˆ é™¤æˆåŠŸè¿”å›true,å¦åˆ™è¿”å›false
+     */
+    public static boolean deleteFile(String fileName){
+        File file = new File(fileName);
+        if(file.isFile() && file.exists()){
+            file.delete();
+            System.out.println("åˆ é™¤å•ä¸ªæ–‡ä»¶"+fileName+"æˆåŠŸï¼");
+            return true;
+        }else{
+            System.out.println("åˆ é™¤å•ä¸ªæ–‡ä»¶"+fileName+"å¤±è´¥ï¼");
+            return false;
+        }
+    }
+
+    /**
+     * åˆ é™¤ç›®å½•ï¼ˆæ–‡ä»¶å¤¹ï¼‰ä»¥åŠç›®å½•ä¸‹çš„æ–‡ä»¶
+     * @param   dir è¢«åˆ é™¤ç›®å½•çš„æ–‡ä»¶è·¯å¾„
+     * @return  ç›®å½•åˆ é™¤æˆåŠŸè¿”å›true,å¦åˆ™è¿”å›false
+     */
+    public static boolean deleteDirectory(String dir){
+        //å¦‚æœdirä¸ä»¥æ–‡ä»¶åˆ†éš”ç¬¦ç»“å°¾ï¼Œè‡ªåŠ¨æ·»åŠ æ–‡ä»¶åˆ†éš”ç¬¦
+        if(!dir.endsWith(File.separator)){
+            dir = dir+File.separator;
+        }
+        File dirFile = new File(dir);
+        //å¦‚æœdirå¯¹åº”çš„æ–‡ä»¶ä¸å­˜åœ¨ï¼Œæˆ–è€…ä¸æ˜¯ä¸€ä¸ªç›®å½•ï¼Œåˆ™é€€å‡º
+        if(!dirFile.exists() || !dirFile.isDirectory()){
+            System.out.println("åˆ é™¤ç›®å½•å¤±è´¥"+dir+"ç›®å½•ä¸å­˜åœ¨ï¼");
+            return false;
+        }
+        boolean flag = true;
+        //åˆ é™¤æ–‡ä»¶å¤¹ä¸‹çš„æ‰€æœ‰æ–‡ä»¶(åŒ…æ‹¬å­ç›®å½•)
+        File[] files = dirFile.listFiles();
+        for(int i=0;i<files.length;i++){
+            //åˆ é™¤å­æ–‡ä»¶
+            if(files[i].isFile()){
+                flag = deleteFile(files[i].getAbsolutePath());
+                if(!flag){
+                    break;
+                }
+            }
+            //åˆ é™¤å­ç›®å½•
+            else{
+                flag = deleteDirectory(files[i].getAbsolutePath());
+                if(!flag){
+                    break;
+                }
+            }
+        }
+
+        if(!flag){
+            System.out.println("åˆ é™¤ç›®å½•å¤±è´¥");
+            return false;
+        }
+
+        //åˆ é™¤å½“å‰ç›®å½•
+        if(dirFile.delete()){
+            System.out.println("åˆ é™¤ç›®å½•"+dir+"æˆåŠŸï¼");
+            return true;
+        }else{
+            System.out.println("åˆ é™¤ç›®å½•"+dir+"å¤±è´¥ï¼");
+            return false;
+        }
+    }
+
+    public static void main(String[] args) {
+
+        String fileName = "D:/wwwroot/ftp/site1/yqrb/html/aa.zip";
+        System.out.println(fileName);
+        DeleteFileUtil.deleteFile(fileName);
         //String fileDir = "G:/temp/temp0/temp1";     
         //DeleteFileUtil.deleteDirectory(fileDir);     
         //DeleteFileUtil.delete(fileDir);     
-             
-    }     
+
+    }
 }     

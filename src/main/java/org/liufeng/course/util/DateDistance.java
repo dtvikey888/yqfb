@@ -9,8 +9,8 @@ import java.util.Date;
 import org.fjw.weixin.util.PublicFun;
 
 /**
- * Ê±¼äÏà¾à
- * 
+ * æ—¶é—´ç›¸è·
+ *
  * @author Ben
  * @version 1.0
  * @date 2009-10-21 16:38:51
@@ -18,13 +18,13 @@ import org.fjw.weixin.util.PublicFun;
 public class DateDistance {
 
 	/**
-	 * Á½¸öÊ±¼äÖ®¼äÏà²î¾àÀë¶àÉÙÌì
-	 * 
+	 * ä¸¤ä¸ªæ—¶é—´ä¹‹é—´ç›¸å·®è·ç¦»å¤šå°‘å¤©
+	 *
 	 * @param one
-	 *            Ê±¼ä²ÎÊı 1£º
+	 *            æ—¶é—´å‚æ•° 1ï¼š
 	 * @param two
-	 *            Ê±¼ä²ÎÊı 2£º
-	 * @return Ïà²îÌìÊı
+	 *            æ—¶é—´å‚æ•° 2ï¼š
+	 * @return ç›¸å·®å¤©æ•°
 	 */
 	public static long getDistanceDays(String str1, String str2)
 			throws Exception {
@@ -51,13 +51,13 @@ public class DateDistance {
 	}
 
 	/**
-	 * Á½¸öÊ±¼äÏà²î¾àÀë¶àÉÙÌì¶àÉÙĞ¡Ê±¶àÉÙ·Ö¶àÉÙÃë
-	 * 
+	 * ä¸¤ä¸ªæ—¶é—´ç›¸å·®è·ç¦»å¤šå°‘å¤©å¤šå°‘å°æ—¶å¤šå°‘åˆ†å¤šå°‘ç§’
+	 *
 	 * @param str1
-	 *            Ê±¼ä²ÎÊı 1 ¸ñÊ½£º1990-01-01 12:00:00
+	 *            æ—¶é—´å‚æ•° 1 æ ¼å¼ï¼š1990-01-01 12:00:00
 	 * @param str2
-	 *            Ê±¼ä²ÎÊı 2 ¸ñÊ½£º2009-01-01 12:00:00
-	 * @return long[] ·µ»ØÖµÎª£º{Ìì, Ê±, ·Ö, Ãë}
+	 *            æ—¶é—´å‚æ•° 2 æ ¼å¼ï¼š2009-01-01 12:00:00
+	 * @return long[] è¿”å›å€¼ä¸ºï¼š{å¤©, æ—¶, åˆ†, ç§’}
 	 */
 	public static long[] getDistanceTimes(String str1, String str2) {
 		DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -90,13 +90,13 @@ public class DateDistance {
 	}
 
 	/**
-	 * Á½¸öÊ±¼äÏà²î¾àÀë¶àÉÙÌì¶àÉÙĞ¡Ê±¶àÉÙ·Ö¶àÉÙÃë
-	 * 
+	 * ä¸¤ä¸ªæ—¶é—´ç›¸å·®è·ç¦»å¤šå°‘å¤©å¤šå°‘å°æ—¶å¤šå°‘åˆ†å¤šå°‘ç§’
+	 *
 	 * @param str1
-	 *            Ê±¼ä²ÎÊı 1 ¸ñÊ½£º1990-01-01 12:00:00
+	 *            æ—¶é—´å‚æ•° 1 æ ¼å¼ï¼š1990-01-01 12:00:00
 	 * @param str2
-	 *            Ê±¼ä²ÎÊı 2 ¸ñÊ½£º2009-01-01 12:00:00
-	 * @return String ·µ»ØÖµÎª£ºxxÌìxxĞ¡Ê±xx·ÖxxÃë
+	 *            æ—¶é—´å‚æ•° 2 æ ¼å¼ï¼š2009-01-01 12:00:00
+	 * @return String è¿”å›å€¼ä¸ºï¼šxxå¤©xxå°æ—¶xxåˆ†xxç§’
 	 */
 	public static String getDistanceTime(String str1, String str2) {
 		DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -124,63 +124,63 @@ public class DateDistance {
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
-		return day + "Ìì" + hour + "Ğ¡Ê±" + min + "·Ö" + sec + "Ãë";
+		return day + "å¤©" + hour + "å°æ—¶" + min + "åˆ†" + sec + "ç§’";
 	}
-	
+
 	/**
-	 * Á½¸öÊ±¼äÏà²î¾àÀë¶àÉÙÄê¶àÉÙÔÂ¶àÉÙÌì¶àÉÙĞ¡Ê±¶àÉÙ·Ö¶àÉÙÃë
-	 * 
+	 * ä¸¤ä¸ªæ—¶é—´ç›¸å·®è·ç¦»å¤šå°‘å¹´å¤šå°‘æœˆå¤šå°‘å¤©å¤šå°‘å°æ—¶å¤šå°‘åˆ†å¤šå°‘ç§’
+	 *
 	 * @param str1
-	 *            Ê±¼ä²ÎÊı 1 ¸ñÊ½£º1990-01-01 12:00:00
+	 *            æ—¶é—´å‚æ•° 1 æ ¼å¼ï¼š1990-01-01 12:00:00
 	 * @param str2
-	 *            Ê±¼ä²ÎÊı 2 ¸ñÊ½£º2009-01-01 12:00:00
-	 * @return String ·µ»ØÖµÎª£ºxxÌìxxĞ¡Ê±xx·ÖxxÃë
-	 * @throws ParseException 
+	 *            æ—¶é—´å‚æ•° 2 æ ¼å¼ï¼š2009-01-01 12:00:00
+	 * @return String è¿”å›å€¼ä¸ºï¼šxxå¤©xxå°æ—¶xxåˆ†xxç§’
+	 * @throws ParseException
 	 */
 	public static String getDistanceTime2(String str1, String str2) throws ParseException {
 		VeDate2 vd2= new VeDate2();
 		DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		Date one;
 		Date two;
-		
+
 		long year=0;
-		
+
 		long day_temp = vd2.getBetween(str1, str2,VeDate2.YYYYMMDD, VeDate2.DAY_RETURN);
 		if (day_temp<365) {
 			year=0;
 		}else {
 			year = vd2.getBetween(str1, str2,VeDate2.YYYYMMDD, VeDate2.YEAR_RETURN);
 		}
-		
+
 		String[] ss = PublicFun.split(str1, " ");
 		String[] ss2=PublicFun.split(ss[0], "-");
 		String noyString[] = TimeString.GetnowTimeYMD().split("-");
 		String ynow_string=noyString[0];
 		String str1_temp=ynow_string+"-"+ss2[1]+"-"+ss2[2];
 		String md2[]= null;
-		
-		
-		
+
+
+
 		String md = Db2.getMonthDayDiff2(ss[0], TimeString.GetnowTimeYMD());
 		System.out.println("ddd: "+md);
 		if (md.equals("0")) {
-			
+
 			md="0,0";
 			md2=PublicFun.split(md, ",");
-			
+
 		}else{
-			
+
 			md2=PublicFun.split(md, ",");
 		}
-		
-		
-		
-		
+
+
+
+
 		long month = Long.parseLong(md2[0]);
-		
+
 		long day_result = Long.parseLong(md2[1]);;
-		
-		
+
+
 		long day = 0;
 		long hour = 0;
 		long min = 0;
@@ -203,18 +203,18 @@ public class DateDistance {
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
-		return year + "Äê" +  month + "ÔÂ" + day_result + "Ìì" + hour + "Ğ¡Ê±" + min + "·Ö" + sec + "Ãë";
+		return year + "å¹´" +  month + "æœˆ" + day_result + "å¤©" + hour + "å°æ—¶" + min + "åˆ†" + sec + "ç§’";
 	}
-	
+
 	/**
-	 * Á½¸öÊ±¼äÏà²î¾àÀë¶àÉÙÄê¶àÉÙÔÂ¶àÉÙÌì¶àÉÙĞ¡Ê±¶àÉÙ·Ö¶àÉÙÃë
-	 * 
+	 * ä¸¤ä¸ªæ—¶é—´ç›¸å·®è·ç¦»å¤šå°‘å¹´å¤šå°‘æœˆå¤šå°‘å¤©å¤šå°‘å°æ—¶å¤šå°‘åˆ†å¤šå°‘ç§’
+	 *
 	 * @param str1
-	 *            Ê±¼ä²ÎÊı 1 ¸ñÊ½£º1990-01-01 12:00:00
+	 *            æ—¶é—´å‚æ•° 1 æ ¼å¼ï¼š1990-01-01 12:00:00
 	 * @param str2
-	 *            Ê±¼ä²ÎÊı 2 ¸ñÊ½£º2009-01-01 12:00:00
-	 * @return String ·µ»ØÖµÎª£ºxxÌìxxĞ¡Ê±xx·ÖxxÃë
-	 * @throws ParseException 
+	 *            æ—¶é—´å‚æ•° 2 æ ¼å¼ï¼š2009-01-01 12:00:00
+	 * @return String è¿”å›å€¼ä¸ºï¼šxxå¤©xxå°æ—¶xxåˆ†xxç§’
+	 * @throws ParseException
 	 */
 	public static String getDistanceTime3(String str1, String str2) throws ParseException {
 		VeDate2 vd2= new VeDate2();
@@ -222,66 +222,66 @@ public class DateDistance {
 		Date one;
 		Date two;
 		long year=0;
-		
+
 		long day_temp = vd2.getBetween(str1, str2,VeDate2.YYYYMMDD, VeDate2.DAY_RETURN);
 		if (day_temp<365) {
 			year=0;
 		}else {
 			year = vd2.getBetween(str1, str2,VeDate2.YYYYMMDD, VeDate2.YEAR_RETURN);
 		}
-		
-		
-		
+
+
+
 		String[] ss = PublicFun.split(str1, " ");
 		String[] ss2=PublicFun.split(ss[0], "-");
 		String noyString[] = TimeString.GetnowTimeYMD().split("-");
 		String ynow_string=noyString[0];
 		String str1_temp=ynow_string+"-"+ss2[1]+"-"+ss2[2];
 		String md2[]= null;
-		
+
 		int mt = new Integer(ss2[2]);
-		
+
 		int m1 = new Integer(ss2[1]);
 		int m2 = new Integer(noyString[1]);
-		
+
 		if (m1>m2) {
 			year = vd2.getBetween(str1, str2,VeDate2.YYYYMMDD, VeDate2.YEAR_RETURN)-1;
 		}
-		
-		
-		
-		
-		
+
+
+
+
+
 		String md = Db2.getMonthDayDiff2(ss[0], TimeString.GetnowTimeYMD());
 		System.out.println("ddd: "+md);
 		if (md.equals("0")) {
-			
+
 			md="0,0";
 			md2=PublicFun.split(md, ",");
-			
+
 		}else{
-			
+
 			md2=PublicFun.split(md, ",");
 		}
-		
-		
-		
-		
+
+
+
+
 		long month = Long.parseLong(md2[0]);
-		
+
 		long day_result = Long.parseLong(md2[1]);;
-		
-		
-		
+
+
+
 		if (m1==12) {
 			day_result = day_result+(31-mt);
 		}
-		
+
 		if (m1==11 && mt==31) {
 			day_result = day_result+31;
 		}
-		
-		
+
+
 		long day = 0;
 		long hour = 0;
 		long min = 0;
@@ -306,158 +306,158 @@ public class DateDistance {
 		}
 		return year + "," +  month + "," + day_result + "," + hour + "," + min + "," + sec + ",";
 	}
-	
 
-	// Á½¸öÈÕÆÚÖ®¼äÓĞ¶àÉÙ¸öÈòÄê
+
+	// ä¸¤ä¸ªæ—¥æœŸä¹‹é—´æœ‰å¤šå°‘ä¸ªé—°å¹´
 	public static int GetRnNum(int sy1,int ey2) {
 		int sum = 0;
 		for (int year = sy1; year <= ey2; year++) {
 			if ((year % 400 == 0) || (year % 4 == 0) && (year % 100 != 0)) {
 				sum++;
-				
+
 			}
 		}
 		return sum;
-		//System.out.println("ÓĞ" + sum + "¸öÈòÄê");
+		//System.out.println("æœ‰" + sum + "ä¸ªé—°å¹´");
 	}
 
-	//ÈÕÆÚÊÇ¿çÄê·İµÄ£¬ÈçÒ»¸öÊÇ2012Äê£¬Ò»¸öÊÇ2015ÄêµÄ
-	//Äê·İÊÇ·ÖÈòÄêºÍÆ½ÄêµÄ£¬¸÷×ÔµÄÌìÊı²»Í¬
-	//ÊäÈë£ºÁ½¸öÈÕÆÚ
-    //Êä³ö£ºÁ½¸öÈÕÆÚÏà²îµÄÌìÊı
+	//æ—¥æœŸæ˜¯è·¨å¹´ä»½çš„ï¼Œå¦‚ä¸€ä¸ªæ˜¯2012å¹´ï¼Œä¸€ä¸ªæ˜¯2015å¹´çš„
+	//å¹´ä»½æ˜¯åˆ†é—°å¹´å’Œå¹³å¹´çš„ï¼Œå„è‡ªçš„å¤©æ•°ä¸åŒ
+	//è¾“å…¥ï¼šä¸¤ä¸ªæ—¥æœŸ
+	//è¾“å‡ºï¼šä¸¤ä¸ªæ—¥æœŸç›¸å·®çš„å¤©æ•°
 	/**
-	 * date2±Èdate1¶àµÄÌìÊı
-	 * @param date1 
-	 * @param date2
-	 * @return 
-	 */
-	 public static int differentDays(Date date1,Date date2)
-	 {
-	 Calendar cal1 = Calendar.getInstance();
-	 cal1.setTime(date1);
-	  
-	 Calendar cal2 = Calendar.getInstance();
-	 cal2.setTime(date2);
-	 int day1= cal1.get(Calendar.DAY_OF_YEAR);
-	 int day2 = cal2.get(Calendar.DAY_OF_YEAR);
-	  
-	 int year1 = cal1.get(Calendar.YEAR);
-	 int year2 = cal2.get(Calendar.YEAR);
-	 if(year1 != year2) //Í¬Ò»Äê
-	 {
-	  int timeDistance = 0 ;
-	  for(int i = year1 ; i < year2 ; i ++)
-	  {
-	  if(i%4==0 && i%100!=0 || i%400==0) //ÈòÄê  
-	  {
-	   timeDistance += 366;
-	  }
-	  else //²»ÊÇÈòÄê
-	  {
-	   timeDistance += 365;
-	  }
-	  }
-	   
-	  return timeDistance + (day2-day1) ;
-	 }
-	 else //²»Í¬Äê
-	 {
-	  System.out.println("ÅĞ¶Ïday2 - day1 : " + (day2-day1));
-	  return day2-day1;
-	 }
-	 
-	 }
-	 
-	 
-	 /* 
-		* ³ÌĞòÍ·²¿×¢ÊÍ¿ªÊ¼   
-		* ³ÌĞòµÄ°æÈ¨ºÍ°æ±¾ÉùÃ÷²¿·Ö   
-		* Copyright (c) 2011, ÑÌÌ¨´óÑ§¼ÆËã»úÑ§ÔºÑ§Éú   
-		* All rights reserved.   
-		* ÎÄ¼şÃû³Æ£º¼ÆËã¼¸ÔÂÓĞ¼¸ÌìºÍÅĞ¶ÏÊÇ·ñÎªÈòÄêµÄ¹¤¾ßÀà                            
-		* ×÷    Õß£ºÑ¦¹ã³¿                               
-		* Íê³ÉÈÕÆÚ£º2011  Äê 09 ÔÂ  15  ÈÕ   
-		* °æ ±¾ºÅ£ºx1.0            
-		   
-		* ¶ÔÈÎÎñ¼°Çó½â·½·¨µÄÃèÊö²¿·Ö   
-		* ÊäÈëÃèÊö£º  
-		* ÎÊÌâÃèÊö:
-		* ³ÌĞòÊä³ö£º   
-		* ³ÌĞòÍ·²¿µÄ×¢ÊÍ½áÊø 
-		*/
-		 
-		
-			
-			public static boolean judge(int year)
-			{
-				boolean yearleap = (year % 400 == 0) || (year % 4 == 0) && (year % 100 != 0);//²ÉÓÃ²¼¶ûÊı¾İ¼ÆËãÅĞ¶ÏÊÇ·ñÄÜÕû³ı 
-				return yearleap;
-			}
-			
-			public static int calculate(int year, int month)
-			{
-				boolean yearleap = judge(year);
-		        int day;
-		        if(yearleap && month == 2)
-		        {
-		        	day = 29;
-		        }
-		        else if(!yearleap && month == 2)
-		        {
-		        	day = 28;
-		        }
-		        else if(month == 4 || month == 6 || month == 9 || month == 11)
-		        {
-		        	day = 30;
-		        }
-		        else
-		        {
-		        	day = 31;
-		        }
-		        return day;
-			}
-
-	 
-	 /**
-	 * Í¨¹ıÊ±¼äÃëºÁÃëÊıÅĞ¶ÏÁ½¸öÊ±¼äµÄ¼ä¸ô
+	 * date2æ¯”date1å¤šçš„å¤©æ•°
 	 * @param date1
 	 * @param date2
 	 * @return
 	 */
-	 public static int differentDaysByMillisecond(Date date1,Date date2)
-	 {
-	 int days = (int) ((date2.getTime() - date1.getTime()) / (1000*3600*24));
-	 return days;
-	 }
-	 
+	public static int differentDays(Date date1,Date date2)
+	{
+		Calendar cal1 = Calendar.getInstance();
+		cal1.setTime(date1);
+
+		Calendar cal2 = Calendar.getInstance();
+		cal2.setTime(date2);
+		int day1= cal1.get(Calendar.DAY_OF_YEAR);
+		int day2 = cal2.get(Calendar.DAY_OF_YEAR);
+
+		int year1 = cal1.get(Calendar.YEAR);
+		int year2 = cal2.get(Calendar.YEAR);
+		if(year1 != year2) //åŒä¸€å¹´
+		{
+			int timeDistance = 0 ;
+			for(int i = year1 ; i < year2 ; i ++)
+			{
+				if(i%4==0 && i%100!=0 || i%400==0) //é—°å¹´
+				{
+					timeDistance += 366;
+				}
+				else //ä¸æ˜¯é—°å¹´
+				{
+					timeDistance += 365;
+				}
+			}
+
+			return timeDistance + (day2-day1) ;
+		}
+		else //ä¸åŒå¹´
+		{
+			System.out.println("åˆ¤æ–­day2 - day1 : " + (day2-day1));
+			return day2-day1;
+		}
+
+	}
+
+
+	/*
+	 * ç¨‹åºå¤´éƒ¨æ³¨é‡Šå¼€å§‹
+	 * ç¨‹åºçš„ç‰ˆæƒå’Œç‰ˆæœ¬å£°æ˜éƒ¨åˆ†
+	 * Copyright (c) 2011, çƒŸå°å¤§å­¦è®¡ç®—æœºå­¦é™¢å­¦ç”Ÿ
+	 * All rights reserved.
+	 * æ–‡ä»¶åç§°ï¼šè®¡ç®—å‡ æœˆæœ‰å‡ å¤©å’Œåˆ¤æ–­æ˜¯å¦ä¸ºé—°å¹´çš„å·¥å…·ç±»
+	 * ä½œ    è€…ï¼šè–›å¹¿æ™¨
+	 * å®Œæˆæ—¥æœŸï¼š2011  å¹´ 09 æœˆ  15  æ—¥
+	 * ç‰ˆ æœ¬å·ï¼šx1.0
+
+	 * å¯¹ä»»åŠ¡åŠæ±‚è§£æ–¹æ³•çš„æè¿°éƒ¨åˆ†
+	 * è¾“å…¥æè¿°ï¼š
+	 * é—®é¢˜æè¿°:
+	 * ç¨‹åºè¾“å‡ºï¼š
+	 * ç¨‹åºå¤´éƒ¨çš„æ³¨é‡Šç»“æŸ
+	 */
+
+
+
+	public static boolean judge(int year)
+	{
+		boolean yearleap = (year % 400 == 0) || (year % 4 == 0) && (year % 100 != 0);//é‡‡ç”¨å¸ƒå°”æ•°æ®è®¡ç®—åˆ¤æ–­æ˜¯å¦èƒ½æ•´é™¤
+		return yearleap;
+	}
+
+	public static int calculate(int year, int month)
+	{
+		boolean yearleap = judge(year);
+		int day;
+		if(yearleap && month == 2)
+		{
+			day = 29;
+		}
+		else if(!yearleap && month == 2)
+		{
+			day = 28;
+		}
+		else if(month == 4 || month == 6 || month == 9 || month == 11)
+		{
+			day = 30;
+		}
+		else
+		{
+			day = 31;
+		}
+		return day;
+	}
+
+
+	/**
+	 * é€šè¿‡æ—¶é—´ç§’æ¯«ç§’æ•°åˆ¤æ–­ä¸¤ä¸ªæ—¶é—´çš„é—´éš”
+	 * @param date1
+	 * @param date2
+	 * @return
+	 */
+	public static int differentDaysByMillisecond(Date date1,Date date2)
+	{
+		int days = (int) ((date2.getTime() - date1.getTime()) / (1000*3600*24));
+		return days;
+	}
+
 	public static void main(String[] args) throws ParseException {
-		
-		
+
+
 		System.out.println(DateDistance.getDistanceTime("1988-01-03 00:00:00",TimeString.nowTime()));
 
-		//¾ÍÊÇÄãÁË£¬¹ş¹ş¹ş£¡
+		//å°±æ˜¯ä½ äº†ï¼Œå“ˆå“ˆå“ˆï¼
 		System.out.println(DateDistance.getDistanceTime2("2017-11-25 00:00:00",TimeString.nowTime()));
-		
+
 		System.out.println(DateDistance.getDistanceTime3("2017-11-25 00:00:00",TimeString.nowTime()));
-		
-		
-		
+
+
+
 		System.out.println(DateDistance.GetRnNum(1988, 2018));
-		
-		 String dateStr = "2017-12-31 00:00:00";
-		 String dateStr2 = TimeString.nowTime();
-		 SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		 //SimpleDateFormat format2 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		 try
-		 {
-		  Date date2 = format.parse(dateStr2);
-		  Date date = format.parse(dateStr);
-		   
-		  System.out.println("Á½¸öÈÕÆÚµÄ²î¾à£º" + differentDays(date,date2));
-		  System.out.println("Á½¸öÈÕÆÚµÄ²î¾à£º" + differentDaysByMillisecond(date,date2));
-		 } catch (ParseException e) {
-		  e.printStackTrace();
-		 }
-		
+
+		String dateStr = "2017-12-31 00:00:00";
+		String dateStr2 = TimeString.nowTime();
+		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		//SimpleDateFormat format2 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		try
+		{
+			Date date2 = format.parse(dateStr2);
+			Date date = format.parse(dateStr);
+
+			System.out.println("ä¸¤ä¸ªæ—¥æœŸçš„å·®è·ï¼š" + differentDays(date,date2));
+			System.out.println("ä¸¤ä¸ªæ—¥æœŸçš„å·®è·ï¼š" + differentDaysByMillisecond(date,date2));
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+
 	}
 }

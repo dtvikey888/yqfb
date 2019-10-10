@@ -1,0 +1,26 @@
+<div id="year" class="year time_td">32</div>
+<div id="month" class="month time_td">01</div>
+<div id="day" class="day time_td">21</div>
+<div id="hour" class="hour time_td">18</div>
+<div id="mini" class="time_td mini ml5">14</div>
+<div id="sec" class="sec time_td">28</div>
+<script type="text/javascript" src="js/timeCountDown.js"></script>
+<script type="text/javascript">
+var zxx = {
+	$: function(id){
+		return document.getElementById(id);	
+	},
+	futureDate: Date.UTC(2018, 6, 27, 0),
+	obj: function(){
+		return {
+			sec: zxx.$("sec"),
+			mini: zxx.$("mini"),
+			hour: zxx.$("hour"),
+			day: zxx.$("day"),
+			month: zxx.$("month"),
+			year: zxx.$("year")
+		}
+	}
+};
+fnTimeCountDown(zxx.futureDate, zxx.obj());
+</script>

@@ -13,10 +13,10 @@ import com.fjw.utils.RenamePolicyCos;
 import com.oreilly.servlet.MultipartRequest;
 
 /**
- * Ê¹ÓÃcos×é¼şÊµÏÖÎÄ¼şÉÏ´«
- * 
+ * ä½¿ç”¨cosç»„ä»¶å®ç°æ–‡ä»¶ä¸Šä¼ 
+ *
  * @author mingxue.zhang@163.com
- * 
+ *
  */
 public class CosUploadServlet extends HttpServlet {
 
@@ -29,30 +29,30 @@ public class CosUploadServlet extends HttpServlet {
 		if (!fileDir.exists()) {
 			fileDir.mkdirs();
 		}
-		// ÉèÖÃÉÏ´«ÎÄ¼şµÄ´óĞ¡£¬³¬¹ıÕâ¸ö´óĞ¡ ½«Å×³öIOExceptionÒì³££¬Ä¬ÈÏ´óĞ¡ÊÇ1M¡£
+		// è®¾ç½®ä¸Šä¼ æ–‡ä»¶çš„å¤§å°ï¼Œè¶…è¿‡è¿™ä¸ªå¤§å° å°†æŠ›å‡ºIOExceptionå¼‚å¸¸ï¼Œé»˜è®¤å¤§å°æ˜¯1Mã€‚
 		int inmaxPostSize = 10 * 1024 * 1024;
 		MultipartRequest multirequest = null;
-		// ÉÏ´«ÎÄ¼şÖØÃüÃû²ßÂÔ
+		// ä¸Šä¼ æ–‡ä»¶é‡å‘½åç­–ç•¥
 		RenamePolicyCos myRenamePolicyCos = new RenamePolicyCos();
 		try {
-			// MultipartRequest()ÓĞ8ÖÖ¹¹Ôìº¯Êı£¡
+			// MultipartRequest()æœ‰8ç§æ„é€ å‡½æ•°ï¼
 			multirequest = new MultipartRequest(request, fileDir
-					.getAbsolutePath(), inmaxPostSize, "UTF-8", myRenamePolicyCos); // utf-8ÖĞÎÄ±àÂëÄ£Ê½ÉÏ´«ÎÄ¼ş
-			String subject = multirequest.getParameter("subject");// »ñÈ¡ÆÕÍ¨ĞÅÏ¢
+					.getAbsolutePath(), inmaxPostSize, "UTF-8", myRenamePolicyCos); // utf-8ä¸­æ–‡ç¼–ç æ¨¡å¼ä¸Šä¼ æ–‡ä»¶
+			String subject = multirequest.getParameter("subject");// è·å–æ™®é€šä¿¡æ¯
 			System.out.println(subject);
 			Enumeration<String> filedFileNames = multirequest.getFileNames();
 			String filedName = null;
 			if (null != filedFileNames) {
 				while (filedFileNames.hasMoreElements()) {
-					filedName = filedFileNames.nextElement();// ÎÄ¼şÎÄ±¾¿òµÄÃû³Æ
-					// »ñÈ¡¸ÃÎÄ¼ş¿òÖĞÉÏ´«µÄÎÄ¼ş£¬¼´¶ÔÓ¦µ½ÉÏ´«µ½·şÎñÆ÷ÖĞµÄÎÄ¼ş
+					filedName = filedFileNames.nextElement();// æ–‡ä»¶æ–‡æœ¬æ¡†çš„åç§°
+					// è·å–è¯¥æ–‡ä»¶æ¡†ä¸­ä¸Šä¼ çš„æ–‡ä»¶ï¼Œå³å¯¹åº”åˆ°ä¸Šä¼ åˆ°æœåŠ¡å™¨ä¸­çš„æ–‡ä»¶
 					File uploadFile = multirequest.getFile(filedName);
 					if (null != uploadFile && uploadFile.length() > 0) {
 						System.out.println(uploadFile.getName());
 						System.out.println(uploadFile.getPath());
 						System.out.println(uploadFile.length());
 					}
-					// »ñÈ¡Î´ÖØÃüÃûµÄÎÄ¼şÃû³Æ
+					// è·å–æœªé‡å‘½åçš„æ–‡ä»¶åç§°
 					String Originalname = multirequest
 							.getOriginalFileName(filedName);
 					System.out.println(Originalname);

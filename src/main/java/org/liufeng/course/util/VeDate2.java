@@ -8,34 +8,34 @@ import java.util.Date;
 import java.util.Locale;
 
 public class VeDate2 {
-	/** Äê */
+	/** å¹´ */
 	public static final int YEAR_RETURN = 0;
-	/** ÔÂ */
+	/** æœˆ */
 	public static final int MONTH_RETURN = 1;
-	/** ÈÕ */
+	/** æ—¥ */
 	public static final int DAY_RETURN = 2;
-	/** Ê± */
+	/** æ—¶ */
 	public static final int HOUR_RETURN = 3;
-	/** ·Ö */
+	/** åˆ† */
 	public static final int MINUTE_RETURN = 4;
-	/** Ãë */
+	/** ç§’ */
 	public static final int SECOND_RETURN = 5;
 
-	/** Äê */
+	/** å¹´ */
 	public static final String YYYY = "yyyy";
-	/** Äê-ÔÂ */
+	/** å¹´-æœˆ */
 	public static final String YYYYMM = "yyyy-MM";
-	/** Äê-ÔÂ-ÈÕ */
+	/** å¹´-æœˆ-æ—¥ */
 	public static final String YYYYMMDD = "yyyy-MM-dd";
-	/** Äê-ÔÂ-ÈÕ-Ê± */
+	/** å¹´-æœˆ-æ—¥-æ—¶ */
 	public static final String YYYYMMDDHH = "yyyy-MM-dd HH";
-	/** Äê-ÔÂ-ÈÕ-Ê±-·Ö */
+	/** å¹´-æœˆ-æ—¥-æ—¶-åˆ† */
 	public static final String YYYYMMDDHHMM = "yyyy-MM-dd HH:mm";
-	/** Äê-ÔÂ-ÈÕ-Ê±-·Ö-Ãë */
+	/** å¹´-æœˆ-æ—¥-æ—¶-åˆ†-ç§’ */
 	public static final String YYYYMMDDHHMMSS = "yyyy-MM-dd HH:mm:ss";
 
 	public static long getBetween(String beginTime, String endTime,
-			String formatPattern, int returnPattern) throws ParseException {
+								  String formatPattern, int returnPattern) throws ParseException {
 		SimpleDateFormat simpleDateFormat = new SimpleDateFormat(formatPattern);
 		Date beginDate = simpleDateFormat.parse(beginTime);
 		Date endDate = simpleDateFormat.parse(endTime);
@@ -45,30 +45,30 @@ public class VeDate2 {
 		beginCalendar.setTime(beginDate);
 		endCalendar.setTime(endDate);
 		switch (returnPattern) {
-		case YEAR_RETURN:
-			return VeDate2
-					.getByField(beginCalendar, endCalendar, Calendar.YEAR);
-		case MONTH_RETURN:
-			return VeDate2
-					.getByField(beginCalendar, endCalendar, Calendar.YEAR)
-					* 12
-					+ VeDate2.getByField(beginCalendar, endCalendar,
-							Calendar.MONTH);
-		case DAY_RETURN:
-			return VeDate2.getTime(beginDate, endDate) / (24 * 60 * 60 * 1000);
-		case HOUR_RETURN:
-			return VeDate2.getTime(beginDate, endDate) / (60 * 60 * 1000);
-		case MINUTE_RETURN:
-			return VeDate2.getTime(beginDate, endDate) / (60 * 1000);
-		case SECOND_RETURN:
-			return VeDate2.getTime(beginDate, endDate) / 1000;
-		default:
-			return 0;
+			case YEAR_RETURN:
+				return VeDate2
+						.getByField(beginCalendar, endCalendar, Calendar.YEAR);
+			case MONTH_RETURN:
+				return VeDate2
+						.getByField(beginCalendar, endCalendar, Calendar.YEAR)
+						* 12
+						+ VeDate2.getByField(beginCalendar, endCalendar,
+						Calendar.MONTH);
+			case DAY_RETURN:
+				return VeDate2.getTime(beginDate, endDate) / (24 * 60 * 60 * 1000);
+			case HOUR_RETURN:
+				return VeDate2.getTime(beginDate, endDate) / (60 * 60 * 1000);
+			case MINUTE_RETURN:
+				return VeDate2.getTime(beginDate, endDate) / (60 * 1000);
+			case SECOND_RETURN:
+				return VeDate2.getTime(beginDate, endDate) / 1000;
+			default:
+				return 0;
 		}
 	}
 
 	private static long getByField(Calendar beginCalendar,
-			Calendar endCalendar, int calendarField) {
+								   Calendar endCalendar, int calendarField) {
 		return endCalendar.get(calendarField)
 				- beginCalendar.get(calendarField);
 	}
@@ -81,18 +81,18 @@ public class VeDate2 {
 
 	/**
 	 * @param date1
-	 *            ĞèÒª±È½ÏµÄÊ±¼ä ²»ÄÜÎª¿Õ(null),ĞèÒªÕıÈ·µÄÈÕÆÚ¸ñÊ½ ,Èç£º2009-09-12
+	 *            éœ€è¦æ¯”è¾ƒçš„æ—¶é—´ ä¸èƒ½ä¸ºç©º(null),éœ€è¦æ­£ç¡®çš„æ—¥æœŸæ ¼å¼ ,å¦‚ï¼š2009-09-12
 	 * @param date2
-	 *            ±»±È½ÏµÄÊ±¼ä Îª¿Õ(null)ÔòÎªµ±Ç°Ê±¼ä
+	 *            è¢«æ¯”è¾ƒçš„æ—¶é—´ ä¸ºç©º(null)åˆ™ä¸ºå½“å‰æ—¶é—´
 	 * @param stype
-	 *            ·µ»ØÖµÀàĞÍ 0Îª¶àÉÙÌì£¬1Îª¶àÉÙ¸öÔÂ£¬2Îª¶àÉÙÄê
-	 * @return ¾ÙÀı£º compareDate("2009-09-12", null, 0);//±È½ÏÌì
-	 *         compareDate("2009-09-12", null, 1);//±È½ÏÔÂ
-	 *         compareDate("2009-09-12", null, 2);//±È½ÏÄê
+	 *            è¿”å›å€¼ç±»å‹ 0ä¸ºå¤šå°‘å¤©ï¼Œ1ä¸ºå¤šå°‘ä¸ªæœˆï¼Œ2ä¸ºå¤šå°‘å¹´
+	 * @return ä¸¾ä¾‹ï¼š compareDate("2009-09-12", null, 0);//æ¯”è¾ƒå¤©
+	 *         compareDate("2009-09-12", null, 1);//æ¯”è¾ƒæœˆ
+	 *         compareDate("2009-09-12", null, 2);//æ¯”è¾ƒå¹´
 	 */
 	public static int compareDate(String startDay, String endDay, int stype) {
 		int n = 0;
-		String[] u = { "Ìì", "ÔÂ", "Äê" };
+		String[] u = { "å¤©", "æœˆ", "å¹´" };
 		String formatStyle = stype == 1 ? "yyyy-MM" : "yyyy-MM-dd";
 
 		endDay = endDay == null ? getCurrentDate("yyyy-MM-dd") : endDay;
@@ -107,26 +107,26 @@ public class VeDate2 {
 			System.out.println("wrong occured");
 		}
 		// List list = new ArrayList();
-		while (!c1.after(c2)) { // Ñ­»·¶Ô±È£¬Ö±µ½ÏàµÈ£¬n ¾ÍÊÇËùÒªµÄ½á¹û
-			// list.add(df.format(c1.getTime())); // ÕâÀï¿ÉÒÔ°Ñ¼ä¸ôµÄÈÕÆÚ´æµ½Êı×éÖĞ ´òÓ¡³öÀ´
+		while (!c1.after(c2)) { // å¾ªç¯å¯¹æ¯”ï¼Œç›´åˆ°ç›¸ç­‰ï¼Œn å°±æ˜¯æ‰€è¦çš„ç»“æœ
+			// list.add(df.format(c1.getTime())); // è¿™é‡Œå¯ä»¥æŠŠé—´éš”çš„æ—¥æœŸå­˜åˆ°æ•°ç»„ä¸­ æ‰“å°å‡ºæ¥
 			n++;
 			if (stype == 1) {
-				c1.add(Calendar.MONTH, 1); // ±È½ÏÔÂ·İ£¬ÔÂ·İ+1
+				c1.add(Calendar.MONTH, 1); // æ¯”è¾ƒæœˆä»½ï¼Œæœˆä»½+1
 			} else {
-				c1.add(Calendar.DATE, 1); // ±È½ÏÌìÊı£¬ÈÕÆÚ+1
+				c1.add(Calendar.DATE, 1); // æ¯”è¾ƒå¤©æ•°ï¼Œæ—¥æœŸ+1
 			}
 		}
 		n = n - 1;
 		if (stype == 2) {
 			n = (int) n / 365;
 		}
-		System.out.println(startDay + " -- " + endDay + " Ïà²î¶àÉÙ" + u[stype]
+		System.out.println(startDay + " -- " + endDay + " ç›¸å·®å¤šå°‘" + u[stype]
 				+ ":" + n);
 		return n;
 	}
-	
-	
-	
+
+
+
 
 	public static String getCurrentDate(String format) {
 		Calendar day = Calendar.getInstance();
@@ -135,15 +135,15 @@ public class VeDate2 {
 		String date = sdf.format(day.getTime());
 		return date;
 	}
-	
-	
 
-	
+
+
+
 
 	public static void main(String[] args) throws ParseException {
-		
+
 		try {
-		
+
 			System.out.println(VeDate2.getBetween("2007-12-28", "2018-06-27",
 					VeDate2.YYYYMMDD, VeDate2.YEAR_RETURN));
 			System.out.println(VeDate2.getBetween("2007-12-29", "2018-06-27",
@@ -156,49 +156,49 @@ public class VeDate2 {
 					VeDate2.YYYYMMDD, VeDate2.MINUTE_RETURN));
 			System.out.println(VeDate2.getBetween("2013-05-02", "2018-05-05",
 					VeDate2.YYYYMMDD, VeDate2.SECOND_RETURN));
-					
+
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
-		
-		
+
+
 		//System.out.println(VeDate2.compareDate("2007-01-01", "2018-06-26", 2));
 		/**
-		   SimpleDateFormat dfs = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		   java.util.Date begin=dfs.parse("2007-01-01 11:30:24");
-		   java.util.Date end = dfs.parse("2018-06-26 15:44:40");
-		   long between=(end.getTime()-begin.getTime())/1000;//³ıÒÔ1000ÊÇÎªÁË×ª»»³ÉÃë
-		   long day1=between/(24*3600);
-		   long hour1=between%(24*3600)/3600;
-		   long minute1=between%3600/60;
-		   long second1=between%60/60;
-		   System.out.println(""+day1+"Ìì"+hour1+"Ğ¡Ê±"+minute1+"·Ö"+second1+"Ãë");
-		**/
+		 SimpleDateFormat dfs = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		 java.util.Date begin=dfs.parse("2007-01-01 11:30:24");
+		 java.util.Date end = dfs.parse("2018-06-26 15:44:40");
+		 long between=(end.getTime()-begin.getTime())/1000;//é™¤ä»¥1000æ˜¯ä¸ºäº†è½¬æ¢æˆç§’
+		 long day1=between/(24*3600);
+		 long hour1=between%(24*3600)/3600;
+		 long minute1=between%3600/60;
+		 long second1=between%60/60;
+		 System.out.println(""+day1+"å¤©"+hour1+"å°æ—¶"+minute1+"åˆ†"+second1+"ç§’");
+		 **/
 		/**
-		String myString = "2007-05-31 00:00:00";
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.CHINA);
-		Date now1 = new Date();
-		String now=sdf.format(now1);
-		Date date = null;
-		try {
-		now1 = sdf.parse(now);
-		date = sdf.parse(myString);
-		} catch (ParseException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-		}
-		long l=now1.getTime()-date.getTime();
-		long day=l/(24*60*60*1000);
-		long hour=day*24;
-		long mon=day/30;
-		long year=mon/12;
-		System.out.println("Ïà²î"+hour+"Ğ¡Ê±");
-		System.out.println("Ïà²î"+day+"Ìì");
-		System.out.println("Ïà²î"+mon+"ÔÂ");
-		System.out.println("Ïà²î"+year+"Äê");
-		**/
-		
-		}
-		
-	
+		 String myString = "2007-05-31 00:00:00";
+		 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.CHINA);
+		 Date now1 = new Date();
+		 String now=sdf.format(now1);
+		 Date date = null;
+		 try {
+		 now1 = sdf.parse(now);
+		 date = sdf.parse(myString);
+		 } catch (ParseException e) {
+		 // TODO Auto-generated catch block
+		 e.printStackTrace();
+		 }
+		 long l=now1.getTime()-date.getTime();
+		 long day=l/(24*60*60*1000);
+		 long hour=day*24;
+		 long mon=day/30;
+		 long year=mon/12;
+		 System.out.println("ç›¸å·®"+hour+"å°æ—¶");
+		 System.out.println("ç›¸å·®"+day+"å¤©");
+		 System.out.println("ç›¸å·®"+mon+"æœˆ");
+		 System.out.println("ç›¸å·®"+year+"å¹´");
+		 **/
+
+	}
+
+
 }

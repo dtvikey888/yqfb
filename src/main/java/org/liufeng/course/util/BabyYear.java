@@ -4,22 +4,22 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 
 public class BabyYear {
-	public static void main(String[] args){  
-        Calendar birthday = new GregorianCalendar(2018,01,07);//2010Äê10ÔÂ12ÈÕ£¬month´Ó0¿ªÊ¼  
-        Calendar now = Calendar.getInstance();  
-        int day = now.get(Calendar.DAY_OF_MONTH) - birthday.get(Calendar.DAY_OF_MONTH);  
-        int month = now.get(Calendar.MONTH) - birthday.get(Calendar.MONTH);  
-        int year = now.get(Calendar.YEAR) - birthday.get(Calendar.YEAR);  
-        //°´ÕÕ¼õ·¨Ô­Àí£¬ÏÈdayÏà¼õ£¬²»¹»Ïòmonth½è£»È»ºómonthÏà¼õ£¬²»¹»Ïòyear½è£»×îºóyearÏà¼õ¡£  
-        if(day<0){  
-            month -= 1;  
-            now.add(Calendar.MONTH, -1);//µÃµ½ÉÏÒ»¸öÔÂ£¬ÓÃÀ´µÃµ½ÉÏ¸öÔÂµÄÌìÊı¡£  
-            day = day + now.getActualMaximum(Calendar.DAY_OF_MONTH);  
-        }  
-        if(month<0){  
-            month = (month+12)%12;  
-            year--;  
-        }  
-        System.out.println("ÄêÁä£º"+year+"Äê"+month+"ÔÂ"+day+"Ìì");  
-    }  
+    public static void main(String[] args){
+        Calendar birthday = new GregorianCalendar(2018,01,07);//2010å¹´10æœˆ12æ—¥ï¼Œmonthä»0å¼€å§‹
+        Calendar now = Calendar.getInstance();
+        int day = now.get(Calendar.DAY_OF_MONTH) - birthday.get(Calendar.DAY_OF_MONTH);
+        int month = now.get(Calendar.MONTH) - birthday.get(Calendar.MONTH);
+        int year = now.get(Calendar.YEAR) - birthday.get(Calendar.YEAR);
+        //æŒ‰ç…§å‡æ³•åŸç†ï¼Œå…ˆdayç›¸å‡ï¼Œä¸å¤Ÿå‘monthå€Ÿï¼›ç„¶åmonthç›¸å‡ï¼Œä¸å¤Ÿå‘yearå€Ÿï¼›æœ€åyearç›¸å‡ã€‚
+        if(day<0){
+            month -= 1;
+            now.add(Calendar.MONTH, -1);//å¾—åˆ°ä¸Šä¸€ä¸ªæœˆï¼Œç”¨æ¥å¾—åˆ°ä¸Šä¸ªæœˆçš„å¤©æ•°ã€‚
+            day = day + now.getActualMaximum(Calendar.DAY_OF_MONTH);
+        }
+        if(month<0){
+            month = (month+12)%12;
+            year--;
+        }
+        System.out.println("å¹´é¾„ï¼š"+year+"å¹´"+month+"æœˆ"+day+"å¤©");
+    }
 }

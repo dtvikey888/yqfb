@@ -7,68 +7,68 @@ import java.util.Date;
 import java.util.Scanner;
 
 public class TimeDo {
-	
+
 	/**
-	 * ÓÉ¹ıÈ¥µÄÄ³Ò»Ê±¼ä,¼ÆËã¾àÀëµ±Ç°µÄÊ±¼ä
+	 * ç”±è¿‡å»çš„æŸä¸€æ—¶é—´,è®¡ç®—è·ç¦»å½“å‰çš„æ—¶é—´
 	 * */
 	public String CalculateTime(String time){
-		long nowTime=System.currentTimeMillis();  //»ñÈ¡µ±Ç°Ê±¼äµÄºÁÃëÊı
+		long nowTime=System.currentTimeMillis();  //è·å–å½“å‰æ—¶é—´çš„æ¯«ç§’æ•°
 		String msg = null;
-		
-		SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//Ö¸¶¨Ê±¼ä¸ñÊ½
-		 Date setTime = null;  //Ö¸¶¨Ê±¼ä
+
+		SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//æŒ‡å®šæ—¶é—´æ ¼å¼
+		Date setTime = null;  //æŒ‡å®šæ—¶é—´
 		try {
-			setTime = sdf.parse(time);  //½«×Ö·û´®×ª»»ÎªÖ¸¶¨µÄÊ±¼ä¸ñÊ½
+			setTime = sdf.parse(time);  //å°†å­—ç¬¦ä¸²è½¬æ¢ä¸ºæŒ‡å®šçš„æ—¶é—´æ ¼å¼
 		} catch (ParseException e) {
-			
+
 			e.printStackTrace();
 		}
-		
-	    long reset=setTime.getTime();   //»ñÈ¡Ö¸¶¨Ê±¼äµÄºÁÃëÊı
-	 	long dateDiff=nowTime-reset;
-	 	
-	 	if(dateDiff<0){
-	 		msg="ÊäÈëµÄÊ±¼ä²»¶Ô";
-	 	}else{
-	 	
-		long dateTemp1=dateDiff/1000; //Ãë
-		long dateTemp2=dateTemp1/60; //·ÖÖÓ
-		long dateTemp3=dateTemp2/60; //Ğ¡Ê±
-		long dateTemp4=dateTemp3/24; //ÌìÊı
-		long dateTemp5=dateTemp4/30; //ÔÂÊı
-		long dateTemp6=dateTemp5/12; //ÄêÊı
-		
-		if(dateTemp6>0){
-			msg = dateTemp6+"ÄêÇ°";
-			
-		}else if(dateTemp5>0){
-			msg = dateTemp5+"¸öÔÂÇ°";
-			
-		}else if(dateTemp4>0){
-			msg = dateTemp4+"ÌìÇ°";
-			
-		}else if(dateTemp3>0){
-			msg = dateTemp3+"Ğ¡Ê±Ç°";
-			
-		}else if(dateTemp2>0){
-			msg = dateTemp2+"·ÖÖÓÇ°";
-			
-		}else if(dateTemp1>0){
-			msg = "¸Õ¸Õ";
-			
-		}	
-		
-		
-	}
+
+		long reset=setTime.getTime();   //è·å–æŒ‡å®šæ—¶é—´çš„æ¯«ç§’æ•°
+		long dateDiff=nowTime-reset;
+
+		if(dateDiff<0){
+			msg="è¾“å…¥çš„æ—¶é—´ä¸å¯¹";
+		}else{
+
+			long dateTemp1=dateDiff/1000; //ç§’
+			long dateTemp2=dateTemp1/60; //åˆ†é’Ÿ
+			long dateTemp3=dateTemp2/60; //å°æ—¶
+			long dateTemp4=dateTemp3/24; //å¤©æ•°
+			long dateTemp5=dateTemp4/30; //æœˆæ•°
+			long dateTemp6=dateTemp5/12; //å¹´æ•°
+
+			if(dateTemp6>0){
+				msg = dateTemp6+"å¹´å‰";
+
+			}else if(dateTemp5>0){
+				msg = dateTemp5+"ä¸ªæœˆå‰";
+
+			}else if(dateTemp4>0){
+				msg = dateTemp4+"å¤©å‰";
+
+			}else if(dateTemp3>0){
+				msg = dateTemp3+"å°æ—¶å‰";
+
+			}else if(dateTemp2>0){
+				msg = dateTemp2+"åˆ†é’Ÿå‰";
+
+			}else if(dateTemp1>0){
+				msg = "åˆšåˆš";
+
+			}
+
+
+		}
 		return msg;
-		
+
 	}
-	
+
 	public static void main(String[] args) {
-		Scanner input=new Scanner(System.in);  
-        String time=input.nextLine();  
-        TimeDo date = new TimeDo();  
-        String ss=date.CalculateTime(time);  
-        System.out.println(ss);  
+		Scanner input=new Scanner(System.in);
+		String time=input.nextLine();
+		TimeDo date = new TimeDo();
+		String ss=date.CalculateTime(time);
+		System.out.println(ss);
 	}
 }

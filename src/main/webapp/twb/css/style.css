@@ -1,0 +1,53 @@
+BODY {
+	MARGIN: 0px 0px 0px; FONT-FAMILY: arial;FONT-SIZE: 12px; background-color:#ffffff
+}
+FORM {
+	MARGIN: 0px
+}
+
+TD {
+	FONT-SIZE: 12px;  font-family:Arial
+}
+A:link {
+	FONT-SIZE: 14px; COLOR: #0B3B8C; TEXT-DECORATION: none;  font-family:Arial
+}
+A:visited {
+	FONT-SIZE: 14px; COLOR: #0B3B8C; TEXT-DECORATION: none;  font-family:Arial
+}
+A:hover {
+	FONT-SIZE: 14px; COLOR: red;  font-family:Arial;TEXT-DECORATION: underline;
+}
+
+
+A.lj:link {
+	FONT-SIZE: 12px; COLOR: #666666; TEXT-DECORATION: underline;  font-family:Arial
+}
+A.lj:visited {
+	FONT-SIZE: 12px; COLOR: #666666; TEXT-DECORATION: underline;  font-family:Arial
+}
+A.lj:hover {
+	FONT-SIZE: 12px; COLOR: #333333;  font-family:Arial;TEXT-DECORATION: underline;
+}
+
+.rightjg{padding-left:10px;}
+.wh{border:1px solid #cccccc;}
+.lankuang:link{font-size: 14px;line-height: 24px;color: #004499;}
+.lankuang:visited{font-size: 14px;line-height: 24px;color: #004499;}
+.lankuang:hover {font-size: 14px;line-height: 24px;color: #FFFFFF;background-color: #296fdf;}
+.tab3{border:1px solid #c6dbe7;text-align:left;}
+.jg8{margin-top:4px;}
+.p14lanh{font-size: 14px;font-weight: bold;color: #004499;}
+.whjg{padding:5px;}
+.djg{margin-top:8px;}
+.hjg{line-height:22px;}
+
+.p14lan:link {	font-size: 14px;color: #004499;	line-height: 24px;}
+.p14lan:visited {	font-size: 14px;color: #004499;	line-height: 24px;}
+.p14lan:hover {	font-size: 14px;color: #FF0000;	text-decoration: underline;line-height: 24px;}
+.p14lan img{margin:9px 0;vertical-align:middle; }
+.infowh{padding:10px 20px 10px 20px}
+.newstitle{font-size:18px;font-weight:bold;}
+.newstitle a:link{font-size:18px;font-weight:bold;TEXT-DECORATION: underline; }
+.newstitle a:visited{font-size:18px;font-weight:bold;TEXT-DECORATION: underline; }
+.newstitle a:hover {font-size:18px;font-weight:bold;TEXT-DECORATION: unone;}
+

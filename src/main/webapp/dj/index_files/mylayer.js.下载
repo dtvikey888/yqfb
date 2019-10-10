@@ -1,0 +1,21 @@
+//弹出层提示框 简版 
+function layer_open(text){
+		layer.open({
+		    content: text,
+		    style: 'background-color:rgba(0,0,0,0.4); color:#fff; border:none;border-radius: 14px;margin-bottom: 33%;',
+		});
+}
+//弹出层询问框
+function layer_confirm(text){
+	layer.open({
+	    content: text,
+	    style:'width:17%',
+	    btn: ['确认', '取消'],
+	    shadeClose: false,
+	    yes: function(){
+	        return true
+	    }, no: function(){
+	        return false;
+	    }
+	});
+}

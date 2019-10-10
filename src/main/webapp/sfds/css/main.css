@@ -1,0 +1,33 @@
+BODY {
+	MARGIN: 0px 0px 0px; FONT-FAMILY: arial;FONT-SIZE: 12px; background-color:#ffffff
+}
+FORM {
+	MARGIN: 0px
+}
+
+TD {
+	FONT-SIZE: 12px;  font-family:Arial;
+}
+DIV {
+	FONT-FAMILY: Arial
+}
+INPUT {
+	FONT-FAMILY: Arial;FONT-SIZE: 12px; 
+}
+
+A:link {
+	FONT-SIZE: 12px; COLOR: #333333; TEXT-DECORATION: none;  font-family:Arial
+}
+A:visited {
+	FONT-SIZE: 12px; COLOR: #333333; TEXT-DECORATION: none;  font-family:Arial
+}
+A:hover {
+	FONT-SIZE: 12px; COLOR: red;  font-family:Arial;TEXT-DECORATION: underline;
+}
+#main{width:960px;}
+.jg5{margin-top:5px;}
+.jg8{margin-top:8px;}
+
+ 
+ 
+ 

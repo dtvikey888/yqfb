@@ -1,0 +1,321 @@
+/**
+ * 云平台分享js
+ * Created by yellow on 2017/8/4.
+ */
+//加载微信js
+document.write('<script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>');
+
+//定义类
+var yun_share = {};
+//定义属性
+yun_share.debug = false; //是否开启debug模式
+yun_share.title = ''; //分享标题
+yun_share.desc = ''; //分享描述
+yun_share.link = ''; //分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+yun_share.imgUrl = ''; //分享图标，全路径
+yun_share.success = ''; //用户确认分享后执行的回调函数
+yun_share.cancel = ''; //用户取消分享后执行的回调函数
+yun_share.appId = ''; //微信APPID
+yun_share.api = 'https://open.8531.cn/';
+
+//初始化函数
+yun_share._init = function() {
+    this.title = $('#yun_wx_share_title').val();
+    this.desc = $('#yun_wx_share_desc').val();
+    this.link = $('#yun_wx_share_link').val();
+    this.imgUrl = $('#yun_wx_share_imgUrl').val();
+    this.success = (window.success) ? window.success : false;
+    this.cancel = (window.cancel) ? window.console : false;
+    this.debug = $('#yun_wx_share_debug').val() ? true : false;
+    this.appId = $('#yun_wx_share_appId').val();
+    this.uploadVoice = $('#yun_upload_voice_api').val();
+    this.uploadImage = $('#yun_upload_image_api').val();
+};
+//改变分享样式
+yun_share._change = function(title, desc, link, imgUrl) {
+    if (title) this.title = title;
+    if (desc) this.desc = desc;
+    if (link) this.link = link;
+    if (imgUrl) this.imgUrl = imgUrl;
+    yun_share.share();
+};
+
+//注册分享信息
+yun_share.share = function() {
+    //分享到朋友圈
+    wx.onMenuShareTimeline({
+        title: yun_share.desc || window.location.title, // 分享标题
+        link: yun_share.link || window.location.href, // 分享链接
+        imgUrl: yun_share.imgUrl, // 分享图标
+        success: function() {
+            if (yun_share.success) success(); // 用户确认分享后执行的回调函数
+        },
+        cancel: function() {
+            if (yun_share.cancel) cancel(); // 用户取消分享后执行的回调函数
+        }
+    });
+    //分享到给微信朋友
+    wx.onMenuShareAppMessage({
+        title: yun_share.title || window.location.title, // 分享标题
+        desc: yun_share.desc || window.location.title, // 分享描述
+        link: yun_share.link || window.location.href, // 分享链接
+        imgUrl: yun_share.imgUrl, // 分享图标
+        type: yun_share.type || 'link', // 分享类型,music、video或link，不填默认为link
+        dataUrl: yun_share.dataUrl || '', // 如果type是music或video，则要提供数据链接，默认为空
+        success: function() {
+            if (yun_share.success) success(); // 用户确认分享后执行的回调函数
+        },
+        cancel: function() {
+            if (yun_share.cancel) cancel(); // 用户取消分享后执行的回调函数
+        }
+    });
+};
+
+$(function() {
+    //初始化
+    yun_share._init();
+    //签名
+    var data = {
+        'method': 'getShareSign',
+        'url': location.href.split('#')[0],
+        'yun_callback': 'yun_share.wx_share'
+    };
+    if (yun_share.appId) data.wx_appid = yun_share.appId;
+    //取得签名
+    $.get(yun_share.api + 'home/wx/index', data, function(json) {
+        // console.log(json);
+    }, 'jsonp');
+});
+
+yun_share.wx_share = function(data) {
+    // data = JSON.parse(data);
+    if (data.code != 0) {
+        if (this.debug) alert('get yun sign error');
+        return;
+    }
+    data = data.msg;
+    //开始注册微信分享
+
+    wx.config({
+        debug: yun_share.debug, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+        appId: data.appId, // 必填，公众号的唯一标识
+        timestamp: data.timestamp, // 必填，生成签名的时间戳
+        nonceStr: data.nonceStr, // 必填，生成签名的随机串
+        signature: data.signature, // 必填，签名，见附录1
+        jsApiList: [
+                'onMenuShareTimeline', 'onMenuShareAppMessage', 'onMenuShareQQ', 'onMenuShareWeibo', 'onMenuShareQZone',
+                'startRecord', 'stopRecord', 'onVoiceRecordEnd', 'onVoicePlayEnd', 'uploadVoice', 'playVoice', 'pauseVoice' ,'getLocation',
+                'chooseImage', 'uploadImage', 'stopVoice'
+            ] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+    });
+
+    /**
+     * 执行wx接口
+     * config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，
+     * config是一个客户端的异步操作，所以如果需要在页面加载时就调用相关接口，
+     * 则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，
+     * 则可以直接调用，不需要放在ready函数中。
+     * 也就是说：需要在页面执行完成调用的写在ready里面，用户自行触发的可以自定义function放在外面
+     */
+
+    wx.ready(function() {
+        yun_share.share();
+        //注册微信播放录音结束事件【一定要放在wx.ready函数内】
+        wx.onVoicePlayEnd({
+            success: function(res) {
+              $('#play_voice').html('点击播放');
+              stopWave();
+            }
+        });
+        wx.onVoiceRecordEnd({
+            // 录音时间超过一分钟没有停止的时候会执行 complete 回调
+            complete: function(res) {
+                voice.localId = res.localId;
+                uploadVoice();
+            }
+        });
+        //获取地理位置接口
+        wx.getLocation({
+            type: 'wgs84', // 默认为wgs84的gps坐标，如果要返回直接给openLocation用的火星坐标，可传入'gcj02'
+            success: function(res) {
+                var latitude = res.latitude; // 纬度，浮点数，范围为90 ~ -90
+                var longitude = res.longitude; // 经度，浮点数，范围为180 ~ -180。
+                var speed = res.speed; // 速度，以米/每秒计
+                var accuracy = res.accuracy; // 位置精度
+                if (window.location_success) location_success(latitude, longitude);
+            }
+        });
+    });
+
+    /**
+     * 错误信息
+     * config信息验证失败会执行error函数，如签名过期导致验证失败，
+     * 具体错误信息可以打开config的debug模式查看，
+     * 也可以在返回的res参数中查看，对于SPA可以在这里更新签名。
+     */
+    wx.error(function(res) {
+        //is_config = false;
+        if (this.debug) alert(res.errMsg);
+    });
+};
+
+//按下开始录音
+var start, end, recordTimer, uploadTimer, voice = {
+    localId: ''
+};
+
+$('body').delegate('#voice_btn', 'touchstart', function(event) {
+    if (!localStorage.rainAllowRecord || localStorage.rainAllowRecord !== 'true') {
+        wx.startRecord({
+            success: function() {
+                localStorage.rainAllowRecord = true;
+                wx.stopRecord();
+            },
+            cancel: function() {
+                alert('用户拒绝授权录音');
+            }
+        });
+        return;
+    }
+
+    var before = true;
+    if (window.voice_before) before = voice_before();
+    if (!before) return;
+    event.preventDefault();
+    start = new Date().getTime();
+    // clearTimeout(uploadTimer);
+    recordTimer = setTimeout(function() {
+        wx.startRecord({
+            success: function(res) {
+              $('#voice_btn').html('录音中...');
+            },
+            cancel: function(res) {
+                alert(JSON.stringify(res));
+            }
+        });
+    }, 300);
+});
+//松手结束录音
+$('body').delegate('#voice_btn', 'touchend', function(event) {
+    event.preventDefault();
+    end = new Date().getTime();
+
+    if ((end - start) < 1000) {
+        end = 0;
+        start = 0;
+        //小于1000ms，不录音
+        clearTimeout(recordTimer);
+    } else {
+        wx.stopRecord({
+            success: function(res) {
+                voice.localId = res.localId;
+                uploadVoice();
+            },
+            fail: function(res) {
+                alert(JSON.stringify(res));
+            }
+        });
+    }
+    $('#voice_btn').html('长按录音');
+    if (window.voice_after) voice_after();
+});
+//播放录音
+$('body').delegate('#play_voice', 'click', function(event) {
+    event.preventDefault();
+    wx.playVoice({
+        localId: voice.localId // 需要播放的音频的本地ID，由stopRecord接口获得
+    });
+    $('#play_voice').html('播放中...');
+});
+//上传录音
+function uploadVoice() {
+    //调用微信的上传录音接口把本地录音先上传到微信的服务器
+    //不过，微信只保留3天，而我们需要长期保存，我们需要把资源从微信服务器下载到自己的服务器
+    wx.uploadVoice({
+        localId: voice.localId, // 需要上传的音频的本地ID，由stopRecord接口获得
+        isShowProgressTips: 1, // 默认为1，显示进度提示
+        success: function(res) {
+            //把录音在微信服务器上的id（res.serverId）发送到自己的服务器供下载。
+            if (!yun_share.appId) {
+                alert('miss appId!');
+                return;
+            }
+            res.wx_appid = yun_share.appId;
+            $.ajax({
+                url: yun_share.uploadVoice,
+                type: 'post',
+                data: res,
+                dataType: "json",
+                success: function(data) {
+                    if (data.code == 3001) {
+                        if (window.voice_success) voice_success(data.filename);
+                    } else {
+                        alert(data.msg);
+                    }
+                },
+                error: function(xhr, errorType, error) {
+                    console.log(error);
+                }
+            });
+        }
+    });
+}
+//停止播放
+function stopWave() {
+    // console.log('voice play over');
+    // $('#play_voice').html('点击播放');
+}
+
+var image = {
+        localId: ''
+    },
+    image_urls = [];
+//选择图片
+$('body').delegate('#upload_image', 'click', function(event) {
+    event.preventDefault();
+    wx.chooseImage({
+        count: 1, // 默认9
+        sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
+        sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+        success: function(res) {
+            image.localId = res.localIds; // 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
+            uploadImage();
+        },
+        fail: function(res) {
+            alert(JSON.stringify(res));
+        }
+    });
+});
+//上传图片
+function uploadImage() {
+    wx.uploadImage({
+        localId: image.localId.toString(), // 需要上传的图片的本地ID，由chooseImage接口获得
+        isShowProgressTips: 1, // 默认为1，显示进度提示
+        success: function(res) {
+            if (!yun_share.appId) {
+                alert('miss appId!');
+                return;
+            }
+            res.wx_appid = yun_share.appId;
+            $.ajax({
+                url: yun_share.uploadImage,
+                type: 'post',
+                data: res,
+                dataType: "json",
+                success: function(data) {
+                    if (data.code == 3001) {
+                        if (window.image_success) image_success(data.filename);
+                    } else {
+                        alert(data.msg);
+                    }
+                },
+                error: function(data) {
+                    alert(JSON.stringify(data));
+                }
+            });
+        },
+        fail: function(res) {
+            alert(JSON.stringify(res));
+        }
+    });
+};

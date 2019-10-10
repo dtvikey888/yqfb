@@ -5,26 +5,26 @@ import java.util.Calendar;
 
 public class ChangeTime {
 
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		//Ê±¼ä×ÜµÄÃëÊı  
-        int seconds = 30654;  
-        //¿ªÊ¼Ê±¼ä  
-        int startHours = seconds/3600;  
-        int startMinutes = (seconds%3600)/60;  
-        int startSeconds = (seconds%3600)%60;  
-          
-        Calendar cal=Calendar.getInstance();//Ê¹ÓÃÈÕÀúÀà  
-        SimpleDateFormat format =  new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//Ê±¼ä¸ñÊ½  
-          
-        //Ê±¼ä£ºyyyy-MM-dd HH:mm:ss  
-        String startDateStr = cal.get(Calendar.YEAR) + "-" + (cal.get(Calendar.MONTH)+1)  
-                   + "-" + cal.get(Calendar.DAY_OF_MONTH) + " " + startHours  
-                   + ":" + startMinutes + ":" + startSeconds;  
-        System.out.println("Ê±¼ä£º" + startDateStr);  
-	}
+    /**
+     * @param args
+     */
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        //æ—¶é—´æ€»çš„ç§’æ•°
+        int seconds = 30654;
+        //å¼€å§‹æ—¶é—´
+        int startHours = seconds/3600;
+        int startMinutes = (seconds%3600)/60;
+        int startSeconds = (seconds%3600)%60;
+
+        Calendar cal=Calendar.getInstance();//ä½¿ç”¨æ—¥å†ç±»
+        SimpleDateFormat format =  new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//æ—¶é—´æ ¼å¼
+
+        //æ—¶é—´ï¼šyyyy-MM-dd HH:mm:ss
+        String startDateStr = cal.get(Calendar.YEAR) + "-" + (cal.get(Calendar.MONTH)+1)
+                + "-" + cal.get(Calendar.DAY_OF_MONTH) + " " + startHours
+                + ":" + startMinutes + ":" + startSeconds;
+        System.out.println("æ—¶é—´ï¼š" + startDateStr);
+    }
 
 }

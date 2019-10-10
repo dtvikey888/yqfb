@@ -8,7 +8,7 @@ import java.util.Date;
 import org.fjw.weixin.util.PublicFun;
 
 public class Db2 {
-	// ½«×Ö·û´®×ªÎªdate
+	// å°†å­—ç¬¦ä¸²è½¬ä¸ºdate
 	public static Date getTimeForString(String datestr) {
 		if (null == datestr || "" == datestr) {
 			return null;
@@ -22,12 +22,12 @@ public class Db2 {
 	}
 
 	/**
-	 * ¸ù¾İÄêÔÂ»ñµÃµ±Ç°ÔÂÌìÊı
-	 * 
+	 * æ ¹æ®å¹´æœˆè·å¾—å½“å‰æœˆå¤©æ•°
+	 *
 	 * @param dyear
-	 *            Äê
+	 *            å¹´
 	 * @param dmouth
-	 *            ÔÂ
+	 *            æœˆ
 	 * @return
 	 */
 	public static int calDayByYearAndMonth(String dyear, String dmouth) {
@@ -38,17 +38,17 @@ public class Db2 {
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
-		return rightNow.getActualMaximum(Calendar.DAY_OF_MONTH);// ¸ù¾İÄêÔÂ »ñÈ¡ÔÂ·İÌìÊı
+		return rightNow.getActualMaximum(Calendar.DAY_OF_MONTH);// æ ¹æ®å¹´æœˆ è·å–æœˆä»½å¤©æ•°
 	}
 
 	/**
-	 * µÃµ½Á½ÈÕÆÚÏà²î¼¸¸öÔÂÁã¼¸Ìì
-	 * 
+	 * å¾—åˆ°ä¸¤æ—¥æœŸç›¸å·®å‡ ä¸ªæœˆé›¶å‡ å¤©
+	 *
 	 * @param startDate
-	 *            ¿ªÊ¼ÈÕÆÚ 0000-00-00
+	 *            å¼€å§‹æ—¥æœŸ 0000-00-00
 	 * @param endDate
-	 *            ½áÊøÈÕÆÚ 0000-00-00
-	 * @return ÔÂ·İ£¬Áã¼¸Ìì 1,2 £¨Ò»¸öÔÂÁãÁ½Ìì£© ·µ»Ø0Ôò½áÊøÈÕÆÚĞ¡ÓÚ¿ªÊ¼ÈÕÆÚ
+	 *            ç»“æŸæ—¥æœŸ 0000-00-00
+	 * @return æœˆä»½ï¼Œé›¶å‡ å¤© 1,2 ï¼ˆä¸€ä¸ªæœˆé›¶ä¸¤å¤©ï¼‰ è¿”å›0åˆ™ç»“æŸæ—¥æœŸå°äºå¼€å§‹æ—¥æœŸ
 	 * @throws ParseException
 	 */
 	public static String getMonthDiff(String startDate, String endDate)
@@ -71,12 +71,12 @@ public class Db2 {
 			int month = month2 - month1;
 			int day = day2 - day1;
 
-			if (day <= 0) { // ½áÊøÈÕÆÚÌì - ¿ªÊ¼ÈÕÆÚÌìÎª¸ºÊı£¬ÔòÏòÔÂ½èÎ» £¬ ½èÎ»ÔÂ -1 £¬Ìì¼ÆËãÎª ½èÎ»ÔÂÌìÊı+
-							// Ô­½áÊøÈÕÆÚÌì - ¿ªÊ¼ÈÕÆÚÌì
+			if (day <= 0) { // ç»“æŸæ—¥æœŸå¤© - å¼€å§‹æ—¥æœŸå¤©ä¸ºè´Ÿæ•°ï¼Œåˆ™å‘æœˆå€Ÿä½ ï¼Œ å€Ÿä½æœˆ -1 ï¼Œå¤©è®¡ç®—ä¸º å€Ÿä½æœˆå¤©æ•°+
+				// åŸç»“æŸæ—¥æœŸå¤© - å¼€å§‹æ—¥æœŸå¤©
 				month--;
-				if (month < 0) {// ½èÎ»ÔÂ¼õºóĞ¡ÓÚµÈÓÚ0ÔòÏòÄê½èÎ»
-					year--;// Äê--
-					if (year >= 0) {// Èç¹ûÄê´óÓÚµÈÓÚ¿ªÊ¼ÈÕÆÚÄê£¬Ôò½èÎ»ÔÂÖµÎª12£¬·ñÔò½áÊøÈÕÆÚĞ¡ÓÚ¿ªÊ¼ÈÕÆÚ£¬Òì³£
+				if (month < 0) {// å€Ÿä½æœˆå‡åå°äºç­‰äº0åˆ™å‘å¹´å€Ÿä½
+					year--;// å¹´--
+					if (year >= 0) {// å¦‚æœå¹´å¤§äºç­‰äºå¼€å§‹æ—¥æœŸå¹´ï¼Œåˆ™å€Ÿä½æœˆå€¼ä¸º12ï¼Œå¦åˆ™ç»“æŸæ—¥æœŸå°äºå¼€å§‹æ—¥æœŸï¼Œå¼‚å¸¸
 						month = year * 12 + 11;
 						int monthday = calDayByYearAndMonth(String
 								.valueOf(year), String.valueOf(month));
@@ -112,24 +112,24 @@ public class Db2 {
 		}
 		return str;
 	}
-	
-	
+
+
 	/**
-	 * µÃµ½Á½ÈÕÆÚÏà²îÁã¼¸Ìì
-	 * 
+	 * å¾—åˆ°ä¸¤æ—¥æœŸç›¸å·®é›¶å‡ å¤©
+	 *
 	 * @param startDate
-	 *            ¿ªÊ¼ÈÕÆÚ 0000-00-00
+	 *            å¼€å§‹æ—¥æœŸ 0000-00-00
 	 * @param endDate
-	 *            ½áÊøÈÕÆÚ 0000-00-00
-	 * @return ÔÂ·İ£¬Áã¼¸Ìì 1,2 £¨Ò»¸öÔÂÁãÁ½Ìì£© ·µ»Ø0Ôò½áÊøÈÕÆÚĞ¡ÓÚ¿ªÊ¼ÈÕÆÚ
+	 *            ç»“æŸæ—¥æœŸ 0000-00-00
+	 * @return æœˆä»½ï¼Œé›¶å‡ å¤© 1,2 ï¼ˆä¸€ä¸ªæœˆé›¶ä¸¤å¤©ï¼‰ è¿”å›0åˆ™ç»“æŸæ—¥æœŸå°äºå¼€å§‹æ—¥æœŸ
 	 * @throws ParseException
 	 */
 	public static String getMonthDayDiff2(String startDate, String endDate)
 			throws ParseException {
-		
+
 		long mo1 = VeDate2.getBetween(startDate, endDate,VeDate2.YYYYMMDD, VeDate2.MONTH_RETURN);
 		long mo2 = mo1%12;
-		
+
 		Date Date1 = getTimeForString(startDate);
 		Date Date2 = getTimeForString(endDate);
 		String str = "0";
@@ -148,12 +148,12 @@ public class Db2 {
 			int month = month2 - month1;
 			int day = day2 - day1;
 
-			if (day <= 0) { // ½áÊøÈÕÆÚÌì - ¿ªÊ¼ÈÕÆÚÌìÎª¸ºÊı£¬ÔòÏòÔÂ½èÎ» £¬ ½èÎ»ÔÂ -1 £¬Ìì¼ÆËãÎª ½èÎ»ÔÂÌìÊı+
-							// Ô­½áÊøÈÕÆÚÌì - ¿ªÊ¼ÈÕÆÚÌì
+			if (day <= 0) { // ç»“æŸæ—¥æœŸå¤© - å¼€å§‹æ—¥æœŸå¤©ä¸ºè´Ÿæ•°ï¼Œåˆ™å‘æœˆå€Ÿä½ ï¼Œ å€Ÿä½æœˆ -1 ï¼Œå¤©è®¡ç®—ä¸º å€Ÿä½æœˆå¤©æ•°+
+				// åŸç»“æŸæ—¥æœŸå¤© - å¼€å§‹æ—¥æœŸå¤©
 				month--;
-				if (month < 0) {// ½èÎ»ÔÂ¼õºóĞ¡ÓÚµÈÓÚ0ÔòÏòÄê½èÎ»
-					year--;// Äê--
-					if (year >= 0) {// Èç¹ûÄê´óÓÚµÈÓÚ¿ªÊ¼ÈÕÆÚÄê£¬Ôò½èÎ»ÔÂÖµÎª12£¬·ñÔò½áÊøÈÕÆÚĞ¡ÓÚ¿ªÊ¼ÈÕÆÚ£¬Òì³£
+				if (month < 0) {// å€Ÿä½æœˆå‡åå°äºç­‰äº0åˆ™å‘å¹´å€Ÿä½
+					year--;// å¹´--
+					if (year >= 0) {// å¦‚æœå¹´å¤§äºç­‰äºå¼€å§‹æ—¥æœŸå¹´ï¼Œåˆ™å€Ÿä½æœˆå€¼ä¸º12ï¼Œå¦åˆ™ç»“æŸæ—¥æœŸå°äºå¼€å§‹æ—¥æœŸï¼Œå¼‚å¸¸
 						month = year * 12 + 11;
 						int monthday = calDayByYearAndMonth(String
 								.valueOf(year), String.valueOf(month));
@@ -192,8 +192,8 @@ public class Db2 {
 
 	public static void main(String[] args) throws ParseException {
 		System.out.println(Db2.getMonthDayDiff2("2007-12-29", "2018-06-27"));
-		
-		
+
+
 	}
 
 }

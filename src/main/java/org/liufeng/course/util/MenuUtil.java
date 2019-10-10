@@ -6,34 +6,34 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * ×Ô¶¨Òå²Ëµ¥¹¤¾ßÀà
- * 
+ * è‡ªå®šä¹‰èœå•å·¥å…·ç±»
+ *
  * @author liufeng
  * @date 2013-10-17
  */
 public class MenuUtil {
 	private static Logger log = LoggerFactory.getLogger(MenuUtil.class);
 
-	// ²Ëµ¥´´½¨£¨POST£©
+	// èœå•åˆ›å»ºï¼ˆPOSTï¼‰
 	public final static String menu_create_url = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token=ACCESS_TOKEN";
-	// ²Ëµ¥²éÑ¯£¨GET£©
+	// èœå•æŸ¥è¯¢ï¼ˆGETï¼‰
 	public final static String menu_get_url = "https://api.weixin.qq.com/cgi-bin/menu/get?access_token=ACCESS_TOKEN";
-	// ²Ëµ¥É¾³ı£¨GET£©
+	// èœå•åˆ é™¤ï¼ˆGETï¼‰
 	public final static String menu_delete_url = "https://api.weixin.qq.com/cgi-bin/menu/delete?access_token=ACCESS_TOKEN";
 
 	/**
-	 * ´´½¨²Ëµ¥
-	 * 
-	 * @param menu ²Ëµ¥ÊµÀı
-	 * @param accessToken Æ¾Ö¤
-	 * @return true³É¹¦ falseÊ§°Ü
+	 * åˆ›å»ºèœå•
+	 *
+	 * @param menu èœå•å®ä¾‹
+	 * @param accessToken å‡­è¯
+	 * @return trueæˆåŠŸ falseå¤±è´¥
 	 */
 	public static boolean createMenu(Menu menu, String accessToken) {
 		boolean result = false;
 		String url = menu_create_url.replace("ACCESS_TOKEN", accessToken);
-		// ½«²Ëµ¥¶ÔÏó×ª»»³Éjson×Ö·û´®
+		// å°†èœå•å¯¹è±¡è½¬æ¢æˆjsonå­—ç¬¦ä¸²
 		String jsonMenu = JSONObject.fromObject(menu).toString();
-		// ·¢ÆğPOSTÇëÇó´´½¨²Ëµ¥
+		// å‘èµ·POSTè¯·æ±‚åˆ›å»ºèœå•
 		JSONObject jsonObject = CommonUtil.httpsRequest(url, "POST", jsonMenu);
 
 		if (null != jsonObject) {
@@ -43,7 +43,7 @@ public class MenuUtil {
 				result = true;
 			} else {
 				result = false;
-				log.error("´´½¨²Ëµ¥Ê§°Ü errcode:{} errmsg:{}", errorCode, errorMsg);
+				log.error("åˆ›å»ºèœå•å¤±è´¥ errcode:{} errmsg:{}", errorCode, errorMsg);
 			}
 		}
 
@@ -51,15 +51,15 @@ public class MenuUtil {
 	}
 
 	/**
-	 * ²éÑ¯²Ëµ¥
-	 * 
-	 * @param accessToken Æ¾Ö¤
+	 * æŸ¥è¯¢èœå•
+	 *
+	 * @param accessToken å‡­è¯
 	 * @return
 	 */
 	public static String getMenu(String accessToken) {
 		String result = null;
 		String requestUrl = menu_get_url.replace("ACCESS_TOKEN", accessToken);
-		// ·¢ÆğGETÇëÇó²éÑ¯²Ëµ¥
+		// å‘èµ·GETè¯·æ±‚æŸ¥è¯¢èœå•
 		JSONObject jsonObject = CommonUtil.httpsRequest(requestUrl, "GET", null);
 
 		if (null != jsonObject) {
@@ -69,15 +69,15 @@ public class MenuUtil {
 	}
 
 	/**
-	 * É¾³ı²Ëµ¥
-	 * 
-	 * @param accessToken Æ¾Ö¤
-	 * @return true³É¹¦ falseÊ§°Ü
+	 * åˆ é™¤èœå•
+	 *
+	 * @param accessToken å‡­è¯
+	 * @return trueæˆåŠŸ falseå¤±è´¥
 	 */
 	public static boolean deleteMenu(String accessToken) {
 		boolean result = false;
 		String requestUrl = menu_delete_url.replace("ACCESS_TOKEN", accessToken);
-		// ·¢ÆğGETÇëÇóÉ¾³ı²Ëµ¥
+		// å‘èµ·GETè¯·æ±‚åˆ é™¤èœå•
 		JSONObject jsonObject = CommonUtil.httpsRequest(requestUrl, "GET", null);
 
 		if (null != jsonObject) {
@@ -87,7 +87,7 @@ public class MenuUtil {
 				result = true;
 			} else {
 				result = false;
-				log.error("É¾³ı²Ëµ¥Ê§°Ü errcode:{} errmsg:{}", errorCode, errorMsg);
+				log.error("åˆ é™¤èœå•å¤±è´¥ errcode:{} errmsg:{}", errorCode, errorMsg);
 			}
 		}
 		return result;

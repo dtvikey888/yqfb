@@ -1,28 +1,28 @@
 package org.liufeng.course.util;
 import java.io.File;
 import java.io.IOException;
-//ÅĞ¶ÏÎÄ¼ş»òÕßÎÄ¼ş¼ĞÊÇ·ñ´æÔÚ
+//åˆ¤æ–­æ–‡ä»¶æˆ–è€…æ–‡ä»¶å¤¹æ˜¯å¦å­˜åœ¨
 public class FileIsExit {
-	 public static void main(String[] args) {
+	public static void main(String[] args) {
 
-	        File file = new File("d:\\test_file.txt");
-	        System.out.println(FileIsExit.judeFileExists(file));
+		File file = new File("d:\\test_file.txt");
+		System.out.println(FileIsExit.judeFileExists(file));
 
 //	        File dir = new File("d:\\test_dir");
 //	        FileIsExit.judeDirExists(dir);
-	    }
+	}
 
-	    // ÅĞ¶ÏÎÄ¼şÊÇ·ñ´æÔÚ
-	    public static boolean judeFileExists(File file) {
-	    	
-	    	boolean cz = false;
+	// åˆ¤æ–­æ–‡ä»¶æ˜¯å¦å­˜åœ¨
+	public static boolean judeFileExists(File file) {
 
-	        if (file.exists()) {
-	            System.out.println("file exists");
-	            cz=true;
-	        } else {
-	        	
-	        	cz=false;
+		boolean cz = false;
+
+		if (file.exists()) {
+			System.out.println("file exists");
+			cz=true;
+		} else {
+
+			cz=false;
 //	            System.out.println("file not exists, create it ...");
 //	            try {
 //	                file.createNewFile();
@@ -30,25 +30,25 @@ public class FileIsExit {
 //	                // TODO Auto-generated catch block
 //	                e.printStackTrace();
 //	            }
-	        }
-	        
-	        return cz;
+		}
 
-	    }
+		return cz;
 
-	    // ÅĞ¶ÏÎÄ¼ş¼ĞÊÇ·ñ´æÔÚ
-	    public static void judeDirExists(File file) {
+	}
 
-	        if (file.exists()) {
-	            if (file.isDirectory()) {
-	                System.out.println("dir exists");
-	            } else {
-	                System.out.println("the same name file exists, can not create dir");
-	            }
-	        } else {
-	            System.out.println("dir not exists, create it ...");
-	            file.mkdir();
-	        }
+	// åˆ¤æ–­æ–‡ä»¶å¤¹æ˜¯å¦å­˜åœ¨
+	public static void judeDirExists(File file) {
 
-	    }
+		if (file.exists()) {
+			if (file.isDirectory()) {
+				System.out.println("dir exists");
+			} else {
+				System.out.println("the same name file exists, can not create dir");
+			}
+		} else {
+			System.out.println("dir not exists, create it ...");
+			file.mkdir();
+		}
+
+	}
 }

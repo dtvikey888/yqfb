@@ -1,0 +1,522 @@
+(function($) {
+    var _host = '';
+    $("script").each(function(index,vo) {
+        if (typeof($(vo).attr("src")) != 'undefined' && $(vo).attr("src").indexOf('style/public/js/ic.js') !== -1) {
+            _host = $(vo).attr("src").substr(0,$(vo).attr("src").indexOf('style/public/js/ic.js'));
+        }
+    });
+  
+  var _url = _host + 'index.php?m=public&subm=';
+  _border = 5,
+  _title_border = 10,
+  _width = 60,
+  _height = 40,
+  _first_w = 0,
+  _first_h = 40,
+  _m_w = (_width + _border) * 4 + _first_w + _border,
+  _m_h = (_height + _border) * 2 + _first_h + _border,
+  
+  _imgsrc_click_num = 0,
+  img_app_key = '';
+  var loading = true;
+  
+  var _points='';
+  var _words_flag =false;
+
+  var ImgCode = function(element, options) {
+    _imgsrc_click_num = 0;
+    if (typeof(options.img_app_key) == 'undefined' || !options.img_app_key) {
+      $(element).html("<span>请确认你的img_app_key是否存在</span>");
+      if (options.debug) {
+        alert("img_app_key不存在");
+        console.log("img_app_key不存在");
+        return false;
+      }
+    }
+    img_app_key = options.img_app_key;
+    _url = _host + 'index.php?m=public&subm=code&img_app_key=' + img_app_key + "&" + Math.random();
+    if (options.type == 'num') { //第一种：普通的输入四位验证码
+        this.numCode(element, options);
+    } else if (options.type === 'phrase') {
+		this.idiom(element, options); 
+    } else if (options.type === 'slide') {
+		this.slide(element, options)
+	} else {
+      this.positionCode(element, options);
+    }
+  };
+  ImgCode.prototype = {
+    numCode: function(element, options) {
+      var _imgcode_obj = this;
+      var inputspaceid = options.inputspaceid || 'code';
+      
+      var bgurl = _host + 'style/public/images/bg.png';
+      var _html =   '<div style="height: 210px;width: 320px;background-position: 0 -853px;border: 2px solid #ece4dd;background-image: url(\''+bgurl+'\')">' + 
+                      '<div style="position: relative;height: 42px;line-height: 42px;padding-left: 20px;font-size: 14px;text-align: left;">'+
+                        '<div style="font-size: 15px;color: #677D8B;">请完成下方验证</div>' + 
+                      '</div>' + 
+                      '<div style="margin: 28px auto;width: 300px;height: 140px;background-color: white;">'+
+                        '<div style="width:110px;margin:0 auto;">' + 
+                          '<div style="margin-bottom:10px;"><input id="num_code_input" type="text" size=5 max-length=5 style="border: 1px solid #ccc;border-radius: 5px;height:30px;line-height:30px;width:100px;"></div><div><img id="imgsrc" src=""></div>' + 
+                        '</div>' + 
+                        '<div class="i-footer" style="width: 110px;margin:0 auto;">'+
+                          '<button style="width: 80px;margin-top: 10px;background-color: #944e12;outline: none;border: none;height: 30px;cursor: pointer;color: white;">提交</button>'+
+                        '</div>'+
+                      '</div>'+
+                    '</div>';
+      
+      /*var _html = '<div style="margin-bottom:10px;"><input id="num_code_input" type="text" size=5 max-length=5 style="height:30px;line-height:30px;width:100px;"></div><div><img id="imgsrc" src=""></div>' +
+                  '<div class="i-footer" style="width: 80px;">'+
+                  '<button style="width: 80px;margin-top: 10px;background-color: #944e12;outline: none;border: none;height: 30px;cursor: pointer;color: white;">提交</button>'+
+                  '</div>';*/
+      $(element).html(_html).show();
+      this.reflash(element, inputspaceid);
+      
+      // 提交
+      $('.i-footer button').click(function () {
+        var answer = $("#num_code_input").val();
+        if (answer.length > 0) {
+            _imgcode_obj.checkPoint(options,answer);
+            return false;
+        }
+        return false;
+      })
+      
+      //绑定点击验证码事件
+      $("#imgsrc").on('click',function() {
+        _imgcode_obj.reflash(element, inputspaceid);
+      });
+    },
+    positionCode: function(element, options) {
+      var _imgcode_obj = this;
+      var inputspaceid = options.inputspaceid || 'code';
+      
+      var _choose_img = _host + 'style/public/images/choose.png';
+      var _close_img = _host + 'style/public/images/close.png';
+      var _reflash_img = _host + 'style/public/images/reflash.png';
+      
+      var _html =   '<div style="width:100%;height:100%;"><div id="imgcode_fixed_shade_div" style="top: 0;left: 0;filter:alpha(opacity=30);-moz-opacity: 0.3;-khtml-opacity: 0.3;opacity: 0.3;background-color:#ccc;position:fixed;width:100%;height:100%;z-index:9998;"></div>'+
+                      '<div id="imgcode_fixed_div" style="position:fixed;top: 35%;left: 50%;transform: translate(-50%);-webkit-transform:translate(-50%);z-index:9999;width:300px;border-radius:5px;background-color: #fff;border: 1px solid #ccc;">' + 
+      
+                      '<div style="height:36px;line-height:36px;border-bottom: 1px solid #ccc;margin-bottom: 4px;">'+
+                        '<div style="padding: 0 16px;"><div id="imgclose" style="width:36px;line-height:40px;text-align: center;"><img src="'+ _close_img + '" style="width: 14px;"/></div><div id="imgreflash" style="float: right;margin-top:-36px;width: 36px;text-align: center;"><img id="imgreflash" src="'+ _reflash_img + '" /></div></div>' + 
+                      '</div>' + 
+                      
+                      '<div style="text-align:center;">' + 
+                        '<div class="zindex"></div>' + 
+                        '<img id="imgsrc" src="">' + 
+                      '</div>' + 
+                      '<div id="img_code_msg" style="font-size:13px;margin-left: 18px;height: 18px;line-height: 18px;color: red;padding: 6px 0 6px 0;"></div>'+
+                    '</div></div>';
+      //$("body").append('');
+      $(element).html(_html).show();
+      //刷新验证码
+      this.reflash(element, inputspaceid);
+
+      //绑定关闭按键
+      $("#imgclose").on('click',
+        function() {
+            _imgcode_obj.close(element, options);
+      });
+      //绑定刷新按键
+      $("#imgreflash").on('click',
+        function() {
+            _imgcode_obj.reflash(element, inputspaceid);
+      });
+      
+      // 提交
+        
+        /*$('.i-footer button').click(function () {
+            if (_points.length > 0) {
+                _imgcode_obj.checkPoint(options,_points);
+                return false;
+            }
+            return false;
+        })*/
+
+      //绑定点击验证码事件
+      $("#imgsrc").on('click',function() {
+        if (_words_flag) {
+            return ;
+        }
+        var points = _imgcode_obj.getPoints(this, element);
+        
+        var _point_x = points._point_x;
+        var _point_y = points._point_y;
+        
+        if (_point_y <= 0 || _point_y >= _m_h) {
+          return false;
+        }
+        if (_point_x <= 0 || _point_x >= _m_w) {
+          return false;
+        }
+        var _points_arr = _points.split(",");console.log(_points_arr);
+        if (_points_arr.length >= 4) {
+            return false;
+        }
+        if (_points) {
+          _points = _points + "," + Math.floor(_point_x) + "," + Math.floor(_point_y);
+        } else {
+          _points = Math.floor(_point_x) + "," + Math.floor(_point_y);
+        }
+        
+
+        //添加一个锚点
+        var m_t = Math.floor((_point_x - _first_w) / (_width + _border)),//水平第几个格子
+        m_l = Math.floor((_point_y - _first_h) / (_height + _border)),//垂直第几个格子
+        _m_l = _first_w + m_t * (_width + _border),
+        _m_t = _first_h + _title_border + m_l * (_height + _border);
+        
+        var margin_top = _point_y + points.flag_y - 5,
+            margin_left = _point_x + points.flag_x - 5;
+        var $_html = '<div class="imgs" data-point="' + Math.floor(_point_x) + "," + Math.floor(_point_y) + '" style="margin-top:' + margin_top + 'px;margin-left:' + margin_left + 'px;position: absolute;"><img src="'+_choose_img+'"/></div>';
+        $(".zindex").append($_html);
+        
+        var _points_arr = _points.split(",");console.log(_points_arr)
+        if (_points_arr.length == 4) {
+            _words_flag = true;
+            $(".imgs").unbind('click');
+            _imgcode_obj.checkPoint(options,_points);
+            return false;
+        }
+        
+        $(".imgs").unbind('click'); //接触绑定，避免一个元素被多次绑定click事件
+        $(".imgs").on('click',
+            function() {//alert("no")
+              var _thisobj = $(this),
+              _point = _thisobj.attr("data-point");
+
+              var l = _points.split(",");
+
+              for (var j = 0; j < l.length; j++) {
+                if ((l[j] + ',' + l[j + 1]) == _point) {
+                  l.splice(j, 2);
+                }
+                j++;
+              }
+              _points = l.join(",");
+              _thisobj.remove();
+        });
+      });
+    },
+		// 成语验证码
+		idiom: function (element, options) {
+            var _imgcode_obj = this;
+            $.ajax({
+               type: 'GET',
+               url: _url,
+               dataType: 'jsonp',
+               success: function(data){
+                  var choose = ''
+                  // 生成容器
+                  $(element).html(
+                        '<div style="width: 320px; height: 320px; background-image: url('+_host+'style/public/images/bg.jpg); overflow: hidden;">'+
+                            '<div class="i-header" style="position: relative;">'+
+                                '<img style="width: 100%; margin-top: -20px;" src="'+_host+'style/public/images/show.png" alt="" />'+
+                                '<div class="show-idoiom" style="position: absolute; top: 55px; left: 70px; font-size: 24px;"></div>'+
+                            '</div>'+
+                            '<div class="i-content" style="width: 70%; margin: auto;">'+
+                                '<table style="width: 100%; text-align: center;"></table>'+
+                           '</div>'+
+                            '<div class="i-footer" style="width: 80px; margin: auto">'+
+                               '<button style="width: 80px;margin-top: 20px;background-color: #944e12;outline: none;border: none;height: 30px;cursor: pointer;color: white;">提交</button>'+
+                            '</div></div>').show();
+
+                    var header= '';
+                    
+                    data.raw.forEach(function (v) {
+                        header += '<span style="float: left; margin-left: 8px; background-color: white; width: 35px; border: 1px solid black;' +
+                                            'line-height: 35px; height: 35px;text-align: center;border-radius: 50%;font-weight: 800;">'	+
+                                            v +
+                                        '</span>'
+                    });
+                    var tr1 = document.createElement('tr');
+                    var tr2 = document.createElement('tr');
+                    data.all.forEach(function (v, i) {
+                        var td = document.createElement('td');
+                        td.style.lineHeight = '40px';
+                        td.style.backgroundColor = 'white';
+                        td.style.fontSize = '26px';
+                        td.style.cursor = 'pointer';
+                        td.style.userSelect = 'none';
+                        td.innerHTML = v;
+                        // td 绑定事件
+                        $(td).click(function () {
+                            $('.i-content table td').each(function (index, val) {
+                                val.style.backgroundColor = 'white';
+                            })
+                            if (choose != v) {
+                                choose = v;
+                                this.style.backgroundColor = 'red';
+                            } else {
+                                choose = '';
+                            }
+                        })
+                        if (i < data.all.length / 2) {
+                            tr1.appendChild(td);
+                        } else {
+                            tr2.appendChild(td);
+                        }
+                    })
+                    $('.show-idoiom').append(header)
+                    $('.i-content table').append(tr1)
+                    $('.i-content table').append(tr2)
+
+                    // 提交
+                    $('.i-footer button').click(function () {
+                        if (choose.length > 0) {
+                            _imgcode_obj.checkPoint(options,choose);
+                            return false;
+                        }
+                        return false;
+                    })
+               }
+            });
+		},
+        
+    //滑动验证码
+    slide: function (element, options) {
+      // 执行主程序
+      var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+      function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+      var Verification = function (settings) {
+        
+        function Verification(settings) {
+          _classCallCheck(this, Verification);
+
+          var self = '';
+          this.x = 0;
+          this.left = settings.left;
+          this.top = settings.top;
+          this.end = 0;
+          this.set = '';
+          this.group = document.querySelector('.v-group');
+          this.bg = document.querySelector('.v-bg');
+          this.control = document.querySelector('.s-control');
+          this.text = document.querySelector('.s-text');
+          this.wStart = document.querySelector('.w-start');
+          this.wEnd = document.querySelector('.w-end');
+          document.querySelector('.v-closed').addEventListener('click', this.hideBox);
+          this.control.addEventListener('mousedown', this.go);
+          this.control.addEventListener('touchstart', this.go);
+          window.addEventListener('mouseup', this.leave);
+          window.addEventListener('touchend', this.leave);
+          $('.w-show').css('backgroundImage', 'url(' + _host + settings.url + ')');
+          $('.w-start').css('backgroundImage', 'url(' + _host + settings.url + ')');
+      }
+
+        _createClass(Verification, [{
+          key: 'start',
+          value: function start() {
+            self = this;
+            loading = true;
+            // 设置样式
+            this.wEnd.style.left = this.left + 'px';
+            this.wStart.style.top = this.top + 'px';
+            this.wEnd.style.top = this.top + 'px';
+            // 设置小块背景图
+            this.wStart.style.backgroundPosition = ~this.left + 'px' + ' ' + ~this.top + 'px';
+          }
+        }, {
+          key: 'animateHide',
+          value: function animateHide() {
+            clearTimeout(self.set)
+            document.querySelector('.a-hide').removeEventListener('webkitAnimationEnd', self.animateHide);
+            self.removeClass(self.group, 'a-hide');
+            self.addClass(self.group, 'v-hide');
+          }
+          // 开始移动函数
+
+        }, {
+          key: 'go',
+          value: function go(event) {
+            self.addClass(self.control, 'v-go');
+            self.addClass(self.text, 'fade-out');
+            window.addEventListener('mousemove', self.move);
+            window.addEventListener('touchmove', self.move);
+            self.x = event.clientX ? event.clientX : event.touches[0].clientX;
+          }
+          // 结束
+
+        }, {
+          key: 'leave',
+          value: function leave() {
+            self.removeClass(self.control, 'v-go');
+            self.removeClass(self.text, 'fade-out');
+            window.removeEventListener('mousemove', self.move);
+            window.removeEventListener('touchmove', self.move);
+            var other = self.end - self.left;
+            if (other >= -2 && other <= 2) {
+              // 验证成功函数
+              //console.log(options)
+              //self.start();
+              if (loading) {
+                loading = false;
+                _imgcode_obj.checkPoint(options,self.end);
+              }
+              
+              //window.location.reload();
+            } else {
+              self.control.style.transitionDuration = '1s';
+              self.wStart.style.transitionDuration = '1s';
+              self.control.style.transform = 'translate3d(0, 0, 0)';
+              self.wStart.style.transform = 'translate3d(0, 0, 0)';
+            }
+          }
+          // 移动
+
+        }, {
+          key: 'move',
+          value: function move(event) {
+            event.preventDefault();
+            var nowX = event.clientX ? event.clientX : event.touches[0].clientX;
+            self.control.style.transitionDuration = '0s';
+            self.wStart.style.transitionDuration = '0s';
+            self.end = parseInt(nowX - self.x);
+            if (self.end > 0 && self.end < 220) {
+              self.control.style.transform = 'translate3d(' + self.end + 'px, 0, 0)';
+              self.wStart.style.transform = 'translate3d(' + self.end + 'px, 0, 0)';
+            }
+          }
+
+          //addClass  实现
+
+        }, {
+          key: 'addClass',
+          value: function addClass(el, name) {
+            // 获取到原有的class
+            var list = el.getAttribute('class').split(' ');
+            // 添加新的
+            var add = true;
+            // 判断添加的是否存在
+            list.forEach(function (val, index) {
+              if (list[index] === name) {
+                add = false;
+              }
+            });
+            if (add) {
+              list.push(name);
+            }
+            var newList = list.join(' ');
+            el.className = newList;
+          }
+
+          //移处class
+
+        }, {
+          key: 'removeClass',
+          value: function removeClass(el, name) {
+            // 获取到原有的class
+            var list = el.getAttribute('class').split(' ');
+            // 对比如果有一样的删除
+            list.forEach(function (val, index) {
+              if (list[index] === name || list[index] === '') {
+                list.splice(index, 1);
+              }
+            });
+            var newList = list.join(' ');
+            el.className = newList;
+          }
+        }]);
+
+        return Verification;
+      }();
+        
+        
+        var _imgcode_obj = this;
+        $.ajax({
+           type: 'GET',
+           url: _url,
+           dataType: 'jsonp',
+           success: function(data){
+              var bgurl = _host + 'style/public/images/bg.png';
+              var pic = _host + data.url;
+              // 动态加载css
+              var head = document.getElementsByTagName('HEAD').item(0);
+              var style = document.createElement('link');
+              style.href = _host + 'style/public/css/drag.css';
+              style.rel = 'stylesheet';
+              style.type = 'text/css';
+              head.appendChild(style);
+              $(element).html(
+                '<div class="v-group">' + 
+                  '<div class="v-box" style="background-image: url(\''+bgurl+'\')">' + 
+                    '<div class="v-header"><div class="v-ready">请完成下方验证</div><div class="v-closed"></div></div>' + 
+                    '<div class="v-body"><div class="v-widget">' + 
+                        '<div class="w-top" style="background-image: url(\''+bgurl+'\')"></div>' + 
+                        '<div class="w-box"><div class="w-show"><div class="w-start"></div><div class="w-end"></div></div></div>' + 
+                        '<div class="w-bottom" style="background-image: url(\''+bgurl+'\')"></div>' + 
+                      '</div>' + 
+                      '<div class="v-slide" style="background-image: url(\''+bgurl+'\')">' + 
+                        '<div class="s-control" style="background-image: url(\''+bgurl+'\')"></div>' + 
+                        '<div class="s-text">按住滑块完成拼图</div>' + 
+                      '</div></div></div></div>'
+              ).show();
+                
+              var drag = new Verification(data);
+              drag.start();
+          }
+      })
+    },
+        
+	checkPoint: function(options,answer) {
+      //$("#"+options.inputspaceid).hide();
+      //$("#imgcode_fixed_shade_div").remove();
+      var _check_img = _host + 'style/public/images/loadding.gif';
+      $("#img_code_msg").html('<img style="width:18px;" src="'+_check_img+'"/>');
+      eval(options.callback)(answer,options.img_app_key,this);
+      
+    },
+    //更新验证码
+    reflash: function(element, inputspaceid) {
+      _points = '';
+      _words_flag =false;
+      $("#imgcode_fixed_div").find("#imgsrc").attr("src", _url);
+      $("#imgcode_fixed_div").find("#" + inputspaceid).val('');
+      $("#imgcode_fixed_div").find(".imgs").remove();
+      $("#img_code_msg").text("");
+    },
+    //更新验证码
+    close: function(element, options) {
+        _points = '';
+      $("#imgcode_fixed_div").parent().hide();
+      //$("#imgcode_fixed_shade_div").remove();
+      $("#img_code_msg").text("");
+      if (typeof options != 'undefined') {
+        eval(options.callback)('',options.img_app_key,this);
+      }
+    },
+    getPoints: function(obj, element) {
+      var _obj = $(obj),
+      _parent_obj = _obj.parent(),
+      _div_x = document.getElementById('imgcode_fixed_div').getBoundingClientRect().left,
+      //
+      _div_y = document.getElementById('imgcode_fixed_div').getBoundingClientRect().top,
+      //
+      _mouseX = event.clientX,
+      _mouseY = event.clientY;
+      //删除对其导致的偏差
+      var flag = (300 - _obj.width()) / 2;
+      var points = {
+        _point_x: _mouseX - _div_x - _first_w - flag,
+        _point_y: _mouseY - _div_y - _first_h,
+        flag_x : flag,
+        flag_y : 0,
+      };console.log(points)
+      return points;
+    },
+    showError : function () {
+        this.reflash();
+        $("#img_code_msg").text("验证码有误，请重新输入！");
+    }
+  };
+
+  $.fn.imgcode = function(option) {
+    new ImgCode(this, option);
+  };
+  //注册
+  $.fn.imgcode.Constructor = ImgCode;
+
+} (window.jQuery));

@@ -14,8 +14,8 @@ import com.fjw.utils.RenamePolicyCos;
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.ServletUtils;
 /**
- * Ê¹ÓÃcos×é¼şÊµÏÖÎÄ¼şÏÂÔØ
- * 
+ * ä½¿ç”¨cosç»„ä»¶å®ç°æ–‡ä»¶ä¸‹è½½
+ *
  * @author mingxue.zhang@163.com
  * @date 2010-10-29
  */
@@ -29,8 +29,8 @@ public class CosDownloadServlet extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String filePath = "D:\\Tomcat\\apache-tomcat-6.0.26\\webapps\\CosUpload\\FileDir\\";
-		String fileName = "2010Äê10ÔÂ°²ÅÅ_2010_10_29_04_52_06_178.txt";
-		String Originalname = "2010Äê10ÔÂ°²ÅÅ.txt";
+		String fileName = "2010å¹´10æœˆå®‰æ’_2010_10_29_04_52_06_178.txt";
+		String Originalname = "2010å¹´10æœˆå®‰æ’.txt";
 		String isofilename = new String(Originalname.getBytes("gb2312"),
 				"ISO8859-1");
 		response.setContentType("application/octet-stream");

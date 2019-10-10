@@ -15,68 +15,68 @@ import org.junit.Test;
 
 
 public class ThumbTest {
-	
+
 	@Test
 	public void testHandlePicture() throws IOException{
-		
-		//´´½¨Í¼Æ¬ÎÄ¼ş(´Ë´¦Îª1024¡Á768pxµÄÍ¼Æ¬)ºÍ´¦ÀíºóµÄÍ¼Æ¬ÎÄ¼ş
-		File fromPic=new File("picture/²âÊÔÍ¼Æ¬1024px-768px.jpg");
-		File toPic=new File("picture/½á¹ûÍ¼Æ¬.jpg");
-		File waterPic=new File("picture/Ë®Ó¡Í¼Æ¬.jpg");//×÷ÎªË®Ó¡µÄÍ¼Æ¬
-		
-		
-		//°´Ö¸¶¨´óĞ¡°ÑÍ¼Æ¬½øĞĞËõºÍ·Å£¨»á×ñÑ­Ô­Í¼¸ß¿í±ÈÀı£© 
-		//´Ë´¦°ÑÍ¼Æ¬Ñ¹³É400¡Á500µÄËõÂÔÍ¼
-		Thumbnails.of(fromPic).size(400,500).toFile(toPic);//±äÎª400*300,×ñÑ­Ô­Í¼±ÈÀıËõ»ò·Åµ½400*Ä³¸ö¸ß¶È
-		
-		
-		//°´ÕÕ±ÈÀı½øĞĞËõĞ¡ºÍ·Å´ó
-		Thumbnails.of(fromPic).scale(0.2f).toFile(toPic);//°´±ÈÀıËõĞ¡
-		Thumbnails.of(fromPic).scale(2f);//°´±ÈÀı·Å´ó
-		
-		
-		//²»°´±ÈÀı£¬¾Í°´Ö¸¶¨µÄ´óĞ¡½øĞĞËõ·Å
+
+		//åˆ›å»ºå›¾ç‰‡æ–‡ä»¶(æ­¤å¤„ä¸º1024Ã—768pxçš„å›¾ç‰‡)å’Œå¤„ç†åçš„å›¾ç‰‡æ–‡ä»¶
+		File fromPic=new File("picture/æµ‹è¯•å›¾ç‰‡1024px-768px.jpg");
+		File toPic=new File("picture/ç»“æœå›¾ç‰‡.jpg");
+		File waterPic=new File("picture/æ°´å°å›¾ç‰‡.jpg");//ä½œä¸ºæ°´å°çš„å›¾ç‰‡
+
+
+		//æŒ‰æŒ‡å®šå¤§å°æŠŠå›¾ç‰‡è¿›è¡Œç¼©å’Œæ”¾ï¼ˆä¼šéµå¾ªåŸå›¾é«˜å®½æ¯”ä¾‹ï¼‰
+		//æ­¤å¤„æŠŠå›¾ç‰‡å‹æˆ400Ã—500çš„ç¼©ç•¥å›¾
+		Thumbnails.of(fromPic).size(400,500).toFile(toPic);//å˜ä¸º400*300,éµå¾ªåŸå›¾æ¯”ä¾‹ç¼©æˆ–æ”¾åˆ°400*æŸä¸ªé«˜åº¦
+
+
+		//æŒ‰ç…§æ¯”ä¾‹è¿›è¡Œç¼©å°å’Œæ”¾å¤§
+		Thumbnails.of(fromPic).scale(0.2f).toFile(toPic);//æŒ‰æ¯”ä¾‹ç¼©å°
+		Thumbnails.of(fromPic).scale(2f);//æŒ‰æ¯”ä¾‹æ”¾å¤§
+
+
+		//ä¸æŒ‰æ¯”ä¾‹ï¼Œå°±æŒ‰æŒ‡å®šçš„å¤§å°è¿›è¡Œç¼©æ”¾
 		Thumbnails.of(fromPic).size(100, 100).keepAspectRatio(false).toFile(toPic);
-		//»òÕßThumbnails.of(fromPic).forceSize(100,100).toFile(toPic);
-		
-		//Ğı×ªÍ¼Æ¬£¬rotate(½Ç¶È),ÕıÊıÔòÎªË³Ê±Õë£¬¸ºÊıÔòÎªÄæÊ±Õë
+		//æˆ–è€…Thumbnails.of(fromPic).forceSize(100,100).toFile(toPic);
+
+		//æ—‹è½¬å›¾ç‰‡ï¼Œrotate(è§’åº¦),æ­£æ•°åˆ™ä¸ºé¡ºæ—¶é’ˆï¼Œè´Ÿæ•°åˆ™ä¸ºé€†æ—¶é’ˆ
 		Thumbnails.of(fromPic).size(200,200).rotate(90).toFile(toPic);
-		
-		//Í¼Æ¬³ß´ç²»±ä£¬Ñ¹ËõÍ¼Æ¬ÎÄ¼ş´óĞ¡outputQualityÊµÏÖ,²ÎÊı1Îª×î¸ßÖÊÁ¿
+
+		//å›¾ç‰‡å°ºå¯¸ä¸å˜ï¼Œå‹ç¼©å›¾ç‰‡æ–‡ä»¶å¤§å°outputQualityå®ç°,å‚æ•°1ä¸ºæœ€é«˜è´¨é‡
 		Thumbnails.of(fromPic).scale(1f).outputQuality(0.25f).toFile(toPic);
-		
-		//¸øÍ¼Æ¬¼ÓË®Ó¡£¬watermark(Î»ÖÃ£¬Ë®Ó¡Í¼£¬Í¸Ã÷¶È)Positions.CENTER±íÊ¾¼ÓÔÚÖĞ¼ä
+
+		//ç»™å›¾ç‰‡åŠ æ°´å°ï¼Œwatermark(ä½ç½®ï¼Œæ°´å°å›¾ï¼Œé€æ˜åº¦)Positions.CENTERè¡¨ç¤ºåŠ åœ¨ä¸­é—´
 		Thumbnails.of(fromPic).size(400,400)
-		.watermark(Positions.CENTER,ImageIO.read(waterPic),0.5f)
-		.outputQuality(0.8f).toFile(toPic);
-		
-		//ÓÃsourceRegion()ÊµÏÖÍ¼Æ¬²Ã¼ô
-		//Í¼Æ¬ÖĞĞÄ300*300µÄÇøÓò,Positions.CENTER±íÊ¾ÖĞĞÄ£¬»¹ÓĞĞí¶àÆäËûÎ»ÖÃ¿ÉÑ¡
+				.watermark(Positions.CENTER,ImageIO.read(waterPic),0.5f)
+				.outputQuality(0.8f).toFile(toPic);
+
+		//ç”¨sourceRegion()å®ç°å›¾ç‰‡è£å‰ª
+		//å›¾ç‰‡ä¸­å¿ƒ300*300çš„åŒºåŸŸ,Positions.CENTERè¡¨ç¤ºä¸­å¿ƒï¼Œè¿˜æœ‰è®¸å¤šå…¶ä»–ä½ç½®å¯é€‰
 		Thumbnails.of(fromPic).sourceRegion(Positions.CENTER,300,300)
-		.size(300,300).toFile(toPic);
-		
-		
-		//Í¼Æ¬ÖĞÉÏÇøÓò300*300µÄÇøÓò
+				.size(300,300).toFile(toPic);
+
+
+		//å›¾ç‰‡ä¸­ä¸ŠåŒºåŸŸ300*300çš„åŒºåŸŸ
 		Thumbnails.of(fromPic).sourceRegion(Positions.TOP_CENTER,300,300)
-			.size(300,300).toFile(toPic);
-		
-		
+				.size(300,300).toFile(toPic);
+
+
 		Thumbnails.of(fromPic).sourceRegion(0,0,200,200)
-		.size(300,300).toFile(toPic);
-		
-		//ÓÃoutputFormat(Í¼Ïñ¸ñÊ½)×ª»»Í¼Æ¬¸ñÊ½£¬±£³ÖÔ­³ß´ç²»±ä
+				.size(300,300).toFile(toPic);
+
+		//ç”¨outputFormat(å›¾åƒæ ¼å¼)è½¬æ¢å›¾ç‰‡æ ¼å¼ï¼Œä¿æŒåŸå°ºå¯¸ä¸å˜
 		Thumbnails.of(fromPic).scale(1f).outputFormat("png")
-		.toFile("picture/png¸ñÊ½µÄÍ¼Æ¬.png");
-		
-		//Êä³ö³ÉÎÄ¼şÁ÷OutputStream
+				.toFile("picture/pngæ ¼å¼çš„å›¾ç‰‡.png");
+
+		//è¾“å‡ºæˆæ–‡ä»¶æµOutputStream
 		OutputStream os=new FileOutputStream(toPic);
 		Thumbnails.of(fromPic).size(120,120).toOutputStream(os);
-		
-		//Êä³öBufferedImage,asBufferedImage()·µ»ØBufferedImage
+
+		//è¾“å‡ºBufferedImage,asBufferedImage()è¿”å›BufferedImage
 		BufferedImage bi=Thumbnails.of(fromPic).size(120,120).asBufferedImage();
 		ImageIO.write(bi,"jpg",toPic);
-		
-		//Ñ¹ËõÖÁÖ¸¶¨Í¼Æ¬³ß´ç£¨ÀıÈç£ººá400¸ß300£©£¬±£³ÖÍ¼Æ¬²»±äĞÎ£¬¶àÓà²¿·Ö²Ã¼ôµô(Õâ¸öÊÇÒıµÄÍøÓÑµÄ´úÂë)
+
+		//å‹ç¼©è‡³æŒ‡å®šå›¾ç‰‡å°ºå¯¸ï¼ˆä¾‹å¦‚ï¼šæ¨ª400é«˜300ï¼‰ï¼Œä¿æŒå›¾ç‰‡ä¸å˜å½¢ï¼Œå¤šä½™éƒ¨åˆ†è£å‰ªæ‰(è¿™ä¸ªæ˜¯å¼•çš„ç½‘å‹çš„ä»£ç )
 		BufferedImage image = ImageIO.read(fromPic);
 		Builder<BufferedImage> builder = null;
 
@@ -93,45 +93,45 @@ public class ThumbTest {
 			builder = Thumbnails.of(image).size(400, 300);
 		}
 		builder.outputFormat("jpg").toFile(toPic);
-		
-		
+
+
 	}
-	
-	
-	
+
+
+
 	public void testHandlePicture2(String fromPicName,String toPicName) throws IOException{
-		
-		//´´½¨Í¼Æ¬ÎÄ¼ş(´Ë´¦Îª1024¡Á768pxµÄÍ¼Æ¬)ºÍ´¦ÀíºóµÄÍ¼Æ¬ÎÄ¼ş
+
+		//åˆ›å»ºå›¾ç‰‡æ–‡ä»¶(æ­¤å¤„ä¸º1024Ã—768pxçš„å›¾ç‰‡)å’Œå¤„ç†åçš„å›¾ç‰‡æ–‡ä»¶
 		File fromPic=new File(fromPicName);
 		File toPic=new File(toPicName);
 
-		
-		//Í¼Æ¬³ß´ç²»±ä£¬Ñ¹ËõÍ¼Æ¬ÎÄ¼ş´óĞ¡outputQualityÊµÏÖ,²ÎÊı1Îª×î¸ßÖÊÁ¿
+
+		//å›¾ç‰‡å°ºå¯¸ä¸å˜ï¼Œå‹ç¼©å›¾ç‰‡æ–‡ä»¶å¤§å°outputQualityå®ç°,å‚æ•°1ä¸ºæœ€é«˜è´¨é‡
 		//Thumbnails.of(fromPic).scale(1f).outputQuality(0.25f).toFile(toPic);
-		
-		//´Ë´¦°ÑÍ¼Æ¬Ñ¹³É400¡Á500µÄËõÂÔÍ¼
-		Thumbnails.of(fromPic).size(400,500).toFile(toPic);//±äÎª400*300,×ñÑ­Ô­Í¼±ÈÀıËõ»ò·Åµ½400*Ä³¸ö¸ß¶È
-		
-		
+
+		//æ­¤å¤„æŠŠå›¾ç‰‡å‹æˆ400Ã—500çš„ç¼©ç•¥å›¾
+		Thumbnails.of(fromPic).size(400,500).toFile(toPic);//å˜ä¸º400*300,éµå¾ªåŸå›¾æ¯”ä¾‹ç¼©æˆ–æ”¾åˆ°400*æŸä¸ªé«˜åº¦
+
+
 	}
-	
-	
-    public void testHandlePicture3(String fromPicName,String toPicName) throws IOException{
-		
-		//´´½¨Í¼Æ¬ÎÄ¼ş(´Ë´¦Îª1024¡Á768pxµÄÍ¼Æ¬)ºÍ´¦ÀíºóµÄÍ¼Æ¬ÎÄ¼ş
+
+
+	public void testHandlePicture3(String fromPicName,String toPicName) throws IOException{
+
+		//åˆ›å»ºå›¾ç‰‡æ–‡ä»¶(æ­¤å¤„ä¸º1024Ã—768pxçš„å›¾ç‰‡)å’Œå¤„ç†åçš„å›¾ç‰‡æ–‡ä»¶
 		//File fromPic=new File(fromPicName);
 		File toPic=new File(toPicName);
 
-		
-		//Í¼Æ¬³ß´ç²»±ä£¬Ñ¹ËõÍ¼Æ¬ÎÄ¼ş´óĞ¡outputQualityÊµÏÖ,²ÎÊı1Îª×î¸ßÖÊÁ¿
+
+		//å›¾ç‰‡å°ºå¯¸ä¸å˜ï¼Œå‹ç¼©å›¾ç‰‡æ–‡ä»¶å¤§å°outputQualityå®ç°,å‚æ•°1ä¸ºæœ€é«˜è´¨é‡
 		//Thumbnails.of(fromPic).scale(1f).outputQuality(0.25f).toFile(toPic);
-		
-		//´Ë´¦°ÑÍ¼Æ¬Ñ¹³É400¡Á500µÄËõÂÔÍ¼
-		Thumbnails.of(fromPicName).size(400,500).toFile(toPic);//±äÎª400*300,×ñÑ­Ô­Í¼±ÈÀıËõ»ò·Åµ½400*Ä³¸ö¸ß¶È
-		
-		
+
+		//æ­¤å¤„æŠŠå›¾ç‰‡å‹æˆ400Ã—500çš„ç¼©ç•¥å›¾
+		Thumbnails.of(fromPicName).size(400,500).toFile(toPic);//å˜ä¸º400*300,éµå¾ªåŸå›¾æ¯”ä¾‹ç¼©æˆ–æ”¾åˆ°400*æŸä¸ªé«˜åº¦
+
+
 	}
-	
+
 }
 		
 		

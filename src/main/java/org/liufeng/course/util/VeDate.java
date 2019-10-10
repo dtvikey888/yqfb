@@ -1,6 +1,6 @@
 package org.liufeng.course.util;
 
-//Javaʱ���ʽת����ȫ
+//Java时间格式转换大全
 
 import java.util.*;
 import java.text.*;
@@ -8,9 +8,9 @@ import java.util.Calendar;
 
 public class VeDate {
 	/**
-	 * ��ȡ����ʱ��
-	 * 
-	 * @return ����ʱ������ yyyy-MM-dd HH:mm:ss
+	 * 获取现在时间
+	 *
+	 * @return 返回时间类型 yyyy-MM-dd HH:mm:ss
 	 */
 	public static Date getNowDate() {
 		Date currentTime = new Date();
@@ -22,9 +22,9 @@ public class VeDate {
 	}
 
 	/**
-	 * ��ȡ����ʱ��
-	 * 
-	 * @return���ض�ʱ���ʽ yyyy-MM-dd
+	 * 获取现在时间
+	 *
+	 * @return返回短时间格式 yyyy-MM-dd
 	 */
 	public static Date getNowDateShort() {
 		Date currentTime = new Date();
@@ -36,9 +36,9 @@ public class VeDate {
 	}
 
 	/**
-	 * ��ȡ����ʱ��
-	 * 
-	 * @return�����ַ�����ʽ yyyy-MM-dd HH:mm:ss
+	 * 获取现在时间
+	 *
+	 * @return返回字符串格式 yyyy-MM-dd HH:mm:ss
 	 */
 	public static String getStringDate() {
 		Date currentTime = new Date();
@@ -48,9 +48,9 @@ public class VeDate {
 	}
 
 	/**
-	 * ��ȡ����ʱ��
-	 * 
-	 * @return ���ض�ʱ���ַ�����ʽyyyy-MM-dd
+	 * 获取现在时间
+	 *
+	 * @return 返回短时间字符串格式yyyy-MM-dd
 	 */
 	public static String getStringDateShort() {
 		Date currentTime = new Date();
@@ -60,8 +60,8 @@ public class VeDate {
 	}
 
 	/**
-	 * ��ȡʱ�� Сʱ:��;�� HH:mm:ss
-	 * 
+	 * 获取时间 小时:分;秒 HH:mm:ss
+	 *
 	 * @return
 	 */
 	public static String getTimeShort() {
@@ -72,8 +72,8 @@ public class VeDate {
 	}
 
 	/**
-	 * ����ʱ���ʽ�ַ���ת��Ϊʱ�� yyyy-MM-dd HH:mm:ss
-	 * 
+	 * 将长时间格式字符串转换为时间 yyyy-MM-dd HH:mm:ss
+	 *
 	 * @param strDate
 	 * @return
 	 */
@@ -85,33 +85,33 @@ public class VeDate {
 	}
 
 	/**
-	 * ����ʱ���ʽʱ��ת��Ϊ�ַ��� yyyy-MM-dd HH:mm:ss
-	 * 
+	 * 将长时间格式时间转换为字符串 yyyy-MM-dd HH:mm:ss
+	 *
 	 * @param dateDate
 	 * @return
 	 */
-	public static String dateToStrLong(Date dateDate) {
+	public static String dateToStrLong(java.util.Date dateDate) {
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		String dateString = formatter.format(dateDate);
 		return dateString;
 	}
 
 	/**
-	 * ����ʱ���ʽʱ��ת��Ϊ�ַ��� yyyy-MM-dd
-	 * 
+	 * 将短时间格式时间转换为字符串 yyyy-MM-dd
+	 *
 	 * @param dateDate
 	 * @param k
 	 * @return
 	 */
-	public static String dateToStr(Date dateDate) {
+	public static String dateToStr(java.util.Date dateDate) {
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 		String dateString = formatter.format(dateDate);
 		return dateString;
 	}
 
 	/**
-	 * ����ʱ���ʽ�ַ���ת��Ϊʱ�� yyyy-MM-dd
-	 * 
+	 * 将短时间格式字符串转换为时间 yyyy-MM-dd
+	 *
 	 * @param strDate
 	 * @return
 	 */
@@ -123,8 +123,8 @@ public class VeDate {
 	}
 
 	/**
-	 * �õ�����ʱ��
-	 * 
+	 * 得到现在时间
+	 *
 	 * @return
 	 */
 	public static Date getNow() {
@@ -133,8 +133,8 @@ public class VeDate {
 	}
 
 	/**
-	 * ��ȡһ�����е����һ��
-	 * 
+	 * 提取一个月中的最后一天
+	 *
 	 * @param day
 	 * @return
 	 */
@@ -146,9 +146,9 @@ public class VeDate {
 	}
 
 	/**
-	 * �õ�����ʱ��
-	 * 
-	 * @return �ַ��� yyyyMMdd HHmmss
+	 * 得到现在时间
+	 *
+	 * @return 字符串 yyyyMMdd HHmmss
 	 */
 	public static String getStringToday() {
 		Date currentTime = new Date();
@@ -158,7 +158,7 @@ public class VeDate {
 	}
 
 	/**
-	 * �õ�����Сʱ
+	 * 得到现在小时
 	 */
 	public static String getHour() {
 		Date currentTime = new Date();
@@ -170,8 +170,8 @@ public class VeDate {
 	}
 
 	/**
-	 * �õ����ڷ���
-	 * 
+	 * 得到现在分钟
+	 *
 	 * @return
 	 */
 	public static String getTime() {
@@ -184,8 +184,8 @@ public class VeDate {
 	}
 
 	/**
-	 * �����û������ʱ���ʾ��ʽ�����ص�ǰʱ��ĸ�ʽ �����yyyyMMdd��ע����ĸy���ܴ�д��
-	 * 
+	 * 根据用户传入的时间表示格式，返回当前时间的格式 如果是yyyyMMdd，注意字母y不能大写。
+	 *
 	 * @param sformat
 	 *            yyyyMMddhhmmss
 	 * @return
@@ -198,7 +198,7 @@ public class VeDate {
 	}
 
 	/**
-	 * ����Сʱʱ���Ĳ�ֵ,���뱣֤����ʱ�䶼��"HH:MM"�ĸ�ʽ�������ַ��͵ķ���
+	 * 二个小时时间间的差值,必须保证二个时间都是"HH:MM"的格式，返回字符型的分钟
 	 */
 	public static String getTwoHour(String st1, String st2) {
 		String[] kk = null;
@@ -220,14 +220,14 @@ public class VeDate {
 	}
 
 	/**
-	 * �õ��������ڼ�ļ������
+	 * 得到二个日期间的间隔天数
 	 */
 	public static String getTwoDay(String sj1, String sj2) {
 		SimpleDateFormat myFormatter = new SimpleDateFormat("yyyy-MM-dd");
 		long day = 0;
 		try {
-			Date date = myFormatter.parse(sj1);
-			Date mydate = myFormatter.parse(sj2);
+			java.util.Date date = myFormatter.parse(sj1);
+			java.util.Date mydate = myFormatter.parse(sj2);
 			day = (date.getTime() - mydate.getTime()) / (24 * 60 * 60 * 1000);
 		} catch (Exception e) {
 			return "";
@@ -236,7 +236,7 @@ public class VeDate {
 	}
 
 	/**
-	 * ʱ��ǰ�ƻ���Ʒ���,����JJ��ʾ����.
+	 * 时间前推或后推分钟,其中JJ表示分钟.
 	 */
 	public static String getPreTime(String sj1, String jj) {
 		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -252,7 +252,7 @@ public class VeDate {
 	}
 
 	/**
-	 * �õ�һ��ʱ���Ӻ��ǰ�Ƽ����ʱ��,nowdateΪʱ��,delayΪǰ�ƻ���ӵ�����
+	 * 得到一个时间延后或前移几天的时间,nowdate为时间,delay为前移或后延的天数
 	 */
 	public static String getNextDay(String nowdate, String delay) {
 		try {
@@ -270,16 +270,16 @@ public class VeDate {
 	}
 
 	/**
-	 * �ж��Ƿ�����
-	 * 
+	 * 判断是否润年
+	 *
 	 * @param ddate
 	 * @return
 	 */
 	public static boolean isLeapYear(String ddate) {
 
 		/**
-		 * ��ϸ��ƣ� 1.��400���������꣬���� 2.���ܱ�4������������ 3.�ܱ�4����ͬʱ���ܱ�100������������
-		 * 3.�ܱ�4����ͬʱ�ܱ�100������������
+		 * 详细设计： 1.被400整除是闰年，否则： 2.不能被4整除则不是闰年 3.能被4整除同时不能被100整除则是闰年
+		 * 3.能被4整除同时能被100整除则不是闰年
 		 */
 		Date d = strToDate(ddate);
 		GregorianCalendar gc = (GregorianCalendar) Calendar.getInstance();
@@ -297,8 +297,8 @@ public class VeDate {
 	}
 
 	/**
-	 * ��������ʱ���ʽ 26 Apr 2006
-	 * 
+	 * 返回美国时间格式 26 Apr 2006
+	 *
 	 * @param str
 	 * @return
 	 */
@@ -312,8 +312,8 @@ public class VeDate {
 	}
 
 	/**
-	 * ��ȡһ���µ����һ��
-	 * 
+	 * 获取一个月的最后一天
+	 *
 	 * @param dat
 	 * @return
 	 */
@@ -337,8 +337,8 @@ public class VeDate {
 	}
 
 	/**
-	 * �ж϶���ʱ���Ƿ���ͬһ����
-	 * 
+	 * 判断二个时间是否在同一个周
+	 *
 	 * @param date1
 	 * @param date2
 	 * @return
@@ -354,7 +354,7 @@ public class VeDate {
 					.get(Calendar.WEEK_OF_YEAR))
 				return true;
 		} else if (1 == subYear && 11 == cal2.get(Calendar.MONTH)) {
-			// ���12�µ����һ�ܺ�������һ�ܵĻ������һ�ܼ���������ĵ�һ��
+			// 如果12月的最后一周横跨来年第一周的话则最后一周即算做来年的第一周
 			if (cal1.get(Calendar.WEEK_OF_YEAR) == cal2
 					.get(Calendar.WEEK_OF_YEAR))
 				return true;
@@ -367,8 +367,8 @@ public class VeDate {
 	}
 
 	/**
-	 * ����������,���õ���ǰʱ�����ڵ�����ǵڼ���
-	 * 
+	 * 产生周序列,即得到当前时间所在的年度是第几周
+	 *
 	 * @return
 	 */
 	public static String getSeqWeek() {
@@ -381,48 +381,48 @@ public class VeDate {
 	}
 
 	/**
-	 * ���һ���������ڵ��ܵ����ڼ������ڣ���Ҫ�ҳ�2002��2��3�������ܵ�����һ�Ǽ���
-	 * 
+	 * 获得一个日期所在的周的星期几的日期，如要找出2002年2月3日所在周的星期一是几号
+	 *
 	 * @param sdate
 	 * @param num
 	 * @return
 	 */
 	public static String getWeek(String sdate, String num) {
-		// ��ת��Ϊʱ��
+		// 再转换为时间
 		Date dd = VeDate.strToDate(sdate);
 		Calendar c = Calendar.getInstance();
 		c.setTime(dd);
-		if (num.equals("1")) // ��������һ���ڵ�����
+		if (num.equals("1")) // 返回星期一所在的日期
 			c.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
-		else if (num.equals("2")) // �������ڶ����ڵ�����
+		else if (num.equals("2")) // 返回星期二所在的日期
 			c.set(Calendar.DAY_OF_WEEK, Calendar.TUESDAY);
-		else if (num.equals("3")) // �������������ڵ�����
+		else if (num.equals("3")) // 返回星期三所在的日期
 			c.set(Calendar.DAY_OF_WEEK, Calendar.WEDNESDAY);
-		else if (num.equals("4")) // �������������ڵ�����
+		else if (num.equals("4")) // 返回星期四所在的日期
 			c.set(Calendar.DAY_OF_WEEK, Calendar.THURSDAY);
-		else if (num.equals("5")) // �������������ڵ�����
+		else if (num.equals("5")) // 返回星期五所在的日期
 			c.set(Calendar.DAY_OF_WEEK, Calendar.FRIDAY);
-		else if (num.equals("6")) // �������������ڵ�����
+		else if (num.equals("6")) // 返回星期六所在的日期
 			c.set(Calendar.DAY_OF_WEEK, Calendar.SATURDAY);
-		else if (num.equals("0")) // �������������ڵ�����
+		else if (num.equals("0")) // 返回星期日所在的日期
 			c.set(Calendar.DAY_OF_WEEK, Calendar.SUNDAY);
 		return new SimpleDateFormat("yyyy-MM-dd").format(c.getTime());
 	}
 
 	/**
-	 * ����һ�����ڣ����������ڼ����ַ���
-	 * 
+	 * 根据一个日期，返回是星期几的字符串
+	 *
 	 * @param sdate
 	 * @return
 	 */
 	public static String getWeek(String sdate) {
-		// ��ת��Ϊʱ��
+		// 再转换为时间
 		Date date = VeDate.strToDate(sdate);
 		Calendar c = Calendar.getInstance();
 		c.setTime(date);
 		// int hour=c.get(Calendar.DAY_OF_WEEK);
-		// hour�д�ľ������ڼ��ˣ��䷶Χ 1~7
-		// 1=������ 7=����������������
+		// hour中存的就是星期几了，其范围 1~7
+		// 1=星期日 7=星期六，其他类推
 		return new SimpleDateFormat("EEEE").format(c.getTime());
 	}
 
@@ -430,26 +430,26 @@ public class VeDate {
 		String str = "";
 		str = VeDate.getWeek(sdate);
 		if ("1".equals(str)) {
-			str = "������";
+			str = "星期日";
 		} else if ("2".equals(str)) {
-			str = "����һ";
+			str = "星期一";
 		} else if ("3".equals(str)) {
-			str = "���ڶ�";
+			str = "星期二";
 		} else if ("4".equals(str)) {
-			str = "������";
+			str = "星期三";
 		} else if ("5".equals(str)) {
-			str = "������";
+			str = "星期四";
 		} else if ("6".equals(str)) {
-			str = "������";
+			str = "星期五";
 		} else if ("7".equals(str)) {
-			str = "������";
+			str = "星期六";
 		}
 		return str;
 	}
 
 	/**
-	 * ����ʱ��֮�������
-	 * 
+	 * 两个时间之间的天数
+	 *
 	 * @param date1
 	 * @param date2
 	 * @return
@@ -459,10 +459,10 @@ public class VeDate {
 			return 0;
 		if (date2 == null || date2.equals(""))
 			return 0;
-		// ת��Ϊ��׼ʱ��
+		// 转换为标准时间
 		SimpleDateFormat myFormatter = new SimpleDateFormat("yyyy-MM-dd");
-		Date date = null;
-		Date mydate = null;
+		java.util.Date date = null;
+		java.util.Date mydate = null;
 		try {
 			date = myFormatter.parse(date1);
 			mydate = myFormatter.parse(date2);
@@ -473,17 +473,17 @@ public class VeDate {
 	}
 
 	/**
-	 * �γ����µ����� �� ���ݴ����һ��ʱ�䷵��һ���ṹ ������ ����һ ���ڶ� ������ ������ ������ ������ �����ǵ��µĸ���ʱ��
-	 * �˺������ظ�������һ�����������ڵ�����
-	 * 
+	 * 形成如下的日历 ， 根据传入的一个时间返回一个结构 星期日 星期一 星期二 星期三 星期四 星期五 星期六 下面是当月的各个时间
+	 * 此函数返回该日历第一行星期日所在的日期
+	 *
 	 * @param sdate
 	 * @return
 	 */
 	public static String getNowMonth(String sdate) {
-		// ȡ��ʱ�������µ�һ��
+		// 取该时间所在月的一号
 		sdate = sdate.substring(0, 8) + "01";
 
-		// �õ�����µ�1�������ڼ�
+		// 得到这个月的1号是星期几
 		Date date = VeDate.strToDate(sdate);
 		Calendar c = Calendar.getInstance();
 		c.setTime(date);
@@ -493,10 +493,10 @@ public class VeDate {
 	}
 
 	/**
-	 * ȡ�����ݿ����� ���ɸ�ʽΪyyyymmddhhmmss+kλ�����
-	 * 
+	 * 取得数据库主键 生成格式为yyyymmddhhmmss+k位随机数
+	 *
 	 * @param k
-	 *            ��ʾ��ȡ��λ������������Լ���
+	 *            表示是取几位随机数，可以自己定
 	 */
 
 	public static String getNo(int k) {
@@ -505,8 +505,8 @@ public class VeDate {
 	}
 
 	/**
-	 * ����һ�������
-	 * 
+	 * 返回一个随机数
+	 *
 	 * @param i
 	 * @return
 	 */
@@ -523,7 +523,7 @@ public class VeDate {
 	}
 
 	/**
-	 * 
+	 *
 	 * @param args
 	 */
 	public static boolean RightDate(String date) {

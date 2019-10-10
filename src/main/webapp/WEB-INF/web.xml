@@ -1,7 +1,407 @@
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
 
-<web-app>
-  <display-name>Archetype Created Web Application</display-name>
+  <filter>
+    <filter-name>EncodingFilter</filter-name>
+    <filter-class>org.filter.EncodingFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>EncodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CakeServlet</servlet-name>
+    <servlet-class>com.xidian.servlet.CakeServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>CakeServlet</servlet-name>
+    <url-pattern>/CakeServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>coreServlet</servlet-name>
+    <servlet-class>
+      org.liufeng.course.servlet.CoreServlet
+    </servlet-class>
+
+  </servlet>
+
+
+  <!-- /coreServlet用于指定该Servlet的访问路径 -->
+  <servlet-mapping>
+    <servlet-name>coreServlet</servlet-name>
+    <url-pattern>/coreServlet</url-pattern>
+  </servlet-mapping>
+  <!-- 网页授权 -->
+  <servlet>
+    <servlet-name>oauthServlet</servlet-name>
+    <servlet-class>
+      org.liufeng.course.servlet.OAuthServlet
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>oauthServlet</servlet-name>
+    <url-pattern>/oauthServlet</url-pattern>
+  </servlet-mapping>
+
+
+  <!-- cos组件上传下载servlet -->
+  <servlet>
+    <servlet-name>CosUploadServlet</servlet-name>
+    <servlet-class>org.liufeng.course.servlet.CosUploadServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CosDownloadServlet</servlet-name>
+    <servlet-class>org.liufeng.course.servlet.CosDownloadServlet</servlet-class>
+  </servlet>
+
+
+  <servlet-mapping>
+    <servlet-name>CosUploadServlet</servlet-name>
+    <url-pattern>/CosUploadServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CosDownloadServlet</servlet-name>
+    <url-pattern>/CosDownloadServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>UpdateInterfaceData</servlet-name>
+    <url-pattern>/UpdateInterfaceData</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OAuthServlet2</servlet-name>
+    <url-pattern>/OAuthServlet2</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OAuthServlet3</servlet-name>
+    <url-pattern>/OAuthServlet3</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OAuthServlet4</servlet-name>
+    <url-pattern>/OAuthServlet4</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OAuthServlet5</servlet-name>
+    <url-pattern>/OAuthServlet5</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OAuthServlet6</servlet-name>
+    <url-pattern>/OAuthServlet6</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OAuthServlet7</servlet-name>
+    <url-pattern>/OAuthServlet7</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OAuthServlet8</servlet-name>
+    <url-pattern>/OAuthServlet8</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OAuthServlet9</servlet-name>
+    <url-pattern>/OAuthServlet9</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OAuthServlet10</servlet-name>
+    <url-pattern>/OAuthServlet10</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OAuthServlet11</servlet-name>
+    <url-pattern>/OAuthServlet11</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OAuthServlet12</servlet-name>
+    <url-pattern>/OAuthServlet12</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OAuthServlet13</servlet-name>
+    <url-pattern>/OAuthServlet13</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OAuthServlet14</servlet-name>
+    <url-pattern>/OAuthServlet14</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OAuthServlet15</servlet-name>
+    <url-pattern>/OAuthServlet15</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OAuthServlet16</servlet-name>
+    <url-pattern>/OAuthServlet16</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OAuthServlet17</servlet-name>
+    <url-pattern>/OAuthServlet17</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OAuthServlet18</servlet-name>
+    <url-pattern>/OAuthServlet18</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OAuthServlet19</servlet-name>
+    <url-pattern>/OAuthServlet19</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OAuthServlet20</servlet-name>
+    <url-pattern>/OAuthServlet20</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OAuthServlet21</servlet-name>
+    <url-pattern>/OAuthServlet21</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OAuthServlet22</servlet-name>
+    <url-pattern>/OAuthServlet22</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OAuthServlet23</servlet-name>
+    <url-pattern>/OAuthServlet23</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OAuthServlet24</servlet-name>
+    <url-pattern>/OAuthServlet24</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OAuthServlet25</servlet-name>
+    <url-pattern>/OAuthServlet25</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OAuthServlet26</servlet-name>
+    <url-pattern>/OAuthServlet26</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OAuthServlet27</servlet-name>
+    <url-pattern>/OAuthServlet27</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OAuthServlet28</servlet-name>
+    <url-pattern>/OAuthServlet28</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OAuthServlet29</servlet-name>
+    <url-pattern>/OAuthServlet29</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OAuthServlet30</servlet-name>
+    <url-pattern>/OAuthServlet30</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>del</servlet-name>
+    <url-pattern>/del</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>InitServlet</servlet-name>
+    <servlet-class>org.fjw.weixin.servlet.InitServlet</servlet-class>
+    <!-- 配置获取access_token所需参数appid和appsecret -->
+    <init-param>
+      <param-name>appid</param-name>
+      <param-value>wx86facd0a863aca12</param-value>
+    </init-param>
+    <init-param>
+      <param-name>appsecret</param-name>
+      <param-value>2c23d4703052129000cf2d98c8e4557c</param-value>
+    </init-param>
+    <load-on-startup>0</load-on-startup>
+
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdateInterfaceData</servlet-name>
+    <servlet-class>org.fjw.weixin.servlet.UpdateInterfaceData</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>OAuthServlet2</servlet-name>
+    <servlet-class>org.liufeng.course.servlet.OAuthServlet2</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>OAuthServlet3</servlet-name>
+    <servlet-class>org.liufeng.course.servlet.OAuthServlet3</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>OAuthServlet4</servlet-name>
+    <servlet-class>org.liufeng.course.servlet.OAuthServlet4</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>OAuthServlet5</servlet-name>
+    <servlet-class>org.liufeng.course.servlet.OAuthServlet5</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>OAuthServlet6</servlet-name>
+    <servlet-class>org.liufeng.course.servlet.OAuthServlet6</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>OAuthServlet7</servlet-name>
+    <servlet-class>org.liufeng.course.servlet.OAuthServlet7</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>OAuthServlet8</servlet-name>
+    <servlet-class>org.liufeng.course.servlet.OAuthServlet8</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>OAuthServlet9</servlet-name>
+    <servlet-class>org.liufeng.course.servlet.OAuthServlet9</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>OAuthServlet10</servlet-name>
+    <servlet-class>org.liufeng.course.servlet.OAuthServlet10</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>OAuthServlet11</servlet-name>
+    <servlet-class>org.liufeng.course.servlet.OAuthServlet11</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>OAuthServlet12</servlet-name>
+    <servlet-class>org.liufeng.course.servlet.OAuthServlet12</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>OAuthServlet13</servlet-name>
+    <servlet-class>org.liufeng.course.servlet.OAuthServlet13</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>OAuthServlet14</servlet-name>
+    <servlet-class>org.liufeng.course.servlet.OAuthServlet14</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>OAuthServlet15</servlet-name>
+    <servlet-class>org.liufeng.course.servlet.OAuthServlet15</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>OAuthServlet16</servlet-name>
+    <servlet-class>org.liufeng.course.servlet.OAuthServlet16</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>OAuthServlet17</servlet-name>
+    <servlet-class>org.liufeng.course.servlet.OAuthServlet17</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>OAuthServlet18</servlet-name>
+    <servlet-class>org.liufeng.course.servlet.OAuthServlet18</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>OAuthServlet19</servlet-name>
+    <servlet-class>org.liufeng.course.servlet.OAuthServlet19</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>OAuthServlet20</servlet-name>
+    <servlet-class>org.liufeng.course.servlet.OAuthServlet20</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>OAuthServlet21</servlet-name>
+    <servlet-class>org.liufeng.course.servlet.OAuthServlet21</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>OAuthServlet22</servlet-name>
+    <servlet-class>org.liufeng.course.servlet.OAuthServlet22</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>OAuthServlet23</servlet-name>
+    <servlet-class>org.liufeng.course.servlet.OAuthServlet23</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>OAuthServlet24</servlet-name>
+    <servlet-class>org.liufeng.course.servlet.OAuthServlet24</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>OAuthServlet25</servlet-name>
+    <servlet-class>org.liufeng.course.servlet.OAuthServlet25</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>OAuthServlet26</servlet-name>
+    <servlet-class>org.liufeng.course.servlet.OAuthServlet26</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>OAuthServlet27</servlet-name>
+    <servlet-class>org.liufeng.course.servlet.OAuthServlet27</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>OAuthServlet28</servlet-name>
+    <servlet-class>org.liufeng.course.servlet.OAuthServlet28</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>OAuthServlet29</servlet-name>
+    <servlet-class>org.liufeng.course.servlet.OAuthServlet29</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>OAuthServlet30</servlet-name>
+    <servlet-class>org.liufeng.course.servlet.OAuthServlet30</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>del</servlet-name>
+    <servlet-class>org.liufeng.course.servlet.del</servlet-class>
+  </servlet>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
 </web-app>

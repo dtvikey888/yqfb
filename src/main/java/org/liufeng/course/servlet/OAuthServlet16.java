@@ -14,53 +14,53 @@ import org.liufeng.course.pojo.WeixinUserInfo;
 import org.liufeng.course.util.AdvancedUtil;
 
 /**
- * ÊÚÈ¨ºóµÄ»Øµ÷ÇëÇó´¦Àí
- * 
+ * æˆæƒåçš„å›è°ƒè¯·æ±‚å¤„ç†
+ *
  * @author liufeng
  * @date 2013-11-12
- * ÊÚÆÚÍøÖ·
+ * æˆæœŸç½‘å€
  * https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx86facd0a863aca12&redirect_uri=http%3a%2f%2fwww.yqrb.com.cn%2fyqfb%2foauthServlet&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect
  */
 public class OAuthServlet16 extends HttpServlet {
 	private static final long serialVersionUID = -1847238807216447030L;
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+
 		request.setCharacterEncoding("gb2312");
 		response.setCharacterEncoding("gb2312");
 
-		// ÓÃ»§Í¬ÒâÊÚÈ¨ºó£¬ÄÜ»ñÈ¡µ½code
+		// ç”¨æˆ·åŒæ„æˆæƒåï¼Œèƒ½è·å–åˆ°code
 		String code = request.getParameter("code");
 		System.out.println("OAuthServlet16.doGet() code= "+code);
 
-		// ÓÃ»§Í¬ÒâÊÚÈ¨
+		// ç”¨æˆ·åŒæ„æˆæƒ
 		if (!"authdeny".equals(code)) {
-			
-			// »ñÈ¡ÍøÒ³ÊÚÈ¨access_token
+
+			// è·å–ç½‘é¡µæˆæƒaccess_token
 			//WeixinOauth2Token weixinOauth2Token = AdvancedUtil.getOauth2AccessToken("APPID", "APPSECRET", code);
-			
+
 			WeixinOauth2Token weixinOauth2Token = AdvancedUtil.getOauth2AccessToken(AllValus.appid, AllValus.appsecret, code);
-			
-			
-			// ÍøÒ³ÊÚÈ¨½Ó¿Ú·ÃÎÊÆ¾Ö¤
+
+
+			// ç½‘é¡µæˆæƒæ¥å£è®¿é—®å‡­è¯
 			//String accessToken = weixinOauth2Token.getAccessToken();
-			// ÓÃ»§±êÊ¶
+			// ç”¨æˆ·æ ‡è¯†
 			String openId = weixinOauth2Token.getOpenId();
-			
-			//ÒÔsnsapi_userinfoÎªscope·¢ÆğµÄÍøÒ³ÊÚÈ¨
-			// »ñÈ¡ÓÃ»§ĞÅÏ¢
+
+			//ä»¥snsapi_userinfoä¸ºscopeå‘èµ·çš„ç½‘é¡µæˆæƒ
+			// è·å–ç”¨æˆ·ä¿¡æ¯
 			//SNSUserInfo snsUserInfo = AdvancedUtil.getSNSUserInfo(accessToken, openId);
-			
-			//ÒÔsnsapi_baseÎªscope·¢ÆğµÄÍøÒ³ÊÚÈ¨
-			//Êı¾İ¿â±£´æµÄaccessToken   
+
+			//ä»¥snsapi_baseä¸ºscopeå‘èµ·çš„ç½‘é¡µæˆæƒ
+			//æ•°æ®åº“ä¿å­˜çš„accessToken
 			String accTok2=WeixinChaOpenId.GetDBAccessToken(AllValus.memo);
-			
+
 			WeixinUserInfo snsUserInfo = AdvancedUtil.getUserInfo(accTok2, openId);
 
-			// ÉèÖÃÒª´«µİµÄ²ÎÊı
+			// è®¾ç½®è¦ä¼ é€’çš„å‚æ•°
 			request.setAttribute("snsUserInfo", snsUserInfo);
 		}
-		// Ìø×ªµ½index.jsp
+		// è·³è½¬åˆ°index.jsp
 		request.getRequestDispatcher("twb/rl.jsp").forward(request, response);
 	}
 }

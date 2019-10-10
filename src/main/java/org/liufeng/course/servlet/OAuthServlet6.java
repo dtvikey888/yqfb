@@ -12,42 +12,42 @@ import org.liufeng.course.pojo.WeixinOauth2Token;
 import org.liufeng.course.util.AdvancedUtil;
 
 /**
- * 授权后的回调请求处理
- * 
+ * 鎺堟潈鍚庣殑鍥炶皟璇锋眰澶勭悊
+ *
  * @author liufeng
  * @date 2013-11-12
- * 授期网址
+ * 鎺堟湡缃戝潃
  * https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx86facd0a863aca12&redirect_uri=http%3a%2f%2fwww.yqrb.com.cn%2fyqfb%2foauthServlet&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect
  */
 public class OAuthServlet6 extends HttpServlet {
 	private static final long serialVersionUID = -1847238807216447030L;
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+
 		request.setCharacterEncoding("gb2312");
 		response.setCharacterEncoding("gb2312");
 
-		// 用户同意授权后，能获取到code
+		// 鐢ㄦ埛鍚屾剰鎺堟潈鍚庯紝鑳借幏鍙栧埌code
 		String code = request.getParameter("code");
 
-		// 用户同意授权
+		// 鐢ㄦ埛鍚屾剰鎺堟潈
 		if (!"authdeny".equals(code)) {
-			
-			// 获取网页授权access_token
+
+			// 鑾峰彇缃戦〉鎺堟潈access_token
 			//WeixinOauth2Token weixinOauth2Token = AdvancedUtil.getOauth2AccessToken("APPID", "APPSECRET", code);
 			WeixinOauth2Token weixinOauth2Token = AdvancedUtil.getOauth2AccessToken(AllValus.appid, AllValus.appsecret, code);
-			
-			// 网页授权接口访问凭证
+
+			// 缃戦〉鎺堟潈鎺ュ彛璁块棶鍑瘉
 			String accessToken = weixinOauth2Token.getAccessToken();
-			// 用户标识
+			// 鐢ㄦ埛鏍囪瘑
 			String openId = weixinOauth2Token.getOpenId();
-			// 获取用户信息
+			// 鑾峰彇鐢ㄦ埛淇℃伅
 			SNSUserInfo snsUserInfo = AdvancedUtil.getSNSUserInfo(accessToken, openId);
 
-			// 设置要传递的参数
+			// 璁剧疆瑕佷紶閫掔殑鍙傛暟
 			request.setAttribute("snsUserInfo", snsUserInfo);
 		}
-		// 跳转到index.jsp
+		// 璺宠浆鍒癷ndex.jsp
 		request.getRequestDispatcher("qm/rl.jsp").forward(request, response);
 	}
 }

@@ -18,8 +18,8 @@ import com.jspsmart.upload.Request;
 import com.sun.org.apache.regexp.internal.recompile;
 
 public class ZghTools {
-	
-    //ÏÔÊ¾ĞÕÃû option
+
+	//æ˜¾ç¤ºå§“å option
 	public static String GetXmOption(){
 		String str = "";
 		try {
@@ -27,20 +27,20 @@ public class ZghTools {
 			String sql = "select id,xm from yqfb_openid3 where xm<>''";
 			ResultSet rs = db.executeQuery(sql);
 			while(rs.next()){
-			
+
 				str+="<option value="+rs.getInt(1)+">"+rs.getString(2)+"</option>";
-				
-				
+
+
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return str;
 	}
-	
 
-    //ÏÔÊ¾µç»° option
+
+	//æ˜¾ç¤ºç”µè¯ option
 	public static String GetTelOption(){
 		String str = "";
 		try {
@@ -48,19 +48,19 @@ public class ZghTools {
 			String sql = "select id,tel from yqfb_openid3 where tel<>'0' and tel<>''";
 			ResultSet rs = db.executeQuery(sql);
 			while(rs.next()){
-			
+
 				str+="<option value="+rs.getInt(1)+">"+rs.getString(2)+"</option>";
-				
-				
+
+
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return str;
 	}
-	
-	//ÏÔÊ¾´ò¿¨µØ option
+
+	//æ˜¾ç¤ºæ‰“å¡åœ° option
 	public static String GetMemoOption(){
 		String str = "";
 		try {
@@ -68,19 +68,19 @@ public class ZghTools {
 			String sql = "select id,memo from jg where memo<>''";
 			ResultSet rs = db.executeQuery(sql);
 			while(rs.next()){
-			
+
 				str+="<option value="+rs.getInt(1)+">"+rs.getString(2)+"</option>";
-				
-				
+
+
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return str;
 	}
-	
-	//ÏÔÊ¾´ò¿¨ÀíÓÉ option
+
+	//æ˜¾ç¤ºæ‰“å¡ç†ç”± option
 	public static String GetStoryOption(){
 		String str = "";
 		try {
@@ -88,21 +88,21 @@ public class ZghTools {
 			String sql = "select id,story from jg where story<>''";
 			ResultSet rs = db.executeQuery(sql);
 			while(rs.next()){
-			
+
 				str+="<option value="+rs.getInt(1)+">"+rs.getString(2)+"</option>";
-				
-				
+
+
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return str;
 	}
-	
-	
+
+
 	public static int GetId3(int sxid2){
-		
+
 		int id =0;
 		try {
 			sql_data db = new sql_data();
@@ -111,34 +111,34 @@ public class ZghTools {
 			if (rs.next()) {
 				id = rs.getInt(1);
 			}
-				
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return id;
-		
-		
+
+
 	}
-	
-	
-	//¸ù¾İid ĞŞ¸Ä·ÖÀà 
+
+
+	//æ ¹æ®id ä¿®æ”¹åˆ†ç±»
 	public static void XgFl(String id,String lb){
 		try {
 			MysqlDB db = new MysqlDB();
 			String sql = "update jg set lb="+lb+" where id="+id;
 			db.executeUpdate(sql);
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-	
-	//»ñÈ¡oid
+
+	//è·å–oid
 	public static int GetOid(String id){
-		
+
 		int oid=0;
-		
+
 		try {
 			MysqlDB db = new MysqlDB();
 			String sql = "select oid from jg where id="+id;
@@ -149,15 +149,15 @@ public class ZghTools {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return oid;
 	}
-	
-	//»ñÈ¡zloid
+
+	//è·å–zloid
 	public static int GetZlOid(String zlopenid){
-		
+
 		int zloid=0;
-		
+
 		try {
 			MysqlDB db = new MysqlDB();
 			String sql = "select id from yqfb_openid3 where openid='"+zlopenid+"'";
@@ -168,11 +168,11 @@ public class ZghTools {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return zloid;
 	}
-	
-	//¸ù¾İ·ÖÀà»ñÈ¡ÅÅÃûÎÄÕÂµÄid ÖØÖÃ³É 1,2,3,4,5,6,7,8,9
+
+	//æ ¹æ®åˆ†ç±»è·å–æ’åæ–‡ç« çš„id é‡ç½®æˆ 1,2,3,4,5,6,7,8,9
 	public static String GetPmId(int lb){
 		String sc="";
 		String str="";
@@ -190,120 +190,120 @@ public class ZghTools {
 			}else {
 				str="0";
 			}
-			
-			
+
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return str;
 	}
-	
+
 //	public static void main(String[] args) {
 //		System.out.println(ZghTools.GetPmId(1));
 //	}
-	
-	//ÅĞ¶ÏÊÇ·ñµ±ÌìÒÑ¾­µãÔŞ¹ıÁË
+
+	//åˆ¤æ–­æ˜¯å¦å½“å¤©å·²ç»ç‚¹èµè¿‡äº†
 	public static boolean Isdz3(String id,String zlopenid){
 		boolean isdz = false;
 		try {
 			int zloid = ZghTools.GetZlOid(zlopenid);
 			String nowDayMYD = TimeString.GetnowTimeYMD();
-			System.out.println("½ñÌìµÄ·şÎñÆ÷Ê±¼ä£º"+nowDayMYD);
+			System.out.println("ä»Šå¤©çš„æœåŠ¡å™¨æ—¶é—´ï¼š"+nowDayMYD);
 			MysqlDB db=new MysqlDB();
 			String sql = "select date_format(fbsj, '%Y-%m-%d') as fbsj from jg_dz where jid="+id+" and zloid="+zloid+" order by id desc";
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
 				String fbsj = rs.getString("fbsj");
-				System.out.println("½ñÌìµÄµãÔŞÊ±¼ä£º"+fbsj);
+				System.out.println("ä»Šå¤©çš„ç‚¹èµæ—¶é—´ï¼š"+fbsj);
 				if (!fbsj.equals(nowDayMYD)) {
-					
+
 					isdz=false;
-					
+
 				}else {
-					
+
 					isdz=true;
 				}
-				
+
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return isdz;
-		
+
 	}
-	
-	//»ñÈ¡µãÔŞÊı
+
+	//è·å–ç‚¹èµæ•°
 	public static int GetDzs(String id){
 		int dzs=0;
 		try {
-		    MysqlDB db = new MysqlDB();
-		    String sql = "select count(*) as dzs from jg_dz where jid="+id;
-		    System.out.println(sql);
-		    ResultSet rs = db.executeQuery(sql);
-		    if (rs.next()) {
+			MysqlDB db = new MysqlDB();
+			String sql = "select count(*) as dzs from jg_dz where jid="+id;
+			System.out.println(sql);
+			ResultSet rs = db.executeQuery(sql);
+			if (rs.next()) {
 				dzs = rs.getInt(1);
 			}
-		    
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return dzs;
 	}
-	
-	
-	//Ìá½»²Ù×÷ 1. ´ÓÊı¾İ±í zgh_sjk Ëæ»ú²éÑ¯Ò»¸ö»¹Î´ÓÃ¹ıµÄbh,È»ºóÉèÖÃËûµÄyz=1
-	//2.°Ñ openid+xm+tel+bh Ğ´Èë±ízgh_cj
+
+
+	//æäº¤æ“ä½œ 1. ä»æ•°æ®è¡¨ zgh_sjk éšæœºæŸ¥è¯¢ä¸€ä¸ªè¿˜æœªç”¨è¿‡çš„bh,ç„¶åè®¾ç½®ä»–çš„yz=1
+	//2.æŠŠ openid+xm+tel+bh å†™å…¥è¡¨zgh_cj
 	public static void Rkcz(String openid,String xm,String tel){
-		
+
 		try {
-			
+
 			int bh=0;
 			sql_data db =  new sql_data();
 			String sql = "select   top   1   *,newid()   as   Random   from   zgh_sjk  where   yz=0  order   by   Random ";
 			ResultSet rs = db.executeQuery(sql);
-			
+
 			if (rs.next()) {
-				
+
 				bh = rs.getInt("bh");
 				db.executeUpdate("update zgh_sjk set yz=1 where id="+rs.getInt("id"));
-				
-				//°ÑÒÑ¾­³é³öÀ´µÄºÅÂëĞ´Èëzgh_ychm
+
+				//æŠŠå·²ç»æŠ½å‡ºæ¥çš„å·ç å†™å…¥zgh_ychm
 				db.executeInsert("insert into zgh_ychm(bh,op) values("+bh+",'"+openid+"')");
-				
+
 			}
-			
+
 			String sqlpd = "select * from zgh_cj where openid = '"+openid+"'";
 			ResultSet rs2 = db.executeQuery(sqlpd);
 			if (!rs2.next()) {
-				
+
 				if(xm.length()>0&&tel.length()>0){
-				
-				String sql2="insert into zgh_cj(openid,xm,tel,bh) values('"+openid+"','"+xm+"','"+tel+"','"+bh+"')";
-				System.out.println(sql2);
-				db.executeInsert(sql2);
-				
+
+					String sql2="insert into zgh_cj(openid,xm,tel,bh) values('"+openid+"','"+xm+"','"+tel+"','"+bh+"')";
+					System.out.println(sql2);
+					db.executeInsert(sql2);
+
 				}
-				
+
 			}
-			
-			
-			
+
+
+
 		} catch (Exception e) {
-			
+
 			e.printStackTrace();
-			
+
 		}
-		
-		
+
+
 	}
-	
-	
+
+
 	public static int GetSfCount(){
-		
+
 		int ct = 0;
-		
+
 		try {
 			MysqlDB db = new MysqlDB();
 			String sql = "Select count(*) as ct FROM jg";
@@ -311,16 +311,16 @@ public class ZghTools {
 			if (rs.next()) {
 				ct = rs.getInt(1);
 			}
-				
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return ct;
 	}
-	
-	
-	//ÍêÉÆ×ÊÁÏ
+
+
+	//å®Œå–„èµ„æ–™
 	public static void wszl(String openid,String xm,String tel){
 		try {
 			MysqlDB db = new MysqlDB();
@@ -330,19 +330,19 @@ public class ZghTools {
 				String sql2 = "update yqfb_openid3 set xm='"+xm+"', tel='"+tel+"' where openid='"+openid+"'";
 				db.executeUpdate(sql2);
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-	
-	
 
-	 // Èç¹ûµ±Ìì¸úÒÔÇ°µÄÊ±¼ä±È£¬Èç¹û²»Í¬£¬update,·ñÔò ²»¶¯
-	 
-	 public static void upyt(String zlsession){
-		 String nowDayMYD = TimeString.GetnowTimeYMD();
-		 try {
+
+
+	// å¦‚æœå½“å¤©è·Ÿä»¥å‰çš„æ—¶é—´æ¯”ï¼Œå¦‚æœä¸åŒï¼Œupdate,å¦åˆ™ ä¸åŠ¨
+
+	public static void upyt(String zlsession){
+		String nowDayMYD = TimeString.GetnowTimeYMD();
+		try {
 			sql_data db = new sql_data();
 			String sql ="SELECT CONVERT(varchar(100), fbsj, 23) as fbsj from yqfb_openid where openid='"+zlsession+"'";
 			ResultSet rs = db.executeQuery(sql);
@@ -353,24 +353,24 @@ public class ZghTools {
 					String sql2 = "update yqfb_openid set fbsj='"+TimeString.nowTime()+"',yt=0 where openid='"+zlsession+"'";
 					db.executeUpdate(sql2);
 				}else{
-					System.out.println("Í¬Ò»Ìì");
+					System.out.println("åŒä¸€å¤©");
 				}
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-	 }
-	 
-// Èç¹ûµ±Ìì¸úÒÔÇ°µÄÊ±¼ä±È£¬Èç¹û²»Í¬£¬update,·ñÔò ²»¶¯
-	 
-	 public static void upyt2(String openid){
-		 String nowDayMYD = TimeString.GetnowTimeYMD();
-		 try {
-			 
-			  MysqlDB db = new MysqlDB();
-			
-			  String sql ="SELECT date_format(fbsj, '%Y-%m-%d') as fbsj  from yqfb_openid2 where openid='"+openid+"'";
-			  System.out.println(sql);
+	}
+
+// å¦‚æœå½“å¤©è·Ÿä»¥å‰çš„æ—¶é—´æ¯”ï¼Œå¦‚æœä¸åŒï¼Œupdate,å¦åˆ™ ä¸åŠ¨
+
+	public static void upyt2(String openid){
+		String nowDayMYD = TimeString.GetnowTimeYMD();
+		try {
+
+			MysqlDB db = new MysqlDB();
+
+			String sql ="SELECT date_format(fbsj, '%Y-%m-%d') as fbsj  from yqfb_openid2 where openid='"+openid+"'";
+			System.out.println(sql);
 			//String sql ="SELECT CONVERT(varchar(100), fbsj, 23) as fbsj from yqfb_openid2 where openid='"+openid+"'";
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
@@ -380,19 +380,19 @@ public class ZghTools {
 					String sql2 = "update yqfb_openid2 set fbsj='"+TimeString.nowTime()+"',yt=0 where openid='"+openid+"'";
 					db.executeUpdate(sql2);
 				}else{
-					System.out.println("Í¬Ò»Ìì");
+					System.out.println("åŒä¸€å¤©");
 				}
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-	 }
-	 
-// Èç¹ûµ±Ìì¸úÒÔÇ°µÄÊ±¼ä±È£¬Èç¹û²»Í¬£¬update,·ñÔò ²»¶¯
-	 
-	 public static void upyt3(String openid){
-		 String nowDayMYD = TimeString.GetnowTimeYMD();
-		 try {
+	}
+
+// å¦‚æœå½“å¤©è·Ÿä»¥å‰çš„æ—¶é—´æ¯”ï¼Œå¦‚æœä¸åŒï¼Œupdate,å¦åˆ™ ä¸åŠ¨
+
+	public static void upyt3(String openid){
+		String nowDayMYD = TimeString.GetnowTimeYMD();
+		try {
 			sql_data db = new sql_data();
 			String sql ="SELECT CONVERT(varchar(100), fbsj, 23) as fbsj from yqfb_openid3 where openid='"+openid+"'";
 			ResultSet rs = db.executeQuery(sql);
@@ -403,19 +403,19 @@ public class ZghTools {
 					String sql2 = "update yqfb_openid3 set fbsj='"+TimeString.nowTime()+"',yt=0 where openid='"+openid+"'";
 					db.executeUpdate(sql2);
 				}else{
-					System.out.println("Í¬Ò»Ìì");
+					System.out.println("åŒä¸€å¤©");
 				}
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-	 }
-	 
-// Èç¹ûµ±Ìì¸úÒÔÇ°µÄÊ±¼ä±È£¬Èç¹û²»Í¬£¬update,·ñÔò ²»¶¯
-	 
-	 public static void upyt4(String openid){
-		 String nowDayMYD = TimeString.GetnowTimeYMD();
-		 try {
+	}
+
+// å¦‚æœå½“å¤©è·Ÿä»¥å‰çš„æ—¶é—´æ¯”ï¼Œå¦‚æœä¸åŒï¼Œupdate,å¦åˆ™ ä¸åŠ¨
+
+	public static void upyt4(String openid){
+		String nowDayMYD = TimeString.GetnowTimeYMD();
+		try {
 			sql_data db = new sql_data();
 			String sql ="SELECT CONVERT(varchar(100), fbsj, 23) as fbsj from yqfb_openid4 where openid='"+openid+"'";
 			ResultSet rs = db.executeQuery(sql);
@@ -426,59 +426,59 @@ public class ZghTools {
 					String sql2 = "update yqfb_openid4 set fbsj='"+TimeString.nowTime()+"',yt=0 where openid='"+openid+"'";
 					db.executeUpdate(sql2);
 				}else{
-					System.out.println("Í¬Ò»Ìì");
+					System.out.println("åŒä¸€å¤©");
 				}
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-	 }
-	 
-	 
-// Èç¹ûµ±Ìì¸úÒÔÇ°µÄÊ±¼ä±È£¬Èç¹û²»Í¬£¬update,·ñÔò ²»¶¯
-	 
-	 public static void upyt5(String openid){
-		 String nowDayMYD = TimeString.GetnowTimeYMD();
-		 try {
-			 
+	}
+
+
+// å¦‚æœå½“å¤©è·Ÿä»¥å‰çš„æ—¶é—´æ¯”ï¼Œå¦‚æœä¸åŒï¼Œupdate,å¦åˆ™ ä¸åŠ¨
+
+	public static void upyt5(String openid){
+		String nowDayMYD = TimeString.GetnowTimeYMD();
+		try {
+
 			MysqlDB db = new MysqlDB();
 			String sql ="SELECT DATE_FORMAT(fbsj,\"%Y-%m-%d\") as fbsj from yqfb_openid where openid='"+openid+"'";
 			System.out.println(sql);
 			ResultSet rs = db.executeQuery(sql);
-			
+
 			if (rs.next()) {
-				
+
 				String notTodyMYD = rs.getString(1);
-				
+
 				System.out.println(notTodyMYD);
-				
+
 				if (!notTodyMYD.equals(nowDayMYD)) {
-					
+
 					String sql2 = "update yqfb_openid set fbsj='"+TimeString.nowTime()+"',yt=0,lb1=0,lb2=0,lb3=0,lb4=0 where openid='"+openid+"'";
 					db.executeUpdate(sql2);
-					
+
 				}else{
-					
-					System.out.println("Í¬Ò»Ìì");
-					
+
+					System.out.println("åŒä¸€å¤©");
+
 				}
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-	 }
-	 
-	 
-// Èç¹ûµ±Ìì¸úÒÔÇ°µÄÊ±¼ä±È£¬Èç¹û²»Í¬£¬update,·ñÔò ²»¶¯
-	 
-	 public static void upyt6(String openid){
-		 String nowDayMYD = TimeString.GetnowTimeYMD();
-		 try {
-			 
-			  MysqlDB db = new MysqlDB();
-			
-			  String sql ="SELECT date_format(fbsj, '%Y-%m-%d') as fbsj  from yqfb_openid where openid='"+openid+"'";
-			  System.out.println(sql);
+	}
+
+
+// å¦‚æœå½“å¤©è·Ÿä»¥å‰çš„æ—¶é—´æ¯”ï¼Œå¦‚æœä¸åŒï¼Œupdate,å¦åˆ™ ä¸åŠ¨
+
+	public static void upyt6(String openid){
+		String nowDayMYD = TimeString.GetnowTimeYMD();
+		try {
+
+			MysqlDB db = new MysqlDB();
+
+			String sql ="SELECT date_format(fbsj, '%Y-%m-%d') as fbsj  from yqfb_openid where openid='"+openid+"'";
+			System.out.println(sql);
 			//String sql ="SELECT CONVERT(varchar(100), fbsj, 23) as fbsj from yqfb_openid2 where openid='"+openid+"'";
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
@@ -488,17 +488,17 @@ public class ZghTools {
 					String sql2 = "update yqfb_openid set fbsj='"+TimeString.nowTime()+"',yt=0 where openid='"+openid+"'";
 					db.executeUpdate(sql2);
 				}else{
-					System.out.println("Í¬Ò»Ìì");
+					System.out.println("åŒä¸€å¤©");
 				}
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-	 }
-	 
-	
-	
-	//²Î¼ÓÈËÊı
+	}
+
+
+
+	//å‚åŠ äººæ•°
 	public static int GetRdDemoNum(){
 		int num=0;
 		try {
@@ -508,14 +508,14 @@ public class ZghTools {
 			if (rs.next()) {
 				num=rs.getInt(1)+1028;
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return num;
 	}
-	
-	//ÊäÈëµ½Êı¾İ¿â Èëµ³Ê±¼äÏîÄ¿
+
+	//è¾“å…¥åˆ°æ•°æ®åº“ å…¥å…šæ—¶é—´é¡¹ç›®
 	public static void InsRdDemo(String openid,String fbsj){
 		try {
 			sql_data db = new sql_data();
@@ -528,13 +528,13 @@ public class ZghTools {
 				String sql2 = "insert into rd_demo(openid,fbsj) values('"+openid+"','"+fbsj+"')";
 				db.executeUpdate(sql2);
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-	
-	//»ñÈ¡ Èëµ³Ê±¼äÏîÄ¿ fbsj
+
+	//è·å– å…¥å…šæ—¶é—´é¡¹ç›® fbsj
 	public static String GetFbsjRd(String openid){
 		String fbsj="";
 		try {
@@ -544,49 +544,49 @@ public class ZghTools {
 			if (rs.next()) {
 				fbsj = rs.getString(1);
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return fbsj;
 	}
-	
-	
-	//µ±Ç°µÚ¼¸¸ö
+
+
+	//å½“å‰ç¬¬å‡ ä¸ª
 	public static int GetNoMerObkect(String bzlopenid){
-		
+
 		int sc=0;
-		
+
 		try {
-			
+
 			sql_data db = new sql_data();
 			String sql = "select merobkect from yqfbwx_qmjd_dtcj where openid='"+bzlopenid+"'";
 			System.out.println(sql);
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
-				
-				
+
+
 				String temp[] = PublicFun.split(rs.getString(1), "|");
 				sc = temp.length;
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
-		return sc;
-		
-	}
-	
-	//ÓĞ¼¸¸öÈËÖúÁ¦
 
-	//µ±Ç°µÚ¼¸¸ö
+		return sc;
+
+	}
+
+	//æœ‰å‡ ä¸ªäººåŠ©åŠ›
+
+	//å½“å‰ç¬¬å‡ ä¸ª
 	public static int GetNoXh(String bzlopenid){
-		
+
 		int sc=0;
-		
+
 		try {
-			
+
 			sql_data db = new sql_data();
 			String sql = "select zlopenid from yqfbwx_qmjd_dtcj where openid='"+bzlopenid+"'";
 			System.out.println(sql);
@@ -596,139 +596,139 @@ public class ZghTools {
 				String temp[] = PublicFun.split(rs.getString(1), ",");
 				sc = temp.length;
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return sc;
-		
+
 	}
-	
-	
-	//¸ù¾İbzlopenid ²éÑ¯ merobkect
+
+
+	//æ ¹æ®bzlopenid æŸ¥è¯¢ merobkect
 	public static String GetMerObkect(String bzlopenid,String px){
 		String merobkect="";
 		String sc="";
 		int j = new Integer(px);
 		try {
-			
+
 			sql_data db = new sql_data();
 			String sql = "select merobkect from yqfbwx_qmjd_dtcj where openid='"+bzlopenid+"'";
 			System.out.println(sql);
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
-				
+
 				merobkect = rs.getString(1);
 				String temp[] = PublicFun.split(merobkect, "|");
 				//int j=temp.length;
 				sc = temp[j];
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return sc;
 	}
-	
-	//¸ù¾İbzlopenid ²éÑ¯ memo
+
+	//æ ¹æ®bzlopenid æŸ¥è¯¢ memo
 	public static String GetMemo(String bzlopenid,String px){
 		String memo="";
 		String sc="";
 		String str="";
 		int j = new Integer(px);
 		try {
-			
+
 			sql_data db = new sql_data();
 			String sql = "select memo from yqfbwx_qmjd_dtcj where openid='"+bzlopenid+"'";
 			System.out.println(sql);
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
-				
+
 				memo = rs.getString(1);
 				String temp[] = PublicFun.split(memo, "|");
 				//int j=temp.length;
 				sc = temp[j];
 
 			}
-			
+
 			if (sc.length()<40) {
 				str=sc;
 			}else {
 				str=sc.substring(0, 36)+"...";
 			}
-			
-			
+
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return str;
 	}
-	
-	
-	//¸ù¾İopenid ²éÑ¯ bh
+
+
+	//æ ¹æ®openid æŸ¥è¯¢ bh
 	public static String GetBh(String openid){
 		String bh="";
 		try {
-			
+
 			sql_data db = new sql_data();
 			String sql = "select bh from zgh_cj where openid='"+openid+"'";
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
 				bh = rs.getString(1);
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return bh;
 	}
-	
-	
-	//¸ù¾İopenid ²éÑ¯ img1 Êä³öÎªÍ¼Æ¬ÏÔÊ¾html´úÂë
+
+
+	//æ ¹æ®openid æŸ¥è¯¢ img1 è¾“å‡ºä¸ºå›¾ç‰‡æ˜¾ç¤ºhtmlä»£ç 
 	public static String GetImagSC(String openid){
 		String sc = "";
 		String img1="";
-	    int j=1;
-	
+		int j=1;
+
 		try {
 			sql_data db = new sql_data();
 			String sql = "select top 6 * from yqfbwx_gpxd_cj where openid='"+openid+"' order by id desc";
 			ResultSet rs = db.executeQuery(sql);
-			
-			
-			
+
+
+
 			while (rs.next()) {
-				
+
 				img1 = AllValus.videopath+rs.getString("img1");
-				
+
 				if (j%3==0&&j<4){
-					
-				    sc+="<img src="+img1+" width=80px height=80px/>&nbsp;<br/>";
+
+					sc+="<img src="+img1+" width=80px height=80px/>&nbsp;<br/>";
 					//sc+="<img src="+img1+" width=80px height=80px/>&nbsp;";
-				    
+
 				}else{
-					
+
 					sc+="<img src="+img1+" width=80px height=80px/>&nbsp;";
 				}
-				
+
 				j++;
 			}
-			
-			
-			
+
+
+
 			System.out.println(sc);
-			
-			
-			
+
+
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return sc;
 	}
-	
-	//¸ù¾İopenid ²éÑ¯ img1 Êä³öÎªÍ¼Æ¬ÏÔÊ¾html´úÂë
+
+	//æ ¹æ®openid æŸ¥è¯¢ img1 è¾“å‡ºä¸ºå›¾ç‰‡æ˜¾ç¤ºhtmlä»£ç 
 	public static String GetImagSC2(String bzlopenid){
 		String tx = "";
 		try {
@@ -738,123 +738,123 @@ public class ZghTools {
 			if (rs.next()) {
 				tx = AllValus.videopath+rs.getString("img1");
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return tx;
 	}
-	
-	
-	
-	
-	//¸ù¾İopenid ²éÑ¯ img1 Êä³öÎªÍ¼Æ¬ÏÔÊ¾html´úÂë
+
+
+
+
+	//æ ¹æ®openid æŸ¥è¯¢ img1 è¾“å‡ºä¸ºå›¾ç‰‡æ˜¾ç¤ºhtmlä»£ç 
 	public static String GetPhbToHtml(int tp){
 		String sc = "";
 		String img1="";
 		String xm="";
-	    int i=1;
-	
+		int i=1;
+
 		try {
 			sql_data db = new sql_data();
 			String sql = "select top "+tp+" * from yqfbwx_lyzx_zl order by px desc";
 			ResultSet rs = db.executeQuery(sql);
-			
-			
-			
+
+
+
 			while (rs.next()) {
-				
+
 				img1 = AllValus.videopath+rs.getString("img1");
 
 				System.out.println("xm="+rs.getString("xm"));
-				
+
 				if (rs.getString("xm").length()>3) {
 					xm=rs.getString("xm").substring(0,3);
 				}else {
 					xm=rs.getString("xm");
 				}
-				
+
 				sc+="<table width=\"100%\"  border=\"0\" align=\"center\" style=\"border-bottom:1px solid #FFCC00; color: #993126; font-size: 18px;\"><tr><td width=\"11%\" align=\"left\"><span class=\"style18\">"+i+"</span></td><td width=\"22%\" align=\"left\"><table width=\"100%\"  border=\"0\"><tr><td><img src="+img1+" width=28px; height=25px;/></td></tr></table></td><td width=\"32%\" align=\"left\"><span class=\"style13\">"+xm+"</span></td><td width=\"24%\" align=\"right\"><span class=\"style13\">"+rs.getInt("px")+"</span></td><td width=\"11%\" align=\"right\"><table width=\"90%\"  border=\"0\"><tr><td><img src=\"img/06.png\" width=\"100%\"/></td></tr></table></td></tr></table>";
-				
-				
-				
+
+
+
 				i++;
 			}
-			
-			
-			
+
+
+
 			System.out.println(sc);
-			
-			
-			
+
+
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return sc;
 	}
-	
-	
-	
 
-	//¸ù¾İopenid ²éÑ¯ img1 Êä³öÎªÍ¼Æ¬ÏÔÊ¾html´úÂë£¨°¢ÃÉµã»÷ÓÃ£©
+
+
+
+	//æ ¹æ®openid æŸ¥è¯¢ img1 è¾“å‡ºä¸ºå›¾ç‰‡æ˜¾ç¤ºhtmlä»£ç ï¼ˆé˜¿è’™ç‚¹å‡»ç”¨ï¼‰
 	public static String GetPhbToHtml2(int tp){
 		String sc = "";
 		String img1="";
 		String xm="";
-	    int i=1;
-	
+		int i=1;
+
 		try {
 			sql_data db = new sql_data();
 			String sql = "select top "+tp+" * from yqfbwx_lyzx_zl order by px desc";
 			ResultSet rs = db.executeQuery(sql);
-			
-			
-			
+
+
+
 			while (rs.next()) {
-				
+
 				img1 = AllValus.videopath+rs.getString("img1");
 
 				System.out.println("xm="+rs.getString("xm"));
-				
+
 				if (rs.getString("xm").length()>3) {
 					xm=rs.getString("xm").substring(0,3);
 				}else {
 					xm=rs.getString("xm");
 				}
-				
+
 				sc+="<table width=\"100%\"  border=\"0\" align=\"center\" style=\"border-bottom:1px solid #FFCC00; color: #993126; font-size: 18px;\"><tr><td width=\"11%\" align=\"left\"><span class=\"style18\">"+i+"</span></td><td width=\"22%\" align=\"left\"><table width=\"100%\"  border=\"0\"><tr><td><img src="+img1+" width=28px; height=25px;/></td></tr></table></td><td width=\"32%\" align=\"left\"><span class=\"style13\">"+xm+"</span></td><td width=\"24%\" align=\"right\"><span class=\"style13\">"+rs.getInt("px")+"</span></td><td width=\"11%\" align=\"right\"><table width=\"90%\"  border=\"0\"><tr><td><div style=\"font-family:Arial; font-size:18px;\" onClick=\"javascript:window.open('zl2.jsp?bzlopenid="+rs.getString("openid")+"','_self')\"><img src=\"img/06.png\" width=\"100%\"/></div></td></tr></table></td></tr></table>";
-				
-				
-				
+
+
+
 				i++;
 			}
-			
-			
-			
+
+
+
 			System.out.println(sc);
-			
-			
-			
+
+
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return sc;
 	}
-	
-	
-	
-	//ÓĞ¼¸¸öÈËÖúÁ¦
 
-	//µ±Ç°µÚ¼¸¸ö
+
+
+	//æœ‰å‡ ä¸ªäººåŠ©åŠ›
+
+	//å½“å‰ç¬¬å‡ ä¸ª
 	public static int GetNoXh2(String bzlopenid){
-		
+
 		int sc=0;
-		
+
 		try {
-			
+
 			sql_data db = new sql_data();
 			String sql = "select zlopenid from yqfbwx_lyzx_zl where openid='"+bzlopenid+"'";
 			System.out.println(sql);
@@ -864,24 +864,24 @@ public class ZghTools {
 				String temp[] = PublicFun.split(rs.getString(1), ",");
 				sc = temp.length;
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
-		return sc;
-		
-	}
-	
-	
 
-	//µ±Ç°µÚ¼¸¸ö
+		return sc;
+
+	}
+
+
+
+	//å½“å‰ç¬¬å‡ ä¸ª
 	public static int GetNoPx(String bzlopenid){
-		
+
 		int sc=0;
-		
+
 		try {
-			
+
 			sql_data db = new sql_data();
 			String sql = "select px from yqfbwx_lyzx_zl where openid='"+bzlopenid+"'";
 			System.out.println(sql);
@@ -889,25 +889,25 @@ public class ZghTools {
 			if (rs.next()) {
 				sc = rs.getInt(1);
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
-		return sc;
-		
-	}
-	
-	
-	//ÓĞ¼¸¸öÈËÖúÁ¦
 
-	//µ±Ç°µÚ¼¸¸ö
+		return sc;
+
+	}
+
+
+	//æœ‰å‡ ä¸ªäººåŠ©åŠ›
+
+	//å½“å‰ç¬¬å‡ ä¸ª
 	public static String GetNoZlz(String bzlopenid){
-		
+
 		String sc="";
-		
+
 		try {
-			
+
 			sql_data db = new sql_data();
 			String sql = "select zlopenid from yqfbwx_lyzx_zl where openid='"+bzlopenid+"'";
 			System.out.println(sql);
@@ -915,92 +915,92 @@ public class ZghTools {
 			if (rs.next()) {
 
 				sc=rs.getString(1);
-			
+
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return sc;
-		
+
 	}
 
 
-	//¸ù¾İopenid ²éÑ¯ memo Êä³öÎªÏÔÊ¾html´úÂë
+	//æ ¹æ®openid æŸ¥è¯¢ memo è¾“å‡ºä¸ºæ˜¾ç¤ºhtmlä»£ç 
 	public static String GetMemoSC(String openid){
 		String sc = "";
 		int js =0;
 		String memo="";
-		
-	
-	
+
+
+
 		try {
 			sql_data db = new sql_data();
 			String sql = "select top 5 * from yqfbwx_gpxd_cj where openid='"+openid+"' order by id desc";
 			ResultSet rs = db.executeQuery(sql);
 			while (rs.next()) {
-				
+
 				js = rs.getInt("memo");
-				
+
 				if(js==1){
-					memo = "³Ô¹âÅÌÖĞ²Í ²»×ö¡°Ê£ÄĞÊ£Å®¡±!";
-					
+					memo = "åƒå…‰ç›˜ä¸­é¤ ä¸åšâ€œå‰©ç”·å‰©å¥³â€!";
+
 				}else if(js==2){
-					
-					memo = "¾Ü¾øÀË·Ñ,´ÓÎÒ×öÆğ!";
+
+					memo = "æ‹’ç»æµªè´¹,ä»æˆ‘åšèµ·!";
 				}else if(js==3){
-					
-					memo = "¾Ü¾ø¡°Ê£¡±Ñç,³«µ¼¡°¹âÅÌ¡±!";
+
+					memo = "æ‹’ç»â€œå‰©â€å®´,å€¡å¯¼â€œå…‰ç›˜â€!";
 				}else if(js==4){
-					
-					memo = "ÎÒÃÇÒª½«³Ô²»ÁË¡°¶µ×Å×ß¡±¹á³¹µ½µ×!";
+
+					memo = "æˆ‘ä»¬è¦å°†åƒä¸äº†â€œå…œç€èµ°â€è´¯å½»åˆ°åº•!";
 				}else if(js==5){
-					memo = "¾Ü¾øÉà¼âÉÏµÄÀË·Ñ,¹âÅÌÒ»×åÄãÎÒÍ¬ĞĞ!";
-					
+					memo = "æ‹’ç»èˆŒå°–ä¸Šçš„æµªè´¹,å…‰ç›˜ä¸€æ—ä½ æˆ‘åŒè¡Œ!";
+
 				}
-				
-				
+
+
 				sc+=""+memo+"<br/>";
 
-				
+
 			}
-			
-			
-			
+
+
+
 			System.out.println(sc);
-			
-			
-			
+
+
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return sc;
 	}
-	
-	
-	
 
-	//¸ù¾İopenid ²éÑ¯ xm
+
+
+
+	//æ ¹æ®openid æŸ¥è¯¢ xm
 	public static String GetXm(String openid){
 		String xm="";
 		try {
-			
+
 			sql_data db = new sql_data();
 			String sql = "select xm from zgh_cj where openid='"+openid+"'";
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
 				xm = rs.getString(1);
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return xm;
 	}
-	
-	//¸Ãopenid ÊÇ·ñ²Î¼Ó¹ı
+
+	//è¯¥openid æ˜¯å¦å‚åŠ è¿‡
 	public static boolean IsCj(String openid){
 		boolean cjg=false;
 		try {
@@ -1010,17 +1010,17 @@ public class ZghTools {
 			if (rs.next()) {
 				cjg = true;
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return cjg;
 	}
-	
-	
 
-	//¸Ãopenid ÊÇ·ñÍêÉÆ¹ıÁªÏµ·½Ê½
+
+
+	//è¯¥openid æ˜¯å¦å®Œå–„è¿‡è”ç³»æ–¹å¼
 	public static boolean IsWs(String openid){
 		boolean ws=false;
 		try {
@@ -1031,45 +1031,45 @@ public class ZghTools {
 			if (rs.next()) {
 				ws = true;
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		//System.out.println("ws:"+ws);
-		
+
 		return ws;
 	}
-	
 
-	
 
-	//¸Ãopenid ÊÇ·ñ´æÔÚÓÚyqfb_openidÖĞ
+
+
+	//è¯¥openid æ˜¯å¦å­˜åœ¨äºyqfb_openidä¸­
 	public static boolean IsCz2(String openid){
-		
+
 		boolean cjg=false;
 		try {
 			sql_data db = new sql_data();
 			String sql = "select * from yqfb_openid where openid='"+openid+"'";
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
-				
+
 				cjg = true;
-				
+
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
-		return cjg;
-		
-	}
-	
 
-	//¸Ãopenid ÊÇ·ñ´æÔÚÓÚyqfb_openidÖĞ
+		return cjg;
+
+	}
+
+
+	//è¯¥openid æ˜¯å¦å­˜åœ¨äºyqfb_openidä¸­
 	public static boolean IsCz12(String openid){
-		
+
 		boolean cjg=false;
 		try {
 			MysqlDB db = new MysqlDB();
@@ -1077,78 +1077,78 @@ public class ZghTools {
 			System.out.println(sql);
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
-				
+
 				cjg = true;
-				
+
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return cjg;
-		
+
 	}
-	
-	
+
+
 	public static void ClearNull(){
 		try {
-			
+
 			sql_data db = new sql_data();
 			String sql="delete from yqfb_openid where openid='null'";
 			db.executeDelete(sql);
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
-	
+
 	public static void ClearNull2(){
 		try {
-			
+
 			MysqlDB db = new MysqlDB();
 			String sql="delete from yqfb_openid2 where openid='null'";
 			db.executeDelete(sql);
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
-	
+
 	public static void ClearNull3(){
 		try {
-			
+
 			MysqlDB db = new MysqlDB();
 			String sql="delete from yqfb_openid3 where openid='null'";
 			db.executeDelete(sql);
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
-	
+
 
 	public static void ClearNull4(){
 		try {
-			
+
 			MysqlDB db = new MysqlDB();
 			String sql="delete from jg where memo='null'";
 			db.executeDelete(sql);
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
-	
-	
+
+
 	public static int istel(int oid){
 		int bz=0;
 		try {
-			
+
 			MysqlDB db = new MysqlDB();
 			String sql="select * from yqfb_openid3 where tel='0' and id="+oid;
 			ResultSet rs = db.executeQuery(sql);
@@ -1157,369 +1157,369 @@ public class ZghTools {
 			}else{
 				bz=2;
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return bz;
-		
+
 	}
-	
-	
-	//¸Ãopenid ÊÇ·ñ´æÔÚÓÚyqfbwx_lyzx_zlÖĞ
+
+
+	//è¯¥openid æ˜¯å¦å­˜åœ¨äºyqfbwx_lyzx_zlä¸­
 	public static boolean IsCz3(String openid){
-		
+
 		boolean cjg=false;
 		try {
 			sql_data db = new sql_data();
 			String sql = "select * from yqfbwx_lyzx_zl where openid='"+openid+"'";
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
-				
+
 				cjg = true;
-				
+
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return cjg;
-		
+
 	}
-	
-	
-	//¸Ãopenid ÊÇ·ñ´æÔÚÓÚyqfb_openid2ÖĞ
+
+
+	//è¯¥openid æ˜¯å¦å­˜åœ¨äºyqfb_openid2ä¸­
 	public static boolean IsCz4(String openid){
-		
+
 		boolean cjg=false;
 		try {
 			MysqlDB db = new MysqlDB();
 			String sql = "select * from yqfb_openid2 where openid='"+openid+"'";
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
-				
+
 				cjg = true;
-				
+
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return cjg;
-		
+
 	}
-	
-	
-	//¸Ãopenid ÊÇ·ñ´æÔÚÓÚyqfb_openid2ÖĞ
+
+
+	//è¯¥openid æ˜¯å¦å­˜åœ¨äºyqfb_openid2ä¸­
 	public static boolean IsCz5(String openid){
-		
+
 		boolean cjg=false;
 		try {
 			MysqlDB db = new MysqlDB();
 			String sql = "select * from yqfb_openid2 where openid='"+openid+"' and yt=1";
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
-				
+
 				cjg = true;
-				
+
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return cjg;
-		
+
 	}
-	
-	
-	//¸Ãopenid ÊÇ·ñ´æÔÚÓÚyqfb_openid3ÖĞ
+
+
+	//è¯¥openid æ˜¯å¦å­˜åœ¨äºyqfb_openid3ä¸­
 	public static boolean IsCz6(String openid){
-		
+
 		boolean cjg=false;
 		try {
 			sql_data db = new sql_data();
 			String sql = "select * from yqfb_openid3 where openid='"+openid+"' and yt=1";
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
-				
+
 				cjg = true;
-				
+
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return cjg;
-		
+
 	}
-	
-	//¸Ãopenid ÊÇ·ñ´æÔÚÓÚyqfb_openid3ÖĞ
+
+	//è¯¥openid æ˜¯å¦å­˜åœ¨äºyqfb_openid3ä¸­
 	public static boolean IsCz7(String openid){
-		
+
 		boolean cjg=false;
 		try {
 			sql_data db = new sql_data();
 			String sql = "select * from yqfb_openid3 where openid='"+openid+"'";
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
-				
+
 				cjg = true;
-				
+
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return cjg;
-		
+
 	}
-	
-	//¸Ãopenid ÊÇ·ñ´æÔÚÓÚyqfb_openid4ÖĞ
+
+	//è¯¥openid æ˜¯å¦å­˜åœ¨äºyqfb_openid4ä¸­
 	public static boolean IsCz8(String openid){
-		
+
 		boolean cjg=false;
 		try {
 			sql_data db = new sql_data();
 			String sql = "select * from yqfb_openid4 where openid='"+openid+"'";
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
-				
+
 				cjg = true;
-				
+
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return cjg;
-		
+
 	}
-	
-	//¸Ãopenid ÊÇ·ñ´æÔÚÓÚyqfb_openid4ÖĞ
+
+	//è¯¥openid æ˜¯å¦å­˜åœ¨äºyqfb_openid4ä¸­
 	public static boolean IsCz9(String openid){
-		
+
 		boolean cjg=false;
 		try {
 			sql_data db = new sql_data();
 			String sql = "select * from yqfb_openid4 where openid='"+openid+"' and yt=1";
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
-				
+
 				cjg = true;
-				
+
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return cjg;
-		
+
 	}
-	
-	
-	//¸Ãopenid ÊÇ·ñ´æÔÚÓÚyqfb_openidÖĞ
+
+
+	//è¯¥openid æ˜¯å¦å­˜åœ¨äºyqfb_openidä¸­
 	public static boolean IsCz10(String openid){
-		
+
 		boolean cjg=false;
 		try {
-			
+
 			MysqlDB db = new MysqlDB();
 			String sql = "select * from yqfb_openid where lb1=1 and lb2=1 and lb3=1 and lb4=1 and openid='"+openid+"'";
 			ResultSet rs = db.executeQuery(sql);
-			
+
 			if (rs.next()) {
-				
+
 				cjg = true;
-				
+
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return cjg;
-		
+
 	}
-	
-	//¸Ãopenid ÊÇ·ñ´æÔÚÓÚyqfb_openidÖĞ
+
+	//è¯¥openid æ˜¯å¦å­˜åœ¨äºyqfb_openidä¸­
 	public static boolean IsCz11(String openid){
-		
+
 		boolean cjg=false;
 		try {
-			
+
 			MysqlDB db = new MysqlDB();
 			String sql = "select * from yqfb_openid where openid='"+openid+"'";
 			ResultSet rs = db.executeQuery(sql);
-			
+
 			if (rs.next()) {
-				
+
 				cjg = true;
-				
+
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return cjg;
-		
+
 	}
-	
-	//»ñÈ¡Àà±ğ
+
+	//è·å–ç±»åˆ«
 	public static int GetLB(String openid,int bh){
-		
+
 		int lb=0;
 		try {
-			
+
 			MysqlDB db = new MysqlDB();
 			String sql = "select lb"+bh+" from yqfb_openid where openid='"+openid+"'";
 			ResultSet rs = db.executeQuery(sql);
-			
+
 			if (rs.next()) {
-				
+
 				lb = rs.getInt(1);
-				
+
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return lb;
-		
+
 	}
-	
-	
-	
-	//¸ø×îÃÀÍËÎé±ø±íÍ¶Æ±
+
+
+
+	//ç»™æœ€ç¾é€€ä¼å…µè¡¨æŠ•ç¥¨
 	public static void TpForTwb(String openid,String[] values){
 		try {
 			String ip = InetAddress.getLocalHost().getHostAddress().toString();
 			MysqlDB db = new MysqlDB();
 			String sql="";
-			//ÕâÀïÒª¿ØÖÆË¢Æ± £¬Ö»ÓĞÕı³£Í¶Æ±µÄÈË²ÅÄÜ¸üĞÂÕâ¸öÓï¾ä¡£
+			//è¿™é‡Œè¦æ§åˆ¶åˆ·ç¥¨ ï¼Œåªæœ‰æ­£å¸¸æŠ•ç¥¨çš„äººæ‰èƒ½æ›´æ–°è¿™ä¸ªè¯­å¥ã€‚
 			System.out.println("values.length: "+values.length);
 			for(int i=0;i<values.length;i++){
-			  System.out.println("ids:"+values[i]);
-			  if (values[i].equals("157")||values[i].equals("169")||values[i].equals("159")||values[i].equals("160")||values[i].equals("166")||values[i].equals("153")||values[i].equals("164")||values[i].equals("149")) {
+				System.out.println("ids:"+values[i]);
+				if (values[i].equals("157")||values[i].equals("169")||values[i].equals("159")||values[i].equals("160")||values[i].equals("166")||values[i].equals("153")||values[i].equals("164")||values[i].equals("149")) {
 
 
 
-			  }else {
-				
-				 // sql="update yqfb_openid2 set yt=1,ip='"+ip+"',fbsj='"+TimeString.nowTime()+"' where openid='"+openid+"'"; 
-				 // db.executeUpdate(sql);
-				 // System.out.println(sql);
-				  
-			   }
+				}else {
+
+					// sql="update yqfb_openid2 set yt=1,ip='"+ip+"',fbsj='"+TimeString.nowTime()+"' where openid='"+openid+"'";
+					// db.executeUpdate(sql);
+					// System.out.println(sql);
+
+				}
 			}
-			
-			
-			
+
+
+
 			String sql2="";
 			String sql3="";
 			for(int i=0;i<values.length;i++){
-				
+
 				//if (values[i].equals("149")||values[i].equals("161")||values[i].equals("163")||values[i].equals("166")) {
 				if (values[i].equals("157")||values[i].equals("169")||values[i].equals("159")||values[i].equals("160")||values[i].equals("166")||values[i].equals("153")||values[i].equals("164")||values[i].equals("149")) {
 
-						
+
 				}else {
 					//sql2="update yqcnwx_twb set ps=ps+1 where id="+values[i];
-			   		//db.executeUpdate(sql2);
-			   		//System.out.println(sql2);
-			   		//sql3="insert into yqcnwx_twb2(openid,twbid,ip,fbsj) values('"+openid+"',"+values[i]+",'"+ip+"','"+TimeString.nowTime()+"')";
+					//db.executeUpdate(sql2);
+					//System.out.println(sql2);
+					//sql3="insert into yqcnwx_twb2(openid,twbid,ip,fbsj) values('"+openid+"',"+values[i]+",'"+ip+"','"+TimeString.nowTime()+"')";
 					//db.executeUpdate(sql3);
 					//System.out.println(sql3);
 				}
-				
-		   		
-		    }	
-			
+
+
+			}
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
-	}
-	
 
-	//¸ø×îÃÀÍËÎé±ø±íÍ¶Æ±
+	}
+
+
+	//ç»™æœ€ç¾é€€ä¼å…µè¡¨æŠ•ç¥¨
 	public static void TpForTwb2(String openid,String[] values){
 		try {
 			String ip = InetAddress.getLocalHost().getHostAddress().toString();
 			MysqlDB db = new MysqlDB();
-			String sql="update yqfb_openid2 set yt=1,ip='"+ip+"',fbsj='"+TimeString.nowTime()+"' where openid='"+openid+"'"; 
+			String sql="update yqfb_openid2 set yt=1,ip='"+ip+"',fbsj='"+TimeString.nowTime()+"' where openid='"+openid+"'";
 			db.executeUpdate(sql);
 			System.out.println(sql);
-				  
-			
-			
+
+
+
 			String sql2="";
 			String sql3="";
 			for(int i=0;i<values.length;i++){
-				
-				
-					sql2="update yqcnwx_twb set ps=ps+1 where id="+values[i];
-			   		db.executeUpdate(sql2);
-			   		System.out.println(sql2);
-			   		sql3="insert into yqcnwx_twb2(openid,twbid,ip,fbsj) values('"+openid+"',"+values[i]+",'"+ip+"','"+TimeString.nowTime()+"')";
-					db.executeUpdate(sql3);
-					System.out.println(sql3);
-				
-				
-		   		
-		    }	
-			
+
+
+				sql2="update yqcnwx_twb set ps=ps+1 where id="+values[i];
+				db.executeUpdate(sql2);
+				System.out.println(sql2);
+				sql3="insert into yqcnwx_twb2(openid,twbid,ip,fbsj) values('"+openid+"',"+values[i]+",'"+ip+"','"+TimeString.nowTime()+"')";
+				db.executeUpdate(sql3);
+				System.out.println(sql3);
+
+
+
+			}
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
-	}
-	
 
-	//¸øµÀµÂÄ£·¶±íÍ¶Æ±
+	}
+
+
+	//ç»™é“å¾·æ¨¡èŒƒè¡¨æŠ•ç¥¨
 	public static void TpForDdmf(String openid,String[] values){
 		try {
 			String ip = InetAddress.getLocalHost().getHostAddress().toString();
 			MysqlDB db = new MysqlDB();
-			String sql="update yqfb_openid2 set yt=1,ip='"+ip+"',fbsj='"+TimeString.nowTime()+"' where openid='"+openid+"'"; 
+			String sql="update yqfb_openid2 set yt=1,ip='"+ip+"',fbsj='"+TimeString.nowTime()+"' where openid='"+openid+"'";
 			db.executeUpdate(sql);
 			System.out.println(sql);
-				  
-			
-			
+
+
+
 			String sql2="";
 			String sql3="";
 			for(int i=0;i<values.length;i++){
-				
-				
-					sql2="update yqcnwx_ddmf set ps=ps+1 where id="+values[i];
-			   		db.executeUpdate(sql2);
-			   		System.out.println(sql2);
-			   		sql3="insert into yqcnwx_ddmf2(openid,ddmfid,ip,fbsj) values('"+openid+"',"+values[i]+",'"+ip+"','"+TimeString.nowTime()+"')";
-					db.executeUpdate(sql3);
-					System.out.println(sql3);
-				
-				
-		   		
-		    }	
-			
+
+
+				sql2="update yqcnwx_ddmf set ps=ps+1 where id="+values[i];
+				db.executeUpdate(sql2);
+				System.out.println(sql2);
+				sql3="insert into yqcnwx_ddmf2(openid,ddmfid,ip,fbsj) values('"+openid+"',"+values[i]+",'"+ip+"','"+TimeString.nowTime()+"')";
+				db.executeUpdate(sql3);
+				System.out.println(sql3);
+
+
+
+			}
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
-	
-	
-	//¸ø×îÁø´¨±­±íÍ¶Æ±
+
+
+	//ç»™æœ€æŸ³å·æ¯è¡¨æŠ•ç¥¨
 	public static void TpForLcb(String openid,String[] values){
 		try {
 			String ip = InetAddress.getLocalHost().getHostAddress().toString();
@@ -1527,28 +1527,28 @@ public class ZghTools {
 			String sql="update yqfb_openid3 set yt=1,ip='"+ip+"',fbsj='"+TimeString.nowTime()+"' where openid='"+openid+"'";
 			db.executeUpdate(sql);
 			System.out.println(sql);
-			
+
 			String sql2="";
 			String sql3="";
 			for(int i=0;i<values.length;i++){
-		   		sql2="update yqcnwx_lcb set ps=ps+1 where id="+values[i];
-		   		System.out.println(sql2);
-		   		db.executeUpdate(sql2);
-		   		System.out.println(sql2);
-		   		sql3="insert into yqcnwx_lcb2(openid,lcbid,ip,fbsj) values('"+openid+"',"+values[i]+",'"+ip+"','"+TimeString.nowTime()+"')";
-		   		System.out.println(sql3);
-		   		db.executeUpdate(sql3);
+				sql2="update yqcnwx_lcb set ps=ps+1 where id="+values[i];
+				System.out.println(sql2);
+				db.executeUpdate(sql2);
+				System.out.println(sql2);
+				sql3="insert into yqcnwx_lcb2(openid,lcbid,ip,fbsj) values('"+openid+"',"+values[i]+",'"+ip+"','"+TimeString.nowTime()+"')";
 				System.out.println(sql3);
-		    }	
-			
+				db.executeUpdate(sql3);
+				System.out.println(sql3);
+			}
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
-	
-	
-	//¸øÊé·¨´óÈü±íÍ¶Æ±
+
+
+	//ç»™ä¹¦æ³•å¤§èµ›è¡¨æŠ•ç¥¨
 	public static void TpForLcb2(String openid,String[] values,int lb){
 		try {
 			String ip = InetAddress.getLocalHost().getHostAddress().toString();
@@ -1556,49 +1556,49 @@ public class ZghTools {
 			String sql="select lb1,lb2,lb3,lb4 from yqfb_openid where openid='"+openid+"'";
 			ResultSet rs=db.executeQuery(sql);
 			if (rs.next()) {
-				
+
 				int lb1= rs.getInt(1);
 				int lb2= rs.getInt(2);
 				int lb3= rs.getInt(3);
 				int lb4= rs.getInt(4);
-				
+
 				if (lb1==1&&lb2==1&&lb3==1&&lb4==1) {
 					sql="update yqfb_openid set yt=1,fbsj='"+TimeString.nowTime()+"' where openid='"+openid+"'";
 					db.executeUpdate(sql);
 				}else{
-					
+
 					sql="update yqfb_openid set lb"+lb+"=1,fbsj='"+TimeString.nowTime()+"' where openid='"+openid+"'";
 					db.executeUpdate(sql);
-					
-					
+
+
 					String sql2="";
 					String sql3="";
 					for(int i=0;i<values.length;i++){
-				   		sql2="update yqcnwx_lcb set ps=ps+1 where id="+values[i];
-				   		System.out.println(sql2);
-				   		db.executeUpdate(sql2);
-				   		System.out.println(sql2);
-				   		sql3="insert into yqcnwx_lcb2(openid,lcbid,ip,fbsj) values('"+openid+"',"+values[i]+",'"+ip+"','"+TimeString.nowTime()+"')";
-				   		System.out.println(sql3);
-				   		db.executeUpdate(sql3);
+						sql2="update yqcnwx_lcb set ps=ps+1 where id="+values[i];
+						System.out.println(sql2);
+						db.executeUpdate(sql2);
+						System.out.println(sql2);
+						sql3="insert into yqcnwx_lcb2(openid,lcbid,ip,fbsj) values('"+openid+"',"+values[i]+",'"+ip+"','"+TimeString.nowTime()+"')";
 						System.out.println(sql3);
-				    }	
-					
+						db.executeUpdate(sql3);
+						System.out.println(sql3);
+					}
+
 				}
 			}
-			
 
-			
-			
-			
+
+
+
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
-	}
-	
 
-	//¸ø×î×îÃÀ½ÌÊ¦±íÍ¶Æ±
+	}
+
+
+	//ç»™æœ€æœ€ç¾æ•™å¸ˆè¡¨æŠ•ç¥¨
 	public static void TpForTea(String openid,String[] values){
 		try {
 			String ip = InetAddress.getLocalHost().getHostAddress().toString();
@@ -1606,81 +1606,81 @@ public class ZghTools {
 			String sql="update yqfb_openid4 set yt=1,ip='"+ip+"',fbsj='"+TimeString.nowTime()+"' where openid='"+openid+"'";
 			db.executeUpdate(sql);
 			System.out.println(sql);
-			
+
 			String sql2="";
 			String sql3="";
 			for(int i=0;i<values.length;i++){
-		   		sql2="update yqfbwx_tea set ps=ps+1 where id="+values[i];
-		   		System.out.println(sql2);
-		   		db.executeUpdate(sql2);
-		   		System.out.println(sql2);
-		   		sql3="insert into yqfbwx_tea2(openid,teaid,ip,fbsj) values('"+openid+"',"+values[i]+",'"+ip+"','"+TimeString.nowTime()+"')";
-		   		System.out.println(sql3);
-		   		db.executeUpdate(sql3);
+				sql2="update yqfbwx_tea set ps=ps+1 where id="+values[i];
+				System.out.println(sql2);
+				db.executeUpdate(sql2);
+				System.out.println(sql2);
+				sql3="insert into yqfbwx_tea2(openid,teaid,ip,fbsj) values('"+openid+"',"+values[i]+",'"+ip+"','"+TimeString.nowTime()+"')";
 				System.out.println(sql3);
-		    }	
-			
+				db.executeUpdate(sql3);
+				System.out.println(sql3);
+			}
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
-	
-	
-	//¸ù¾İopenid ²éÑ¯ xm
+
+
+	//æ ¹æ®openid æŸ¥è¯¢ xm
 	public static int GetPx(String bzlopenid){
-		
+
 		int px=0;
-		
+
 		try {
-			
+
 			sql_data db = new sql_data();
 			String sql = "select px from yqfbwx_lyzx_zl where openid='"+bzlopenid+"'";
 			ResultSet rs = db.executeQuery(sql);
-			
+
 			if (rs.next()) {
 				px = rs.getInt(1);
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return px;
-		
+
 	}
-	
-	
-	//ÖúÁ¦Àà²Ù×÷1.¸ù¾İ ²ÎÊı openid ²éÕÒyqfbwx_gpxd_dtcj ÖĞµÄ zlopenid ×Ö¶Î£¬Èç¹ûÕÒµ½
-	//ËµÃ÷ÒÑ¾­ÖúÁ¦¹ı£¬Ìø¹ı
-	// 2. Ã»ÕÒµ½¾Í¸Ä±ä±êÊ¶yz=0
-	
+
+
+	//åŠ©åŠ›ç±»æ“ä½œ1.æ ¹æ® å‚æ•° openid æŸ¥æ‰¾yqfbwx_gpxd_dtcj ä¸­çš„ zlopenid å­—æ®µï¼Œå¦‚æœæ‰¾åˆ°
+	//è¯´æ˜å·²ç»åŠ©åŠ›è¿‡ï¼Œè·³è¿‡
+	// 2. æ²¡æ‰¾åˆ°å°±æ”¹å˜æ ‡è¯†yz=0
+
 	public static void HelpCz(String bzlopenid,String zlopenid){
-		
+
 		String zls = "";
-		
-	
+
+
 		System.out.println("bzlopenid(fjw) : "+bzlopenid);
 		System.out.println("zlopenid(fjw) : "+zlopenid);
-		
+
 		try {
-			
+
 			sql_data db = new sql_data();
 			String sql = "select top 1 * from yqfbwx_qmjd_dtcj where openid='"+bzlopenid+"' and openid<>'null' and openid<>'' order by id desc";
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
-				
+
 				zls = rs.getString("zlopenid");
-				
+
 			}
-			
+
 			System.out.println("zls: "+zls);
-			
-		
-			
+
+
+
 			if (zls.indexOf(zlopenid)!=-1) {
-				
-				
+
+
 			}else{
 
 				//db.executeUpdate("update yqfbwx_gpxd_dtcj set yz=0 where id="+rs.getInt("id"));
@@ -1691,25 +1691,25 @@ public class ZghTools {
 				}else{
 					zls+=zlopenid+",";
 				}
-	
-				
+
+
 				String sql2 = "update yqfbwx_qmjd_dtcj set zlopenid='"+zls+"' where id="+rs.getInt("id");
 				db.executeUpdate(sql2);
 				System.out.println(sql2);
 
 			}
-			
-			
-			
-	
-			
+
+
+
+
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
-	
-	
+
+
 	public static int GetYt(String zlopenid){
 		int yt=0;
 		try {
@@ -1719,14 +1719,14 @@ public class ZghTools {
 			if (rs.next()) {
 				yt=rs.getInt(1);
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return yt;
 	}
-	
-	
+
+
 	public static int GetYt2(String zlopenid){
 		int yt=0;
 		try {
@@ -1737,14 +1737,14 @@ public class ZghTools {
 			if (rs.next()) {
 				yt=rs.getInt("yt");
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return yt;
 	}
-	
-	
+
+
 	public static int GetYt3(String zlopenid){
 		int yt=0;
 		try {
@@ -1754,14 +1754,14 @@ public class ZghTools {
 			if (rs.next()) {
 				yt=rs.getInt(1);
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return yt;
 	}
-	
-	
+
+
 	public static int GetYt4(String zlopenid){
 		int yt=0;
 		try {
@@ -1772,58 +1772,58 @@ public class ZghTools {
 			if (rs.next()) {
 				yt=rs.getInt(1);
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return yt;
 	}
-	
-	//ÖúÁ¦Àà²Ù×÷1.¸ù¾İ ²ÎÊı openid ²éÕÒyqfbwx_lyzx_zl ÖĞµÄ zlopenid ×Ö¶Î£¬Èç¹ûÕÒµ½
-	//ËµÃ÷ÒÑ¾­ÖúÁ¦¹ı£¬Ìø¹ı
-	// 2. Ã»ÕÒµ½¾Í¸Ä±ä±êÊ¶yz=0
-	
+
+	//åŠ©åŠ›ç±»æ“ä½œ1.æ ¹æ® å‚æ•° openid æŸ¥æ‰¾yqfbwx_lyzx_zl ä¸­çš„ zlopenid å­—æ®µï¼Œå¦‚æœæ‰¾åˆ°
+	//è¯´æ˜å·²ç»åŠ©åŠ›è¿‡ï¼Œè·³è¿‡
+	// 2. æ²¡æ‰¾åˆ°å°±æ”¹å˜æ ‡è¯†yz=0
+
 	public static void HelpCz2(String bzlopenid,String zlopenid){
-		
+
 		String zls = "";
-		
-	
+
+
 		System.out.println("bzlopenid(fjw) : "+bzlopenid);
 		System.out.println("zlopenid(fjw) : "+zlopenid);
-		
+
 		try {
-			
+
 			sql_data db = new sql_data();
 			String sql = "select top 1 * from yqfbwx_lyzx_zl where openid='"+bzlopenid+"' and openid<>'null' and openid<>'' order by id desc";
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
-				
+
 				zls = rs.getString("zlopenid");
-				
+
 			}
-			
+
 			System.out.println("zls: "+zls);
-			
-		
-			
+
+
+
 			if (zls.indexOf(zlopenid)!=-1&&ZghTools.GetYt(zlopenid)==0) {
-				//ÒÑ¾­ÖúÁ¦¹ı,²¢ÇÒÖØÖÃ¿ÉÍ¶
+				//å·²ç»åŠ©åŠ›è¿‡,å¹¶ä¸”é‡ç½®å¯æŠ•
 				String sql2="update yqfbwx_lyzx_zl set px=px+1 where id="+rs.getInt("id");
 				db.executeUpdate(sql2);
-				
+
 				String sql4 = "update yqfb_openid set yt=1 where openid='"+zlopenid+"'";
 				db.executeUpdate(sql4);
 				System.out.println(sql4);
-				
+
 				String sql5 = "insert into yqfbwx_lyzx_bj(zlopenid,bzlopenid,fbsj) values('"+zlopenid+"','"+bzlopenid+"','"+TimeString.nowTime()+"')";
 				db.executeInsert(sql5);
 				System.out.println(sql5);
-				
-				
+
+
 			}else if (zls.indexOf(zlopenid)!=-1&&ZghTools.GetYt(zlopenid)!=0) {
-				//ÒÑ¾­ÖúÁ¦¹ı,²¢ÇÒ²»¿ÉÍ¶
-				
-				
+				//å·²ç»åŠ©åŠ›è¿‡,å¹¶ä¸”ä¸å¯æŠ•
+
+
 			}else{
 
 				//db.executeUpdate("update yqfbwx_gpxd_dtcj set yz=0 where id="+rs.getInt("id"));
@@ -1834,143 +1834,143 @@ public class ZghTools {
 				}else{
 					zls+=zlopenid+",";
 				}
-	
-				
+
+
 				String sql2 = "update yqfbwx_lyzx_zl set zlopenid='"+zls+"' where id="+rs.getInt("id");
 				db.executeUpdate(sql2);
 				System.out.println(sql2);
-				
+
 				String sql3 = "update yqfbwx_lyzx_zl set px=px+1 where id="+rs.getInt("id");
 				db.executeUpdate(sql3);
 				System.out.println(sql3);
-				
+
 				String sql4 = "update yqfb_openid set yt=1 where openid='"+zlopenid+"'";
 				db.executeUpdate(sql4);
 				System.out.println(sql4);
-				
+
 				String sql5 = "insert into yqfbwx_lyzx_bj(zlopenid,bzlopenid,fbsj) values('"+zlopenid+"','"+bzlopenid+"','"+TimeString.nowTime()+"')";
 				db.executeInsert(sql5);
 				System.out.println(sql5);
-				
+
 
 			}
-			
-			
-			
-	
-			
+
+
+
+
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
-	
-	//Ë¢Æ±
+
+	//åˆ·ç¥¨
 	public static void zjPs(int id){
 		try {
-		    sql_data db = new sql_data();
+			sql_data db = new sql_data();
 			String sql="update yqfbwx_lyzx_zl set px=px+1 where id="+id;
 			db.executeUpdate(sql);
-			
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		
-	}
-	
-	
 
-	//ÖúÁ¦Àà²Ù×÷1.¸ù¾İ ²ÎÊı openid ²éÕÒyqfbwx_lyzx_zl ÖĞµÄ zlopenid ×Ö¶Î£¬Èç¹ûÕÒµ½
-	//ËµÃ÷ÒÑ¾­ÖúÁ¦¹ı£¬Ìø¹ı
-	// 2. Ã»ÕÒµ½¾Í¸Ä±ä±êÊ¶yz=0
-	
-	public static void HelpCz3(String bzlopenid){
-		
-	
-		
-		try {
-			
-			    sql_data db = new sql_data();
-			
-				String sql="update yqfbwx_lyzx_zl set px=px+1 where openid='"+bzlopenid+"'";
-				db.executeUpdate(sql);
-				
-			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
-	
-	
-	//ÊÇ·ñÖúÁ¦¹ı
+
+
+
+	//åŠ©åŠ›ç±»æ“ä½œ1.æ ¹æ® å‚æ•° openid æŸ¥æ‰¾yqfbwx_lyzx_zl ä¸­çš„ zlopenid å­—æ®µï¼Œå¦‚æœæ‰¾åˆ°
+	//è¯´æ˜å·²ç»åŠ©åŠ›è¿‡ï¼Œè·³è¿‡
+	// 2. æ²¡æ‰¾åˆ°å°±æ”¹å˜æ ‡è¯†yz=0
+
+	public static void HelpCz3(String bzlopenid){
+
+
+
+		try {
+
+			sql_data db = new sql_data();
+
+			String sql="update yqfbwx_lyzx_zl set px=px+1 where openid='"+bzlopenid+"'";
+			db.executeUpdate(sql);
+
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+
+	//æ˜¯å¦åŠ©åŠ›è¿‡
 	public static boolean IsHelp(String bzlopenid,String zlopenid){
-		
+
 		boolean jgz = false;
 		String zls = "";
-		
+
 		try {
-			
+
 			sql_data db = new sql_data();
 			String sql = "select top 1 * from yqfbwx_qmjd_dtcj where openid='"+bzlopenid+"' and openid<>'null'";
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
-				
+
 				zls = rs.getString("zlopenid");
-				
+
 			}
-			
+
 			System.out.println("zls: "+zls);
-			
+
 			if (zls.indexOf(zlopenid)!=-1) {
-				
+
 				jgz=true;
-				
+
 			}
-			
-			
+
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return jgz;
 	}
-	
 
-	//ÊÇ·ñÖúÁ¦¹ı
+
+	//æ˜¯å¦åŠ©åŠ›è¿‡
 	public static boolean IsHelp2(String bzlopenid,String zlopenid){
-		
+
 		boolean jgz = false;
 		String zls = "";
-		
+
 		try {
-			
+
 			sql_data db = new sql_data();
 			String sql = "select top 1 * from yqfbwx_lyzx_zl where openid='"+bzlopenid+"' and openid<>'null'";
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
-				
+
 				zls = rs.getString("zlopenid");
-				
+
 			}
-			
+
 			System.out.println("zls: "+zls);
-			
+
 			if (zls.indexOf(zlopenid)!=-1) {
-				
+
 				jgz=true;
-				
+
 			}
-			
-			
+
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return jgz;
 	}
-	
-	//»ñÈ¡Í·Ïñ
+
+	//è·å–å¤´åƒ
 	public static String GetImg(String bzlopenid){
 		String tx = "";
 		try {
@@ -1980,88 +1980,88 @@ public class ZghTools {
 			if (rs.next()) {
 				tx = rs.getString("himg");
 			}
-			
+
 		} catch (Exception e) {
-			
+
 			e.printStackTrace();
-			
+
 		}
-		
+
 		return tx;
 	}
-	
-	//»ñÈ¡êÇ³Æ
+
+	//è·å–æ˜µç§°
 	public static String GetNick(String bzlopenid){
-		
+
 		String tx = "";
-		
+
 		try {
-			
+
 			sql_data db = new sql_data();
 			String sql = "select * from  yqfb_openid3 where openid='"+bzlopenid+"'";
 			ResultSet rs = db.executeQuery(sql);
-			
+
 			if (rs.next()) {
 				tx = rs.getString("nickname");
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return tx;
 	}
-	
 
-	//»ñÈ¡êÇ³Æ
+
+	//è·å–æ˜µç§°
 	public static String GetNick2(String bzlopenid){
-		
+
 		String tx = "";
-		
+
 		try {
-			
+
 			MysqlDB db = new MysqlDB();
 			String sql = "select xm from  yqfb_openid3 where openid='"+bzlopenid+"'";
 			ResultSet rs = db.executeQuery(sql);
-			
+
 			if (rs.next()) {
 				tx = rs.getString(1);
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return tx;
 	}
-	
-	//»ñÈ¡êÇ³Æ
+
+	//è·å–æ˜µç§°
 	public static String GetNick3(String bzlopenid){
-		
+
 		String tx = "";
-		
+
 		try {
-			
+
 			MysqlDB db = new MysqlDB();
 			String sql = "select * from  yqfb_openid3 where openid='"+bzlopenid+"'";
 			ResultSet rs = db.executeQuery(sql);
-			
+
 			if (rs.next()) {
 				tx = rs.getString("nickname");
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return tx;
 	}
-	
-	//»ñÈ¡êÇ³Æ
+
+	//è·å–æ˜µç§°
 	public static String GetXm2(String bzlopenid){
-		
+
 		String tx = "";
-		
+
 		try {
 			sql_data db = new sql_data();
 			String sql = "select *  from  yqfbwx_lyzx_zl where openid='"+bzlopenid+"'";
@@ -2069,15 +2069,15 @@ public class ZghTools {
 			if (rs.next()) {
 				tx = rs.getString("xm");
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return tx;
 	}
-	
-	//¸ù¾İjg±íÖĞµÄoid ²éÑ¯³ö yqfb_openid3µÄopenid
+
+	//æ ¹æ®jgè¡¨ä¸­çš„oid æŸ¥è¯¢å‡º yqfb_openid3çš„openid
 	public static String GetOpenidFromOid(int oid){
 		String openid="";
 		try {
@@ -2092,8 +2092,8 @@ public class ZghTools {
 		}
 		return openid;
 	}
-	
-	//»ñÈ¡êÇ³Æ
+
+	//è·å–æ˜µç§°
 	public static String GetMemo(String bzlopenid){
 		String tx = "";
 		try {
@@ -2103,16 +2103,16 @@ public class ZghTools {
 			if (rs.next()) {
 				tx = rs.getString("memo");
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return tx;
 	}
-	
-	
-	//»ñÈ¡êÇ³Æ
+
+
+	//è·å–æ˜µç§°
 	public static String GetMemo2(String id){
 		String tx = "";
 		try {
@@ -2122,17 +2122,17 @@ public class ZghTools {
 			if (rs.next()) {
 				tx = rs.getString("memo");
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return tx;
 	}
-	
-	
-	
-	//»ñÈ¡zlopenid
+
+
+
+	//è·å–zlopenid
 	public static String GetZlopenid(String bzlopenid){
 		String sc = "";
 		try {
@@ -2142,16 +2142,16 @@ public class ZghTools {
 			if (rs.next()) {
 				sc = rs.getString(1);
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return sc;
 	}
-	
-	
-	//»ñÈ¡ÄúÎªºÃÓÑ»ñµÃµÄĞÂ±àºÅ
+
+
+	//è·å–æ‚¨ä¸ºå¥½å‹è·å¾—çš„æ–°ç¼–å·
 	public static String GetOpNo(String bzlopenid,String zlsession){
 		String bh="";
 		String bh2="";
@@ -2162,327 +2162,327 @@ public class ZghTools {
 			System.out.println(sql);
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
-				
+
 				bh = rs.getString("bh");
-				bh2="ÄúÎªºÃÓÑ»ñµÃÁËĞÂ±àºÅ£º"+bh;
+				bh2="æ‚¨ä¸ºå¥½å‹è·å¾—äº†æ–°ç¼–å·ï¼š"+bh;
 			}
-			
-			
+
+
 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return bh2;
 	}
-	
-	//Çå³ınull
+
+	//æ¸…é™¤null
 	public static void ClearNull(String openid){
 		try {
 			sql_data db = new sql_data();
 			String sql = "delete from yqfb_openid where subscribe='0' and openid='"+openid+"'";
 			db.executeDelete(sql);
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-	
-	
-	//Çå³ınull
+
+
+	//æ¸…é™¤null
 	public static void ClearNull2(String openid){
 		try {
 			MysqlDB db = new MysqlDB();
 			String sql = "delete from yqfb_openid2 where subscribe='0' and openid='"+openid+"'";
 			db.executeDelete(sql);
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-	
-	//Çå³ınull
+
+	//æ¸…é™¤null
 	public static void ClearNull3(String openid){
 		try {
 			sql_data db = new sql_data();
 			String sql = "delete from yqfb_openid3 where subscribe='0' and openid='"+openid+"'";
 			db.executeDelete(sql);
-			
+
 			String sql2 = "delete from doc1 where openid='null'";
 			db.executeDelete(sql2);
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-	
 
-	//Çå³ınull
+
+	//æ¸…é™¤null
 	public static void ClearNull4(String openid){
 		try {
 			sql_data db = new sql_data();
 			String sql = "delete from yqfb_openid4 where subscribe='0' and openid='"+openid+"'";
 			db.executeDelete(sql);
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-	
-	
-	//Çå³ınull
+
+
+	//æ¸…é™¤null
 	public static void ClearNull5(String openid){
 		try {
 			MysqlDB db = new MysqlDB();
 			String sql = "delete from yqfb_openid where openid='null' or openid=''";
 			db.executeDelete(sql);
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-	
-	//Çå³ınull
+
+	//æ¸…é™¤null
 	public static void ClearNull6(String openid){
 		try {
 			MysqlDB db = new MysqlDB();
 			String sql = "delete from yqfb_openid2 where openid='null' or openid=''";
 			db.executeDelete(sql);
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-	
-	//Çå³ınull
+
+	//æ¸…é™¤null
 	public static void ClearNull7(String openid){
 		try {
 			MysqlDB db = new MysqlDB();
 			String sql = "delete from yqfb_openid3 where openid='null' or openid=''";
 			db.executeDelete(sql);
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-	
-	//Â¼Èë
+
+	//å½•å…¥
 	public static void Rlk(String openid,String nickname,int sex,String country,String province,String city,String himg){
 		try {
-			
+
 			ZghTools.ClearNull(openid);
-			
+
 			sql_data db = new sql_data();
 			String sqlpd = "select * from yqfb_openid where openid='"+openid+"'";
 			ResultSet rs = db.executeQuery(sqlpd);
 			if (!rs.next()) {
-				
+
 				String sql="INSERT INTO yqfb_openid (openid,subscribe,subscribetime,nickname,sex,country,province,city,lg,himg) Values ('"+openid+"','1','0','"+nickname+"','"+sex+"','"+country+"','"+province+"','"+city+"','zh_CN','"+himg+"')";
 				db.executeInsert(sql);
 				System.out.println(sql);
-				
+
 			}
 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
-	
-	
-	//Â¼Èë
+
+
+	//å½•å…¥
 	public static void Rlk2(String openid){
 		try {
-			
+
 			//ZghTools.ClearNull(openid);
-			
+
 			sql_data db = new sql_data();
 			String sqlpd = "select * from yqhbj_openid where openid='"+openid+"'";
 			ResultSet rs = db.executeQuery(sqlpd);
-			
+
 			if (!rs.next()) {
-				
+
 				String sql="INSERT INTO yqhbj_openid (openid) values ('"+openid+"')";
 				db.executeInsert(sql);
 				System.out.println(sql);
-				
+
 			}
 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
-	}
-	
-	
 
-	//Â¼Èë
+	}
+
+
+
+	//å½•å…¥
 	public static void Rlk3(String openid){
 		try {
-			
+
 			ZghTools.ClearNull(openid);
-			
+
 			sql_data db = new sql_data();
 			String sqlpd = "select * from yqfb_openid where openid='"+openid+"'";
 			ResultSet rs = db.executeQuery(sqlpd);
-			
+
 			if (!rs.next()) {
-				
+
 				String sql="INSERT INTO yqfb_openid(openid,fbsj) values ('"+openid+"','"+TimeString.nowTime()+"')";
 				db.executeInsert(sql);
 				System.out.println(sql);
-				
+
 			}
 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
-	
-	//Â¼Èë
+
+	//å½•å…¥
 	public static void Rlk4(String openid){
 		try {
-			
+
 			ZghTools.ClearNull6(openid);
-			
+
 			MysqlDB db = new MysqlDB();
 			String sqlpd = "select * from yqfb_openid2 where openid='"+openid+"'";
 			ResultSet rs = db.executeQuery(sqlpd);
-			
+
 			if (!rs.next()) {
-				
+
 				String sql="INSERT INTO yqfb_openid2 (openid,fbsj) values ('"+openid+"','"+TimeString.nowTime()+"')";
 				db.executeInsert(sql);
 				System.out.println(sql);
-				
+
 			}
 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
-	
-	
-	//Â¼Èë
+
+
+	//å½•å…¥
 	public static void Rlk5(String openid){
 		try {
-			
+
 			ZghTools.ClearNull3(openid);
-			
+
 			sql_data db = new sql_data();
 			String sqlpd = "select * from yqfb_openid3 where openid='"+openid+"'";
 			ResultSet rs = db.executeQuery(sqlpd);
-			
+
 			if (!rs.next()) {
-				
+
 				String sql="INSERT INTO yqfb_openid3 (openid,fbsj) values ('"+openid+"','"+TimeString.nowTime()+"')";
 				db.executeInsert(sql);
 				System.out.println(sql);
-				
+
 			}
 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
-	
-	//Â¼Èë
+
+	//å½•å…¥
 	public static void Rlk6(String openid){
 		try {
-			
+
 			ZghTools.ClearNull4(openid);
-			
+
 			sql_data db = new sql_data();
 			String sqlpd = "select * from yqfb_openid4 where openid='"+openid+"'";
 			ResultSet rs = db.executeQuery(sqlpd);
-			
+
 			if (!rs.next()) {
-				
+
 				String sql="INSERT INTO yqfb_openid4 (openid,fbsj) values ('"+openid+"','"+TimeString.nowTime()+"')";
 				db.executeInsert(sql);
 				System.out.println(sql);
-				
+
 			}
 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
-	}
-	
-	
 
-	//Â¼Èë
+	}
+
+
+
+	//å½•å…¥
 	public static void Rlk7(String openid){
 		try {
-			
+
 			ZghTools.ClearNull5(openid);
-			
+
 			MysqlDB db = new MysqlDB();
 			String sqlpd = "select * from yqfb_openid where openid='"+openid+"'";
 			ResultSet rs = db.executeQuery(sqlpd);
-			
+
 			if (!rs.next()) {
-				
+
 				String sql="INSERT INTO yqfb_openid(openid,fbsj) values('"+openid+"','"+TimeString.nowTime()+"')";
 				db.executeInsert(sql);
 				System.out.println(sql);
-				
+
 			}
 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
-	}
-	
 
-	//Â¼Èë
+	}
+
+
+	//å½•å…¥
 	public static void Rlk8(String openid,String nickname,String himg){
 		try {
-			
+
 			ZghTools.ClearNull7(openid);
-			 //½øĞĞ±àÂë
+			//è¿›è¡Œç¼–ç 
 			nickname =Base64.encodeBase64String(nickname.getBytes("UTF-8"));
-			
+
 			MysqlDB db = new MysqlDB();
 			String sqlpd = "select * from yqfb_openid3 where openid='"+openid+"'";
 			ResultSet rs = db.executeQuery(sqlpd);
-			
+
 			if (!rs.next()) {
-				
+
 				String sql="INSERT INTO yqfb_openid3 (openid,fbsj,nickname,himg) values ('"+openid+"','"+TimeString.nowTime()+"','"+nickname+"','"+himg+"')";
 				db.executeInsert(sql);
 				System.out.println(sql);
-				
+
 			}
 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
-	
-	
-	//Â¼Èë
+
+
+	//å½•å…¥
 	public static void Rlk9(String openid){
 		try {
-			
+
 			ZghTools.ClearNull(openid);
-			
+
 			sql_data db = new sql_data();
 			String sqlpd = "select * from yqfb_openid where openid='"+openid+"'";
 			ResultSet rs = db.executeQuery(sqlpd);
-			
+
 			if (!rs.next()) {
-				
+
 				String sql="INSERT INTO yqfb_openid(openid,fbsj) values ('"+openid+"','"+TimeString.nowTime()+"')";
 				db.executeInsert(sql);
 				System.out.println(sql);
-				
+
 //				String sql2="INSERT INTO daf_dt(openid,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,fbsj) VALUES('oSX6kjlwIvpFGl2Ws8TN5Ggxd7Ak',1,1,1,1,1,1,1,1,1,1,'2019-08-30 16:21:21')";
 //				db.executeInsert(sql2);
 //				System.out.println(sql2);
@@ -2491,13 +2491,13 @@ public class ZghTools {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
-	}
-	
-	
-	
 
-	//»ñÈ¡Í·Ïñ
+	}
+
+
+
+
+	//è·å–å¤´åƒ
 	public static String GetImg2(int id){
 		String tx = "";
 		try {
@@ -2508,49 +2508,49 @@ public class ZghTools {
 			if (rs.next()) {
 				tx = rs.getString(1);
 			}
-			
+
 		} catch (Exception e) {
-			
+
 			e.printStackTrace();
-			
+
 		}
-		
+
 		return tx;
 	}
-	
-	
-//ÅĞ¶ÏÄÄĞ©ÊÇÊ¹ÓÃbase64±àÂëµÄ Ò»¡¢ÕıÔòÅĞ¶Ï
+
+
+	//åˆ¤æ–­å“ªäº›æ˜¯ä½¿ç”¨base64ç¼–ç çš„ ä¸€ã€æ­£åˆ™åˆ¤æ–­
 	private static boolean isBase64_1(String str) {
-	    String base64Pattern = "^([A-Za-z0-9+/]{4})*([A-Za-z0-9+/]{4}|[A-Za-z0-9+/]{3}=|[A-Za-z0-9+/]{2}==)$";
-	    return Pattern.matches(base64Pattern, str);
-	}
-	
-	//ÅĞ¶ÏÄÄĞ©ÊÇÊ¹ÓÃbase64±àÂëµÄ ¶ş¡¢Ñ­»·×Ö·û´®
-	private static boolean isBase64_2(String str) {
-	    if (str == null || str.trim().length() == 0) {
-	        return false;
-	    } else {
-	        if (str.length() % 4 != 0) {
-	            return false;
-	        }
-	 
-	        char[] strChars = str.toCharArray();
-	        for (char c:strChars) {
-	            if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9') 
-	                || c == '+' || c == '/' || c == '=') {
-	                continue;
-	            } else {
-	                return false;
-	            }
-	        }
-	        return true;
-	    }
+		String base64Pattern = "^([A-Za-z0-9+/]{4})*([A-Za-z0-9+/]{4}|[A-Za-z0-9+/]{3}=|[A-Za-z0-9+/]{2}==)$";
+		return Pattern.matches(base64Pattern, str);
 	}
 
-	
-	
-	
-	//»ñÈ¡êÇ³Æ
+	//åˆ¤æ–­å“ªäº›æ˜¯ä½¿ç”¨base64ç¼–ç çš„ äºŒã€å¾ªç¯å­—ç¬¦ä¸²
+	private static boolean isBase64_2(String str) {
+		if (str == null || str.trim().length() == 0) {
+			return false;
+		} else {
+			if (str.length() % 4 != 0) {
+				return false;
+			}
+
+			char[] strChars = str.toCharArray();
+			for (char c:strChars) {
+				if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9')
+						|| c == '+' || c == '/' || c == '=') {
+					continue;
+				} else {
+					return false;
+				}
+			}
+			return true;
+		}
+	}
+
+
+
+
+	//è·å–æ˜µç§°
 	public static String GetNickname(int id){
 		String tx = "";
 		String tx2="";
@@ -2562,34 +2562,34 @@ public class ZghTools {
 			if (rs.next()) {
 				tx = rs.getString(1).replaceAll("[\ue000-\uefff]","");
 				//tx = rs.getString(1);
-				//½øĞĞ½âÂë
+				//è¿›è¡Œè§£ç 
 				//tx2 = new String(Base64.decodeBase64(tx),"UTF-8");
 
 			}
-			
+
 			if (ZghTools.isBase64_2(tx)) {
-				
+
 				tx2 = new String(Base64.decodeBase64(tx),"UTF-8");
 
 			}else {
-				
+
 				tx2 = tx.replaceAll("[\ue000-\uefff]","");
-				
+
 			}
-			 
-			
+
+
 		} catch (Exception e) {
-			
+
 			e.printStackTrace();
-			
+
 		}
-		
+
 		return tx2;
 	}
-	
-	
 
-	//»ñÈ¡êÇ³Æ
+
+
+	//è·å–æ˜µç§°
 	public static String GetNickname2(int id){
 		String tx = "";
 		//String tx2="";
@@ -2601,25 +2601,25 @@ public class ZghTools {
 			if (rs.next()) {
 				//tx = rs.getString(1).replaceAll("[\ue000-\uefff]","");
 				tx = rs.getString(1);
-				//½øĞĞ½âÂë
+				//è¿›è¡Œè§£ç 
 				//tx2 = new String(Base64.decodeBase64(tx),"UTF-8");
 
 			}
-			
-			
-			
+
+
+
 		} catch (Exception e) {
-			
+
 			e.printStackTrace();
-			
+
 		}
-		
+
 		return tx;
 	}
-	
-	
-	
-	//¸ù¾İopenid»ñÈ¡±í yqfb_openid3ÖĞµÄID
+
+
+
+	//æ ¹æ®openidè·å–è¡¨ yqfb_openid3ä¸­çš„ID
 	public static int Getoid(String openid){
 		int oid =0;
 		try {
@@ -2629,15 +2629,15 @@ public class ZghTools {
 			if (rs.next()) {
 				oid = rs.getInt(1);
 			}
-			
+
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
 		}
-		
+
 		return oid;
 	}
-	
+
 
 	public static int GetOidById(int id){
 		int oid =0;
@@ -2648,34 +2648,34 @@ public class ZghTools {
 			if (rs.next()) {
 				oid = rs.getInt(1);
 			}
-			
+
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
 		}
-		
+
 		return oid;
 	}
-	
+
 
 	public static String GetFbsjById(int id){
 		String fbsj ="";
 		try {
 			MysqlDB db = new MysqlDB();
-			String sql = "select DATE_FORMAT(fbsj, '%mÔÂ%dÈÕ %H:%i') as fbsj from jg where id="+id;
+			String sql = "select DATE_FORMAT(fbsj, '%mæœˆ%dæ—¥ %H:%i') as fbsj from jg where id="+id;
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
 				fbsj = rs.getString(1);
 			}
-			
+
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
 		}
-		
+
 		return fbsj;
 	}
-	
+
 	public static String GetFbsjById2(String id){
 		String fbsj ="";
 		try {
@@ -2685,15 +2685,15 @@ public class ZghTools {
 			if (rs.next()) {
 				fbsj = rs.getString(1);
 			}
-			
+
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
 		}
-		
+
 		return fbsj;
 	}
-	
+
 	public static int GetLbById(int id){
 		int lb =0;
 		try {
@@ -2703,20 +2703,20 @@ public class ZghTools {
 			if (rs.next()) {
 				lb = rs.getInt(1);
 			}
-			
+
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
 		}
-		
+
 		return lb;
 	}
-	
-	//¸ù¾İopenid»ñÈ¡±í yqfb_openid3ÖĞµÄTel
+
+	//æ ¹æ®openidè·å–è¡¨ yqfb_openid3ä¸­çš„Tel
 	public static String GetTel(String oid){
 		String tel ="";
 		try {
-			
+
 			MysqlDB db = new MysqlDB();
 			String sql = "select tel from yqfb_openid3 where id="+oid+"";
 			System.out.println(sql);
@@ -2724,17 +2724,17 @@ public class ZghTools {
 			if (rs.next()) {
 				tel = rs.getString(1);
 			}
-			
+
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
 		}
-		
+
 		return tel;
 	}
-	
 
-	//¸ù¾İopenid»ñÈ¡±í yqfb_openid3ÖĞµÄID
+
+	//æ ¹æ®openidè·å–è¡¨ yqfb_openid3ä¸­çš„ID
 	public static String GetXm3(String openid){
 		String xm ="";
 		try {
@@ -2745,17 +2745,17 @@ public class ZghTools {
 			if (rs.next()) {
 				xm = rs.getString(1);
 			}
-			
+
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
 		}
-		
+
 		return xm;
 	}
-	
 
-	//¸ù¾İopenid»ñÈ¡±í yqfb_openid3ÖĞµÄID
+
+	//æ ¹æ®openidè·å–è¡¨ yqfb_openid3ä¸­çš„ID
 	public static String GetXm4(String oid){
 		String xm ="";
 		try {
@@ -2766,61 +2766,61 @@ public class ZghTools {
 			if (rs.next()) {
 				xm = rs.getString(1);
 			}
-			
+
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
 		}
-		
+
 		return xm;
 	}
-	
-	
-	//ÉÏÒ»Ò³ID
+
+
+	//ä¸Šä¸€é¡µID
 	public static int fy1(int oid,int id){
 		String id2 = "";
 		int id3 = 0;
 		String sql ="";
 		try {
-			
+
 			MysqlDB db = new MysqlDB();
 			if(oid!=0){
-				
+
 				//sql = "select max(id) as id2 from jg where yz<>0 and oid="+oid+" and video1='0' and id<"+id+"";
 				sql = "select max(id) as id2 from jg where yz<>0 and video1='0' and id<"+id+"";
-				
+
 			}else{
-				
+
 				sql = "select max(id) as id2 from jg where yz<>0 and video1='0' and id<"+id+"";
 			}
 			System.out.println(sql);
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
 				id2=rs.getString(1);
-			    if (id2=="") {
+				if (id2=="") {
 					id3=id;
 				}else {
 					id3=rs.getInt(1);
 				}
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return id3;
 	}
-	
-	
 
-	
-	//ÏÂÒ»Ò³ID
+
+
+
+	//ä¸‹ä¸€é¡µID
 	public static int fy2(int oid,int id){
 		String id2 = "";
 		int id3 = 0;
 		String sql ="";
 		try {
-			
+
 			MysqlDB db = new MysqlDB();
 			if(oid!=0){
 				//sql = "select min(id) as id2 from jg where yz<>0 and oid="+oid+" and video1='0' and id>"+id+"";
@@ -2832,404 +2832,404 @@ public class ZghTools {
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
 				id2=rs.getString(1);
-			    if (id2=="") {
+				if (id2=="") {
 					id3=id;
 				}else {
 					id3=rs.getInt(1);
 				}
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return id3;
 	}
-	
-	
-	//»ñÈ¡img1
+
+
+	//è·å–img1
 	public static String getImg(int id){
 		String img1 = "";
 		String img2="";
 
 		try {
-			
+
 			MysqlDB db = new MysqlDB();
 			String sql = "select img1 from jg where id="+id+"";
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
-				
+
 				img1=rs.getString(1);
-			
+
 				if(img1.length()>0 && !img1.equals("0") ){
-				    img2 = AllValus.videopath+img1;
+					img2 = AllValus.videopath+img1;
 				}else{
 					img2 = AllValus.nopicpath;
 				}
-				
+
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return img2;
 	}
-	
-	//»ñÈ¡img1
+
+	//è·å–img1
 	public static String getImg2(String id){
 		String img1 = "";
 		String img2="";
 
 		try {
-			
+
 			MysqlDB db = new MysqlDB();
 			String sql = "select img1 from jg where id="+id+"";
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
-				
+
 				img1=rs.getString(1);
-			
+
 				if(img1.length()>0 && !img1.equals("0") ){
-				    img2 = AllValus.downloadpath5+img1;
+					img2 = AllValus.downloadpath5+img1;
 				}else{
 					img2 = AllValus.downloadpath5;
 				}
-				
+
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return img2;
 	}
-	
-	//»ñÈ¡img1
+
+	//è·å–img1
 	public static String getImg3(String id){
 		String img1 = "";
 		String img2="";
 
 		try {
-			
+
 			MysqlDB db = new MysqlDB();
 			String sql = "select img1 from jg where id="+id+"";
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
-				
+
 				img1=rs.getString(1);
-			
+
 				if(img1.length()>0 && !img1.equals("0") ){
-				    img2 = img1;
+					img2 = img1;
 				}else{
 					img2 = AllValus.downloadpath5;
 				}
-				
+
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return img2;
 	}
-	
-	//È¡µÃÎÄ¼şºó×º
+
+	//å–å¾—æ–‡ä»¶åç¼€
 	public static String getHz(String filename){
-		
+
 		File file = new File(filename);
-        String fileName = file.getName();
-        String suffix = fileName.substring(fileName.lastIndexOf(".") + 1);
-        System.out.println(suffix);
-        return suffix;
+		String fileName = file.getName();
+		String suffix = fileName.substring(fileName.lastIndexOf(".") + 1);
+		System.out.println(suffix);
+		return suffix;
 	}
-	
-	//ÇĞ³ıºó×ºµÄÎÄ¼ş
+
+	//åˆ‡é™¤åç¼€çš„æ–‡ä»¶
 	public static String GetFileNoHz(String filename){
 		return filename.replace("."+ZghTools.getHz(filename), "");
 	}
 
-    /**
-     *author: itmyhome
-     */
-    public static void main(String[] args) {
-        File file = new File("HelloWorld.jpg");
-        String fileName = file.getName();
-        String suffix = fileName.substring(fileName.lastIndexOf(".") + 1);
-        System.out.println(suffix);
-    }
-	
-	//»ñÈ¡memo
+	/**
+	 *author: itmyhome
+	 */
+	public static void main(String[] args) {
+		File file = new File("HelloWorld.jpg");
+		String fileName = file.getName();
+		String suffix = fileName.substring(fileName.lastIndexOf(".") + 1);
+		System.out.println(suffix);
+	}
+
+	//è·å–memo
 	public static String getMemo(int id){
 		String memo = "";
 
 		try {
-			
+
 			MysqlDB db = new MysqlDB();
 			String sql = "select memo from jg where id="+id+"";
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
 				memo=rs.getString(1);
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return memo;
 	}
-	
-	//»ñÈ¡story
+
+	//è·å–story
 	public static String getStory(int id){
 		String story = "";
 
 		try {
-			
+
 			MysqlDB db = new MysqlDB();
 			String sql = "select story from jg where id="+id+"";
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
 				story=rs.getString(1);
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return story;
 	}
-	
-	
-	//¸ÃÍøÓÑÊÇ·ñÒÑ¾­ÎªÄãµãÔŞ
+
+
+	//è¯¥ç½‘å‹æ˜¯å¦å·²ç»ä¸ºä½ ç‚¹èµ
 	public static boolean Isdz(String bzlopenid,String zlopenid){
-		
+
 		boolean zl = false;
-		
+
 		try {
-			
+
 			sql_data db = new sql_data();
 			String sql = "select top 1 * from yqfbwx_qmjd_dtcj where openid = '"+bzlopenid+"' order by id desc";
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
 				String zlops = rs.getString("zlopenid");
 				if(zlops.indexOf(zlopenid)!=-1){
-					
+
 					zl=true;
 				}
 			}
-			
-			
-			
+
+
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
-		return zl;
-		
-	}
-	
 
-	//¸ÃÍøÓÑÊÇ·ñÒÑ¾­ÎªÄãµãÔŞ
+		return zl;
+
+	}
+
+
+	//è¯¥ç½‘å‹æ˜¯å¦å·²ç»ä¸ºä½ ç‚¹èµ
 	public static boolean Isdz2(String bzlopenid,String zlopenid){
-		
+
 		boolean zl = false;
-		
+
 		try {
-			
+
 			sql_data db = new sql_data();
 			String sql = "select top 1 * from yqfbwx_lyzx_zl where openid = '"+bzlopenid+"' order by id desc";
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
 				String zlops = rs.getString("zlopenid");
 				if(zlops.indexOf(zlopenid)!=-1){
-					
+
 					zl=true;
 				}
 			}
-			
-			
-			
+
+
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return zl;
-		
+
 	}
-	
-	
-	
-   public static String GetNickNameForHtml(String bzlopenid){
-	   
-	   String sc="";
-	   String str="";
-	   
-	   try {
-		   
-		    sql_data db = new sql_data();
-		    String sql = "select zlopenid from yqfbwx_qmjd_dtcj where openid = '"+bzlopenid+"'";
+
+
+
+	public static String GetNickNameForHtml(String bzlopenid){
+
+		String sc="";
+		String str="";
+
+		try {
+
+			sql_data db = new sql_data();
+			String sql = "select zlopenid from yqfbwx_qmjd_dtcj where openid = '"+bzlopenid+"'";
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
-				
+
 				String temp[] = PublicFun.split(rs.getString(1), ",");
 				if (temp.length<20) {
-					
+
 					for (int i = 0; i < temp.length; i++) {
-						
+
 						String sql2 = "select nickname from yqfb_openid where openid='"+temp[i]+"'";
 						ResultSet rs2 = db.executeQuery(sql2);
 						if (rs2.next()) {
 
 							sc+=rs2.getString(1)+",";
-							
+
 						}
 					}
-					
+
 				}else {
-					
+
 					for (int i = 0; i < 20; i++) {
-						
+
 						String sql2 = "select nickname from yqfb_openid where openid='"+temp[i]+"'";
 						ResultSet rs2 = db.executeQuery(sql2);
 						if (rs2.next()) {
 
 							sc+=rs2.getString(1)+",";
-							
+
 						}
 					}
 				}
-	
+
 			}
-			
+
 			str=sc.substring(0,sc.length()-1);
-		
-	   } catch (Exception e) {
-		   e.printStackTrace();
-	   }
-	   
-	   return str;
-	   
-   }
-	
-   public static String getDatePoor(Date endDate, Date nowDate) {
-	   
-	    long nd = 1000 * 24 * 60 * 60;
-	    long nh = 1000 * 60 * 60;
-	    long nm = 1000 * 60;
-	    // long ns = 1000;
-	    // »ñµÃÁ½¸öÊ±¼äµÄºÁÃëÊ±¼ä²îÒì
-	    long diff = endDate.getTime() - nowDate.getTime();
-	    // ¼ÆËã²î¶àÉÙÌì
-	    long day = diff / nd;
-	    // ¼ÆËã²î¶àÉÙĞ¡Ê±
-	    long hour = diff % nd / nh;
-	    // ¼ÆËã²î¶àÉÙ·ÖÖÓ
-	    long min = diff % nd % nh / nm;
-	    // ¼ÆËã²î¶àÉÙÃë//Êä³ö½á¹û
-	    // long sec = diff % nd % nh % nm / ns;
-	    return day + "Ìì" + hour + "Ğ¡Ê±" + min + "·ÖÖÓ";
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return str;
+
+	}
+
+	public static String getDatePoor(Date endDate, Date nowDate) {
+
+		long nd = 1000 * 24 * 60 * 60;
+		long nh = 1000 * 60 * 60;
+		long nm = 1000 * 60;
+		// long ns = 1000;
+		// è·å¾—ä¸¤ä¸ªæ—¶é—´çš„æ¯«ç§’æ—¶é—´å·®å¼‚
+		long diff = endDate.getTime() - nowDate.getTime();
+		// è®¡ç®—å·®å¤šå°‘å¤©
+		long day = diff / nd;
+		// è®¡ç®—å·®å¤šå°‘å°æ—¶
+		long hour = diff % nd / nh;
+		// è®¡ç®—å·®å¤šå°‘åˆ†é’Ÿ
+		long min = diff % nd % nh / nm;
+		// è®¡ç®—å·®å¤šå°‘ç§’//è¾“å‡ºç»“æœ
+		// long sec = diff % nd % nh % nm / ns;
+		return day + "å¤©" + hour + "å°æ—¶" + min + "åˆ†é’Ÿ";
 	}
 	/**
-	public static void main(String[] args) {
-//		String aa = "";
-//		if (aa.indexOf("ol")!=-1) {
-//			System.out.println("lo");
-//			
-//		}else {
-//			System.out.print("nu");
-//		}
-		
-		String nowDayMYD = TimeString.GetnowTimeYMD();
-		System.out.println(nowDayMYD);
-		String s1="2000-01-01 00:00:00";
-		Date d1= VeDate.strToDateLong(s1);
-		
-		System.out.println(ZghTools.getDatePoor(new Date(), d1));
-		
-		System.out.println(ZghTools.fy1(12,10));
-		
-	}
-	
-	**/
-	//»ñÈ¡µÚÒ»Ìõid
+	 public static void main(String[] args) {
+	 //		String aa = "";
+	 //		if (aa.indexOf("ol")!=-1) {
+	 //			System.out.println("lo");
+	 //
+	 //		}else {
+	 //			System.out.print("nu");
+	 //		}
+
+	 String nowDayMYD = TimeString.GetnowTimeYMD();
+	 System.out.println(nowDayMYD);
+	 String s1="2000-01-01 00:00:00";
+	 Date d1= VeDate.strToDateLong(s1);
+
+	 System.out.println(ZghTools.getDatePoor(new Date(), d1));
+
+	 System.out.println(ZghTools.fy1(12,10));
+
+	 }
+
+	 **/
+	//è·å–ç¬¬ä¸€æ¡id
 	public static int getFirstId(int oid){
-		
+
 		int id=0;
 		String sql="";
 		try {
 			MysqlDB db = new MysqlDB();
 			if(oid!=0){
 				// sql="select id from jg where oid="+oid+" and video1='0' and yz<>0 order by id limit 1";
-				 sql="select id from jg where yz<>0 and video1='0' order by id limit 1";
+				sql="select id from jg where yz<>0 and video1='0' order by id limit 1";
 			}else{
-				 sql="select id from jg where yz<>0 and video1='0' order by id limit 1";
+				sql="select id from jg where yz<>0 and video1='0' order by id limit 1";
 			}
-		
+
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
-				id = rs.getInt(1);	
+				id = rs.getInt(1);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
-		return id;
-		
-	}
-	
 
-	//»ñÈ¡×îºóÒ»Ìõid
+		return id;
+
+	}
+
+
+	//è·å–æœ€åä¸€æ¡id
 	public static int getEndId(int oid){
-		
+
 		int id=0;
 		String sql="";
 		try {
 			MysqlDB db = new MysqlDB();
 			if(oid!=0){
-			  // sql="select id from jg where oid="+oid+" and yz<>0 and video1='0' order by id limit 1";
-			   sql="select id from jg where yz<>0 and video1='0' order by id limit 1";
+				// sql="select id from jg where oid="+oid+" and yz<>0 and video1='0' order by id limit 1";
+				sql="select id from jg where yz<>0 and video1='0' order by id limit 1";
 			}else{
-			   sql="select id from jg where yz<>0 and video1='0' order by id limit 1";
+				sql="select id from jg where yz<>0 and video1='0' order by id limit 1";
 			}
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
-				id = rs.getInt(1);	
+				id = rs.getInt(1);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return id;
-		
+
 	}
-	
-	
-	//ÊÇ·ñÑéÖ¤Í¨¹ı
+
+
+	//æ˜¯å¦éªŒè¯é€šè¿‡
 	public static boolean IsYz(int oid){
 		boolean yz=false;
 		try {
 			MysqlDB db = new MysqlDB();
-		
+
 			String sql="select * from jg where oid="+oid+" and yz<>0";
-			
+
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
-				
-					yz=true;
-				
+
+				yz=true;
+
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return yz;
 	}
-	
-	
+
+
 	public static String GetVideo(String id){
-		
+
 		String video="";
-		
+
 		try {
 			MysqlDB db = new MysqlDB();
 			String sql = "select video1 from jg where id="+id;
@@ -3237,18 +3237,18 @@ public class ZghTools {
 			if (rs.next()) {
 				video = rs.getString(1);
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return video;
 	}
-	
+
 	public static String GetStory2(String id){
-		
+
 		String story="";
-		
+
 		try {
 			MysqlDB db = new MysqlDB();
 			String sql = "select story from jg where id="+id;
@@ -3256,32 +3256,32 @@ public class ZghTools {
 			if (rs.next()) {
 				story = rs.getString(1);
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return story;
 	}
-	
-	
-	//»ñÈ¡memo
+
+
+	//è·å–memo
 	public static String getMemo2(String id){
 		String memo = "";
 
 		try {
-			
+
 			MysqlDB db = new MysqlDB();
 			String sql = "select memo from jg where id="+id+"";
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
 				memo=rs.getString(1);
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return memo;
 	}
 

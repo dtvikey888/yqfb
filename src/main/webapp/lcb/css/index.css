@@ -1,0 +1,89 @@
+#topmenu{height:45px;line-height:45px;background:url('image/index-topbg.jpg');}
+#bigad{width:960px;padding:5px 0px 5px 0px;}
+#menu{width:960px;}
+#menu li{height:66px;float:left}
+#menu li.l{width:194px;background:url('image/indexmenu1.jpg');}
+#menu li.r{width:766px;background:url('image/indexmenu2.jpg');}
+#menubot{height:28px;padding-top:5px;background:url('image/lmbg.gif');border-left:1px solid #cccccc;border-right:1px solid #cccccc;border-bottom:1px solid #cccccc;text-align:left;}
+#centermain1{width:960px;}
+#centermain1 li{float:left;}
+#centermain1 li.jg{width:8px;}
+#centermain1 li.l{width:300px;}
+#centermain1 li.c{width:368px;}
+#centermain1 li.r{width:276px;}
+#tab1{border:1px solid #c6dbe7;text-align:left;}
+#tab1 .top {height:29px;background:url('image/tabtopbg.gif');padding-left:4px;line-height:29px;}
+#tab1 .top span{width:50%;float:left}
+#tab1 .top span.l{font-size:14px;font-weight:bold;color:#00419C;}
+#tab1 .top span.r{text-align:right;padding-top:7px;padding-right:3px;}
+#tab1 .bot {padding:4px;line-height:21px;}
+#tab1 .centertop{height:88px;background:url(image/newsrd.gif);text-align:center;padding-top:8px;border-bottom:1px solid #C6DBE7}
+#tab1 .centerbot{line-height:22px;padding:10px 10px 10px 10px;}
+.xxline{background:url(image/xxline.gif);height:22px;}
+.col1{color:#8C868C}
+
+#tab2{border:1px solid #C6DBE7;text-align:left;}
+#tab2 .top {height:29px;padding-left:4px;line-height:29px;}
+
+#tab2 .top {height:29px;padding-left:4px;line-height:29px;}
+<!--天气样式-->
+.fr{float:right;}
+.ftmp{font-family:Georgia,"Times New Roman",Times,serif;font-size:14px;font-weight:700;color:#fff;width:54px;overflow:hidden;white-space:nowrap;padding-top:3px;}
+.Wealdiv{text-align:center;}
+<!--天气样式-->
+#timeDate{font-weight:700;color:#FF0;}.panel .paner{width:800px;}.panel div.fr{width:108px;height:63px;overflow:hidden;padding-top:6px;}.load{height:55px;line-height:55px;text-indent:20px;color:#E5F6FE;}
+
+
+#Wealth div.img{padding-left:6px;height:40px;}
+
+
+.tab3{border:1px solid #c6dbe7;text-align:left;}
+
+.p12lan{font-size: 12px;color: #004499;line-height: 22px}
+.p12lan:link{font-size: 12px;color: #004499}
+.p12lan:visited{font-size: 12px;color: #004499;}
+.p12lan:hover{font-size: 12px;color: #ff0000;ext-decoration: underline;}
+
+
+.p12lanh:link{font-size: 12px;color: #004499;font-weight: bold;line-height: 24px;}
+.p12lanh:visited{font-size: 12px;color: #004499;font-weight: bold;line-height: 24px;}
+.p12lanh:hover{font-size: 12px;color: #ff0000;font-weight: bold;text-decoration: underline;line-height: 24px;}
+
+.p12hui{font-size: 12px;color: #898989}
+
+.p14lan:link {	font-size: 14px;color: #004499;	line-height: 24px;}
+.p14lan:visited {	font-size: 14px;color: #004499;	line-height: 24px;}
+.p14lan:hover {	font-size: 14px;color: #FF0000;	text-decoration: underline;line-height: 24px;}
+
+.p14hui:link {	font-size: 14px;color: #454545;	line-height: 23px;}
+.p14hui:visited {	font-size: 14px;color: #454545;	line-height: 23px;}
+.p14hui:hover {	font-size: 14px;color: #ff6b01;	text-decoration: underline;line-height: 23px;}
+
+
+
+.p14lanh{font-size: 14px;font-weight: bold;color: #004499;}
+
+
+.p18ht:link {font-family:黑体;font-size: 18px;color: #004499;}
+.p18ht:visited  {font-family:黑体;font-size: 18px;color: #004499;}
+.p18ht:hover {font-family:黑体;font-size: 18px;color: #FF0000;	text-decoration: underline;}
+
+.hong:link {	font-size: 12px;color: #FF0000;	}
+.hong:visited {	font-size: 12px;color: #FF0000;	}
+.hong:hover {	font-size: 12px;color: #FF0000;	text-decoration: underline;}
+
+.bai:link{font-size: 12px;color: #ffffff;line-height: 22px}
+.bai:visited{font-size: 12px;color: #ffffff;line-height: 22px}
+.bai:hover{font-size: 12px;color: #ffff00;text-decoration: underline;;line-height: 22px}
+
+.lankuang:link{font-size: 14px;line-height: 24px;color: #004499;}
+.lankuang:visited{font-size: 14px;line-height: 24px;color: #004499;}
+.lankuang:hover {font-size: 14px;line-height: 24px;color: #FFFFFF;background-color: #296fdf;}
+
+
+
+.banquan{font-size: 12px;color: #363636;line-height: 24px;}
+
+.hx {letter-spacing: 1mm}
+.hx2 {letter-spacing: 0.8mm}
+ 
