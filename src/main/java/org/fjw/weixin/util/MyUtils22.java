@@ -6,7 +6,6 @@ import java.text.NumberFormat;
 
 import org.liufeng.course.util.TimeString;
 
-import com.sun.java_cup.internal.internal_error;
 
 
 //林佩抽奖 类

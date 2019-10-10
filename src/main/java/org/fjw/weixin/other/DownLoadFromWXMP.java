@@ -33,7 +33,7 @@ public class DownLoadFromWXMP {
 	 * 上传媒体文件
 	 * @param accessToken 接口访问凭证
 	 * @param type 媒体文件类型，分别有图片（image）、语音（voice）、视频（video），普通文件(file)
-	 * @param media form-data中媒体文件标识，有filename、filelength、content-type等信息
+	 * @param mediaFileUrl form-data中媒体文件标识，有filename、filelength、content-type等信息
 	 * @param mediaFileUrl 媒体文件的url
 	 * 上传的媒体文件限制
 	 * 图片（image）:1MB，支持JPG格式
@@ -127,7 +127,7 @@ public class DownLoadFromWXMP {
 	/**
 	 * 获取媒体文件(下载)
 	 * @param accessToken 接口访问凭证
-	 * @param media_id 媒体文件id
+	 * @param mediaId 媒体文件id
 	 * @param savePath 文件在服务器上的存储路径
 	 * */
 	public static String downloadMedia(String accessToken, String mediaId, String savePath) {
