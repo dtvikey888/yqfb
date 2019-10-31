@@ -1,23 +1,71 @@
 package org.liufeng.course.util;
-
 import java.io.File;
 import java.net.InetAddress;
 import java.sql.ResultSet;
 import java.util.Date;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
 import org.apache.commons.codec.binary.Base64;
 import org.fjw.weixin.util.AllValus;
 import org.fjw.weixin.util.MysqlDB;
 import org.fjw.weixin.util.PublicFun;
 import org.fjw.weixin.util.TimeString;
 import org.fjw.weixin.util.sql_data;
-import org.jfree.chart.plot.RingPlot;
 
-import com.jspsmart.upload.Request;
-import com.sun.org.apache.regexp.internal.recompile;
-//maven尽量找找的
+import com.aliyun.api.gateway.demo.SmsDemo;
+
+
 public class ZghTools {
+
+	//广告系统录入需求
+	public static void Rlxq(String fromUserName,String memo,String msgtel){
+		int oid = ZghTools.Getoid(fromUserName);
+		String oid2 = oid+"";
+		String xm = ZghTools.GetNickname2(oid);
+		String tel = ZghTools.GetTel(oid2);
+		try {
+			MysqlDB db = new MysqlDB();
+			String sql = "insert into adv_ggrl(oid,memo,fbsj) values("+oid+",'"+memo+"','"+TimeString.nowTime()+"')";
+			db.executeInsert(sql);
+			//发短信功能
+			if(ZghTools.isMobileNO(msgtel)){
+
+				SmsDemo app = new SmsDemo();
+
+				String content="";
+				if (memo.length()>30) {
+					content=memo.substring(0,30);
+				}else {
+					content=memo;
+				}
+
+
+				String time=TimeString.nowTime();
+
+
+				app.sendMsg(""+msgtel+"","{\"name\":\""+xm+"\", \"tel\":\""+tel+"\", \"content\":\""+content+"\", \"time\":\""+time+"\"}");
+
+
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+
+	//java-正则表达式判断是否手机号
+	public static boolean isMobileNO(String mobiles){
+
+		Pattern p = Pattern.compile("^((13[0-9])|(15[^4,\\D])|(18[0,5-9]))\\d{8}$");
+
+		Matcher m = p.matcher(mobiles);
+
+		//System.out.println(m.matches());
+
+		return m.matches();
+
+	}
 
 	//显示姓名 option
 	public static String GetXmOption(){
@@ -2480,6 +2528,33 @@ public class ZghTools {
 			if (!rs.next()) {
 
 				String sql="INSERT INTO yqfb_openid(openid,fbsj) values ('"+openid+"','"+TimeString.nowTime()+"')";
+				db.executeInsert(sql);
+				System.out.println(sql);
+
+//				String sql2="INSERT INTO daf_dt(openid,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,fbsj) VALUES('oSX6kjlwIvpFGl2Ws8TN5Ggxd7Ak',1,1,1,1,1,1,1,1,1,1,'2019-08-30 16:21:21')";
+//				db.executeInsert(sql2);
+//				System.out.println(sql2);
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	//录入
+	public static void Rlk10(String openid){
+		try {
+
+			ZghTools.ClearNull(openid);
+
+			sql_data db = new sql_data();
+			String sqlpd = "select * from yqfb_openid3 where openid='"+openid+"'";
+			ResultSet rs = db.executeQuery(sqlpd);
+
+			if (!rs.next()) {
+
+				String sql="INSERT INTO yqfb_openid3(openid,fbsj) values ('"+openid+"','"+TimeString.nowTime()+"')";
 				db.executeInsert(sql);
 				System.out.println(sql);
 

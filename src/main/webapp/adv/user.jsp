@@ -132,7 +132,7 @@ function DataLength(fData)
   <tr bgcolor="#d73615">
     <td align="center" valign="middle"><table width="100%" height="75" border="0" cellpadding="0" cellspacing="0">
       <tr>
-        <td width="76" align="right"><a href="index.jsp"><img src="IMG/ICO_return.png" width="57" height="29" border="0" /></a></td>
+        <td width="76" align="right"><a href="up.jsp"><img src="IMG/ICO_return.png" width="57" height="29" border="0" /></a></td>
         <td width="1442" align="center"><img src="IMG/PIC_theme.png" width=90% /></td>
         <td width="50" align="center" >&nbsp;</td>
       </tr>
@@ -165,13 +165,13 @@ function DataLength(fData)
             <tr>
             <td height="60" align="left" valign="top">
             
-            <input type="text" name="xm"  placeholder=" 请填写姓名!"  style="width:100%;height:50px;border:1px solid #dddddd;font-size:18px;"></td>
+            <input type="text" name="xm"  placeholder=" 姓名"  style="width:100%;height:50px;border:1px solid #dddddd;font-size:18px;"></td>
             </tr>
             
             <tr>
             <td height="60" align="left" valign="top">
             
-            <input type="text" name="tel"  placeholder=" 请填写手机号码完善信息 , 方便领奖!"  style="width:100%;height:50px;border:1px solid #dddddd;font-size:18px;"></td>
+            <input type="text" name="tel"  placeholder=" 手机号码"  style="width:100%;height:50px;border:1px solid #dddddd;font-size:18px;"></td>
             </tr>
          
         </table></td>

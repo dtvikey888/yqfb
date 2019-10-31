@@ -7,6 +7,7 @@
 String urlname ="adv/up.jsp";
 String openid =request.getParameter("openid");
 //out.println("openid="+openid);
+String appid = AllValus.appid;
 String ympath=AllValus.ympath;
 
 String twbsession2 = (String)session.getAttribute("twbsession2");
@@ -23,14 +24,14 @@ if(twbsession2!=null){
       }else{
         
            //out.println("其他人点了以后，不回调");
-           response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx86facd0a863aca12&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet30&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect");        
+           response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet30&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect");        
   
       }
    
    }else{
    
   		   //还没点要回调
-           response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx86facd0a863aca12&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet30&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect");        
+           response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet30&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect");        
   
    }
 
@@ -46,26 +47,11 @@ if(twbsession2!=null){
 
 	   out.println("<script>window.location.href='user.jsp?openid="+openid+"'</script>");
 
-   }
+      }
    }
    
    String check=Topay.WxJsApiCheck4(urlname,openid);
 %>
-
-<%
-	//控制时间
-	int kz =0;
-	String tt1=AllValus.story_t1;
-	String tt2=AllValus.story_t2;
-    Date c1=MyUtils7.CharDate(tt1);
-    Date c2=MyUtils7.CharDate(tt2);
-    kz= MyUtils7.TimeKZ(c1,c2);
-    //1: //开始抽奖
-    //2: //抽奖已经结束,感谢关注！
-    //3: //抽奖还没开始呢！
-    //out.println(kz);
-%>
-
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/<c>1999/xhtml">
@@ -85,7 +71,7 @@ if(twbsession2!=null){
 		wx.ready(function(){
 		   //alert("config ok...");
 		    //隐藏右上角菜单接口
-		   	  wx.hideOptionMenu();
+		   	  //wx.hideOptionMenu();
 		   
 			    wx.checkJsApi({
            jsApiList: [
@@ -283,7 +269,7 @@ if(twbsession2!=null){
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport"/>
-<title><%=AllValus.title1 %></title>
+<title><%=AllValus.adv_title1 %></title>
 <style>
  @font-face {
     font-family: wing;
@@ -620,151 +606,27 @@ function DataLength(fData)
   </tr>
 </table>
 
-<form id="form1" name="form1" method="post"  enctype="multipart/form-data" action="sc_chk2.jsp?openid=<%=openid%>" >
+<form id="form1" name="form1" method="post" action="tj.jsp" >
+<input type="hidden" name="openid" value="<%=openid%>"/>
 <table width="100%"  border="0">
   <tr>
     <td><table width="90%" height="80%" align="center" cellspacing="5">
       <tr>
         <th height="30" align="center" bordercolor="#EC6941" scope="row">
-        <div id="div1" style="display:none">
-        <input id="div1_memo"  type="text" name="memo"  placeholder=" 作品名称（14字以内）"  style="border:1px solid #294121;border-radius:10px;border-color:#294121;width:100%;height:50px;font-size:18px;"/>
-        </div>
+		
+        <textarea id="memo"  name="memo" placeholder="您的广告需求（35字内）" rows="5" style="border:1px solid #294121;border-radius:10px;border-color:#294121;width:100%;height:200px;font-size:18px;"></textarea>
+        
         </th>
       </tr>
     </table></td>
   </tr>
 </table>
-<table width="100%"  border="0">
-  <tr>
-    <td><table width="90%" height="80%" align="center" cellspacing="5">
-      <tr>
-        <th height="30" align="center" bordercolor="#EC6941" scope="row">
-		<div id="div2" style="display:none">
-        <textarea id="div2_story"  name="story" placeholder="故事（200字以内）" rows="5"   style="border:1px solid #294121;border-radius:10px;border-color:#294121;width:100%;height:150px;font-size:18px;"></textarea>
-        </div>
-        </th>
-      </tr>
-    </table></td>
-  </tr>
-</table>
-<table width="90%"  border="0" align="center">
-  <tr>
-    <td width="87%"><table width="111" height="80" border="0">
-      <tr>
-        <td align="center" bgcolor="#fff"><table width="260" border="0">
-          <tr >
-            <td>
-             <div class="fileupload">
-                <script>
-      function getFilename(){
-        var filename=document.getElementById("file").value;
-        if(filename==undefined||filename==""){
-          document.getElementById("filename").innerHTML="点击此处上传文件";
-        }else{
-          var fn=filename.substring(filename.lastIndexOf("\\")+1);
-          document.getElementById("filename").innerHTML=fn; //将截取后的文件名填充到span中
-        }
-      }
-    </script>
-   <span id="filename">点击此处上传文件，支持jpg、png、gif、mp3、mp4、m4a等格式， 上传音频、 视频建议在电脑端， 通过“桌面微信上传”。(限制80MB)</span>
-   <input type="file" name="file" id="file" onchange="getFilename()"/>
-    </div>
-            </td>
-          </tr>
-        </table></td>
-      </tr>
-    </table></td>
-    <td width="13%" align="right">&nbsp;</td>
-  </tr>
-</table>
-<!--  
-<table width="90%" height="40" border="0" align="center" bordercolor="#C6B798">
-  <tr>
-    <td valign="bottom"><table width="100%" border="0">
-      <tr>
-        <td><img src="IMG/08.png" width="100%" /></td>
-      </tr>
-    </table></td>
-  </tr>
-</table>-->
-<table width="90%" height="40" border="0" align="center" bordercolor="#C6B798" action="sc_chk2.jsp?openid=<%=openid%>">
-  <tr>
-    <td valign="bottom"><table width="100%" border="0">
-      <tr>
-        <td>&nbsp;</td>
-      </tr>
-    </table></td>
-  </tr>
-</table>
- <script type="text/JavaScript">
-        function gradeChange() {
-            var objS = document.getElementById("lb");
-            var grade = objS.options[objS.selectedIndex].value;
-            //alert(grade);
-            if(grade=="1"){
-		       // alert('1');
-		       document.getElementById("div1_memo").setAttribute("placeholder","作品名称 (14字以内)");
-        	   //document.getElementById("div2").setAttribute("placeholder","故事 (200字以内)");
-        	   document.getElementById("div1").style.display="block";
-        	   document.getElementById("div2").style.display="none";
- 			}else if(grade=="2"){
- 	    		//alert('2');
- 	    	   document.getElementById("div1_memo").setAttribute("placeholder","作品名称 (14字以内)");
-        	   //document.getElementById("div2").setAttribute("placeholder","故事 (200字以内)");
-        	   document.getElementById("div1").style.display="block";
-        	   document.getElementById("div2").style.display="none";
- 			}else if(grade=="3"){
-        		//alert('3');
-        	   document.getElementById("div1_memo").setAttribute("placeholder","作品名称 (14字以内)");
-        	   //document.getElementById("div2").setAttribute("placeholder","故事 (200字以内)");
-        	   document.getElementById("div1").style.display="block";
-        	   document.getElementById("div2").style.display="none";
-        		
- 			}else if(grade=="4"){
-        		//alert('4');
-        		document.getElementById("div1").style.display="block";
-        	    document.getElementById("div2").style.display="block";
-        		document.getElementById("div1_memo").setAttribute("placeholder","打卡地");
-        		document.getElementById("div2_story").setAttribute("placeholder","打卡理由");
- 			}
-            
-        }
-    </script>
-    
 
-<table width="90%"  border="0" align="center">
-  <tr>
-    <td width="90%">
- 			 <select  id="lb" onchange="gradeChange()" name=lb style="border:1px solid #294121;border-radius:10px;border-color:#294121;width:100%;height:50px;font-size:18px;">
-			    <option value="" selected>选择类型</option>
-				<option value="1">为祖国唱一首歌（读诗）</option>
-				<option value="2">为祖国绘一副画</option>
-				<option value="3">为祖国拍一张照</option>
-				<option value="4">为家乡打一处卡</option>
-			  </select>
- </td>
-  </tr>
-</table>
 <table width="70%" height="10" border="0" align="center" cellspacing="30">
   <tr>
-    <td align="center" bgcolor="#C62619" style="border-radius: 15px;">
-    
-     <%if(kz==1){
-           // kz=1 开始抽奖(不关) kz=2 抽奖结束(关闭) kz=3 抽奖没开始（关闭）
-            %>
-    <button onclick="showdiv('数据提交中，请稍等');return processForm(this.form);" type="submit" style="padding:5px 5px;border-radius:15px; background:#C62619; border:0px #555 solid; color:#fff; font-size:25px; font-weight:bold;">&nbsp;&nbsp;&nbsp;&nbsp;发&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;表&nbsp;&nbsp;&nbsp;&nbsp;</button>  
-    <%}else if(kz==2){%>
-    <button  type="submit" disabled="disabled" style="padding:5px 5px;border-radius:15px; background:#C62619; border:0px #555 solid; color:#fff; font-size:25px; font-weight:bold;">&nbsp;&nbsp;&nbsp;&nbsp;时&nbsp;&nbsp;间&nbsp;&nbsp;到&nbsp;&nbsp;&nbsp;&nbsp;</button>  
-    
-    <%}else{%>
-     
-	<button  type="submit" disabled="disabled" style="padding:5px 5px;border-radius:15px; background:#C62619; border:0px #555 solid; color:#fff; font-size:25px; font-weight:bold;">&nbsp;&nbsp;&nbsp;&nbsp;未&nbsp;&nbsp;开&nbsp;&nbsp;始&nbsp;&nbsp;&nbsp;&nbsp;</button>  
-           
-     <%}%>        
-    </td>
-    <td align="center" bgcolor="#C62619" style="border-radius: 15px;">
-    <div onClick="sharefriendRound2();button3();">
-    <span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;分&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;享&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    <td align="center" bgcolor="#C62619" style="border-radius:15px;">
+     <div onClick="document.form1.action='tj.jsp';if(DataLength(form1.memo.value)<2||DataLength(form1.memo.value)>35){alert('请输入');form1.memo.focus();return false};showdiv('数据提交中，请稍等');document.form1.submit();">
+     <span class="style24">&nbsp;&nbsp;&nbsp;&nbsp;提&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;交&nbsp;&nbsp;&nbsp;&nbsp;</span>
     </div>
     </td>
   </tr>
@@ -775,8 +637,6 @@ function DataLength(fData)
 </form>
 
 
-<p>&nbsp;</p>
-<p>&nbsp;</p>
 </div>
 </body>
 </html>
