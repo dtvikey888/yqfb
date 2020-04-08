@@ -93,7 +93,7 @@ String check=Topay.WxJsApiCheck3(urlname);
 <body>
 <div  id="contentid" style="display:block">
 <div id="outer" class="yourcssclass"  onclick="WeixinJSBridge.call('closeWindow');" >
-点击关闭!
+&nbsp;全部奖品已抽完,感谢您的参与，请关注我们下一期活动！ 点击关闭! 
 </div>
 </div>
 </body>

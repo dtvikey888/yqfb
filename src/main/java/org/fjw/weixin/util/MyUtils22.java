@@ -114,15 +114,15 @@ public class MyUtils22 {
 			}
 
 			if(bz==1){
-				bz2="恭喜您获得50元话费,话费将于活动结束后，进行统一充值，敬请留意。";
+				bz2="恭喜您获得一等奖";
 			}else if(bz==2){
-				bz2="恭喜您获得40元话费,话费将于活动结束后，进行统一充值，敬请留意。";
+				bz2="恭喜您获得二等奖";
 			}else if(bz==3){
-				bz2="恭喜您获得20元话费,话费将于活动结束后，进行统一充值，敬请留意。";
+				bz2="恭喜您获得三等奖";
 			}else if(bz==4){
-				bz2="恭喜您获得10元话费,话费将于活动结束后，进行统一充值，敬请留意。";
+				bz2="恭喜你获得四等奖";
 			}else if(bz==5){
-				bz2="这次没中奖,谢谢参与";
+				bz2="没中奖,谢谢参与";
 			}else{
 				bz2="谢谢参与";
 			}
@@ -253,7 +253,6 @@ public class MyUtils22 {
 	 * @param openid
 	 * @param xm
 	 * @param tel
-	 * @param dz
 	 * @return 返回标志 1,以前已经抽过奖(不处理)， 2.填写用户信息成功
 	 */
 	//抽奖填写用户信息
@@ -270,22 +269,27 @@ public class MyUtils22 {
 			System.out.print(sql_pd);
 			ResultSet rs = db.executeQuery(sql_pd);
 			if (rs.next()) {
-				//已经存在 不处理
+
+				//已经存在 更新处理
+				String sql ="update daf_cj set xm='"+xm+"',tel='"+tel+"',bh='"+bh+"',fbsj='"+TimeString.nowTime()+"' where openid='"+openid+"' ";
+				db.executeUpdate(sql);
+
+				//String sql_pd2="select * from daf_cj where openid='"+openid+"'";
+//				ResultSet rs2 = db.executeQuery(sql_pd2);
+//				if(!rs2.next()){
+//					String sql ="insert into daf_cj(openid,xm,tel,fbsj,iscj_bz,bh) VALUES('"+openid+"','"+xm+"','"+tel+"','"+TimeString.nowTime()+"',1,'"+bh+"') ";
+//					db.executeInsert(sql);
+//					System.out.println(sql);
+//				}
+
 				bz=1;
 
 			}else{
 
-				//String sql ="update daf_cj set xm='"+xm+"',tel='"+tel+"',fbsj='"+TimeString.nowTime()+"' where openid='"+openid+"' ";
-
-				String sql_pd2="select * from daf_cj where openid='"+openid+"'";
-				ResultSet rs2 = db.executeQuery(sql_pd2);
-				if(!rs2.next()){
-					String sql ="insert into daf_cj(openid,xm,tel,fbsj,iscj_bz,bh) VALUES('"+openid+"','"+xm+"','"+tel+"','"+TimeString.nowTime()+"',1,'"+bh+"') ";
+				//不存在 不处理
+				String sql ="insert into daf_cj(openid,xm,tel,fbsj,bh) VALUES('"+openid+"','"+xm+"','"+tel+"','"+TimeString.nowTime()+"','"+bh+"') ";
 					db.executeInsert(sql);
 					System.out.println(sql);
-				}
-
-
 
 				bz=2;
 
@@ -379,7 +383,7 @@ public class MyUtils22 {
 
 	/**
 	 * 修改中奖概率
-	 * @param 抽奖页面的随机数num（0，1，2，3） ,处理一下，变成num+1,然后(1,2,3,4) 5是没中奖不处理的,页面不会传进来的,
+	 * @param （0，1，2，3） ,处理一下，变成num+1,然后(1,2,3,4) 5是没中奖不处理的,页面不会传进来的,
 	 * 查找数据库中当天zsm字段数量，从allvalue 里面提取 每天限制的奖项，减一下，如果<=0 那就返回标志 0，否则返回1
 	 * 判断当天某个奖项的中奖数 ,用来控制每天的中奖概率 (提供给 抽奖页面 随机中的图片用)
 	 * @return 返回一个标志 表示 当天这个奖项还有没有名额 ，从allvalue 里面提取，然后查找数据库中的当天该奖项的中奖数据 ，减一下 就可以判断
@@ -404,17 +408,9 @@ public class MyUtils22 {
 					if (MyUtils22.GetTotalSY(zsm)<=0) {//比如 一等奖的奖项总数 - 所有中了一等奖的人 <= 0  那么就是说1等奖的所有名额没了,就把标志变为0
 						sy=0;
 					}else {
-
-						//1 7   10  9
-
-						//2 12  20  18
-
-						//3 30   50  48
-
-						//4 216  220  218
 						//一等奖10 8
-						if(TimeString.nowTime().indexOf("2019-09-20")!=-1){
-							sy = 8 -zjs;
+						if(TimeString.nowTime().indexOf("2020-04-08")!=-1){
+							sy = 1 -zjs;
 						}else {
 							sy = 0;
 						}
@@ -427,9 +423,9 @@ public class MyUtils22 {
 					if (MyUtils22.GetTotalSY(zsm)<=0) {//比如 二等奖的奖项总数 - 所有中了二等奖的人 <= 0  那么就是说2等奖的所有名额没了 ,就把标志变为0
 						sy=0;
 					}else {
-						//二等奖20 18
-						if(TimeString.nowTime().indexOf("2019-09-20")!=-1){
-							sy=18-zjs;
+						//二等奖90 18
+						if(TimeString.nowTime().indexOf("2020-04-08")!=-1){
+							sy=1-zjs;
 						}else {
 							sy=0;
 						}
@@ -438,33 +434,35 @@ public class MyUtils22 {
 					}
 
 
-				}else if (zsm==3) {
+				}else if(zsm==3){
 
-					if (MyUtils22.GetTotalSY(zsm)<=0) {
+					if (MyUtils22.GetTotalSY(zsm)<=0) {//比如 三等奖的奖项总数 - 所有中了三等奖的人 <= 0  那么就是说3等奖的所有名额没了 ,就把标志变为0
 						sy=0;
 					}else {
-						//三等奖50 45
-						if (TimeString.nowTime().indexOf("2019-09-20")!=-1) {
-							sy=48-zjs;
+						//3等奖90 18
+						if(TimeString.nowTime().indexOf("2020-04-08")!=-1){
+							sy=1-zjs;
 						}else {
 							sy=0;
 						}
-						//sy = AllValus.zjxz3 -zjs;
+
+						//sy = AllValus.zjxz2 -zjs;   //sy标识 = 当天中奖限制 - 当天中奖人数 。
 					}
 
 
-				}else if (zsm==4) {
+				}else if(zsm==4){
 
-					if (MyUtils22.GetTotalSY(zsm)<=0) {
+					if (MyUtils22.GetTotalSY(zsm)<=0) {//比如 4等奖的奖项总数 - 所有中了4等奖的人 <= 0  那么就是说4等奖的所有名额没了 ,就把标志变为0
 						sy=0;
 					}else {
-						//四等奖220 200
-						if (TimeString.nowTime().indexOf("2019-09-19")!=-1) {
-							sy=218-zjs;
+						//4等奖90 18
+						if(TimeString.nowTime().indexOf("2020-04-08")!=-1){
+							sy=1-zjs;
 						}else {
 							sy=0;
 						}
-						//sy = AllValus.zjxz3 -zjs;
+
+						//sy = AllValus.zjxz2 -zjs;   //sy标识 = 当天中奖限制 - 当天中奖人数 。
 					}
 
 
@@ -484,7 +482,7 @@ public class MyUtils22 {
 
 	/**
 	 * 修改中奖概率
-	 * @param 抽奖页面的随机数num（0，1，2，3） ,处理一下，变成num+1,然后(1,2,3,4) 5是没中奖不处理的,页面不会传进来的,
+	 * @param （0，1，2，3） ,处理一下，变成num+1,然后(1,2,3,4) 5是没中奖不处理的,页面不会传进来的,
 	 * 查找数据库中当天zsm字段数量，从allvalue 里面提取 每天限制的奖项，减一下，如果<=0 那就返回标志 0，否则返回1
 	 * 判断当天某个奖项的中奖数 ,用来控制每天的中奖概率 (提供给 抽奖页面 随机中的图片用)
 	 * @return 返回一个标志 表示 当天这个奖项还有没有名额 ，从allvalue 里面提取，然后查找数据库中的当天该奖项的中奖数据 ，减一下 就可以判断
@@ -678,9 +676,7 @@ public class MyUtils22 {
 	/**
 	 * //刮刮卡抽奖完写进数据库
 	 * @param openid
-	 * @param xm
 	 * @param tel
-	 * @param dz
 	 * @return 返回标志 1,以前已经抽过奖(不处理)， 2.记录抽奖成功
 	 */
 
@@ -705,8 +701,8 @@ public class MyUtils22 {
 		try {
 
 			sql_data db = new sql_data();
-			// String sql_pd = "select count(*) as ct from daf_cj where zsm<>0 and openid = '"+openid+"' ";
-			String sql_pd = "select count(*) as ct from daf_cj where zsm<>0 and tel = '"+tel+"' ";
+			String sql_pd = "select count(*) as ct from daf_cj where zsm<>0 and openid = '"+openid+"' ";
+			//String sql_pd = "select count(*) as ct from daf_cj where zsm<>0 and tel = '"+tel+"' ";
 			System.out.print(sql_pd);
 			ResultSet rs = db.executeQuery(sql_pd);
 			int ct = 0;
@@ -724,7 +720,75 @@ public class MyUtils22 {
 
 					//String sql ="insert into daf_cj(xm,tel,openid,zsm,fbsj) VALUES('"+xm+"','"+tel+"','"+openid+"',"+zsm+",'"+TimeString.nowTime()+"') ";
 
-					String sql ="update daf_cj set xm='"+xm+"',tel='"+tel+"',openid='"+openid+"',zsm="+zsm+",fbsj='"+TimeString.nowTime()+"' where openid='"+openid+"'";
+					String sql ="update daf_cj set xm='"+xm+"',tel='"+tel+"',iscj_bz=1,iszj_bz="+iszj_bz+",openid='"+openid+"',zsm="+zsm+",fbsj='"+TimeString.nowTime()+"' where openid='"+openid+"'";
+
+					System.out.println(sql);
+					db.executeUpdate(sql);
+
+					bz=2;
+				}
+
+			}
+
+
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		System.out.println("bz ="+bz);
+
+		return bz;
+
+	}
+
+	/**
+	 * //刮刮卡抽奖完写进数据库
+	 * @param openid
+	 * @return 返回标志 1,以前已经抽过奖(不处理)， 2.记录抽奖成功
+	 */
+
+	public static int StartCJLR3(String openid,String zsm)
+	{
+		int bz =0;
+
+		int iszj_bz=0;      //5 是没中奖
+		if ("5".equals(zsm)) {
+			iszj_bz=0;
+		}else {
+			iszj_bz=1;
+		}
+
+		//String xm = GetXm(openid);
+		//String tel = GetTel(openid);
+		//String lx = GetLx(openid);
+
+
+
+		//直接入库(更新操作哦)
+		try {
+
+			sql_data db = new sql_data();
+			 String sql_pd = "select count(*) as ct from daf_cj where zsm<>0 and openid = '"+openid+"' ";
+			//String sql_pd = "select count(*) as ct from daf_cj where zsm<>0 and tel = '"+tel+"' ";
+
+			System.out.print(sql_pd);
+			ResultSet rs = db.executeQuery(sql_pd);
+			int ct = 0;
+
+			if (rs.next()) {
+				//已经抽奖超过1次不处理
+				ct = rs.getInt(1);
+				if (ct>0) {
+
+					bz=1;
+
+				}else{
+
+					//String sql ="insert into daf_cj(xm,tel,openid,zsm,fbsj) VALUES('"+xm+"','"+tel+"','"+openid+"',"+zsm+",'"+TimeString.nowTime()+"') ";
+
+					//String sql ="update daf_cj set xm='"+xm+"',tel='"+tel+"',openid='"+openid+"',zsm="+zsm+",fbsj='"+TimeString.nowTime()+"' where openid='"+openid+"'";
+					String sql ="update daf_cj set openid='"+openid+"',zsm="+zsm+",fbsj='"+TimeString.nowTime()+"' where openid='"+openid+"'";
 
 					System.out.println(sql);
 					db.executeUpdate(sql);

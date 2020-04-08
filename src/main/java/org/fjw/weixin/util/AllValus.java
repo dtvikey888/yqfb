@@ -24,11 +24,11 @@ public class AllValus {
     public static String downloadpath4 = "e:\\webapp\\jsp\\upload\\";
     public static String downloadpath5 = "e://webapp//jsp//upload//";
 
-    public static String ympath="tbpad.yqrb.cn";
-    public static String propath="http://tbpad.yqrb.cn/yqfb/";
-    public static String videopath = "http://tbpad.yqrb.cn/upload/";
-    public static String thelink="http://tbpad.yqrb.cn/yqfb/jg/step.jsp";
-    public static String nopicpath = "http://tbpad.yqrb.cn/upload/no.png";
+    public static String ympath="www.yqrb.com.cn";
+    public static String propath="http://www.yqrb.com.cn/yqfb/";
+    public static String videopath = "http://www.yqrb.com.cn/upload/";
+    public static String thelink="http://www.yqrb.com.cn/yqfb/jg/step.jsp";
+    public static String nopicpath = "http://www.yqrb.com.cn/upload/no.png";
 
     public static String story_t1="2019-09-01 00:00:00";
     public static String story_t2="2019-09-30 23:59:59";
@@ -54,42 +54,44 @@ public class AllValus {
     //广告对外接待系统常量
     public static String adv_title1="乐清日报广告客户接待系统";
     public static String adv_desc ="在此输入您的广告需求";
-    public static String adv_link ="http://tbpad.yqrb.cn/yqfb/adv/up.jsp";
-    public static String adv_nopicpath = "http://tbpad.yqrb.cn/upload/no.png";
+    public static String adv_link ="http://www.yqrb.com.cn/yqfb/adv/up.jsp";
+    public static String adv_nopicpath = "http://www.yqrb.com.cn/upload/no.png";
     public static String adv_title2="需求提交成功，待审核处理";
 
     //林佩档案法(YY的道德修养奖)
     public static String da_title = "档案法分享标题";
     public static String da_desc = "档案法分享简介";
-    public static String da_pic = "http://tbpad.yqrb.cn/upload/daf_log.png";
+    public static String da_pic = "http://www.yqrb.com.cn/upload/daf_log.png";
 
-    public static String errpage="http://tbpad.yqrb.cn/yqfb/bl2/success.jsp";
+    public static String errpage="http://www.yqrb.com.cn/yqfb/bl2/success.jsp";
 
     public static String success_lan="您已答对10道题（及以上），填写正确的联系方式，以便获取奖品!";
     public static String csc_lan="答题已经超过100000次，谢谢关注！";
     public static String error_lan="您的答题错误率过高，请重新答题";
 
     public static String success_tj="答题正确，填写联系方式!";
+    public static String success_tj2="提交用户联系方式完成";
     public static String error_tj="答题正确，填写联系方式!";
 
     public static String cg_jx="您的编号超过600,木有奖品哦，谢谢参与";
 
     public static String cg_cx="恭喜您获得10元话费奖励，我们会在活动结束后为您充值，谢谢参与";
 
-    public static String daf_title="\"公民道德日\"有奖问答活动";
-    public static String daf_desc="今年9月20日是全国第17个“公民道德宣传日”，为全社会积极培育和践行社会主义核心价值观，进一步加强公民的道德建设，着力提升居民思想道德素质程度，市文明中心、乐清日报社联合举办“公民道德日”有奖问答知活动。";
-    public static String daf_link="http://tbpad.yqrb.cn/yqfb/bl2/index.jsp";
-    public static String daf_img="http://tbpad.yqrb.cn/upload/daf_log.png";
 
-    //起止时间 9.20-9.22
-    public static String daf_t1="2019-09-20 16:00:00";
-    public static String daf_t2="2019-09-23 16:00:00";
+    public static String daf_title="公民道德日有奖问答活动";
+    public static String daf_desc="今年9月20日是全国第17个“公民道德宣传日”，为全社会积极培育和践行社会主义核心价值观，进一步加强公民的道德建设，着力提升居民思想道德素质程度，市文明中心、乐清日报社联合举办“公民道德日”有奖问答知活动。";
+    public static String daf_link="http://www.yqrb.com.cn/yqfb/bl2/index.jsp";
+    public static String daf_img="http://www.yqrb.com.cn/upload/daf_log.png";
+
+    //公民道德日起止时间 9.20-9.22
+    public static String daf_t1="2020-04-07 00:00:00";
+    public static String daf_t2="2020-04-12 16:00:00";
 
     //林佩档案法各个奖项设置(YY的道德修养奖)
-    public static int  lpgg1 = 9; //1等奖50元话费 10份
-    public static int  lpgg2 = 18; //2等奖40元话费 20名
-    public static int  lpgg3 = 48; //3等奖20元话费 50名
-    public static int  lpgg4 = 218; //4等奖10元话费 220名
+    public static int  lpgg1 = 1; //50话费 10份
+    public static int  lpgg2 = 1; //40话费 20份
+    public static int  lpgg3 = 1; //20元话费 50名
+    public static int  lpgg4 = 1; //10元话费 220名
 //   public static int  lpgg5 = 600; //5等奖5 750名
 
 
@@ -117,8 +119,8 @@ public class AllValus {
     //梁琳书法大赛
     public static String sfds_title1="第三届“中雁荡山杯”全国大书法作品大赛";
     public static String sfds_desc ="第三届“中雁荡山杯”全国大书法作品大赛";
-    public static String sfds_link ="http://tbpad.yqrb.cn/yqfb/sfds/tp.jsp?lb=1&openid=oSX6kjlwIvpFGl2Ws8TN5Ggxd7Ak";
-    public static String sfds_nopicpath = "http://tbpad.yqrb.cn/yqfb/sfds/images/logo7.jpg";
+    public static String sfds_link ="http://www.yqrb.com.cn/yqfb/sfds/tp.jsp?lb=1&openid=oSX6kjlwIvpFGl2Ws8TN5Ggxd7Ak";
+    public static String sfds_nopicpath = "http://www.yqrb.com.cn/yqfb/sfds/images/logo7.jpg";
     public static String sf1="2018-09-18 09:00:00";
     public static String sf2="2020-10-01 12:00:00";
 

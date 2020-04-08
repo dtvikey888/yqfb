@@ -28,10 +28,10 @@ public class MenuManager {
 	 * @return
 	 */
 	public static Menu getMenu() {
-		ViewButton btn11 = new ViewButton();
-		btn11.setName("网络问效");
-		btn11.setType("view");
-		btn11.setUrl("http://wen.yqcn.com/wap/");
+//		ViewButton btn11 = new ViewButton();
+//		btn11.setName("网络问效");
+//		btn11.setType("view");
+//		btn11.setUrl("http://wen.yqcn.com/wap/");
 
 
 //		ViewButton btn21 = new ViewButton();
@@ -45,22 +45,48 @@ public class MenuManager {
 //		btn21.setType("view");
 //		btn21.setUrl("http://1011.hlsplay.aodianyun.com/mobile/program_live_channel_21590_copy.m3u8");
 
-		ViewButton btn21 = new ViewButton();
-		btn21.setName("2019网络文化节");
-		btn21.setType("view");
-		btn21.setUrl("https://file762d99333146.iamh5.cn/v3/idea/psEDU4DG");
+//		ViewButton btn21 = new ViewButton();
+//		btn21.setName("幸福城市（温州）");
+//		btn21.setType("view");
+//		btn21.setUrl("https://iwenjuan.baidu.com/?code=5pup8h&from=singlemessage&isappinstalled=0");
 
+//		ViewButton btn21 = new ViewButton();
+//		btn21.setName("十九届四中全会");
+//		btn21.setType("view");
+//		btn21.setUrl("https://zj.zjol.com.cn/subject.html?id=1327407&from=singlemessage&isappinstalled=0");
+		ViewButton btn20 = new ViewButton();
+		btn20.setName("书记市长在忙啥");
+		btn20.setType("view");
+		btn20.setUrl("https://zj.zjol.com.cn/subject.html?id=1344422");
+
+
+
+		ViewButton btn21 = new ViewButton();
+		btn21.setName("温暖回家路");
+		btn21.setType("view");
+		btn21.setUrl("http://wzqmt.tw.live.hoge.cn/share/0ZySdnLVUbdreQsNgw.shtml?_hgOutLink=tuwenol/tuwenoldetail&id=29527&from=singlemessage&isappinstalled=0");
 
 		ViewButton btn22 = new ViewButton();
-		btn22.setName("网络问效");
+		btn22.setName("“不忘初心、牢记使命”");
 		btn22.setType("view");
-		btn22.setUrl("http://wen.yqcn.com/");
-
+		btn22.setUrl("https://v.qq.com/x/page/d30303u48gx.html");
 
 		ViewButton btn23 = new ViewButton();
-		btn23.setName("云公益平台");
+		btn23.setName("2019网络文化节");
 		btn23.setType("view");
-		btn23.setUrl("http://zt1.yqcn.com/whlt/");
+		btn23.setUrl("https://file762d99333146.iamh5.cn/v3/idea/psEDU4DG");
+
+
+		ViewButton btn24 = new ViewButton();
+		btn24.setName("网络问效");
+		btn24.setType("view");
+		btn24.setUrl("http://wen.yqcn.com/");
+
+
+		ViewButton btn25 = new ViewButton();
+		btn25.setName("云公益平台");
+		btn25.setType("view");
+		btn25.setUrl("http://zt1.yqcn.com/whlt/");
 
 //		ViewButton btn23 = new ViewButton();
 //		btn23.setName("科技成果");
@@ -78,7 +104,7 @@ public class MenuManager {
 //		ViewButton btn24 = new ViewButton();
 //		btn24.setName("民生实事");
 //		btn24.setType("view");
-//		btn24.setUrl("http://xadmin.yqcn.com/zjxm/");
+//		btn24.setUrl("http://xad in.yqcn.com/zjxm/");
 
 //		ViewButton btn25 = new ViewButton();
 //		btn25.setName("快点温州直播");
@@ -104,11 +130,15 @@ public class MenuManager {
 
 		 */
 
-		ViewButton btn31 = new ViewButton();
-		btn31.setName("见证40年");
-		btn31.setType("view");
-		btn31.setUrl("https://zj.zjol.com.cn/subject.html?id=1023951&from=singlemessage&isappinstalled=0");
+//		ViewButton btn31 = new ViewButton();
+//		btn31.setName("见证40年");
+//		btn31.setType("view");
+//		btn31.setUrl("https://zj.zjol.com.cn/subject.html?id=1023951&from=singlemessage&isappinstalled=0");
 
+		ViewButton btn31 = new ViewButton();
+		btn31.setName("2020民生实事征集");
+		btn31.setType("view");
+		btn31.setUrl("http://hd.yqcn.com/msjyzj/");
 
 		ViewButton btn32 = new ViewButton();
 		btn32.setName("穿越时光");
@@ -140,19 +170,47 @@ public class MenuManager {
 		btn37.setType("view");
 		btn37.setUrl("https://zj.zjol.com.cn/subject.html?id=1121554");
 
+		ViewButton btn38 = new ViewButton();
+		btn38.setName("数字报");
+		btn38.setType("view");
+		btn38.setUrl("http://www.yqrb.cn/yqrb/h5");
+
+
 //		ComplexButton mainBtn1 = new ComplexButton();
 //		mainBtn1.setName("网络问效");
 //		mainBtn1.setSub_button(new Button[] { btn11});
 
-		ViewButton mainBtn1 = new ViewButton();
-		mainBtn1.setName("书记市长在忙啥");
-		mainBtn1.setType("view");
-		//mainBtn1.setUrl("https://zj.zjol.com.cn/subject.html?id=867086&from=singlemessage");
-		mainBtn1.setUrl("https://zj.zjol.com.cn/subject.html?id=1110400");
+//		ViewButton mainBtn1 = new ViewButton();
+//		mainBtn1.setName("疫情防控专题");
+//		mainBtn1.setType("view");
+//		//mainBtn1.setUrl("https://zj.zjol.com.cn/subject.html?id=867086&from=singlemessage");
+//		mainBtn1.setUrl("https://zj.zjol.com.cn/subject.html?id=1371421");
+
+//		ViewButton btn10 = new ViewButton();
+//		btn10.setName("疫情防控专题（报社）");
+//		btn10.setType("view");
+//		btn10.setUrl("https://zj.zjol.com.cn/subject.html?id=1371421");
+
+		ViewButton btn10 = new ViewButton();
+		btn10.setName("复工复产专题（报社）");
+		btn10.setType("view");
+		btn10.setUrl("https://zj.zjol.com.cn/subject.html?id=1392827&from=singlemessage&isappinstalled=0");
+
+		ViewButton btn11 = new ViewButton();
+		btn11.setName("复工复产专题（广电）");
+		btn11.setType("view");
+		btn11.setUrl("http://www.yqbtv.cn/index.php?s=/Mobile/index/focus&from=singlemessage");
+
+
+		ComplexButton mainBtn1 = new ComplexButton();
+		//mainBtn2.setName("在线平台");
+		mainBtn1.setName("复工复产");
+		mainBtn1.setSub_button(new Button[] { btn10,btn11 });
 
 		ComplexButton mainBtn2 = new ComplexButton();
-		mainBtn2.setName("在线平台");
-		mainBtn2.setSub_button(new Button[] { btn21,btn22,btn23,xcxBtn1 });
+		//mainBtn2.setName("在线平台");
+		mainBtn2.setName("我爱家乡");
+		mainBtn2.setSub_button(new Button[] { btn20,btn22,btn24 });
 
 //		ViewButton mainBtn2 = new ViewButton();
 //		mainBtn2.setName("乐清+");
@@ -166,9 +224,13 @@ public class MenuManager {
 //		mainBtn3.setUrl("https://zj.zjol.com.cn/news.html?id=853010&from=singlemessage");
 
 //
+//		ComplexButton mainBtn3 = new ComplexButton();
+//		mainBtn3.setName("便民服务");
+//		mainBtn3.setSub_button(new Button[] {  btn33, btn34, btn35 });
+
 		ComplexButton mainBtn3 = new ComplexButton();
-		mainBtn3.setName("便民服务");
-		mainBtn3.setSub_button(new Button[] { btn31, btn32, btn33, btn34, btn35 });
+		mainBtn3.setName("数字报");
+		mainBtn3.setSub_button(new Button[] {  btn38,btn33, btn34, btn35 });
 
 //		ComplexButton mainBtn3 = new ComplexButton();
 //		mainBtn3.setName("两会播报");

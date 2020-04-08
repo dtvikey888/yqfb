@@ -25,15 +25,15 @@ String check=Topay.WxJsApiCheck3(urlname);
     MyUtils22.StartCJBM(openid,xm,tel,bh);
     //1 ÒÑ¾­³é¹ý½±(Ìá½»Êý¾ÝÊ§°Ü£¬È»ºó¹Ø±ÕÒ³Ãæ) 2.Ìá½»Êý¾Ý³É¹¦,ÁôÔÚ±¾Ò³Ãæ ¾ÍÊÇ³é½±Ò³Ãæ.
   %>
-
-
-
+  
+  
+  
 
 <html>
 	<head>
-
+	
 	 <title><%=AllValus.daf_title %></title>
-
+	 
 	<meta name="description" content="">
     <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
     <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1" media="(device-height: 568px)">
@@ -48,9 +48,9 @@ String check=Topay.WxJsApiCheck3(urlname);
     <link rel="apple-touch-icon-precomposed" sizes="196x196" href="http://ms0.meituan.net/touch/img/startup/apple-touch-icon-196x196-precomposed.png">
     <link rel="apple-touch-startup-image" href="http://ms0.meituan.net/touch/img/startup/apple-touch-startup-image-640x1096.png" media="(device-height:568px)">
     <link rel="apple-touch-startup-image" href="http://ms0.meituan.net/touch/img/startup/apple-touch-startup-image-640x920.png" media="(device-height:480px)">
-
+ 
 	 <link type="text/css" rel="stylesheet" href="../css/other10.css">
-
+	 
 	 <script type="text/javascript"  src="js/jquery-1.9.1.js"></script>
 	 <style type="text/css">
 	*{margin:0;padding:0;list-style-type:none;}
@@ -67,7 +67,7 @@ String check=Topay.WxJsApiCheck3(urlname);
 	#show{display:none;position:absolute;top:222px;left:50%;margin-left:-148px;text-align:center;background-color:#fff;z-index:1002;overflow:auto;}
 	#show div{margin-top:-145px;margin-left:40px;padding-right:40px;line-height:1.5;color:#000000;font-size:17px;font-family:'ºÚÌå';}
 	</style>
-
+	
 	 <%
 	//¿ØÖÆÊ±¼ä
 	int kz =0;
@@ -79,23 +79,23 @@ String check=Topay.WxJsApiCheck3(urlname);
     //1: //¿ªÊ¼³é½±
     //2: //³é½±ÒÑ¾­½áÊø,¸ÐÐ»¹Ø×¢£¡
     //3: //³é½±»¹Ã»¿ªÊ¼ÄØ
-
+  
 	 %>
-
+	 
 	 <%
-
+	 
 	 //ÖÐÁËÊ²Ã´½±
 	// String zsm = MyUtils22.zsm(openid);
 	  %>
-
+	  
 	   <%
-
+  
 //¸÷¸ö½±Ïî×ÜÊ£Óà
 
 int t1 = MyUtils22.sy1(); //Ò»µÈ½±×ÜÊýÊ£ÓàÃû¶î
 int t2 = MyUtils22.sy2(); //¶þµÈ½±×ÜÊýÊ£ÓàÃû¶î
 int t3 = MyUtils22.sy3(); //ÈýµÈ½±×ÜÊýÊ£ÓàÃû¶î
-int t4 = MyUtils22.sy4(); //ËÄµÈ½±×ÜÊýÊ£ÓàÃû¶î
+int t4 = MyUtils22.sy4();
 //int t5 = MyUtils22.sy5();
 
 
@@ -107,10 +107,10 @@ System.out.println(t4);
 //System.out.println(t5);
 
    %>
-
-
+   
+   
     <%
-
+  
 //¸÷¸ö½±ÏîÃ¿ÌìµÄÊ£Óà <=0 ±íÊ¾Ã»ÁË
 
 int day_sy1 = MyUtils22.TodaySY(1); //Ò»µÈ½±µ±ÌìÊ£ÓàÃû¶î
@@ -135,101 +135,101 @@ System.out.println(day_sy1);
 		});
 		wx.ready(function(){
 		   //alert("config ok...");
-
+		   
 		   //Òþ²ØÓÒÉÏ½Ç²Ëµ¥½Ó¿Ú
 		   	  wx.hideOptionMenu();
-
+		   	  
 		   	    <%
 		  // String accessToken = WeixinChaOpenId.GetDBAccessToken(""+AllValus.memo+"");
 
 		   %>
-
-
-
-
-
+		   	  
+	
+		   
+		   
+		   
 		   <%
 		   //ÅÐ¶ÏÈ«²¿Ãû¶îÊ£Óà
 		   if(t1<=0 && t2<=0 && t3<=0 && t4<=0){
 		  //if(t1<0){
-
+		   
 		     // ×é×°ÎÄ±¾¿Í·þÏûÏ¢
 		  // String jsonTextMsg =AdvancedUtil.makeTextCustomMessage(openid, "È«²¿½±Æ·ÒÑ³éÍê,¸ÐÐ»ÄúµÄ²ÎÓë£¬Çë¹Ø×¢ÎÒÃÇÏÂÒ»ÆÚ»î¶¯£¡");
 		// ·¢ËÍ¿Í·þÏûÏ¢
 		 //  AdvancedUtil.sendCustomMessage(accessToken, jsonTextMsg);
-
+		   
 		   %>
-
+		   
 		        alert('È«²¿½±Æ·ÒÑ³éÍê,¸ÐÐ»ÄúµÄ²ÎÓë£¬Çë¹Ø×¢ÎÒÃÇÏÂÒ»ÆÚ»î¶¯£¡');
                //¹Ø±Õµ±Ç°ÍøÒ³´°¿Ú½Ó¿Ú
                 wx.closeWindow();
-
+                
            <%}%>
-
+     
 
 		  <%
 		     // ¸ù¾ÝÆðÖ¹Ê±¼äÅÐ¶ÏÊÇ·ñ¹Ø±Õ´°¿Ú £¬µ¯³öÌáÐÑ´°
 		  // kz=1 ¿ªÊ¼³é½±(²»¹Ø) kz=2 ³é½±½áÊø(¹Ø±Õ) kz=3 ³é½±Ã»¿ªÊ¼£¨¹Ø±Õ£©
-
+		  
 		   if (kz==1){
-
-
+		   
+		   
 		  %>
 		 // alert("¿ªÊ¼³é½±");
-
+		  
 		  <%}else if(kz==2){
 		   // ×é×°ÎÄ±¾¿Í·þÏûÏ¢
 		  // String jsonTextMsg =AdvancedUtil.makeTextCustomMessage(openid, "·Ç³£±§Ç¸£¬³é½±Ê±¼äÒÑ¹ý¡£¸ÐÐ»Äú¶Ô\"ÖÐ¹úÀÖÇåÍø\"µÄ¹Ø×¢£¬ÇëÏÂ´ÎÔÙÀ´£¡");
 		// ·¢ËÍ¿Í·þÏûÏ¢
 		  // AdvancedUtil.sendCustomMessage(accessToken, jsonTextMsg);
-
-
+		   
+		  
 		  %>
-
+		  
             alert('·Ç³£±§Ç¸£¬³é½±Ê±¼äÒÑ¹ý¡£¸ÐÐ»ÄúµÄ¹Ø×¢£¬ÇëÏÂ´ÎÔÙÀ´£¡');
             //¹Ø±Õµ±Ç°ÍøÒ³´°¿Ú½Ó¿Ú
             wx.closeWindow();
-
+		 
 		  <%}else if(kz==3){
 		   // ×é×°ÎÄ±¾¿Í·þÏûÏ¢
 		   //String jsonTextMsg =AdvancedUtil.makeTextCustomMessage(openid, "»¹Ã»¿ªÊ¼ÄØ£¬\"¿ªÊ¼³é½±Ê±¼ä"+cc1+"\"µ½\""+cc2+"\"£¡\n»¶Ó­µ½Ê±ºò²ÎÓë£¡");
 		// ·¢ËÍ¿Í·þÏûÏ¢
 		  //AdvancedUtil.sendCustomMessage(accessToken, jsonTextMsg);
-
-
+		   
+		  
 		  %>
-
+		  
            alert('»¹Ã»¿ªÊ¼ÄØ£¬"³é½±Ê±¼ä<%=cc1%>"µ½"<%=cc2%>"£¡\n»¶Ó­µ½Ê±ºò²ÎÓë£¡');
            //¹Ø±Õµ±Ç°ÍøÒ³´°¿Ú½Ó¿Ú
            wx.closeWindow();
-
-		  <%}else{
-
+		 
+		  <%}else{ 
+		  
 		    // ×é×°ÎÄ±¾¿Í·þÏûÏ¢
 		//   String jsonTextMsg =AdvancedUtil.makeTextCustomMessage(openid, "¸ÐÐ»¹Ø×¢£¡");
 		// ·¢ËÍ¿Í·þÏûÏ¢
 		//   AdvancedUtil.sendCustomMessage(accessToken, jsonTextMsg);
-
+		   
 		  %>
-
+		  
 		     alert('¸ÐÐ»¹Ø×¢£¡');
             //¹Ø±Õµ±Ç°ÍøÒ³´°¿Ú½Ó¿Ú
             wx.closeWindow();
-
+            
 		  <%} %>
-
-
-
+		  
+		  
+		 
 			    wx.checkJsApi({
            jsApiList: [
              'hideMenuItems',
            ],
            success: function (res) {
             // alert(JSON.stringify(res));
-
+             
            }
           });
-
+          
 		});
 		wx.error(function(res){
 			//alert(res);
@@ -238,22 +238,22 @@ System.out.println(day_sy1);
 
 // 2.2 ¼àÌýÒ³Ãæ body onload¡¢»ñÈ¡¡°ÅúÁ¿Òþ²Ø²Ëµ¥Ïî ¡±
   function  sharefriendRound6() {
-
+    
    //Òþ²ØÓÒÉÏ½Ç²Ëµ¥½Ó¿Ú
 	wx.hideOptionMenu();
-
-
-   wx.hideMenuItems({
-      menuList: [
-        'menuItem:readMode', // ÔÄ¶ÁÄ£Ê½
+	
+	   
+   wx.hideMenuItems({ 
+      menuList: [ 
+        'menuItem:readMode', // ÔÄ¶ÁÄ£Ê½ 
         'menuItem:openWithQQBrowser', // ÔÚ	QQä¯ÀÀÆ÷ÖÐ´ò¿ª
         'menuItem:openWithSafari', //ÔÚSafariÖÐ´ò¿ª
         'menuItem:share:email', //ÓÊ¼þ
-        'menuItem:copyUrl', // ¸´ÖÆÁ´½Ó
+        'menuItem:copyUrl', // ¸´ÖÆÁ´½Ó 
         'menuItem:favorite', //ÊÕ²Ø
         'menuItem:share:brand', //Ò»Ð©ÌØÊâ¹«ÖÚºÅ
         'menuItem:jsDebug',  //µ÷ÊÔ:
-		'menuItem:editTag', //±à¼­±êÇ©:
+		'menuItem:editTag', //±à¼­±êÇ©: 
 	    'menuItem:delete',  //É¾³ý:
  		'menuItem:originPage', //Ô­ÍøÒ³:
  		'menuItem:share:qq',  //·ÖÏíµ½QQ:
@@ -262,41 +262,41 @@ System.out.println(day_sy1);
  		'menuItem:share:facebook', //·ÖÏíµ½FB:
 		'menuItem:share:QZone'  //·ÖÏíµ½ QQ ¿Õ¼ä
 
-      ],
-      success: function (res) {
-        alert('ÒÑÒþ²ØÒ»ÏµÁÐ°´Å¥');
-      },
-      fail: function (res) {
-        alert(JSON.stringify(res));
-      }
-    });
-
+      ], 
+      success: function (res) { 
+        alert('ÒÑÒþ²ØÒ»ÏµÁÐ°´Å¥'); 
+      }, 
+      fail: function (res) { 
+        alert(JSON.stringify(res)); 
+      } 
+    }); 
+	
     //alert('ÒÑ×¢²á»ñÈ¡¡°·ÖÏíµ½ÅóÓÑÈ¦¡±×´Ì¬ÊÂ¼þ');
 	//alert('Çë×ª·¢Ô­ÎÄÁ´½ÓÖÁÎ¢ÐÅÅóÓÑÈ¦£¬»ñµÃ¶îÍâµÄ³é½±»ú»á¡£');
-  };
+  };		
 
 
 		</script>
 	</head>
   <body onLoad="sharefriendRound6()">
-
+  
     <div  id="contentid" style="display:block">
-
-
-
+    
+  
+  
   <input type="hidden" name="opp" id="opp" value="<%=openid %>">
-  <input type="text" name="day_sy1" id="day_sy1" value="<%=day_sy1%>">
-  <input type="text" name="day_sy2" id="day_sy2" value="<%=day_sy2%>">
-  <input type="text" name="day_sy3" id="day_sy3" value="<%=day_sy3%>">
-  <input type="text" name="day_sy4" id="day_sy4" value="<%=day_sy4%>">
-
-
+  <input type="hidden" name="day_sy1" id="day_sy1" value="<%=day_sy1%>">
+  <input type="hidden" name="day_sy2" id="day_sy2" value="<%=day_sy2%>">
+  <input type="hidden" name="day_sy3" id="day_sy3" value="<%=day_sy3%>">
+  <input type="hidden" name="day_sy4" id="day_sy4" value="<%=day_sy4%>">
+  
+   
   <!--
   <input type="hidden" name="day_sy2" id="day_sy2" value="<=day_sy2%>">
   <input type="hidden" name="day_sy3" id="day_sy3" value="<=day_sy3%>">
   <input type="hidden" name="day_sy4" id="day_sy4" value="<=day_sy4%>">
   <input type="hidden" name="day_sy5" id="day_sy5" value="<=day_sy5%>">-->
-
+  
   <!-- ÐÞ¸Äimg.srcÊ±Í¿²ãÒ²»á×Ô¶¯ÊÊÓ¦ÐÂÍ¼Æ¬µÄ³ß´ç.ÐÞ¸Älayerº¯Êý¿É¸ü¸ÄÍ¿²ãÑùÊ½ -->
    <div id="bg2"><!-- <img id="bg2_img" src="img/guaguaka_word.png" width="295" height="195" style="position:absolute;"/>--></div>
 
@@ -324,11 +324,11 @@ System.out.println(day_sy1);
 </div>
 
 
-<script type="text/javascript">
+<script type="text/javascript">   
 var gua = 1,re = 2;  // ¿ÉÉèÖÃ¹Î½±´ÎÊý
 //var imgSrc = 'img/aa.png';
-var imgSrc = ['img/z_1.jpg','img/z_2.jpg','img/z_3.jpg','img/z_4.jpg','img/z_5.jpg'];
-//var imgSrc = ['img/z_1.jpg','img/z_2.jpg','img/z_3.jpg','img/z_4.jpg'];
+//var imgSrc = ['img/z_1.jpg','img/z_2.jpg','img/z_3.jpg','img/z_4.jpg','img/z_5.jpg'];
+var imgSrc = ['img/z_1.jpg','img/z_2.jpg','img/z_3.jpg','img/z_4.jpg'];
 
 //var num = Math.floor(Math.random()*4);
 <%
@@ -337,7 +337,7 @@ int rds = a.PercentageRandom();
 %>
 var num = <%=rds%>
 
-alert(num);
+//alert(num);
 
 //ÕâÀïÒªÅÐ¶ÏÖÐ½±¸ÅÂÊ ¸ù¾ÝµÃµ½µÄnum ¶Ô±È ´«¹ýÀ´µÄ±êÖ¾Èç¹û ±êÖ¾ÊÇ0 ,±äÎªÃ»³éÖÐ£¬ÄÇ¾Í°Ñ num=4 £¬·ñÔò±êÖ¾ÊÇ1£¬ÄÇ¾Í num²»±äÈÃËû³éÖÐ
 //¶øÇÒÈç¹ûnum=4²»´«Èë£¬Ö»´«Èë 0£¬1£¬2£¬3
@@ -348,51 +348,75 @@ var day_sy3 = document.getElementById("day_sy3").value;   //ÈýµÈ½±µ±ÌìÊ£Óà<=0±íÊ
 var day_sy4 = document.getElementById("day_sy4").value;   //ËÄµÈ½±µ±ÌìÊ£Óà<=0±íÊ¾Ã»ÓÐÁË
 //var day_sy5 = document.getElementById("day_sy5").value; //ÎåµÈ½±µ±ÌìÊ£Óà<=0±íÊ¾Ã»ÓÐÁË
 
+
 //ÕâÀïÅª¸ÅÂÊÁË
-switch (num)
-{
+	switch (num)
+					{
+					
+						case 0:
+						  if(day_sy1>0){
+						    num2=0;
+						  }else if(day_sy2>0){
+						    num2=1;
+						  }else if(day_sy3>0){
+						    num2=2;
+						  }else if(day_sy4>0){
+						    num2=3;
+						  }else{
+						    num2=-1;
+						  }
+  						break;
+  						
+						case 1:
+						  if(day_sy2>0){
+						    num2=1;
+						  }else if(day_sy1>0){
+						    num2=0;
+						  }else if(day_sy3>0){
+						    num2=2;
+						  }else if(day_sy4>0){
+						    num2=3;
+						  }else{
+						    num2=-1;
+						  }
+  						break;
+  						
+						case 2:
+						  if(day_sy3>0){
+						    num2=2;
+						  }else if(day_sy1>0){
+						    num2=0;
+						  }else if(day_sy2>0){
+						    num2=1;
+						  }else if(day_sy3>0){
+						    num2=2;
+						  }else{
+						    num2=-1;
+						  }
+  						break;
+  						
+  						case 3:
+						  if(day_sy4>0){
+						    num2=3;
+						  }else if(day_sy1>0){
+						    num2=0;
+						  }else if(day_sy2>0){
+						    num2=1;
+						  }else if(day_sy3>0){
+						    num2=2;
+						  }else{
+						    num2=-1;
+						  }
+					
+  						break;
+						
+	
+					 }
 
-    case 0:
-        if(day_sy1<=0){
-            num2=4;
-        }else{
-            num2=0;
-        }
-        break;
-
-    case 1:
-        if(day_sy2<=0){
-            num2=4;
-        }else{
-            num2=1;
-        }
-        break;
-
-    case 2:
-        if(day_sy3<=0){
-            num2=4;
-        }else{
-            num2=2;
-        }
-        break;
-
-    case 3:
-        if(day_sy4<=0){
-            num2=4;
-        }else{
-            num2=3;
-        }
-        break;
-
-    case 4:
-        num2=4
-        break;
-
-}
 
 
 
-function showdiv() {
+function showdiv() { 
 	 document.getElementById("bg1").style.display ="block";
 	 document.getElementById("show").style.display ="block";
 }
@@ -411,7 +435,7 @@ $(function(){
 	$("#show_btn").css({"width":176*0.5+"px","height":76*0.5+"px"});
 	$("#gua_div").html("x"+gua);
 	$("#re_div").html("x"+re);
-
+	
 	if(gua == 0){
 		showdiv();
 	}
@@ -425,12 +449,12 @@ $("img").load(function(){
 	var width  = 285;
 	var bg2_width = $("#bg2_img").width();
 	var bg2_height = $("#bg2_img").height();
-
+	
 	$("#gua1").css({"margin-top":"20px"});
 
 	$("#notify").css({"margin-top":"200px"});
 	$("#nImg").width(300).height(101);
-
+	
 	$("#di").css({"margin-top":"50px"});
 	$("#di_img").width(414*0.7).height(24*0.7);
 
@@ -446,161 +470,166 @@ $("img").load(function(){
 	}
 });
 function bodys(height,width){
-	var img = new Image();
-	var canvas = document.querySelector('canvas');
-	canvas.style.position = 'absolute';
-	img.addEventListener('load',function(e){
+	var img = new Image();         
+	var canvas = document.querySelector('canvas');         
+	canvas.style.position = 'absolute';           
+	img.addEventListener('load',function(e){  
 		var ctx;
-		var w = width, h = height;
-		var offsetX = canvas.offsetLeft, offsetY = canvas.offsetTop;
-		var mousedown = false;
-		function layer(ctx){        //ÐÞ¸Älayerº¯Êý¿É¸ü¸ÄÍ¿²ãÑùÊ½
-			ctx.fillStyle = 'gray';
-			ctx.fillRect(0, 0, w, h);
+		var w = width, h = height;             
+		var offsetX = canvas.offsetLeft, offsetY = canvas.offsetTop;             
+		var mousedown = false;               
+		function layer(ctx){        //ÐÞ¸Älayerº¯Êý¿É¸ü¸ÄÍ¿²ãÑùÊ½        
+			ctx.fillStyle = 'gray';                 
+			ctx.fillRect(0, 0, w, h);             
 		}
-
-		function eventDown(e){
-			e.preventDefault();
-			mousedown=true;
-
+		 
+		function eventDown(e){                 
+			e.preventDefault();                 
+			mousedown=true;   
+	      
 		}
-
-		function eventUp(e){
-
-			e.preventDefault();
+		   
+		function eventUp(e){  
+		          
+			e.preventDefault();                 
 			mousedown=false;
-
+			
 			//¶à´Îµ¯³öµÄÎÊÌâ ²»ÔÚ±ðµÄ ¾ÍÔÚÓÚ eventUP
-
+			
 			//ÕâÀïÔö¼ÓµÄ ÐèÒªÅÐ¶ÏÊÇ·ñ¹ÎÍêÊ±ÓÃÕâ¶Î´úÂëÌæ»»Ô­´úÂëµÄeventUpÊÂ¼þ´¦Àíº¯Êý:
 			//Õâ¶Î´úÂëÖÐµÄ0.8ÊÇ80%µÄÒâË¼,ÔÚÍ¿²ãµÄÃæ»ýÐ¡ÓÚµÈÓÚ80%Ê±,¾Íµ¯³ö´°¿Ú,±íÊ¾¹ÎÍêÁË,¿ÉÒÔ¸ù¾ÝÐèÇó×ÔÐÐµ÷Õû
 			var data=ctx.getImageData(0,0,w,h).data;
 
 			for(var i=0,j=0;i<data.length;i+=4){
-
+                
 			if(data[i] && data[i+1] && data[i+2] && data[i+3]){
-
+			 
 
 				   j++;
 
 			   }
-
-
+                
+                    
 			}
 
 
 			if(j<=w*h*0.9){
-
-
-
+			
+			    
+			
 					//alert(j);
 					//alert('ok');
-
+					
 					//ÔÚÕâÀï°ÑÖÐÊ²Ã´½±·¢¸øÊý¾Ý¿â
-
+					
 					var zj1= num2+1;
-
+					
 					var opp = document.getElementById("opp").value;
 				    //alert('ÖÐÁË,'+zj1+" openid ,"+opp);
-
-
+				 
+				 
 		            //var day=new Date().getDay();
-
-                switch (zj1)
-                {
-                    case 1:
-                        x="¹§Ï²ÄúÖÐÁË50Ôª»°·Ñ£¬ÎÒÃÇ»áÔÚ»î¶¯½áÊøºó¸øÄú³äÖµ";
-                        break;
-                    case 2:
-                        x="¹§Ï²ÄúÖÐÁË20Ôª»°·Ñ£¬ÎÒÃÇ»áÔÚ»î¶¯½áÊøºó¸øÄú³äÖµ";
-                        break;
-                    case 3:
-                        x="¹§Ï²ÄúÖÐÁË10Ôª»°·Ñ£¬ÎÒÃÇ»áÔÚ»î¶¯½áÊøºó¸øÄú³äÖµ";
-                        break;
-                    case 4:
-                        x="¹§Ï²ÄúÖÐÁË5Ôª»°·Ñ£¬ÎÒÃÇ»áÔÚ»î¶¯½áÊøºó¸øÄú³äÖµ";
-                        break;
-                    case 5:
-                        x="Ð»Ð»²ÎÓë";
-                        break;
-                }
+					switch (zj1)
+					{
+					
+						case 1:
+  						x="¹§Ï²Äú»ñµÃ50Ôª»°·Ñ";
+  						break;
+  						
+  						case 2:
+  						x="¹§Ï²Äú»ñµÃ40Ôª»°·Ñ";
+  						break;
+  						
+  						case 3:
+  						x="¹§Ï²Äú»ñµÃ20Ôª»°·Ñ";
+  						break;
+  						
+  						case 4:
+  						x="¹§Ï²Äú»ñµÃ10Ôª»°·Ñ";
+  						break;
+  						
+						case 5:
+  						x="Ð»Ð»²ÎÓë";
+  						break;
+  						
+					 }
 
                   // alert(x);
-
-
+                  
+                  
                     //ÀûÓÃ¶Ô»°¿ò·µ»ØµÄÖµ £¨true »òÕß false£©
-
+                    
                     location.href="<%=AllValus.propath%>bl2/cj2.jsp?tel=<%=tel%>&openid="+opp+"&zsm="+zj1+" ";
 
                     //var truthBeTold = window.confirm(x);
 					//if (truthBeTold) {
 						//window.alert("»¶Ó­·ÃÎÊÎÒÃÇµÄ Web Ò³£¡");
-
+						
 					//	location.href="http://www.yqrb.com.cn/sxyqwx/cj2.jsp?openid="+opp+"&zsm="+zj1+" ";
-
+						
 					//}else{
 					    //window.alert("ÔÙ¼ûÀ²£¡");
-
+					    
 					//    location.href="http://www.yqrb.com.cn/sxyqwx/cj2.jsp?openid="+opp+"&zsm="+zj1+" ";
-
+					    
 					//}
-
-
-
-				}
-
-
-
+                    
+     
+                    
+				}	
+                    
+				
+			             
 		}
-
-		function eventMove(e){
-			e.preventDefault();
-			if(mousedown){
-				if(e.changedTouches){
-					e=e.changedTouches[e.changedTouches.length-1];
+		               
+		function eventMove(e){                 
+			e.preventDefault();                 
+			if(mousedown){                     
+				if(e.changedTouches){                         
+					e=e.changedTouches[e.changedTouches.length-1];                     
+				}                     
+				var x = (e.clientX + document.body.scrollLeft || e.pageX) - offsetX || 0,                         
+				y = (e.clientY + document.body.scrollTop || e.pageY) - offsetY || 0;                     
+				with(ctx){                    
+					beginPath()                     
+					arc(x, y, 15, 0, Math.PI * 2);                         
+					fill();                     
 				}
-				var x = (e.clientX + document.body.scrollLeft || e.pageX) - offsetX || 0,
-				y = (e.clientY + document.body.scrollTop || e.pageY) - offsetY || 0;
-				with(ctx){
-					beginPath()
-					arc(x, y, 15, 0, Math.PI * 2);
-					fill();
-				}
-
-
-
+				
+				
+				                
 			}
-
-
-
-		}
-		canvas.width=w;
-		canvas.height=h;
-
-		canvas.style.backgroundImage='url('+img.src+')';
-		ctx=canvas.getContext('2d');
-		ctx.fillStyle='b9b9b9';
+			
+			
+			             
+		}               
+		canvas.width=w;             
+		canvas.height=h; 
+		
+		canvas.style.backgroundImage='url('+img.src+')';              
+		ctx=canvas.getContext('2d');         
+		ctx.fillStyle='b9b9b9';             
 		ctx.fillRect(0, 0, w, h);
 
-		layer(ctx);
-		ctx.globalCompositeOperation = 'destination-out';
-		canvas.addEventListener('touchstart', eventDown);
-		canvas.addEventListener('touchend', eventUp);
-		canvas.addEventListener('touchmove', eventMove);
-		canvas.addEventListener('mousedown', eventDown);
-		canvas.addEventListener('mouseup', eventUp);
-		canvas.addEventListener('mousemove', eventMove);
+		layer(ctx);               
+		ctx.globalCompositeOperation = 'destination-out';               
+		canvas.addEventListener('touchstart', eventDown);             
+		canvas.addEventListener('touchend', eventUp);             
+		canvas.addEventListener('touchmove', eventMove);             
+		canvas.addEventListener('mousedown', eventDown);             
+		canvas.addEventListener('mouseup', eventUp);             
+		canvas.addEventListener('mousemove', eventMove);       
 	});
-
+	
 	//img.src = imgSrc;
 	img.src = imgSrc[num2];
+	
 
-
-
+	
 	(document.body.style);
 }
 </script>
-<!--
+<!--  
 <footer>
     <div class="ft-wrap">
   </div>
@@ -618,15 +647,15 @@ function bodys(height,width){
 window.onload = function(){
     if(isWeiXin()){
        //ÊÇÎ¢ÐÅä¯ÀÀÆ÷²»×ö²Ù×÷
-
+	   
     }else{
 	  // alert('not');
 	  //·ÇÎ¢ÐÅä¯ÀÀÆ÷¾ÍÒò´ËÏÔÊ¾ÁÐ±íµÈ
 	   var target=document.getElementById("contentid");
 	   target.style.display="none";
 	   alert('·ÇÎ¢ÐÅÖÐ´ò¿ª');
-
-
+	  
+	 
 	}
 }
 function isWeiXin(){

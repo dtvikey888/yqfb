@@ -47,18 +47,18 @@ if(twbsession2!=null){
    			
    			//response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet2&response_type=code&scope=snsapi_base&state=STATE&connect_redirect=1#wechat_redirect");        
 
- 			response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet2&response_type=code&scope=snsapi_base&state=1#wechat_redirect");        
-      
-  
-      
+ 			response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet2&response_type=code&scope=snsapi_base&state=1#wechat_redirect");
+
+
+
       }
    
    }else{
    
   		    //还没点要回调
             //response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet2&response_type=code&scope=snsapi_userinfo&state=STATE&connect_redirect=1#wechat_redirect");        
-  			response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet2&response_type=code&scope=snsapi_base&state=1#wechat_redirect");        
-      
+  			response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet2&response_type=code&scope=snsapi_base&state=1#wechat_redirect");
+
    }
    
    //ZghTools.upyt6(openid);
@@ -67,124 +67,97 @@ if(twbsession2!=null){
    
    String check="";
    
-if(from!=null){
-  check=Topay.WxJsApiCheck48(urlname,openid,from);
-}else{
-  check=Topay.WxJsApiCheck4(urlname,openid);
-}
+    if(from!=null){
+      check=Topay.WxJsApiCheck48(urlname,openid,from);
+    }else{
+      check=Topay.WxJsApiCheck4(urlname,openid);
+    }
    
- //out.println(check);
-%>
+     //out.println(check);
 
+    //这个随时准备启动
+    //session.removeAttribute("twbsession2");
+    //session.invalidate();
+%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<script src="http://res2.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
-<script>
-  /*
-   * 注意：
-   * 1. 所有的JS接口只能在公众号绑定的域名下调用，公众号开发者需要先登录微信公众平台进入“公众号设置”的“功能设置”里填写“JS接口安全域名”。
-   * 2. 如果发现在 Android 不能分享自定义内容，请到官网下载最新的包覆盖安装，Android 自定义分享接口需升级至 6.0.2.58 版本及以上。
-   * 3. 常见问题及完整 JS-SDK 文档地址：http://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html
-   *
-   * 开发中遇到问题详见文档“附录5-常见错误及解决办法”解决，如仍未能解决可通过以下渠道反馈：
-   * 邮箱地址：weixin-open@qq.com
-   * 邮件主题：【微信JS-SDK反馈】具体问题
-   * 邮件内容说明：用简明的语言描述问题所在，并交代清楚遇到该问题的场景，可附上截屏图片，微信团队会尽快处理你的反馈。
-   */
-    wx_share_title="<%=AllValus.daf_title%>";
+
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script>
+        /*
+         * 注意：
+         * 1. 所有的JS接口只能在公众号绑定的域名下调用，公众号开发者需要先登录微信公众平台进入“公众号设置”的“功能设置”里填写“JS接口安全域名”。
+         * 2. 如果发现在 Android 不能分享自定义内容，请到官网下载最新的包覆盖安装，Android 自定义分享接口需升级至 6.0.2.58 版本及以上。
+         * 3. 常见问题及完整 JS-SDK 文档地址：http://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html
+         *
+         * 开发中遇到问题详见文档“附录5-常见错误及解决办法”解决，如仍未能解决可通过以下渠道反馈：
+         * 邮箱地址：weixin-open@qq.com
+         * 邮件主题：【微信JS-SDK反馈】具体问题
+         * 邮件内容说明：用简明的语言描述问题所在，并交代清楚遇到该问题的场景，可附上截屏图片，微信团队会尽快处理你的反馈。
+         */
+        wx_share_title="<%=AllValus.daf_title%>";
         wx_share_desc="<%=AllValus.daf_desc%>";
+        <% if(from!=null){%>
+        wx_share_link="<%=AllValus.daf_link%>?openid=<%=openid%>&from=123";
+        <%}else{%>
         wx_share_link="<%=AllValus.daf_link%>?openid=<%=openid%>";
+        <%}%>
         wx_share_imgUrl="<%=AllValus.daf_img%>";
-   
-  wx.config({
-      debug: true,
-      <%=check%>,// 必填，签名，见附录1
-      jsApiList: [
-        'checkJsApi',
-        'onMenuShareTimeline',
-        'onMenuShareAppMessage',
-        'onMenuShareQQ',
-        'onMenuShareWeibo',
-        'onMenuShareQZone',
-        'hideMenuItems',
-        'showMenuItems',
-        'hideAllNonBaseMenuItem',
-        'showAllNonBaseMenuItem',
-        'translateVoice',
-        'startRecord',
-        'stopRecord',
-        'onVoiceRecordEnd',
-        'playVoice',
-        'onVoicePlayEnd',
-        'pauseVoice',
-        'stopVoice',
-        'uploadVoice',
-        'downloadVoice',
-        'chooseImage',
-        'previewImage',
-        'uploadImage',
-        'downloadImage',
-        'getNetworkType',
-        'openLocation',
-        'getLocation',
-        'hideOptionMenu',
-        'showOptionMenu',
-        'closeWindow',
-        'scanQRCode',
-        'chooseWXPay',
-        'openProductSpecificView',
-        'addCard',
-        'chooseCard',
-        'openCard',
-        'updateTimelineShareData',
-        'updateAppMessageShareData'
-      ]
-  });
-  
-   wx.ready(function () {   //需在用户可能点击分享按钮前就先调用
-    wx.updateTimelineShareData({
-      title: wx_share_title,
-      link: wx_share_link,
-      imgUrl: wx_share_imgUrl,
-      trigger: function (res) {
-        // 不要尝试在trigger中使用ajax异步请求修改本次分享的内容，因为客户端分享操作是一个同步操作，这时候使用ajax的回包会还没有返回
-        //alert('用户点击分享到朋友圈');
-      },
-      success: function (res) {
-      //  alert('已分享');
-      },
-      cancel: function (res) {
-       // alert('已取消');
-      },
-      fail: function (res) {
-        //alert(JSON.stringify(res));
-      }
-    });
-    
-    
-	wx.updateAppMessageShareData({
-      title: wx_share_title,
-      desc: wx_share_desc,
-      link: wx_share_link,
-      imgUrl: wx_share_imgUrl,
-      trigger: function (res) {
-        // 不要尝试在trigger中使用ajax异步请求修改本次分享的内容，因为客户端分享操作是一个同步操作，这时候使用ajax的回包会还没有返回
-       // alert('用户点击发送给朋友');
-      },
-      success: function (res) {
-       // alert('已分享');
-      },
-      cancel: function (res) {
-        //alert('已取消');
-      },
-      fail: function (res) {
-        //alert(JSON.stringify(res));
-      }
-    });
-  });
-</script>
+
+        wx.config({
+                debug: false,
+            <%=check%>,// 必填，签名，见附录1
+            jsApiList: [
+            'checkJsApi',
+            'onMenuShareTimeline',
+            'onMenuShareAppMessage'
+        ]
+        });
+
+        wx.ready(function () {   //需在用户可能点击分享按钮前就先调用
+
+            wx.onMenuShareTimeline({
+                title: wx_share_title, // 分享标题
+                link: wx_share_link, // 分享链接,将当前登录用户转为puid,以便于发展下线
+                imgUrl: wx_share_imgUrl, // 分享图标
+                success: function () {
+                    // 用户确认分享后执行的回调函数
+                    // alert('分享成功');
+                },
+                cancel: function () {
+                    // 用户取消分享后执行的回调函数
+                }
+            });
+            wx.error(function(res){
+                // config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。
+                //alert("errorMSG:"+res);
+            });
+
+
+            wx.onMenuShareAppMessage({
+                title: wx_share_title,
+                desc: wx_share_desc,
+                link: wx_share_link,
+                imgUrl: wx_share_imgUrl,
+                trigger: function (res) {
+                    // 不要尝试在trigger中使用ajax异步请求修改本次分享的内容，因为客户端分享操作是一个同步操作，这时候使用ajax的回包会还没有返回
+                    // alert('用户点击发送给朋友');
+                },
+                success: function (res) {
+                    // alert('已分享');
+                },
+                cancel: function (res) {
+                    //alert('已取消');
+                },
+                fail: function (res) {
+                    //alert(JSON.stringify(res));
+                }
+            });
+
+        });
+    </script>
 
 
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>

@@ -7,11 +7,11 @@
 <%
 
 String openid = request.getParameter("openid");
-String urlname = "bl2/cj2.jsp";
+String urlname = "bl3/cj2.jsp";
 
 //String xm = MyUtils2.codetoString(request.getParameter("xm"));
 //String xm = request.getParameter("xm");
-String tel = request.getParameter("tel");
+//String tel = request.getParameter("tel");
 String zsm = request.getParameter("zsm");
 
 System.out.println("urlname="+urlname);
@@ -19,26 +19,27 @@ System.out.println("openid="+openid);
 System.out.println("zsm="+zsm);
 
 String check=Topay.WxJsApiCheck5(urlname,openid,zsm);
-
+//中了什么奖
+    String zsm22 = MyUtils22.zsm(openid);
+    String sc=zsm22+"，请填写联系方式便于领奖";
 %>
 
  <%
-    //这里开始提交用户数据
-    int fhz = MyUtils22.StartCJLR2(tel,MyUtils2.codetoString(openid),MyUtils2.codetoString(zsm));
+ //这里开始提交用户数据
+   int fhz = MyUtils22.StartCJLR3(openid,zsm);
     //1 已经抽过奖(提交数据失败，然后关闭页面) 2.提交数据成功,然后关闭页面.
-  %>
+     out.print("<script type=\"text/javascript\">alert('"+sc+"');document.location.href='cj.jsp?openid="+openid+"';</script>");
+
+
+ %>
   
-   <%
-	 //中了什么奖
-	 String zsm22 = MyUtils22.zsm(openid);
-   %>
-	  
+
 
 
 <html>
 	<head>
-
-    <title><%=AllValus.daf_title %></title>
+	
+	 <title><%=AllValus.daf_title %></title>
 	 
 	<meta name="description" content="">
     <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
@@ -81,7 +82,7 @@ String check=Topay.WxJsApiCheck5(urlname,openid,zsm);
 		wx.config({
 		    debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
 		    <%=check%>,// 必填，签名，见附录1
-		    jsApiList: ['hideMenuItems']// 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+		    jsApiList: ['hideMenuItems'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
 		});
 		wx.ready(function(){
 		   //alert("config ok...");
@@ -102,8 +103,7 @@ String check=Topay.WxJsApiCheck5(urlname,openid,zsm);
  		  %>
  		  
 		       //alert('您的抽奖名额已全部用完，本次抽奖无效，感谢您对本活动的大力支持！');
-		       // alert('同一个手机号码只能抽奖一次，感谢您对本活动的大力支持！');
-                alert('<%=zsm22%>');
+		        alert('同一个手机号码只能抽奖一次，感谢您对本活动的大力支持！');
                //关闭当前网页窗口接口
                 wx.closeWindow();
     
@@ -124,11 +124,18 @@ String check=Topay.WxJsApiCheck5(urlname,openid,zsm);
                 wx.closeWindow();
 
 		   <%}%>
-
+		   
+		   
+		    
+		   
+		   
+		   	  
+		   
 		   
 		   //隐藏右上角菜单接口
-            wx.hideOptionMenu();
-            wx.checkJsApi({
+		   	  wx.hideOptionMenu();
+		   	  
+			    wx.checkJsApi({
            jsApiList: [
              'hideMenuItems',
            ],
