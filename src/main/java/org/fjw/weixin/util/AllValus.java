@@ -78,8 +78,8 @@ public class AllValus {
     public static String cg_cx="恭喜您获得10元话费奖励，我们会在活动结束后为您充值，谢谢参与";
 
 
-    public static String daf_title="公民道德日有奖问答活动";
-    public static String daf_desc="今年9月20日是全国第17个“公民道德宣传日”，为全社会积极培育和践行社会主义核心价值观，进一步加强公民的道德建设，着力提升居民思想道德素质程度，市文明中心、乐清日报社联合举办“公民道德日”有奖问答知活动。";
+    public static String daf_title="公民道德日";
+    public static String daf_desc="今年9月20日是全国第17个公民道德宣传日。";
     public static String daf_link="http://www.yqrb.com.cn/yqfb/bl2/index.jsp";
     public static String daf_img="http://www.yqrb.com.cn/upload/daf_log.png";
 
@@ -88,10 +88,10 @@ public class AllValus {
     public static String daf_t2="2020-04-12 16:00:00";
 
     //林佩档案法各个奖项设置(YY的道德修养奖)
-    public static int  lpgg1 = 1; //50话费 10份
-    public static int  lpgg2 = 1; //40话费 20份
-    public static int  lpgg3 = 1; //20元话费 50名
-    public static int  lpgg4 = 1; //10元话费 220名
+    public static int  lpgg1 = 10; //50话费 10份
+    public static int  lpgg2 = 20; //40话费 20份
+    public static int  lpgg3 = 50; //20元话费 50名
+    public static int  lpgg4 = 220; //10元话费 220名
 //   public static int  lpgg5 = 600; //5等奖5 750名
 
 

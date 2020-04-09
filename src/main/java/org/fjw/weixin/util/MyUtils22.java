@@ -114,15 +114,15 @@ public class MyUtils22 {
 			}
 
 			if(bz==1){
-				bz2="恭喜您获得一等奖";
+				bz2="恭喜您获得50元移动话费,话费将于活动结束后，进行统一充值，敬请留意。";
 			}else if(bz==2){
-				bz2="恭喜您获得二等奖";
+				bz2="恭喜您获得40元移动话费,话费将于活动结束后，进行统一充值，敬请留意。";
 			}else if(bz==3){
-				bz2="恭喜您获得三等奖";
+				bz2="恭喜您获得20元移动话费,话费将于活动结束后，进行统一充值，敬请留意。";
 			}else if(bz==4){
-				bz2="恭喜你获得四等奖";
+				bz2="恭喜你获得10元移动话费,话费将于活动结束后，进行统一充值，敬请留意。";
 			}else if(bz==5){
-				bz2="没中奖,谢谢参与";
+				bz2="没中奖,谢谢参与!";
 			}else{
 				bz2="谢谢参与";
 			}
@@ -408,9 +408,11 @@ public class MyUtils22 {
 					if (MyUtils22.GetTotalSY(zsm)<=0) {//比如 一等奖的奖项总数 - 所有中了一等奖的人 <= 0  那么就是说1等奖的所有名额没了,就把标志变为0
 						sy=0;
 					}else {
-						//一等奖10 8
+						//一等奖10
 						if(TimeString.nowTime().indexOf("2020-04-08")!=-1){
-							sy = 1 -zjs;
+							sy = 5 -zjs;
+						}else if(TimeString.nowTime().indexOf("2020-04-09")!=-1){
+							sy = 5 -zjs;
 						}else {
 							sy = 0;
 						}
@@ -423,9 +425,11 @@ public class MyUtils22 {
 					if (MyUtils22.GetTotalSY(zsm)<=0) {//比如 二等奖的奖项总数 - 所有中了二等奖的人 <= 0  那么就是说2等奖的所有名额没了 ,就把标志变为0
 						sy=0;
 					}else {
-						//二等奖90 18
+						//二等奖20
 						if(TimeString.nowTime().indexOf("2020-04-08")!=-1){
-							sy=1-zjs;
+							sy=10-zjs;
+						}else if(TimeString.nowTime().indexOf("2020-04-09")!=-1){
+							sy = 10 -zjs;
 						}else {
 							sy=0;
 						}
@@ -439,9 +443,11 @@ public class MyUtils22 {
 					if (MyUtils22.GetTotalSY(zsm)<=0) {//比如 三等奖的奖项总数 - 所有中了三等奖的人 <= 0  那么就是说3等奖的所有名额没了 ,就把标志变为0
 						sy=0;
 					}else {
-						//3等奖90 18
+						//3等奖50
 						if(TimeString.nowTime().indexOf("2020-04-08")!=-1){
-							sy=1-zjs;
+							sy=30-zjs;
+						}else if(TimeString.nowTime().indexOf("2020-04-09")!=-1){
+							sy = 20 -zjs;
 						}else {
 							sy=0;
 						}
@@ -455,9 +461,11 @@ public class MyUtils22 {
 					if (MyUtils22.GetTotalSY(zsm)<=0) {//比如 4等奖的奖项总数 - 所有中了4等奖的人 <= 0  那么就是说4等奖的所有名额没了 ,就把标志变为0
 						sy=0;
 					}else {
-						//4等奖90 18
+						//4等奖220
 						if(TimeString.nowTime().indexOf("2020-04-08")!=-1){
-							sy=1-zjs;
+							sy=120-zjs;
+						}else if(TimeString.nowTime().indexOf("2020-04-09")!=-1){
+							sy = 100 -zjs;
 						}else {
 							sy=0;
 						}
