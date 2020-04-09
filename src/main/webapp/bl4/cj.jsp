@@ -2,7 +2,7 @@
 <%@ page import="com.component.*"%>
 <%@page import="org.fjw.weixin.util.AllValus"%>
 <%@page import="org.fjw.weixin.util.MyUtils2"%>
-<%@page import="org.fjw.weixin.util.MyUtils22"%>
+<%@page import="org.fjw.weixin.util.MyUtils25"%>
 <%@page import="org.fjw.weixin.yy.WeixinChaOpenId"%>
 <%@page import="org.liufeng.course.util.AdvancedUtil"%>
 <%
@@ -46,18 +46,18 @@ String check=Topay.WxJsApiCheck4(urlname,openid);
 	 
 <%
 //是否已经抽奖
-//boolean iscj = MyUtils22.iscj_pd3(tel);
+//boolean iscj = MyUtils25.iscj_pd3(tel);
 //中了什么奖
 //String zsm = MyUtils21.zsm(openid);
 %>
 
 <%
 //各个奖项总剩余
-int t1 = MyUtils22.sy1(); //一等奖总数剩余名额
-int t2 = MyUtils22.sy2(); //二等奖总数剩余名额
-int t3 = MyUtils22.sy3(); //三等奖总数剩余名额
-int t4 = MyUtils22.sy4(); //四等奖总数剩余名额
-//int t5 = MyUtils22.sy5();
+int t1 = MyUtils25.sy1(); //一等奖总数剩余名额
+int t2 = MyUtils25.sy2(); //二等奖总数剩余名额
+int t3 = MyUtils25.sy3(); //三等奖总数剩余名额
+int t4 = MyUtils25.sy4(); //四等奖总数剩余名额
+//int t5 = MyUtils25.sy5();
 
 System.out.println(t1);
 System.out.println(t2);

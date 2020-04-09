@@ -1,13 +1,13 @@
 <%@ page language="java" import="java.util.*" pageEncoding="gb2312"%>
 <%@ page import="com.component.*"%>
 <%@page import="org.fjw.weixin.util.MyUtils2"%>
-<%@page import="org.fjw.weixin.util.MyUtils22"%>
+<%@page import="org.fjw.weixin.util.MyUtils25"%>
 <%@page import="org.fjw.weixin.util.AllValus"%>
 
 <%
 
 String openid = request.getParameter("openid");
-String urlname = "bl2/cj2.jsp";
+String urlname = "bl4/cj2.jsp";
 
 //String xm = MyUtils2.codetoString(request.getParameter("xm"));
 //String xm = request.getParameter("xm");
@@ -24,13 +24,13 @@ String check=Topay.WxJsApiCheck5(urlname,openid,zsm);
 
  <%
     //这里开始提交用户数据
-    int fhz = MyUtils22.StartCJLR2(tel,MyUtils2.codetoString(openid),MyUtils2.codetoString(zsm));
+    int fhz = MyUtils25.StartCJLR2(tel,MyUtils2.codetoString(openid),MyUtils2.codetoString(zsm));
     //1 已经抽过奖(提交数据失败，然后关闭页面) 2.提交数据成功,然后关闭页面.
   %>
   
    <%
 	 //中了什么奖
-	 String zsm22 = MyUtils22.zsm(openid);
+	 String zsm22 = MyUtils25.zsm(openid);
    %>
 	  
 
@@ -38,7 +38,7 @@ String check=Topay.WxJsApiCheck5(urlname,openid,zsm);
 <html>
 	<head>
 
-    <title><%=AllValus.daf_title %></title>
+    <title><%=AllValus.daf_lp_title %></title>
 	 
 	<meta name="description" content="">
     <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">

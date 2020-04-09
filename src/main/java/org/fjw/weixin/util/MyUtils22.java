@@ -880,7 +880,7 @@ public class MyUtils22 {
 	}
 
 	//答题正确与否 10个正确就行
-	//答案：1A  2B 3A  4A  5A  6A  7B  8A  9C  10C  11A 12A    13B    14C    15A
+	//答案：1.C  2.A  3.A 4.A  5.B  6.B  7.C  8.C  9.C  10.B 11. B  12. A  13.B  14.A  15.B
 
 	public static boolean DtIsZq(int... a){
 		boolean zqm=false;

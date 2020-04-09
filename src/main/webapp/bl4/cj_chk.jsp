@@ -1,17 +1,17 @@
 <%@ page language="java" import="java.util.*" pageEncoding="gb2312"%>
 <%@ page import="com.component.*"%>
 <%@page import="org.fjw.weixin.util.MyUtils2"%>
-<%@page import="org.fjw.weixin.util.MyUtils22"%>
+<%@page import="org.fjw.weixin.util.MyUtils25"%>
 <%@page import="org.fjw.weixin.util.AllValus"%>
 <%@page import="org.fjw.weixin.util.MathRandom4"%>
 <%
 
 String openid = request.getParameter("openid");
-String urlname = "bl2/cj_chk.jsp";
+String urlname = "bl4/cj_chk.jsp";
 //String xm = MyUtils2.codetoString(request.getParameter("xm"));
 String xm = request.getParameter("xm");
 String tel = request.getParameter("tel");
-String bh = MyUtils22.GetNextBH();
+String bh = MyUtils25.GetNextBH();
 
 System.out.println("openid="+openid);
 System.out.println("urlname="+urlname);
@@ -22,7 +22,7 @@ String check=Topay.WxJsApiCheck3(urlname);
 
  <%
     //这里开始提交用户数据
-    MyUtils22.StartCJBM(openid,xm,tel,bh);
+    MyUtils25.StartCJBM(openid,xm,tel,bh);
     //1 已经抽过奖(提交数据失败，然后关闭页面) 2.提交数据成功,留在本页面 就是抽奖页面.
   %>
 
@@ -32,7 +32,7 @@ String check=Topay.WxJsApiCheck3(urlname);
 <html>
 	<head>
 
-	 <title><%=AllValus.daf_title %></title>
+	 <title><%=AllValus.daf_lp_title %></title>
 
 	<meta name="description" content="">
     <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
@@ -71,8 +71,8 @@ String check=Topay.WxJsApiCheck3(urlname);
 	 <%
 	//控制时间
 	int kz =0;
-	String cc1=AllValus.daf_t1;
-	String cc2=AllValus.daf_t2;
+	String cc1=AllValus.daf_p1;
+	String cc2=AllValus.daf_p2;
     Date c1=MyUtils2.CharDate(cc1);
     Date c2=MyUtils2.CharDate(cc2);
     kz= MyUtils2.TimeKZ(c1,c2);
@@ -85,18 +85,18 @@ String check=Topay.WxJsApiCheck3(urlname);
 	 <%
 
 	 //中了什么奖
-	// String zsm = MyUtils22.zsm(openid);
+	// String zsm = MyUtils25.zsm(openid);
 	  %>
 
 	   <%
 
 //各个奖项总剩余
 
-int t1 = MyUtils22.sy1(); //一等奖总数剩余名额
-int t2 = MyUtils22.sy2(); //二等奖总数剩余名额
-int t3 = MyUtils22.sy3(); //三等奖总数剩余名额
-int t4 = MyUtils22.sy4(); //四等奖总数剩余名额
-//int t5 = MyUtils22.sy5();
+int t1 = MyUtils25.sy1(); //一等奖总数剩余名额
+int t2 = MyUtils25.sy2(); //二等奖总数剩余名额
+int t3 = MyUtils25.sy3(); //三等奖总数剩余名额
+int t4 = MyUtils25.sy4(); //四等奖总数剩余名额
+//int t5 = MyUtils25.sy5();
 
 
 
@@ -113,11 +113,11 @@ System.out.println(t4);
 
 //各个奖项每天的剩余 <=0 表示没了
 
-int day_sy1 = MyUtils22.TodaySY(1); //一等奖当天剩余名额
-int day_sy2 = MyUtils22.TodaySY(2); //二等奖当天剩余名额
-int day_sy3 = MyUtils22.TodaySY(3); //三等奖当天剩余名额
-int day_sy4 = MyUtils22.TodaySY(4);
-//int day_sy5 = MyUtils22.TodaySY(5);
+int day_sy1 = MyUtils25.TodaySY(1); //一等奖当天剩余名额
+int day_sy2 = MyUtils25.TodaySY(2); //二等奖当天剩余名额
+int day_sy3 = MyUtils25.TodaySY(3); //三等奖当天剩余名额
+int day_sy4 = MyUtils25.TodaySY(4);
+//int day_sy5 = MyUtils25.TodaySY(5);
 
 
 System.out.println(day_sy1);
@@ -512,13 +512,13 @@ function bodys(height,width){
                         x="恭喜您中了50元话费，我们会在活动结束后给您充值";
                         break;
                     case 2:
-                        x="恭喜您中了20元话费，我们会在活动结束后给您充值";
+                        x="恭喜您中了30元话费，我们会在活动结束后给您充值";
                         break;
                     case 3:
-                        x="恭喜您中了10元话费，我们会在活动结束后给您充值";
+                        x="恭喜您中了20元话费，我们会在活动结束后给您充值";
                         break;
                     case 4:
-                        x="恭喜您中了5元话费，我们会在活动结束后给您充值";
+                        x="恭喜您中了10元话费，我们会在活动结束后给您充值";
                         break;
                     case 5:
                         x="谢谢参与";

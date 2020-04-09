@@ -115,7 +115,7 @@ public class MyUtils25 {
 			if(bz==1){
 				bz2="恭喜您获得50元移动话费,话费将于活动结束后，进行统一充值，敬请留意。";
 			}else if(bz==2){
-				bz2="恭喜您获得40元移动话费,话费将于活动结束后，进行统一充值，敬请留意。";
+				bz2="恭喜您获得30元移动话费,话费将于活动结束后，进行统一充值，敬请留意。";
 			}else if(bz==3){
 				bz2="恭喜您获得20元移动话费,话费将于活动结束后，进行统一充值，敬请留意。";
 			}else if(bz==4){
@@ -157,23 +157,23 @@ public class MyUtils25 {
 				switch (zsm) {
 
 					case 1:
-						sy = AllValus.lpgg1-rs.getInt(1);
+						sy = AllValus.lptg1-rs.getInt(1);
 						break;
 
 					case 2:
-						sy = AllValus.lpgg2-rs.getInt(1);
+						sy = AllValus.lptg2-rs.getInt(1);
 						break;
 
 					case 3:
-						sy = AllValus.lpgg3-rs.getInt(1);
+						sy = AllValus.lptg3-rs.getInt(1);
 						break;
 
 					case 4:
-						sy = AllValus.lpgg4-rs.getInt(1);
+						sy = AllValus.lptg4-rs.getInt(1);
 						break;
 //
 //					case 5:
-//						sy = AllValus.lpgg5-rs.getInt(1);
+//						sy = AllValus.lptg5-rs.getInt(1);
 //					break;
 
 
@@ -223,27 +223,27 @@ public class MyUtils25 {
 
 	//1.一等奖 总剩余数
 	public static int sy1(){
-		return (AllValus.lpgg1 - MyUtils25.GetTotal(1));
+		return (AllValus.lptg1 - MyUtils25.GetTotal(1));
 	}
 
 	//2.二等奖 总剩余数
 	public static int sy2(){
-		return (AllValus.lpgg2 - MyUtils25.GetTotal(2));
+		return (AllValus.lptg2 - MyUtils25.GetTotal(2));
 	}
 
 	//3.三等奖 总剩余数
 	public static int sy3(){
-		return (AllValus.lpgg3 - MyUtils25.GetTotal(3));
+		return (AllValus.lptg3 - MyUtils25.GetTotal(3));
 	}
 
 	//4等奖 总剩余数
 	public static int sy4(){
-		return (AllValus.lpgg4 - MyUtils25.GetTotal(4));
+		return (AllValus.lptg4 - MyUtils25.GetTotal(4));
 	}
 //
 //		//5等奖 总剩余数
 //		 public static int sy5(){
-//			 return (AllValus.lpgg5 - MyUtils22.GetTotal(5));
+//			 return (AllValus.lptg5 - MyUtils22.GetTotal(5));
 //		 }
 //
 

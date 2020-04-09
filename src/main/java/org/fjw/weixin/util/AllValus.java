@@ -100,15 +100,20 @@ public class AllValus {
 
     //公民道德日起止时间 9.20-9.22
     public static String daf_p1="2020-04-07 00:00:00";
-    public static String daf_p2="2020-04-12 16:00:00";
+    public static String daf_p2="2020-04-21 00:00:00";
 
-    //林佩档案法各个奖项设置(YY的道德修养奖)
+    //林佩档案法各个奖项设置(YY的道德修养奖)（当前爱卫答题）
     public static int  lpgg1 = 10; //50话费 10份
     public static int  lpgg2 = 30; //30话费 30份
     public static int  lpgg3 = 50; //20元话费 50名
     public static int  lpgg4 = 210; //10元话费 210名
 //   public static int  lpgg5 = 600; //5等奖5 750名
 
+    //林佩答题
+    public static int  lptg1 = 10; //50话费 10份
+    public static int  lptg2 = 30; //30话费 30份
+    public static int  lptg3 = 50; //20元话费 50名
+    public static int  lptg4 = 210; //10元话费 210名
 
 
     //阿蒙文明餐桌之光盘大作战 起止时间
