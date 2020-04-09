@@ -6,14 +6,14 @@
 <%@page import="org.fjw.weixin.yy.WeixinChaOpenId"%>
 <%@page import="org.liufeng.course.util.AdvancedUtil"%>
 <%
-String urlname ="bl2/cj.jsp";
+String urlname ="bl4/cj.jsp";
 String openid =request.getParameter("openid");
 String check=Topay.WxJsApiCheck4(urlname,openid);
 %>
 <html>
 	<head>
 	
-	 <title><%=AllValus.daf_title %></title>
+	 <title><%=AllValus.daf_lp_title %></title>
 	 
 	<meta name="description" content="">
     <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
@@ -34,8 +34,8 @@ String check=Topay.WxJsApiCheck4(urlname,openid);
 	 <%
 	//¿ØÖÆÊ±¼ä
 	int kz =0;
-	String cc1=AllValus.daf_t1;
-	String cc2=AllValus.daf_t2;
+	String cc1=AllValus.daf_p1;
+	String cc2=AllValus.daf_p2;
     Date c1=MyUtils2.CharDate(cc1);
     Date c2=MyUtils2.CharDate(cc2);
     kz= MyUtils2.TimeKZ(c1,c2);

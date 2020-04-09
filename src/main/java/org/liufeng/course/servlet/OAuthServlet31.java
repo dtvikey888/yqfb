@@ -7,10 +7,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.fjw.weixin.util.AllValus;
-import org.fjw.weixin.util.JsonUtil;
-import org.liufeng.course.pojo.MyUserInfo;
+import org.fjw.weixin.yy.WeixinChaOpenId;
 import org.liufeng.course.pojo.SNSUserInfo;
 import org.liufeng.course.pojo.WeixinOauth2Token;
+import org.liufeng.course.pojo.WeixinUserInfo;
 import org.liufeng.course.util.AdvancedUtil;
 
 /**
@@ -31,49 +31,36 @@ public class OAuthServlet31 extends HttpServlet {
 
 		// 用户同意授权后，能获取到code
 		String code = request.getParameter("code");
-		System.out.println("code: "+code);
-
+		System.out.println("OAuthServlet31.doGet() code= "+code);
 
 		// 用户同意授权
 		if (!"authdeny".equals(code)) {
 
 			// 获取网页授权access_token
 			//WeixinOauth2Token weixinOauth2Token = AdvancedUtil.getOauth2AccessToken("APPID", "APPSECRET", code);
-			//WeixinOauth2Token weixinOauth2Token = AdvancedUtil.getOauth2AccessToken(AllValus.appid, AllValus.appsecret, code);
+
+			WeixinOauth2Token weixinOauth2Token = AdvancedUtil.getOauth2AccessToken(AllValus.appid, AllValus.appsecret, code);
+
 
 			// 网页授权接口访问凭证
 			//String accessToken = weixinOauth2Token.getAccessToken();
 			// 用户标识
-			//String openId = weixinOauth2Token.getOpenId();
+			String openId = weixinOauth2Token.getOpenId();
 
-
+			//以snsapi_userinfo为scope发起的网页授权
 			// 获取用户信息
 			//SNSUserInfo snsUserInfo = AdvancedUtil.getSNSUserInfo(accessToken, openId);
 
-			//获取用户信息 snsapi_userinfo 使用     需用户授权
-			String snsUserInfoUrl = "http://kzgl.yueqing.gov.cn/mywx/port/getUserInfo.do?code="+code;
+			//以snsapi_base为scope发起的网页授权
+			//数据库保存的accessToken
+			String accTok2=WeixinChaOpenId.GetDBAccessToken(AllValus.memo);
 
-//			System.out.println(snsUserInfo);
-			String snsUserInfoJsonString = JsonUtil.getjson(snsUserInfoUrl);
-			System.out.println("获取用户信息 snsapi_userinfo 使用: "+snsUserInfoJsonString);
-			MyUserInfo myUserInfo = JsonUtil.getMyUserInfo(snsUserInfoJsonString);
-			System.out.println(myUserInfo.getOpenid());
-			System.out.println(myUserInfo.getCity());
-			System.out.println(myUserInfo.getProvince());
-			System.out.println(myUserInfo.getHeadimgurl());
-			System.out.println(myUserInfo.getGender());
-			System.out.println(myUserInfo.getCode());
-			System.out.println(myUserInfo.getNickname());
-			System.out.println(myUserInfo.getCountry());
+			WeixinUserInfo snsUserInfo = AdvancedUtil.getUserInfo(accTok2, openId);
 
 			// 设置要传递的参数
-			request.setAttribute("snsUserInfo", myUserInfo);
-
-
-
+			request.setAttribute("snsUserInfo", snsUserInfo);
 		}
 		// 跳转到index.jsp
-		request.getRequestDispatcher("bl2/hd.jsp").forward(request, response);
-
+		request.getRequestDispatcher("bl4/hd.jsp").forward(request, response);
 	}
 }

@@ -1,29 +1,28 @@
 <%@ page language="java" import="java.util.*" pageEncoding="gb2312"%>
 <%@page import="com.component.Topay"%>
 <%@page import="org.fjw.weixin.util.MyUtils7"%>
-<%@page import="org.fjw.weixin.util.MyUtils22"%>
+<%@page import="org.fjw.weixin.util.MyUtils25"%>
 <%@page import="org.fjw.weixin.util.AllValus"%>
 <%@page import="org.liufeng.course.util.ZghTools"%>
 <%
 	//控制时间
 	int kz =0;
-	String tt1=AllValus.daf_t1;
-	String tt2=AllValus.daf_t2;
+	String tt1=AllValus.daf_p1;
+	String tt2=AllValus.daf_p2;
     Date c1=MyUtils7.CharDate(tt1);
     Date c2=MyUtils7.CharDate(tt2);
     kz= MyUtils7.TimeKZ(c1,c2);
-    //1: //开始抽奖
-    //2: //抽奖已经结束,感谢关注！
-    //3: //抽奖还没开始呢！
+    //1: //开始抽奖!
+    //2: //抽奖已经结束,感谢关注!
+    //3: //抽奖还没开始呢!
     //out.println(kz);
 %>
 
 <%
 
-String urlname ="bl2/index.jsp";
+String urlname ="bl4/index.jsp";
 String openid =request.getParameter("openid");
 //out.println("openid="+openid);
-
 
 String from=request.getParameter("from");
 
@@ -40,7 +39,7 @@ if(twbsession2!=null){
       
 
    	      if(from!=null){
-              response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet2&response_type=code&scope=snsapi_base&state=1#wechat_redirect");
+              response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet31&response_type=code&scope=snsapi_base&state=1#wechat_redirect");
 
           }
 
@@ -52,7 +51,7 @@ if(twbsession2!=null){
    			
    			//response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet2&response_type=code&scope=snsapi_base&state=STATE&connect_redirect=1#wechat_redirect");        
 
- 			response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet2&response_type=code&scope=snsapi_base&state=1#wechat_redirect");
+ 			response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet31&response_type=code&scope=snsapi_base&state=1#wechat_redirect");
 
 
 
@@ -62,7 +61,7 @@ if(twbsession2!=null){
    
   		    //还没点要回调
             //response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet2&response_type=code&scope=snsapi_userinfo&state=STATE&connect_redirect=1#wechat_redirect");        
-  			response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet2&response_type=code&scope=snsapi_base&state=1#wechat_redirect");
+  			response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet31&response_type=code&scope=snsapi_base&state=1#wechat_redirect");
 
    }
    
@@ -104,10 +103,10 @@ if(twbsession2!=null){
          * 邮件主题：【微信JS-SDK反馈】具体问题
          * 邮件内容说明：用简明的语言描述问题所在，并交代清楚遇到该问题的场景，可附上截屏图片，微信团队会尽快处理你的反馈。
          */
-        wx_share_title="<%=AllValus.daf_title%>";
-        wx_share_desc="<%=AllValus.daf_desc%>";
-        wx_share_link="<%=AllValus.daf_link%>";
-        wx_share_imgUrl="<%=AllValus.daf_img%>";
+        wx_share_title="<%=AllValus.daf_lp_title%>";
+        wx_share_desc="<%=AllValus.daf_lp_desc%>";
+        wx_share_link="<%=AllValus.daf_lp_link%>";
+        wx_share_imgUrl="<%=AllValus.daf_lp_img%>";
 
         wx.config({
                 debug: false,
@@ -165,7 +164,7 @@ if(twbsession2!=null){
 
 
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
-<title><%=AllValus.daf_title %></title>
+<title><%=AllValus.daf_lp_title %></title>
 <meta name="description" content=""/>
 <meta name="viewport" content="initial-scale=0.3, width=device-width, maximum-scale=0.3, user-scalable=no"/>
 <meta name="viewport" content="initial-scale=0.3,user-scalable=no,maximum-scale=0.3" media="(device-height: 568px)"/>
@@ -211,7 +210,7 @@ d{color:#fff;}
 		  %>
 		  
             alert('非常抱歉，答题时间已过。感谢您的关注，请下次再来！');
-            window.location.href="<%=AllValus.errpage%>";
+            window.location.href="<%=AllValus.errpage2%>";
             
 		  <%}else if(kz==3){
 		  
@@ -219,7 +218,7 @@ d{color:#fff;}
 		  %>
 		  
            alert('还没开始呢，"开始答题时间<%=tt1%>"到"<%=tt2%>"！\n欢迎到时候参与！');
-           window.location.href="<%=AllValus.errpage%>";
+           window.location.href="<%=AllValus.errpage2%>";
           
 		  <%}else{
 		      
@@ -334,145 +333,145 @@ d{color:#fff;}
 		
 	<script src="js/jquery.js"></script>
 	
-<style>
-/*div通用样式*/
-div{
-
-}
-
-/*右上角*/
-div.right_top{
-overflow: hidden;
-z-index: 2000;
-position:absolute;
-right: 10px;
-top: 190px;
-}
-
-/*右下角*/
-div.right_bottom{
-position:absolute;
-bottom:0px;
-right:0px
-
-}
-
-
-/*屏幕中间*/
-div.center_{
-right: 45%;
-top: 50%;
-}
-
-
-/*左上角*/
-div.left_top{
-left: 10px;
-top: 10px;
-}
-
-
-/*左下角*/
-div.left_bottom{
-left: 10px;
-bottom: 10px;
-}
-</style>
-		
-<script>
-var xz=0;
-function processForm(form)
-{
-xz=0;
-var xf=0;
-if (form.c1[0].checked==1) xf+=0;
-else if (form.c1[1].checked==1) xf+=0;
-else if (form.c1[2].checked==1) xf+=0;
-else xz=1;
-
-if (form.c2[0].checked==1) xf+=0;
-else if (form.c2[1].checked==1) xf+=0;
-else if (form.c2[2].checked==1) xf+=0;
-else xz=1;
-
-if (form.c3[0].checked==1) xf+=0;
-else if (form.c3[1].checked==1) xf+=0;
-else if (form.c3[2].checked==1) xf+=0;
-else xz=1;
-
-if (form.c4[0].checked==1) xf+=0;
-else if (form.c4[1].checked==1) xf+=0;
-else if (form.c4[2].checked==1) xf+=0;
-else xz=1;
-
-if (form.c5[0].checked==1) xf+=0; 
-else if (form.c5[1].checked==1) xf+=0; 
-else if (form.c5[2].checked==1) xf+=0; 
-else xz=1;
-
-
-if (form.c6[0].checked==1) xf+=0;
-else if (form.c6[1].checked==1) xf+=0; 
-else if (form.c6[2].checked==1) xf+=0; 
-else xz=1;
-
-if (form.c7[0].checked==1) xf+=0;
-else if (form.c7[1].checked==1) xf+=2;
-else if (form.c7[2].checked==1) xf+=0;
-else xz=1;
-
-if (form.c8[0].checked==1) xf+=0;
-else if (form.c8[1].checked==1) xf+=2; 
-else if (form.c8[2].checked==1) xf+=2;
-else xz=1;
-
-if (form.c9[0].checked==1) xf+=0;
-else if (form.c9[1].checked==1) xf+=2; 
-else if (form.c9[2].checked==1) xf+=2;
-else xz=1;
-
-if (form.c10[0].checked==1) xf+=0;
-else if (form.c10[1].checked==1) xf+=2; 
-else if (form.c10[2].checked==1) xf+=2;
-else xz=1;
-
-
-if (form.c11[0].checked==1) xf+=0;
-else if (form.c11[1].checked==1) xf+=2; 
-else if (form.c11[2].checked==1) xf+=2;
-else xz=1;
-
-if (form.c12[0].checked==1) xf+=0;
-else if (form.c12[1].checked==1) xf+=2; 
-else if (form.c12[2].checked==1) xf+=2;
-else xz=1;
-
-if (form.c13[0].checked==1) xf+=0;
-else if (form.c13[1].checked==1) xf+=2; 
-else if (form.c13[2].checked==1) xf+=2;
-else xz=1;
-
-if (form.c14[0].checked==1) xf+=0;
-else if (form.c14[1].checked==1) xf+=2; 
-else if (form.c14[2].checked==1) xf+=2;
-else xz=1;
-
-if (form.c15[0].checked==1) xf+=0;
-else if (form.c15[1].checked==1) xf+=2; 
-else if (form.c15[2].checked==1) xf+=2;
-else xz=1;
-
-if(xz!=0){alert('请认真选择每一项！');return false;}
-else
-{
-  //alert(OK');
-  return true; 
-}
-}
-</script>
+        <style>
+        /*div通用样式*/
+        div{
+        
+        }
+        
+        /*右上角*/
+        div.right_top{
+        overflow: hidden;
+        z-index: 2000;
+        position:absolute;
+        right: 10px;
+        top: 190px;
+        }
+        
+        /*右下角*/
+        div.right_bottom{
+        position:absolute;
+        bottom:0px;
+        right:0px
+        
+        }
+        
+        
+        /*屏幕中间*/
+        div.center_{
+        right: 45%;
+        top: 50%;
+        }
+        
+        
+        /*左上角*/
+        div.left_top{
+        left: 10px;
+        top: 10px;
+        }
+        
+        
+        /*左下角*/
+        div.left_bottom{
+        left: 10px;
+        bottom: 10px;
+        }
+        </style>
+                
+        <script>
+        var xz=0;
+        function processForm(form)
+        {
+        xz=0;
+        var xf=0;
+        if (form.c1[0].checked==1) xf+=0;
+        else if (form.c1[1].checked==1) xf+=0;
+        else if (form.c1[2].checked==1) xf+=0;
+        else xz=1;
+        
+        if (form.c2[0].checked==1) xf+=0;
+        else if (form.c2[1].checked==1) xf+=0;
+        else if (form.c2[2].checked==1) xf+=0;
+        else xz=1;
+        
+        if (form.c3[0].checked==1) xf+=0;
+        else if (form.c3[1].checked==1) xf+=0;
+        else if (form.c3[2].checked==1) xf+=0;
+        else xz=1;
+        
+        if (form.c4[0].checked==1) xf+=0;
+        else if (form.c4[1].checked==1) xf+=0;
+        else if (form.c4[2].checked==1) xf+=0;
+        else xz=1;
+        
+        if (form.c5[0].checked==1) xf+=0; 
+        else if (form.c5[1].checked==1) xf+=0; 
+        else if (form.c5[2].checked==1) xf+=0; 
+        else xz=1;
+        
+        
+        if (form.c6[0].checked==1) xf+=0;
+        else if (form.c6[1].checked==1) xf+=0; 
+        else if (form.c6[2].checked==1) xf+=0; 
+        else xz=1;
+        
+        if (form.c7[0].checked==1) xf+=0;
+        else if (form.c7[1].checked==1) xf+=2;
+        else if (form.c7[2].checked==1) xf+=0;
+        else xz=1;
+        
+        if (form.c8[0].checked==1) xf+=0;
+        else if (form.c8[1].checked==1) xf+=2; 
+        else if (form.c8[2].checked==1) xf+=2;
+        else xz=1;
+        
+        if (form.c9[0].checked==1) xf+=0;
+        else if (form.c9[1].checked==1) xf+=2; 
+        else if (form.c9[2].checked==1) xf+=2;
+        else xz=1;
+        
+        if (form.c10[0].checked==1) xf+=0;
+        else if (form.c10[1].checked==1) xf+=2; 
+        else if (form.c10[2].checked==1) xf+=2;
+        else xz=1;
+        
+        
+        if (form.c11[0].checked==1) xf+=0;
+        else if (form.c11[1].checked==1) xf+=2; 
+        else if (form.c11[2].checked==1) xf+=2;
+        else xz=1;
+        
+        if (form.c12[0].checked==1) xf+=0;
+        else if (form.c12[1].checked==1) xf+=2; 
+        else if (form.c12[2].checked==1) xf+=2;
+        else xz=1;
+        
+        if (form.c13[0].checked==1) xf+=0;
+        else if (form.c13[1].checked==1) xf+=2; 
+        else if (form.c13[2].checked==1) xf+=2;
+        else xz=1;
+        
+        if (form.c14[0].checked==1) xf+=0;
+        else if (form.c14[1].checked==1) xf+=2; 
+        else if (form.c14[2].checked==1) xf+=2;
+        else xz=1;
+        
+        if (form.c15[0].checked==1) xf+=0;
+        else if (form.c15[1].checked==1) xf+=2; 
+        else if (form.c15[2].checked==1) xf+=2;
+        else xz=1;
+        
+        if(xz!=0){alert('请认真选择每一项！');return false;}
+        else
+        {
+          //alert(OK');
+          return true; 
+        }
+        }
+        </script>
 </head>
 <body>
-<%int cs = MyUtils22.GetCsForDt(openid);%>
+<%int cs = MyUtils25.GetCsForDt(openid);%>
 <%if(cs>100000){%>
 <div id="mcover" onClick="weChat()" style="display: block;">
           <img src="js/tip.png"/>
@@ -795,14 +794,14 @@ else
     <td height="115" align="center" valign="middle"><table width="95%" height="75" border="0" cellpadding="0" cellspacing="0">
       <tr>
         <td align="center">
-        <%if(!MyUtils22.iscj_pd(openid)){%>
+        <%if(!MyUtils25.iscj_pd(openid)){%>
         <!--  
         <input target="_self" type="image" border="0" name="sub22" src="img/tp3.png" width=100% height=80  onclick="return processForm(this.form);"/>
         -->
        <button onclick="return processForm(this.form);" type="submit" style="width:100%;padding:15px 15px;border-radius:15px; background:#FDCB03; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">&nbsp;&nbsp;&nbsp;&nbsp;提&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;交&nbsp;&nbsp;&nbsp;&nbsp;</button>  
        <p></p>
 		<%}else{ %>
-		 <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#CC0001; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">您已经参与过,<%="您是第"+MyUtils22.GetWs(openid)+"位参与者,"+MyUtils22.zsm(openid) %></button>  
+		 <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#CC0001; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">您已经参与过,<%="您是第"+MyUtils25.GetWs(openid)+"位参与者,"+MyUtils25.zsm(openid) %></button>  
 		<%} %>
 	   <p></p>
 	<input name="openid" type="hidden" id="openid" value="<%=openid%>"/>	<div></div></td>

@@ -517,17 +517,17 @@ else
   <tr>
     <td align="center" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="30">
       <tr>
-        <td colspan="2" align="left"><p><strong><div style="line-height:1.8;text-indent:2em;">今年9月20日是全国第17个“公民道德宣传日”，为积极培育全社会践行社会主义核心价值观，深入加强公民道德建设，着力提升市民思想道德素质水平，乐清市文明中心、乐清日报社特联合举办乐清市“公民道德日”有奖问答活动。</div></strong></P></td>
+        <td colspan="2" align="left"><p><strong><div style="line-height:1.8;text-indent:2em;">今年4月是第32个爱国卫生月，今年的活动主题是“防疫有我，爱卫同行”。为了加大本次爱国卫生月的宣传力度，普及爱国卫生和防疫知识，打造健康、绿色环境，乐清市爱卫办、乐清市卫健局、乐清市日报社联合举办乐清市“爱国卫生月”有奖问答活动。</div></strong></P></td>
         </tr>
       <tr>
         <td height="50" colspan="2">
 		  <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#CC0001; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">活动奖励</button>  
 	      <div align="center" style="margin-top:50px;margin-bottom:25px;line-height:1.8">一等奖10份: 50元移动话费</div>
-	      <div align="center" style="margin-top:25px;margin-bottom:25px;line-height:1.8">二等奖20份: 40元移动话费</div>
+	      <div align="center" style="margin-top:25px;margin-bottom:25px;line-height:1.8">二等奖30份: 30元移动话费</div>
 	      <div align="center" style="margin-top:25px;margin-bottom:25px;line-height:1.8">三等奖50份: 20元移动话费</div>
-	      <div align="center" style="margin-top:25px;margin-bottom:50px;line-height:1.8">参与奖220份:10元移动话费</div>
+	      <div align="center" style="margin-top:25px;margin-bottom:50px;line-height:1.8">参与奖210份:10元移动话费</div>
 	      <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#CC0001; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">活动规则</button>  
-		  <div style="margin-top:50px;padding-left:12px;line-height:1.8">1、共有15道公民道德基础题，答对其中10道，即可参与刮刮卡抽奖活动。每个手机号仅限获奖一次，请实名参与。</div>
+		  <div style="margin-top:50px;padding-left:12px;line-height:1.8">1、共有15道爱国卫生月基础题，答对其中10道，即可参与刮刮卡抽奖活动。每个手机号仅限获奖一次，请实名参与。</div>
 		  <div style="margin-top:25px;padding-left:12px;margin-bottom:25px;line-height:1.8">2、	300份话费奖励发完或超出活动时间参与答题均无效。</div>
 		  <div style="margin-top:25px;padding-left:12px;margin-bottom:50px;line-height:1.8">3、	参与本次活动的手机号码必须为温州移动用户。</div>
 		  <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#CC0001; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">选择题</button>
@@ -540,15 +540,15 @@ else
 	<table width="103%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
       <tbody id="tbName" >
       <tr>
-        <td height="20"><p></p><strong>1、社会主义道德建设以(   )为核心。</strong>
+        <td height="20"><p></p><strong>1、在交通工具上我们不建议做以下哪种行为：</strong>
           <p><input type="radio" name="c1" value="1" style="width:55px; height:55px;"/>
-		    A. 为人民服务</p>
+		    A. 主动让座</p>
           <p> 
             <input type="radio" name="c1" value="2" style="width:55px; height:55px;"/>
-            B. 集体主义</p>
+            B. 主动投币</p>
           <p style="line-height:1.8">
             <input type="radio" name="c1" value="3" style="width:55px; height:55px;"/>
-            C. 爱祖国、爱人民、爱劳动、爱科学、爱社会主义</p>
+            C. 进食</p>
           </td>
       </tr>
 	  </tbody>
@@ -556,15 +556,15 @@ else
 	  
 	   <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>2、社会主义道德建设是以(   )、职业道德、家庭美德为建设的落脚点。</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>2、如果在市场购买肉类，应优先选择：</strong></div>
           <p><input type="radio" name="c2" value="1" style="width:55px; height:55px;"/>
-		    A. 社会公德</p>
+		    A. 冰鲜鸡</p>
           <p> 
             <input type="radio" name="c2" value="2" style="width:55px; height:55px;"/>
-            B. 基本道德规范</p>
+            B. 穿山甲</p>
           <p>
             <input type="radio" name="c2" value="3" style="width:55px; height:55px;"/>
-            C. 为人民服务</p>
+            C. 果子狸</p>
           </td>
       </tr>
 	  </tbody>
@@ -572,60 +572,60 @@ else
 	  
 	 <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>3、社会公德基本规范包含(   )、助人为乐、爱护公物、保护环境、遵纪守法。</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>3、四害”不包括：</strong></div>
           <p> <input type="radio" name="c3" value="1" style="width:55px; height:55px;"/>
-		    A. 文明礼貌</p>
+		    A. 跳蚤</p>
           <p>
             <input type="radio" name="c3" value="2" style="width:55px; height:55px;"/>
-            B. 办事公道</p>
+            B. 苍蝇</p>
           <p>
             <input type="radio" name="c3" value="3" style="width:55px; height:55px;"/>
-            C. 男女公平</p>
+            C. 老鼠</p>
         </td>
       </tr>
 	  </tbody>
 	  
 	   <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>4、公民道德基本规范包含爱国守法、明礼诚信、(   )、勤俭自强、敬业奉献。</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>4、为了保护环境，我们应该：</strong></div>
           <p> <input type="radio" name="c4" value="1" style="width:55px; height:55px;"/>
-		    A. 团结友善</p>
+		    A. 垃圾分类</p>
           <p>
             <input type="radio" name="c4" value="2" style="width:55px; height:55px;"/>
-            B. 以和为贵</p>
+            B. 多开车出行</p>
           <p>
             <input type="radio" name="c4" value="3" style="width:55px; height:55px;"/>
-            C. 同仇敌忾</p>
+            C. 多用一次性餐具</p>
 		   </td>
       </tr>
 	  </tbody>
 	  
 	  <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>5、职业道德的主要规范包含爱岗敬业、(   )、办事公道、服务群众、奉献社会。</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>5、爱国卫生月为每年的：</strong></div>
           <p> <input type="radio" name="c5" value="1" style="width:55px; height:55px;"/>
-		    A. 诚实守信</p>
+		    A. 3月</p>
           <p>
             <input type="radio" name="c5" value="2" style="width:55px; height:55px;"/>
-            B. 文明礼貌</p>
+            B. 4月</p>
           <p>
             <input type="radio" name="c5" value="3" style="width:55px; height:55px;"/>
-            C. 爱护公物</p>
+            C. 5月</p>
             </td>
       </tr>
 	  </tbody>
 	  
 	  <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>6、家庭美德的主要规范包含(   )、男女平等、夫妻和睦、勤俭持家、邻里团结。</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>6、属于农村“两管、五改”中“五改”的是：</strong></div>
           <p><input type="radio" name="c6" value="1" style="width:55px; height:55px;"/>
-		    A. 尊老爱幼</p>
+		    A. 改路</p>
           <p>
             <input type="radio" name="c6" value="2" style="width:55px; height:55px;"/>
-            B. 文明礼貌</p>
+            B. 改厕</p>
           <p>
             <input type="radio" name="c6" value="3" style="width:55px; height:55px;"/>
-            C. 遵纪守法</p>
+            C. 改地</p>
 		  </td>
       </tr>
 	  </tbody>
@@ -634,15 +634,15 @@ else
 
 	 <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p></p><strong>7、(   )是公民道德的最低层次的要求。</strong>
+        <td height="20" bgcolor="#FFFFFF"><p></p><strong>7、用过的餐巾纸、包装、食物残渣应放在：</strong>
           <p><input type="radio" name="c7" value="1" style="width:55px; height:55px;"/>
-		    A. 平等</p>
+		    A. 花丛中</p>
           <p>
             <input type="radio" name="c7" value="2" style="width:55px; height:55px;"/>
-            B. 守法</p>
+            B. 地上</p>
           <p>
             <input type="radio" name="c7" value="3" style="width:55px; height:55px;"/>
-            C. 文明</p>
+            C. 指定垃圾桶</p>
 		</td>
       </tr>
 	  </tbody>
@@ -650,15 +650,15 @@ else
 	  
 	 <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p></p><strong>8、(   )是公民对国家的最首要的道德义务。</strong>
+        <td height="20" bgcolor="#FFFFFF"><p></p><strong>8、中央爱国卫生运动委员会第一届主任是：</strong>
           <p> <input type="radio" name="c8" value="1" style="width:55px; height:55px;"/>
-		    A. 爱国守法</p>
+		    A. 朱德</p>
           <p>
             <input type="radio" name="c8" value="2" style="width:55px; height:55px;"/>
-            B. 明礼诚实</p>
+            B. 刘少奇</p>
           <p>
             <input type="radio" name="c8" value="3" style="width:55px; height:55px;"/>
-            C. 团结友善</p>
+            C. 周恩来</p>
        </td>
       </tr>
 	  </tbody>
@@ -667,15 +667,15 @@ else
       
 	 <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>9、在人际交往中注意自己的(   ),比如要做到衣冠整洁，举止文雅，这是对别人的一种尊重。</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>9、不属于传播爱国卫生运动精神的是：</strong></div>
           <p> <input type="radio" name="c9" value="1" style="width:55px; height:55px;"/>
-		    A. 个人谈吐</p>
+		    A. 热爱祖国</p>
           <p>
             <input type="radio" name="c9" value="2" style="width:55px; height:55px;"/>
-            B. 个人容貌</p>
+            B. 讲文明卫生</p>
           <p>
             <input type="radio" name="c9" value="3" style="width:55px; height:55px;"/>
-            C. 个人形象</p>
+            C. 好逸恶劳</p>
        </td>
       </tr>
 	  </tbody>
@@ -684,15 +684,15 @@ else
 	    
 	 <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>10、社会公德的基本要求是：以社会主人翁的责任感，维护和珍惜国家、集体的财产，(   )。</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>10、应邀赴宴过程中，我们应该：</strong></div>
           <p> <input type="radio" name="c10" value="1" style="width:55px; height:55px;"/>
-		    A. 保护个人财产安全</p>
+		    A. 吸烟</p>
           <p>
             <input type="radio" name="c10" value="2" style="width:55px; height:55px;"/>
-            B. 保护他人财产安全 </p>
+            B. 使用公筷</p>
           <p>
             <input type="radio" name="c10" value="3" style="width:55px; height:55px;"/>
-            C. 爱护公物</p>
+            C. 劝酒</p>
        </td>
       </tr>
 	  </tbody>
@@ -700,45 +700,45 @@ else
 	  
 	   <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>11、孔子曾曰：“民无信不立。”体现了社会主义职业道德中(   )的内容。</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>11、乐清市创成国家卫生城市在哪一年：</strong></div>
           <p> <input type="radio" name="c11" value="1" style="width:55px; height:55px;"/>
-		    A. 诚实守信</p>
+		    A. 2016年</p>
           <p>
             <input type="radio" name="c11" value="2" style="width:55px; height:55px;"/>
-            B. 办事公道</p>
+            B. 2017年</p>
           <p>
             <input type="radio" name="c11" value="3" style="width:55px; height:55px;"/>
-            C. 奉献社会</p>
+            C. 2018年</p>
        </td>
       </tr>
 	  </tbody>
 	  
 	   <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>12、为人民服务不仅是对共产党员和领导干部的要求，也是对(   )的要求。</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>12、乐清市将在哪一年迎接国家卫生城市第一轮复评：</strong></div>
           <p> <input type="radio" name="c12" value="1" style="width:55px; height:55px;"/>
-		    A. 广大群众</p>
+		    A. 2020年</p>
           <p>
             <input type="radio" name="c12" value="2" style="width:55px; height:55px;"/>
-            B. 社会各界</p>
+            B. 2021年</p>
           <p>
             <input type="radio" name="c12" value="3" style="width:55px; height:55px;"/>
-            C. 共青团员和青少年</p>
+            C. 2022年</p>
        </td>
       </tr>
 	  </tbody>
 	  
 	   <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p></p><strong>13、(   )是人们接受道德教育最早的地方。</strong>
+        <td height="20" bgcolor="#FFFFFF"><p></p><strong>13、导致温室效应的主要气体是：</strong>
           <p> <input type="radio" name="c13" value="1" style="width:55px; height:55px;"/>
-		    A. 幼儿园</p>
+		    A. 一氧化碳</p>
           <p>
             <input type="radio" name="c13" value="2" style="width:55px; height:55px;"/>
-            B. 家庭</p>
+            B. 二氧化碳</p>
           <p>
             <input type="radio" name="c13" value="3" style="width:55px; height:55px;"/>
-            C. 学校</p>
+            C. PM2.5</p>
        </td>
       </tr>
 	  </tbody>
@@ -746,30 +746,30 @@ else
 	  
 	   <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p></p><strong>14、新时期爱国主义的基本责任是(   )</strong>
+        <td height="20" bgcolor="#FFFFFF"><p></p><strong>14、健康的解压方式包括：</strong>
           <p> <input type="radio" name="c14" value="1" style="width:55px; height:55px;"/>
-		    A. 坚持社会主义制度</p>
+		    A. 调整自己的想法</p>
           <p>
             <input type="radio" name="c14" value="2" style="width:55px; height:55px;"/>
-            B. 坚持中国共产党的领导</p>
+            B. 饮酒</p>
           <p>
             <input type="radio" name="c14" value="3" style="width:55px; height:55px;"/>
-            C. 维护国家统一和安全</p>
+            C. 沉迷游戏</p>
        </td>
       </tr>
 	  </tbody>
 	  
 	 <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>15、2003年9月11日，中央精神文明建设指导委员会决定，将中央印发《公民道德建设实施纲要》的(   )定为“公民道德宣传日”。</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>15、不正确的洗手方法包括:</strong></div>
           <p> <input type="radio" name="c15" value="1" style="width:55px; height:55px;"/>
-		    A. 9月20日</p>
+		    A. 用流动水洗手</p>
           <p>
             <input type="radio" name="c15" value="2" style="width:55px; height:55px;"/>
-            B. 9月18日</p>
+            B. 用脸盆盛放清洁的水洗手</p>
           <p>
             <input type="radio" name="c15" value="3" style="width:55px; height:55px;"/>
-            C. 9月10日</p>
+            C. 必须使用皂液(肥皂)等清洁剂</p>
            
             <div style="float:right" onClick="button3();"><img src="img/xxzl2.png" border="0"></div>
        </td>

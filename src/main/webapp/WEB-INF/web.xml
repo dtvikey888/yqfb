@@ -214,7 +214,7 @@
     </init-param>
     <init-param>
       <param-name>appsecret</param-name>
-      <param-value>2c23d4703052129000cf2d98c8e4557c</param-value>
+      <param-value>c9e3f005595e56c8b753d97f5a67978c</param-value>
     </init-param>
     <load-on-startup>0</load-on-startup>
 

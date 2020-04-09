@@ -4,7 +4,7 @@ public class AllValus {
 
     //乐清发布微信 appid appsecret
     public static String appid = "wx86facd0a863aca12";
-    public static String appsecret = "2c23d4703052129000cf2d98c8e4557c";
+    public static String appsecret = "c9e3f005595e56c8b753d97f5a67978c";
 
 
     public static String memo="乐清发布";
@@ -65,9 +65,15 @@ public class AllValus {
 
     public static String errpage="http://www.yqrb.com.cn/yqfb/bl2/success.jsp";
 
+    public static String errpage2="http://www.yqrb.com.cn/yqfb/bl4/success.jsp";
+
     public static String success_lan="您已答对10道题（及以上），填写正确的联系方式，以便获取奖品!";
     public static String csc_lan="答题已经超过100000次，谢谢关注！";
     public static String error_lan="您的答题错误率过高，请重新答题";
+
+    public static String success_lp_lan="您已答对10道题（及以上），填写正确的联系方式，以便获取奖品!";
+    public static String csc_lp_lan="答题已经超过100000次，谢谢关注！";
+    public static String error_lp_lan="您的答题错误率过高，请重新答题";
 
     public static String success_tj="答题正确，填写联系方式!";
     public static String success_tj2="提交用户联系方式完成";
@@ -83,15 +89,24 @@ public class AllValus {
     public static String daf_link="http://www.yqrb.com.cn/yqfb/bl2/index.jsp";
     public static String daf_img="http://www.yqrb.com.cn/upload/daf_log.png";
 
-    //公民道德日起止时间 9.20-9.22
+    public static String daf_lp_title="公民道德日2";
+    public static String daf_lp_desc="今年9月20日是全国第17个公民道德宣传日2。";
+    public static String daf_lp_link="http://www.yqrb.com.cn/yqfb/bl4/index.jsp";
+    public static String daf_lp_img="http://www.yqrb.com.cn/upload/daf_log.png";
+
+    //公民道德日起止时间 4.15-4.17
     public static String daf_t1="2020-04-07 00:00:00";
-    public static String daf_t2="2020-04-12 16:00:00";
+    public static String daf_t2="2020-04-18 00:00:00";
+
+    //公民道德日起止时间 9.20-9.22
+    public static String daf_p1="2020-04-07 00:00:00";
+    public static String daf_p2="2020-04-12 16:00:00";
 
     //林佩档案法各个奖项设置(YY的道德修养奖)
     public static int  lpgg1 = 10; //50话费 10份
-    public static int  lpgg2 = 20; //40话费 20份
+    public static int  lpgg2 = 30; //30话费 30份
     public static int  lpgg3 = 50; //20元话费 50名
-    public static int  lpgg4 = 220; //10元话费 220名
+    public static int  lpgg4 = 210; //10元话费 210名
 //   public static int  lpgg5 = 600; //5等奖5 750名
 
 
