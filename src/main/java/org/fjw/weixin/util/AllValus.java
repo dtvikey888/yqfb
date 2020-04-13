@@ -102,11 +102,11 @@ public class AllValus {
     public static String daf_p1="2020-04-07 00:00:00";
     public static String daf_p2="2020-04-21 00:00:00";
 
-    //林佩档案法各个奖项设置(YY的道德修养奖)（当前爱卫答题）
-    public static int  lpgg1 = 10; //50话费 10份
-    public static int  lpgg2 = 30; //30话费 30份
-    public static int  lpgg3 = 50; //20元话费 50名
-    public static int  lpgg4 = 210; //10元话费 210名
+    //林佩档案法各个奖项设置(YY的道德修养奖)（当前健康局爱卫答题）
+    public static int  lpgg1 = 5; //50话费 10份
+    public static int  lpgg2 = 25; //30话费 30份
+    public static int  lpgg3 = 45; //20元话费 50名
+    public static int  lpgg4 = 200; //10元话费 210名
 //   public static int  lpgg5 = 600; //5等奖5 750名
 
     //林佩答题

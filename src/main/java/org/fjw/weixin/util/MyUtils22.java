@@ -286,12 +286,16 @@ public class MyUtils22 {
 
 			}else{
 
-				//不存在 不处理
-				String sql ="insert into daf_cj(openid,xm,tel,fbsj,bh) VALUES('"+openid+"','"+xm+"','"+tel+"','"+TimeString.nowTime()+"','"+bh+"') ";
+				if(openid!=null) {
+
+					//不存在 不处理
+					String sql = "insert into daf_cj(openid,xm,tel,fbsj,bh) VALUES('" + openid + "','" + xm + "','" + tel + "','" + TimeString.nowTime() + "','" + bh + "') ";
 					db.executeInsert(sql);
 					System.out.println(sql);
 
-				bz=2;
+					bz = 2;
+
+				}
 
 			}
 
@@ -410,11 +414,11 @@ public class MyUtils22 {
 					}else {
 						//一等奖10
 						if(TimeString.nowTime().indexOf("2020-04-15")!=-1){
-							sy = 5 -zjs;
-						}else if(TimeString.nowTime().indexOf("2020-04-16")!=-1){
 							sy = 3 -zjs;
+						}else if(TimeString.nowTime().indexOf("2020-04-16")!=-1){
+							sy = 1 -zjs;
 						}else if(TimeString.nowTime().indexOf("2020-04-17")!=-1){
-							sy = 2 -zjs;
+							sy = 1 -zjs;
 						}else {
 							sy = 0;
 						}
@@ -429,7 +433,7 @@ public class MyUtils22 {
 					}else {
 						//二等奖30
 						if(TimeString.nowTime().indexOf("2020-04-15")!=-1){
-							sy=20-zjs;
+							sy=15-zjs;
 						}else if(TimeString.nowTime().indexOf("2020-04-16")!=-1){
 							sy = 5 -zjs;
 						}else if(TimeString.nowTime().indexOf("2020-04-17")!=-1){
@@ -449,7 +453,7 @@ public class MyUtils22 {
 					}else {
 						//3等奖50
 						if(TimeString.nowTime().indexOf("2020-04-15")!=-1){
-							sy=30-zjs;
+							sy=25-zjs;
 						}else if(TimeString.nowTime().indexOf("2020-04-16")!=-1){
 							sy = 15 -zjs;
 						}else if(TimeString.nowTime().indexOf("2020-04-17")!=-1){
@@ -469,7 +473,7 @@ public class MyUtils22 {
 					}else {
 						//4等奖210
 						if(TimeString.nowTime().indexOf("2020-04-15")!=-1){
-							sy=160-zjs;
+							sy=150-zjs;
 						}else if(TimeString.nowTime().indexOf("2020-04-16")!=-1){
 							sy = 40 -zjs;
 						}else if(TimeString.nowTime().indexOf("2020-04-17")!=-1){

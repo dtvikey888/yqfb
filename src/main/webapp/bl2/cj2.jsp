@@ -24,7 +24,7 @@ String check=Topay.WxJsApiCheck5(urlname,openid,zsm);
 
  <%
     //这里开始提交用户数据
-    int fhz = MyUtils22.StartCJLR2(tel,MyUtils2.codetoString(openid),MyUtils2.codetoString(zsm));
+    int fhz = MyUtils22.StartCJLR2(tel,openid,zsm);
     //1 已经抽过奖(提交数据失败，然后关闭页面) 2.提交数据成功,然后关闭页面.
   %>
   

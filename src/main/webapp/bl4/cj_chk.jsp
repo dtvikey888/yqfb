@@ -530,7 +530,7 @@ function bodys(height,width){
 
                     //利用对话框返回的值 （true 或者 false）
 
-                    location.href="<%=AllValus.propath%>bl2/cj2.jsp?tel=<%=tel%>&openid="+opp+"&zsm="+zj1+" ";
+                    location.href="<%=AllValus.propath%>bl4/cj2.jsp?tel=<%=tel%>&openid="+opp+"&zsm="+zj1+" ";
 
                     //var truthBeTold = window.confirm(x);
 					//if (truthBeTold) {

@@ -285,12 +285,15 @@ public class MyUtils25 {
 
 			}else{
 
-				//不存在 不处理
-				String sql ="insert into daf_cj4(openid,xm,tel,fbsj,bh) VALUES('"+openid+"','"+xm+"','"+tel+"','"+TimeString.nowTime()+"','"+bh+"') ";
-					db.executeInsert(sql);
-					System.out.println(sql);
+			    if(openid!=null) {
 
-				bz=2;
+                    //不存在 不处理
+                    String sql = "insert into daf_cj4(openid,xm,tel,fbsj,bh) VALUES('" + openid + "','" + xm + "','" + tel + "','" + TimeString.nowTime() + "','" + bh + "') ";
+                    db.executeInsert(sql);
+                    System.out.println(sql);
+
+                    bz = 2;
+                }
 
 			}
 
