@@ -84,8 +84,8 @@ public class AllValus {
     public static String cg_cx="恭喜您获得10元话费奖励，我们会在活动结束后为您充值，谢谢参与";
 
 
-    public static String daf_title="第32个爱国卫生月知识竞答";
-    public static String daf_desc="今年4月是第32个爱国卫生月，今年的活动主题是-防疫有我，爱卫同行。";
+    public static String daf_title="第32个爱国卫生月知识问答";
+    public static String daf_desc="今年4月是第32个爱国卫生月，今年的活动主题是防疫有我，爱卫同行。";
     public static String daf_link="http://www.yqrb.com.cn/yqfb/bl2/index.jsp";
     public static String daf_img="http://www.yqrb.com.cn/upload/IMG_TOP5.jpg";
 
