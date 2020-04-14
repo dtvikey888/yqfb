@@ -498,13 +498,13 @@ else
 <%}%>
 
 <div id="mcover2" onClick="weChat2()" style="display:none;">
-  <img src="img/tip6.png"/>
+  <img src="img/tip7.png"/>
 </div>
 
 <form name="form1" method="get" action="tp.jsp">
 <table width="100%" height="302" border="0" cellpadding="0" cellspacing="0" style="background-color:#ececee">
   <tr>
-    <td height="600" align="center" valign="top" bgcolor="#FFFFFF" style="background:url(img/IMG_TOP3.png) no-repeat top center;background-size: 100% 100%;"><table width="95%" cellspacing="2" cellpadding="0">
+    <td height="600" align="center" valign="top" bgcolor="#FFFFFF" style="background:url(img/IMG_TOP5.jpg) no-repeat top center;background-size: 100% 100%;"><table width="95%" cellspacing="2" cellpadding="0">
       <tr>
         <td height="10" colspan="2" align="right">&nbsp;</td>
       </tr>
@@ -517,7 +517,7 @@ else
   <tr>
     <td align="center" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="30">
       <tr>
-        <td colspan="2" align="left"><p><strong><div style="line-height:1.8;text-indent:2em;">今年4月是第32个爱国卫生月，今年的活动主题是“防疫有我，爱卫同行”。为了加大本次爱国卫生月的宣传力度，普及爱国卫生和防疫知识，引导群众树立健康卫生意识，乐清市爱卫办、乐清市卫健局、乐清市日报社联合举办乐清市“第32个爱国卫生月”知训有奖问答活动。</div></strong></P></td>
+        <td colspan="2" align="left"><p><strong><div style="line-height:1.8;text-indent:2em;">今年4月是第32个爱国卫生月，今年的活动主题是“防疫有我，爱卫同行”。为了加大本次爱国卫生月的宣传力度，普及爱国卫生和防疫知识，引导群众树立健康卫生意识，乐清市爱卫办、乐清市卫健局、乐清市日报社联合举办乐清市“第32个爱国卫生月”知识有奖问答活动。</div></strong></P></td>
         </tr>
       <tr>
         <td height="50" colspan="2">
@@ -529,7 +529,8 @@ else
 	      <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#CC0001; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">活动规则</button>  
 		  <div style="margin-top:50px;padding-left:12px;line-height:1.8">1、  共有15道爱国卫生月基础题，全部答对其中10道题，即可参与刮刮卡抽奖活动。每个手机号仅限获奖一次，请实名参与。</div>
 		  <div style="margin-top:25px;padding-left:12px;margin-bottom:25px;line-height:1.8">2、  300份话费奖励完成或超出活动时间参与答题均无效。</div>
-		  <div style="margin-top:25px;padding-left:12px;margin-bottom:50px;line-height:1.8">3、	参与本次活动的手机必须为浙江移动用户。</div>
+		  <div style="margin-top:25px;padding-left:12px;margin-bottom:50px;line-height:1.8">3、	活动对象：手机号码为浙江移动用户</div>
+          <div style="margin-top:25px;padding-left:12px;margin-bottom:50px;line-height:1.8">4、	赠送话费将在活动结束后5个工作日内到账。</div>
 		  <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#CC0001; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">选择题</button>
         </td>
       </tr>
@@ -540,7 +541,7 @@ else
 	<table width="103%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
       <tbody id="tbName" >
       <tr>
-        <td height="20"><p></p><strong>1、在交通工具上我们不建议做以下哪种行为：</strong>
+        <td height="20"><p></p><div style="line-height:1.8"><strong>1、在交通工具上我们不建议做以下哪种行为：</strong></div>
           <p><input type="radio" name="c1" value="1" style="width:55px; height:55px;"/>
 		    A. 主动让座</p>
           <p> 
