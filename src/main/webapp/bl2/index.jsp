@@ -517,7 +517,7 @@ else
   <tr>
     <td align="center" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="30">
       <tr>
-        <td colspan="2" align="left"><p><strong><div style="line-height:1.8;text-indent:2em;">今年4月是第32个爱国卫生月，今年的活动主题是“防疫有我，爱卫同行”。为了加大本次爱国卫生月的宣传力度，普及爱国卫生和防疫知识，打造健康、绿色环境，乐清市爱卫办、乐清市卫健局、乐清市日报社联合举办乐清市“爱国卫生月”有奖问答活动。</div></strong></P></td>
+        <td colspan="2" align="left"><p><strong><div style="line-height:1.8;text-indent:2em;">今年4月是第32个爱国卫生月，今年的活动主题是“防疫有我，爱卫同行”。为了加大本次爱国卫生月的宣传力度，普及爱国卫生和防疫知识，引导群众树立健康卫生意识，乐清市爱卫办、乐清市卫健局、乐清市日报社联合举办乐清市“第32个爱国卫生月”知训有奖问答活动。</div></strong></P></td>
         </tr>
       <tr>
         <td height="50" colspan="2">
@@ -527,9 +527,9 @@ else
 	      <div align="center" style="margin-top:25px;margin-bottom:25px;line-height:1.8">三等奖50份: 20元移动话费</div>
 	      <div align="center" style="margin-top:25px;margin-bottom:50px;line-height:1.8">参与奖210份:10元移动话费</div>
 	      <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#CC0001; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">活动规则</button>  
-		  <div style="margin-top:50px;padding-left:12px;line-height:1.8">1、共有15道爱国卫生月基础题，答对其中10道，即可参与刮刮卡抽奖活动。每个手机号仅限获奖一次，请实名参与。</div>
-		  <div style="margin-top:25px;padding-left:12px;margin-bottom:25px;line-height:1.8">2、	300份话费奖励发完或超出活动时间参与答题均无效。</div>
-		  <div style="margin-top:25px;padding-left:12px;margin-bottom:50px;line-height:1.8">3、	参与本次活动的手机号码必须为温州移动用户。</div>
+		  <div style="margin-top:50px;padding-left:12px;line-height:1.8">1、  共有15道爱国卫生月基础题，全部答对其中10道题，即可参与刮刮卡抽奖活动。每个手机号仅限获奖一次，请实名参与。</div>
+		  <div style="margin-top:25px;padding-left:12px;margin-bottom:25px;line-height:1.8">2、  300份话费奖励完成或超出活动时间参与答题均无效。</div>
+		  <div style="margin-top:25px;padding-left:12px;margin-bottom:50px;line-height:1.8">3、	参与本次活动的手机必须为浙江移动用户。</div>
 		  <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#CC0001; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">选择题</button>
         </td>
       </tr>

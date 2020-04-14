@@ -84,8 +84,8 @@ public class AllValus {
     public static String cg_cx="恭喜您获得10元话费奖励，我们会在活动结束后为您充值，谢谢参与";
 
 
-    public static String daf_title="公民道德日";
-    public static String daf_desc="今年9月20日是全国第17个公民道德宣传日。";
+    public static String daf_title="第32个爱国卫生月知识竞答";
+    public static String daf_desc="今年4月是第32个爱国卫生月，今年的活动主题是-防疫有我，爱卫同行。";
     public static String daf_link="http://www.yqrb.com.cn/yqfb/bl2/index.jsp";
     public static String daf_img="http://www.yqrb.com.cn/upload/daf_log.png";
 
@@ -94,11 +94,11 @@ public class AllValus {
     public static String daf_lp_link="http://www.yqrb.com.cn/yqfb/bl4/index.jsp";
     public static String daf_lp_img="http://www.yqrb.com.cn/upload/daf_log.png";
 
-    //公民道德日起止时间 4.15-4.17
-    public static String daf_t1="2020-04-07 00:00:00";
+    //第32个爱国卫生月知识竞答 起止时间 4.15-4.17
+    public static String daf_t1="2020-04-13 00:00:00";
     public static String daf_t2="2020-04-18 00:00:00";
 
-    //公民道德日起止时间 9.20-9.22
+    //公民道德日起止时间 起止时间 9.20-9.22
     public static String daf_p1="2020-04-07 00:00:00";
     public static String daf_p2="2020-04-21 00:00:00";
 
