@@ -87,7 +87,7 @@ public class AllValus {
     public static String daf_title="第32个爱国卫生月知识竞答";
     public static String daf_desc="今年4月是第32个爱国卫生月，今年的活动主题是-防疫有我，爱卫同行。";
     public static String daf_link="http://www.yqrb.com.cn/yqfb/bl2/index.jsp";
-    public static String daf_img="http://www.yqrb.com.cn/upload/daf_log.png";
+    public static String daf_img="http://www.yqrb.com.cn/upload/IMG_TOP3.png";
 
     public static String daf_lp_title="公民道德日2";
     public static String daf_lp_desc="今年9月20日是全国第17个公民道德宣传日2。";
