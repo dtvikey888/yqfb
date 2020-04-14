@@ -539,7 +539,7 @@ d{color:#fff;}
 	<table width="103%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
       <tbody id="tbName" >
       <tr>
-        <td height="20"><p></p><strong>1、社会主义道德建设以(   )为核心。</strong>
+          <td height="20"><p></p><div style="line-height:1.8"><strong>1、社会主义道德建设以(   )为核心。</strong></div>
           <p><input type="radio" name="c1" value="1" style="width:55px; height:55px;"/>
 		    A. 为人民服务</p>
           <p> 
