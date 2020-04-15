@@ -382,7 +382,7 @@ switch (num)
         break;
 
     case 4:
-        num2=4
+        num2=4;
         break;
 
 }

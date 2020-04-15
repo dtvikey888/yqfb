@@ -71,7 +71,7 @@ public class AllValus {
     public static String csc_lan="答题已经超过100000次，谢谢关注！";
     public static String error_lan="您的答题错误率过高，请重新答题";
 
-    public static String success_lp_lan="您已答对10道题（及以上），填写正确的联系方式，以便获取奖品!";
+    public static String success_lp_lan="您已答对全部题目，填写正确的联系方式，以便获取奖品!";
     public static String csc_lp_lan="答题已经超过100000次，谢谢关注！";
     public static String error_lp_lan="您的答题错误率过高，请重新答题";
 
@@ -89,8 +89,8 @@ public class AllValus {
     public static String daf_link="http://www.yqrb.com.cn/yqfb/bl2/index.jsp";
     public static String daf_img="http://www.yqrb.com.cn/upload/IMG_TOP5.jpg";
 
-    public static String daf_lp_title="公民道德日2";
-    public static String daf_lp_desc="今年9月20日是全国第17个公民道德宣传日2。";
+    public static String daf_lp_title="公共文化服务体系示范区创建问答活动";
+    public static String daf_lp_desc="为进一步推动公共文化服务广覆盖、高效能，构建基本完善的公共文化服务体系。乐清大力推进国家公共文化服务体系示范区创建工作，不断满足人民日益增长的美好生活需要，提升人民群众的幸福感和获得感，市文广旅体局联合乐清日报社开展有奖问答活动。";
     public static String daf_lp_link="http://www.yqrb.com.cn/yqfb/bl4/index.jsp";
     public static String daf_lp_img="http://www.yqrb.com.cn/upload/daf_log.png";
 
@@ -102,18 +102,21 @@ public class AllValus {
     public static String daf_p1="2020-04-07 00:00:00";
     public static String daf_p2="2020-04-21 00:00:00";
 
-    //林佩档案法各个奖项设置(YY的道德修养奖)（当前健康局爱卫答题）
+    //云云 健康局爱卫答题抽奖
     public static int  lpgg1 = 5; //50话费 10份
     public static int  lpgg2 = 25; //30话费 30份
     public static int  lpgg3 = 45; //20元话费 50名
     public static int  lpgg4 = 200; //10元话费 210名
 //   public static int  lpgg5 = 600; //5等奖5 750名
 
-    //林佩答题
-    public static int  lptg1 = 10; //50话费 10份
-    public static int  lptg2 = 30; //30话费 30份
-    public static int  lptg3 = 50; //20元话费 50名
-    public static int  lptg4 = 210; //10元话费 210名
+    //林佩 文广新局答题抽奖
+    public static int  lptg1 = 0; //特等奖 1名：  价值4999元   华为手机
+    public static int  lptg2 = 1; //一等奖 2名：  价值1299元   小米扫地机器
+    public static int  lptg3 = 6; //二等奖 10名： 价值99元      九阳多功能料理机
+    public static int  lptg4 = 6; //三等奖 10名： 价值79元      天猫精灵方糖智能音箱
+    public static int  lptg5 = 280; //参与奖 300名：充电宝、小米背包、飞科电吹风等......
+    public static int  lptg6 = 15; //特别奖20名：价值249元小米旅行箱
+
 
 
     //阿蒙文明餐桌之光盘大作战 起止时间

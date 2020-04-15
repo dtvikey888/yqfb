@@ -3,25 +3,37 @@
 <%@page import="org.fjw.weixin.util.AllValus"%>
 <%
 String openid = request.getParameter("openid");
-int c1 = new Integer(request.getParameter("c1"));
-int c2 = new Integer(request.getParameter("c2"));
-int c3 = new Integer(request.getParameter("c3"));
-int c4 = new Integer(request.getParameter("c4"));
-int c5 = new Integer(request.getParameter("c5"));
-int c6 = new Integer(request.getParameter("c6"));
-int c7 = new Integer(request.getParameter("c7"));
-int c8 = new Integer(request.getParameter("c8"));
-int c9 = new Integer(request.getParameter("c9"));
-int c10 = new Integer(request.getParameter("c10"));
-int c11 = new Integer(request.getParameter("c11"));
-int c12 = new Integer(request.getParameter("c12"));
-int c13 = new Integer(request.getParameter("c13"));
-int c14 = new Integer(request.getParameter("c14"));
-int c15 = new Integer(request.getParameter("c15"));
-int bz=MyUtils25.DtRl(openid,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,c14,c15);
+String c1 = request.getParameter("c1");
+String[] c2=null;
+String cs2="";
+if(request.getParameterValues("c2")!=null){
+	c2=request.getParameterValues("c2");
+	for(int i=1;i<c2.length;i++){
+		cs2+=c2[i]+",";
+	}
+}
+String c3 = request.getParameter("c3");
+String[] c4=null;
+String cs4="";
+if(request.getParameterValues("c4")!=null){
+	c4=request.getParameterValues("c4");
+	for(int i=1;i<c4.length;i++){
+		cs4+=c4[i]+",";
+	}
+}
+String c5 = request.getParameter("c5");
+String c6 = request.getParameter("c6");
+String[] c7=null;
+String cs7="";
+if(request.getParameterValues("c7")!=null){
+	c7=request.getParameterValues("c7");
+	for(int i=1;i<c7.length;i++){
+		cs7+=c7[i]+",";
+	}
+}
+	int bz=MyUtils25.DtRl(openid,c1,cs2,c3,cs4,c5,c6,cs7);
 //out.println(bz);
 //out.close();
-//AACA BBCC AB
 if(bz==1){
 
 	out.print("<script type=\"text/javascript\">alert('"+AllValus.success_lp_lan+"');document.location.href='cj.jsp?openid="+openid+"';</script>");

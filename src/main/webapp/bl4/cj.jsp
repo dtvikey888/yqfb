@@ -161,13 +161,15 @@ int t1 = MyUtils25.sy1(); //一等奖总数剩余名额
 int t2 = MyUtils25.sy2(); //二等奖总数剩余名额
 int t3 = MyUtils25.sy3(); //三等奖总数剩余名额
 int t4 = MyUtils25.sy4(); //四等奖总数剩余名额
-//int t5 = MyUtils25.sy5();
+int t5 = MyUtils25.sy5(); //五等奖总数剩余名额
+int t6 = MyUtils25.sy6(); //六等奖总数剩余名额
 
-System.out.println(t1);
-System.out.println(t2);
-System.out.println(t3);
-System.out.println(t4);
+//System.out.println(t1);
+//System.out.println(t2);
+//System.out.println(t3);
+//System.out.println(t4);
 //System.out.println(t5);
+//System.out.println(t6);
 %>
 
 	</head>
@@ -243,7 +245,7 @@ System.out.println(t4);
 		else%>
 		-->
           <div class="form-btn">
-          <% if(t1<=0 && t2<=0 && t3<=0 && t4<=0){ %>
+          <% if(t1<=0 && t2<=0 && t3<=0 && t4<=0 && t5<=0 && t6<=0){ %>
           
           <%}else{ %>
   <button type="submit" gaevent="imt/account/address/addBtn" class="btn btn-block" id="btn-login" onClick="document.form1.action='cj_chk.jsp';if(DataLength(form1.xm.value)<2){alert('姓名最少2个字');form1.xm.focus();return false};if(DataLength(form1.tel.value)<2){alert('请填写正确的联系方式');form1.tel.focus();return false};document.form1.submit();">提 交</button>

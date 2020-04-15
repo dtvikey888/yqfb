@@ -3,7 +3,7 @@
 <%@page import="org.fjw.weixin.util.MyUtils2"%>
 <%@page import="org.fjw.weixin.util.MyUtils25"%>
 <%@page import="org.fjw.weixin.util.AllValus"%>
-<%@page import="org.fjw.weixin.util.MathRandom4"%>
+<%@page import="org.fjw.weixin.util.MathRandom6"%>
 <%
 
 String openid = request.getParameter("openid");
@@ -96,15 +96,16 @@ int t1 = MyUtils25.sy1(); //Ò»µÈ½±×ÜÊıÊ£ÓàÃû¶î
 int t2 = MyUtils25.sy2(); //¶şµÈ½±×ÜÊıÊ£ÓàÃû¶î
 int t3 = MyUtils25.sy3(); //ÈıµÈ½±×ÜÊıÊ£ÓàÃû¶î
 int t4 = MyUtils25.sy4(); //ËÄµÈ½±×ÜÊıÊ£ÓàÃû¶î
-//int t5 = MyUtils25.sy5();
+int t5 = MyUtils25.sy5();
+int t6 = MyUtils25.sy6();
 
 
-
-System.out.println(t1);
-System.out.println(t2);
-System.out.println(t3);
-System.out.println(t4);
+//System.out.println(t1);
+//System.out.println(t2);
+//System.out.println(t3);
+//System.out.println(t4);
 //System.out.println(t5);
+//System.out.println(t6);
 
    %>
 
@@ -117,7 +118,8 @@ int day_sy1 = MyUtils25.TodaySY(1); //Ò»µÈ½±µ±ÌìÊ£ÓàÃû¶î
 int day_sy2 = MyUtils25.TodaySY(2); //¶şµÈ½±µ±ÌìÊ£ÓàÃû¶î
 int day_sy3 = MyUtils25.TodaySY(3); //ÈıµÈ½±µ±ÌìÊ£ÓàÃû¶î
 int day_sy4 = MyUtils25.TodaySY(4);
-//int day_sy5 = MyUtils25.TodaySY(5);
+int day_sy5 = MyUtils25.TodaySY(5);
+int day_sy6 = MyUtils25.TodaySY(6);
 
 
 System.out.println(day_sy1);
@@ -150,7 +152,7 @@ System.out.println(day_sy1);
 
 		   <%
 		   //ÅĞ¶ÏÈ«²¿Ãû¶îÊ£Óà
-		   if(t1<=0 && t2<=0 && t3<=0 && t4<=0){
+		   if(t1<=0 && t2<=0 && t3<=0 && t4<=0 && t5<=0 && t6<=0){
 		  //if(t1<0){
 
 		     // ×é×°ÎÄ±¾¿Í·şÏûÏ¢
@@ -289,8 +291,8 @@ System.out.println(day_sy1);
   <input type="hidden" name="day_sy2" id="day_sy2" value="<%=day_sy2%>">
   <input type="hidden" name="day_sy3" id="day_sy3" value="<%=day_sy3%>">
   <input type="hidden" name="day_sy4" id="day_sy4" value="<%=day_sy4%>">
-
-
+  <input type="hidden" name="day_sy5" id="day_sy5" value="<%=day_sy5%>">
+  <input type="hidden" name="day_sy6" id="day_sy6" value="<%=day_sy6%>">
   <!--
   <input type="hidden" name="day_sy2" id="day_sy2" value="<=day_sy2%>">
   <input type="hidden" name="day_sy3" id="day_sy3" value="<=day_sy3%>">
@@ -327,12 +329,12 @@ System.out.println(day_sy1);
 <script type="text/javascript">
 var gua = 1,re = 2;  // ¿ÉÉèÖÃ¹Î½±´ÎÊı
 //var imgSrc = 'img/aa.png';
-var imgSrc = ['img/z_1.jpg','img/z_2.jpg','img/z_3.jpg','img/z_4.jpg','img/z_5.jpg'];
+var imgSrc = ['img/z_1.jpg','img/z_2.jpg','img/z_3.jpg','img/z_4.jpg','img/z_5.jpg','img/z_6.jpg','img/z_7.jpg'];
 //var imgSrc = ['img/z_1.jpg','img/z_2.jpg','img/z_3.jpg','img/z_4.jpg'];
 
 //var num = Math.floor(Math.random()*4);
 <%
-MathRandom4  a = new MathRandom4();
+MathRandom6  a = new MathRandom6();
 int rds = a.PercentageRandom();
 %>
 var num = <%=rds%>
@@ -346,7 +348,8 @@ var day_sy1 = document.getElementById("day_sy1").value;   //Ò»µÈ½±µ±ÌìÊ£Óà<=0±íÊ
 var day_sy2 = document.getElementById("day_sy2").value;   //¶şµÈ½±µ±ÌìÊ£Óà<=0±íÊ¾Ã»ÓĞÁË
 var day_sy3 = document.getElementById("day_sy3").value;   //ÈıµÈ½±µ±ÌìÊ£Óà<=0±íÊ¾Ã»ÓĞÁË
 var day_sy4 = document.getElementById("day_sy4").value;   //ËÄµÈ½±µ±ÌìÊ£Óà<=0±íÊ¾Ã»ÓĞÁË
-//var day_sy5 = document.getElementById("day_sy5").value; //ÎåµÈ½±µ±ÌìÊ£Óà<=0±íÊ¾Ã»ÓĞÁË
+var day_sy5 = document.getElementById("day_sy5").value; //ÎåµÈ½±µ±ÌìÊ£Óà<=0±íÊ¾Ã»ÓĞÁË
+var day_sy6 = document.getElementById("day_sy6").value; //6µÈ½±µ±ÌìÊ£Óà<=0±íÊ¾Ã»ÓĞÁË
 
 //ÕâÀïÅª¸ÅÂÊÁË
 switch (num)
@@ -354,7 +357,7 @@ switch (num)
 
     case 0:
         if(day_sy1<=0){
-            num2=4;
+            num2=6;
         }else{
             num2=0;
         }
@@ -362,7 +365,7 @@ switch (num)
 
     case 1:
         if(day_sy2<=0){
-            num2=4;
+            num2=6;
         }else{
             num2=1;
         }
@@ -370,7 +373,7 @@ switch (num)
 
     case 2:
         if(day_sy3<=0){
-            num2=4;
+            num2=6;
         }else{
             num2=2;
         }
@@ -378,14 +381,30 @@ switch (num)
 
     case 3:
         if(day_sy4<=0){
-            num2=4;
+            num2=6;
         }else{
             num2=3;
         }
         break;
 
     case 4:
-        num2=4
+        if(day_sy5<=0){
+            num2=6;
+        }else{
+            num2=4;
+        }
+        break;
+
+    case 5:
+        if(day_sy6<=0){
+            num2=6;
+        }else{
+            num2=5;
+        }
+        break;
+
+    case 6:
+        num2=6;
         break;
 
 }
@@ -509,18 +528,24 @@ function bodys(height,width){
                 switch (zj1)
                 {
                     case 1:
-                        x="¹§Ï²ÄúÖĞÁË50Ôª»°·Ñ£¬ÎÒÃÇ»áÔÚ»î¶¯½áÊøºó¸øÄú³äÖµ";
+                        x="¹§Ï²ÄúÖĞÁËÌØµÈ½±¼ÛÖµ4999Ôª»ªÎªÊÖ»ú";
                         break;
                     case 2:
-                        x="¹§Ï²ÄúÖĞÁË30Ôª»°·Ñ£¬ÎÒÃÇ»áÔÚ»î¶¯½áÊøºó¸øÄú³äÖµ";
+                        x="¹§Ï²ÄúÖĞÁËÒ»µÈ½±¼ÛÖµ1299ÔªĞ¡Ã×É¨µØ»úÆ÷";
                         break;
                     case 3:
-                        x="¹§Ï²ÄúÖĞÁË20Ôª»°·Ñ£¬ÎÒÃÇ»áÔÚ»î¶¯½áÊøºó¸øÄú³äÖµ";
+                        x="¹§Ï²ÄúÖĞÁË¶şµÈ½±¼ÛÖµ99Ôª¾ÅÑô¶à¹¦ÄÜÁÏÀí»ú";
                         break;
                     case 4:
-                        x="¹§Ï²ÄúÖĞÁË10Ôª»°·Ñ£¬ÎÒÃÇ»áÔÚ»î¶¯½áÊøºó¸øÄú³äÖµ";
+                        x="¹§Ï²ÄúÖĞÁËÈıµÈ½±¼ÛÖµ79ÔªÌìÃ¨¾«Áé·½ÌÇÖÇÄÜÒôÏä";
                         break;
                     case 5:
+                        x="¹§Ï²ÄúÖĞÁË²ÎÓë½±³äµç±¦¡¢Ğ¡Ã×±³°ü¡¢·É¿Æµç´µ·çµÈ";
+                        break;
+                    case 6:
+                        x="¹§Ï²ÄúÖĞÁËÌØ±ğ½±¼ÛÖµ249ÔªĞ¡Ã×ÂÃĞĞÏä";
+                        break;
+                    case 7:
                         x="Ğ»Ğ»²ÎÓë";
                         break;
                 }

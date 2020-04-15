@@ -6,13 +6,10 @@ import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import org.apache.commons.codec.binary.Base64;
-import org.fjw.weixin.util.AllValus;
-import org.fjw.weixin.util.MysqlDB;
-import org.fjw.weixin.util.PublicFun;
-import org.fjw.weixin.util.TimeString;
-import org.fjw.weixin.util.sql_data;
+import org.fjw.weixin.util.*;
 
 import com.aliyun.api.gateway.demo.SmsDemo;
+import org.fjw.weixin.util.TimeString;
 
 
 public class ZghTools {
@@ -409,7 +406,7 @@ public class ZghTools {
 		}
 	}
 
-// 如果当天跟以前的时间比，如果不同，update,否则 不动
+// 当天跟以前的时间比，如果不同，update,否则 不动
 
 	public static void upyt2(String openid){
 		String nowDayMYD = TimeString.GetnowTimeYMD();
@@ -543,6 +540,39 @@ public class ZghTools {
 			e.printStackTrace();
 		}
 	}
+
+
+
+	public static void upyt8(String openid){
+		String nowDayMYD = TimeString.GetnowTimeYMD();
+		try {
+
+			MysqlDB db = new MysqlDB();
+
+			String sql ="SELECT date_format(fbsj, '%Y-%m-%d') as fbsj  from daf_cj4 where openid='"+openid+"'";
+			System.out.println(sql);
+			//String sql ="SELECT CONVERT(varchar(100), fbsj, 23) as fbsj from yqfb_openid2 where openid='"+openid+"'";
+			ResultSet rs = db.executeQuery(sql);
+			if (rs.next()) {
+				String notTodyMYD = rs.getString("fbsj");
+				System.out.println(notTodyMYD);
+				if (!notTodyMYD.equals(nowDayMYD)) {//不是同一天
+					if(MyUtils25.jx(openid)){//没中奖
+						String sql2 = "delete from daf_cj4 where openid='"+openid+"'";
+						db.executeDelete(sql2);
+						String sql3 = "delete from daf_dt2 where openid='"+openid+"'";
+						db.executeDelete(sql3);
+					}
+
+				}else{
+					System.out.println("同一天");
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
 
 
 

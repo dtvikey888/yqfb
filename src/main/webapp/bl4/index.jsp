@@ -64,8 +64,8 @@ if(twbsession2!=null){
   			response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet31&response_type=code&scope=snsapi_base&state=1#wechat_redirect");
 
    }
-   
-   //ZghTools.upyt6(openid);
+   //前一天没中奖的第二天可以接着答题抽奖
+   ZghTools.upyt8(openid);
    
    ZghTools.ClearNull();
    
@@ -379,96 +379,35 @@ d{color:#fff;}
         </style>
                 
         <script>
-        var xz=0;
+        //表单验证
         function processForm(form)
         {
-        xz=0;
-        var xf=0;
-        if (form.c1[0].checked==1) xf+=0;
-        else if (form.c1[1].checked==1) xf+=0;
-        else if (form.c1[2].checked==1) xf+=0;
-        else xz=1;
-        
-        if (form.c2[0].checked==1) xf+=0;
-        else if (form.c2[1].checked==1) xf+=0;
-        else if (form.c2[2].checked==1) xf+=0;
-        else xz=1;
-        
-        if (form.c3[0].checked==1) xf+=0;
-        else if (form.c3[1].checked==1) xf+=0;
-        else if (form.c3[2].checked==1) xf+=0;
-        else xz=1;
-        
-        if (form.c4[0].checked==1) xf+=0;
-        else if (form.c4[1].checked==1) xf+=0;
-        else if (form.c4[2].checked==1) xf+=0;
-        else xz=1;
-        
-        if (form.c5[0].checked==1) xf+=0; 
-        else if (form.c5[1].checked==1) xf+=0; 
-        else if (form.c5[2].checked==1) xf+=0; 
-        else xz=1;
-        
-        
-        if (form.c6[0].checked==1) xf+=0;
-        else if (form.c6[1].checked==1) xf+=0; 
-        else if (form.c6[2].checked==1) xf+=0; 
-        else xz=1;
-        
-        if (form.c7[0].checked==1) xf+=0;
-        else if (form.c7[1].checked==1) xf+=2;
-        else if (form.c7[2].checked==1) xf+=0;
-        else xz=1;
-        
-        if (form.c8[0].checked==1) xf+=0;
-        else if (form.c8[1].checked==1) xf+=2; 
-        else if (form.c8[2].checked==1) xf+=2;
-        else xz=1;
-        
-        if (form.c9[0].checked==1) xf+=0;
-        else if (form.c9[1].checked==1) xf+=2; 
-        else if (form.c9[2].checked==1) xf+=2;
-        else xz=1;
-        
-        if (form.c10[0].checked==1) xf+=0;
-        else if (form.c10[1].checked==1) xf+=2; 
-        else if (form.c10[2].checked==1) xf+=2;
-        else xz=1;
-        
-        
-        if (form.c11[0].checked==1) xf+=0;
-        else if (form.c11[1].checked==1) xf+=2; 
-        else if (form.c11[2].checked==1) xf+=2;
-        else xz=1;
-        
-        if (form.c12[0].checked==1) xf+=0;
-        else if (form.c12[1].checked==1) xf+=2; 
-        else if (form.c12[2].checked==1) xf+=2;
-        else xz=1;
-        
-        if (form.c13[0].checked==1) xf+=0;
-        else if (form.c13[1].checked==1) xf+=2; 
-        else if (form.c13[2].checked==1) xf+=2;
-        else xz=1;
-        
-        if (form.c14[0].checked==1) xf+=0;
-        else if (form.c14[1].checked==1) xf+=2; 
-        else if (form.c14[2].checked==1) xf+=2;
-        else xz=1;
-        
-        if (form.c15[0].checked==1) xf+=0;
-        else if (form.c15[1].checked==1) xf+=2; 
-        else if (form.c15[2].checked==1) xf+=2;
-        else xz=1;
-        
-        if(xz!=0){alert('请认真选择每一项！');return false;}
-        else
-        {
-          //alert(OK');
-          return true; 
-        }
+
+            var quesnum = document.getElementById("quesnum").value;
+            for (var i = 1; i <= quesnum; i++) {
+                var objName = "c" + i;
+                var obj = document.getElementsByName(objName);
+                var objLen = obj.length;
+                var objYN;
+                objYN = false;
+
+                for (var j = 0; j < objLen; j++) {
+                    if (obj[j].checked == true) {
+                        objYN = true;
+                        break;
+                    }
+                }
+                if (!objYN) {
+                    alert("请选择第" + i + "题的答案！");
+                    return false;
+                }
+            }
+
+
         }
         </script>
+
+
 </head>
 <body>
 <%int cs = MyUtils25.GetCsForDt(openid);%>
@@ -501,6 +440,7 @@ d{color:#fff;}
 </div>
 
 <form name="form1" method="get" action="tp.jsp">
+    <input type="hidden" name="quesnum" value="7" />
 <table width="100%" height="302" border="0" cellpadding="0" cellspacing="0" style="background-color:#ececee">
   <tr>
     <td height="600" align="center" valign="top" bgcolor="#FFFFFF" style="background:url(img/IMG_TOP3.png) no-repeat top center;background-size: 100% 100%;"><table width="95%" cellspacing="2" cellpadding="0">
@@ -516,19 +456,22 @@ d{color:#fff;}
   <tr>
     <td align="center" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="30">
       <tr>
-        <td colspan="2" align="left"><p><strong><div style="line-height:1.8;text-indent:2em;">今年9月20日是全国第17个“公民道德宣传日”，为积极培育全社会践行社会主义核心价值观，深入加强公民道德建设，着力提升市民思想道德素质水平，乐清市文明中心、乐清日报社特联合举办乐清市“公民道德日”有奖问答活动。</div></strong></P></td>
+        <td colspan="2" align="left"><p><strong><div style="line-height:1.8;text-indent:2em;">为进一步推动公共文化服务广覆盖、高效能，构建基本完善的公共文化服务体系。乐清大力推进国家公共文化服务体系示范区创建工作，不断满足人民日益增长的美好生活需要，提升人民群众的幸福感和获得感，市文广旅体局联合乐清日报社开展有奖问答活动。</div></strong></P></td>
         </tr>
       <tr>
         <td height="50" colspan="2">
 		  <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#CC0001; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">活动奖励</button>  
-	      <div align="center" style="margin-top:50px;margin-bottom:25px;line-height:1.8">一等奖10份: 50元移动话费</div>
-	      <div align="center" style="margin-top:25px;margin-bottom:25px;line-height:1.8">二等奖20份: 40元移动话费</div>
-	      <div align="center" style="margin-top:25px;margin-bottom:25px;line-height:1.8">三等奖50份: 20元移动话费</div>
-	      <div align="center" style="margin-top:25px;margin-bottom:50px;line-height:1.8">参与奖220份:10元移动话费</div>
+	      <div align="center" style="margin-top:50px;margin-bottom:25px;line-height:1.8">特等奖 1名: 价值4999元   华为手机</div>
+	      <div align="center" style="margin-top:25px;margin-bottom:25px;line-height:1.8">一等奖 2名: 价值1299元 小米扫地机器</div>
+	      <div align="center" style="margin-top:25px;margin-bottom:25px;line-height:1.8">二等奖 10名: 价值99元 九阳多功能料理机</div>
+	      <div align="center" style="margin-top:25px;margin-bottom:50px;line-height:1.8">三等奖 10名: 价值79元 天猫精灵方糖智能音箱</div>
+          <div align="center" style="margin-top:25px;margin-bottom:50px;line-height:1.8">参与奖 300名: 充电宝、小米背包、飞科电吹风等......</div>
+          <div align="center" style="margin-top:25px;margin-bottom:50px;line-height:1.8">特别奖20名: 价值249元小米旅行箱</div>
 	      <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#CC0001; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">活动规则</button>  
-		  <div style="margin-top:50px;padding-left:12px;line-height:1.8">1、共有15道公民道德基础题，答对其中10道，即可参与刮刮卡抽奖活动。每个手机号仅限获奖一次，请实名参与。</div>
-		  <div style="margin-top:25px;padding-left:12px;margin-bottom:25px;line-height:1.8">2、	300份话费奖励发完或超出活动时间参与答题均无效。</div>
-		  <div style="margin-top:25px;padding-left:12px;margin-bottom:50px;line-height:1.8">3、	参与本次活动的手机号码必须为温州移动用户。</div>
+		  <div style="margin-top:50px;padding-left:12px;line-height:1.8">1、  共7道乐清创建国家公共文化服务体系示范区相关题目，有单选与多选，答对所有题目即可参与刮刮卡抽奖活动。</div>
+		  <div style="margin-top:25px;padding-left:12px;margin-bottom:25px;line-height:1.8">2、  如答题错误，可继续答题，直至答题全部正确。</div>
+		  <div style="margin-top:25px;padding-left:12px;margin-bottom:50px;line-height:1.8">3、	如当天未抽中奖品，次日还可以继续答题抽奖。</div>
+          <div style="margin-top:25px;padding-left:12px;margin-bottom:50px;line-height:1.8">4、	每个手机号仅限获奖一次，请实名参与。</div>
 		  <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#CC0001; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">选择题</button>
         </td>
       </tr>
@@ -539,15 +482,18 @@ d{color:#fff;}
 	<table width="103%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
       <tbody id="tbName" >
       <tr>
-          <td height="20"><p></p><div style="line-height:1.8"><strong>1、社会主义道德建设以(   )为核心。</strong></div>
+          <td height="20"><p></p><div style="line-height:1.8"><strong>1、温州正在创建国家公共文化服务体系示范区，创建时间是()（单选题）</strong></div>
           <p><input type="radio" name="c1" value="1" style="width:55px; height:55px;"/>
-		    A. 为人民服务</p>
+		    A. 2019年到 2020 年</p>
           <p> 
             <input type="radio" name="c1" value="2" style="width:55px; height:55px;"/>
-            B. 集体主义</p>
+            B. 2018 年到 2020 年</p>
           <p style="line-height:1.8">
             <input type="radio" name="c1" value="3" style="width:55px; height:55px;"/>
-            C. 爱祖国、爱人民、爱劳动、爱科学、爱社会主义</p>
+            C. 2019 年到 2021 年</p>
+          <p style="line-height:1.8">
+             <input type="radio" name="c1" value="4" style="width:55px; height:55px;"/>
+            D. 2020年</p>
           </td>
       </tr>
 	  </tbody>
@@ -555,15 +501,21 @@ d{color:#fff;}
 	  
 	   <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>2、社会主义道德建设是以(   )、职业道德、家庭美德为建设的落脚点。</strong></div>
-          <p><input type="radio" name="c2" value="1" style="width:55px; height:55px;"/>
-		    A. 社会公德</p>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>2、乐清的公共文化设施有哪些 。()（多选题）</strong></div>
+          <p><input type="checkbox" name="c2" value="1" style="width:55px; height:55px;"/>
+		    A. 图书馆、文化馆、博物馆、非遗馆、大剧院</p>
           <p> 
-            <input type="radio" name="c2" value="2" style="width:55px; height:55px;"/>
-            B. 基本道德规范</p>
+            <input type="checkbox" name="c2" value="2" style="width:55px; height:55px;"/>
+            B. 市民活动中心 、体育中心</p>
           <p>
-            <input type="radio" name="c2" value="3" style="width:55px; height:55px;"/>
-            C. 为人民服务</p>
+            <input type="checkbox" name="c2" value="3" style="width:55px; height:55px;"/>
+            C. 客运中心、购物中心、推拿理疗中心</p>
+          <p>
+             <input type="checkbox" name="c2" value="4" style="width:55px; height:55px;"/>
+            D. 乡镇综合文化站</p>
+          <p>
+             <input type="checkbox" name="c2" value="5" style="width:55px; height:55px;"/>
+            E. 文化礼堂、文化家园</p>
           </td>
       </tr>
 	  </tbody>
@@ -571,61 +523,73 @@ d{color:#fff;}
 	  
 	 <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>3、社会公德基本规范包含(   )、助人为乐、爱护公物、保护环境、遵纪守法。</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>3、乐清市图书馆位于 （ ）。（单选题）。</strong></div>
           <p> <input type="radio" name="c3" value="1" style="width:55px; height:55px;"/>
-		    A. 文明礼貌</p>
+		    A. 乐清市胜利路与千帆东路交叉口。</p>
           <p>
             <input type="radio" name="c3" value="2" style="width:55px; height:55px;"/>
-            B. 办事公道</p>
+            B. 乐清市旭阳路与伯乐东路交叉口。</p>
           <p>
             <input type="radio" name="c3" value="3" style="width:55px; height:55px;"/>
-            C. 男女公平</p>
+            C. 乐清市人民路与县前路交叉口。</p>
+          <p>
+            <input type="radio" name="c3" value="4" style="width:55px; height:55px;"/>
+            D. 乐清市伯乐东路与晨曦路交叉口。</p>
         </td>
       </tr>
 	  </tbody>
 	  
 	   <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>4、公民道德基本规范包含爱国守法、明礼诚信、(   )、勤俭自强、敬业奉献。</strong></div>
-          <p> <input type="radio" name="c4" value="1" style="width:55px; height:55px;"/>
-		    A. 团结友善</p>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>4、从哪些渠道可以获取公共文化服务信息？（ ）（多选题）。</strong></div>
+          <p> <input type="checkbox" name="c4" value="1" style="width:55px; height:55px;"/>
+		    A. 各村、社区宣传公示栏上有服务信息公示。</p>
           <p>
-            <input type="radio" name="c4" value="2" style="width:55px; height:55px;"/>
-            B. 以和为贵</p>
+            <input type="checkbox" name="c4" value="2" style="width:55px; height:55px;"/>
+            B. 每个公共文化设施门口都有服务信息公示，有免费开放时间、服务项目和活动内容等。</p>
           <p>
-            <input type="radio" name="c4" value="3" style="width:55px; height:55px;"/>
-            C. 同仇敌忾</p>
+            <input type="checkbox" name="c4" value="3" style="width:55px; height:55px;"/>
+            C. 各个场馆网站、 微信公众号上有服务信息。</p>
+          <p>
+            <input type="checkbox" name="c4" value="4" style="width:55px; height:55px;"/>
+            D. 各街道路口广告牌上有服务信息公示。</p>
 		   </td>
       </tr>
 	  </tbody>
 	  
 	  <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>5、职业道德的主要规范包含爱岗敬业、(   )、办事公道、服务群众、奉献社会。</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>5、创建国家公共文化服务体系示范区“两法”宣传，是哪两法？ （ ）（单选题）</strong></div>
           <p> <input type="radio" name="c5" value="1" style="width:55px; height:55px;"/>
-		    A. 诚实守信</p>
+		    A. 《文物保护法》和《非物质文化遗产法》</p>
           <p>
             <input type="radio" name="c5" value="2" style="width:55px; height:55px;"/>
-            B. 文明礼貌</p>
+            B. 《著作权法》和《互联网信息服务管理办法》</p>
           <p>
             <input type="radio" name="c5" value="3" style="width:55px; height:55px;"/>
-            C. 爱护公物</p>
-            </td>
+            C. 《公共文化服务保障法》和《公共图书馆法》</p>
+          <p>
+            <input type="radio" name="c5" value="4" style="width:55px; height:55px;"/>
+            D. 《文物保密法》和《公共文化馆法》</p>
+        </td>
       </tr>
 	  </tbody>
 	  
 	  <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>6、家庭美德的主要规范包含(   )、男女平等、夫妻和睦、勤俭持家、邻里团结。</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>6、哪些不是乐清公共文化服务领域“品牌项目” （ ）。（单选题）</strong></div>
           <p><input type="radio" name="c6" value="1" style="width:55px; height:55px;"/>
-		    A. 尊老爱幼</p>
+		    A. 影视城、足球杯</p>
           <p>
             <input type="radio" name="c6" value="2" style="width:55px; height:55px;"/>
-            B. 文明礼貌</p>
+            B. 城市书房、百姓书屋</p>
           <p>
             <input type="radio" name="c6" value="3" style="width:55px; height:55px;"/>
-            C. 遵纪守法</p>
-		  </td>
+            C. 文化驿站、乡村艺术团、市民文化节</p>
+          <p>
+            <input type="radio" name="c6" value="4" style="width:55px; height:55px;"/>
+            D. 百姓舞台、萧台艺苑、梅溪讲堂</p>
+		</td>
       </tr>
 	  </tbody>
 	
@@ -633,147 +597,23 @@ d{color:#fff;}
 
 	 <tbody id="tbName">
       <tr>
-          <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>7、(   )是公民道德的最低层次的要求。</strong></div>
-          <p><input type="radio" name="c7" value="1" style="width:55px; height:55px;"/>
-		    A. 平等</p>
+          <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>7、哪些行为是参与公共文化服务项目？ （ ）（多选题）。</strong></div>
+          <p><input type="checkbox" name="c7" value="1" style="width:55px; height:55px;"/>
+		    A. 读书看报、观看演出</p>
           <p>
-            <input type="radio" name="c7" value="2" style="width:55px; height:55px;"/>
-            B. 守法</p>
+            <input type="checkbox" name="c7" value="2" style="width:55px; height:55px;"/>
+            B. 看电视看电影、参加声乐比赛活动</p>
           <p>
-            <input type="radio" name="c7" value="3" style="width:55px; height:55px;"/>
-            C. 文明</p>
+            <input type="checkbox" name="c7" value="3" style="width:55px; height:55px;"/>
+            C. 参加舞蹈大赛活动、报名参加文化馆公益课堂</p>
+          <p>
+            <input type="checkbox" name="c7" value="4" style="width:55px; height:55px;"/>
+            D. 在手机上看文章看视频、在图书馆公众号上借阅电子书籍</p>
 		</td>
       </tr>
 	  </tbody>
 	  
-	  
-	 <tbody id="tbName">
-      <tr>
-          <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>8、(   )是公民对国家的最首要的道德义务。</strong></div>
-          <p> <input type="radio" name="c8" value="1" style="width:55px; height:55px;"/>
-		    A. 爱国守法</p>
-          <p>
-            <input type="radio" name="c8" value="2" style="width:55px; height:55px;"/>
-            B. 明礼诚实</p>
-          <p>
-            <input type="radio" name="c8" value="3" style="width:55px; height:55px;"/>
-            C. 团结友善</p>
-       </td>
-      </tr>
-	  </tbody>
-	  
-	   
-      
-	 <tbody id="tbName">
-      <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>9、在人际交往中注意自己的(   ),比如要做到衣冠整洁，举止文雅，这是对别人的一种尊重。</strong></div>
-          <p> <input type="radio" name="c9" value="1" style="width:55px; height:55px;"/>
-		    A. 个人谈吐</p>
-          <p>
-            <input type="radio" name="c9" value="2" style="width:55px; height:55px;"/>
-            B. 个人容貌</p>
-          <p>
-            <input type="radio" name="c9" value="3" style="width:55px; height:55px;"/>
-            C. 个人形象</p>
-       </td>
-      </tr>
-	  </tbody>
-	  
-	  
-	    
-	 <tbody id="tbName">
-      <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>10、社会公德的基本要求是：以社会主人翁的责任感，维护和珍惜国家、集体的财产，(   )。</strong></div>
-          <p> <input type="radio" name="c10" value="1" style="width:55px; height:55px;"/>
-		    A. 保护个人财产安全</p>
-          <p>
-            <input type="radio" name="c10" value="2" style="width:55px; height:55px;"/>
-            B. 保护他人财产安全 </p>
-          <p>
-            <input type="radio" name="c10" value="3" style="width:55px; height:55px;"/>
-            C. 爱护公物</p>
-       </td>
-      </tr>
-	  </tbody>
-	  
-	  
-	   <tbody id="tbName">
-      <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>11、孔子曾曰：“民无信不立。”体现了社会主义职业道德中(   )的内容。</strong></div>
-          <p> <input type="radio" name="c11" value="1" style="width:55px; height:55px;"/>
-		    A. 诚实守信</p>
-          <p>
-            <input type="radio" name="c11" value="2" style="width:55px; height:55px;"/>
-            B. 办事公道</p>
-          <p>
-            <input type="radio" name="c11" value="3" style="width:55px; height:55px;"/>
-            C. 奉献社会</p>
-       </td>
-      </tr>
-	  </tbody>
-	  
-	   <tbody id="tbName">
-      <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>12、为人民服务不仅是对共产党员和领导干部的要求，也是对(   )的要求。</strong></div>
-          <p> <input type="radio" name="c12" value="1" style="width:55px; height:55px;"/>
-		    A. 广大群众</p>
-          <p>
-            <input type="radio" name="c12" value="2" style="width:55px; height:55px;"/>
-            B. 社会各界</p>
-          <p>
-            <input type="radio" name="c12" value="3" style="width:55px; height:55px;"/>
-            C. 共青团员和青少年</p>
-       </td>
-      </tr>
-	  </tbody>
-	  
-	   <tbody id="tbName">
-      <tr>
-          <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>13、(   )是人们接受道德教育最早的地方。</strong></div>
-          <p> <input type="radio" name="c13" value="1" style="width:55px; height:55px;"/>
-		    A. 幼儿园</p>
-          <p>
-            <input type="radio" name="c13" value="2" style="width:55px; height:55px;"/>
-            B. 家庭</p>
-          <p>
-            <input type="radio" name="c13" value="3" style="width:55px; height:55px;"/>
-            C. 学校</p>
-       </td>
-      </tr>
-	  </tbody>
-	  
-	  
-	   <tbody id="tbName">
-      <tr>
-          <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>14、新时期爱国主义的基本责任是(   )</strong></div>
-          <p> <input type="radio" name="c14" value="1" style="width:55px; height:55px;"/>
-		    A. 坚持社会主义制度</p>
-          <p>
-            <input type="radio" name="c14" value="2" style="width:55px; height:55px;"/>
-            B. 坚持中国共产党的领导</p>
-          <p>
-            <input type="radio" name="c14" value="3" style="width:55px; height:55px;"/>
-            C. 维护国家统一和安全</p>
-       </td>
-      </tr>
-	  </tbody>
-	  
-	 <tbody id="tbName">
-      <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>15、2003年9月11日，中央精神文明建设指导委员会决定，将中央印发《公民道德建设实施纲要》的(   )定为“公民道德宣传日”。</strong></div>
-          <p> <input type="radio" name="c15" value="1" style="width:55px; height:55px;"/>
-		    A. 9月20日</p>
-          <p>
-            <input type="radio" name="c15" value="2" style="width:55px; height:55px;"/>
-            B. 9月18日</p>
-          <p>
-            <input type="radio" name="c15" value="3" style="width:55px; height:55px;"/>
-            C. 9月10日</p>
-           
-            <div style="float:right" onClick="button3();"><img src="img/xxzl2.png" border="0"></div>
-       </td>
-      </tr>
-	  </tbody>
+
 	 
 	 
 	 

@@ -113,15 +113,19 @@ public class MyUtils25 {
 			}
 
 			if(bz==1){
-				bz2="恭喜您获得50元移动话费,话费将于活动结束后，进行统一充值，敬请留意。";
+				bz2="恭喜您获得特等奖价值4999元华为手机";
 			}else if(bz==2){
-				bz2="恭喜您获得30元移动话费,话费将于活动结束后，进行统一充值，敬请留意。";
+				bz2="恭喜您获得一等奖价值1299元小米扫地机器";
 			}else if(bz==3){
-				bz2="恭喜您获得20元移动话费,话费将于活动结束后，进行统一充值，敬请留意。";
+				bz2="恭喜您获得二等奖价值99元九阳多功能料理机";
 			}else if(bz==4){
-				bz2="恭喜你获得10元移动话费,话费将于活动结束后，进行统一充值，敬请留意。";
+				bz2="恭喜你获得三等奖价值79元天猫精灵方糖智能音箱";
 			}else if(bz==5){
-				bz2="没中奖,谢谢参与!";
+				bz2="恭喜你获得参与奖充电宝、小米背包、飞科电吹风等";
+			}else if(bz==6){
+				bz2="恭喜你获得特别奖价值249元小米旅行箱";
+			}else if(bz==7){
+				bz2="您没中奖,明天还可以再来抽奖答题!";
 			}else{
 				bz2="谢谢参与";
 			}
@@ -138,6 +142,34 @@ public class MyUtils25 {
 		}
 
 		return bz2;
+	}
+
+
+	//是否没中奖
+	public static boolean jx(String openid)
+	{
+		boolean bz = false;
+		int iscj=0;
+		int iszj=0;
+		try {
+
+			sql_data db = new sql_data();
+			String sql ="select iscj_bz,iszj_bz from daf_cj4 where openid='"+openid+"'";
+			ResultSet rs = db.executeQuery(sql);
+			if (rs.next()) {
+				iscj = rs.getInt(1);
+				iszj = rs.getInt(2);
+			}
+
+			if(iscj==1&&iszj==0){
+				bz=true;
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return bz;
 	}
 
 	/**
@@ -171,10 +203,14 @@ public class MyUtils25 {
 					case 4:
 						sy = AllValus.lptg4-rs.getInt(1);
 						break;
-//
-//					case 5:
-//						sy = AllValus.lptg5-rs.getInt(1);
-//					break;
+
+					case 5:
+						sy = AllValus.lptg5-rs.getInt(1);
+					break;
+
+					case 6:
+						sy = AllValus.lptg6-rs.getInt(1);
+						break;
 
 
 					default:
@@ -223,16 +259,19 @@ public class MyUtils25 {
 
 	//1.一等奖 总剩余数
 	public static int sy1(){
+
 		return (AllValus.lptg1 - MyUtils25.GetTotal(1));
 	}
 
 	//2.二等奖 总剩余数
 	public static int sy2(){
+
 		return (AllValus.lptg2 - MyUtils25.GetTotal(2));
 	}
 
 	//3.三等奖 总剩余数
 	public static int sy3(){
+
 		return (AllValus.lptg3 - MyUtils25.GetTotal(3));
 	}
 
@@ -240,12 +279,19 @@ public class MyUtils25 {
 	public static int sy4(){
 		return (AllValus.lptg4 - MyUtils25.GetTotal(4));
 	}
-//
-//		//5等奖 总剩余数
-//		 public static int sy5(){
-//			 return (AllValus.lptg5 - MyUtils22.GetTotal(5));
-//		 }
-//
+	//5等奖 总剩余数
+	public static int sy5(){
+		return (AllValus.lptg5 - MyUtils22.GetTotal(5));
+	}
+	//6等奖 总剩余数
+	public static int sy6(){
+		return (AllValus.lptg6 - MyUtils22.GetTotal(6));
+	}
+
+
+
+
+
 
 	/**
 	 *
@@ -415,11 +461,9 @@ public class MyUtils25 {
 					if (MyUtils25.GetTotalSY(zsm)<=0) {//比如 一等奖的奖项总数 - 所有中了一等奖的人 <= 0  那么就是说1等奖的所有名额没了,就把标志变为0
 						sy=0;
 					}else {
-						//一等奖10
-						if(TimeString.nowTime().indexOf("2020-04-08")!=-1){
-							sy = 5 -zjs;
-						}else if(TimeString.nowTime().indexOf("2020-04-09")!=-1){
-							sy = 5 -zjs;
+						//1
+						if(TimeString.nowTime().indexOf("2020-04-15")!=-1){
+							sy = 1 -zjs;
 						}else {
 							sy = 0;
 						}
@@ -432,11 +476,11 @@ public class MyUtils25 {
 					if (MyUtils25.GetTotalSY(zsm)<=0) {//比如 二等奖的奖项总数 - 所有中了二等奖的人 <= 0  那么就是说2等奖的所有名额没了 ,就把标志变为0
 						sy=0;
 					}else {
-						//二等奖20
-						if(TimeString.nowTime().indexOf("2020-04-08")!=-1){
-							sy=10-zjs;
-						}else if(TimeString.nowTime().indexOf("2020-04-09")!=-1){
-							sy = 10 -zjs;
+						//2
+						if(TimeString.nowTime().indexOf("2020-04-15")!=-1){
+							sy=1-zjs;
+						}else if(TimeString.nowTime().indexOf("2020-04-16")!=-1){
+							sy = 1 -zjs;
 						}else {
 							sy=0;
 						}
@@ -450,11 +494,11 @@ public class MyUtils25 {
 					if (MyUtils25.GetTotalSY(zsm)<=0) {//比如 三等奖的奖项总数 - 所有中了三等奖的人 <= 0  那么就是说3等奖的所有名额没了 ,就把标志变为0
 						sy=0;
 					}else {
-						//3等奖50
-						if(TimeString.nowTime().indexOf("2020-04-08")!=-1){
-							sy=30-zjs;
-						}else if(TimeString.nowTime().indexOf("2020-04-09")!=-1){
-							sy = 20 -zjs;
+						//10
+						if(TimeString.nowTime().indexOf("2020-04-15")!=-1){
+							sy=5-zjs;
+						}else if(TimeString.nowTime().indexOf("2020-04-16")!=-1){
+							sy = 1 -zjs;
 						}else {
 							sy=0;
 						}
@@ -468,11 +512,47 @@ public class MyUtils25 {
 					if (MyUtils25.GetTotalSY(zsm)<=0) {//比如 4等奖的奖项总数 - 所有中了4等奖的人 <= 0  那么就是说4等奖的所有名额没了 ,就把标志变为0
 						sy=0;
 					}else {
-						//4等奖220
-						if(TimeString.nowTime().indexOf("2020-04-08")!=-1){
-							sy=120-zjs;
-						}else if(TimeString.nowTime().indexOf("2020-04-09")!=-1){
-							sy = 100 -zjs;
+						//10
+						if(TimeString.nowTime().indexOf("2020-04-15")!=-1){
+							sy=5-zjs;
+						}else if(TimeString.nowTime().indexOf("2020-04-16")!=-1){
+							sy = 2 -zjs;
+						}else {
+							sy=0;
+						}
+
+						//sy = AllValus.zjxz2 -zjs;   //sy标识 = 当天中奖限制 - 当天中奖人数 。
+					}
+
+
+				}else if(zsm==5){
+
+					if (MyUtils25.GetTotalSY(zsm)<=0) {//比如 5等奖的奖项总数 - 所有中了4等奖的人 <= 0  那么就是说4等奖的所有名额没了 ,就把标志变为0
+						sy=0;
+					}else {
+						//300
+						if(TimeString.nowTime().indexOf("2020-04-15")!=-1){
+							sy=200-zjs;
+						}else if(TimeString.nowTime().indexOf("2020-04-16")!=-1){
+							sy = 80 -zjs;
+						}else {
+							sy=0;
+						}
+
+						//sy = AllValus.zjxz2 -zjs;   //sy标识 = 当天中奖限制 - 当天中奖人数 。
+					}
+
+
+				}else if(zsm==6){
+
+					if (MyUtils25.GetTotalSY(zsm)<=0) {//比如 6等奖的奖项总数 - 所有中了4等奖的人 <= 0  那么就是说4等奖的所有名额没了 ,就把标志变为0
+						sy=0;
+					}else {
+						//20
+						if(TimeString.nowTime().indexOf("2020-04-15")!=-1){
+							sy=10-zjs;
+						}else if(TimeString.nowTime().indexOf("2020-04-16")!=-1){
+							sy = 5 -zjs;
 						}else {
 							sy=0;
 						}
@@ -699,8 +779,8 @@ public class MyUtils25 {
 	{
 		int bz =0;
 
-		int iszj_bz=0;      //5 是没中奖
-		if ("5".equals(zsm)) {
+		int iszj_bz=0;      //7 是没中奖
+		if ("7".equals(zsm)) {
 			iszj_bz=0;
 		}else {
 			iszj_bz=1;
@@ -767,8 +847,8 @@ public class MyUtils25 {
 	{
 		int bz =0;
 
-		int iszj_bz=0;      //5 是没中奖
-		if ("5".equals(zsm)) {
+		int iszj_bz=0;      //7 是没中奖
+		if ("7".equals(zsm)) {
 			iszj_bz=0;
 		}else {
 			iszj_bz=1;
@@ -884,27 +964,24 @@ public class MyUtils25 {
 	//答题正确与否 10个正确就行
 	//答案：1A  2B 3A  4A  5A  6A  7B  8A  9C  10C  11A 12A    13B    14C    15A
 
-	public static boolean DtIsZq(int... a){
+	public static boolean DtIsZq(String... a){
 		boolean zqm=false;
 
-		int ct=1;
-		int tt=0;
-		int[] arr1 = {a[0],a[1],a[2],a[3],a[4],a[5],a[6],a[7],a[8],a[9],a[10],a[11],a[12],a[13],a[14]};
-		for (int i : arr1) {
-			System.out.println(arr1[i]);
+		int cs=0;
+		String[] arr1 = {a[0],a[1],a[2],a[3],a[4],a[5],a[6]};
+		for (int j = 0; j < arr1.length; j++) {
+			System.out.println(arr1[j]);
 		}
-		int[] arr2 = {1,2,1,1,1,1,2,1,3,3,1,1,2,3,1};
-		for(int i = 0; i < 15; ++i) {
-			if(arr1[i] == arr2[i]){
+		
+		String[] arr2 = {"2","1,2,4,5","4","2,3","3","1","1,2,3,4"};
+		for(int i = 0; i < 7; ++i) {
+			if(arr1[i].equals(arr2[i])){
 				System.out.println("same!");
-				tt++;
+				cs++;
 			}
 		}
 
-		ct=tt;
-
-		System.out.println("ct:"+ct);
-		if (ct>=10) {
+		if (cs==7) {
 			zqm=true;
 		}
 
@@ -921,7 +998,7 @@ public class MyUtils25 {
 
 	//答题录入操作
 	//bz: 1 成功 2 答题超过100000次 3 答题错误
-	public static int DtRl(String openid,int... a){
+	public static int DtRl(String openid,String... a){
 		int bz=0;
 		int cs = MyUtils25.GetCsForDt(openid);
 		if(cs>100000){
@@ -945,7 +1022,7 @@ public class MyUtils25 {
 					db.executeUpdate(sql);
 					System.out.println(sql);
 
-					String sql2 = "INSERT INTO daf_dt(openid,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,c14,c15,fbsj) VALUES('"+openid+"',"+a[0]+","+a[1]+","+a[2]+","+a[3]+","+a[4]+","+a[5]+","+a[6]+","+a[7]+","+a[8]+","+a[9]+","+a[10]+","+a[11]+","+a[12]+","+a[13]+","+a[14]+",'"+TimeString.nowTime()+"')";
+					String sql2 = "INSERT INTO daf_dt2(openid,c1,c2,c3,c4,c5,c6,c7,fbsj) VALUES('"+openid+"',"+a[0]+","+a[1]+","+a[2]+","+a[3]+","+a[4]+","+a[5]+","+a[6]+",'"+TimeString.nowTime()+"')";
 					System.out.println(sql2);
 					db.executeInsert(sql2);
 
