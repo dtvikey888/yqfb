@@ -973,7 +973,7 @@ public class MyUtils25 {
 			System.out.println(arr1[j]);
 		}
 		
-		String[] arr2 = {"2","1,2,4,5","4","2,3","3","1","1,2,3,4"};
+		String[] arr2 = {"2","1,2,4,5,","4","2,3,","3","1","1,2,3,4,"};
 		for(int i = 0; i < 7; ++i) {
 			if(arr1[i].equals(arr2[i])){
 				System.out.println("same!");
@@ -1022,7 +1022,7 @@ public class MyUtils25 {
 					db.executeUpdate(sql);
 					System.out.println(sql);
 
-					String sql2 = "INSERT INTO daf_dt2(openid,c1,c2,c3,c4,c5,c6,c7,fbsj) VALUES('"+openid+"',"+a[0]+","+a[1]+","+a[2]+","+a[3]+","+a[4]+","+a[5]+","+a[6]+",'"+TimeString.nowTime()+"')";
+					String sql2 = "INSERT INTO daf_dt2(openid,c1,c2,c3,c4,c5,c6,c7,fbsj) VALUES('"+openid+"',"+a[0]+",'"+a[1]+"',"+a[2]+",'"+a[3]+"',"+a[4]+","+a[5]+",'"+a[6]+"','"+TimeString.nowTime()+"')";
 					System.out.println(sql2);
 					db.executeInsert(sql2);
 

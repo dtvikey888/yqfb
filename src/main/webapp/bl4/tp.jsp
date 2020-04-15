@@ -8,7 +8,7 @@ String[] c2=null;
 String cs2="";
 if(request.getParameterValues("c2")!=null){
 	c2=request.getParameterValues("c2");
-	for(int i=1;i<c2.length;i++){
+	for(int i=0;i<c2.length;i++){
 		cs2+=c2[i]+",";
 	}
 }
@@ -17,7 +17,7 @@ String[] c4=null;
 String cs4="";
 if(request.getParameterValues("c4")!=null){
 	c4=request.getParameterValues("c4");
-	for(int i=1;i<c4.length;i++){
+	for(int i=0;i<c4.length;i++){
 		cs4+=c4[i]+",";
 	}
 }
@@ -27,10 +27,20 @@ String[] c7=null;
 String cs7="";
 if(request.getParameterValues("c7")!=null){
 	c7=request.getParameterValues("c7");
-	for(int i=1;i<c7.length;i++){
+	for(int i=0;i<c7.length;i++){
 		cs7+=c7[i]+",";
 	}
 }
+
+//	out.println(c1);
+//	out.println(cs2);
+//	out.println(c3);
+//	out.println(cs4);
+//	out.println(c5);
+//	out.println(c6);
+//	out.println(cs7);
+//	out.close();
+
 	int bz=MyUtils25.DtRl(openid,c1,cs2,c3,cs4,c5,c6,cs7);
 //out.println(bz);
 //out.close();

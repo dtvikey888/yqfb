@@ -383,24 +383,95 @@ d{color:#fff;}
         function processForm(form)
         {
 
-            var quesnum = document.getElementById("quesnum").value;
-            for (var i = 1; i <= quesnum; i++) {
-                var objName = "c" + i;
-                var obj = document.getElementsByName(objName);
-                var objLen = obj.length;
-                var objYN;
-                objYN = false;
+            var ids = document.getElementsByName("c1");
+            var flag = false ;
+            for(var i=0;i<ids.length;i++){
+                if(ids[i].checked){
+                    flag = true ;
+                    break ;
+                }
+            }
+            if(!flag){
+                alert("请选择！");
+                return false ;
+            }
 
-                for (var j = 0; j < objLen; j++) {
-                    if (obj[j].checked == true) {
-                        objYN = true;
-                        break;
-                    }
+            var ids = document.getElementsByName("c2");
+            var flag = false ;
+            for(var i=0;i<ids.length;i++){
+                if(ids[i].checked){
+                    flag = true ;
+                    break ;
                 }
-                if (!objYN) {
-                    alert("请选择第" + i + "题的答案！");
-                    return false;
+            }
+            if(!flag){
+                alert("请选择！");
+                return false ;
+            }
+
+            var ids = document.getElementsByName("c3");
+            var flag = false ;
+            for(var i=0;i<ids.length;i++){
+                if(ids[i].checked){
+                    flag = true ;
+                    break ;
                 }
+            }
+            if(!flag){
+                alert("请选择！");
+                return false ;
+            }
+
+            var ids = document.getElementsByName("c4");
+            var flag = false ;
+            for(var i=0;i<ids.length;i++){
+                if(ids[i].checked){
+                    flag = true ;
+                    break ;
+                }
+            }
+            if(!flag){
+                alert("请选择！");
+                return false ;
+            }
+
+            var ids = document.getElementsByName("c5");
+            var flag = false ;
+            for(var i=0;i<ids.length;i++){
+                if(ids[i].checked){
+                    flag = true ;
+                    break ;
+                }
+            }
+            if(!flag){
+                alert("请选择！");
+                return false ;
+            }
+
+            var ids = document.getElementsByName("c6");
+            var flag = false ;
+            for(var i=0;i<ids.length;i++){
+                if(ids[i].checked){
+                    flag = true ;
+                    break ;
+                }
+            }
+            if(!flag){
+                alert("请选择！");
+                return false ;
+            }
+
+            var ids = document.getElementsByName("c7");
+            var flag = false ;
+            for(var i=0;i<ids.length;i++){
+                if(ids[i].checked){
+                    flag = true ;
+                    break ;
+                }
+            }
+            if(!flag){
+                alert("请选择！");
+                return false ;
             }
 
 

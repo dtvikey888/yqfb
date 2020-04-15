@@ -122,7 +122,7 @@ int day_sy5 = MyUtils25.TodaySY(5);
 int day_sy6 = MyUtils25.TodaySY(6);
 
 
-System.out.println(day_sy1);
+//System.out.println(day_sy1);
 //System.out.println(day_sy2);
 //System.out.println(day_sy3);
 
@@ -287,12 +287,12 @@ System.out.println(day_sy1);
 
 
   <input type="hidden" name="opp" id="opp" value="<%=openid %>">
-  <input type="hidden" name="day_sy1" id="day_sy1" value="<%=day_sy1%>">
-  <input type="hidden" name="day_sy2" id="day_sy2" value="<%=day_sy2%>">
-  <input type="hidden" name="day_sy3" id="day_sy3" value="<%=day_sy3%>">
-  <input type="hidden" name="day_sy4" id="day_sy4" value="<%=day_sy4%>">
-  <input type="hidden" name="day_sy5" id="day_sy5" value="<%=day_sy5%>">
-  <input type="hidden" name="day_sy6" id="day_sy6" value="<%=day_sy6%>">
+  <input type="text" name="day_sy1" id="day_sy1" value="<%=day_sy1%>">
+  <input type="text" name="day_sy2" id="day_sy2" value="<%=day_sy2%>">
+  <input type="text" name="day_sy3" id="day_sy3" value="<%=day_sy3%>">
+  <input type="text" name="day_sy4" id="day_sy4" value="<%=day_sy4%>">
+  <input type="text" name="day_sy5" id="day_sy5" value="<%=day_sy5%>">
+  <input type="text" name="day_sy6" id="day_sy6" value="<%=day_sy6%>">
   <!--
   <input type="hidden" name="day_sy2" id="day_sy2" value="<=day_sy2%>">
   <input type="hidden" name="day_sy3" id="day_sy3" value="<=day_sy3%>">
@@ -339,7 +339,7 @@ int rds = a.PercentageRandom();
 %>
 var num = <%=rds%>
 
-//alert(num);
+alert(num);
 
 //这里要判断中奖概率 根据得到的num 对比 传过来的标志如果 标志是0 ,变为没抽中，那就把 num=4 ，否则标志是1，那就 num不变让他抽中
 //而且如果num=4不传入，只传入 0，1，2，3
