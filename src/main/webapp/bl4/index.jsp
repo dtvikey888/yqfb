@@ -633,7 +633,7 @@ d{color:#fff;}
 
 	 <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p></p><strong>7、(   )是公民道德的最低层次的要求。</strong>
+          <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>7、(   )是公民道德的最低层次的要求。</strong></div>
           <p><input type="radio" name="c7" value="1" style="width:55px; height:55px;"/>
 		    A. 平等</p>
           <p>
@@ -649,7 +649,7 @@ d{color:#fff;}
 	  
 	 <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p></p><strong>8、(   )是公民对国家的最首要的道德义务。</strong>
+          <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>8、(   )是公民对国家的最首要的道德义务。</strong></div>
           <p> <input type="radio" name="c8" value="1" style="width:55px; height:55px;"/>
 		    A. 爱国守法</p>
           <p>
@@ -729,7 +729,7 @@ d{color:#fff;}
 	  
 	   <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p></p><strong>13、(   )是人们接受道德教育最早的地方。</strong>
+          <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>13、(   )是人们接受道德教育最早的地方。</strong></div>
           <p> <input type="radio" name="c13" value="1" style="width:55px; height:55px;"/>
 		    A. 幼儿园</p>
           <p>
@@ -745,7 +745,7 @@ d{color:#fff;}
 	  
 	   <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p></p><strong>14、新时期爱国主义的基本责任是(   )</strong>
+          <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>14、新时期爱国主义的基本责任是(   )</strong></div>
           <p> <input type="radio" name="c14" value="1" style="width:55px; height:55px;"/>
 		    A. 坚持社会主义制度</p>
           <p>

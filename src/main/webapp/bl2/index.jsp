@@ -498,7 +498,7 @@ else
 <%}%>
 
 <div id="mcover2" onClick="weChat2()" style="display:none;">
-  <img src="img/tip7.png"/>
+  <img src="img/tip9.png"/>
 </div>
 
 <form name="form1" method="get" action="tp.jsp">
@@ -541,15 +541,15 @@ else
 	<table width="103%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
       <tbody id="tbName" >
       <tr>
-        <td height="20"><p></p><div style="line-height:1.8"><strong>1、在交通工具上我们不建议做以下哪种行为：</strong></div>
+        <td height="20"><p></p><div style="line-height:1.8"><strong>1、《中华人民共和国传染病防治法》规定管理的传染病可分甲、乙、丙三类。2020年1月20日，经国务院批准，新型冠状病毒感染的肺炎新纳入《中华人民共和国传染病防治法》规定的（）传染病，采取（）传染病的防控措施进行管理。</strong></div>
           <p><input type="radio" name="c1" value="1" style="width:55px; height:55px;"/>
-		    A. 主动让座</p>
+		    A. 甲类  甲类</p>
           <p> 
             <input type="radio" name="c1" value="2" style="width:55px; height:55px;"/>
-            B. 主动投币</p>
+            B. 甲类  乙类</p>
           <p style="line-height:1.8">
             <input type="radio" name="c1" value="3" style="width:55px; height:55px;"/>
-            C. 进食</p>
+            C. 乙类  甲类</p>
           </td>
       </tr>
 	  </tbody>
@@ -632,18 +632,17 @@ else
 	  </tbody>
 	
 
-
 	 <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p></p><strong>7、用过的餐巾纸、包装、食物残渣应放在：</strong>
+          <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>7、新型冠状病毒感染肺炎确定存在人传人，有助于预防的是：</strong></div>
           <p><input type="radio" name="c7" value="1" style="width:55px; height:55px;"/>
-		    A. 花丛中</p>
+		    A. 多喝咖啡</p>
           <p>
             <input type="radio" name="c7" value="2" style="width:55px; height:55px;"/>
-            B. 地上</p>
+            B. 晚睡晚起</p>
           <p>
             <input type="radio" name="c7" value="3" style="width:55px; height:55px;"/>
-            C. 指定垃圾桶</p>
+            C. 戴口罩</p>
 		</td>
       </tr>
 	  </tbody>
@@ -651,7 +650,7 @@ else
 	  
 	 <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p></p><strong>8、中央爱国卫生运动委员会第一届主任是：</strong>
+          <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>8、中央爱国卫生运动委员会第一届主任是：</strong></div>
           <p> <input type="radio" name="c8" value="1" style="width:55px; height:55px;"/>
 		    A. 朱德</p>
           <p>
@@ -731,7 +730,7 @@ else
 	  
 	   <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p></p><strong>13、导致温室效应的主要气体是：</strong>
+          <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>13、导致温室效应的主要气体是：</strong></div>
           <p> <input type="radio" name="c13" value="1" style="width:55px; height:55px;"/>
 		    A. 一氧化碳</p>
           <p>
@@ -747,7 +746,7 @@ else
 	  
 	   <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p></p><strong>14、健康的解压方式包括：</strong>
+          <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>14、健康的解压方式包括：</strong></div>
           <p> <input type="radio" name="c14" value="1" style="width:55px; height:55px;"/>
 		    A. 调整自己的想法</p>
           <p>
