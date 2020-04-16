@@ -29,7 +29,7 @@
       wx_share_imgUrl="<%=AllValus.daf_lp_img%>";
 
       wx.config({
-          debug: true,
+          debug: false,
           <%=check%>,// 必填，签名，见附录1
           jsApiList: [
           'updateTimelineShareData',

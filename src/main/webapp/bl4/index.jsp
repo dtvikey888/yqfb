@@ -517,7 +517,7 @@ d{color:#fff;}
     <input type="hidden" name="quesnum" value="7" />
 <table width="100%" height="302" border="0" cellpadding="0" cellspacing="0" style="background-color:#ececee">
   <tr>
-    <td height="600" align="center" valign="top" bgcolor="#FFFFFF" style="background:url(img/IMG_TOP3.png) no-repeat top center;background-size: 100% 90%;"><table width="95%" cellspacing="2" cellpadding="0">
+    <td height="600" align="center" valign="top" bgcolor="#FFFFFF" style="background:url(img/IMG_TOP3.png) no-repeat top center;background-size: 100% 100%;"><table width="95%" cellspacing="2" cellpadding="0">
       <tr>
         <td height="10" colspan="2" align="right">&nbsp;</td>
       </tr>
@@ -683,7 +683,7 @@ d{color:#fff;}
           <p>
             <input type="checkbox" name="c7" value="4" style="width:55px; height:55px;"/>
             D. 在手机上看文章看视频、在图书馆公众号上借阅电子书籍</p>
-              <div style="float:right" onClick="window.location.href='http://v.yqcn.com/yqfb/bl4/demo.jsp'"><img src="img/xxzl2.png" border="0"></div>
+              <div style="float:right" onClick="window.location.href='memo.jsp'"><img src="img/xxzl2.png" border="0"></div>
 		</td>
       </tr>
 	  </tbody>
