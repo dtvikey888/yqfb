@@ -334,6 +334,9 @@ d{color:#fff;}
 	<script src="js/jquery.js"></script>
 	
         <style>
+        p{
+            line-height:1.8;
+        }
         /*div通用样式*/
         div{
         
@@ -514,7 +517,7 @@ d{color:#fff;}
     <input type="hidden" name="quesnum" value="7" />
 <table width="100%" height="302" border="0" cellpadding="0" cellspacing="0" style="background-color:#ececee">
   <tr>
-    <td height="600" align="center" valign="top" bgcolor="#FFFFFF" style="background:url(img/IMG_TOP3.png) no-repeat top center;background-size: 100% 100%;"><table width="95%" cellspacing="2" cellpadding="0">
+    <td height="600" align="center" valign="top" bgcolor="#FFFFFF" style="background:url(img/IMG_TOP3.png) no-repeat top center;background-size: 100% 90%;"><table width="95%" cellspacing="2" cellpadding="0">
       <tr>
         <td height="10" colspan="2" align="right">&nbsp;</td>
       </tr>
@@ -532,12 +535,12 @@ d{color:#fff;}
       <tr>
         <td height="50" colspan="2">
 		  <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#CC0001; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">活动奖励</button>  
-	      <div align="center" style="margin-top:50px;margin-bottom:25px;line-height:1.8">特等奖 1名: 价值4999元   华为手机</div>
-	      <div align="center" style="margin-top:25px;margin-bottom:25px;line-height:1.8">一等奖 2名: 价值1299元 小米扫地机器</div>
-	      <div align="center" style="margin-top:25px;margin-bottom:25px;line-height:1.8">二等奖 10名: 价值99元 九阳多功能料理机</div>
-	      <div align="center" style="margin-top:25px;margin-bottom:50px;line-height:1.8">三等奖 10名: 价值79元 天猫精灵方糖智能音箱</div>
-          <div align="center" style="margin-top:25px;margin-bottom:50px;line-height:1.8">参与奖 300名: 充电宝、小米背包、飞科电吹风等......</div>
-          <div align="center" style="margin-top:25px;margin-bottom:50px;line-height:1.8">特别奖20名: 价值249元小米旅行箱</div>
+	      <div align="center" style="margin-top:50px;margin-bottom:25px;line-height:1.8">特等奖1名:价值4999元华为手机</div>
+	      <div align="center" style="margin-top:25px;margin-bottom:25px;line-height:1.8">一等奖2名:价值1299元小米扫地机器</div>
+	      <div align="center" style="margin-top:25px;margin-bottom:25px;line-height:1.8">二等奖10名:价值99元九阳多功能料理机</div>
+	      <div align="center" style="margin-top:25px;margin-bottom:50px;line-height:1.8">三等奖10名:价值79元天猫精灵方糖智能音箱</div>
+          <div align="center" style="margin-top:25px;margin-bottom:50px;line-height:1.8">参与奖300名:充电宝、小米背包、飞科电吹风</div>
+          <div align="center" style="margin-top:25px;margin-bottom:50px;line-height:1.8">特别奖20名:价值249元小米旅行箱</div>
 	      <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#CC0001; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">活动规则</button>  
 		  <div style="margin-top:50px;padding-left:12px;line-height:1.8">1、  共7道乐清创建国家公共文化服务体系示范区相关题目，有单选与多选，答对所有题目即可参与刮刮卡抽奖活动。</div>
 		  <div style="margin-top:25px;padding-left:12px;margin-bottom:25px;line-height:1.8">2、  如答题错误，可继续答题，直至答题全部正确。</div>
@@ -680,6 +683,7 @@ d{color:#fff;}
           <p>
             <input type="checkbox" name="c7" value="4" style="width:55px; height:55px;"/>
             D. 在手机上看文章看视频、在图书馆公众号上借阅电子书籍</p>
+              <div style="float:right" onClick="window.location.href='http://v.yqcn.com/yqfb/bl4/demo.jsp'"><img src="img/xxzl2.png" border="0"></div>
 		</td>
       </tr>
 	  </tbody>

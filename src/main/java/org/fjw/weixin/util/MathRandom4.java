@@ -13,20 +13,20 @@ public class MathRandom4
  /**
   * 3出现的概率为%50
   */
- public static double rate0 = 0.5;
+ public static double rate0 = 0.50;
  /**
   * 2出现的概率为%20
   */
- public static double rate1 = 0.2;
+ public static double rate1 = 0.20;
  /**
   * 1出现的概率为%20
   */
- public static double rate2 = 0.2;
+ public static double rate2 = 0.20;
 
  /**
   * 0出现的概率为%10
   */
- public static double rate3 = 0.1;
+ public static double rate3 = 0.10;
 
  /**
   * Math.random()产生一个double型的随机数，判断一下

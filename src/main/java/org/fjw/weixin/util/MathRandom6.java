@@ -15,28 +15,28 @@ public class MathRandom6
  /**
   * 5出现的概率为%20
   */
- public static double rate0 = 0.2;
+ public static double rate0 = 0.20;
  /**
-  * 4出现的概率为%58
+  * 4出现的概率为%60
   */
- public static double rate1 = 0.58;
+ public static double rate1 = 0.60;
  /**
   * 3出现的概率为%10
   */
- public static double rate2 = 0.1;
+ public static double rate2 = 0.10;
  /**
   * 2出现的概率为%10
   */
- public static double rate3 = 0.1;
+ public static double rate3 = 0.10;
  /**
-  * 1出现的概率为%2
+  * 1出现的概率为%0
   */
- public static double rate4 = 0.02;
+ public static double rate4 = 0.00;
 
  /**
   * 0出现的概率为%0
   */
- public static double rate5 = 0.0;
+ public static double rate5 = 0.00;
 
 
 

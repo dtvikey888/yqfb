@@ -87,12 +87,12 @@ public class AllValus {
     public static String daf_title="第32个爱国卫生月知识问答";
     public static String daf_desc="今年4月是第32个爱国卫生月，今年的活动主题是防疫有我，爱卫同行。";
     public static String daf_link="http://www.yqrb.com.cn/yqfb/bl2/index.jsp";
-    public static String daf_img="http://www.yqrb.com.cn/upload/IMG_TOP5.jpg";
+    public static String daf_img="http://v.yqcn.com/yqfb/bl2/img/IMG_TOP7.jpg";
 
     public static String daf_lp_title="公共文化服务体系示范区创建问答活动";
     public static String daf_lp_desc="为进一步推动公共文化服务广覆盖、高效能，构建基本完善的公共文化服务体系。乐清大力推进国家公共文化服务体系示范区创建工作，不断满足人民日益增长的美好生活需要，提升人民群众的幸福感和获得感，市文广旅体局联合乐清日报社开展有奖问答活动。";
     public static String daf_lp_link="http://www.yqrb.com.cn/yqfb/bl4/index.jsp";
-    public static String daf_lp_img="http://www.yqrb.com.cn/upload/daf_log.png";
+    public static String daf_lp_img="http://v.yqcn.com/yqfb/bl4/img/IMG_TOP3.png";
 
     //第32个爱国卫生月知识竞答 起止时间 4.15-4.17
     public static String daf_t1="2020-04-13 00:00:00";
@@ -103,10 +103,10 @@ public class AllValus {
     public static String daf_p2="2020-04-21 00:00:00";
 
     //云云 健康局爱卫答题抽奖
-    public static int  lpgg1 = 5; //50话费 10份
-    public static int  lpgg2 = 25; //30话费 30份
-    public static int  lpgg3 = 45; //20元话费 50名
-    public static int  lpgg4 = 200; //10元话费 210名
+    public static int  lpgg1 = 9; //50话费 10份
+    public static int  lpgg2 = 30; //30话费 30份
+    public static int  lpgg3 = 50; //20元话费 50名
+    public static int  lpgg4 = 210; //10元话费 210名
 //   public static int  lpgg5 = 600; //5等奖5 750名
 
     //林佩 文广新局答题抽奖
