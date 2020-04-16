@@ -462,7 +462,7 @@ public class MyUtils25 {
 						sy=0;
 					}else {
 						//1
-						if(TimeString.nowTime().indexOf("2020-04-15")!=-1){
+						if(TimeString.nowTime().indexOf("2020-04-18")!=-1){
 							sy = 1 -zjs;
 						}else {
 							sy = 0;
@@ -477,9 +477,9 @@ public class MyUtils25 {
 						sy=0;
 					}else {
 						//2
-						if(TimeString.nowTime().indexOf("2020-04-15")!=-1){
+						if(TimeString.nowTime().indexOf("2020-04-18")!=-1){
 							sy=1-zjs;
-						}else if(TimeString.nowTime().indexOf("2020-04-16")!=-1){
+						}else if(TimeString.nowTime().indexOf("2020-04-19")!=-1){
 							sy = 1 -zjs;
 						}else {
 							sy=0;
@@ -495,9 +495,9 @@ public class MyUtils25 {
 						sy=0;
 					}else {
 						//10
-						if(TimeString.nowTime().indexOf("2020-04-15")!=-1){
+						if(TimeString.nowTime().indexOf("2020-04-18")!=-1){
 							sy=5-zjs;
-						}else if(TimeString.nowTime().indexOf("2020-04-16")!=-1){
+						}else if(TimeString.nowTime().indexOf("2020-04-19")!=-1){
 							sy = 1 -zjs;
 						}else {
 							sy=0;
@@ -513,9 +513,9 @@ public class MyUtils25 {
 						sy=0;
 					}else {
 						//10
-						if(TimeString.nowTime().indexOf("2020-04-15")!=-1){
+						if(TimeString.nowTime().indexOf("2020-04-18")!=-1){
 							sy=5-zjs;
-						}else if(TimeString.nowTime().indexOf("2020-04-16")!=-1){
+						}else if(TimeString.nowTime().indexOf("2020-04-19")!=-1){
 							sy = 2 -zjs;
 						}else {
 							sy=0;
@@ -531,9 +531,9 @@ public class MyUtils25 {
 						sy=0;
 					}else {
 						//300
-						if(TimeString.nowTime().indexOf("2020-04-15")!=-1){
+						if(TimeString.nowTime().indexOf("2020-04-18")!=-1){
 							sy=200-zjs;
-						}else if(TimeString.nowTime().indexOf("2020-04-16")!=-1){
+						}else if(TimeString.nowTime().indexOf("2020-04-19")!=-1){
 							sy = 80 -zjs;
 						}else {
 							sy=0;
@@ -549,9 +549,9 @@ public class MyUtils25 {
 						sy=0;
 					}else {
 						//20
-						if(TimeString.nowTime().indexOf("2020-04-15")!=-1){
+						if(TimeString.nowTime().indexOf("2020-04-18")!=-1){
 							sy=10-zjs;
-						}else if(TimeString.nowTime().indexOf("2020-04-16")!=-1){
+						}else if(TimeString.nowTime().indexOf("2020-04-19")!=-1){
 							sy = 5 -zjs;
 						}else {
 							sy=0;

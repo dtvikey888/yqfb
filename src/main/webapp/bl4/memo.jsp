@@ -147,7 +147,7 @@ input[type="radio"]:checked+span {
                 <td width="14%" height="7" align="center" valign="middle" >【知识点】</td>
                 </tr>
               <tr>
-                <td height="1" align="left" valign="top" ><p>投票时间：8月24日-8月29日</p>
+                <td height="1" align="left" valign="top" >
                   <div id="que"><p>Q  您知道温州正在创建国家公共文化服务体系示范区吗？</p></div>
                   <p>我知道，正在创建第四批国家公共文化体系示范区，创建时间是 2018 年到 2020 年。</p>
                   <div id="que"><p>Q 您支持乐清创建国家公共文化服务体系示范区吗？ </p></div>

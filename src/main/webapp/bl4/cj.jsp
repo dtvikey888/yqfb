@@ -97,6 +97,22 @@ String check=Topay.WxJsApiCheck4(urlname,openid);
 
         </script>
 
+
+        <script>
+            function DataLength(fData)
+            {
+                var intLength=0
+                for (var i=0;i<fData.length;i++)
+                {
+                    if ((fData.charCodeAt(i) < 0) || (fData.charCodeAt(i) > 255))
+                        intLength=intLength+2
+                    else
+                        intLength=intLength+1
+                }
+                return intLength
+            }
+        </script>
+
         <title><%=AllValus.daf_lp_title %></title>
 	 
 	<meta name="description" content="">

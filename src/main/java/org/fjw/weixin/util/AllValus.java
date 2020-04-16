@@ -111,9 +111,9 @@ public class AllValus {
 
     //林佩 文广新局答题抽奖
     public static int  lptg1 = 0; //特等奖 1名：  价值4999元   华为手机
-    public static int  lptg2 = 1; //一等奖 2名：  价值1299元   小米扫地机器
-    public static int  lptg3 = 6; //二等奖 10名： 价值99元      九阳多功能料理机
-    public static int  lptg4 = 6; //三等奖 10名： 价值79元      天猫精灵方糖智能音箱
+    public static int  lptg2 = 0; //一等奖 2名：  价值1299元   小米扫地机器
+    public static int  lptg3 = 5; //二等奖 10名： 价值99元      九阳多功能料理机
+    public static int  lptg4 = 5; //三等奖 10名： 价值79元      天猫精灵方糖智能音箱
     public static int  lptg5 = 280; //参与奖 300名：充电宝、小米背包、飞科电吹风等......
     public static int  lptg6 = 15; //特别奖20名：价值249元小米旅行箱
 

@@ -414,11 +414,9 @@ public class MyUtils22 {
 					}else {
 						//一等奖10
 						if(TimeString.nowTime().indexOf("2020-04-15")!=-1){
-							sy = 3 -zjs;
+							sy = 4 -zjs;
 						}else if(TimeString.nowTime().indexOf("2020-04-16")!=-1){
 							sy = 5 -zjs;
-						}else if(TimeString.nowTime().indexOf("2020-04-17")!=-1){
-							sy = 1 -zjs;
 						}else {
 							sy = 0;
 						}
