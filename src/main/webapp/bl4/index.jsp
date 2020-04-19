@@ -517,7 +517,7 @@ d{color:#fff;}
     <input type="hidden" name="quesnum" value="7" />
 <table width="100%" height="302" border="0" cellpadding="0" cellspacing="0" style="background-color:#ececee">
   <tr>
-    <td height="600" align="center" valign="top" bgcolor="#FFFFFF" style="background:url(img/IMG_TOP3.png) no-repeat top center;background-size: 100% 100%;"><table width="95%" cellspacing="2" cellpadding="0">
+    <td height="600" align="center" valign="top" bgcolor="#FFFFFF" style="background:url(img/IMG_TOP3.png) no-repeat top center;background-size: 100%;"><table width="95%" cellspacing="2" cellpadding="0">
       <tr>
         <td height="10" colspan="2" align="right">&nbsp;</td>
       </tr>
@@ -530,7 +530,7 @@ d{color:#fff;}
   <tr>
     <td align="center" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="30">
       <tr>
-        <td colspan="2" align="left"><p><strong><div style="line-height:1.8;text-indent:2em;">为进一步推动公共文化服务广覆盖、高效能，构建基本完善的公共文化服务体系。乐清大力推进国家公共文化服务体系示范区创建工作，不断满足人民日益增长的美好生活需要，提升人民群众的幸福感和获得感，市文广旅体局联合乐清日报社开展有奖问答活动。</div></strong></P></td>
+        <td colspan="2" align="left"><p><strong><div style="line-height:1.8;text-indent:2em;">为进一步推动公共文化服务全覆盖、高效能，构建基本完善的公共文化服务体系。乐清大力推进国家公共文化服务体系示范区创建工作，不断满足人民日益增长的美好生活需要，提升人民群众的幸福感和获得感，乐清市国家公共文化服务体系示范区创建办开展有奖问答活动。</div></strong></P></td>
         </tr>
       <tr>
         <td height="50" colspan="2">
