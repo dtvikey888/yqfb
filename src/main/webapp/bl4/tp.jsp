@@ -23,12 +23,17 @@ if(request.getParameterValues("c4")!=null){
 }
 String c5 = request.getParameter("c5");
 String c6 = request.getParameter("c6");
-String[] c7=null;
-String cs7="";
-if(request.getParameterValues("c7")!=null){
-	c7=request.getParameterValues("c7");
-	for(int i=0;i<c7.length;i++){
-		cs7+=c7[i]+",";
+String c7 = request.getParameter("c7");
+String c8 = request.getParameter("c8");
+String c9 = request.getParameter("c9");
+String c10 = request.getParameter("c10");
+
+String[] c11=null;
+String cs11="";
+if(request.getParameterValues("c11")!=null){
+	c11=request.getParameterValues("c11");
+	for(int i=0;i<c11.length;i++){
+		cs11+=c11[i]+",";
 	}
 }
 
@@ -41,7 +46,7 @@ if(request.getParameterValues("c7")!=null){
 //	out.println(cs7);
 //	out.close();
 
-	int bz=MyUtils25.DtRl(openid,c1,cs2,c3,cs4,c5,c6,cs7);
+	int bz=MyUtils25.DtRl(openid,c1,cs2,c3,cs4,c5,c6,c7,c8,c9,c10,cs11);
 //out.println(bz);
 //out.close();
 if(bz==1){

@@ -961,9 +961,9 @@ public class MyUtils22 {
 					db.executeUpdate(sql);
 					System.out.println(sql);
 
-					String sql2 = "INSERT INTO daf_dt(openid,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,c14,c15,c16,c17,c18,c19,c20,fbsj) VALUES('"+openid+"',"+a[0]+","+a[1]+","+a[2]+","+a[3]+","+a[4]+","+a[5]+","+a[6]+","+a[7]+","+a[8]+","+a[9]+","+a[10]+","+a[11]+","+a[12]+","+a[13]+","+a[14]+","+a[15]+","+a[16]+","+a[17]+","+a[18]+",'"+a[19]+"','"+TimeString.nowTime()+"')";
-					System.out.println(sql2);
-					db.executeInsert(sql2);
+//					String sql2 = "INSERT INTO daf_dt(openid,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,c14,c15,c16,c17,c18,c19,c20,fbsj) VALUES('"+openid+"',"+a[0]+","+a[1]+","+a[2]+","+a[3]+","+a[4]+","+a[5]+","+a[6]+","+a[7]+","+a[8]+","+a[9]+","+a[10]+","+a[11]+","+a[12]+","+a[13]+","+a[14]+","+a[15]+","+a[16]+","+a[17]+","+a[18]+",'"+a[19]+"','"+TimeString.nowTime()+"')";
+//					System.out.println(sql2);
+//					db.executeInsert(sql2);
 
 					bz=1;
 

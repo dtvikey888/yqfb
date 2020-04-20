@@ -477,6 +477,58 @@ d{color:#fff;}
                 return false ;
             }
 
+            var ids = document.getElementsByName("c8");
+            var flag = false ;
+            for(var i=0;i<ids.length;i++){
+                if(ids[i].checked){
+                    flag = true ;
+                    break ;
+                }
+            }
+            if(!flag){
+                alert("请选择！");
+                return false ;
+            }
+
+            var ids = document.getElementsByName("c9");
+            var flag = false ;
+            for(var i=0;i<ids.length;i++){
+                if(ids[i].checked){
+                    flag = true ;
+                    break ;
+                }
+            }
+            if(!flag){
+                alert("请选择！");
+                return false ;
+            }
+
+            var ids = document.getElementsByName("c10");
+            var flag = false ;
+            for(var i=0;i<ids.length;i++){
+                if(ids[i].checked){
+                    flag = true ;
+                    break ;
+                }
+            }
+            if(!flag){
+                alert("请选择！");
+                return false ;
+            }
+
+            var ids = document.getElementsByName("c11");
+            var flag = false ;
+            for(var i=0;i<ids.length;i++){
+                if(ids[i].checked){
+                    flag = true ;
+                    break ;
+                }
+            }
+            if(!flag){
+                alert("请选择！");
+                return false ;
+            }
+
 
         }
         </script>
@@ -651,18 +703,18 @@ d{color:#fff;}
 	  
 	  <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>6、哪些不是乐清公共文化服务领域“品牌项目” （ ）。（单选题）</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>6、《公共文化服务保障法》自（ ）起施行。(单选题)</strong></div>
           <p><input type="radio" name="c6" value="1" style="width:55px; height:55px;"/>
-		    A. 影视城、足球杯</p>
+		    A. 2016年12月25日</p>
           <p>
             <input type="radio" name="c6" value="2" style="width:55px; height:55px;"/>
-            B. 城市书房、百姓书屋</p>
+            B. 2017年11月4日</p>
           <p>
             <input type="radio" name="c6" value="3" style="width:55px; height:55px;"/>
-            C. 文化驿站、乡村艺术团、市民文化节</p>
+            C. 2017年3月1日</p>
           <p>
             <input type="radio" name="c6" value="4" style="width:55px; height:55px;"/>
-            D. 百姓舞台、萧台艺苑、梅溪讲堂</p>
+            D. 2018年1月1日</p>
 		</td>
       </tr>
 	  </tbody>
@@ -671,22 +723,94 @@ d{color:#fff;}
 
 	 <tbody id="tbName">
       <tr>
-          <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>7、哪些行为是参与公共文化服务项目？ （ ）（多选题）。</strong></div>
+          <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>7、《公共图书馆法》自（ ）起开始实施。(单选题)</strong></div>
           <p><input type="checkbox" name="c7" value="1" style="width:55px; height:55px;"/>
-		    A. 读书看报、观看演出</p>
+		    A. 2017年10月30日</p>
           <p>
             <input type="checkbox" name="c7" value="2" style="width:55px; height:55px;"/>
-            B. 看电视看电影、参加声乐比赛活动</p>
+            B. 2017年11月4日</p>
           <p>
             <input type="checkbox" name="c7" value="3" style="width:55px; height:55px;"/>
-            C. 参加舞蹈大赛活动、报名参加文化馆公益课堂</p>
+            C. 2017年12月1日</p>
           <p>
             <input type="checkbox" name="c7" value="4" style="width:55px; height:55px;"/>
-            D. 在手机上看文章看视频、在图书馆公众号上借阅电子书籍</p>
-              <div style="float:right" onClick="window.location.href='memo.jsp'"><img src="img/xxzl2.png" border="0"></div>
+            D. 2018年1月1日</p>
 		</td>
       </tr>
 	  </tbody>
+
+        <tbody id="tbName">
+        <tr>
+            <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>8、《公共文化服务保障法》所称公共文化服务，是指由政府主导、社会力量参与，以满足公民（ ）为主要目的而提供的（ ）、文化产品、文化活动以及其他相关服务。（ ）（单选题）</strong></div>
+                <p><input type="checkbox" name="c7" value="1" style="width:55px; height:55px;"/>
+                    A. 高端文化需求 公共文化设施</p>
+                <p>
+                    <input type="checkbox" name="c7" value="2" style="width:55px; height:55px;"/>
+                    B. 高端文化需求 公共文化人才</p>
+                <p>
+                    <input type="checkbox" name="c7" value="3" style="width:55px; height:55px;"/>
+                    C. 基本文化需求 公共文化设施</p>
+                <p>
+                    <input type="checkbox" name="c7" value="4" style="width:55px; height:55px;"/>
+                    D. 基本文化需求 公共文化人才</p>
+            </td>
+        </tr>
+        </tbody>
+
+        <tbody id="tbName">
+        <tr>
+            <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>9、《公共图书馆法》所称公共图书馆，是指向社会公众（ ）开放，收集、整理、保存文献信息并提供查询、借阅及相关服务，开展（ ）的公共文化设施。（ ）（单选题）</strong></div>
+                <p><input type="checkbox" name="c7" value="1" style="width:55px; height:55px;"/>
+                    A. 免费 社会教育</p>
+                <p>
+                    <input type="checkbox" name="c7" value="2" style="width:55px; height:55px;"/>
+                    B. 有偿 国民教育</p>
+                <p>
+                    <input type="checkbox" name="c7" value="3" style="width:55px; height:55px;"/>
+                    C. 免费 国民教育</p>
+                <p>
+                    <input type="checkbox" name="c7" value="4" style="width:55px; height:55px;"/>
+                    D. 有偿 社会教育</p>
+            </td>
+        </tr>
+        </tbody>
+
+        <tbody id="tbName">
+        <tr>
+            <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>10、哪些不是乐清公共文化服务领域“品牌项目” （ ）。（单选题）</strong></div>
+                <p><input type="checkbox" name="c7" value="1" style="width:55px; height:55px;"/>
+                    A. 影视城、足球杯</p>
+                <p>
+                    <input type="checkbox" name="c7" value="2" style="width:55px; height:55px;"/>
+                    B. 城市书房、百姓书屋</p>
+                <p>
+                    <input type="checkbox" name="c7" value="3" style="width:55px; height:55px;"/>
+                    C. 文化驿站、乡村艺术团、市民文化节</p>
+                <p>
+                    <input type="checkbox" name="c7" value="4" style="width:55px; height:55px;"/>
+                    D. 百姓舞台、萧台艺苑、梅溪讲堂</p>
+            </td>
+        </tr>
+        </tbody>
+
+        <tbody id="tbName">
+        <tr>
+            <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>11、哪些行为是参与公共文化服务项目？ （ ）（多选题）</strong></div>
+                <p><input type="checkbox" name="c7" value="1" style="width:55px; height:55px;"/>
+                    A. 读书看报、观看演出</p>
+                <p>
+                    <input type="checkbox" name="c7" value="2" style="width:55px; height:55px;"/>
+                    B. 看电视看电影、参加声乐比赛活动</p>
+                <p>
+                    <input type="checkbox" name="c7" value="3" style="width:55px; height:55px;"/>
+                    C. 参加舞蹈大赛活动、报名参加文化馆公益课堂</p>
+                <p>
+                    <input type="checkbox" name="c7" value="4" style="width:55px; height:55px;"/>
+                    D. 在手机上看文章看视频、在图书馆公众号上借阅电子书籍</p>
+                <div style="float:right" onClick="window.location.href='memo.jsp'"><img src="img/xxzl2.png" border="0"></div>
+            </td>
+        </tr>
+        </tbody>
 	  
 
 	 
