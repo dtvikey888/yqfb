@@ -758,7 +758,7 @@ bottom: 10px;
 	  
 	 <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>3、从事出版活动应当将（? ）放在首位。</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>3、从事出版活动应当将（ ）放在首位。</strong></div>
           <p> <input type="radio" name="c3" value="1" style="width:55px; height:55px;"/>
 		    A. 经济效益</p>
           <p>
@@ -776,7 +776,7 @@ bottom: 10px;
 	  
 	   <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>4、按《印刷业管理条例》的规定，以下不属于“出版物”的是（??）。</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>4、按《印刷业管理条例》的规定，以下不属于“出版物”的是（ ）。</strong></div>
           <p> <input type="radio" name="c4" value="1" style="width:55px; height:55px;"/>
 		    A. 期刊</p>
           <p>
@@ -812,7 +812,7 @@ bottom: 10px;
 	  
 	  <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>6、《出版管理条例》规定，单位违反本条例被处以吊销许可证行政处罚的，其法定代表人或者主要负责人自许可证被吊销之日起（?）内不得担任出版、印刷或者复制、进口、发行单位的法定代表人或者主要负责人。</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>6、《出版管理条例》规定，单位违反本条例被处以吊销许可证行政处罚的，其法定代表人或者主要负责人自许可证被吊销之日起（ ）内不得担任出版、印刷或者复制、进口、发行单位的法定代表人或者主要负责人。</strong></div>
           <p><input type="radio" name="c6" value="1" style="width:55px; height:55px;"/>
 		    A. 5年</p>
           <p>
@@ -831,7 +831,7 @@ bottom: 10px;
 
 	 <tbody id="tbName">
       <tr>
-          <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>7、差错率不超过（?）的图书，其编校质量属合格。?</strong></div>
+          <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>7、差错率不超过（ ）的图书，其编校质量属合格。?</strong></div>
           <p><input type="radio" name="c7" value="1" style="width:55px; height:55px;"/>
 		    A. 千分之一</p>
           <p>
@@ -850,7 +850,7 @@ bottom: 10px;
 	  
 	 <tbody id="tbName">
       <tr>
-          <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>8、著作权法所称作品，是指文学、艺术和科学领域内具有（??）并能以某种有形形式复制的智力成果。</strong></div>
+          <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>8、著作权法所称作品，是指文学、艺术和科学领域内具有（ ）并能以某种有形形式复制的智力成果。</strong></div>
           <p> <input type="radio" name="c8" value="1" style="width:55px; height:55px;"/>
 		    A. 新颖性</p>
           <p>
@@ -870,7 +870,7 @@ bottom: 10px;
       
 	 <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>9、根据我国著作权法的规定，（??）与著作权是同一概念。</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>9、根据我国著作权法的规定，（ ）与著作权是同一概念。</strong></div>
           <p> <input type="radio" name="c9" value="1" style="width:55px; height:55px;"/>
 		    A. 版权</p>
           <p>
@@ -890,12 +890,12 @@ bottom: 10px;
 	    
 	 <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>10、著作权法保护的是（??）。?</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>10、著作权法保护的是（ ）。</strong></div>
           <p> <input type="radio" name="c10" value="1" style="width:55px; height:55px;"/>
-		    A. 思想观念????</p>
+		    A. 思想观念</p>
           <p>
             <input type="radio" name="c10" value="2" style="width:55px; height:55px;"/>
-            B. 数学概念??</p>
+            B. 数学概念</p>
           <p>
             <input type="radio" name="c10" value="3" style="width:55px; height:55px;"/>
             C. 原则和发现</p>
@@ -909,9 +909,9 @@ bottom: 10px;
 	  
 	   <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>11、根据我国著作权法，我国公民著作权（??）。</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>11、根据我国著作权法，我国公民著作权（ ）。</strong></div>
           <p> <input type="radio" name="c11" value="1" style="width:55px; height:55px;"/>
-		    A. 随作品的发表而自动产生?</p>
+		    A. 随作品的发表而自动产生</p>
           <p>
             <input type="radio" name="c11" value="2" style="width:55px; height:55px;"/>
             B. 随作品的创作完成而自动产生</p>
@@ -927,7 +927,7 @@ bottom: 10px;
 	  
 	   <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>12、(?)不受著作权法保护。?</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>12、( )不受著作权法保护。</strong></div>
           <p> <input type="radio" name="c12" value="1" style="width:55px; height:55px;"/>
 		    A. 计算机软件</p>
           <p>
@@ -945,7 +945,7 @@ bottom: 10px;
 	  
 	  <tbody id="tbName">
       <tr>
-          <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>13、图书出版者重印、再版作品的，应当（?）。?</strong></div>
+          <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>13、图书出版者重印、再版作品的，应当（ ）。</strong></div>
           <p> <input type="radio" name="c13" value="1" style="width:55px; height:55px;"/>
 		    A. 支付报酬但不必通知著作权人</p>
           <p>
@@ -973,8 +973,8 @@ bottom: 10px;
           <p>
             <input type="radio" name="c14" value="3" style="width:55px; height:55px;"/>
             C. 不受限制</p>
-              <p>
-                  <input type="radio" name="c14" value="4" style="width:55px; height:55px;"/>
+              <p style="line-height: 1.5">
+                  <input type="radio" name="c14" value="4" style="width:55px; height:55px;line-height: 1.5"/>
                   D. 截止于作品首次发表后第50年的12月31日</p>
        </td>
       </tr>
@@ -982,7 +982,7 @@ bottom: 10px;
 	  
 	 <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>15、甲撰写毕业论文，大量抄袭了乙刊登在某杂志上的一篇译文，甲的行为侵犯了（? ）的著作权。</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>15、甲撰写毕业论文，大量抄袭了乙刊登在某杂志上的一篇译文，甲的行为侵犯了（ ）的著作权。</strong></div>
           <p> <input type="radio" name="c15" value="1" style="width:55px; height:55px;"/>
 		    A. 乙</p>
           <p>
@@ -1000,7 +1000,7 @@ bottom: 10px;
 
         <tbody id="tbName">
         <tr>
-            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>16、下列哪项不适用于我国著作权法保护？（??）?</strong></div>
+            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>16、下列哪项不适用于我国著作权法保护？（ ）</strong></div>
                 <p> <input type="radio" name="c16" value="1" style="width:55px; height:55px;"/>
                     A. 书法</p>
                 <p>
@@ -1019,7 +1019,7 @@ bottom: 10px;
 
         <tbody id="tbName">
         <tr>
-            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>17、因侵犯著作权行为提起的民事诉讼，由著作权法所规定侵权行为的（??）人民法院管辖。??</strong></div>
+            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>17、因侵犯著作权行为提起的民事诉讼，由著作权法所规定侵权行为的（ ）人民法院管辖。</strong></div>
                 <p> <input type="radio" name="c17" value="1" style="width:55px; height:55px;"/>
                     A. 实施地</p>
                 <p>
@@ -1028,16 +1028,16 @@ bottom: 10px;
                 <p>
                     <input type="radio" name="c17" value="3" style="width:55px; height:55px;"/>
                     C. 被告住所地</p>
-                <p>
+                <p style="line-height: 1.5">
                     <input type="radio" name="c17" value="4" style="width:55px; height:55px;"/>
-                    D. 实施地、侵权复制品储藏地或查封扣押地、被告住所地</p>
+                 D. 实施地、侵权复制品储藏地或查封扣押地、被告住所地</p>
             </td>
         </tr>
         </tbody>
 
         <tbody id="tbName">
         <tr>
-            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>18、下列哪个是著作权中的人身权（??）。</strong></div>
+            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>18、下列哪个是著作权中的人身权（ ）。</strong></div>
                 <p> <input type="radio" name="c18" value="1" style="width:55px; height:55px;"/>
                     A. 发行权</p>
                 <p>
@@ -1056,7 +1056,7 @@ bottom: 10px;
 
         <tbody id="tbName">
         <tr>
-            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>19、中国历史上第一部著作权法是（??）。</strong></div>
+            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>19、中国历史上第一部著作权法是（ ）。</strong></div>
                 <p> <input type="radio" name="c19" value="1" style="width:55px; height:55px;"/>
                     A. 中华人民共和国著作权法</p>
                 <p>

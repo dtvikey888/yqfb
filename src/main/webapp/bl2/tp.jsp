@@ -30,6 +30,29 @@ if(request.getParameterValues("c20")!=null){
 		cs20+=c20[i]+",";
 	}
 }
+
+//	out.println(c1);
+//	out.println(c2);
+//	out.println(c3);
+//	out.println(c4);
+//	out.println(c5);
+//	out.println(c6);
+//	out.println(c7);
+//	out.println(c8);
+//	out.println(c9);
+//	out.println(c10);
+//	out.println(c11);
+//	out.println(c12);
+//	out.println(c13);
+//	out.println(c14);
+//	out.println(c15);
+//	out.println(c16);
+//	out.println(c17);
+//	out.println(c18);
+//	out.println(c19);
+//	out.println(cs20);
+//	out.close();
+
 int bz=MyUtils22.DtRl(openid,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,c14,c15,c16,c17,c18,c19,cs20);
 //out.println(bz);
 //out.close();

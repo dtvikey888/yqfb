@@ -560,8 +560,8 @@ public class ZghTools {
 					if(MyUtils25.jx(openid)){//没中奖
 						String sql2 = "delete from daf_cj4 where openid='"+openid+"'";
 						db.executeDelete(sql2);
-						String sql3 = "delete from daf_dt2 where openid='"+openid+"'";
-						db.executeDelete(sql3);
+//						String sql3 = "delete from daf_dt2 where openid='"+openid+"'";
+//						db.executeDelete(sql3);
 					}
 
 				}else{

@@ -981,7 +981,7 @@ public class MyUtils25 {
 			}
 		}
 
-		if (cs==7) {
+		if (cs>=7) {
 			zqm=true;
 		}
 

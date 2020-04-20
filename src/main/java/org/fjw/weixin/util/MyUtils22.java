@@ -912,14 +912,15 @@ public class MyUtils22 {
 //		}
 		String[] arr2 = {"3","4","2","4","1","2","2","3","1","1","2","3","2","3","4","3","4","2","4","1,2,3,4,"};
 		for(int i = 0; i < 20; ++i) {
-			if(arr1[i] == arr2[i]){
+			if(arr1[i].equals(arr2[i])){
 				System.out.println("same!");
 				cs++;
 			}
 		}
 
 
-		//System.out.println("ct:"+cs);
+
+		System.out.println("ct:"+cs);
 		if (cs>=15) {
 			zqm=true;
 		}
