@@ -67,7 +67,7 @@ public class AllValus {
 
     public static String errpage2="http://www.yqrb.com.cn/yqfb/bl4/success.jsp";
 
-    public static String success_lan="您已答对10道题（及以上），填写正确的联系方式，以便获取奖品!";
+    public static String success_lan="您已答对15道题（及以上），填写正确的联系方式，以便获取奖品!";
     public static String csc_lan="答题已经超过100000次，谢谢关注！";
     public static String error_lan="您的答题错误率过高，请重新答题";
 
@@ -83,33 +83,33 @@ public class AllValus {
 
     public static String cg_cx="恭喜您获得10元话费奖励，我们会在活动结束后为您充值，谢谢参与";
 
-
-    public static String daf_title="第32个爱国卫生月知识问答";
-    public static String daf_desc="今年4月是第32个爱国卫生月，今年的活动主题是防疫有我，爱卫同行。";
+    //世界新闻出版日转发朋友圈标题等
+    public static String daf_title="世界知识产权日知识问答";
+    public static String daf_desc="4月26日是世界知识产权日，今年的活动主题是强化版权治理，优化版权生态，为了树立尊重知识、崇尚科学和保护知识产权的意识，营造鼓励知识创新的法律环境，中共乐清市委宣传部举办版权知识有奖问答活动。";
     public static String daf_link="http://www.yqrb.com.cn/yqfb/bl2/index.jsp";
-    public static String daf_img="http://v.yqcn.com/yqfb/bl2/img/IMG_TOP7.jpg";
-
+    public static String daf_img="http://v.yqcn.com/yqfb/bl2/img/IMG_TOP3.png";
+    //文广新局转发朋友圈标题等
     public static String daf_lp_title="公共文化服务体系示范区创建问答活动";
     public static String daf_lp_desc="为进一步推动公共文化服务全覆盖、高效能，构建基本完善的公共文化服务体系。乐清大力推进国家公共文化服务体系示范区创建工作，不断满足人民日益增长的美好生活需要，提升人民群众的幸福感和获得感，乐清市国家公共文化服务体系示范区创建办开展有奖问答活动。";
     public static String daf_lp_link="http://www.yqrb.com.cn/yqfb/bl4/index.jsp";
     public static String daf_lp_img="http://v.yqcn.com/yqfb/bl4/img/IMG_TOP3.png";
 
-    //第32个爱国卫生月知识竞答 起止时间 4.15-4.17
+    //世界新闻出版日起止时间 4.23-4.27
     public static String daf_t1="2020-04-13 00:00:00";
-    public static String daf_t2="2020-04-18 00:00:00";
+    public static String daf_t2="2020-04-28 00:00:00";
 
-    //公民道德日起止时间 起止时间 9.20-9.22
+    //文广新局起止时间      9.20-9.22
     public static String daf_p1="2020-04-07 00:00:00";
     public static String daf_p2="2020-04-21 00:00:00";
 
-    //云云 健康局爱卫答题抽奖
+    //世界新闻出版日奖项
     public static int  lpgg1 = 10; //50话费 10份
     public static int  lpgg2 = 30; //30话费 30份
     public static int  lpgg3 = 50; //20元话费 50名
-    public static int  lpgg4 = 210; //10元话费 210名
+    public static int  lpgg4 = 260; //10元话费 210名
 //   public static int  lpgg5 = 600; //5等奖5 750名
 
-    //林佩 文广新局答题抽奖
+    //文广新局奖项
     public static int  lptg1 = 0; //特等奖 1名：  价值4999元   华为手机
     public static int  lptg2 = 0; //一等奖 2名：  价值1299元   小米扫地机器
     public static int  lptg3 = 5; //二等奖 10名： 价值99元      九阳多功能料理机

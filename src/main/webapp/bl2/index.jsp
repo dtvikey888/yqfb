@@ -378,98 +378,277 @@ left: 10px;
 bottom: 10px;
 }
 </style>
-		
-<script>
-var xz=0;
-function processForm(form)
-{
-xz=0;
-var xf=0;
-if (form.c1[0].checked==1) xf+=0;
-else if (form.c1[1].checked==1) xf+=0;
-else if (form.c1[2].checked==1) xf+=0;
-else xz=1;
 
-if (form.c2[0].checked==1) xf+=0;
-else if (form.c2[1].checked==1) xf+=0;
-else if (form.c2[2].checked==1) xf+=0;
-else xz=1;
+    <script>
+        //表单验证
+        function processForm(form)
+        {
 
-if (form.c3[0].checked==1) xf+=0;
-else if (form.c3[1].checked==1) xf+=0;
-else if (form.c3[2].checked==1) xf+=0;
-else xz=1;
+            var ids = document.getElementsByName("c1");
+            var flag = false ;
+            for(var i=0;i<ids.length;i++){
+                if(ids[i].checked){
+                    flag = true ;
+                    break ;
+                }
+            }
+            if(!flag){
+                alert("请选择！");
+                return false ;
+            }
 
-if (form.c4[0].checked==1) xf+=0;
-else if (form.c4[1].checked==1) xf+=0;
-else if (form.c4[2].checked==1) xf+=0;
-else xz=1;
+            var ids = document.getElementsByName("c2");
+            var flag = false ;
+            for(var i=0;i<ids.length;i++){
+                if(ids[i].checked){
+                    flag = true ;
+                    break ;
+                }
+            }
+            if(!flag){
+                alert("请选择！");
+                return false ;
+            }
 
-if (form.c5[0].checked==1) xf+=0; 
-else if (form.c5[1].checked==1) xf+=0; 
-else if (form.c5[2].checked==1) xf+=0; 
-else xz=1;
+            var ids = document.getElementsByName("c3");
+            var flag = false ;
+            for(var i=0;i<ids.length;i++){
+                if(ids[i].checked){
+                    flag = true ;
+                    break ;
+                }
+            }
+            if(!flag){
+                alert("请选择！");
+                return false ;
+            }
+
+            var ids = document.getElementsByName("c4");
+            var flag = false ;
+            for(var i=0;i<ids.length;i++){
+                if(ids[i].checked){
+                    flag = true ;
+                    break ;
+                }
+            }
+            if(!flag){
+                alert("请选择！");
+                return false ;
+            }
+
+            var ids = document.getElementsByName("c5");
+            var flag = false ;
+            for(var i=0;i<ids.length;i++){
+                if(ids[i].checked){
+                    flag = true ;
+                    break ;
+                }
+            }
+            if(!flag){
+                alert("请选择！");
+                return false ;
+            }
+
+            var ids = document.getElementsByName("c6");
+            var flag = false ;
+            for(var i=0;i<ids.length;i++){
+                if(ids[i].checked){
+                    flag = true ;
+                    break ;
+                }
+            }
+            if(!flag){
+                alert("请选择！");
+                return false ;
+            }
+
+            var ids = document.getElementsByName("c7");
+            var flag = false ;
+            for(var i=0;i<ids.length;i++){
+                if(ids[i].checked){
+                    flag = true ;
+                    break ;
+                }
+            }
+            if(!flag){
+                alert("请选择！");
+                return false ;
+            }
+
+            var ids = document.getElementsByName("c8");
+            var flag = false ;
+            for(var i=0;i<ids.length;i++){
+                if(ids[i].checked){
+                    flag = true ;
+                    break ;
+                }
+            }
+            if(!flag){
+                alert("请选择！");
+                return false ;
+            }
+
+            var ids = document.getElementsByName("c9");
+            var flag = false ;
+            for(var i=0;i<ids.length;i++){
+                if(ids[i].checked){
+                    flag = true ;
+                    break ;
+                }
+            }
+            if(!flag){
+                alert("请选择！");
+                return false ;
+            }
+
+            var ids = document.getElementsByName("c10");
+            var flag = false ;
+            for(var i=0;i<ids.length;i++){
+                if(ids[i].checked){
+                    flag = true ;
+                    break ;
+                }
+            }
+            if(!flag){
+                alert("请选择！");
+                return false ;
+            }
 
 
-if (form.c6[0].checked==1) xf+=0;
-else if (form.c6[1].checked==1) xf+=0; 
-else if (form.c6[2].checked==1) xf+=0; 
-else xz=1;
+            var ids = document.getElementsByName("c11");
+            var flag = false ;
+            for(var i=0;i<ids.length;i++){
+                if(ids[i].checked){
+                    flag = true ;
+                    break ;
+                }
+            }
+            if(!flag){
+                alert("请选择！");
+                return false ;
+            }
 
-if (form.c7[0].checked==1) xf+=0;
-else if (form.c7[1].checked==1) xf+=2;
-else if (form.c7[2].checked==1) xf+=0;
-else xz=1;
+            var ids = document.getElementsByName("c12");
+            var flag = false ;
+            for(var i=0;i<ids.length;i++){
+                if(ids[i].checked){
+                    flag = true ;
+                    break ;
+                }
+            }
+            if(!flag){
+                alert("请选择！");
+                return false ;
+            }
 
-if (form.c8[0].checked==1) xf+=0;
-else if (form.c8[1].checked==1) xf+=2; 
-else if (form.c8[2].checked==1) xf+=2;
-else xz=1;
+            var ids = document.getElementsByName("c13");
+            var flag = false ;
+            for(var i=0;i<ids.length;i++){
+                if(ids[i].checked){
+                    flag = true ;
+                    break ;
+                }
+            }
+            if(!flag){
+                alert("请选择！");
+                return false ;
+            }
 
-if (form.c9[0].checked==1) xf+=0;
-else if (form.c9[1].checked==1) xf+=2; 
-else if (form.c9[2].checked==1) xf+=2;
-else xz=1;
+            var ids = document.getElementsByName("c14");
+            var flag = false ;
+            for(var i=0;i<ids.length;i++){
+                if(ids[i].checked){
+                    flag = true ;
+                    break ;
+                }
+            }
+            if(!flag){
+                alert("请选择！");
+                return false ;
+            }
 
-if (form.c10[0].checked==1) xf+=0;
-else if (form.c10[1].checked==1) xf+=2; 
-else if (form.c10[2].checked==1) xf+=2;
-else xz=1;
+            var ids = document.getElementsByName("c15");
+            var flag = false ;
+            for(var i=0;i<ids.length;i++){
+                if(ids[i].checked){
+                    flag = true ;
+                    break ;
+                }
+            }
+            if(!flag){
+                alert("请选择！");
+                return false ;
+            }
+
+            var ids = document.getElementsByName("c16");
+            var flag = false ;
+            for(var i=0;i<ids.length;i++){
+                if(ids[i].checked){
+                    flag = true ;
+                    break ;
+                }
+            }
+            if(!flag){
+                alert("请选择！");
+                return false ;
+            }
+
+            var ids = document.getElementsByName("c17");
+            var flag = false ;
+            for(var i=0;i<ids.length;i++){
+                if(ids[i].checked){
+                    flag = true ;
+                    break ;
+                }
+            }
+            if(!flag){
+                alert("请选择！");
+                return false ;
+            }
+
+            var ids = document.getElementsByName("c18");
+            var flag = false ;
+            for(var i=0;i<ids.length;i++){
+                if(ids[i].checked){
+                    flag = true ;
+                    break ;
+                }
+            }
+            if(!flag){
+                alert("请选择！");
+                return false ;
+            }
+
+            var ids = document.getElementsByName("c19");
+            var flag = false ;
+            for(var i=0;i<ids.length;i++){
+                if(ids[i].checked){
+                    flag = true ;
+                    break ;
+                }
+            }
+            if(!flag){
+                alert("请选择！");
+                return false ;
+            }
+
+            var ids = document.getElementsByName("c20");
+            var flag = false ;
+            for(var i=0;i<ids.length;i++){
+                if(ids[i].checked){
+                    flag = true ;
+                    break ;
+                }
+            }
+            if(!flag){
+                alert("请选择！");
+                return false ;
+            }
 
 
-if (form.c11[0].checked==1) xf+=0;
-else if (form.c11[1].checked==1) xf+=2; 
-else if (form.c11[2].checked==1) xf+=2;
-else xz=1;
 
-if (form.c12[0].checked==1) xf+=0;
-else if (form.c12[1].checked==1) xf+=2; 
-else if (form.c12[2].checked==1) xf+=2;
-else xz=1;
-
-if (form.c13[0].checked==1) xf+=0;
-else if (form.c13[1].checked==1) xf+=2; 
-else if (form.c13[2].checked==1) xf+=2;
-else xz=1;
-
-if (form.c14[0].checked==1) xf+=0;
-else if (form.c14[1].checked==1) xf+=2; 
-else if (form.c14[2].checked==1) xf+=2;
-else xz=1;
-
-if (form.c15[0].checked==1) xf+=0;
-else if (form.c15[1].checked==1) xf+=2; 
-else if (form.c15[2].checked==1) xf+=2;
-else xz=1;
-
-if(xz!=0){alert('请认真选择每一项！');return false;}
-else
-{
-  //alert(OK');
-  return true; 
-}
-}
-</script>
+        }
+    </script>
 </head>
 <body>
 <%int cs = MyUtils22.GetCsForDt(openid);%>
@@ -504,7 +683,7 @@ else
 <form name="form1" method="get" action="tp.jsp">
 <table width="100%" height="302" border="0" cellpadding="0" cellspacing="0" style="background-color:#ececee">
   <tr>
-    <td height="600" align="center" valign="top" bgcolor="#FFFFFF" style="background:url(img/IMG_TOP7.jpg) no-repeat top center;background-size: 100% 100%;"><table width="95%" cellspacing="2" cellpadding="0">
+    <td height="600" align="center" valign="top" bgcolor="#FFFFFF" style="background:url(img/IMG_TOP3.png) no-repeat top center;background-size: 100% 100%;"><table width="95%" cellspacing="2" cellpadding="0">
       <tr>
         <td height="10" colspan="2" align="right">&nbsp;</td>
       </tr>
@@ -517,18 +696,18 @@ else
   <tr>
     <td align="center" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="30">
       <tr>
-        <td colspan="2" align="left"><p><strong><div style="line-height:1.8;text-indent:2em;">今年4月是第32个爱国卫生月，今年的活动主题是“防疫有我，爱卫同行”。为了加大本次爱国卫生月的宣传力度，普及爱国卫生和防疫知识，引导群众树立健康卫生意识，乐清市爱卫办、乐清市卫健局、乐清市日报社联合举办乐清市“第32个爱国卫生月”知识有奖问答活动。</div></strong></P></td>
+        <td colspan="2" align="left"><p><strong><div style="line-height:1.8;text-indent:2em;">4月26日是世界知识产权日，今年的活动主题是“强化版权治理，优化版权生态”，为了树立尊重知识、崇尚科学和保护知识产权的意识，营造鼓励知识创新的法律环境，中共乐清市委宣传部举办版权知识有奖问答活动。</div></strong></P></td>
         </tr>
       <tr>
         <td height="50" colspan="2">
 		  <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#CC0001; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">活动奖励</button>  
-	      <div align="center" style="margin-top:50px;margin-bottom:25px;line-height:1.8">一等奖10份: 50元移动话费</div>
-	      <div align="center" style="margin-top:25px;margin-bottom:25px;line-height:1.8">二等奖30份: 30元移动话费</div>
-	      <div align="center" style="margin-top:25px;margin-bottom:25px;line-height:1.8">三等奖50份: 20元移动话费</div>
-	      <div align="center" style="margin-top:25px;margin-bottom:50px;line-height:1.8">参与奖210份:10元移动话费</div>
+	      <div align="center" style="margin-top:50px;margin-bottom:25px;line-height:1.8">一等奖10份:  50元移动话费</div>
+	      <div align="center" style="margin-top:25px;margin-bottom:25px;line-height:1.8">二等奖30份:  30元移动话费</div>
+	      <div align="center" style="margin-top:25px;margin-bottom:25px;line-height:1.8">三等奖50份:  20元移动话费</div>
+	      <div align="center" style="margin-top:25px;margin-bottom:50px;line-height:1.8">参与奖260份: 10元移动话费</div>
 	      <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#CC0001; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">活动规则</button>  
-		  <div style="margin-top:50px;padding-left:12px;line-height:1.8">1、  共有15道爱国卫生月基础题，全部答对其中10道题，即可参与刮刮卡抽奖活动。每个手机号仅限获奖一次，请实名参与。</div>
-		  <div style="margin-top:25px;padding-left:12px;margin-bottom:25px;line-height:1.8">2、  300份话费奖励完成或超出活动时间参与答题均无效。</div>
+		  <div style="margin-top:50px;padding-left:12px;line-height:1.8">1、  共有20道世界知识产权日基础题，全部答对其中15道题，即可参与刮刮卡抽奖活动。每个手机仅限获奖一次，请实名参与。</div>
+		  <div style="margin-top:25px;padding-left:12px;margin-bottom:25px;line-height:1.8">2、  350份话费奖励完成或超出活动时间参与答题均无效。</div>
 		  <div style="margin-top:25px;padding-left:12px;margin-bottom:50px;line-height:1.8">3、	活动对象：手机号码为浙江移动用户。</div>
           <div style="margin-top:25px;padding-left:12px;margin-bottom:50px;line-height:1.8">4、	话费将在活动结束后5个工作日内赠送。</div>
 		  <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#CC0001; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">选择题</button>
@@ -541,31 +720,37 @@ else
 	<table width="103%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
       <tbody id="tbName" >
       <tr>
-        <td height="20"><p></p><div style="line-height:1.8"><strong>1、《中华人民共和国传染病防治法》规定管理的传染病可分甲、乙、丙三类。2020年1月20日，经国务院批准，新型冠状病毒感染的肺炎新纳入《中华人民共和国传染病防治法》规定的（）传染病，采取（）传染病的防控措施进行管理。</strong></div>
+        <td height="20"><p></p><div style="line-height:1.8"><strong>1、世界读书日是几月几日（   ）</strong></div>
           <p><input type="radio" name="c1" value="1" style="width:55px; height:55px;"/>
-		    A. 甲类  甲类</p>
+		    A. 3月23日</p>
           <p> 
             <input type="radio" name="c1" value="2" style="width:55px; height:55px;"/>
-            B. 甲类  乙类</p>
+            B. 3月26日</p>
           <p style="line-height:1.8">
             <input type="radio" name="c1" value="3" style="width:55px; height:55px;"/>
-            C. 乙类  甲类</p>
+            C. 4月23日</p>
+          <p style="line-height:1.8">
+            <input type="radio" name="c1" value="4" style="width:55px; height:55px;"/>
+            D. 4月26日</p>
           </td>
       </tr>
 	  </tbody>
 	  
 	  
-	   <tbody id="tbName">
+	  <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>2、如果在市场购买肉类，应优先选择：</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>2、世界知识产权日是几月几日（  ）</strong></div>
           <p><input type="radio" name="c2" value="1" style="width:55px; height:55px;"/>
-		    A. 冰鲜鸡</p>
+		    A. 3月23日 </p>
           <p> 
             <input type="radio" name="c2" value="2" style="width:55px; height:55px;"/>
-            B. 穿山甲</p>
+            B. 3月26日</p>
           <p>
             <input type="radio" name="c2" value="3" style="width:55px; height:55px;"/>
-            C. 果子狸</p>
+            C. 4月23日</p>
+           <p>
+            <input type="radio" name="c2" value="4" style="width:55px; height:55px;"/>
+            D. 4月26日</p>
           </td>
       </tr>
 	  </tbody>
@@ -573,60 +758,72 @@ else
 	  
 	 <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>3、四害”不包括：</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>3、从事出版活动应当将（? ）放在首位。</strong></div>
           <p> <input type="radio" name="c3" value="1" style="width:55px; height:55px;"/>
-		    A. 跳蚤</p>
+		    A. 经济效益</p>
           <p>
             <input type="radio" name="c3" value="2" style="width:55px; height:55px;"/>
-            B. 苍蝇</p>
+            B. 社会效益</p>
           <p>
             <input type="radio" name="c3" value="3" style="width:55px; height:55px;"/>
-            C. 老鼠</p>
+            C. 个人效益</p>
+          <p>
+            <input type="radio" name="c3" value="4" style="width:55px; height:55px;"/>
+            D. 企业效益</p>
         </td>
       </tr>
 	  </tbody>
 	  
 	   <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>4、为了保护环境，我们应该：</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>4、按《印刷业管理条例》的规定，以下不属于“出版物”的是（??）。</strong></div>
           <p> <input type="radio" name="c4" value="1" style="width:55px; height:55px;"/>
-		    A. 垃圾分类</p>
+		    A. 期刊</p>
           <p>
             <input type="radio" name="c4" value="2" style="width:55px; height:55px;"/>
-            B. 多开车出行</p>
+            B. 地图</p>
           <p>
             <input type="radio" name="c4" value="3" style="width:55px; height:55px;"/>
-            C. 多用一次性餐具</p>
+            C. 挂历</p>
+            <p>
+                <input type="radio" name="c4" value="4" style="width:55px; height:55px;"/>
+                D. 挂历</p>
 		   </td>
       </tr>
 	  </tbody>
 	  
 	  <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>5、爱国卫生月为每年的：</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>5、以未成年人为对象的出版物（   ）含有诱发未成年人模仿违反社会公德的行为和违法犯罪的行为的内容，（    ）含有恐怖、残酷等妨害未成年人身心健康的内容。</strong></div>
           <p> <input type="radio" name="c5" value="1" style="width:55px; height:55px;"/>
-		    A. 3月</p>
+		    A. 不得      不得</p>
           <p>
             <input type="radio" name="c5" value="2" style="width:55px; height:55px;"/>
-            B. 4月</p>
+            B. 可以      可以</p>
           <p>
             <input type="radio" name="c5" value="3" style="width:55px; height:55px;"/>
-            C. 5月</p>
+            C. 不得      可以</p>
+            <p>
+                <input type="radio" name="c5" value="4" style="width:55px; height:55px;"/>
+                D. 可以      不得</p>
             </td>
       </tr>
 	  </tbody>
 	  
 	  <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>6、属于农村“两管、五改”中“五改”的是：</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>6、《出版管理条例》规定，单位违反本条例被处以吊销许可证行政处罚的，其法定代表人或者主要负责人自许可证被吊销之日起（?）内不得担任出版、印刷或者复制、进口、发行单位的法定代表人或者主要负责人。</strong></div>
           <p><input type="radio" name="c6" value="1" style="width:55px; height:55px;"/>
-		    A. 改路</p>
+		    A. 5年</p>
           <p>
             <input type="radio" name="c6" value="2" style="width:55px; height:55px;"/>
-            B. 改厕</p>
+            B. 10年</p>
           <p>
             <input type="radio" name="c6" value="3" style="width:55px; height:55px;"/>
-            C. 改地</p>
+            C. 15年</p>
+            <p>
+                <input type="radio" name="c6" value="4" style="width:55px; height:55px;"/>
+                D. 20年</p>
 		  </td>
       </tr>
 	  </tbody>
@@ -634,15 +831,18 @@ else
 
 	 <tbody id="tbName">
       <tr>
-          <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>7、新型冠状病毒感染肺炎确定存在人传人，有助于预防的是：</strong></div>
+          <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>7、差错率不超过（?）的图书，其编校质量属合格。?</strong></div>
           <p><input type="radio" name="c7" value="1" style="width:55px; height:55px;"/>
-		    A. 多喝咖啡</p>
+		    A. 千分之一</p>
           <p>
             <input type="radio" name="c7" value="2" style="width:55px; height:55px;"/>
-            B. 晚睡晚起</p>
+            B. 万分之一</p>
           <p>
             <input type="radio" name="c7" value="3" style="width:55px; height:55px;"/>
-            C. 戴口罩</p>
+            C. 百分之一</p>
+              <p>
+                  <input type="radio" name="c7" value="4" style="width:55px; height:55px;"/>
+                  D. 十万分之一</p>
 		</td>
       </tr>
 	  </tbody>
@@ -650,15 +850,18 @@ else
 	  
 	 <tbody id="tbName">
       <tr>
-          <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>8、中央爱国卫生运动委员会第一届主任是：</strong></div>
+          <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>8、著作权法所称作品，是指文学、艺术和科学领域内具有（??）并能以某种有形形式复制的智力成果。</strong></div>
           <p> <input type="radio" name="c8" value="1" style="width:55px; height:55px;"/>
-		    A. 朱德</p>
+		    A. 新颖性</p>
           <p>
             <input type="radio" name="c8" value="2" style="width:55px; height:55px;"/>
-            B. 刘少奇</p>
+            B. 艺术性</p>
           <p>
             <input type="radio" name="c8" value="3" style="width:55px; height:55px;"/>
-            C. 周恩来</p>
+            C. 独创性</p>
+              <p>
+                  <input type="radio" name="c8" value="4" style="width:55px; height:55px;"/>
+                  D. 思想性</p>
        </td>
       </tr>
 	  </tbody>
@@ -667,15 +870,18 @@ else
       
 	 <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>9、不属于传播爱国卫生运动精神的是：</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>9、根据我国著作权法的规定，（??）与著作权是同一概念。</strong></div>
           <p> <input type="radio" name="c9" value="1" style="width:55px; height:55px;"/>
-		    A. 热爱祖国</p>
+		    A. 版权</p>
           <p>
             <input type="radio" name="c9" value="2" style="width:55px; height:55px;"/>
-            B. 讲文明卫生</p>
+            B. 出版权</p>
           <p>
             <input type="radio" name="c9" value="3" style="width:55px; height:55px;"/>
-            C. 好逸恶劳</p>
+            C. 复制权</p>
+            <p>
+             <input type="radio" name="c9" value="4" style="width:55px; height:55px;"/>
+            D. 邻接权</p>
        </td>
       </tr>
 	  </tbody>
@@ -684,15 +890,18 @@ else
 	    
 	 <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>10、应邀赴宴过程中，我们应该：</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>10、著作权法保护的是（??）。?</strong></div>
           <p> <input type="radio" name="c10" value="1" style="width:55px; height:55px;"/>
-		    A. 吸烟</p>
+		    A. 思想观念????</p>
           <p>
             <input type="radio" name="c10" value="2" style="width:55px; height:55px;"/>
-            B. 使用公筷</p>
+            B. 数学概念??</p>
           <p>
             <input type="radio" name="c10" value="3" style="width:55px; height:55px;"/>
-            C. 劝酒</p>
+            C. 原则和发现</p>
+            <p>
+                <input type="radio" name="c10" value="4" style="width:55px; height:55px;"/>
+                D. 思想观念的独创性表达</p>
        </td>
       </tr>
 	  </tbody>
@@ -700,45 +909,54 @@ else
 	  
 	   <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>11、乐清市创成国家卫生城市在哪一年：</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>11、根据我国著作权法，我国公民著作权（??）。</strong></div>
           <p> <input type="radio" name="c11" value="1" style="width:55px; height:55px;"/>
-		    A. 2016年</p>
+		    A. 随作品的发表而自动产生?</p>
           <p>
             <input type="radio" name="c11" value="2" style="width:55px; height:55px;"/>
-            B. 2017年</p>
+            B. 随作品的创作完成而自动产生</p>
           <p>
             <input type="radio" name="c11" value="3" style="width:55px; height:55px;"/>
-            C. 2018年</p>
+            C. 在作品上加注版权标记后自动产生</p>
+            <p>
+                <input type="radio" name="c11" value="4" style="width:55px; height:55px;"/>
+                D. 作品以一定的物质形态固定后产生</p>
        </td>
       </tr>
 	  </tbody>
 	  
 	   <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>12、乐清市将在哪一年迎接国家卫生城市第一轮复评：</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>12、(?)不受著作权法保护。?</strong></div>
           <p> <input type="radio" name="c12" value="1" style="width:55px; height:55px;"/>
-		    A. 2020年</p>
+		    A. 计算机软件</p>
           <p>
             <input type="radio" name="c12" value="2" style="width:55px; height:55px;"/>
-            B. 2021年</p>
+            B. 地图</p>
           <p>
             <input type="radio" name="c12" value="3" style="width:55px; height:55px;"/>
-            C. 2022年</p>
+            C. 时事新闻</p>
+            <p>
+                <input type="radio" name="c12" value="4" style="width:55px; height:55px;"/>
+                D. 即兴演说</p>
        </td>
       </tr>
 	  </tbody>
 	  
-	   <tbody id="tbName">
+	  <tbody id="tbName">
       <tr>
-          <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>13、导致温室效应的主要气体是：</strong></div>
+          <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>13、图书出版者重印、再版作品的，应当（?）。?</strong></div>
           <p> <input type="radio" name="c13" value="1" style="width:55px; height:55px;"/>
-		    A. 一氧化碳</p>
+		    A. 支付报酬但不必通知著作权人</p>
           <p>
             <input type="radio" name="c13" value="2" style="width:55px; height:55px;"/>
-            B. 二氧化碳</p>
+            B. 通知著作权人并支付报酬</p>
           <p>
             <input type="radio" name="c13" value="3" style="width:55px; height:55px;"/>
-            C. PM2.5</p>
+            C. 通知著作权人但不必支付报酬</p>
+              <p>
+                  <input type="radio" name="c13" value="4" style="width:55px; height:55px;"/>
+                  D. 与著作权人重新签订合同</p>
        </td>
       </tr>
 	  </tbody>
@@ -746,35 +964,134 @@ else
 	  
 	   <tbody id="tbName">
       <tr>
-          <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>14、健康的解压方式包括：</strong></div>
+          <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>14、作者的署名权、修改权、保护作品完整权的保护期为（ ）</strong></div>
           <p> <input type="radio" name="c14" value="1" style="width:55px; height:55px;"/>
-		    A. 调整自己的想法</p>
+		    A. 作者终生及死后五十年</p>
           <p>
             <input type="radio" name="c14" value="2" style="width:55px; height:55px;"/>
-            B. 饮酒</p>
+            B. 作者终生</p>
           <p>
             <input type="radio" name="c14" value="3" style="width:55px; height:55px;"/>
-            C. 沉迷游戏</p>
+            C. 不受限制</p>
+              <p>
+                  <input type="radio" name="c14" value="4" style="width:55px; height:55px;"/>
+                  D. 截止于作品首次发表后第50年的12月31日</p>
        </td>
       </tr>
 	  </tbody>
 	  
 	 <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>15、不正确的洗手方法包括:</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>15、甲撰写毕业论文，大量抄袭了乙刊登在某杂志上的一篇译文，甲的行为侵犯了（? ）的著作权。</strong></div>
           <p> <input type="radio" name="c15" value="1" style="width:55px; height:55px;"/>
-		    A. 用流动水洗手</p>
+		    A. 乙</p>
           <p>
             <input type="radio" name="c15" value="2" style="width:55px; height:55px;"/>
-            B. 用脸盆盛放清洁的水洗手</p>
+            B. 杂志社</p>
           <p>
             <input type="radio" name="c15" value="3" style="width:55px; height:55px;"/>
-            C. 必须使用皂液(肥皂)等清洁剂</p>
-           
-            <div style="float:right" onClick="button3();"><img src="img/xxzl2.png" border="0"></div>
+            C. 乙和杂志社</p>
+            <p>
+                <input type="radio" name="c15" value="4" style="width:55px; height:55px;"/>
+                D. 乙和原作者</p>
        </td>
       </tr>
 	  </tbody>
+
+        <tbody id="tbName">
+        <tr>
+            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>16、下列哪项不适用于我国著作权法保护？（??）?</strong></div>
+                <p> <input type="radio" name="c16" value="1" style="width:55px; height:55px;"/>
+                    A. 书法</p>
+                <p>
+                    <input type="radio" name="c16" value="2" style="width:55px; height:55px;"/>
+                    B. 地图</p>
+                <p>
+                    <input type="radio" name="c16" value="3" style="width:55px; height:55px;"/>
+                    C. 化学元素周期表</p>
+                <p>
+                    <input type="radio" name="c16" value="4" style="width:55px; height:55px;"/>
+                    D. 地方志</p>
+            </td>
+        </tr>
+        </tbody>
+
+
+        <tbody id="tbName">
+        <tr>
+            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>17、因侵犯著作权行为提起的民事诉讼，由著作权法所规定侵权行为的（??）人民法院管辖。??</strong></div>
+                <p> <input type="radio" name="c17" value="1" style="width:55px; height:55px;"/>
+                    A. 实施地</p>
+                <p>
+                    <input type="radio" name="c17" value="2" style="width:55px; height:55px;"/>
+                    B. 侵权复制品储藏地</p>
+                <p>
+                    <input type="radio" name="c17" value="3" style="width:55px; height:55px;"/>
+                    C. 被告住所地</p>
+                <p>
+                    <input type="radio" name="c17" value="4" style="width:55px; height:55px;"/>
+                    D. 实施地、侵权复制品储藏地或查封扣押地、被告住所地</p>
+            </td>
+        </tr>
+        </tbody>
+
+        <tbody id="tbName">
+        <tr>
+            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>18、下列哪个是著作权中的人身权（??）。</strong></div>
+                <p> <input type="radio" name="c18" value="1" style="width:55px; height:55px;"/>
+                    A. 发行权</p>
+                <p>
+                    <input type="radio" name="c18" value="2" style="width:55px; height:55px;"/>
+                    B. 署名权</p>
+                <p>
+                    <input type="radio" name="c18" value="3" style="width:55px; height:55px;"/>
+                    C. 表演权</p>
+                <p>
+                    <input type="radio" name="c18" value="4" style="width:55px; height:55px;"/>
+                    D. 复制权</p>
+            </td>
+        </tr>
+        </tbody>
+
+
+        <tbody id="tbName">
+        <tr>
+            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>19、中国历史上第一部著作权法是（??）。</strong></div>
+                <p> <input type="radio" name="c19" value="1" style="width:55px; height:55px;"/>
+                    A. 中华人民共和国著作权法</p>
+                <p>
+                    <input type="radio" name="c19" value="2" style="width:55px; height:55px;"/>
+                    B. 中华民国著作权法</p>
+                <p>
+                    <input type="radio" name="c19" value="3" style="width:55px; height:55px;"/>
+                    C. 北洋政府著作权法</p>
+                <p>
+                    <input type="radio" name="c19" value="4" style="width:55px; height:55px;"/>
+                    D. 大清著作权律</p>
+            </td>
+        </tr>
+        </tbody>
+
+        <tbody id="tbName">
+        <tr>
+            <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>20、商标注册和版权登记有哪些区别（多选）</strong></div>
+                <p><input type="checkbox" name="c20" value="1" style="width:55px; height:55px;"/>
+                    A. 申请机构不同</p>
+                <p>
+                    <input type="checkbox" name="c20" value="2" style="width:55px; height:55px;"/>
+                    B. 保护对象不同</p>
+                <p>
+                    <input type="checkbox" name="c20" value="3" style="width:55px; height:55px;"/>
+                    C. 保护期限不同</p>
+                <p>
+                    <input type="checkbox" name="c20" value="4" style="width:55px; height:55px;"/>
+                    D. 保护的目的不同</p>
+                <div style="float:right" onClick="window.location.href='memo.jsp'"><img src="img/xxzl2.png" border="0"></div>
+            </td>
+        </tr>
+        </tbody>
+
+
 	 
 	 
 	 
