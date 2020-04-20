@@ -700,17 +700,17 @@ bottom: 10px;
         </tr>
       <tr>
         <td height="50" colspan="2">
-		  <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#CC0001; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">活动奖励</button>  
+		  <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#073A21; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">活动奖励</button>
 	      <div align="center" style="margin-top:50px;margin-bottom:25px;line-height:1.8">一等奖10份:  50元移动话费</div>
 	      <div align="center" style="margin-top:25px;margin-bottom:25px;line-height:1.8">二等奖30份:  30元移动话费</div>
 	      <div align="center" style="margin-top:25px;margin-bottom:25px;line-height:1.8">三等奖50份:  20元移动话费</div>
 	      <div align="center" style="margin-top:25px;margin-bottom:50px;line-height:1.8">参与奖260份: 10元移动话费</div>
-	      <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#CC0001; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">活动规则</button>  
+	      <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#073A21; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">活动规则</button>
 		  <div style="margin-top:50px;padding-left:12px;line-height:1.8">1、  共有20道世界知识产权日基础题，全部答对其中15道题，即可参与刮刮卡抽奖活动。每个手机仅限获奖一次，请实名参与。</div>
 		  <div style="margin-top:25px;padding-left:12px;margin-bottom:25px;line-height:1.8">2、  350份话费奖励完成或超出活动时间参与答题均无效。</div>
 		  <div style="margin-top:25px;padding-left:12px;margin-bottom:50px;line-height:1.8">3、	活动对象：手机号码为浙江移动用户。</div>
           <div style="margin-top:25px;padding-left:12px;margin-bottom:50px;line-height:1.8">4、	话费将在活动结束后5个工作日内赠送。</div>
-		  <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#CC0001; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">选择题</button>
+		  <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#073A21; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">选择题</button>
         </td>
       </tr>
       
@@ -1116,7 +1116,7 @@ bottom: 10px;
         <!--  
         <input target="_self" type="image" border="0" name="sub22" src="img/tp3.png" width=100% height=80  onclick="return processForm(this.form);"/>
         -->
-       <button onclick="return processForm(this.form);" type="submit" style="width:100%;padding:15px 15px;border-radius:15px; background:#FDCB03; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">&nbsp;&nbsp;&nbsp;&nbsp;提&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;交&nbsp;&nbsp;&nbsp;&nbsp;</button>  
+       <button onclick="return processForm(this.form);" type="submit" style="width:100%;padding:15px 15px;border-radius:15px; background:#073A21; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">&nbsp;&nbsp;&nbsp;&nbsp;提&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;交&nbsp;&nbsp;&nbsp;&nbsp;</button>
        <p></p>
 		<%}else{ %>
 		 <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#CC0001; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">您已经参与过,<%="您是第"+MyUtils22.GetWs(openid)+"位参与者,"+MyUtils22.zsm(openid) %></button>  
