@@ -70,6 +70,7 @@ public class AllValus {
     public static String success_lan="您已答对15道题（及以上），填写正确的联系方式，以便获取奖品!";
     public static String csc_lan="答题已经超过100000次，谢谢关注！";
     public static String error_lan="您的答题错误率过高，请重新答题";
+    public static String error_lan2="存在相同的手机号码，请重新答题填写不同的号码参与";
 
     public static String success_lp_lan="您已答对全部题目，填写正确的联系方式，以便获取奖品!";
     public static String csc_lp_lan="答题已经超过100000次，谢谢关注！";

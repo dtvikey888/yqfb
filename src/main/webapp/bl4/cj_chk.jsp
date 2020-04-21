@@ -22,8 +22,13 @@ String check=Topay.WxJsApiCheck3(urlname);
 
  <%
     //这里开始提交用户数据
-    MyUtils25.StartCJBM(openid,xm,tel,bh);
-    //1 已经抽过奖(提交数据失败，然后关闭页面) 2.提交数据成功,留在本页面 就是抽奖页面.
+     int bz = MyUtils25.StartCJBM(openid,xm,tel,bh);
+    //1 已经抽过奖(提交数据失败，然后关闭页面) 2.提交数据成功,留在本页面 就是抽奖页面. 3.已经存在相同手机号
+     if(bz==3){
+
+         out.print("<script type=\"text/javascript\">alert('"+AllValus.error_lan2+"');history.back();window.location.href=document.referrer;</script>");
+
+     }
   %>
 
 

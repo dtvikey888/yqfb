@@ -286,16 +286,29 @@ public class MyUtils22 {
 
 			}else{
 
-				if(openid!=null) {
+				//不存在该Openid ,进一步判断是不是已有该手机号
+				String sql="select * from daf_cj where tel = '"+tel+"' ";
+				ResultSet rs2 = db.executeQuery(sql);
+				if (rs2.next()){
 
-					//不存在 不处理
-					String sql = "insert into daf_cj(openid,xm,tel,fbsj,bh) VALUES('" + openid + "','" + xm + "','" + tel + "','" + TimeString.nowTime() + "','" + bh + "') ";
-					db.executeInsert(sql);
-					System.out.println(sql);
+					bz=3;
 
-					bz = 2;
+				}else{
+
+					if(openid!=null) {
+
+						//不存在 不处理
+						String sql2 = "insert into daf_cj(openid,xm,tel,fbsj,bh) VALUES('" + openid + "','" + xm + "','" + tel + "','" + TimeString.nowTime() + "','" + bh + "') ";
+						db.executeInsert(sql2);
+						System.out.println(sql2);
+
+						bz = 2;
+
+					}
 
 				}
+
+
 
 			}
 
@@ -737,8 +750,8 @@ public class MyUtils22 {
 		try {
 
 			sql_data db = new sql_data();
-			//String sql_pd = "select count(*) as ct from daf_cj where zsm<>0 and openid = '"+openid+"' ";
-			String sql_pd = "select count(*) as ct from daf_cj where zsm<>0 and tel = '"+tel+"' ";
+			String sql_pd = "select count(*) as ct from daf_cj where zsm<>0 and openid = '"+openid+"' ";
+			//String sql_pd = "select count(*) as ct from daf_cj where zsm<>0 and tel = '"+tel+"' ";
 			System.out.print(sql_pd);
 			ResultSet rs = db.executeQuery(sql_pd);
 			int ct = 0;
