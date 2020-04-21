@@ -85,7 +85,7 @@ public class AllValus {
 
     //世界新闻出版日转发朋友圈标题等
     public static String daf_title="世界知识产权日知识问答";
-    public static String daf_desc="4月26日是世界知识产权日，今年的活动主题是强化版权治理，优化版权生态，为了树立尊重知识、崇尚科学和保护知识产权的意识，营造鼓励知识创新的法律环境，中共乐清市委宣传部举办版权知识有奖问答活动。";
+    public static String daf_desc="4月26日是世界知识产权日，今年的活动主题是强化版权治理，优化版权生态，为了树立尊重知识、崇尚科学和保护知识产权的意识，营造鼓励知识创新的法律环境，中共乐清市委宣传部（市新闻出版局）举办版权知识网络有奖问答活动。";
     public static String daf_link="http://www.yqrb.com.cn/yqfb/bl2/index.jsp";
     public static String daf_img="http://v.yqcn.com/yqfb/bl2/img/IMG_TOP3.png";
     //文广新局转发朋友圈标题等

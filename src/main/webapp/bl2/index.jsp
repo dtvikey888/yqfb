@@ -696,7 +696,7 @@ bottom: 10px;
   <tr>
     <td align="center" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="30">
       <tr>
-        <td colspan="2" align="left"><p><strong><div style="line-height:1.8;text-indent:2em;">4月26日是世界知识产权日，今年的活动主题是“强化版权治理，优化版权生态”，为了树立尊重知识、崇尚科学和保护知识产权的意识，营造鼓励知识创新的法律环境，中共乐清市委宣传部举办版权知识有奖问答活动。</div></strong></P></td>
+        <td colspan="2" align="left"><p><strong><div style="line-height:1.8;text-indent:2em;">4月26日是世界知识产权日，今年的活动主题是“强化版权治理，优化版权生态”，为了树立尊重知识、崇尚科学和保护知识产权的意识，营造鼓励知识创新的法律环境，中共乐清市委宣传部（市新闻出版局）举办版权知识网络有奖问答活动。</div></strong></P></td>
         </tr>
       <tr>
         <td height="50" colspan="2">
@@ -706,9 +706,9 @@ bottom: 10px;
 	      <div align="center" style="margin-top:25px;margin-bottom:25px;line-height:1.8">三等奖50份:  20元移动话费</div>
 	      <div align="center" style="margin-top:25px;margin-bottom:50px;line-height:1.8">参与奖260份: 10元移动话费</div>
 	      <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#073A21; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">活动规则</button>
-		  <div style="margin-top:50px;padding-left:12px;line-height:1.8">1、  共有20道世界知识产权日基础题，全部答对其中15道题，即可参与刮刮卡抽奖活动。每个手机仅限获奖一次，请实名参与。</div>
+		  <div style="margin-top:50px;padding-left:12px;line-height:1.8">1、  共有20道选择题，答对其中15道题，即可参与刮刮卡抽奖活动。每个手机号仅限参与一次，请实名参与。</div>
 		  <div style="margin-top:25px;padding-left:12px;margin-bottom:25px;line-height:1.8">2、  350份话费奖励完成或超出活动时间参与答题均无效。</div>
-		  <div style="margin-top:25px;padding-left:12px;margin-bottom:50px;line-height:1.8">3、	活动对象：手机号码为浙江移动用户。</div>
+		  <div style="margin-top:25px;padding-left:12px;margin-bottom:50px;line-height:1.8">3、	活动对象：浙江移动用户</div>
           <div style="margin-top:25px;padding-left:12px;margin-bottom:50px;line-height:1.8">4、	话费将在活动结束后5个工作日内赠送。</div>
 		  <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#073A21; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">选择题</button>
         </td>
@@ -787,7 +787,7 @@ bottom: 10px;
             C. 挂历</p>
             <p>
                 <input type="radio" name="c4" value="4" style="width:55px; height:55px;"/>
-                D. 挂历</p>
+                D. 广告宣传品</p>
 		   </td>
       </tr>
 	  </tbody>

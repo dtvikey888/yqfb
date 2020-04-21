@@ -737,8 +737,8 @@ public class MyUtils22 {
 		try {
 
 			sql_data db = new sql_data();
-			String sql_pd = "select count(*) as ct from daf_cj where zsm<>0 and openid = '"+openid+"' ";
-			//String sql_pd = "select count(*) as ct from daf_cj where zsm<>0 and tel = '"+tel+"' ";
+			//String sql_pd = "select count(*) as ct from daf_cj where zsm<>0 and openid = '"+openid+"' ";
+			String sql_pd = "select count(*) as ct from daf_cj where zsm<>0 and tel = '"+tel+"' ";
 			System.out.print(sql_pd);
 			ResultSet rs = db.executeQuery(sql_pd);
 			int ct = 0;
