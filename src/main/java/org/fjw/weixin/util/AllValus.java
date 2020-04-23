@@ -87,8 +87,8 @@ public class AllValus {
     //世界新闻出版日转发朋友圈标题等
     public static String daf_title="世界知识产权日知识问答";
     public static String daf_desc="4月26日是世界知识产权日，今年的活动主题是强化版权治理，优化版权生态，为了树立尊重知识、崇尚科学和保护知识产权的意识，营造鼓励知识创新的法律环境，中共乐清市委宣传部（市新闻出版局）举办版权知识网络有奖问答活动。";
-    public static String daf_link="http://www.yqrb.com.cn/yqfb/bl2/index.jsp";
-    public static String daf_img="http://v.yqcn.com/yqfb/bl2/img/IMG_TOP3.png";
+    public static String daf_link="http://www.yqrb.com.cn/yqfb/bl6/index.jsp";
+    public static String daf_img="http://v.yqcn.com/yqfb/bl6/img/IMG_TOP3.png";
     //文广新局转发朋友圈标题等
     public static String daf_lp_title="公共文化服务体系示范区创建问答活动";
     public static String daf_lp_desc="为进一步推动公共文化服务全覆盖、高效能，构建基本完善的公共文化服务体系。乐清大力推进国家公共文化服务体系示范区创建工作，不断满足人民日益增长的美好生活需要，提升人民群众的幸福感和获得感，乐清市国家公共文化服务体系示范区创建办开展有奖问答活动。";
@@ -101,7 +101,7 @@ public class AllValus {
 
     //文广新局起止时间      9.20-9.22
     public static String daf_p1="2020-04-07 00:00:00";
-    public static String daf_p2="2020-04-21 00:00:00";
+    public static String daf_p2="2020-08-21 00:00:00";
 
     //世界新闻出版日奖项
     public static int  lpgg1 = 10; //50话费 10份

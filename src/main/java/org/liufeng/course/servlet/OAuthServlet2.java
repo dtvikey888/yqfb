@@ -61,6 +61,6 @@ public class OAuthServlet2 extends HttpServlet {
 			request.setAttribute("snsUserInfo", snsUserInfo);
 		}
 		// 跳转到index.jsp
-		request.getRequestDispatcher("bl2/hd.jsp").forward(request, response);
+		request.getRequestDispatcher("bl6/hd.jsp").forward(request, response);
 	}
 }

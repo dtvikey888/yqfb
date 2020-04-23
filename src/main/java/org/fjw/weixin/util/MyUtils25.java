@@ -332,7 +332,7 @@ public class MyUtils25 {
 			}else{
 
 				//不存在该Openid ,进一步判断是不是已有该手机号
-				String sql="select * from daf_cj where tel = '"+tel+"' ";
+				String sql="select * from daf_cj4 where tel = '"+tel+"' ";
 				ResultSet rs2 = db.executeQuery(sql);
 				if (rs2.next()){
 
