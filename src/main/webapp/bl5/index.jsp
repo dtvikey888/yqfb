@@ -104,10 +104,10 @@ if(twbsession2!=null){
          * 邮件主题：【微信JS-SDK反馈】具体问题
          * 邮件内容说明：用简明的语言描述问题所在，并交代清楚遇到该问题的场景，可附上截屏图片，微信团队会尽快处理你的反馈。
          */
-        wx_share_title="<%=AllValus.daf_title%>";
-        wx_share_desc="<%=AllValus.daf_desc%>";
-        wx_share_link="<%=AllValus.daf_link%>";
-        wx_share_imgUrl="<%=AllValus.daf_img%>";
+        wx_share_title="<%=AllValus.pw_title%>";
+        wx_share_desc="<%=AllValus.pw_desc%>";
+        wx_share_link="<%=AllValus.pw_link%>";
+        wx_share_imgUrl="<%=AllValus.pw_img%>";
 
         wx.config({
                 debug: false,
@@ -165,7 +165,7 @@ if(twbsession2!=null){
 
 
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
-<title><%=AllValus.daf_title %></title>
+<title><%=AllValus.pw_title %></title>
 <meta name="description" content=""/>
 <meta name="viewport" content="initial-scale=0.3, width=device-width, maximum-scale=0.3, user-scalable=no"/>
 <meta name="viewport" content="initial-scale=0.3,user-scalable=no,maximum-scale=0.3" media="(device-height: 568px)"/>
@@ -211,7 +211,7 @@ d{color:#fff;}
 		  %>
 		  
             alert('非常抱歉，答题时间已过。感谢您的关注，请下次再来！');
-            window.location.href="<%=AllValus.errpage%>";
+            window.location.href="<%=AllValus.errpage3%>";
             
 		  <%}else if(kz==3){
 		  
@@ -219,7 +219,7 @@ d{color:#fff;}
 		  %>
 		  
            alert('还没开始呢，"开始答题时间<%=tt1%>"到"<%=tt2%>"！\n欢迎到时候参与！');
-           window.location.href="<%=AllValus.errpage%>";
+           window.location.href="<%=AllValus.errpage3%>";
           
 		  <%}else{
 		      

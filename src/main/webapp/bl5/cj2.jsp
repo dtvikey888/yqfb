@@ -38,7 +38,7 @@ String check=Topay.WxJsApiCheck5(urlname,openid,zsm);
 <html>
 	<head>
 
-    <title><%=AllValus.daf_title %></title>
+    <title><%=AllValus.pw_title %></title>
 	 
 	<meta name="description" content="">
     <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">

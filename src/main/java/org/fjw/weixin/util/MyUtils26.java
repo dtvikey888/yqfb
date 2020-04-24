@@ -115,7 +115,7 @@ public class MyUtils26 {
 			if(bz==1){
 				bz2="恭喜您获得50元移动话费,话费将于活动结束后，进行统一充值，敬请留意。";
 			}else if(bz==2){
-				bz2="恭喜您获得30元移动话费,话费将于活动结束后，进行统一充值，敬请留意。";
+				bz2="恭喜您获得40元移动话费,话费将于活动结束后，进行统一充值，敬请留意。";
 			}else if(bz==3){
 				bz2="恭喜您获得20元移动话费,话费将于活动结束后，进行统一充值，敬请留意。";
 			}else if(bz==4){
@@ -157,23 +157,23 @@ public class MyUtils26 {
 				switch (zsm) {
 
 					case 1:
-						sy = AllValus.lpgg1-rs.getInt(1);
+						sy = AllValus.pwjx1-rs.getInt(1);
 						break;
 
 					case 2:
-						sy = AllValus.lpgg2-rs.getInt(1);
+						sy = AllValus.pwjx2-rs.getInt(1);
 						break;
 
 					case 3:
-						sy = AllValus.lpgg3-rs.getInt(1);
+						sy = AllValus.pwjx3-rs.getInt(1);
 						break;
 
 					case 4:
-						sy = AllValus.lpgg4-rs.getInt(1);
+						sy = AllValus.pwjx4-rs.getInt(1);
 						break;
 //
 //					case 5:
-//						sy = AllValus.lpgg5-rs.getInt(1);
+//						sy = AllValus.pwjx5-rs.getInt(1);
 //					break;
 
 
@@ -223,27 +223,27 @@ public class MyUtils26 {
 
 	//1.一等奖 总剩余数
 	public static int sy1(){
-		return (AllValus.lpgg1 - MyUtils26.GetTotal(1));
+		return (AllValus.pwjx1 - MyUtils26.GetTotal(1));
 	}
 
 	//2.二等奖 总剩余数
 	public static int sy2(){
-		return (AllValus.lpgg2 - MyUtils26.GetTotal(2));
+		return (AllValus.pwjx2 - MyUtils26.GetTotal(2));
 	}
 
 	//3.三等奖 总剩余数
 	public static int sy3(){
-		return (AllValus.lpgg3 - MyUtils26.GetTotal(3));
+		return (AllValus.pwjx3 - MyUtils26.GetTotal(3));
 	}
 
 	//4等奖 总剩余数
 	public static int sy4(){
-		return (AllValus.lpgg4 - MyUtils26.GetTotal(4));
+		return (AllValus.pwjx4 - MyUtils26.GetTotal(4));
 	}
 //
 //		//5等奖 总剩余数
 //		 public static int sy5(){
-//			 return (AllValus.lpgg5 - MyUtils22.GetTotal(5));
+//			 return (AllValus.pwjx5 - MyUtils22.GetTotal(5));
 //		 }
 //
 
@@ -424,10 +424,12 @@ public class MyUtils26 {
 					if (MyUtils26.GetTotalSY(zsm)<=0) {//比如 一等奖的奖项总数 - 所有中了一等奖的人 <= 0  那么就是说1等奖的所有名额没了,就把标志变为0
 						sy=0;
 					}else {
-						//一等奖10  -8
-						if(TimeString.nowTime().indexOf("2020-04-23")!=-1){
+						//一等奖10
+						if(TimeString.nowTime().indexOf("2020-05-07")!=-1){
 							sy = 4 -zjs;
-						}else if(TimeString.nowTime().indexOf("2020-04-24")!=-1){
+						}else if(TimeString.nowTime().indexOf("2020-05-08")!=-1){
+							sy = 6 -zjs;
+						}else if(TimeString.nowTime().indexOf("2020-05-09")!=-1){
 							sy = 6 -zjs;
 						}else {
 							sy = 0;
@@ -441,11 +443,13 @@ public class MyUtils26 {
 					if (MyUtils26.GetTotalSY(zsm)<=0) {//比如 二等奖的奖项总数 - 所有中了二等奖的人 <= 0  那么就是说2等奖的所有名额没了 ,就把标志变为0
 						sy=0;
 					}else {
-						//二等奖30  -28
-						if(TimeString.nowTime().indexOf("2020-04-23")!=-1){
-							sy = 15 -zjs;
-						}else if(TimeString.nowTime().indexOf("2020-04-24")!=-1){
-							sy = 15 -zjs;
+						//20
+						if(TimeString.nowTime().indexOf("2020-05-07")!=-1){
+							sy = 10 -zjs;
+						}else if(TimeString.nowTime().indexOf("2020-05-08")!=-1){
+							sy = 5 -zjs;
+						}else if(TimeString.nowTime().indexOf("2020-05-09")!=-1){
+							sy = 5 -zjs;
 						}else {
 							sy = 0;
 						}
@@ -459,11 +463,13 @@ public class MyUtils26 {
 					if (MyUtils26.GetTotalSY(zsm)<=0) {//比如 三等奖的奖项总数 - 所有中了三等奖的人 <= 0  那么就是说3等奖的所有名额没了 ,就把标志变为0
 						sy=0;
 					}else {
-						//3等奖50 45
-						if(TimeString.nowTime().indexOf("2020-04-23")!=-1){
-							sy = 30 -zjs;
-						}else if(TimeString.nowTime().indexOf("2020-04-24")!=-1){
-							sy = 20 -zjs;
+						//3等奖50
+						if(TimeString.nowTime().indexOf("2020-05-07")!=-1){
+							sy = 17 -zjs;
+						}else if(TimeString.nowTime().indexOf("2020-05-08")!=-1){
+							sy = 17 -zjs;
+						}else if(TimeString.nowTime().indexOf("2020-05-09")!=-1){
+							sy = 16 -zjs;
 						}else {
 							sy = 0;
 						}
@@ -477,13 +483,13 @@ public class MyUtils26 {
 					if (MyUtils26.GetTotalSY(zsm)<=0) {//比如 4等奖的奖项总数 - 所有中了4等奖的人 <= 0  那么就是说4等奖的所有名额没了 ,就把标志变为0
 						sy=0;
 					}else {
-						//4等奖260  255
-						if(TimeString.nowTime().indexOf("2020-04-23")!=-1){
-							sy = 180 -zjs;
-						}else if(TimeString.nowTime().indexOf("2020-04-24")!=-1){
-							sy = 70 -zjs;
-						}else if(TimeString.nowTime().indexOf("2020-04-25")!=-1){
-							sy = 10 -zjs;
+						//4等奖120
+						if(TimeString.nowTime().indexOf("2020-05-07")!=-1){
+							sy = 40 -zjs;
+						}else if(TimeString.nowTime().indexOf("2020-05-08")!=-1){
+							sy = 40 -zjs;
+						}else if(TimeString.nowTime().indexOf("2020-05-09")!=-1){
+							sy = 40 -zjs;
 						}else {
 							sy = 0;
 						}

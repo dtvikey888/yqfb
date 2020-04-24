@@ -67,6 +67,8 @@ public class AllValus {
 
     public static String errpage2="http://www.yqrb.com.cn/yqfb/bl4/success.jsp";
 
+    public static String errpage3="http://www.yqrb.com.cn/yqfb/bl5/success.jsp";
+
     public static String success_lan="您已答对15道题（及以上），填写正确的联系方式，以便获取奖品!";
     public static String csc_lan="答题已经超过100000次，谢谢关注！";
     public static String error_lan="您的答题错误率过高，请重新答题";
@@ -94,6 +96,12 @@ public class AllValus {
     public static String daf_lp_desc="为进一步推动公共文化服务全覆盖、高效能，构建基本完善的公共文化服务体系。乐清大力推进国家公共文化服务体系示范区创建工作，不断满足人民日益增长的美好生活需要，提升人民群众的幸福感和获得感，乐清市国家公共文化服务体系示范区创建办开展有奖问答活动。";
     public static String daf_lp_link="http://www.yqrb.com.cn/yqfb/bl4/index.jsp";
     public static String daf_lp_img="http://v.yqcn.com/yqfb/bl4/img/IMG_TOP3.png";
+
+    //排污转发朋友圈标题等
+    public static String pw_title="排污许可有奖问答活动";
+    public static String pw_desc="为贯彻落实国家、省、市政府的决策部署，实现固定污染源排污许可全覆盖，帮助大家了解排污许可制相关政策法规和技术规范要求，做好申领登记工作。温州市生态环境局乐清分局推出了排污许可发证登记知识问答有奖活动。";
+    public static String pw_link="http://www.yqrb.com.cn/yqfb/bl5/index.jsp";
+    public static String pw_img="http://v.yqcn.com/yqfb/bl5/img/IMG_TOP3.png";
 
     //世界新闻出版日起止时间 4.23-4.27
     public static String daf_t1="2020-04-13 00:00:00";
