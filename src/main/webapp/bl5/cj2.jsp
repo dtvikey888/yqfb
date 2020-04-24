@@ -7,7 +7,7 @@
 <%
 
 String openid = request.getParameter("openid");
-String urlname = "bl6/cj2.jsp";
+String urlname = "bl5/cj2.jsp";
 
 //String xm = MyUtils2.codetoString(request.getParameter("xm"));
 //String xm = request.getParameter("xm");

@@ -7,7 +7,7 @@
 <%
 
 String openid = request.getParameter("openid");
-String urlname = "bl6/cj_chk.jsp";
+String urlname = "bl5/cj_chk.jsp";
 //String xm = MyUtils2.codetoString(request.getParameter("xm"));
 String xm = request.getParameter("xm");
 String tel = request.getParameter("tel");
@@ -73,8 +73,8 @@ String check=Topay.WxJsApiCheck3(urlname);
 	 <%
 	//控制时间
 	int kz =0;
-	String cc1=AllValus.daf_t1;
-	String cc2=AllValus.daf_t2;
+	String cc1=AllValus.pw_t1;
+	String cc2=AllValus.pw_t2;
     Date c1=MyUtils2.CharDate(cc1);
     Date c2=MyUtils2.CharDate(cc2);
     kz= MyUtils2.TimeKZ(c1,c2);
@@ -530,7 +530,7 @@ function bodys(height,width){
 
                     //利用对话框返回的值 （true 或者 false）
 
-                    location.href="<%=AllValus.propath%>bl6/cj2.jsp?tel=<%=tel%>&openid="+opp+"&zsm="+zj1+" ";
+                    location.href="<%=AllValus.propath%>bl5/cj2.jsp?tel=<%=tel%>&openid="+opp+"&zsm="+zj1+" ";
 
                     //var truthBeTold = window.confirm(x);
 					//if (truthBeTold) {

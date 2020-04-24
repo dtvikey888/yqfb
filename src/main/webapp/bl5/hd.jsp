@@ -20,7 +20,7 @@
 
 		//out.println("<script>window.location.href='tea/index.jsp?openid="+user.getOpenId()+"'</script>");
 		//response.setHeader("Refresh","1;url=http://www.yqrb.com.cn/yqvod/bmwj/asp/h5/gt30/test.asp?openid="+openid+"");
-  		out.println("<script>window.location.href='bl6/index.jsp?openid="+user.getOpenId()+"'</script>");
+  		out.println("<script>window.location.href='bl5/index.jsp?openid="+user.getOpenId()+"'</script>");
 
 
 		}

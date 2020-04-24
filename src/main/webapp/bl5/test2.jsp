@@ -7,8 +7,8 @@
 <%
 	//¿ØÖÆÊ±¼ä
 	int kz =0;
-	String tt1=AllValus.daf_t1;
-	String tt2=AllValus.daf_t2;
+	String tt1=AllValus.pw_t1;
+	String tt2=AllValus.pw_t2;
     Date c1=MyUtils7.CharDate(tt1);
     Date c2=MyUtils7.CharDate(tt2);
     kz= MyUtils7.TimeKZ(c1,c2);
@@ -20,7 +20,7 @@
 
 <%
 
-String urlname ="bl6/test2.jsp";
+String urlname ="bl5/test2.jsp";
 String openid =request.getParameter("openid");
 
    String from="";

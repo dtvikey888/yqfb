@@ -103,6 +103,10 @@ public class AllValus {
     public static String daf_p1="2020-04-07 00:00:00";
     public static String daf_p2="2020-05-21 00:00:00";
 
+    //排污起止时间 5.7-5.9
+    public static String pw_t1="2020-04-07 00:00:00";
+    public static String pw_t2="2020-05-10 00:00:00";
+
     //世界新闻出版日奖项
     public static int  lpgg1 = 10; //50话费 10份
     public static int  lpgg2 = 30; //30话费 30份
@@ -117,6 +121,13 @@ public class AllValus {
     public static int  lptg4 = 5; //三等奖 10名： 价值79元      天猫精灵方糖智能音箱
     public static int  lptg5 = 280; //参与奖 300名：充电宝、小米背包、飞科电吹风等......
     public static int  lptg6 = 15; //特别奖20名：价值249元小米旅行箱
+
+    //排污奖项
+    public static int  pwjx1 = 10; //50话费 10份
+    public static int  pwjx2 = 30; //40话费 20份
+    public static int  pwjx3 = 50; //20元话费 50名
+    public static int  pwjx4 = 260; //10元话费 120名
+//   public static int  pwjx5 = 600; //5等奖5 750名
 
 
 
