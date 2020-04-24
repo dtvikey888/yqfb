@@ -1,7 +1,7 @@
 <%@ page language="java" import="java.util.*" pageEncoding="gb2312"%>
 <%@page import="com.component.Topay"%>
 <%@page import="org.fjw.weixin.util.MyUtils7"%>
-<%@page import="org.fjw.weixin.util.MyUtils22"%>
+<%@page import="org.fjw.weixin.util.MyUtils26"%>
 <%@page import="org.fjw.weixin.util.AllValus"%>
 <%@page import="org.liufeng.course.util.ZghTools"%>
 <%
@@ -40,7 +40,7 @@ if(twbsession2!=null){
       
 
    	      if(from!=null){
-              response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet2&response_type=code&scope=snsapi_base&state=1#wechat_redirect");
+              response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet32&response_type=code&scope=snsapi_base&state=1#wechat_redirect");
 
           }
 
@@ -52,7 +52,7 @@ if(twbsession2!=null){
    			
    			//response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet2&response_type=code&scope=snsapi_base&state=STATE&connect_redirect=1#wechat_redirect");        
 
- 			response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet2&response_type=code&scope=snsapi_base&state=1#wechat_redirect");
+ 			response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet32&response_type=code&scope=snsapi_base&state=1#wechat_redirect");
 
 
 
@@ -62,7 +62,7 @@ if(twbsession2!=null){
    
   		    //还没点要回调
             //response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet2&response_type=code&scope=snsapi_userinfo&state=STATE&connect_redirect=1#wechat_redirect");        
-  			response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet2&response_type=code&scope=snsapi_base&state=1#wechat_redirect");
+  			response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet32&response_type=code&scope=snsapi_base&state=1#wechat_redirect");
 
    }
    
@@ -651,7 +651,7 @@ bottom: 10px;
     </script>
 </head>
 <body>
-<%int cs = MyUtils22.GetCsForDt(openid);%>
+<%int cs = MyUtils26.GetCsForDt(openid);%>
 <%if(cs>100000){%>
 <div id="mcover" onClick="weChat()" style="display: block;">
           <img src="js/tip.png"/>
@@ -1112,14 +1112,14 @@ bottom: 10px;
     <td height="115" align="center" valign="middle"><table width="95%" height="75" border="0" cellpadding="0" cellspacing="0">
       <tr>
         <td align="center">
-        <%if(!MyUtils22.iscj_pd(openid)){%>
+        <%if(!MyUtils26.iscj_pd(openid)){%>
         <!--  
         <input target="_self" type="image" border="0" name="sub22" src="img/tp3.png" width=100% height=80  onclick="return processForm(this.form);"/>
         -->
        <button onclick="return processForm(this.form);" type="submit" style="width:100%;padding:15px 15px;border-radius:15px; background:#21457B; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">&nbsp;&nbsp;&nbsp;&nbsp;提&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;交&nbsp;&nbsp;&nbsp;&nbsp;</button>
        <p></p>
 		<%}else{ %>
-		 <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#CC0001; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">您已经参与过,<%="您是第"+MyUtils22.GetWs(openid)+"位参与者,"+MyUtils22.zsm(openid) %></button>  
+		 <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#CC0001; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">您已经参与过,<%="您是第"+MyUtils26.GetWs(openid)+"位参与者,"+MyUtils26.zsm(openid) %></button>  
 		<%} %>
 	   <p></p>
 	<input name="openid" type="hidden" id="openid" value="<%=openid%>"/>	<div></div></td>

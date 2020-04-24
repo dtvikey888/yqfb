@@ -1,7 +1,7 @@
 <%@ page language="java" import="java.util.*" pageEncoding="gb2312"%>
 <%@page import="com.component.Topay"%>
 <%@page import="org.fjw.weixin.util.MyUtils7"%>
-<%@page import="org.fjw.weixin.util.MyUtils22"%>
+<%@page import="org.fjw.weixin.util.MyUtils26"%>
 <%@page import="org.fjw.weixin.util.AllValus"%>
 <%@page import="org.liufeng.course.util.ZghTools"%>
 <%

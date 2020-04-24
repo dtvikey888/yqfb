@@ -7,7 +7,7 @@ import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
 
-//林佩抽奖 类
+//浩特抽奖 类
 public class MyUtils26 {
 
 	//是否已经抽奖
@@ -17,7 +17,7 @@ public class MyUtils26 {
 
 		try {
 			sql_data db = new sql_data();
-			String sql = "select  * from daf_cj where iscj_bz=1 and openid = '"+openid+"' ";
+			String sql = "select  * from daf_cj5 where iscj_bz=1 and openid = '"+openid+"' ";
 			System.out.println(sql);
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
@@ -42,7 +42,7 @@ public class MyUtils26 {
 
 		try {
 			sql_data db = new sql_data();
-			String sql = "select count(*) as ct from daf_cj where zsm<>0 and openid = '"+openid+"' ";
+			String sql = "select count(*) as ct from daf_cj5 where zsm<>0 and openid = '"+openid+"' ";
 			System.out.println(sql);
 			ResultSet rs = db.executeQuery(sql);
 			int ct=0;
@@ -73,7 +73,7 @@ public class MyUtils26 {
 
 		try {
 			sql_data db = new sql_data();
-			String sql = "select count(*) as ct from daf_cj where zsm<>0 and tel = '"+tel+"' ";
+			String sql = "select count(*) as ct from daf_cj5 where zsm<>0 and tel = '"+tel+"' ";
 			System.out.println(sql);
 			ResultSet rs = db.executeQuery(sql);
 			int ct=0;
@@ -106,7 +106,7 @@ public class MyUtils26 {
 		try {
 
 			sql_data db = new sql_data();
-			String sql ="select zsm from daf_cj where openid='"+openid+"' order by id desc";
+			String sql ="select zsm from daf_cj5 where openid='"+openid+"' order by id desc";
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
 				bz=rs.getInt(1);
@@ -149,7 +149,7 @@ public class MyUtils26 {
 		int sy=0;
 		try {
 			sql_data db = new sql_data();
-			String sql="select count(*) as ct from daf_cj where zsm="+zsm+" ";
+			String sql="select count(*) as ct from daf_cj5 where zsm="+zsm+" ";
 			System.out.println(sql);
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
@@ -203,7 +203,7 @@ public class MyUtils26 {
 		try {
 
 			sql_data db = new sql_data();
-			String sql = "select count(*) as zs from daf_cj where zsm="+zsm+" ";
+			String sql = "select count(*) as zs from daf_cj5 where zsm="+zsm+" ";
 
 			// System.out.println("MyUtils.GetTotal()"+sql);
 
@@ -263,20 +263,20 @@ public class MyUtils26 {
 
 			sql_data db = new sql_data();
 			//判断 bh 是否已经存在
-			//String sql_pd = "select * from daf_cj where iscj_bz=1 and openid = '"+openid+"' ";
-			String sql_pd = "select * from daf_cj where openid = '"+openid+"' ";
+			//String sql_pd = "select * from daf_cj5 where iscj_bz=1 and openid = '"+openid+"' ";
+			String sql_pd = "select * from daf_cj5 where openid = '"+openid+"' ";
 			System.out.print(sql_pd);
 			ResultSet rs = db.executeQuery(sql_pd);
 			if (rs.next()) {
 
 				//已经存在 更新处理
-				String sql ="update daf_cj set xm='"+xm+"',tel='"+tel+"',bh='"+bh+"',fbsj='"+TimeString.nowTime()+"' where openid='"+openid+"' ";
+				String sql ="update daf_cj5 set xm='"+xm+"',tel='"+tel+"',bh='"+bh+"',fbsj='"+TimeString.nowTime()+"' where openid='"+openid+"' ";
 				db.executeUpdate(sql);
 
-				//String sql_pd2="select * from daf_cj where openid='"+openid+"'";
+				//String sql_pd2="select * from daf_cj5 where openid='"+openid+"'";
 //				ResultSet rs2 = db.executeQuery(sql_pd2);
 //				if(!rs2.next()){
-//					String sql ="insert into daf_cj(openid,xm,tel,fbsj,iscj_bz,bh) VALUES('"+openid+"','"+xm+"','"+tel+"','"+TimeString.nowTime()+"',1,'"+bh+"') ";
+//					String sql ="insert into daf_cj5(openid,xm,tel,fbsj,iscj_bz,bh) VALUES('"+openid+"','"+xm+"','"+tel+"','"+TimeString.nowTime()+"',1,'"+bh+"') ";
 //					db.executeInsert(sql);
 //					System.out.println(sql);
 //				}
@@ -286,7 +286,7 @@ public class MyUtils26 {
 			}else{
 
 				//不存在该Openid ,进一步判断是不是已有该手机号
-				String sql="select * from daf_cj where tel = '"+tel+"' ";
+				String sql="select * from daf_cj5 where tel = '"+tel+"' ";
 				ResultSet rs2 = db.executeQuery(sql);
 				if (rs2.next()){
 
@@ -297,7 +297,7 @@ public class MyUtils26 {
 					if(openid!=null) {
 
 						//不存在 不处理
-						String sql2 = "insert into daf_cj(openid,xm,tel,fbsj,bh) VALUES('" + openid + "','" + xm + "','" + tel + "','" + TimeString.nowTime() + "','" + bh + "') ";
+						String sql2 = "insert into daf_cj5(openid,xm,tel,fbsj,bh) VALUES('" + openid + "','" + xm + "','" + tel + "','" + TimeString.nowTime() + "','" + bh + "') ";
 						db.executeInsert(sql2);
 						System.out.println(sql2);
 
@@ -333,7 +333,7 @@ public class MyUtils26 {
 		try {
 
 			MysqlDB db = new MysqlDB();
-			String sql= "select bh from daf_cj where bh<>'' order by bh desc limit 1";
+			String sql= "select bh from daf_cj5 where bh<>'' order by bh desc limit 1";
 			ResultSet rs = db.executeQuery(sql);
 
 			if (rs.next()) {
@@ -370,7 +370,7 @@ public class MyUtils26 {
 		int ws = 0;
 		try {
 			MysqlDB db = new MysqlDB();
-			String sql ="select bh from daf_cj where openid='"+openid+"'";
+			String sql ="select bh from daf_cj5 where openid='"+openid+"'";
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
 
@@ -414,8 +414,8 @@ public class MyUtils26 {
 		try {
 
 			sql_data db = new sql_data();
-			String sql="select count(*) as ct from daf_cj where zsm="+zsm+" and DATEDIFF(date_format(fbsj,'%Y-%m-%d'),curdate())=0";
-			//String sql="select count(*) as ct from daf_cj where zsm="+zsm+" and DateDiff(dd,fbsj,getdate())=0";
+			String sql="select count(*) as ct from daf_cj5 where zsm="+zsm+" and DATEDIFF(date_format(fbsj,'%Y-%m-%d'),curdate())=0";
+			//String sql="select count(*) as ct from daf_cj5 where zsm="+zsm+" and DateDiff(dd,fbsj,getdate())=0";
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
 				int zjs = rs.getInt(1);
@@ -523,8 +523,8 @@ public class MyUtils26 {
 		try {
 
 			sql_data db = new sql_data();
-			String sql="select count(*) as ct from daf_cj where zsm="+zsm+" and DATEDIFF(date_format(fbsj,'%Y-%m-%d'),curdate())=0";
-			//String sql="select count(*) as ct from daf_cj where zsm="+zsm+" and DateDiff(dd,fbsj,getdate())=0";
+			String sql="select count(*) as ct from daf_cj5 where zsm="+zsm+" and DATEDIFF(date_format(fbsj,'%Y-%m-%d'),curdate())=0";
+			//String sql="select count(*) as ct from daf_cj5 where zsm="+zsm+" and DateDiff(dd,fbsj,getdate())=0";
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
 				int zjs = rs.getInt(1);
@@ -642,7 +642,7 @@ public class MyUtils26 {
 		String xm="";
 		try {
 			sql_data db = new sql_data();
-			String sql = "select * from daf_cj where openid='"+openid+"' order by id desc";
+			String sql = "select * from daf_cj5 where openid='"+openid+"' order by id desc";
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
 				xm = rs.getString("xm");
@@ -662,7 +662,7 @@ public class MyUtils26 {
 		String tel="";
 		try {
 			sql_data db = new sql_data();
-			String sql = "select * from daf_cj where openid='"+openid+"' order by id desc";
+			String sql = "select * from daf_cj5 where openid='"+openid+"' order by id desc";
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
 				tel = rs.getString("tel");
@@ -682,7 +682,7 @@ public class MyUtils26 {
 		String lx="";
 		try {
 			sql_data db = new sql_data();
-			String sql = "select  * from daf_cj where openid='"+openid+"' order by id desc";
+			String sql = "select  * from daf_cj5 where openid='"+openid+"' order by id desc";
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
 				lx = rs.getString("lx");
@@ -727,8 +727,8 @@ public class MyUtils26 {
 		try {
 
 			sql_data db = new sql_data();
-			String sql_pd = "select count(*) as ct from daf_cj where zsm<>0 and openid = '"+openid+"' ";
-			//String sql_pd = "select count(*) as ct from daf_cj where zsm<>0 and tel = '"+tel+"' ";
+			String sql_pd = "select count(*) as ct from daf_cj5 where zsm<>0 and openid = '"+openid+"' ";
+			//String sql_pd = "select count(*) as ct from daf_cj5 where zsm<>0 and tel = '"+tel+"' ";
 			System.out.print(sql_pd);
 			ResultSet rs = db.executeQuery(sql_pd);
 			int ct = 0;
@@ -747,10 +747,10 @@ public class MyUtils26 {
 
 					if (MyUtils26.GetTotalSY(new Integer(zsm))>0) {
 
-						//String sql ="insert into daf_cj(xm,tel,openid,zsm,fbsj) VALUES('"+xm+"','"+tel+"','"+openid+"',"+zsm+",'"+TimeString.nowTime()+"') ";
+						//String sql ="insert into daf_cj5(xm,tel,openid,zsm,fbsj) VALUES('"+xm+"','"+tel+"','"+openid+"',"+zsm+",'"+TimeString.nowTime()+"') ";
 
-						//String sql = "update daf_cj set xm='" + xm + "',tel='" + tel + "',iscj_bz=1,iszj_bz=" + iszj_bz + ",openid='" + openid + "',zsm=" + zsm + ",fbsj='" + TimeString.nowTime() + "' where openid='" + openid + "'";
-						String sql = "update daf_cj set iscj_bz=1,iszj_bz=" + iszj_bz + ",zsm=" + zsm + ",fbsj='" + TimeString.nowTime() + "' where openid='" + openid + "'";
+						//String sql = "update daf_cj5 set xm='" + xm + "',tel='" + tel + "',iscj_bz=1,iszj_bz=" + iszj_bz + ",openid='" + openid + "',zsm=" + zsm + ",fbsj='" + TimeString.nowTime() + "' where openid='" + openid + "'";
+						String sql = "update daf_cj5 set iscj_bz=1,iszj_bz=" + iszj_bz + ",zsm=" + zsm + ",fbsj='" + TimeString.nowTime() + "' where openid='" + openid + "'";
 
 						System.out.println(sql);
 						db.executeUpdate(sql);
@@ -801,8 +801,8 @@ public class MyUtils26 {
 		try {
 
 			sql_data db = new sql_data();
-			 String sql_pd = "select count(*) as ct from daf_cj where zsm<>0 and openid = '"+openid+"' ";
-			//String sql_pd = "select count(*) as ct from daf_cj where zsm<>0 and tel = '"+tel+"' ";
+			 String sql_pd = "select count(*) as ct from daf_cj5 where zsm<>0 and openid = '"+openid+"' ";
+			//String sql_pd = "select count(*) as ct from daf_cj5 where zsm<>0 and tel = '"+tel+"' ";
 
 			System.out.print(sql_pd);
 			ResultSet rs = db.executeQuery(sql_pd);
@@ -817,10 +817,10 @@ public class MyUtils26 {
 
 				}else{
 
-					//String sql ="insert into daf_cj(xm,tel,openid,zsm,fbsj) VALUES('"+xm+"','"+tel+"','"+openid+"',"+zsm+",'"+TimeString.nowTime()+"') ";
+					//String sql ="insert into daf_cj5(xm,tel,openid,zsm,fbsj) VALUES('"+xm+"','"+tel+"','"+openid+"',"+zsm+",'"+TimeString.nowTime()+"') ";
 
-					//String sql ="update daf_cj set xm='"+xm+"',tel='"+tel+"',openid='"+openid+"',zsm="+zsm+",fbsj='"+TimeString.nowTime()+"' where openid='"+openid+"'";
-					String sql ="update daf_cj set openid='"+openid+"',zsm="+zsm+",fbsj='"+TimeString.nowTime()+"' where openid='"+openid+"'";
+					//String sql ="update daf_cj5 set xm='"+xm+"',tel='"+tel+"',openid='"+openid+"',zsm="+zsm+",fbsj='"+TimeString.nowTime()+"' where openid='"+openid+"'";
+					String sql ="update daf_cj5 set openid='"+openid+"',zsm="+zsm+",fbsj='"+TimeString.nowTime()+"' where openid='"+openid+"'";
 
 					System.out.println(sql);
 					db.executeUpdate(sql);
@@ -851,8 +851,8 @@ public class MyUtils26 {
 
 		try {
 			sql_data db = new sql_data();
-			String sql = "select  * from daf_cj where zsm<>0 and tel = '"+tel+"' order by id desc";
-			// String sql = "select  * from daf_cj where tel = '"+tel+"' order by id desc";
+			String sql = "select  * from daf_cj5 where zsm<>0 and tel = '"+tel+"' order by id desc";
+			// String sql = "select  * from daf_cj5 where tel = '"+tel+"' order by id desc";
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
 

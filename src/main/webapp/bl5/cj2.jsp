@@ -1,7 +1,7 @@
 <%@ page language="java" import="java.util.*" pageEncoding="gb2312"%>
 <%@ page import="com.component.*"%>
 <%@page import="org.fjw.weixin.util.MyUtils2"%>
-<%@page import="org.fjw.weixin.util.MyUtils22"%>
+<%@page import="org.fjw.weixin.util.MyUtils26"%>
 <%@page import="org.fjw.weixin.util.AllValus"%>
 
 <%
@@ -24,13 +24,13 @@ String check=Topay.WxJsApiCheck5(urlname,openid,zsm);
 
  <%
     //这里开始提交用户数据
-    int fhz = MyUtils22.StartCJLR2(tel,openid,zsm);
+    int fhz = MyUtils26.StartCJLR2(tel,openid,zsm);
     //1 已经抽过奖(提交数据失败，然后关闭页面) 2.提交数据成功,然后关闭页面.
   %>
   
    <%
 	 //中了什么奖
-	 String zsm22 = MyUtils22.zsm(openid);
+	 String zsm22 = MyUtils26.zsm(openid);
    %>
 	  
 

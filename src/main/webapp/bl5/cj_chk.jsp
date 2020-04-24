@@ -1,7 +1,7 @@
 <%@ page language="java" import="java.util.*" pageEncoding="gb2312"%>
 <%@ page import="com.component.*"%>
 <%@page import="org.fjw.weixin.util.MyUtils2"%>
-<%@page import="org.fjw.weixin.util.MyUtils22"%>
+<%@page import="org.fjw.weixin.util.MyUtils26"%>
 <%@page import="org.fjw.weixin.util.AllValus"%>
 <%@page import="org.fjw.weixin.util.MathRandom4"%>
 <%
@@ -11,7 +11,7 @@ String urlname = "bl6/cj_chk.jsp";
 //String xm = MyUtils2.codetoString(request.getParameter("xm"));
 String xm = request.getParameter("xm");
 String tel = request.getParameter("tel");
-String bh = MyUtils22.GetNextBH();
+String bh = MyUtils26.GetNextBH();
 
 System.out.println("openid="+openid);
 System.out.println("urlname="+urlname);
@@ -22,7 +22,7 @@ String check=Topay.WxJsApiCheck3(urlname);
 
  <%
     //这里开始提交用户数据
-    int bz = MyUtils22.StartCJBM(openid,xm,tel,bh);
+    int bz = MyUtils26.StartCJBM(openid,xm,tel,bh);
     //1 已经抽过奖(提交数据失败，然后关闭页面) 2.提交数据成功,留在本页面 就是抽奖页面. 3.已经存在相同手机号
      if(bz==3){
 
@@ -87,18 +87,18 @@ String check=Topay.WxJsApiCheck3(urlname);
 	 <%
 
 	 //中了什么奖
-	// String zsm = MyUtils22.zsm(openid);
+	// String zsm = MyUtils26.zsm(openid);
 	  %>
 
 	   <%
 
 //各个奖项总剩余
 
-int t1 = MyUtils22.sy1(); //一等奖总数剩余名额
-int t2 = MyUtils22.sy2(); //二等奖总数剩余名额
-int t3 = MyUtils22.sy3(); //三等奖总数剩余名额
-int t4 = MyUtils22.sy4(); //四等奖总数剩余名额
-//int t5 = MyUtils22.sy5();
+int t1 = MyUtils26.sy1(); //一等奖总数剩余名额
+int t2 = MyUtils26.sy2(); //二等奖总数剩余名额
+int t3 = MyUtils26.sy3(); //三等奖总数剩余名额
+int t4 = MyUtils26.sy4(); //四等奖总数剩余名额
+//int t5 = MyUtils26.sy5();
 
 
 
@@ -115,11 +115,11 @@ System.out.println(t4);
 
 //各个奖项每天的剩余 <=0 表示没了
 
-int day_sy1 = MyUtils22.TodaySY(1); //一等奖当天剩余名额
-int day_sy2 = MyUtils22.TodaySY(2); //二等奖当天剩余名额
-int day_sy3 = MyUtils22.TodaySY(3); //三等奖当天剩余名额
-int day_sy4 = MyUtils22.TodaySY(4);
-//int day_sy5 = MyUtils22.TodaySY(5);
+int day_sy1 = MyUtils26.TodaySY(1); //一等奖当天剩余名额
+int day_sy2 = MyUtils26.TodaySY(2); //二等奖当天剩余名额
+int day_sy3 = MyUtils26.TodaySY(3); //三等奖当天剩余名额
+int day_sy4 = MyUtils26.TodaySY(4);
+//int day_sy5 = MyUtils26.TodaySY(5);
 
 
 System.out.println(day_sy1);
