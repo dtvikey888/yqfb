@@ -20,7 +20,7 @@
 
 <%
 
-String urlname ="bl2/test2.jsp";
+String urlname ="bl6/test2.jsp";
 String openid =request.getParameter("openid");
 
    String from="";

@@ -7,7 +7,7 @@
 <%
 
 String openid = request.getParameter("openid");
-String urlname = "bl2/cj_chk.jsp";
+String urlname = "bl6/cj_chk.jsp";
 //String xm = MyUtils2.codetoString(request.getParameter("xm"));
 String xm = request.getParameter("xm");
 String tel = request.getParameter("tel");
@@ -530,7 +530,7 @@ function bodys(height,width){
 
                     //利用对话框返回的值 （true 或者 false）
 
-                    location.href="<%=AllValus.propath%>bl2/cj2.jsp?tel=<%=tel%>&openid="+opp+"&zsm="+zj1+" ";
+                    location.href="<%=AllValus.propath%>bl6/cj2.jsp?tel=<%=tel%>&openid="+opp+"&zsm="+zj1+" ";
 
                     //var truthBeTold = window.confirm(x);
 					//if (truthBeTold) {

@@ -7,7 +7,7 @@
 
     <%
 
-        String urlname ="bl2/memo.jsp";
+        String urlname ="bl6/memo.jsp";
         String check=Topay.WxJsApiCheck3(urlname);
 
     %>
@@ -569,7 +569,7 @@
                             <tr>
 
                                 <td height="50" colspan="2">
-                                    <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#073A21; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">答案提示</button>
+                                    <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#82CBE8; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">答案提示</button>
 
                                 </td>
                             </tr>
@@ -580,7 +580,7 @@
                                     <table width="103%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
                                         <tbody id="tbName" >
                                         <tr>
-                                            <td height="20"><p></p><div style="line-height:1.8"><strong>1、世界读书日是几月几日（ C ）</strong></div>
+                                            <td height="20"><p></p><div style="line-height:1.8"><strong>1、世界读书日是（ C ）月（  ）日。</strong></div>
                                                 <p><input type="radio" name="c1" value="1" style="width:55px; height:55px;"/>
                                                     A. 3月23日</p>
                                                 <p>
@@ -599,7 +599,7 @@
 
                                         <tbody id="tbName">
                                         <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>2、世界知识产权日是几月几日（ D ）</strong></div>
+                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>2、世界知识产权日是（ ）月（ D ）日。</strong></div>
                                                 <p><input type="radio" name="c2" value="1" style="width:55px; height:55px;"/>
                                                     A. 3月23日 </p>
                                                 <p>
@@ -691,7 +691,7 @@
 
                                         <tbody id="tbName">
                                         <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>7、差错率不超过（ B ）的图书，其编校质量属合格。?</strong></div>
+                                            <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>7、差错率不超过（ B ）的图书，其编校质量属合格。</strong></div>
                                                 <p><input type="radio" name="c7" value="1" style="width:55px; height:55px;"/>
                                                     A. 千分之一</p>
                                                 <p>
@@ -787,7 +787,7 @@
 
                                         <tbody id="tbName">
                                         <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>12、( C )不受著作权法保护。</strong></div>
+                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>12、（ C ）不受著作权法保护。</strong></div>
                                                 <p> <input type="radio" name="c12" value="1" style="width:55px; height:55px;"/>
                                                     A. 计算机软件</p>
                                                 <p>
@@ -824,7 +824,7 @@
 
                                         <tbody id="tbName">
                                         <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>14、作者的署名权、修改权、保护作品完整权的保护期为（ C ）</strong></div>
+                                            <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>14、作者的署名权、修改权、保护作品完整权的保护期为（ C ）。</strong></div>
                                                 <p> <input type="radio" name="c14" value="1" style="width:55px; height:55px;"/>
                                                     A. 作者终生及死后五十年</p>
                                                 <p>
@@ -934,7 +934,7 @@
 
                                         <tbody id="tbName">
                                         <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>20、商标注册和版权登记有哪些区别（多选）(ABCD)</strong></div>
+                                            <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>20、商标注册和版权登记有哪些区别（多选）(ABCD)。</strong></div>
                                                 <p><input type="checkbox" name="c20" value="1" style="width:55px; height:55px;"/>
                                                     A. 申请机构不同</p>
                                                 <p>

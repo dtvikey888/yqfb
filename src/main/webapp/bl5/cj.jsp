@@ -6,7 +6,7 @@
 <%@page import="org.fjw.weixin.yy.WeixinChaOpenId"%>
 <%@page import="org.liufeng.course.util.AdvancedUtil"%>
 <%
-String urlname ="bl2/cj.jsp";
+String urlname ="bl6/cj.jsp";
 String openid =request.getParameter("openid");
 String check=Topay.WxJsApiCheck4(urlname,openid);
 %>

@@ -425,17 +425,11 @@ public class MyUtils22 {
 					if (MyUtils22.GetTotalSY(zsm)<=0) {//比如 一等奖的奖项总数 - 所有中了一等奖的人 <= 0  那么就是说1等奖的所有名额没了,就把标志变为0
 						sy=0;
 					}else {
-						//一等奖10
+						//一等奖10  -8
 						if(TimeString.nowTime().indexOf("2020-04-23")!=-1){
-							sy = 2 -zjs;
+							sy = 4 -zjs;
 						}else if(TimeString.nowTime().indexOf("2020-04-24")!=-1){
-							sy = 2 -zjs;
-						}else if(TimeString.nowTime().indexOf("2020-04-25")!=-1){
-							sy = 2 -zjs;
-						}else if(TimeString.nowTime().indexOf("2020-04-26")!=-1){
-							sy = 2 -zjs;
-						}else if(TimeString.nowTime().indexOf("2020-04-27")!=-1){
-							sy = 2 -zjs;
+							sy = 6 -zjs;
 						}else {
 							sy = 0;
 						}
@@ -448,17 +442,11 @@ public class MyUtils22 {
 					if (MyUtils22.GetTotalSY(zsm)<=0) {//比如 二等奖的奖项总数 - 所有中了二等奖的人 <= 0  那么就是说2等奖的所有名额没了 ,就把标志变为0
 						sy=0;
 					}else {
-						//二等奖30
+						//二等奖30  -28
 						if(TimeString.nowTime().indexOf("2020-04-23")!=-1){
-							sy = 6 -zjs;
+							sy = 15 -zjs;
 						}else if(TimeString.nowTime().indexOf("2020-04-24")!=-1){
-							sy = 6 -zjs;
-						}else if(TimeString.nowTime().indexOf("2020-04-25")!=-1){
-							sy = 6 -zjs;
-						}else if(TimeString.nowTime().indexOf("2020-04-26")!=-1){
-							sy = 6 -zjs;
-						}else if(TimeString.nowTime().indexOf("2020-04-27")!=-1){
-							sy = 6 -zjs;
+							sy = 15 -zjs;
 						}else {
 							sy = 0;
 						}
@@ -472,17 +460,11 @@ public class MyUtils22 {
 					if (MyUtils22.GetTotalSY(zsm)<=0) {//比如 三等奖的奖项总数 - 所有中了三等奖的人 <= 0  那么就是说3等奖的所有名额没了 ,就把标志变为0
 						sy=0;
 					}else {
-						//3等奖50
+						//3等奖50 45
 						if(TimeString.nowTime().indexOf("2020-04-23")!=-1){
-							sy = 10 -zjs;
+							sy = 30 -zjs;
 						}else if(TimeString.nowTime().indexOf("2020-04-24")!=-1){
-							sy = 10 -zjs;
-						}else if(TimeString.nowTime().indexOf("2020-04-25")!=-1){
-							sy = 10 -zjs;
-						}else if(TimeString.nowTime().indexOf("2020-04-26")!=-1){
-							sy = 10 -zjs;
-						}else if(TimeString.nowTime().indexOf("2020-04-27")!=-1){
-							sy = 10 -zjs;
+							sy = 20 -zjs;
 						}else {
 							sy = 0;
 						}
@@ -496,17 +478,13 @@ public class MyUtils22 {
 					if (MyUtils22.GetTotalSY(zsm)<=0) {//比如 4等奖的奖项总数 - 所有中了4等奖的人 <= 0  那么就是说4等奖的所有名额没了 ,就把标志变为0
 						sy=0;
 					}else {
-						//4等奖260
+						//4等奖260  255
 						if(TimeString.nowTime().indexOf("2020-04-23")!=-1){
-							sy = 52 -zjs;
+							sy = 180 -zjs;
 						}else if(TimeString.nowTime().indexOf("2020-04-24")!=-1){
-							sy = 52 -zjs;
+							sy = 70 -zjs;
 						}else if(TimeString.nowTime().indexOf("2020-04-25")!=-1){
-							sy = 52 -zjs;
-						}else if(TimeString.nowTime().indexOf("2020-04-26")!=-1){
-							sy = 52 -zjs;
-						}else if(TimeString.nowTime().indexOf("2020-04-27")!=-1){
-							sy = 52 -zjs;
+							sy = 10 -zjs;
 						}else {
 							sy = 0;
 						}
@@ -767,14 +745,20 @@ public class MyUtils22 {
 
 				}else{
 
-					//String sql ="insert into daf_cj(xm,tel,openid,zsm,fbsj) VALUES('"+xm+"','"+tel+"','"+openid+"',"+zsm+",'"+TimeString.nowTime()+"') ";
 
-					String sql ="update daf_cj set xm='"+xm+"',tel='"+tel+"',iscj_bz=1,iszj_bz="+iszj_bz+",openid='"+openid+"',zsm="+zsm+",fbsj='"+TimeString.nowTime()+"' where openid='"+openid+"'";
+					if (MyUtils22.GetTotalSY(new Integer(zsm))>0) {
 
-					System.out.println(sql);
-					db.executeUpdate(sql);
+						//String sql ="insert into daf_cj(xm,tel,openid,zsm,fbsj) VALUES('"+xm+"','"+tel+"','"+openid+"',"+zsm+",'"+TimeString.nowTime()+"') ";
 
-					bz=2;
+						//String sql = "update daf_cj set xm='" + xm + "',tel='" + tel + "',iscj_bz=1,iszj_bz=" + iszj_bz + ",openid='" + openid + "',zsm=" + zsm + ",fbsj='" + TimeString.nowTime() + "' where openid='" + openid + "'";
+						String sql = "update daf_cj set iscj_bz=1,iszj_bz=" + iszj_bz + ",zsm=" + zsm + ",fbsj='" + TimeString.nowTime() + "' where openid='" + openid + "'";
+
+						System.out.println(sql);
+						db.executeUpdate(sql);
+
+						bz = 2;
+
+					}
 				}
 
 			}

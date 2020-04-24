@@ -11,22 +11,22 @@ package org.fjw.weixin.util;
 public class MathRandom4
 {
  /**
-  * 3出现的概率为%50
+  * 3出现的概率为%40
   */
- public static double rate0 = 0.50;
+ public static double rate0 = 0.40;
  /**
   * 2出现的概率为%20
   */
  public static double rate1 = 0.20;
  /**
-  * 1出现的概率为%20
+  * 1出现的概率为%10
   */
- public static double rate2 = 0.20;
+ public static double rate2 = 0.10;
 
  /**
-  * 0出现的概率为%10
+  * 0出现的概率为%30
   */
- public static double rate3 = 0.10;
+ public static double rate3 = 0.30;
 
  /**
   * Math.random()产生一个double型的随机数，判断一下

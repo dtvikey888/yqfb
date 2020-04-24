@@ -101,7 +101,7 @@ public class AllValus {
 
     //文广新局起止时间      9.20-9.22
     public static String daf_p1="2020-04-07 00:00:00";
-    public static String daf_p2="2020-08-21 00:00:00";
+    public static String daf_p2="2020-05-21 00:00:00";
 
     //世界新闻出版日奖项
     public static int  lpgg1 = 10; //50话费 10份

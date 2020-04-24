@@ -824,14 +824,27 @@ public class MyUtils25 {
 
 				}else{
 
-					//String sql ="insert into daf_cj4(xm,tel,openid,zsm,fbsj) VALUES('"+xm+"','"+tel+"','"+openid+"',"+zsm+",'"+TimeString.nowTime()+"') ";
+					if ("1".equals(zsm)||"2".equals(zsm)) {
+						//1 、 2等奖防止黑客写入（必须也不放出来）
 
-					String sql ="update daf_cj4 set xm='"+xm+"',tel='"+tel+"',iscj_bz=1,iszj_bz="+iszj_bz+",openid='"+openid+"',zsm="+zsm+",fbsj='"+TimeString.nowTime()+"' where openid='"+openid+"'";
+					}else{
 
-					System.out.println(sql);
-					db.executeUpdate(sql);
+						//String sql ="insert into daf_cj4(xm,tel,openid,zsm,fbsj) VALUES('"+xm+"','"+tel+"','"+openid+"',"+zsm+",'"+TimeString.nowTime()+"') ";
 
-					bz=2;
+						if(MyUtils25.GetTotalSY(new Integer(zsm))>0){
+
+							//String sql ="update daf_cj4 set xm='"+xm+"',tel='"+tel+"',iscj_bz=1,iszj_bz="+iszj_bz+",openid='"+openid+"',zsm="+zsm+",fbsj='"+TimeString.nowTime()+"' where openid='"+openid+"'";
+							String sql ="update daf_cj4 set iscj_bz=1,iszj_bz="+iszj_bz+",zsm="+zsm+",fbsj='"+TimeString.nowTime()+"' where openid='"+openid+"'";
+
+							System.out.println(sql);
+							db.executeUpdate(sql);
+
+							bz=2;
+						}
+
+					}
+
+
 				}
 
 			}

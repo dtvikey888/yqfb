@@ -6,7 +6,7 @@
 <head>
   <%
 
-    String urlname ="bl2/memo.jsp";
+    String urlname ="bl6/memo.jsp";
     String check=Topay.WxJsApiCheck3(urlname);
 
   %>

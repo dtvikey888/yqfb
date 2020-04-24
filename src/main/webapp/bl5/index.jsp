@@ -20,7 +20,7 @@
 
 <%
 
-String urlname ="bl2/index.jsp";
+String urlname ="bl6/index.jsp";
 String openid =request.getParameter("openid");
 //out.println("openid="+openid);
 
@@ -700,17 +700,17 @@ bottom: 10px;
         </tr>
       <tr>
         <td height="50" colspan="2">
-		  <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#073A21; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">活动奖励</button>
+		  <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#82CBE8; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">活动奖励</button>
 	      <div align="center" style="margin-top:50px;margin-bottom:25px;line-height:1.8">一等奖10份:  50元移动话费</div>
 	      <div align="center" style="margin-top:25px;margin-bottom:25px;line-height:1.8">二等奖30份:  30元移动话费</div>
 	      <div align="center" style="margin-top:25px;margin-bottom:25px;line-height:1.8">三等奖50份:  20元移动话费</div>
 	      <div align="center" style="margin-top:25px;margin-bottom:50px;line-height:1.8">参与奖260份: 10元移动话费</div>
-	      <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#073A21; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">活动规则</button>
+	      <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#82CBE8; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">活动规则</button>
 		  <div style="margin-top:50px;padding-left:12px;line-height:1.8">1、  共有20道选择题，答对其中15道题，即可参与刮刮卡抽奖活动。每个手机号仅限参与一次，请实名参与。</div>
 		  <div style="margin-top:25px;padding-left:12px;margin-bottom:25px;line-height:1.8">2、  350份话费奖励完成或超出活动时间参与答题均无效。</div>
-		  <div style="margin-top:25px;padding-left:12px;margin-bottom:50px;line-height:1.8">3、	活动对象：浙江移动用户</div>
+		  <div style="margin-top:25px;padding-left:12px;margin-bottom:50px;line-height:1.8">3、	活动对象：浙江移动用户。</div>
           <div style="margin-top:25px;padding-left:12px;margin-bottom:50px;line-height:1.8">4、	话费将在活动结束后5个工作日内赠送。</div>
-		  <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#073A21; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">选择题</button>
+		  <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#82CBE8; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">选择题</button>
         </td>
       </tr>
       
@@ -720,7 +720,7 @@ bottom: 10px;
 	<table width="103%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
       <tbody id="tbName" >
       <tr>
-        <td height="20"><p></p><div style="line-height:1.8"><strong>1、世界读书日是几月几日（   ）</strong></div>
+        <td height="20"><p></p><div style="line-height:1.8"><strong>1、世界读书日是（ ）月（ ）日。</strong></div>
           <p><input type="radio" name="c1" value="1" style="width:55px; height:55px;"/>
 		    A. 3月23日</p>
           <p> 
@@ -739,7 +739,7 @@ bottom: 10px;
 	  
 	  <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>2、世界知识产权日是几月几日（  ）</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>2、世界知识产权日是（ ）月（ ）日。</strong></div>
           <p><input type="radio" name="c2" value="1" style="width:55px; height:55px;"/>
 		    A. 3月23日 </p>
           <p> 
@@ -831,7 +831,7 @@ bottom: 10px;
 
 	 <tbody id="tbName">
       <tr>
-          <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>7、差错率不超过（ ）的图书，其编校质量属合格。?</strong></div>
+          <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>7、差错率不超过（ ）的图书，其编校质量属合格。</strong></div>
           <p><input type="radio" name="c7" value="1" style="width:55px; height:55px;"/>
 		    A. 千分之一</p>
           <p>
@@ -927,7 +927,7 @@ bottom: 10px;
 	  
 	   <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>12、( )不受著作权法保护。</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>12、（ ）不受著作权法保护。</strong></div>
           <p> <input type="radio" name="c12" value="1" style="width:55px; height:55px;"/>
 		    A. 计算机软件</p>
           <p>
@@ -964,7 +964,7 @@ bottom: 10px;
 	  
 	   <tbody id="tbName">
       <tr>
-          <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>14、作者的署名权、修改权、保护作品完整权的保护期为（ ）</strong></div>
+          <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>14、作者的署名权、修改权、保护作品完整权的保护期为（ ）。</strong></div>
           <p> <input type="radio" name="c14" value="1" style="width:55px; height:55px;"/>
 		    A. 作者终生及死后五十年</p>
           <p>
@@ -1074,7 +1074,7 @@ bottom: 10px;
 
         <tbody id="tbName">
         <tr>
-            <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>20、商标注册和版权登记有哪些区别（多选）</strong></div>
+            <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>20、商标注册和版权登记有哪些区别（多选）。</strong></div>
                 <p><input type="checkbox" name="c20" value="1" style="width:55px; height:55px;"/>
                     A. 申请机构不同</p>
                 <p>
@@ -1116,7 +1116,7 @@ bottom: 10px;
         <!--  
         <input target="_self" type="image" border="0" name="sub22" src="img/tp3.png" width=100% height=80  onclick="return processForm(this.form);"/>
         -->
-       <button onclick="return processForm(this.form);" type="submit" style="width:100%;padding:15px 15px;border-radius:15px; background:#073A21; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">&nbsp;&nbsp;&nbsp;&nbsp;提&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;交&nbsp;&nbsp;&nbsp;&nbsp;</button>
+       <button onclick="return processForm(this.form);" type="submit" style="width:100%;padding:15px 15px;border-radius:15px; background:#21457B; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">&nbsp;&nbsp;&nbsp;&nbsp;提&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;交&nbsp;&nbsp;&nbsp;&nbsp;</button>
        <p></p>
 		<%}else{ %>
 		 <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#CC0001; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">您已经参与过,<%="您是第"+MyUtils22.GetWs(openid)+"位参与者,"+MyUtils22.zsm(openid) %></button>  
