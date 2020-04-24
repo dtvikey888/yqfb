@@ -902,18 +902,18 @@ public class MyUtils26 {
 	}
 
 	//答题正确与否 10个正确就行
-	//答案：1.C  2.A  3.A 4.A  5.B  6.B  7.C  8.C  9.C  10.B 11. B  12. A  13.B  14.A  15.B
+	//答案：DDAAD BDBBB
 
 	public static boolean DtIsZq(String... a){
 		boolean zqm=false;
 
 		int cs=0;
-		String[] arr1 = {a[0],a[1],a[2],a[3],a[4],a[5],a[6],a[7],a[8],a[9],a[10],a[11],a[12],a[13],a[14],a[15],a[16],a[17],a[18],a[19]};
+		String[] arr1 = {a[0],a[1],a[2],a[3],a[4],a[5],a[6],a[7],a[8],a[9]};
 //		for (int i : arr1) {
 //			System.out.println(arr1[i]);
 //		}
-		String[] arr2 = {"3","4","2","4","1","2","2","3","1","1","2","3","2","3","4","3","4","2","4","1,2,3,4,"};
-		for(int i = 0; i < 20; ++i) {
+		String[] arr2 = {"4","4","1","1","4","2","4","2","2","2"};
+		for(int i = 0; i < 10; ++i) {
 			if(arr1[i].equals(arr2[i])){
 				System.out.println("same!");
 				cs++;
@@ -923,7 +923,7 @@ public class MyUtils26 {
 
 
 		System.out.println("ct:"+cs);
-		if (cs>=15) {
+		if (cs>=8) {
 			zqm=true;
 		}
 
