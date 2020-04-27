@@ -458,7 +458,7 @@ function DataLength(fData)
 		else%>
 		-->
           <div class="form-btn">
-  <button type="submit" gaevent="imt/account/address/addBtn" class="btn btn-block" id="btn-login" onClick="document.form1.action='cj_chk.jsp';if(DataLength(form1.xm.value)<2){alert('姓名最少2个字');form1.xm.focus();return false};if(DataLength(form1.lx.value)<1){alert('请选择正确的手机运营商');form1.lx.focus();return false};if(DataLength(form1.tel.value)<2){alert('请填写正确的联系方式');form1.tel.focus();return false};document.form1.submit();">抽奖</button>
+  <button type="submit" gaevent="imt/account/address/addBtn" class="btn btn-block" id="btn-login" onClick="document.form1.action='cj_chk.jsp';if(DataLength(form1.xm.value)<2){alert('姓名最少2个字');form1.xm.focus();return false};if(DataLength(form1.lx.value)<1){alert('请选择正确的手机运营商');form1.lx.focus();return false};if(DataLength(form1.tel.value)<11){alert('请填写正确的联系方式');form1.tel.focus();return false};document.form1.submit();">抽奖</button>
           </div>
           <!--
 		end if%>
