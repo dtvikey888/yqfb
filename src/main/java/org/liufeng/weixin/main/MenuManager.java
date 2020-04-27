@@ -202,10 +202,15 @@ public class MenuManager {
 		btn11.setUrl("http://www.yqbtv.cn/index.php?s=/Mobile/index/focus&from=singlemessage");
 
 
-		ComplexButton mainBtn1 = new ComplexButton();
-		//mainBtn2.setName("在线平台");
-		mainBtn1.setName("复工复产");
-		mainBtn1.setSub_button(new Button[] { btn10,btn11 });
+//		ComplexButton mainBtn1 = new ComplexButton();
+//		//mainBtn2.setName("在线平台");
+//		mainBtn1.setName("复工复产");
+//		mainBtn1.setSub_button(new Button[] { btn10,btn11 });
+
+		ViewButton mainBtn1 = new ViewButton();
+		mainBtn1.setName("乐清两会");
+		mainBtn1.setType("view");
+		mainBtn1.setUrl("https://zj.zjol.com.cn/subject.html?id=1436267&from=singlemessage&isappinstalled=0");
 
 		ComplexButton mainBtn2 = new ComplexButton();
 		//mainBtn2.setName("在线平台");

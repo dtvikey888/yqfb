@@ -580,18 +580,21 @@
                                     <table width="103%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
                                         <tbody id="tbName" >
                                         <tr>
-                                            <td height="20"><p></p><div style="line-height:1.8"><strong>1、世界读书日是（ C ）月（  ）日。</strong></div>
-                                                <p><input type="radio" name="c1" value="1" style="width:55px; height:55px;"/>
-                                                    A. 3月23日</p>
-                                                <p>
-                                                    <input type="radio" name="c1" value="2" style="width:55px; height:55px;"/>
-                                                    B. 3月26日</p>
+                                            <td height="20"><p></p><div style="line-height:1.8"><strong>1、问：根据《固定污染源排污许可分类管理名录（2019年版）》规定了纳入排污许可管理的固定污染源行业范围和管理类别。排污许可管理分为排污许可重点管理、简化管理和登记管理三种类别。所有纳入《管理名录》的现有排污单位，应于什么时候前申请并取得排污许可证或完成排污登记？</strong></div>
                                                 <p style="line-height:1.8">
-                                                    <input type="radio" name="c1" value="3" style="width:55px; height:55px;"/>
-                                                    C. 4月23日</p>
+                                                    答：2020年9月30日前</p>
+
+                                            </td>
+                                        </tr>
+                                        </tbody>
+
+
+                                        <tbody id="tbName">
+                                        <tr>
+                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>2、问：什么工序不属于《固定污染源排污许可分类管理名录（2019年版）》中涉及通用工序中的表面处理？</strong></div>
                                                 <p style="line-height:1.8">
-                                                    <input type="radio" name="c1" value="4" style="width:55px; height:55px;"/>
-                                                    D. 4月26日</p>
+                                                    答：烘干 </p>
+
                                             </td>
                                         </tr>
                                         </tbody>
@@ -599,18 +602,40 @@
 
                                         <tbody id="tbName">
                                         <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>2、世界知识产权日是（ ）月（ D ）日。</strong></div>
-                                                <p><input type="radio" name="c2" value="1" style="width:55px; height:55px;"/>
-                                                    A. 3月23日 </p>
-                                                <p>
-                                                    <input type="radio" name="c2" value="2" style="width:55px; height:55px;"/>
-                                                    B. 3月26日</p>
-                                                <p>
-                                                    <input type="radio" name="c2" value="3" style="width:55px; height:55px;"/>
-                                                    C. 4月23日</p>
-                                                <p>
-                                                    <input type="radio" name="c2" value="4" style="width:55px; height:55px;"/>
-                                                    D. 4月26日</p>
+                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>3、问：全国排污许可证管理信息平台公开端网址是什么？</strong></div>
+                                                <p style="line-height:1.8">
+                                                    答：http://permit.mee.gov.cn/</p>
+
+                                            </td>
+                                        </tr>
+                                        </tbody>
+
+                                        <tbody id="tbName">
+                                        <tr>
+                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>4、问：生态环境部部署2020年排污许可证核发覆盖所有固定污染源的工作总目标，开展清理整顿和做好排污许可发证登记工作，通过“摸、排、分、清”四个步骤，首批需要清理整顿33个行业需在什么时候完成？</strong></div>
+                                                <p style="line-height:1.8">
+                                                    答：2020年4月30日前</p>
+
+                                            </td>
+                                        </tr>
+                                        </tbody>
+
+                                        <tbody id="tbName">
+                                        <tr>
+                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>5、问：根据《固定污染源排污许可分类管理名录（2019年版）》规定了纳入排污许可管理的固定污染源行业范围和管理类别。排污许可管理包含哪些？</strong></div>
+                                                <p style="line-height:1.8">
+                                                    答：包含：重点管理、简化管理、登记管理</p>
+
+                                            </td>
+                                        </tr>
+                                        </tbody>
+
+                                        <tbody id="tbName">
+                                        <tr>
+                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>6、问：按照“摸、排、分、清”四项工作任务，完成固定污染源清理整顿、2020年排污许可发证和登记，其中排指什么？</strong></div>
+                                                <p style="line-height:1.8">
+                                                    答：排查无证</p>
+
                                             </td>
                                         </tr>
                                         </tbody>
@@ -618,72 +643,10 @@
 
                                         <tbody id="tbName">
                                         <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>3、从事出版活动应当将（ B ）放在首位。</strong></div>
-                                                <p> <input type="radio" name="c3" value="1" style="width:55px; height:55px;"/>
-                                                    A. 经济效益</p>
-                                                <p>
-                                                    <input type="radio" name="c3" value="2" style="width:55px; height:55px;"/>
-                                                    B. 社会效益</p>
-                                                <p>
-                                                    <input type="radio" name="c3" value="3" style="width:55px; height:55px;"/>
-                                                    C. 个人效益</p>
-                                                <p>
-                                                    <input type="radio" name="c3" value="4" style="width:55px; height:55px;"/>
-                                                    D. 企业效益</p>
-                                            </td>
-                                        </tr>
-                                        </tbody>
+                                            <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>7、问：实行登记管理的排污单位，不需要申请取得排污许可证，应当在全国排污许可证管理信息平台填报排污登记表，哪项不需填写？</strong></div>
+                                                <p style="line-height:1.8">
+                                                    答：自行监测数据</p>
 
-                                        <tbody id="tbName">
-                                        <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>4、按《印刷业管理条例》的规定，以下不属于“出版物”的是（ D ）。</strong></div>
-                                                <p> <input type="radio" name="c4" value="1" style="width:55px; height:55px;"/>
-                                                    A. 期刊</p>
-                                                <p>
-                                                    <input type="radio" name="c4" value="2" style="width:55px; height:55px;"/>
-                                                    B. 地图</p>
-                                                <p>
-                                                    <input type="radio" name="c4" value="3" style="width:55px; height:55px;"/>
-                                                    C. 挂历</p>
-                                                <p>
-                                                    <input type="radio" name="c4" value="4" style="width:55px; height:55px;"/>
-                                                    D. 广告宣传品</p>
-                                            </td>
-                                        </tr>
-                                        </tbody>
-
-                                        <tbody id="tbName">
-                                        <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>5、以未成年人为对象的出版物（ A ）含有诱发未成年人模仿违反社会公德的行为和违法犯罪的行为的内容，（    ）含有恐怖、残酷等妨害未成年人身心健康的内容。</strong></div>
-                                                <p> <input type="radio" name="c5" value="1" style="width:55px; height:55px;"/>
-                                                    A. 不得      不得</p>
-                                                <p>
-                                                    <input type="radio" name="c5" value="2" style="width:55px; height:55px;"/>
-                                                    B. 可以      可以</p>
-                                                <p>
-                                                    <input type="radio" name="c5" value="3" style="width:55px; height:55px;"/>
-                                                    C. 不得      可以</p>
-                                                <p>
-                                                    <input type="radio" name="c5" value="4" style="width:55px; height:55px;"/>
-                                                    D. 可以      不得</p>
-                                            </td>
-                                        </tr>
-                                        </tbody>
-
-                                        <tbody id="tbName">
-                                        <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>6、《出版管理条例》规定，单位违反本条例被处以吊销许可证行政处罚的，其法定代表人或者主要负责人自许可证被吊销之日起（ B ）内不得担任出版、印刷或者复制、进口、发行单位的法定代表人或者主要负责人。</strong></div>
-                                                <p><input type="radio" name="c6" value="1" style="width:55px; height:55px;"/>
-                                                    A. 5年</p>
-                                                <p>
-                                                    <input type="radio" name="c6" value="2" style="width:55px; height:55px;"/>
-                                                    B. 10年</p>
-                                                <p>
-                                                    <input type="radio" name="c6" value="3" style="width:55px; height:55px;"/>
-                                                    C. 15年</p>
-                                                <p>
-                                                    <input type="radio" name="c6" value="4" style="width:55px; height:55px;"/>
-                                                    D. 20年</p>
                                             </td>
                                         </tr>
                                         </tbody>
@@ -691,37 +654,10 @@
 
                                         <tbody id="tbName">
                                         <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>7、差错率不超过（ B ）的图书，其编校质量属合格。</strong></div>
-                                                <p><input type="radio" name="c7" value="1" style="width:55px; height:55px;"/>
-                                                    A. 千分之一</p>
-                                                <p>
-                                                    <input type="radio" name="c7" value="2" style="width:55px; height:55px;"/>
-                                                    B. 万分之一</p>
-                                                <p>
-                                                    <input type="radio" name="c7" value="3" style="width:55px; height:55px;"/>
-                                                    C. 百分之一</p>
-                                                <p>
-                                                    <input type="radio" name="c7" value="4" style="width:55px; height:55px;"/>
-                                                    D. 十万分之一</p>
-                                            </td>
-                                        </tr>
-                                        </tbody>
+                                            <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>8、问：通用工序中，除纳入重点排污单位名录的，除以天然气或者电为能源的加热炉、热处理炉、干燥炉以外的其他工业炉窑，按《固定污染源排污许可分类管理名录（2019年版）》规定，属于？</strong></div>
+                                                <p style="line-height:1.8">
+                                                    答：简化管理</p>
 
-
-                                        <tbody id="tbName">
-                                        <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>8、著作权法所称作品，是指文学、艺术和科学领域内具有（ C ）并能以某种有形形式复制的智力成果。</strong></div>
-                                                <p> <input type="radio" name="c8" value="1" style="width:55px; height:55px;"/>
-                                                    A. 新颖性</p>
-                                                <p>
-                                                    <input type="radio" name="c8" value="2" style="width:55px; height:55px;"/>
-                                                    B. 艺术性</p>
-                                                <p>
-                                                    <input type="radio" name="c8" value="3" style="width:55px; height:55px;"/>
-                                                    C. 独创性</p>
-                                                <p>
-                                                    <input type="radio" name="c8" value="4" style="width:55px; height:55px;"/>
-                                                    D. 思想性</p>
                                             </td>
                                         </tr>
                                         </tbody>
@@ -730,18 +666,10 @@
 
                                         <tbody id="tbName">
                                         <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>9、根据我国著作权法的规定，（ A ）与著作权是同一概念。</strong></div>
-                                                <p> <input type="radio" name="c9" value="1" style="width:55px; height:55px;"/>
-                                                    A. 版权</p>
-                                                <p>
-                                                    <input type="radio" name="c9" value="2" style="width:55px; height:55px;"/>
-                                                    B. 出版权</p>
-                                                <p>
-                                                    <input type="radio" name="c9" value="3" style="width:55px; height:55px;"/>
-                                                    C. 复制权</p>
-                                                <p>
-                                                    <input type="radio" name="c9" value="4" style="width:55px; height:55px;"/>
-                                                    D. 邻接权</p>
+                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>9、问：根据《固定污染源排污许可分类管理名录（2019年版）》规定，家具制造业，属于简化管理的范围：除重点管理外年使用 多少吨及以上溶剂型涂料或者胶粘剂（含稀释剂、固化剂）的、年使用20吨及以上水性涂料或者胶粘剂的，有磷化表面处理工艺的。</strong></div>
+                                                <p style="line-height:1.8">
+                                                    答：10吨</p>
+
                                             </td>
                                         </tr>
                                         </tbody>
@@ -750,18 +678,10 @@
 
                                         <tbody id="tbName">
                                         <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>10、著作权法保护的是（ A ）。</strong></div>
-                                                <p> <input type="radio" name="c10" value="1" style="width:55px; height:55px;"/>
-                                                    A. 思想观念</p>
-                                                <p>
-                                                    <input type="radio" name="c10" value="2" style="width:55px; height:55px;"/>
-                                                    B. 数学概念</p>
-                                                <p>
-                                                    <input type="radio" name="c10" value="3" style="width:55px; height:55px;"/>
-                                                    C. 原则和发现</p>
-                                                <p>
-                                                    <input type="radio" name="c10" value="4" style="width:55px; height:55px;"/>
-                                                    D. 思想观念的独创性表达</p>
+                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>10、问：根据《固定污染源排污许可分类管理名录（2019年版）》规定，有色金属压延加工行业，有轧制或者退火工艺的，属于?</strong></div>
+                                                <p style="line-height:1.8">
+                                                    答：简化管理。</p>
+
                                             </td>
                                         </tr>
                                         </tbody>
@@ -769,54 +689,30 @@
 
                                         <tbody id="tbName">
                                         <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>11、根据我国著作权法，我国公民著作权（ B ）。</strong></div>
-                                                <p> <input type="radio" name="c11" value="1" style="width:55px; height:55px;"/>
-                                                    A. 随作品的发表而自动产生</p>
-                                                <p>
-                                                    <input type="radio" name="c11" value="2" style="width:55px; height:55px;"/>
-                                                    B. 随作品的创作完成而自动产生</p>
-                                                <p>
-                                                    <input type="radio" name="c11" value="3" style="width:55px; height:55px;"/>
-                                                    C. 在作品上加注版权标记后自动产生</p>
-                                                <p>
-                                                    <input type="radio" name="c11" value="4" style="width:55px; height:55px;"/>
-                                                    D. 作品以一定的物质形态固定后产生</p>
+                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>11、问：什么是排污许可？</strong></div>
+                                                <p style="line-height:1.8">
+                                                    答：排污许可是环境管理的一种制度，是指需要向环境排放特定污染物的单位和个人，必须事先向主管机关申请，经批准后才能排放污染物的制度。</p>
+
                                             </td>
                                         </tr>
                                         </tbody>
 
                                         <tbody id="tbName">
                                         <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>12、（ C ）不受著作权法保护。</strong></div>
-                                                <p> <input type="radio" name="c12" value="1" style="width:55px; height:55px;"/>
-                                                    A. 计算机软件</p>
-                                                <p>
-                                                    <input type="radio" name="c12" value="2" style="width:55px; height:55px;"/>
-                                                    B. 地图</p>
-                                                <p>
-                                                    <input type="radio" name="c12" value="3" style="width:55px; height:55px;"/>
-                                                    C. 时事新闻</p>
-                                                <p>
-                                                    <input type="radio" name="c12" value="4" style="width:55px; height:55px;"/>
-                                                    D. 即兴演说</p>
+                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>12、问：为什么要办理排污许可证？</strong></div>
+                                                <p style="line-height:1.8">
+                                                    答：《中华人民共和国环境保护法》第四十五条规定：国家依照法律规定实行排污许可管理制度。实行排污许可管理的企业事业单位和其他生产经营者应当按照排污许可证的要求排放污染物；未取得排污许可证的，不得排放污染物。</p>
+
                                             </td>
                                         </tr>
                                         </tbody>
 
                                         <tbody id="tbName">
                                         <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>13、图书出版者重印、再版作品的，应当（ B ）。</strong></div>
-                                                <p> <input type="radio" name="c13" value="1" style="width:55px; height:55px;"/>
-                                                    A. 支付报酬但不必通知著作权人</p>
-                                                <p>
-                                                    <input type="radio" name="c13" value="2" style="width:55px; height:55px;"/>
-                                                    B. 通知著作权人并支付报酬</p>
-                                                <p>
-                                                    <input type="radio" name="c13" value="3" style="width:55px; height:55px;"/>
-                                                    C. 通知著作权人但不必支付报酬</p>
-                                                <p>
-                                                    <input type="radio" name="c13" value="4" style="width:55px; height:55px;"/>
-                                                    D. 与著作权人重新签订合同</p>
+                                            <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>13、问：哪些单位需要办理排污许可发证登记？</strong></div>
+                                                <p style="line-height:1.8">
+                                                    答：纳入《固定污染源排污许可分类管理名录（2019年版）》的排放大气污染物、水污染物及其他污染物的企事业单位和其他生产经营者。</p>
+
                                             </td>
                                         </tr>
                                         </tbody>
@@ -824,54 +720,30 @@
 
                                         <tbody id="tbName">
                                         <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>14、作者的署名权、修改权、保护作品完整权的保护期为（ C ）。</strong></div>
-                                                <p> <input type="radio" name="c14" value="1" style="width:55px; height:55px;"/>
-                                                    A. 作者终生及死后五十年</p>
-                                                <p>
-                                                    <input type="radio" name="c14" value="2" style="width:55px; height:55px;"/>
-                                                    B. 作者终生</p>
-                                                <p>
-                                                    <input type="radio" name="c14" value="3" style="width:55px; height:55px;"/>
-                                                    C. 不受限制</p>
-                                                <p style="line-height: 1.5">
-                                                    <input type="radio" name="c14" value="4" style="width:55px; height:55px;line-height: 1.5"/>
-                                                    D. 截止于作品首次发表后第50年的12月31日</p>
+                                            <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>14、哪些企业需要申请排污许可证？哪些企业需要排污登记？</strong></div>
+                                                <p style="line-height:1.8">
+                                                    答：根据《固定污染源排污许可分类管理名录（2019年版）》进行分类判断，根据污染物产生量、排放量、对环境的影响程度等因素，实行排污许可重点管理、简化管理和登记管理。</p>
+
                                             </td>
                                         </tr>
                                         </tbody>
 
                                         <tbody id="tbName">
                                         <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>15、甲撰写毕业论文，大量抄袭了乙刊登在某杂志上的一篇译文，甲的行为侵犯了（ D ）的著作权。</strong></div>
-                                                <p> <input type="radio" name="c15" value="1" style="width:55px; height:55px;"/>
-                                                    A. 乙</p>
-                                                <p>
-                                                    <input type="radio" name="c15" value="2" style="width:55px; height:55px;"/>
-                                                    B. 杂志社</p>
-                                                <p>
-                                                    <input type="radio" name="c15" value="3" style="width:55px; height:55px;"/>
-                                                    C. 乙和杂志社</p>
-                                                <p>
-                                                    <input type="radio" name="c15" value="4" style="width:55px; height:55px;"/>
-                                                    D. 乙和原作者</p>
+                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>15、问：排污许可证办理时限？</strong></div>
+                                                <p style="line-height:1.8">
+                                                    答：环境保护行政主管部门应当自受理排污许可证申请之日起20个工作日内，依法对申请材料和有关情况进行核实和审查，及时做出颁发或者不予颁发排污许可证的决定。</p>
+
                                             </td>
                                         </tr>
                                         </tbody>
 
                                         <tbody id="tbName">
                                         <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>16、下列哪项不适用于我国著作权法保护？（ C ）</strong></div>
-                                                <p> <input type="radio" name="c16" value="1" style="width:55px; height:55px;"/>
-                                                    A. 书法</p>
-                                                <p>
-                                                    <input type="radio" name="c16" value="2" style="width:55px; height:55px;"/>
-                                                    B. 地图</p>
-                                                <p>
-                                                    <input type="radio" name="c16" value="3" style="width:55px; height:55px;"/>
-                                                    C. 化学元素周期表</p>
-                                                <p>
-                                                    <input type="radio" name="c16" value="4" style="width:55px; height:55px;"/>
-                                                    D. 地方志</p>
+                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>16、属于2019名录中登记管理的企业在平台进行填报后，需要当地生态环境局确认吗？</strong></div>
+                                                <p style="line-height:1.8">
+                                                    答：排污登记采取网上填报方式。排污单位在全国排污许可证管理信息平台（http://permit.mee.gov.cn/permitExt）上填报排污登记表后，自动即时生成登记编号和回执，排污单位可以自行打印留存。即无须当地生态环境局确认。</p>
+
                                             </td>
                                         </tr>
                                         </tbody>
@@ -879,36 +751,20 @@
 
                                         <tbody id="tbName">
                                         <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>17、因侵犯著作权行为提起的民事诉讼，由著作权法所规定侵权行为的（ D ）人民法院管辖。</strong></div>
-                                                <p> <input type="radio" name="c17" value="1" style="width:55px; height:55px;"/>
-                                                    A. 实施地</p>
-                                                <p>
-                                                    <input type="radio" name="c17" value="2" style="width:55px; height:55px;"/>
-                                                    B. 侵权复制品储藏地</p>
-                                                <p>
-                                                    <input type="radio" name="c17" value="3" style="width:55px; height:55px;"/>
-                                                    C. 被告住所地</p>
-                                                <p style="line-height: 1.5">
-                                                    <input type="radio" name="c17" value="4" style="width:55px; height:55px;"/>
-                                                    D. 实施地、侵权复制品储藏地或查封扣押地、被告住所地</p>
+                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>17、问：企事业单位未办理排污许可证应受到什么处罚？</strong></div>
+                                                <p style="line-height:1.8">
+                                                    答：《中华人民共和国环境保护法》规定：企业事业单位和其他生产经营者未取得排污许可证排放污染物，被责令停止排污，拒不执行，尚不构成犯罪的，除依照有关法律法规规定予以处罚外，由县级以上人民政府环境保护主管部门或者其他有关部门将案件移送公安机关，对其直接负责的主管人员和其他直接责任人员，处十日以上十五日以下拘留；情节较轻的，处五日以上十日以下拘留。</p>
+
                                             </td>
                                         </tr>
                                         </tbody>
 
                                         <tbody id="tbName">
                                         <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>18、下列哪个是著作权中的人身权（ B ）。</strong></div>
-                                                <p> <input type="radio" name="c18" value="1" style="width:55px; height:55px;"/>
-                                                    A. 发行权</p>
-                                                <p>
-                                                    <input type="radio" name="c18" value="2" style="width:55px; height:55px;"/>
-                                                    B. 署名权</p>
-                                                <p>
-                                                    <input type="radio" name="c18" value="3" style="width:55px; height:55px;"/>
-                                                    C. 表演权</p>
-                                                <p>
-                                                    <input type="radio" name="c18" value="4" style="width:55px; height:55px;"/>
-                                                    D. 复制权</p>
+                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>18、对于已登记的排污单位，有效期多久？</strong></div>
+                                                <p style="line-height:1.8">
+                                                    答：自其登记日起5年，满5年的，排污许可证登记信息管理平台会自动发送登记更新信息提醒。</p>
+
                                             </td>
                                         </tr>
                                         </tbody>
@@ -916,42 +772,23 @@
 
                                         <tbody id="tbName">
                                         <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>19、中国历史上第一部著作权法是（ D ）。</strong></div>
-                                                <p> <input type="radio" name="c19" value="1" style="width:55px; height:55px;"/>
-                                                    A. 中华人民共和国著作权法</p>
-                                                <p>
-                                                    <input type="radio" name="c19" value="2" style="width:55px; height:55px;"/>
-                                                    B. 中华民国著作权法</p>
-                                                <p>
-                                                    <input type="radio" name="c19" value="3" style="width:55px; height:55px;"/>
-                                                    C. 北洋政府著作权法</p>
-                                                <p>
-                                                    <input type="radio" name="c19" value="4" style="width:55px; height:55px;"/>
-                                                    D. 大清著作权律</p>
+                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>19、排污许可证的有效期是多长？</strong></div>
+                                                <p style="line-height:1.8">
+                                                    答：排污许可证自作出许可决定之日起生效，首次发放的排污许可证有效期为三年，延续换发的排污许可证有效期为五年.</p>
+
                                             </td>
                                         </tr>
                                         </tbody>
 
                                         <tbody id="tbName">
                                         <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>20、商标注册和版权登记有哪些区别（多选）(ABCD)。</strong></div>
-                                                <p><input type="checkbox" name="c20" value="1" style="width:55px; height:55px;"/>
-                                                    A. 申请机构不同</p>
-                                                <p>
-                                                    <input type="checkbox" name="c20" value="2" style="width:55px; height:55px;"/>
-                                                    B. 保护对象不同</p>
-                                                <p>
-                                                    <input type="checkbox" name="c20" value="3" style="width:55px; height:55px;"/>
-                                                    C. 保护期限不同</p>
-                                                <p>
-                                                    <input type="checkbox" name="c20" value="4" style="width:55px; height:55px;"/>
-                                                    D. 保护的目的不同</p>
+                                            <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>20、请问个体工商户是否应申领排污许可证？</strong></div>
+                                                <p style="line-height:1.8">
+                                                    答：对照《名录》规定的行业类型进行识别。根据《环境保护法》《水污染防治法》《大气污染防治法》及《排污许可管理办法（试行）》等有关要求，如果纳入《名录》中的企业事业单位和其他生产经营者，应当按照规定的时限申请并取得排污许可证；未纳入《名录》的排污单位，暂不需申请排污许可证。</p>
+
                                             </td>
                                         </tr>
                                         </tbody>
-
-
-
 
 
                                     </table>
