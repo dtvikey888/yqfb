@@ -840,6 +840,13 @@ public class MyUtils25 {
 							db.executeUpdate(sql);
 
 							bz=2;
+						}else{
+							String sql ="update daf_cj4 set iscj_bz=1,iszj_bz=0,zsm=7,fbsj='"+TimeString.nowTime()+"' where openid='"+openid+"'";
+
+							System.out.println(sql);
+							db.executeUpdate(sql);
+
+							bz=2;
 						}
 
 					}

@@ -1,6 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="gb2312"%>
 <%@ page import="com.component.*"%>
-<%@page import="org.fjw.weixin.util.MyUtils2"%>
 <%@page import="org.fjw.weixin.util.MyUtils26"%>
 <%@page import="org.fjw.weixin.util.AllValus"%>
 

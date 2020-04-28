@@ -763,6 +763,15 @@ public class MyUtils26 {
 
 						bz = 2;
 
+					}else{
+
+						String sql = "update daf_cj5 set iscj_bz=1,iszj_bz=0,zsm=5,fbsj='" + TimeString.nowTime() + "' where openid='" + openid + "'";
+
+						System.out.println(sql);
+						db.executeUpdate(sql);
+
+						bz=2;
+
 					}
 				}
 
