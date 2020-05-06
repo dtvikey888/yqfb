@@ -426,11 +426,11 @@ public class MyUtils26 {
 					}else {
 						//一等奖10
 						if(TimeString.nowTime().indexOf("2020-05-07")!=-1){
-							sy = 4 -zjs;
+							sy = 3 -zjs;
 						}else if(TimeString.nowTime().indexOf("2020-05-08")!=-1){
-							sy = 6 -zjs;
+							sy = 3 -zjs;
 						}else if(TimeString.nowTime().indexOf("2020-05-09")!=-1){
-							sy = 6 -zjs;
+							sy = 4 -zjs;
 						}else {
 							sy = 0;
 						}
@@ -445,11 +445,11 @@ public class MyUtils26 {
 					}else {
 						//20
 						if(TimeString.nowTime().indexOf("2020-05-07")!=-1){
-							sy = 10 -zjs;
+							sy = 7 -zjs;
 						}else if(TimeString.nowTime().indexOf("2020-05-08")!=-1){
-							sy = 5 -zjs;
+							sy = 6 -zjs;
 						}else if(TimeString.nowTime().indexOf("2020-05-09")!=-1){
-							sy = 5 -zjs;
+							sy = 7 -zjs;
 						}else {
 							sy = 0;
 						}

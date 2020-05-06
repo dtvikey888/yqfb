@@ -132,9 +132,9 @@ public class AllValus {
 
     //排污奖项
     public static int  pwjx1 = 10; //50话费 10份
-    public static int  pwjx2 = 30; //40话费 20份
+    public static int  pwjx2 = 20; //40话费 20份
     public static int  pwjx3 = 50; //20元话费 50名
-    public static int  pwjx4 = 260; //10元话费 120名
+    public static int  pwjx4 = 120; //10元话费 120名
 //   public static int  pwjx5 = 600; //5等奖5 750名
 
 
