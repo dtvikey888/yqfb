@@ -99,7 +99,7 @@ public class AllValus {
 
     //排污转发朋友圈标题等
     public static String pw_title="排污许可有奖问答活动";
-    public static String pw_desc="为贯彻落实国家、省、市政府的决策部署，实现固定污染源排污许可全覆盖，帮助大家了解排污许可制相关政策法规和技术规范要求，做好申领登记工作。温州市生态环境局乐清分局推出了排污许可发证登记知识问答有奖活动。";
+    public static String pw_desc="为贯彻落实国家、省、市政府的决策部署，实现固定污染源排污许可全覆盖，帮助大家了解排污许可制相关政策法规和技术规范要求，做好申领登记工作。温州市生态环境局乐清分局开展排污许可发证登记知识问答有奖活动，欢迎广大市民积极参加答题。";
     public static String pw_link="http://www.yqrb.com.cn/yqfb/bl5/index.jsp";
     public static String pw_img="http://v.yqcn.com/yqfb/bl5/img/IMG_TOP3.png";
 

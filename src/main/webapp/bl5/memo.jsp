@@ -102,7 +102,7 @@
     <link rel="apple-touch-startup-image" href="http://ms0.meituan.net/touch/img/startup/apple-touch-startup-image-640x920.png" media="(device-height:480px)">
 
     <style>
-        body{font-size:45px;color:#3f3e3d;line-height:35px;font-family:微软雅黑;background-color:#e7f0f7;padding:0px;margin:0px;}
+        body{height: 1800px;font-size:45px;color:#3f3e3d;line-height:35px;font-family:微软雅黑;background-color:#e7f0f7;padding:0px;margin:0px;}
         a{color:#3f3e3d; text-decoration:none;}
         a:hover{ color:#C1262C; text-decoration:none;}
         p{text-indent:2em;line-height:40px;}
@@ -215,6 +215,7 @@
 
     <script src="js/jquery.js"></script>
 
+
     <style>
         /*div通用样式*/
         div{
@@ -223,11 +224,15 @@
 
         /*右上角*/
         div.right_top{
-            overflow: hidden;
-            z-index: 2000;
-            position:absolute;
-            right: 10px;
-            top: 190px;
+            position:fixed;
+            bottom:0;
+            right:0;
+            width:100%;
+            height:0;
+            top: 0%;
+            /*top: 50%;*/
+            z-index: 99999999 !important;
+
         }
 
         /*右下角*/
@@ -549,7 +554,7 @@
                         <td height="600" align="center" valign="top" bgcolor="#FFFFFF" style="background:url(img/IMG_TOP3.png) no-repeat top center;background-size: 100% 100%;"><table width="95%" cellspacing="2" cellpadding="0">
                             <tr>
                                 <td height="10" colspan="2" align="left">
-                                    <div style="margin-top: 0px;">
+                                    <div class="right_top" style="margin-top: 0px;">
                                         <a href="javascript:history.back(-1)"><img src="img/ICO_return.png" width="200" /></a>
                                     </div>
 

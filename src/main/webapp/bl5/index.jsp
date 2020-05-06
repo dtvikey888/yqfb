@@ -182,7 +182,50 @@ if(twbsession2!=null){
 <link rel="apple-touch-startup-image" href="http://ms0.meituan.net/touch/img/startup/apple-touch-startup-image-640x920.png" media="(device-height:480px)">
  
 <style>
-body{font-size:45px;color:#3f3e3d;line-height:35px;font-family:微软雅黑;background-color:#e7f0f7;padding:0px;margin:0px;}
+body{
+    height: 1800px;
+    font-size:45px;
+    color:#3f3e3d;
+    line-height:35px;
+    font-family:微软雅黑;
+    background-color:#e7f0f7;
+    padding:0px;
+    margin:0px;
+}
+
+/*右上角*/
+div.right_top{
+    right: 10px;
+    top: 10px;
+}
+
+/*右下角*/
+div.right_bottom{
+    right: 10px;
+    bottom: 10px;
+}
+
+
+/*屏幕中间*/
+div.center_{
+    right: 45%;
+    top: 50%;
+}
+
+
+/*左上角*/
+div.left_top{
+    left: 10px;
+    top: 10px;
+}
+
+
+/*左下角*/
+div.left_bottom{
+    left: 10px;
+    bottom: 10px;
+}
+
 a{color:#3f3e3d; text-decoration:none;}
 a:hover{ color:#C1262C; text-decoration:none;}
 p{text-indent:2em;line-height:40px;}
@@ -333,7 +376,9 @@ d{color:#fff;}
 		
 		
 	<script src="js/jquery.js"></script>
-	
+
+
+
 <style>
 /*div通用样式*/
 div{
@@ -342,11 +387,15 @@ div{
 
 /*右上角*/
 div.right_top{
-overflow: hidden;
-z-index: 2000;
-position:absolute;
-right: 10px;
-top: 190px;
+    position:fixed;
+    bottom:0;
+    right:0;
+    /*width:100%;*/
+    /*height:0;*/
+
+    top: 50%;
+    z-index: 99999999 !important;
+
 }
 
 /*右下角*/
@@ -575,10 +624,9 @@ bottom: 10px;
 	      <div align="center" style="margin-top:25px;margin-bottom:50px;line-height:1.8">参与奖120份: 10元移动话费</div>
 	      <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#82CBE8; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">活动规则</button>
           <div style="margin-top:50px;padding-left:12px;line-height:1.8">1、  关注“乐清生态环保”微信公众号方可参与活动。</div>
-          <div style="margin-top:50px;padding-left:12px;line-height:1.8">2、  共有10道排污基础题，答对其中8道，即可参与刮刮卡抽奖活动。每个手机号仅限获奖一次，请实名参与。</div>
-		  <div style="margin-top:25px;padding-left:12px;margin-bottom:25px;line-height:1.8">3、  200份话费奖励发完或超出活动时间参与答题均无效。</div>
-		  <div style="margin-top:25px;padding-left:12px;margin-bottom:50px;line-height:1.8">4、  参与本次活动的手机号码必须为温州移动用户。</div>
-          <div style="margin-top:25px;padding-left:12px;margin-bottom:50px;line-height:1.8">5、  奖励于活动结束之后统一发放。</div>
+          <div style="margin-top:50px;padding-left:12px;line-height:1.8">2、  共有10道排污许可基础题，答对其中8道，即可参与刮刮卡抽奖活动；200份话费奖励发完为止。</div>
+		  <div style="margin-top:25px;padding-left:12px;margin-bottom:25px;line-height:1.8">3、  参与本次活动的手机号码必须为乐清移动用户，每个手机号仅限获奖一次，请实名参与。</div>
+		  <div style="margin-top:25px;padding-left:12px;margin-bottom:50px;line-height:1.8">4、  奖励于活动结束之后统一发放。</div>
 		  <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#82CBE8; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">选择题</button>
         </td>
       </tr>
@@ -772,7 +820,7 @@ bottom: 10px;
                 <input type="radio" name="c10" value="4" style="width:55px; height:55px;"/>
                 D. 行政许可</p>
 
-            <div style="float:right" onClick="window.location.href='memo.jsp'"><img src="img/xxzl2.png" border="0"></div>
+            <div  class="right_top" style="float:right" onClick="window.location.href='memo.jsp'"><img src="img/xxzl2.png" border="0"></div>
        </td>
       </tr>
 	  </tbody>
