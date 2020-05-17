@@ -37,7 +37,7 @@
 <html>
 <head>
 
-    <title><%=AllValus.pw_title %></title>
+    <title><%=AllValus.zb_title %></title>
 
     <meta name="description" content="">
     <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
