@@ -150,6 +150,14 @@ public class AllValus {
 //   public static int  pwjx5 = 600; //5等奖5 750名
 
 
+    //直播奖项
+    public static int  zbjx1 = 2; //价值400元的车载冰箱 2份
+    public static int  zbjx2 = 3; //价值300元华为智慧音响，3份
+    public static int  zbjx3 = 15; //价值100元的充电式电扇，共15台
+    public static int  zbjx4 = 110; //价值20元的雨伞，共110把
+//   public static int  zbjx5 = 600; //5等奖5 750名
+
+
 
     //阿蒙文明餐桌之光盘大作战 起止时间
     public static String gp1="2017-10-16 00:00:00";

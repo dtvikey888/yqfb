@@ -2,7 +2,7 @@
 <%@ page import="com.component.*"%>
 <%@page import="org.fjw.weixin.util.AllValus"%>
 <%@page import="org.fjw.weixin.util.MyUtils7"%>
-<%@page import="org.fjw.weixin.util.MyUtils26"%>
+<%@page import="org.fjw.weixin.util.MyUtils27"%>
 <%@page import="org.fjw.weixin.yy.WeixinChaOpenId"%>
 <%@page import="org.liufeng.course.util.AdvancedUtil"%>
 <%
@@ -100,6 +100,46 @@
     </script>
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
     <title><%=AllValus.zb_title %></title>
+
+    <script type="text/javascript">
+
+        <%
+           // 根据起止时间判断是否关闭窗口 ，弹出提醒窗
+        // kz=1 开始抽奖(不关) kz=2 抽奖结束(关闭) kz=3 抽奖没开始（关闭）
+
+         if (kz==1){
+
+
+        %>
+        //alert("开始");
+
+        <%}else if(kz==2){
+
+
+        %>
+
+        alert('非常抱歉，答题时间已过。感谢您的关注，请下次再来！');
+        window.location.href="<%=AllValus.errpage4%>";
+
+        <%}else if(kz==3){
+
+
+        %>
+
+        alert('还没开始呢，"开始答题时间<%=tt1%>"到"<%=tt2%>"！\n欢迎到时候参与！');
+        window.location.href="<%=AllValus.errpage4%>";
+
+        <%}else{
+
+
+         %>
+
+        alert('感谢关注！');
+
+        <%} %>
+
+    </script>
+
     <style type="text/css">
         <!--
         body {
@@ -139,3 +179,30 @@
 </table>
 </body>
 </html>
+
+<script type="text/javascript">
+    window.onload = function(){
+        if(isWeiXin()){
+            //是微信浏览器不做操作
+
+        }else{
+            // alert('not');
+            //非微信浏览器就因此显示列表等
+            var target=document.getElementById("contentid");
+            target.style.display="none";
+            alert('非微信中打开');
+
+
+        }
+    }
+    function isWeiXin(){
+        var ua = window.navigator.userAgent.toLowerCase();
+        if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+            return true;
+        }else{
+            return false;
+        }
+    }
+</script>
+
+
