@@ -452,7 +452,7 @@
 </div>
 
     <%if(MyUtils27.iscj_pd(openid)){%>
-        <div  class="right_top" onClick="window.location.href='myzj.jsp'"><img src="img/tu4.png" border="0" width="80px" height="98px"></div>
+        <div  class="right_top" onClick="window.location.href='myzj.jsp?openid=<%=openid%>'"><img src="img/tu4.png" border="0" width="80px" height="98px"></div>
     <%}else{%>
         <%if(ZghTools.getPs(openid)==0){%>
         <div  class="right_top" onClick="button4();"><img src="img/tu4.png" border="0" width="80px" height="98px"></div>
