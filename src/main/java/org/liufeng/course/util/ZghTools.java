@@ -217,6 +217,25 @@ public class ZghTools {
 		return zloid;
 	}
 
+    //获取zloid
+    public static int GetZlOid2(String zlopenid){
+
+        int zloid=0;
+
+        try {
+            MysqlDB db = new MysqlDB();
+            String sql = "select id from yqfb_openid where openid='"+zlopenid+"'";
+            ResultSet rs = db.executeQuery(sql);
+            if (rs.next()) {
+                zloid = rs.getInt(1);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return zloid;
+    }
+
 	//根据分类获取排名文章的id 重置成 1,2,3,4,5,6,7,8,9
 	public static String GetPmId(int lb){
 		String sc="";
@@ -3389,5 +3408,94 @@ public class ZghTools {
 
 		return memo;
 	}
+
+    //市长直播 获取助力值
+    public static int getPs(String zlopenid){
+        int ps=0;
+        try {
+            int zloid = ZghTools.GetZlOid2(zlopenid);
+            MysqlDB db = new MysqlDB();
+            String sql = "select count(*) as ct from yqcnwx_szzl2 where zloid="+zloid+"";
+            ResultSet rs = db.executeQuery(sql);
+            if (rs.next()) {
+                ps=rs.getInt(1);
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return ps;
+    }
+
+	//市长直播 是否助力
+	public static boolean isZl(String pid,String zlopenid){
+		boolean iszl=false;
+		try {
+            int zloid = ZghTools.GetZlOid2(zlopenid);
+			MysqlDB db = new MysqlDB();
+			String sql = "select * from yqcnwx_szzl2 where pid="+pid+" and zloid="+zloid+"";
+			ResultSet rs = db.executeQuery(sql);
+			if (rs.next()) {
+				iszl=true;
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return iszl;
+	}
+
+	//市长直播 判断票数
+	public static String getPsForHtml(String pid,String zlopenid){
+		String memo = "";
+
+		try {
+			int ps =0;
+			MysqlDB db = new MysqlDB();
+			String sql = "select ps from yqcnwx_szzl where id="+pid+"";
+			ResultSet rs = db.executeQuery(sql);
+			if (rs.next()) {
+				ps=rs.getInt(1);
+				if(ps==0){
+					memo="0";
+				}else{
+					if(ZghTools.isZl(pid,zlopenid)){
+						memo=(ps-1)+"+1";
+					}else{
+						memo=ps+"";
+					}
+				}
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return memo;
+	}
+
+    //市长直播 是否点赞
+    public static boolean Isdz4(String pid,String zlopenid){
+        boolean isdz = false;
+        try {
+            int zloid = ZghTools.GetZlOid2(zlopenid);
+            MysqlDB db=new MysqlDB();
+            String sql = "select * from yqcnwx_szzl2 where pid="+pid+" and zloid="+zloid+"";
+            ResultSet rs = db.executeQuery(sql);
+            if (rs.next()) {
+
+                isdz=true;
+
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return isdz;
+
+    }
 
 }

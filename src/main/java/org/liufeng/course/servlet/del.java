@@ -9,11 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.fjw.weixin.util.AllValus;
-import org.fjw.weixin.util.DeleteFileUtil;
-import org.fjw.weixin.util.ImageDeal;
-import org.fjw.weixin.util.MysqlDB;
-import org.fjw.weixin.util.TimeString;
+import org.fjw.weixin.util.*;
 import org.liufeng.course.util.ZghTools;
 public class del extends HttpServlet {
 
@@ -411,6 +407,53 @@ public class del extends HttpServlet {
 				} catch (Exception e) {
 					// TODO: handle exception
 					e.printStackTrace();
+				}
+				break;
+
+			case 10:
+				try {
+					String uprl = request.getParameter("uprl");
+					//String msg = "恭喜，点赞成功！";
+					MysqlDB db=new MysqlDB();
+					int zloid = ZghTools.GetZlOid2(openid);
+					String sql = "select * from yqcnwx_szzl2 where pid="+id+" and zloid="+zloid+"";
+
+					ResultSet rs = db.executeQuery(sql);
+					System.out.println(sql);
+					String bh = MyUtils27.GetNextBH();
+					if (!rs.next()) {
+						String sql2 = "insert into yqcnwx_szzl2(pid,zloid) values("+id+","+zloid+")";
+						db.executeInsert(sql2);
+
+						String sql3="select * from yqcnwx_szzl3 where zloid="+zloid+"";
+						ResultSet rs2=db.executeQuery(sql3);
+						if (!rs2.next()){
+							String sql4="insert into yqcnwx_szzl3(bh,zloid) values('"+bh+"',"+zloid+")";
+							db.executeInsert(sql4);
+						}
+
+						String sql5="update yqcnwx_szzl set ps=ps+1 where id="+id;
+						db.executeUpdate(sql5);
+
+					}
+
+
+					//设置返回文档类型
+					response.setContentType("text/html;charset=GBK");
+					PrintWriter out = response.getWriter();
+					//out.println("<script>history.back();window.location.href=document.referrer;</script>");
+					if(uprl.equals("index.jsp")){
+						out.println("<script>window.location.href='/yqfb/bl7/"+uprl+"?openid="+openid+"'</script>");
+					}else{
+						out.println("<script>window.location.href='/yqfb/bl7/"+uprl+"?openid="+openid+"'</script>");
+					}
+
+
+					out.flush();
+					out.close();
+
+				} catch (Exception e) {
+					// TODO: handle exception
 				}
 				break;
 

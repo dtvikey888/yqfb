@@ -69,6 +69,8 @@ public class AllValus {
 
     public static String errpage3="http://www.yqrb.com.cn/yqfb/bl5/success.jsp";
 
+    public static String errpage4="http://www.yqrb.com.cn/yqfb/bl7/success.jsp";
+
     public static String success_lan="您已答对8题（及以上），恭喜您获得抽奖资格，请填写正确的联系方式，以便发放奖励";
     public static String csc_lan="答题已经超过100000次，谢谢关注！";
     public static String error_lan="您的答题错误率过高，请重新答题";
@@ -103,6 +105,12 @@ public class AllValus {
     public static String pw_link="http://www.yqrb.com.cn/yqfb/bl5/index.jsp";
     public static String pw_img="http://v.yqcn.com/yqfb/bl5/img/IMG_TOP3.png";
 
+    //市长直播带货转发朋友圈标题等
+    public static String zb_title="我乐购我助力";
+    public static String zb_desc="为助推乐清经济发展，对冲疫情对经济发展的不良影响，乐清市将开展乐清京东直播节。乐清日报社根据有关情况，策划直播预热活动。一方面可以提前造势，为直播营造良好的氛围。另一方面，可以借助媒体渠道提前与网友进行互动，为直播提供一定的数据参考。";
+    public static String zb_link="http://www.yqrb.com.cn/yqfb/bl7/index.jsp";
+    public static String zb_img="http://v.yqcn.com/yqfb/bl7/img/logo.png";
+
     //世界新闻出版日起止时间 4.23-4.27
     public static String daf_t1="2020-04-13 00:00:00";
     public static String daf_t2="2020-04-28 00:00:00";
@@ -113,7 +121,11 @@ public class AllValus {
 
     //排污起止时间 5.7-5.9
     public static String pw_t1="2020-04-07 00:00:00";
-    public static String pw_t2="2020-05-10 00:00:00";
+    public static String pw_t2="2020-08-10 00:00:00";
+
+    //市长直播带货起止时间 5月19日9:00-5月21日17:00
+    public static String zb_t1="2020-05-17 00:00:00";
+    public static String zb_t2="2020-05-21 17:00:00";
 
     //世界新闻出版日奖项
     public static int  lpgg1 = 10; //50话费 10份

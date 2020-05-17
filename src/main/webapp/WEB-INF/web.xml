@@ -202,6 +202,14 @@
     <url-pattern>/OAuthServlet32</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
+    <servlet-name>OAuthServlet33</servlet-name>
+    <url-pattern>/OAuthServlet33</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OAuthServlet34</servlet-name>
+    <url-pattern>/OAuthServlet34</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
     <servlet-name>del</servlet-name>
     <url-pattern>/del</url-pattern>
   </servlet-mapping>
@@ -414,6 +422,18 @@
     <display-name>This is the display name of my J2EE component</display-name>
     <servlet-name>OAuthServlet32</servlet-name>
     <servlet-class>org.liufeng.course.servlet.OAuthServlet32</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>OAuthServlet33</servlet-name>
+    <servlet-class>org.liufeng.course.servlet.OAuthServlet33</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>OAuthServlet34</servlet-name>
+    <servlet-class>org.liufeng.course.servlet.OAuthServlet34</servlet-class>
   </servlet>
   <servlet>
     <description>This is the description of my J2EE component</description>

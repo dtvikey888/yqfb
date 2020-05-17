@@ -358,7 +358,7 @@ public class MyUtils3 {
 
 	}
 
-	//根据faceid 获取排名
+	//根据id,lb 获取排名
 	public static int GetPM2(String id,String lb){
 		int pm =0;
 		try {
