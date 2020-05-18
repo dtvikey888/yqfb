@@ -142,6 +142,28 @@ public class MyUtils27 {
 		return bz2;
 	}
 
+
+	//返回抽到的奖项
+	public static int zsm2(String openid)
+	{
+		int bz = 0;
+
+		try {
+
+			sql_data db = new sql_data();
+			String sql ="select zsm from daf_cj6 where openid='"+openid+"' order by id desc";
+			ResultSet rs = db.executeQuery(sql);
+			if (rs.next()) {
+				bz=rs.getInt(1);
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return bz;
+	}
+
 	/**
 	 * 各个奖项中奖总剩余
 	 * 也就是 比如 一等奖 在数据库里面 总共查到2个 ，一等奖的总数是12个， 那么 12-2=10 就得到这个数

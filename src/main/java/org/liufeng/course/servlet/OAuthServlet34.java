@@ -30,7 +30,7 @@ public class OAuthServlet34 extends HttpServlet {
 
 		// 用户同意授权后，能获取到code
 		String code = request.getParameter("code");
-		System.out.println("OAuthServlet33.doGet() code= "+code);
+		System.out.println("OAuthServlet34.doGet() code= "+code);
 
 		// 用户同意授权
 		if (!"authdeny".equals(code)) {

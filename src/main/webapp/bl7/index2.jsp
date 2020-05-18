@@ -22,72 +22,9 @@
 %>
 
 <%
-
     String urlname ="bl7/index2.jsp";
     String openid =request.getParameter("openid");
-//out.println("openid="+openid);
-
-
-    String from=request.getParameter("from");
-
-    String ympath=AllValus.ympath;
-    String appid=AllValus.appid;
-
-    String twbsession2 = (String)session.getAttribute("twbsession2");
-
-//out.println("dafsession="+dafsession);
-
-    if(twbsession2!=null){
-
-        if(twbsession2.equals(openid)){
-
-
-            if(from!=null){
-                response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet34&response_type=code&scope=snsapi_base&state=1#wechat_redirect");
-
-            }
-
-            //out.println("你是自己点的，不回调");
-
-        }else{
-
-            //out.println("其他人点了以后，不回调");
-
-            //response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet2&response_type=code&scope=snsapi_base&state=STATE&connect_redirect=1#wechat_redirect");
-
-            response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet34&response_type=code&scope=snsapi_base&state=1#wechat_redirect");
-
-
-
-        }
-
-    }else{
-
-        //还没点要回调
-        //response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet2&response_type=code&scope=snsapi_userinfo&state=STATE&connect_redirect=1#wechat_redirect");
-        response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet34&response_type=code&scope=snsapi_base&state=1#wechat_redirect");
-
-    }
-
-    //ZghTools.upyt6(openid);
-
-    ZghTools.ClearNull();
-
-    String check="";
-
-    if(from!=null){
-        check=Topay.WxJsApiCheck48(urlname,openid,from);
-        //out.println("from");
-    }else{
-        check=Topay.WxJsApiCheck4(urlname,openid);
-        //out.println("nofrom");
-    }
-
-    //out.println(check);
-
-    //这个随时准备启动
-    session.removeAttribute("twbsession2");
-    //session.invalidate();
+    String check=Topay.WxJsApiCheck4(urlname,openid);
 %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -159,8 +96,8 @@
                     //alert('分享朋友圈成功，进入抽奖');
                     //window.location.href="http://www.baidu.com";
                     <%if((ZghTools.getPs(openid)>0) && MyUtils27.iscj_pd(openid)==false){%>
-                       alert('分享朋友圈成功，进入抽奖');
-                       window.location.href="http://www.yqrb.com.cn/yqfb/bl7/cj.jsp?openid=<%=openid%>";
+                    //alert('分享朋友圈成功，进入抽奖');
+                    window.location.href="http://www.yqrb.com.cn/yqfb/bl7/cj.jsp?openid=<%=openid%>";
                     <%}%>
 
                 },
@@ -428,179 +365,167 @@
     <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
 </head>
 <body>
-<%if(twbsession2!=null){%>
-<%if(twbsession2.equals(openid)){%>
-<div id="contentid"  style="display:block">
-<%}else{%>
-<!--
-<img src="http://v.yqcn.com/bmwj/asp/sxbook/download3/no.png" width="100%" height="100%"/>-->
-<div id="contentid"  style="display:none">
-<%}%>
-<%}else{%>
-<!--
-<img src="http://v.yqcn.com/bmwj/asp/sxbook/download3/no.png" width="100%" height="100%"/>-->
-<div id="contentid"  style="display:none">
-<%}%>
 
-    <!--分享后抽奖的图片-->
-<div id="mcover2"  onClick="weChat2()"  style="display:none;">
-    <img src="img/tu5.png" />
-</div>
-    <!--点赞转发再抽奖图片-->
-<div id="mcover3"  onClick="weChat3()"  style="display:none;">
-        <img src="img/tu7.png" />
-</div>
 
-    <%if(MyUtils27.iscj_pd(openid)){%>
-        <div  class="right_top" onClick="window.location.href='myzj.jsp?openid=<%=openid%>'"><img src="img/tu4.png" border="0" width="80px" height="98px"></div>
-    <%}else{%>
-        <%if(ZghTools.getPs(openid)==0){%>
-        <div  class="right_top" onClick="button4();"><img src="img/tu4.png" border="0" width="80px" height="98px"></div>
-        <%}else{%>
-        <div  class="right_top" onClick="button3();"><img src="img/tu4.png" border="0" width="80px" height="98px"></div>
-        <%}%>
-    <%}%>
+            <!--分享后抽奖的图片-->
+            <div id="mcover2"  onClick="weChat2()"  style="display:none;">
+                <img src="img/tu5.png" />
+            </div>
+            <!--点赞转发再抽奖图片-->
+            <div id="mcover3"  onClick="weChat3()"  style="display:none;">
+                <img src="img/tu7.png" />
+            </div>
+
+            <%if(MyUtils27.iscj_pd(openid)){%>
+            <div  class="right_top" onClick="window.location.href='myzj.jsp?openid=<%=openid%>'"><img src="img/tu4.png" border="0" width="80px" height="98px"></div>
+            <%}else{%>
+            <%if(ZghTools.getPs(openid)==0){%>
+            <div  class="right_top" onClick="button4();"><img src="img/tu4.png" border="0" width="80px" height="98px"></div>
+            <%}else{%>
+            <div  class="right_top" onClick="button3();"><img src="img/tu4.png" border="0" width="80px" height="98px"></div>
+            <%}%>
+            <%}%>
 
 
 
-<table width="100%"  border="0" cellspacing="0">
-    <tr>
-        <td align="center" valign="top" bordercolor="0"><table width="100%" align="center" cellspacing="0">
-            <tr>
-                <td align="center"><img src="img/234.png" width="100%">
-                    <table width="100%" height="600"  border="0" cellspacing="0">
+            <table width="100%"  border="0" cellspacing="0">
+                <tr>
+                    <td align="center" valign="top" bordercolor="0"><table width="100%" align="center" cellspacing="0">
                         <tr>
-                            <td valign="top" bgcolor="#FFFFFF">
-
-                                <%
-                                    String sql="select * from yqcnwx_szzl ORDER BY id asc";
-                                    ResultSet RS=sqlbean.executeQuery(sql);
-                                    if(RS.wasNull())out.print("<br><font face=Arial color=navy size=2><b>当前暂无新内容</b></font>");
-                                %>
-                                <%
-                                    int intPageSize; //一页显示的记录数
-                                    int intRowCount; //记录总数
-                                    int intPageCount; //总页数
-                                    int intPage; //待显示页码
-                                    java.lang.String strPage;
-                                    int i;
-//设置一页显示的记录数
-                                    intPageSize = 100;
-//取得待显示页码
-                                    strPage = request.getParameter("page");
-                                    if(strPage==null){//表明在QueryString中没有page这一个参数，此时显示第一页数据
-                                        intPage = 1;
-                                    }
-                                    else{//将字符串转换成整型
-                                        intPage = java.lang.Integer.parseInt(strPage);
-                                        if(intPage<1) intPage = 1;
-                                    }
-                                    RS.last();
-                                    intRowCount = RS.getRow();
-//记算总页数
-                                    intPageCount = (intRowCount+intPageSize-1) / intPageSize;
-//调整待显示的页码
-                                    if(intPage>intPageCount) intPage = intPageCount;
-                                    if(intPageCount>0){
-//将记录指针定位到待显示页的第一条记录上
-                                        RS.absolute((intPage-1) * intPageSize + 1);
-//显示数据
-                                        i = 0;%>
-
-                                <%while((i<intPageSize && !RS.isAfterLast()))
-                                {
-                                    String id,title,price,images2;
-                                    int ps=0;
-
-                                    id = RS.getString("id");
-                                    title = RS.getString("title");
-                                    price = RS.getString("price");
-                                    ps=RS.getInt("ps");
-
-                                    String images ="";
-                                    images = RS.getString("img1");
-
-                                    if(images.length()>0 && !images.equals("no.png") ){
-
-                                        images2 = AllValus.videopath+images;
-
-                                    }else{
-
-                                        images2 = AllValus.videopath+"no.png";
-
-                                    }
-
-                                %>
-                                <!--循环开始-->
-                                <table width="98%"  border="0" align="center" cellspacing="10">
+                            <td align="center"><img src="img/234.png" width="100%">
+                                <table width="100%" height="600"  border="0" cellspacing="0">
                                     <tr>
-                                        <td width="45%" rowspan="2">
+                                        <td valign="top" bgcolor="#FFFFFF">
 
-                                            <div class="d1">
-                                                <img src="<%=images2%>" width="100%">
-                                                <div class="d2">
-                                                    <div class="f1">
-                                                            <%if(ZghTools.Isdz4(id,openid)){%>
-                                                            <img src="img/dz2.png" width="101%" height="100%">
-                                                            <%}else{%>
-                                                                <%if(ZghTools.getPs(openid)>=3){%>
+                                            <%
+                                                String sql="select * from yqcnwx_szzl ORDER BY id asc";
+                                                ResultSet RS=sqlbean.executeQuery(sql);
+                                                if(RS.wasNull())out.print("<br><font face=Arial color=navy size=2><b>当前暂无新内容</b></font>");
+                                            %>
+                                            <%
+                                                int intPageSize; //一页显示的记录数
+                                                int intRowCount; //记录总数
+                                                int intPageCount; //总页数
+                                                int intPage; //待显示页码
+                                                java.lang.String strPage;
+                                                int i;
+//设置一页显示的记录数
+                                                intPageSize = 100;
+//取得待显示页码
+                                                strPage = request.getParameter("page");
+                                                if(strPage==null){//表明在QueryString中没有page这一个参数，此时显示第一页数据
+                                                    intPage = 1;
+                                                }
+                                                else{//将字符串转换成整型
+                                                    intPage = java.lang.Integer.parseInt(strPage);
+                                                    if(intPage<1) intPage = 1;
+                                                }
+                                                RS.last();
+                                                intRowCount = RS.getRow();
+//记算总页数
+                                                intPageCount = (intRowCount+intPageSize-1) / intPageSize;
+//调整待显示的页码
+                                                if(intPage>intPageCount) intPage = intPageCount;
+                                                if(intPageCount>0){
+//将记录指针定位到待显示页的第一条记录上
+                                                    RS.absolute((intPage-1) * intPageSize + 1);
+//显示数据
+                                                    i = 0;%>
+
+                                            <%while((i<intPageSize && !RS.isAfterLast()))
+                                            {
+                                                String id,title,price,images2;
+                                                int ps=0;
+
+                                                id = RS.getString("id");
+                                                title = RS.getString("title");
+                                                price = RS.getString("price");
+                                                ps=RS.getInt("ps");
+
+                                                String images ="";
+                                                images = RS.getString("img1");
+
+                                                if(images.length()>0 && !images.equals("no.png") ){
+
+                                                    images2 = AllValus.videopath+images;
+
+                                                }else{
+
+                                                    images2 = AllValus.videopath+"no.png";
+
+                                                }
+
+                                            %>
+                                            <!--循环开始-->
+                                            <table width="98%"  border="0" align="center" cellspacing="10">
+                                                <tr>
+                                                    <td width="45%" rowspan="2">
+
+                                                        <div class="d1">
+                                                            <img src="<%=images2%>" width="100%">
+                                                            <div class="d2">
+                                                                <div class="f1">
+                                                                    <%if(ZghTools.Isdz4(id,openid)){%>
+                                                                    <img src="img/dz2.png" width="101%" height="100%">
+                                                                    <%}else{%>
+                                                                    <%if(ZghTools.getPs(openid)>=3){%>
                                                                     <a href="#"  onClick="rule();">
                                                                         <img src="img/dz1.png" width="101%" height="100%">
                                                                     </a>
-                                                                <%}else{%>
-                                                                <a href="/yqfb/del?action=10&id=<%=id%>&openid=<%=openid%>&uprl=index2.jsp&openid=<%=openid%>">
-                                                                    <img src="img/dz1.png" width="101%" height="100%">
-                                                                </a>
-                                                                <%}%>
-                                                            <%}%>
-                                                        <div class="f2">
-                                                            <%=ZghTools.getPsForHtml(id,openid)%>
+                                                                    <%}else{%>
+                                                                    <a href="/yqfb/del?action=10&id=<%=id%>&openid=<%=openid%>&uprl=index2.jsp&openid=<%=openid%>">
+                                                                        <img src="img/dz1.png" width="101%" height="100%">
+                                                                    </a>
+                                                                    <%}%>
+                                                                    <%}%>
+                                                                    <div class="f2">
+                                                                        <%=ZghTools.getPsForHtml(id,openid)%>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                            </div>
 
 
-                                        </td>
-                                        <td><table width="100%"  border="0">
-                                            <tr>
-                                                <td nowrap bgcolor="#E42D58" class="style2">&nbsp;&nbsp;<span class="style3">暂时排名第<%=MyUtils27.GetPM(id)%>位</span></td>
-                                            </tr>
-                                        </table></td>
-                                    </tr>
-                                    <tr>
-                                        <td><table width="95%" height="0"  border="0" align="right" cellspacing="0">
-                                            <tr>
-                                                <td><span class="style3 style4"><strong>产品名称：</strong><%=title%></span></td>
-                                            </tr>
-                                            <tr>
-                                                <td height="32"><span class="style3 style4"><strong>直播价格范围：</strong><%=price%></span></td>
-                                            </tr>
-                                        </table></td>
-                                    </tr>
-                                </table>
-                                <!--循环结束-->
-                                <%
-                                    RS.next();
-                                    i++;}
-                                    }
-                                    RS.close();
-                                %>
+                                                    </td>
+                                                    <td><table width="100%"  border="0">
+                                                        <tr>
+                                                            <td nowrap bgcolor="#E42D58" class="style2">&nbsp;&nbsp;<span class="style3">暂时排名第<%=MyUtils27.GetPM(id)%>位</span></td>
+                                                        </tr>
+                                                    </table></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><table width="95%" height="0"  border="0" align="right" cellspacing="0">
+                                                        <tr>
+                                                            <td><span class="style3 style4"><strong>产品名称：</strong><%=title%></span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td height="32"><span class="style3 style4"><strong>直播价格范围：</strong><%=price%></span></td>
+                                                        </tr>
+                                                    </table></td>
+                                                </tr>
+                                            </table>
+                                            <!--循环结束-->
+                                            <%
+                                                        RS.next();
+                                                        i++;}
+                                                }
+                                                RS.close();
+                                            %>
 
-                                <table width="50%"  border="0" cellspacing="20">
-                                    <tr>
-                                        <td><a href="index.jsp?openid=<%=openid%>"><img src="img/tb1.png" width="100%"></a></td>
-                                        <td></td>
+                                            <table width="50%"  border="0" cellspacing="20">
+                                                <tr>
+                                                    <td><a href="index.jsp"><img src="img/tb1.png" width="100%"></a></td>
+                                                    <td></td>
+                                                </tr>
+                                            </table></td>
                                     </tr>
-                                </table></td>
+                                </table>      </td>
                         </tr>
-                    </table>      </td>
-            </tr>
-        </table>
-        </td>
-    </tr>
-</table>
-</div>
+                    </table>
+                    </td>
+                </tr>
+            </table>
+
 </body>
 </html>
 <script type="text/javascript">

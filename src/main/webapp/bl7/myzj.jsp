@@ -9,6 +9,8 @@
     String urlname ="bl7/myzj.jsp";
     String openid =request.getParameter("openid");
     String check=Topay.WxJsApiCheck4(urlname,openid);
+
+    out.println("<div style=\"font-size:0.1px;color:#C2D9DD;\">1</div>");
 %>
 
 <%
@@ -23,6 +25,11 @@
     //2: //抽奖已经结束,感谢关注！
     //3: //抽奖还没开始呢！
     //out.println(kz);
+%>
+
+<%
+    //中了什么奖
+    int zj = MyUtils27.zsm2(openid);
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -172,11 +179,26 @@
     </style><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head>
 
 <body >
+<div id="contentid"  style="display:block">
 <table width="100%"  border="0" cellspacing="0">
     <tr>
-        <td><img src="IMG/001.jpg" width="100%"></td>
+        <td>
+            <%if(zj==1){%>
+            <img src="img/001.jpg" width="100%">
+            <%}else if(zj==2){%>
+            <img src="img/002.jpg" width="100%">
+            <%}else if(zj==3){%>
+            <img src="img/003.jpg" width="100%">
+            <%}else if(zj==4){%>
+            <img src="img/004.jpg" width="100%">
+            <%}else{%>
+            <img src="img/005.jpg" width="100%">
+            <%}%>
+
+        </td>
     </tr>
 </table>
+</div>
 </body>
 </html>
 

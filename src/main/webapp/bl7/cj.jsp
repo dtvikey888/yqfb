@@ -216,6 +216,9 @@
 <p>&nbsp;</p>
 <table width="80%"  border="0" align="center">
     <form id="form1" name="form1" method="post" action="cj_chk.jsp">
+
+        <input type="hidden" name="openid" value="<%=openid%>">
+
         <tr>
             <td height="180" align="center"><table width="90%" height="0%" align="center" cellspacing="15">
                 <tr>

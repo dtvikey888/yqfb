@@ -1,6 +1,7 @@
 <%@ page language="java" import="java.util.*" pageEncoding="gb2312"%>
 <%@page import="com.component.Topay"%>
 <%@page import="org.fjw.weixin.util.MyUtils7"%>
+<%@page import="org.fjw.weixin.util.MyUtils27"%>
 <%@page import="org.fjw.weixin.util.AllValus"%>
 <%@page import="org.liufeng.course.util.ZghTools"%>
 <%
@@ -73,10 +74,10 @@
 
     if(from!=null){
         check=Topay.WxJsApiCheck48(urlname,openid,from);
-        //out.println("1");
+        out.println("<div style=display:none>1</div>");
     }else{
         check=Topay.WxJsApiCheck4(urlname,openid);
-        //out.println("2");
+        out.println("<div style=display:none>2</div>");
     }
 
      //out.println(check);
@@ -84,8 +85,6 @@
     //这个随时准备启动
     //session.removeAttribute("twbsession2");
     //session.invalidate();
-
-    out.println("<div style=\"font-size:0.1px;color:#C2D9DD;\">1</div>");
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>

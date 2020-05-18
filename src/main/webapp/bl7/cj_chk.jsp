@@ -304,13 +304,13 @@
         <img id="gua1_img" src="img/gua_image.png" style="position: absolute;"/>
         <canvas id="front" style="position:absolute;" />
     </div>
-
+<!--
     <div id="notify">
         <img id="nImg" src="img/notice_bg.png" style="position: absolute;"/>
         <div id="nImg_div">
             <div>刮开刮刮卡，看看您运气!</div>
         </div>
-    </div>
+    </div>  -->
     <!--
     <div id="di"><img id="di_img" src="img/detail_declare_bg.png" style="position: absolute;"/></div>
     -->
@@ -530,7 +530,7 @@
 
                         //利用对话框返回的值 （true 或者 false）
 
-                        location.href="<%=AllValus.propath%>bl6/cj2.jsp?tel=<%=tel%>&openid="+opp+"&zsm="+zj1+" ";
+                        location.href="<%=AllValus.propath%>bl7/cj2.jsp?tel=<%=tel%>&openid="+opp+"&zsm="+zj1+" ";
 
                         //var truthBeTold = window.confirm(x);
                         //if (truthBeTold) {
