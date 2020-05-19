@@ -134,7 +134,7 @@ public class AllValus {
     public static String pw_t2="2020-08-10 00:00:00";
 
     //市长直播带货起止时间 5月20日9:00-5月21日17:00
-    public static String zb_t1="2020-05-17 09:00:00";
+    public static String zb_t1="2020-05-20 09:00:00";
     public static String zb_t2="2020-05-21 17:00:00";
 
     //2020公共场所卫生起止时间 5.7-5.9

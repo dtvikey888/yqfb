@@ -3,8 +3,6 @@
 <%@page import="org.fjw.weixin.util.AllValus"%>
 <%@page import="org.fjw.weixin.util.MyUtils7"%>
 <%@page import="org.fjw.weixin.util.MyUtils27"%>
-<%@page import="org.fjw.weixin.yy.WeixinChaOpenId"%>
-<%@page import="org.liufeng.course.util.AdvancedUtil"%>
 <%
     String urlname ="bl7/cj.jsp";
     String openid =request.getParameter("openid");

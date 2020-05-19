@@ -191,7 +191,7 @@
 
         %>
 
-        alert('非常抱歉，答题时间已过。感谢您的关注，请下次再来！');
+        alert('非常抱歉，时间已过。感谢您的关注，请下次再来！');
         window.location.href="<%=AllValus.errpage4%>";
 
         <%}else if(kz==3){
@@ -199,7 +199,7 @@
 
         %>
 
-        alert('还没开始呢，"开始答题时间<%=tt1%>"到"<%=tt2%>"！\n欢迎到时候参与！');
+        alert('还没开始呢，"开始时间<%=tt1%>"到"<%=tt2%>"！\n欢迎到时候参与！');
         window.location.href="<%=AllValus.errpage4%>";
 
         <%}else{
