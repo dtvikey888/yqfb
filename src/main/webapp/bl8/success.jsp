@@ -6,7 +6,7 @@
 <head>
 <%
 
-String urlname ="bl2/success.jsp";
+String urlname ="bl8/success.jsp";
 String check=Topay.WxJsApiCheck3(urlname);
 
 %>
@@ -23,10 +23,10 @@ String check=Topay.WxJsApiCheck3(urlname);
    * 邮件主题：【微信JS-SDK反馈】具体问题
    * 邮件内容说明：用简明的语言描述问题所在，并交代清楚遇到该问题的场景，可附上截屏图片，微信团队会尽快处理你的反馈。
    */
-        wx_share_title="<%=AllValus.daf_title%>";
-        wx_share_desc="<%=AllValus.daf_desc%>";
-        wx_share_link="<%=AllValus.daf_link%>";
-        wx_share_imgUrl="<%=AllValus.daf_img%>";
+        wx_share_title="<%=AllValus.ws_title%>";
+        wx_share_desc="<%=AllValus.ws_desc%>";
+        wx_share_link="<%=AllValus.ws_link%>";
+        wx_share_imgUrl="<%=AllValus.ws_img%>";
         
         wx.config({
       debug: false,
@@ -82,7 +82,7 @@ String check=Topay.WxJsApiCheck3(urlname);
 
 </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title><%=AllValus.daf_title %></title>
+<title><%=AllValus.ws_title %></title>
 <style type="text/css">
 #outer{vertical-align: middle;}
 #outer.yourcssclass{ display:block; width:640px; height:88px; font-family:'微软雅黑';margin-left:160px;margin-top:260px; text-align:center;padding-top:40px; font-size:40px; color:#fff; background-color:#e74c3c; text-decoration:none; line-height:41px;}

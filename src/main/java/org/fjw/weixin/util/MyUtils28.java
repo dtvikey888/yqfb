@@ -401,7 +401,7 @@ public class MyUtils28 {
 	 * @return 返回标志 1,以前已经抽过奖(不处理)， 2.填写用户信息成功
 	 */
 	//抽奖填写用户信息
-	public static int StartCJBM(String openid,String xm,String tel,String bh)
+	public static int StartCJBM(String openid,String xm,String tel,String bh,String xb,String dw,String sno)
 	{
 		int bz =0;
 		//直接入库(更新操作哦)
@@ -432,12 +432,16 @@ public class MyUtils28 {
 
 			}else{
 
-				//不存在 处理
-				String sql ="insert into daf_cj7(openid,xm,tel,fbsj,iscj_bz,bh) VALUES('"+openid+"','"+xm+"','"+tel+"','"+TimeString.nowTime()+"',1,'"+bh+"') ";
-				db.executeInsert(sql);
+
+                if(openid!=null) {
+                    //不存在 处理
+                    String sql = "insert into daf_cj7(openid,xm,tel,fbsj,iscj_bz,bh,xb,dw,sno) VALUES('" + openid + "','" + xm + "','" + tel + "','" + TimeString.nowTime() + "',1,'" + bh + "','" + xb + "','" + dw + "','" + sno + "') ";
+                    db.executeInsert(sql);
 
 
-				bz=2;
+                    bz = 2;
+
+                }
 
 			}
 
@@ -600,7 +604,7 @@ public class MyUtils28 {
 
 	/**
 	 * 修改中奖概率
-	 * @param 0，1，2，3） ,处理一下，变成num+1,然后(1,2,3,4) 5是没中奖不处理的,页面不会传进来的,
+	 * @param ，1，2，3） ,处理一下，变成num+1,然后(1,2,3,4) 5是没中奖不处理的,页面不会传进来的,
 	 * 查找数据库中当天zsm字段数量，从allvalue 里面提取 每天限制的奖项，减一下，如果<=0 那就返回标志 0，否则返回1
 	 * 判断当天某个奖项的中奖数 ,用来控制每天的中奖概率 (提供给 抽奖页面 随机中的图片用)
 	 * @return 返回一个标志 表示 当天这个奖项还有没有名额 ，从allvalue 里面提取，然后查找数据库中的当天该奖项的中奖数据 ，减一下 就可以判断
@@ -675,7 +679,7 @@ public class MyUtils28 {
 
 	/**
 	 * 修改中奖概率
-	 * @param 抽奖页面的随机数num（0，1，2，3） ,处理一下，变成num+1,然后(1,2,3,4) 5是没中奖不处理的,页面不会传进来的,
+	 * @param1，2，3） ,处理一下，变成num+1,然后(1,2,3,4) 5是没中奖不处理的,页面不会传进来的,
 	 * 查找数据库中当天zsm字段数量，从allvalue 里面提取 每天限制的奖项，减一下，如果<=0 那就返回标志 0，否则返回1
 	 * 判断当天某个奖项的中奖数 ,用来控制每天的中奖概率 (提供给 抽奖页面 随机中的图片用)
 	 * @return 返回一个标志 表示 当天这个奖项还有没有名额 ，从allvalue 里面提取，然后查找数据库中的当天该奖项的中奖数据 ，减一下 就可以判断
@@ -869,9 +873,7 @@ public class MyUtils28 {
 	/**
 	 * //刮刮卡抽奖完写进数据库
 	 * @param openid
-	 * @param xm
 	 * @param tel
-	 * @param dz
 	 * @return 返回标志 1,以前已经抽过奖(不处理)， 2.记录抽奖成功
 	 */
 
@@ -940,9 +942,6 @@ public class MyUtils28 {
 	/**
 	 * //刮刮卡抽奖完写进数据库
 	 * @param openid
-	 * @param xm
-	 * @param tel
-	 * @param dz
 	 * @return 返回标志 1,以前已经抽过奖(不处理)， 2.记录抽奖成功
 	 */
 

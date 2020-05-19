@@ -133,8 +133,8 @@ public class AllValus {
     public static String pw_t1="2020-04-07 00:00:00";
     public static String pw_t2="2020-08-10 00:00:00";
 
-    //市长直播带货起止时间 5月19日9:00-5月21日17:00
-    public static String zb_t1="2020-05-17 00:00:00";
+    //市长直播带货起止时间 5月20日9:00-5月21日17:00
+    public static String zb_t1="2020-05-17 09:00:00";
     public static String zb_t2="2020-05-21 17:00:00";
 
     //2020公共场所卫生起止时间 5.7-5.9
@@ -168,7 +168,7 @@ public class AllValus {
     public static int  zbjx1 = 1; //价值400元的车载冰箱 2份
     public static int  zbjx2 = 1; //价值300元华为智慧音响，3份
     public static int  zbjx3 = 10; //价值100元的充电式电扇，共15台
-    public static int  zbjx4 = 110; //价值20元的雨伞，共110把
+    public static int  zbjx4 = 100; //价值20元的雨伞，共110把
 //   public static int  zbjx5 = 600; //5等奖5 750名
 
 

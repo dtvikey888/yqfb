@@ -11,7 +11,7 @@ String bh = MyUtils28.GetNextBH();
 
 
     //这里开始提交用户数据
-  int bz =  MyUtils28.StartCJBM(openid,xm,tel,bh);
+  int bz =  MyUtils28.StartCJBM(openid,xm,tel,bh,xb,dw,sno);
     //1 已经提交，然后关闭页面) 2.提交数据成功,留在本页面 就是抽奖页面.
   
   //String sc="您是第"+MyUtils28.GetWs(openid)+"位参与者,"+AllValus.cg_cx2;

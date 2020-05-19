@@ -467,11 +467,7 @@ public class MyUtils27 {
 						sy=0;
 					}else {
 						//一等奖2
-						if(TimeString.nowTime().indexOf("2020-05-16")!=-1){
-							sy = 1 -zjs;
-						}else if(TimeString.nowTime().indexOf("2020-05-17")!=-1){
-							sy = 1 -zjs;
-						}else if(TimeString.nowTime().indexOf("2020-05-18")!=-1){
+						if(TimeString.nowTime().indexOf("2020-05-21")!=-1){
 							sy = 1 -zjs;
 						}else {
 							sy = 0;
@@ -486,11 +482,7 @@ public class MyUtils27 {
 						sy=0;
 					}else {
 						//3
-						if(TimeString.nowTime().indexOf("2020-05-16")!=-1){
-							sy = 1 -zjs;
-						}else if(TimeString.nowTime().indexOf("2020-05-17")!=-1){
-							sy = 1 -zjs;
-						}else if(TimeString.nowTime().indexOf("2020-05-18")!=-1){
+						if(TimeString.nowTime().indexOf("2020-05-20")!=-1){
 							sy = 1 -zjs;
 						}else {
 							sy = 0;
@@ -506,12 +498,10 @@ public class MyUtils27 {
 						sy=0;
 					}else {
 						//3等奖15
-						if(TimeString.nowTime().indexOf("2020-05-16")!=-1){
+						if(TimeString.nowTime().indexOf("2020-05-20")!=-1){
 							sy = 5 -zjs;
-						}else if(TimeString.nowTime().indexOf("2020-05-17")!=-1){
+						}else if(TimeString.nowTime().indexOf("2020-05-21")!=-1){
 							sy = 5 -zjs;
-						}else if(TimeString.nowTime().indexOf("2020-05-18")!=-1){
-							sy = 1 -zjs;
 						}else {
 							sy = 0;
 						}
@@ -526,12 +516,10 @@ public class MyUtils27 {
 						sy=0;
 					}else {
 						//4等奖110
-						if(TimeString.nowTime().indexOf("2020-05-16")!=-1){
+						if(TimeString.nowTime().indexOf("2020-05-20")!=-1){
 							sy = 50 -zjs;
-						}else if(TimeString.nowTime().indexOf("2020-05-17")!=-1){
+						}else if(TimeString.nowTime().indexOf("2020-05-21")!=-1){
 							sy = 50 -zjs;
-						}else if(TimeString.nowTime().indexOf("2020-05-18")!=-1){
-							sy = 10 -zjs;
 						}else {
 							sy = 0;
 						}

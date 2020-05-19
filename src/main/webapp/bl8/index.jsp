@@ -607,21 +607,21 @@ bottom: 10px;
 	      <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#82CBE8; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">活动规则</button>
           <div style="margin-top:50px;padding-left:12px;line-height:1.8">1、  共有10题，答对其中8道以上就是过关，然后就可以去监督所领证。</div>
 		  <div style="margin-top:25px;padding-left:12px;margin-bottom:25px;line-height:1.8">2、  参与本次活动的手机号码必须为乐清移动用户，每个手机号仅限获奖一次，请实名参与。</div>
-		  <div style="margin-top:25px;padding-left:12px;margin-bottom:50px;line-height:1.8">3、  请及时到各辖区卫生监督所领取卫生管理员证，联系方式如下：城区所：城东街道晨曦路111号公共卫生中心大楼（609室、61600276）；柳市所：柳市镇溪桥路温州海关驻乐清办事处大院内一楼（内勤室、61723810）；虹桥所：虹桥镇八村村委楼7楼（内勤室、61315889）；大荆所：大荆镇湖边路38号（内勤室、62238150）。</div>
+		  <div style="margin-top:25px;padding-left:12px;margin-bottom:50px;line-height:1.8">3、  通过考试者请及时到各辖区卫生监督所领取卫生管理员证，联系方式如下：城区所：城东街道晨曦路111号公共卫生中心大楼（609室、61600276）；柳市所：柳市镇溪桥路温州海关驻乐清办事处大院内一楼（内勤室、61723810）；虹桥所：虹桥镇八村村委楼7楼（内勤室、61315889）；大荆所：大荆镇湖边路38号（内勤室、62238150）。</div>
 		  <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#82CBE8; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">选择题</button>
         </td>
       </tr>
-      
+
       <tr>
         <td>
-        
+
 	<table width="103%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
       <tbody id="tbName" >
       <tr>
         <td height="20"><p></p><div style="line-height:1.8"><strong>1、国家卫生计生委新版《公共场所卫生管理条例实施细则》于什么时候开始实施？（    ）</strong></div>
           <p><input type="radio" name="c1" value="1" style="width:55px; height:55px;"/>
 		    A. 2010年5月1日</p>
-          <p> 
+          <p>
             <input type="radio" name="c1" value="2" style="width:55px; height:55px;"/>
             B. 2012年5月1日</p>
           <p style="line-height:1.8">
@@ -633,14 +633,14 @@ bottom: 10px;
           </td>
       </tr>
 	  </tbody>
-	  
-	  
+
+
 	  <tbody id="tbName">
       <tr>
         <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>2、公共场所从业人员体检和健康证的有效时间是:_____</strong></div>
           <p><input type="radio" name="c2" value="1" style="width:55px; height:55px;"/>
 		    A. 半年 </p>
-          <p> 
+          <p>
             <input type="radio" name="c2" value="2" style="width:55px; height:55px;"/>
             B. 一年</p>
           <p>
@@ -652,8 +652,8 @@ bottom: 10px;
           </td>
       </tr>
 	  </tbody>
-	  
-	  
+
+
 	 <tbody id="tbName">
       <tr>
         <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>3、“公共场所卫生许可证”由_____签发。</strong></div>
@@ -671,7 +671,7 @@ bottom: 10px;
         </td>
       </tr>
 	  </tbody>
-	  
+
 	   <tbody id="tbName">
       <tr>
         <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>4、公共场所不得设置（  ）</strong></div>
@@ -687,7 +687,7 @@ bottom: 10px;
 		   </td>
       </tr>
 	  </tbody>
-	  
+
 	  <tbody id="tbName">
       <tr>
         <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>5、个人卫生四勤是指（  ）</strong></div>
@@ -705,35 +705,35 @@ bottom: 10px;
             </td>
       </tr>
 	  </tbody>
-	  
+
 	  <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>6、禁止吸烟公共场所应该履行哪些职责？（  ）</strong></div>
-          <p><input type="radio" name="c6" value="1" style="width:55px; height:55px;"/>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>6、禁止吸烟公共场所应该履行哪些职责（ ）</strong></div>
+          <p  style="line-height:1.8"><input type="radio" name="c6" value="1" style="width:55px; height:55px;"/>
 		    A. 公共场所经营者应当设置醒目的禁止吸烟警语和标志</p>
-          <p>
+          <p style="line-height:1.8">
             <input type="radio" name="c6" value="2" style="width:55px; height:55px;"/>
             B. 室外公共场所设置的吸烟区不得位于行人必经的通道上</p>
-          <p>
+          <p style="line-height:1.8">
             <input type="radio" name="c6" value="3" style="width:55px; height:55px;"/>
             C. 公共场所经营者应当开展吸烟危害健康的宣传，并配备专（兼）职人员对吸烟者进行劝阻</p>
-          <p>
+          <p style="line-height:1.8">
             <input type="radio" name="c6" value="4" style="width:55px; height:55px;"/>
             D. 以上都是</p>
 		  </td>
       </tr>
 	  </tbody>
-	
+
 
 	 <tbody id="tbName">
       <tr>
           <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>7、公共场所经营者发生违法行为应当承担的法律责任？（  ）</strong></div>
-          <p><input type="radio" name="c7" value="1" style="width:55px; height:55px;"/>
+          <p style="line-height:1.8"><input type="radio" name="c7" value="1" style="width:55px; height:55px;"/>
 		    A. 公共场所经营者违反《公共场所卫生管理条例实施细则》的有关规定，县级以上卫生行政部门依法责令限期改正，给予警告 </p>
-          <p>
+          <p style="line-height:1.8">
             <input type="radio" name="c7" value="2" style="width:55px; height:55px;"/>
             B. 根据情节并可处以三万元以下的罚款</p>
-          <p>
+          <p style="line-height:1.8">
             <input type="radio" name="c7" value="3" style="width:55px; height:55px;"/>
             C. 情节严重的，可以依法责令停业整顿，直至吊销卫生许可证</p>
           <p>
@@ -742,12 +742,12 @@ bottom: 10px;
 		</td>
       </tr>
 	  </tbody>
-	  
-	  
+
+
 	 <tbody id="tbName">
       <tr>
           <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>8、患有以下哪些疾病的人员在治愈前不得从事直接为顾客服务的工作？</strong></div>
-          <p> <input type="radio" name="c8" value="1" style="width:55px; height:55px;"/>
+          <p style="line-height:1.8"> <input type="radio" name="c8" value="1" style="width:55px; height:55px;"/>
 		    A. 痢疾、伤寒、化脓性或渗出性皮肤病</p>
           <p>
             <input type="radio" name="c8" value="2" style="width:55px; height:55px;"/>
@@ -761,9 +761,9 @@ bottom: 10px;
        </td>
       </tr>
 	  </tbody>
-	  
-	   
-      
+
+
+
 	 <tbody id="tbName">
       <tr>
         <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>9、公共场所发生危害健康事故时，经营者应当立即处置，防止危害扩大，并及时向县级以上人民政府（  ）部门报告？</strong></div>
@@ -781,9 +781,9 @@ bottom: 10px;
        </td>
       </tr>
 	  </tbody>
-	  
-	  
-	    
+
+
+
 	 <tbody id="tbName">
       <tr>
         <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>10、公共场所经营者应当加强自身管理，制订卫生检查计划，规定检查时间、项目等，检查服务过程卫生状况并记录，对不符合卫生要求的行为及时制止并提出处理意见。每（     ）月至少有一次全面自查记录。</strong></div>
@@ -827,7 +827,7 @@ bottom: 10px;
        <button onclick="return processForm(this.form);" type="submit" style="width:100%;padding:15px 15px;border-radius:15px; background:#21457B; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">&nbsp;&nbsp;&nbsp;&nbsp;提&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;交&nbsp;&nbsp;&nbsp;&nbsp;</button>
        <p></p>
 		<%}else{ %>
-		 <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#CC0001; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">您已经通过考试,<%="您是第"+MyUtils28.GetWs(openid)+"位参与者,"+AllValus.cg_cx2%></button>
+		 <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#CC0001; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">恭喜，您已经通过考试,<%="您是第"+MyUtils28.GetWs(openid)+"位参与者"%></button>
 		<%} %>
 	   <p></p>
 	<input name="openid" type="hidden" id="openid" value="<%=openid%>"/>	<div></div></td>

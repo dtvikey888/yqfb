@@ -416,9 +416,9 @@ function DataLength(fData)
     <tbody id="tbXb">
     <tr>
         <td height="20" bgcolor="#FFFFFF">
-            <input type="radio" name="xb" value="ÄÐ" style="width:55px; height:55px;"/>
+            <input type="radio" name="xb" checked value="ÄÐ" style="width:20px; height:20px;"/>
             ÄÐ
-            <input type="radio" name="xb" value="Å®" style="width:55px; height:55px;"/>
+            <input type="radio" name="xb" value="Å®" style="width:20px; height:20px;"/>
             Å®
         </td>
     </tr>
