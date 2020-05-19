@@ -277,6 +277,14 @@
 
 
     </script>
+
+    <script type="text/javascript">
+        function delayURL(url,time){
+
+            setTimeout("top.location.href = '" + url + "'",time);
+            //alert('感谢您的参与！');
+        }
+    </script>
 </head>
 <body onLoad="sharefriendRound6()">
 
@@ -529,9 +537,11 @@
 
 
                         //利用对话框返回的值 （true 或者 false）
+                        //window.alert("感谢您的参与！");
+                        //location.href="<=AllValus.propath%>bl7/cj2.jsp?tel=<=tel%>&openid="+opp+"&zsm="+zj1+" ";
 
-                        location.href="<%=AllValus.propath%>bl7/cj2.jsp?tel=<%=tel%>&openid="+opp+"&zsm="+zj1+" ";
-
+                        var mytzurl="<%=AllValus.propath%>bl7/cj2.jsp?tel=<%=tel%>&openid="+opp+"&zsm="+zj1+" ";
+                        setTimeout("top.location.href = '" + mytzurl + "'",3000);
                         //var truthBeTold = window.confirm(x);
                         //if (truthBeTold) {
                         //window.alert("欢迎访问我们的 Web 页！");

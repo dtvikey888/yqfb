@@ -71,6 +71,8 @@ public class AllValus {
 
     public static String errpage4="http://www.yqrb.com.cn/yqfb/bl7/success.jsp";
 
+    public static String errpage5="http://www.yqrb.com.cn/yqfb/bl8/success.jsp";
+
     public static String success_lan="您已答对8题（及以上），恭喜您获得抽奖资格，请填写正确的联系方式，以便发放奖励";
     public static String csc_lan="答题已经超过100000次，谢谢关注！";
     public static String error_lan="您的答题错误率过高，请重新答题";
@@ -106,10 +108,16 @@ public class AllValus {
     public static String pw_img="http://v.yqcn.com/yqfb/bl5/img/IMG_TOP3.png";
 
     //市长直播带货转发朋友圈标题等
-    public static String zb_title="我乐购我助力";
+    public static String zb_title="买买买，一起为乐清加油";
     public static String zb_desc="为助推乐清经济发展，对冲疫情对经济发展的不良影响，乐清市将开展乐清京东直播节。乐清日报社根据有关情况，策划直播预热活动。一方面可以提前造势，为直播营造良好的氛围。另一方面，可以借助媒体渠道提前与网友进行互动，为直播提供一定的数据参考。";
     public static String zb_link="http://www.yqrb.com.cn/yqfb/bl7/index.jsp";
     public static String zb_img="http://v.yqcn.com/yqfb/bl7/img/logo.png";
+
+    //2020公共场所卫生转发朋友圈标题等
+    public static String ws_title="乐清市公共场所卫生管理员培训答题";
+    public static String ws_desc="乐清市公共场所卫生管理员培训试卷";
+    public static String ws_link="http://www.yqrb.com.cn/yqfb/bl8/index.jsp";
+    public static String ws_img="http://v.yqcn.com/yqfb/bl8/img/IMG_TOP3.png";
 
     //世界新闻出版日起止时间 4.23-4.27
     public static String daf_t1="2020-04-13 00:00:00";
@@ -126,6 +134,10 @@ public class AllValus {
     //市长直播带货起止时间 5月19日9:00-5月21日17:00
     public static String zb_t1="2020-05-17 00:00:00";
     public static String zb_t2="2020-05-21 17:00:00";
+
+    //2020公共场所卫生起止时间 5.7-5.9
+    public static String ws_t1="2020-04-07 00:00:00";
+    public static String ws_t2="2028-08-10 00:00:00";
 
     //世界新闻出版日奖项
     public static int  lpgg1 = 10; //50话费 10份
@@ -150,10 +162,10 @@ public class AllValus {
 //   public static int  pwjx5 = 600; //5等奖5 750名
 
 
-    //直播奖项
-    public static int  zbjx1 = 2; //价值400元的车载冰箱 2份
-    public static int  zbjx2 = 3; //价值300元华为智慧音响，3份
-    public static int  zbjx3 = 15; //价值100元的充电式电扇，共15台
+    //市长京东直播奖项
+    public static int  zbjx1 = 1; //价值400元的车载冰箱 2份
+    public static int  zbjx2 = 1; //价值300元华为智慧音响，3份
+    public static int  zbjx3 = 10; //价值100元的充电式电扇，共15台
     public static int  zbjx4 = 110; //价值20元的雨伞，共110把
 //   public static int  zbjx5 = 600; //5等奖5 750名
 

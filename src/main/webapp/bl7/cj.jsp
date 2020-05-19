@@ -142,16 +142,16 @@
 
     <%
         //各个奖项总剩余
-        int t1 = MyUtils27.sy1(); //一等奖总数剩余名额
-        int t2 = MyUtils27.sy2(); //二等奖总数剩余名额
-        int t3 = MyUtils27.sy3(); //三等奖总数剩余名额
-        int t4 = MyUtils27.sy4(); //四等奖总数剩余名额
-//int t5 = MyUtils26.sy5();
-
-        System.out.println(t1);
-        System.out.println(t2);
-        System.out.println(t3);
-        System.out.println(t4);
+//        int t1 = MyUtils27.sy1(); //一等奖总数剩余名额
+//        int t2 = MyUtils27.sy2(); //二等奖总数剩余名额
+//        int t3 = MyUtils27.sy3(); //三等奖总数剩余名额
+//        int t4 = MyUtils27.sy4(); //四等奖总数剩余名额
+////int t5 = MyUtils26.sy5();
+//
+//        System.out.println(t1);
+//        System.out.println(t2);
+//        System.out.println(t3);
+//        System.out.println(t4);
 //System.out.println(t5);
     %>
 
@@ -220,7 +220,15 @@
         <input type="hidden" name="openid" value="<%=openid%>">
 
         <tr>
-            <td height="180" align="center"><table width="90%" height="0%" align="center" cellspacing="15">
+            <td height="180" align="center">
+				
+			 <table width="90%" height="0%" align="center" cellspacing="15">
+                <tr>
+                    <th height="23" align="center" nowrap="nowrap" bordercolor="#FFCC00" scope="row">完善个人信息 方便抽奖后兑奖</th>
+                </tr>
+             </table>
+				
+				<table width="90%" height="0%" align="center" cellspacing="15">
                 <tr>
                     <th width="15%" height="23" align="center" nowrap="nowrap" bordercolor="#FFCC00" scope="row"><span class="style47">姓名</span></th>
                     <th bordercolor="#EC6941" scope="row"><input id="xm" name="xm" type="text" class="style23" style="border:2px solid #FF9900;border-radius:10px;border-color:#FF9900;width:100%;height:25px" /></th>
@@ -243,14 +251,11 @@
                         <tr>
                             <td height="34" align="center" bgcolor="#FF6600" class="style38 style39 style45" scope="row">
 
-                                <% if(t1<=0 && t2<=0 && t3<=0 && t4<=0){ %>
-                                <div >奖品已抽完</div>
 
-                                <%}else{ %>
 
                                 <div onClick="document.form1.action='cj_chk.jsp';if(DataLength(form1.xm.value)<2){alert('姓名最少2个字');form1.xm.focus();return false};if(DataLength(form1.tel.value)!=11){alert('请填写正确的联系方式');form1.tel.focus();return false};document.form1.submit();">提交</div>
 
-                                <%} %>
+
                             </td>
                         </tr>
                     </table></td>

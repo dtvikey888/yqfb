@@ -1,6 +1,7 @@
 <%@ page language="java" import="java.util.*" pageEncoding="gb2312"%>
 <%@page import="com.component.Topay"%>
 <%@page import="org.fjw.weixin.util.MyUtils7"%>
+<%@page import="org.fjw.weixin.util.MyUtils27"%>
 <%@page import="org.fjw.weixin.util.AllValus"%>
 <%@page import="org.liufeng.course.util.ZghTools"%>
 <%
@@ -21,6 +22,7 @@
 
     String urlname ="bl7/index.jsp";
     String openid =request.getParameter("openid");
+
 //out.println("openid="+openid);
 
 
@@ -73,13 +75,13 @@
 
     if(from!=null){
         check=Topay.WxJsApiCheck48(urlname,openid,from);
-        //out.println("1");
+        //out.println("<div style=display:none>1</div>");
     }else{
         check=Topay.WxJsApiCheck4(urlname,openid);
-        //out.println("2");
+        //out.println("<div style=display:none>2</div>");
     }
 
-     //out.println(check);
+    //out.println(check);
 
     //这个随时准备启动
     //session.removeAttribute("twbsession2");
@@ -103,7 +105,7 @@
          * 邮件主题：【微信JS-SDK反馈】具体问题
          * 邮件内容说明：用简明的语言描述问题所在，并交代清楚遇到该问题的场景，可附上截屏图片，微信团队会尽快处理你的反馈。
          */
-        wx_share_title="<%=AllValus.zb_title%>";
+        wx_share_title="<%=MyUtils27.GetWs2(openid)%>";
         wx_share_desc="<%=AllValus.zb_desc%>";
         wx_share_link="<%=AllValus.zb_link%>";
         wx_share_imgUrl="<%=AllValus.zb_img%>";

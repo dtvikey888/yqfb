@@ -3461,11 +3461,11 @@ public class ZghTools {
 				if(ps==0){
 					memo="0";
 				}else{
-					if(ZghTools.isZl(pid,zlopenid)){
-						memo=(ps-1)+"+1";
-					}else{
+//					if(ZghTools.isZl(pid,zlopenid)){
+//						memo=(ps-1)+"+1";
+//					}else{
 						memo=ps+"";
-					}
+					//}
 				}
 			}
 

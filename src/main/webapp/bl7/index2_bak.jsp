@@ -6,7 +6,6 @@
 <%@page import="org.liufeng.course.util.ZghTools"%>
 <jsp:useBean id="sqlbean" scope="page" class="org.fjw.weixin.util.MysqlDB"/>
 <%@page import="java.sql.ResultSet"%>
-<%@ page import="org.fjw.weixin.util.MyUtils26" %>
 <%
     //控制时间
     int kz =0;
@@ -34,13 +33,13 @@
     String ympath=AllValus.ympath;
     String appid=AllValus.appid;
 
-    String twb2 = (String)session.getAttribute("twb2");
+    String twbsession2 = (String)session.getAttribute("twbsession2");
 
 //out.println("dafsession="+dafsession);
 
-    if(twb2!=null){
+    if(twbsession2!=null){
 
-        if(twb2.equals(openid)){
+        if(twbsession2.equals(openid)){
 
 
             if(from!=null){
@@ -87,7 +86,7 @@
     //out.println(check);
 
     //这个随时准备启动
-    session.removeAttribute("twb2");
+    session.removeAttribute("twbsession2");
     //session.invalidate();
 %>
 
@@ -429,8 +428,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
 </head>
 <body>
-<%if(twb2!=null){%>
-<%if(twb2.equals(openid)){%>
+<%if(twbsession2!=null){%>
+<%if(twbsession2.equals(openid)){%>
 <div id="contentid"  style="display:block">
 <%}else{%>
 <!--

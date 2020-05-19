@@ -5,7 +5,13 @@
 <%@page import="org.fjw.weixin.util.MyUtils27"%>
 <%@page import="org.fjw.weixin.yy.WeixinChaOpenId"%>
 <%@page import="org.liufeng.course.util.AdvancedUtil"%>
-<%@page import="org.liufeng.course.util.ZghTools"%>
+<%
+    String urlname ="bl7/myzj.jsp";
+    String openid =request.getParameter("openid");
+    String check=Topay.WxJsApiCheck4(urlname,openid);
+
+    out.println("<div style=\"font-size:0.1px;color:#C2D9DD;\">1</div>");
+%>
 
 <%
     //控制时间
@@ -20,78 +26,6 @@
     //3: //抽奖还没开始呢！
     //out.println(kz);
 %>
-
-<%
-
-    String urlname ="bl7/myzj.jsp";
-    String openid =request.getParameter("openid");
-//out.println("openid="+openid);
-
-
-    String from=request.getParameter("from");
-
-    String ympath=AllValus.ympath;
-    String appid=AllValus.appid;
-
-    String twbsession2 = (String)session.getAttribute("twbsession2");
-
-//out.println("dafsession="+dafsession);
-
-    if(twbsession2!=null){
-
-        if(twbsession2.equals(openid)){
-
-
-            if(from!=null){
-                response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet35&response_type=code&scope=snsapi_base&state=1#wechat_redirect");
-
-            }
-
-            //out.println("你是自己点的，不回调");
-
-        }else{
-
-            //out.println("其他人点了以后，不回调");
-
-            //response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet2&response_type=code&scope=snsapi_base&state=STATE&connect_redirect=1#wechat_redirect");
-
-            response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet35&response_type=code&scope=snsapi_base&state=1#wechat_redirect");
-
-
-
-        }
-
-    }else{
-
-        //还没点要回调
-        //response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet2&response_type=code&scope=snsapi_userinfo&state=STATE&connect_redirect=1#wechat_redirect");
-        response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet35&response_type=code&scope=snsapi_base&state=1#wechat_redirect");
-
-    }
-
-    //ZghTools.upyt6(openid);
-
-    ZghTools.ClearNull();
-
-    String check="";
-
-    if(from!=null){
-        check=Topay.WxJsApiCheck48(urlname,openid,from);
-        // out.println("from");
-    }else{
-        check=Topay.WxJsApiCheck4(urlname,openid);
-        // out.println("nofrom");
-    }
-
-
-    out.println("<div style=\"font-size:0.1px;color:#C2D9DD;\">1</div>");
-    //out.println(check);
-
-    //这个随时准备启动
-    //session.removeAttribute("twbsession2");
-    //session.invalidate();
-%>
-
 
 <%
     //中了什么奖
@@ -113,7 +47,7 @@
          * 邮件主题：【微信JS-SDK反馈】具体问题
          * 邮件内容说明：用简明的语言描述问题所在，并交代清楚遇到该问题的场景，可附上截屏图片，微信团队会尽快处理你的反馈。
          */
-        wx_share_title="<%=MyUtils27.GetWs2(openid)%>";
+        wx_share_title="<%=AllValus.zb_title%>";
         wx_share_desc="<%=AllValus.zb_desc%>";
         wx_share_link="<%=AllValus.zb_link%>";
         wx_share_imgUrl="<%=AllValus.zb_img%>";
@@ -245,19 +179,7 @@
     </style><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head>
 
 <body >
-<%if(twbsession2!=null){%>
-<%if(twbsession2.equals(openid)){%>
 <div id="contentid"  style="display:block">
-        <%}else{%>
-    <!--
-    <img src="http://v.yqcn.com/bmwj/asp/sxbook/download3/no.png" width="100%" height="100%"/>-->
-    <div id="contentid"  style="display:none">
-            <%}%>
-            <%}else{%>
-        <!--
-        <img src="http://v.yqcn.com/bmwj/asp/sxbook/download3/no.png" width="100%" height="100%"/>-->
-        <div id="contentid"  style="display:none">
-            <%}%>
 <table width="100%"  border="0" cellspacing="0">
     <tr>
         <td>
@@ -269,10 +191,8 @@
             <img src="img/003.jpg" width="100%">
             <%}else if(zj==4){%>
             <img src="img/004.jpg" width="100%">
-            <%}else if(zj==5){%>
-            <img src="img/005.jpg" width="100%">
             <%}else{%>
-            <img src="img/006.jpg" width="100%">
+            <img src="img/005.jpg" width="100%">
             <%}%>
 
         </td>

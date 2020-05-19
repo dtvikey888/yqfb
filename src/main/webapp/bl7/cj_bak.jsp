@@ -5,7 +5,11 @@
 <%@page import="org.fjw.weixin.util.MyUtils27"%>
 <%@page import="org.fjw.weixin.yy.WeixinChaOpenId"%>
 <%@page import="org.liufeng.course.util.AdvancedUtil"%>
-<%@page import="org.liufeng.course.util.ZghTools"%>
+<%
+    String urlname ="bl7/cj.jsp";
+    String openid =request.getParameter("openid");
+    String check=Topay.WxJsApiCheck4(urlname,openid);
+%>
 
 <%
     //控制时间
@@ -19,83 +23,6 @@
     //2: //抽奖已经结束,感谢关注！
     //3: //抽奖还没开始呢！
     //out.println(kz);
-%>
-
-<%
-
-    String urlname ="bl7/myzj.jsp";
-    String openid =request.getParameter("openid");
-//out.println("openid="+openid);
-
-
-    String from=request.getParameter("from");
-
-    String ympath=AllValus.ympath;
-    String appid=AllValus.appid;
-
-    String twbsession2 = (String)session.getAttribute("twbsession2");
-
-//out.println("dafsession="+dafsession);
-
-    if(twbsession2!=null){
-
-        if(twbsession2.equals(openid)){
-
-
-            if(from!=null){
-                response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet35&response_type=code&scope=snsapi_base&state=1#wechat_redirect");
-
-            }
-
-            //out.println("你是自己点的，不回调");
-
-        }else{
-
-            //out.println("其他人点了以后，不回调");
-
-            //response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet2&response_type=code&scope=snsapi_base&state=STATE&connect_redirect=1#wechat_redirect");
-
-            response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet35&response_type=code&scope=snsapi_base&state=1#wechat_redirect");
-
-
-
-        }
-
-    }else{
-
-        //还没点要回调
-        //response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet2&response_type=code&scope=snsapi_userinfo&state=STATE&connect_redirect=1#wechat_redirect");
-        response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet35&response_type=code&scope=snsapi_base&state=1#wechat_redirect");
-
-    }
-
-    //ZghTools.upyt6(openid);
-
-    ZghTools.ClearNull();
-
-    String check="";
-
-    if(from!=null){
-        check=Topay.WxJsApiCheck48(urlname,openid,from);
-        // out.println("from");
-    }else{
-        check=Topay.WxJsApiCheck4(urlname,openid);
-        // out.println("nofrom");
-    }
-
-
-    out.println("<div style=\"font-size:0.1px;color:#C2D9DD;\">1</div>");
-    //out.println(check);
-
-    //这个随时准备启动
-    //session.removeAttribute("twbsession2");
-    //session.invalidate();
-%>
-
-
-<%
-    //中了什么奖
-    int zj = MyUtils27.zsm2(openid);
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -113,7 +40,7 @@
          * 邮件主题：【微信JS-SDK反馈】具体问题
          * 邮件内容说明：用简明的语言描述问题所在，并交代清楚遇到该问题的场景，可附上截屏图片，微信团队会尽快处理你的反馈。
          */
-        wx_share_title="<%=MyUtils27.GetWs2(openid)%>";
+        wx_share_title="<%=AllValus.zb_title%>";
         wx_share_desc="<%=AllValus.zb_desc%>";
         wx_share_link="<%=AllValus.zb_link%>";
         wx_share_imgUrl="<%=AllValus.zb_img%>";
@@ -213,6 +140,37 @@
 
     </script>
 
+    <%
+        //各个奖项总剩余
+        int t1 = MyUtils27.sy1(); //一等奖总数剩余名额
+        int t2 = MyUtils27.sy2(); //二等奖总数剩余名额
+        int t3 = MyUtils27.sy3(); //三等奖总数剩余名额
+        int t4 = MyUtils27.sy4(); //四等奖总数剩余名额
+//int t5 = MyUtils26.sy5();
+
+        System.out.println(t1);
+        System.out.println(t2);
+        System.out.println(t3);
+        System.out.println(t4);
+//System.out.println(t5);
+    %>
+
+    <script>
+        function DataLength(fData)
+        {
+            var intLength=0
+            for (var i=0;i<fData.length;i++)
+            {
+                if ((fData.charCodeAt(i) < 0) || (fData.charCodeAt(i) > 255))
+                    intLength=intLength+2
+                else
+                    intLength=intLength+1
+            }
+            return intLength
+        }
+    </script>
+
+
     <style type="text/css">
         <!--
         body {
@@ -242,42 +200,70 @@
         }
         .style47 {color: #FF9900; font-size: 18px; }
         -->
-    </style><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head>
+    </style>
 
-<body >
-<%if(twbsession2!=null){%>
-<%if(twbsession2.equals(openid)){%>
-<div id="contentid"  style="display:block">
-        <%}else{%>
-    <!--
-    <img src="http://v.yqcn.com/bmwj/asp/sxbook/download3/no.png" width="100%" height="100%"/>-->
-    <div id="contentid"  style="display:none">
-            <%}%>
-            <%}else{%>
-        <!--
-        <img src="http://v.yqcn.com/bmwj/asp/sxbook/download3/no.png" width="100%" height="100%"/>-->
-        <div id="contentid"  style="display:none">
-            <%}%>
-<table width="100%"  border="0" cellspacing="0">
-    <tr>
-        <td>
-            <%if(zj==1){%>
-            <img src="img/001.jpg" width="100%">
-            <%}else if(zj==2){%>
-            <img src="img/002.jpg" width="100%">
-            <%}else if(zj==3){%>
-            <img src="img/003.jpg" width="100%">
-            <%}else if(zj==4){%>
-            <img src="img/004.jpg" width="100%">
-            <%}else if(zj==5){%>
-            <img src="img/005.jpg" width="100%">
-            <%}else{%>
-            <img src="img/006.jpg" width="100%">
-            <%}%>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
 
-        </td>
-    </tr>
+</head>
+
+<body style="background:url(img/21.png) no-repeat top center;background-size:100%;">
+<div  id="contentid" style="display:block">
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<table width="80%"  border="0" align="center">
+    <form id="form1" name="form1" method="post" action="cj_chk.jsp">
+
+        <input type="hidden" name="openid" value="<%=openid%>">
+
+        <tr>
+            <td height="180" align="center"><table width="90%" height="0%" align="center" cellspacing="15">
+                <tr>
+                    <th width="15%" height="23" align="center" nowrap="nowrap" bordercolor="#FFCC00" scope="row"><span class="style47">姓名</span></th>
+                    <th bordercolor="#EC6941" scope="row"><input id="xm" name="xm" type="text" class="style23" style="border:2px solid #FF9900;border-radius:10px;border-color:#FF9900;width:100%;height:25px" /></th>
+                </tr>
+            </table>
+                <table width="90%" height="0%" align="center" cellspacing="15">
+                    <tr>
+                        <th width="15%" height="23" align="center" nowrap="nowrap" bordercolor="#EC6941" scope="row"><span class="style47">电话</span></th>
+                        <th width="0" bordercolor="#EC6941" scope="row"><input id="tel" name="tel" type="tel" class="style23" style="border:2px solid #FF9900;border-radius:10px;border-color:#FF9900;width:100%;height:25px" /></th>
+                    </tr>
+                </table>      </td>
+        </tr>
+        <tr>
+            <td align="center">&nbsp;</td>
+        </tr>
+        <tr>
+            <td align="center"><table width="90%"  border="0" cellspacing="10">
+                <tr>
+                    <td align="center"><table width="60%" height="0"  border="0" align="center" style="border:1px solid #FF6600;border-radius:10px;background-color:#FF6600;border-color:#FF6600">
+                        <tr>
+                            <td height="34" align="center" bgcolor="#FF6600" class="style38 style39 style45" scope="row">
+
+                                <% if(t1<=0 && t2<=0 && t3<=0 && t4<=0){ %>
+                                <div >奖品已抽完</div>
+
+                                <%}else{ %>
+
+                                <div onClick="document.form1.action='cj_chk.jsp';if(DataLength(form1.xm.value)<2){alert('姓名最少2个字');form1.xm.focus();return false};if(DataLength(form1.tel.value)!=11){alert('请填写正确的联系方式');form1.tel.focus();return false};document.form1.submit();">提交</div>
+
+                                <%} %>
+                            </td>
+                        </tr>
+                    </table></td>
+                </tr>
+            </table>
+            </td>
+        </tr>
+    </form>
 </table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 </div>
 </body>
 </html>

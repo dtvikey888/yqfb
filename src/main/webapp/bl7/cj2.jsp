@@ -29,7 +29,9 @@
 
 <%
     //中了什么奖
-    String zsm22 = MyUtils27.zsm(openid);
+   // String zsm22 = MyUtils27.zsm(openid);
+
+    String zsm22="感谢您的参与！";
 %>
 
 

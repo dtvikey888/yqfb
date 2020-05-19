@@ -6,7 +6,6 @@
 <%@page import="org.liufeng.course.util.ZghTools"%>
 <jsp:useBean id="sqlbean" scope="page" class="org.fjw.weixin.util.MysqlDB"/>
 <%@page import="java.sql.ResultSet"%>
-<%@ page import="org.fjw.weixin.util.MyUtils26" %>
 <%
     //控制时间
     int kz =0;
@@ -21,10 +20,77 @@
     //out.println(kz);
 %>
 
+
 <%
+
     String urlname ="bl7/index2.jsp";
     String openid =request.getParameter("openid");
-    String check=Topay.WxJsApiCheck4(urlname,openid);
+//out.println("openid="+openid);
+
+
+    String from=request.getParameter("from");
+
+    String ympath=AllValus.ympath;
+    String appid=AllValus.appid;
+
+    String twbsession2 = (String)session.getAttribute("twbsession2");
+
+//out.println("dafsession="+dafsession);
+
+    if(twbsession2!=null){
+
+        if(twbsession2.equals(openid)){
+
+
+            if(from!=null){
+                response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet34&response_type=code&scope=snsapi_base&state=1#wechat_redirect");
+
+            }
+
+            //out.println("你是自己点的，不回调");
+
+        }else{
+
+            //out.println("其他人点了以后，不回调");
+
+            //response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet2&response_type=code&scope=snsapi_base&state=STATE&connect_redirect=1#wechat_redirect");
+
+            response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet34&response_type=code&scope=snsapi_base&state=1#wechat_redirect");
+
+
+
+        }
+
+    }else{
+
+        //还没点要回调
+        //response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet2&response_type=code&scope=snsapi_userinfo&state=STATE&connect_redirect=1#wechat_redirect");
+        response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet34&response_type=code&scope=snsapi_base&state=1#wechat_redirect");
+
+    }
+
+    //ZghTools.upyt6(openid);
+
+    ZghTools.ClearNull();
+
+    String check="";
+
+    if(from!=null){
+        check=Topay.WxJsApiCheck48(urlname,openid,from);
+        // out.println("from");
+    }else{
+        check=Topay.WxJsApiCheck4(urlname,openid);
+        // out.println("nofrom");
+    }
+
+    //out.println(check);
+
+    //这个随时准备启动
+    //session.removeAttribute("twbsession2");
+    //session.invalidate();
+
+
+   // out.println("<div style=\"font-size:0.1px;color:#C2D9DD;\">1</div>");
 %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -365,7 +431,19 @@
     <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
 </head>
 <body>
-
+<%if(twbsession2!=null){%>
+<%if(twbsession2.equals(openid)){%>
+<div id="contentid"  style="display:block">
+        <%}else{%>
+    <!--
+    <img src="http://v.yqcn.com/bmwj/asp/sxbook/download3/no.png" width="100%" height="100%"/>-->
+    <div id="contentid"  style="display:none">
+            <%}%>
+            <%}else{%>
+        <!--
+        <img src="http://v.yqcn.com/bmwj/asp/sxbook/download3/no.png" width="100%" height="100%"/>-->
+        <div id="contentid"  style="display:none">
+                <%}%>
 
             <!--分享后抽奖的图片-->
             <div id="mcover2"  onClick="weChat2()"  style="display:none;">
@@ -525,7 +603,7 @@
                     </td>
                 </tr>
             </table>
-
+        </div>
 </body>
 </html>
 <script type="text/javascript">

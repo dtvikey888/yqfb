@@ -1,16 +1,14 @@
 package org.fjw.weixin.util;
 
 import org.liufeng.course.util.TimeString;
-import org.liufeng.course.util.ZghTools;
 
 import java.sql.ResultSet;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
-import java.util.HashMap;
 
 
 //浩特抽奖 类
-public class MyUtils27 {
+public class MyUtils28 {
 
 	//是否已经抽奖
 	public static boolean iscj_pd(String openid){
@@ -19,7 +17,7 @@ public class MyUtils27 {
 
 		try {
 			sql_data db = new sql_data();
-			String sql = "select  * from daf_cj6 where iscj_bz=1 and openid = '"+openid+"' ";
+			String sql = "select  * from daf_cj7 where iscj_bz=1 and openid = '"+openid+"' ";
 			System.out.println(sql);
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
@@ -44,7 +42,7 @@ public class MyUtils27 {
 
 		try {
 			sql_data db = new sql_data();
-			String sql = "select count(*) as ct from daf_cj6 where zsm<>0 and openid = '"+openid+"' ";
+			String sql = "select count(*) as ct from daf_cj7 where zsm<>0 and openid = '"+openid+"' ";
 			System.out.println(sql);
 			ResultSet rs = db.executeQuery(sql);
 			int ct=0;
@@ -75,7 +73,7 @@ public class MyUtils27 {
 
 		try {
 			sql_data db = new sql_data();
-			String sql = "select count(*) as ct from daf_cj6 where zsm<>0 and tel = '"+tel+"' ";
+			String sql = "select count(*) as ct from daf_cj7 where zsm<>0 and tel = '"+tel+"' ";
 			System.out.println(sql);
 			ResultSet rs = db.executeQuery(sql);
 			int ct=0;
@@ -108,20 +106,20 @@ public class MyUtils27 {
 		try {
 
 			sql_data db = new sql_data();
-			String sql ="select zsm from daf_cj6 where openid='"+openid+"' order by id desc";
+			String sql ="select zsm from daf_cj7 where openid='"+openid+"' order by id desc";
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
 				bz=rs.getInt(1);
 			}
 
 			if(bz==1){
-				bz2="恭喜您获得车载冰箱。";
+				bz2="恭喜您获得50元移动话费,话费将于活动结束后，进行统一充值，敬请留意。";
 			}else if(bz==2){
-				bz2="恭喜您获得华为智慧音响。";
+				bz2="恭喜您获得40元移动话费,话费将于活动结束后，进行统一充值，敬请留意。";
 			}else if(bz==3){
-				bz2="恭喜您获得充电式电扇。";
+				bz2="恭喜您获得20元移动话费,话费将于活动结束后，进行统一充值，敬请留意。";
 			}else if(bz==4){
-				bz2="恭喜你获得雨伞。";
+				bz2="恭喜你获得10元移动话费,话费将于活动结束后，进行统一充值，敬请留意。";
 			}else if(bz==5){
 				bz2="没中奖,谢谢参与!";
 			}else{
@@ -142,28 +140,6 @@ public class MyUtils27 {
 		return bz2;
 	}
 
-
-	//返回抽到的奖项
-	public static int zsm2(String openid)
-	{
-		int bz = 0;
-
-		try {
-
-			sql_data db = new sql_data();
-			String sql ="select zsm from daf_cj6 where openid='"+openid+"' order by id desc";
-			ResultSet rs = db.executeQuery(sql);
-			if (rs.next()) {
-				bz=rs.getInt(1);
-			}
-
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-		return bz;
-	}
-
 	/**
 	 * 各个奖项中奖总剩余
 	 * 也就是 比如 一等奖 在数据库里面 总共查到2个 ，一等奖的总数是12个， 那么 12-2=10 就得到这个数
@@ -173,7 +149,7 @@ public class MyUtils27 {
 		int sy=0;
 		try {
 			sql_data db = new sql_data();
-			String sql="select count(*) as ct from daf_cj6 where zsm="+zsm+" ";
+			String sql="select count(*) as ct from daf_cj7 where zsm="+zsm+" ";
 			System.out.println(sql);
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
@@ -181,19 +157,19 @@ public class MyUtils27 {
 				switch (zsm) {
 
 					case 1:
-						sy = AllValus.zbjx1-rs.getInt(1);
+						sy = AllValus.pwjx1-rs.getInt(1);
 						break;
 
 					case 2:
-						sy = AllValus.zbjx2-rs.getInt(1);
+						sy = AllValus.pwjx2-rs.getInt(1);
 						break;
 
 					case 3:
-						sy = AllValus.zbjx3-rs.getInt(1);
+						sy = AllValus.pwjx3-rs.getInt(1);
 						break;
 
 					case 4:
-						sy = AllValus.zbjx4-rs.getInt(1);
+						sy = AllValus.pwjx4-rs.getInt(1);
 						break;
 //
 //					case 5:
@@ -227,7 +203,7 @@ public class MyUtils27 {
 		try {
 
 			sql_data db = new sql_data();
-			String sql = "select count(*) as zs from daf_cj6 where zsm="+zsm+" ";
+			String sql = "select count(*) as zs from daf_cj7 where zsm="+zsm+" ";
 
 			// System.out.println("MyUtils.GetTotal()"+sql);
 
@@ -247,22 +223,22 @@ public class MyUtils27 {
 
 	//1.一等奖 总剩余数
 	public static int sy1(){
-		return (AllValus.zbjx1 - MyUtils27.GetTotal(1));
+		return (AllValus.pwjx1 - MyUtils28.GetTotal(1));
 	}
 
 	//2.二等奖 总剩余数
 	public static int sy2(){
-		return (AllValus.zbjx2 - MyUtils27.GetTotal(2));
+		return (AllValus.pwjx2 - MyUtils28.GetTotal(2));
 	}
 
 	//3.三等奖 总剩余数
 	public static int sy3(){
-		return (AllValus.zbjx3 - MyUtils27.GetTotal(3));
+		return (AllValus.pwjx3 - MyUtils28.GetTotal(3));
 	}
 
 	//4等奖 总剩余数
 	public static int sy4(){
-		return (AllValus.zbjx4 - MyUtils27.GetTotal(4));
+		return (AllValus.pwjx4 - MyUtils28.GetTotal(4));
 	}
 //
 //		//5等奖 总剩余数
@@ -287,20 +263,20 @@ public class MyUtils27 {
 
 			sql_data db = new sql_data();
 			//判断 bh 是否已经存在
-			//String sql_pd = "select * from daf_cj6 where iscj_bz=1 and openid = '"+openid+"' ";
-			String sql_pd = "select * from daf_cj6 where openid = '"+openid+"' ";
+			//String sql_pd = "select * from daf_cj7 where iscj_bz=1 and openid = '"+openid+"' ";
+			String sql_pd = "select * from daf_cj7 where openid = '"+openid+"' ";
 			System.out.print(sql_pd);
 			ResultSet rs = db.executeQuery(sql_pd);
 			if (rs.next()) {
 
 				//已经存在 更新处理
-				String sql ="update daf_cj6 set xm='"+xm+"',tel='"+tel+"',bh='"+bh+"',fbsj='"+TimeString.nowTime()+"' where openid='"+openid+"' ";
+				String sql ="update daf_cj7 set xm='"+xm+"',tel='"+tel+"',bh='"+bh+"',fbsj='"+TimeString.nowTime()+"' where openid='"+openid+"' ";
 				db.executeUpdate(sql);
 
-				//String sql_pd2="select * from daf_cj6 where openid='"+openid+"'";
+				//String sql_pd2="select * from daf_cj7 where openid='"+openid+"'";
 //				ResultSet rs2 = db.executeQuery(sql_pd2);
 //				if(!rs2.next()){
-//					String sql ="insert into daf_cj6(openid,xm,tel,fbsj,iscj_bz,bh) VALUES('"+openid+"','"+xm+"','"+tel+"','"+TimeString.nowTime()+"',1,'"+bh+"') ";
+//					String sql ="insert into daf_cj7(openid,xm,tel,fbsj,iscj_bz,bh) VALUES('"+openid+"','"+xm+"','"+tel+"','"+TimeString.nowTime()+"',1,'"+bh+"') ";
 //					db.executeInsert(sql);
 //					System.out.println(sql);
 //				}
@@ -310,7 +286,7 @@ public class MyUtils27 {
 			}else{
 
 				//不存在该Openid ,进一步判断是不是已有该手机号
-				String sql="select * from daf_cj6 where tel = '"+tel+"' ";
+				String sql="select * from daf_cj7 where tel = '"+tel+"' ";
 				ResultSet rs2 = db.executeQuery(sql);
 				if (rs2.next()){
 
@@ -321,7 +297,7 @@ public class MyUtils27 {
 					if(openid!=null) {
 
 						//不存在 不处理
-						String sql2 = "insert into daf_cj6(openid,xm,tel,fbsj,bh) VALUES('" + openid + "','" + xm + "','" + tel + "','" + TimeString.nowTime() + "','" + bh + "') ";
+						String sql2 = "insert into daf_cj7(openid,xm,tel,fbsj,bh) VALUES('" + openid + "','" + xm + "','" + tel + "','" + TimeString.nowTime() + "','" + bh + "') ";
 						db.executeInsert(sql2);
 						System.out.println(sql2);
 
@@ -357,7 +333,7 @@ public class MyUtils27 {
 		try {
 
 			MysqlDB db = new MysqlDB();
-			String sql= "select bh from yqcnwx_szzl3 where bh<>'' order by bh desc limit 1";
+			String sql= "select bh from daf_cj7 where bh<>'' order by bh desc limit 1";
 			ResultSet rs = db.executeQuery(sql);
 
 			if (rs.next()) {
@@ -394,8 +370,7 @@ public class MyUtils27 {
 		int ws = 0;
 		try {
 			MysqlDB db = new MysqlDB();
-			int zloid = ZghTools.GetZlOid2(openid);
-			String sql ="select bh from yqcnwx_szzl3 where zloid="+zloid+"";
+			String sql ="select bh from daf_cj7 where openid='"+openid+"'";
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
 
@@ -408,27 +383,10 @@ public class MyUtils27 {
 		return ws;
 	}
 
-	//第几位参加者
-	public static String GetWs2(String openid){
-		String ws="";
-
-        if(ZghTools.getPs(openid)>0){
-			ws=AllValus.zb_title+",您是第"+MyUtils27.GetWs(openid)+"位助力人";
-
-		}else{
-
-        	ws=AllValus.zb_title;
-		}
-
-		System.out.println(ws);
-
-		return ws;
-	}
-
 	//显示的字
 	public static String xsdz(String openid){
 		String xs ="";
-		if (MyUtils27.GetWs(openid)>600) {
+		if (MyUtils28.GetWs(openid)>600) {
 			xs=AllValus.cg_jx;
 		}else{
 			xs=AllValus.cg_cx;
@@ -456,23 +414,23 @@ public class MyUtils27 {
 		try {
 
 			sql_data db = new sql_data();
-			String sql="select count(*) as ct from daf_cj6 where zsm="+zsm+" and DATEDIFF(date_format(fbsj,'%Y-%m-%d'),curdate())=0";
-			//String sql="select count(*) as ct from daf_cj6 where zsm="+zsm+" and DateDiff(dd,fbsj,getdate())=0";
+			String sql="select count(*) as ct from daf_cj7 where zsm="+zsm+" and DATEDIFF(date_format(fbsj,'%Y-%m-%d'),curdate())=0";
+			//String sql="select count(*) as ct from daf_cj7 where zsm="+zsm+" and DateDiff(dd,fbsj,getdate())=0";
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
 				int zjs = rs.getInt(1);
 				if (zsm==1) {  //一等奖 当天中奖的人数
 
-					if (MyUtils27.GetTotalSY(zsm)<=0) {//比如 一等奖的奖项总数 - 所有中了一等奖的人 <= 0  那么就是说1等奖的所有名额没了,就把标志变为0
+					if (MyUtils28.GetTotalSY(zsm)<=0) {//比如 一等奖的奖项总数 - 所有中了一等奖的人 <= 0  那么就是说1等奖的所有名额没了,就把标志变为0
 						sy=0;
 					}else {
-						//一等奖2
-						if(TimeString.nowTime().indexOf("2020-05-16")!=-1){
-							sy = 1 -zjs;
-						}else if(TimeString.nowTime().indexOf("2020-05-17")!=-1){
-							sy = 1 -zjs;
-						}else if(TimeString.nowTime().indexOf("2020-05-18")!=-1){
-							sy = 1 -zjs;
+						//一等奖10
+						if(TimeString.nowTime().indexOf("2020-05-07")!=-1){
+							sy = 3 -zjs;
+						}else if(TimeString.nowTime().indexOf("2020-05-08")!=-1){
+							sy = 3 -zjs;
+						}else if(TimeString.nowTime().indexOf("2020-05-09")!=-1){
+							sy = 4 -zjs;
 						}else {
 							sy = 0;
 						}
@@ -482,16 +440,16 @@ public class MyUtils27 {
 
 				}else if(zsm==2){
 
-					if (MyUtils27.GetTotalSY(zsm)<=0) {//比如 二等奖的奖项总数 - 所有中了二等奖的人 <= 0  那么就是说2等奖的所有名额没了 ,就把标志变为0
+					if (MyUtils28.GetTotalSY(zsm)<=0) {//比如 二等奖的奖项总数 - 所有中了二等奖的人 <= 0  那么就是说2等奖的所有名额没了 ,就把标志变为0
 						sy=0;
 					}else {
-						//3
-						if(TimeString.nowTime().indexOf("2020-05-16")!=-1){
-							sy = 1 -zjs;
-						}else if(TimeString.nowTime().indexOf("2020-05-17")!=-1){
-							sy = 1 -zjs;
-						}else if(TimeString.nowTime().indexOf("2020-05-18")!=-1){
-							sy = 1 -zjs;
+						//20
+						if(TimeString.nowTime().indexOf("2020-05-07")!=-1){
+							sy = 7 -zjs;
+						}else if(TimeString.nowTime().indexOf("2020-05-08")!=-1){
+							sy = 6 -zjs;
+						}else if(TimeString.nowTime().indexOf("2020-05-09")!=-1){
+							sy = 7 -zjs;
 						}else {
 							sy = 0;
 						}
@@ -502,16 +460,16 @@ public class MyUtils27 {
 
 				}else if(zsm==3){
 
-					if (MyUtils27.GetTotalSY(zsm)<=0) {//比如 三等奖的奖项总数 - 所有中了三等奖的人 <= 0  那么就是说3等奖的所有名额没了 ,就把标志变为0
+					if (MyUtils28.GetTotalSY(zsm)<=0) {//比如 三等奖的奖项总数 - 所有中了三等奖的人 <= 0  那么就是说3等奖的所有名额没了 ,就把标志变为0
 						sy=0;
 					}else {
-						//3等奖15
-						if(TimeString.nowTime().indexOf("2020-05-16")!=-1){
-							sy = 5 -zjs;
-						}else if(TimeString.nowTime().indexOf("2020-05-17")!=-1){
-							sy = 5 -zjs;
-						}else if(TimeString.nowTime().indexOf("2020-05-18")!=-1){
-							sy = 1 -zjs;
+						//3等奖50
+						if(TimeString.nowTime().indexOf("2020-05-07")!=-1){
+							sy = 17 -zjs;
+						}else if(TimeString.nowTime().indexOf("2020-05-08")!=-1){
+							sy = 17 -zjs;
+						}else if(TimeString.nowTime().indexOf("2020-05-09")!=-1){
+							sy = 16 -zjs;
 						}else {
 							sy = 0;
 						}
@@ -522,16 +480,16 @@ public class MyUtils27 {
 
 				}else if(zsm==4){
 
-					if (MyUtils27.GetTotalSY(zsm)<=0) {//比如 4等奖的奖项总数 - 所有中了4等奖的人 <= 0  那么就是说4等奖的所有名额没了 ,就把标志变为0
+					if (MyUtils28.GetTotalSY(zsm)<=0) {//比如 4等奖的奖项总数 - 所有中了4等奖的人 <= 0  那么就是说4等奖的所有名额没了 ,就把标志变为0
 						sy=0;
 					}else {
-						//4等奖110
-						if(TimeString.nowTime().indexOf("2020-05-16")!=-1){
-							sy = 50 -zjs;
-						}else if(TimeString.nowTime().indexOf("2020-05-17")!=-1){
-							sy = 50 -zjs;
-						}else if(TimeString.nowTime().indexOf("2020-05-18")!=-1){
-							sy = 10 -zjs;
+						//4等奖120
+						if(TimeString.nowTime().indexOf("2020-05-07")!=-1){
+							sy = 40 -zjs;
+						}else if(TimeString.nowTime().indexOf("2020-05-08")!=-1){
+							sy = 40 -zjs;
+						}else if(TimeString.nowTime().indexOf("2020-05-09")!=-1){
+							sy = 40 -zjs;
 						}else {
 							sy = 0;
 						}
@@ -571,14 +529,14 @@ public class MyUtils27 {
 		try {
 
 			sql_data db = new sql_data();
-			String sql="select count(*) as ct from daf_cj6 where zsm="+zsm+" and DATEDIFF(date_format(fbsj,'%Y-%m-%d'),curdate())=0";
-			//String sql="select count(*) as ct from daf_cj6 where zsm="+zsm+" and DateDiff(dd,fbsj,getdate())=0";
+			String sql="select count(*) as ct from daf_cj7 where zsm="+zsm+" and DATEDIFF(date_format(fbsj,'%Y-%m-%d'),curdate())=0";
+			//String sql="select count(*) as ct from daf_cj7 where zsm="+zsm+" and DateDiff(dd,fbsj,getdate())=0";
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
 				int zjs = rs.getInt(1);
 				if (zsm==1) {  //一等奖 当天中奖的人数
 
-					if (MyUtils27.GetTotalSY(zsm)<=0) {//比如 一等奖的奖项总数 - 所有中了一等奖的人 <= 0  那么就是说1等奖的所有名额没了,就把标志变为0
+					if (MyUtils28.GetTotalSY(zsm)<=0) {//比如 一等奖的奖项总数 - 所有中了一等奖的人 <= 0  那么就是说1等奖的所有名额没了,就把标志变为0
 						sy=0;
 					}else {
 						//一等奖200元 3名
@@ -598,7 +556,7 @@ public class MyUtils27 {
 
 				}else if(zsm==2){
 
-					if (MyUtils27.GetTotalSY(zsm)<=0) {//比如 二等奖的奖项总数 - 所有中了二等奖的人 <= 0  那么就是说2等奖的所有名额没了 ,就把标志变为0
+					if (MyUtils28.GetTotalSY(zsm)<=0) {//比如 二等奖的奖项总数 - 所有中了二等奖的人 <= 0  那么就是说2等奖的所有名额没了 ,就把标志变为0
 						sy=0;
 					}else {
 						//二等奖50元 5名
@@ -616,7 +574,7 @@ public class MyUtils27 {
 
 				}else if (zsm==3) {
 
-					if (MyUtils27.GetTotalSY(zsm)<=0) {
+					if (MyUtils28.GetTotalSY(zsm)<=0) {
 						sy=0;
 					}else {
 						//三等奖20元 10名
@@ -633,7 +591,7 @@ public class MyUtils27 {
 
 				}else if (zsm==4) {
 
-					if (MyUtils27.GetTotalSY(zsm)<=0) {
+					if (MyUtils28.GetTotalSY(zsm)<=0) {
 						sy=0;
 					}else {
 						//四等奖10元 20名
@@ -650,7 +608,7 @@ public class MyUtils27 {
 
 				}else if (zsm==5) {
 
-					if (MyUtils27.GetTotalSY(zsm)<=0) {
+					if (MyUtils28.GetTotalSY(zsm)<=0) {
 						sy=0;
 					}else {
 						//五等奖5元 750名
@@ -690,7 +648,7 @@ public class MyUtils27 {
 		String xm="";
 		try {
 			sql_data db = new sql_data();
-			String sql = "select * from daf_cj6 where openid='"+openid+"' order by id desc";
+			String sql = "select * from daf_cj7 where openid='"+openid+"' order by id desc";
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
 				xm = rs.getString("xm");
@@ -710,7 +668,7 @@ public class MyUtils27 {
 		String tel="";
 		try {
 			sql_data db = new sql_data();
-			String sql = "select * from daf_cj6 where openid='"+openid+"' order by id desc";
+			String sql = "select * from daf_cj7 where openid='"+openid+"' order by id desc";
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
 				tel = rs.getString("tel");
@@ -730,7 +688,7 @@ public class MyUtils27 {
 		String lx="";
 		try {
 			sql_data db = new sql_data();
-			String sql = "select  * from daf_cj6 where openid='"+openid+"' order by id desc";
+			String sql = "select  * from daf_cj7 where openid='"+openid+"' order by id desc";
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
 				lx = rs.getString("lx");
@@ -775,8 +733,8 @@ public class MyUtils27 {
 		try {
 
 			sql_data db = new sql_data();
-			String sql_pd = "select count(*) as ct from daf_cj6 where zsm<>0 and openid = '"+openid+"' ";
-			//String sql_pd = "select count(*) as ct from daf_cj6 where zsm<>0 and tel = '"+tel+"' ";
+			String sql_pd = "select count(*) as ct from daf_cj7 where zsm<>0 and openid = '"+openid+"' ";
+			//String sql_pd = "select count(*) as ct from daf_cj7 where zsm<>0 and tel = '"+tel+"' ";
 			System.out.print(sql_pd);
 			ResultSet rs = db.executeQuery(sql_pd);
 			int ct = 0;
@@ -793,13 +751,12 @@ public class MyUtils27 {
 				}else{
 
 
-					if (MyUtils27.GetTotalSY(new Integer(zsm))>0) {
+					if (MyUtils28.GetTotalSY(new Integer(zsm))>0) {
 
-						//String sql ="insert into daf_cj6(xm,tel,openid,zsm,fbsj) VALUES('"+xm+"','"+tel+"','"+openid+"',"+zsm+",'"+TimeString.nowTime()+"') ";
+						//String sql ="insert into daf_cj7(xm,tel,openid,zsm,fbsj) VALUES('"+xm+"','"+tel+"','"+openid+"',"+zsm+",'"+TimeString.nowTime()+"') ";
 
-						//String sql = "update daf_cj6 set xm='" + xm + "',tel='" + tel + "',iscj_bz=1,iszj_bz=" + iszj_bz + ",openid='" + openid + "',zsm=" + zsm + ",fbsj='" + TimeString.nowTime() + "' where openid='" + openid + "'";
-
-						String sql = "update daf_cj6 set iscj_bz=1,iszj_bz=" + iszj_bz + ",zsm=" + zsm + ",fbsj='" + TimeString.nowTime() + "' where openid='" + openid + "'";
+						//String sql = "update daf_cj7 set xm='" + xm + "',tel='" + tel + "',iscj_bz=1,iszj_bz=" + iszj_bz + ",openid='" + openid + "',zsm=" + zsm + ",fbsj='" + TimeString.nowTime() + "' where openid='" + openid + "'";
+						String sql = "update daf_cj7 set iscj_bz=1,iszj_bz=" + iszj_bz + ",zsm=" + zsm + ",fbsj='" + TimeString.nowTime() + "' where openid='" + openid + "'";
 
 						System.out.println(sql);
 						db.executeUpdate(sql);
@@ -808,7 +765,7 @@ public class MyUtils27 {
 
 					}else{
 
-						String sql = "update daf_cj6 set iscj_bz=1,iszj_bz=0,zsm=5,fbsj='" + TimeString.nowTime() + "' where openid='" + openid + "'";
+						String sql = "update daf_cj7 set iscj_bz=1,iszj_bz=0,zsm=5,fbsj='" + TimeString.nowTime() + "' where openid='" + openid + "'";
 
 						System.out.println(sql);
 						db.executeUpdate(sql);
@@ -859,8 +816,8 @@ public class MyUtils27 {
 		try {
 
 			sql_data db = new sql_data();
-			 String sql_pd = "select count(*) as ct from daf_cj6 where zsm<>0 and openid = '"+openid+"' ";
-			//String sql_pd = "select count(*) as ct from daf_cj6 where zsm<>0 and tel = '"+tel+"' ";
+			 String sql_pd = "select count(*) as ct from daf_cj7 where zsm<>0 and openid = '"+openid+"' ";
+			//String sql_pd = "select count(*) as ct from daf_cj7 where zsm<>0 and tel = '"+tel+"' ";
 
 			System.out.print(sql_pd);
 			ResultSet rs = db.executeQuery(sql_pd);
@@ -875,10 +832,10 @@ public class MyUtils27 {
 
 				}else{
 
-					//String sql ="insert into daf_cj6(xm,tel,openid,zsm,fbsj) VALUES('"+xm+"','"+tel+"','"+openid+"',"+zsm+",'"+TimeString.nowTime()+"') ";
+					//String sql ="insert into daf_cj7(xm,tel,openid,zsm,fbsj) VALUES('"+xm+"','"+tel+"','"+openid+"',"+zsm+",'"+TimeString.nowTime()+"') ";
 
-					//String sql ="update daf_cj6 set xm='"+xm+"',tel='"+tel+"',openid='"+openid+"',zsm="+zsm+",fbsj='"+TimeString.nowTime()+"' where openid='"+openid+"'";
-					String sql ="update daf_cj6 set openid='"+openid+"',zsm="+zsm+",fbsj='"+TimeString.nowTime()+"' where openid='"+openid+"'";
+					//String sql ="update daf_cj7 set xm='"+xm+"',tel='"+tel+"',openid='"+openid+"',zsm="+zsm+",fbsj='"+TimeString.nowTime()+"' where openid='"+openid+"'";
+					String sql ="update daf_cj7 set openid='"+openid+"',zsm="+zsm+",fbsj='"+TimeString.nowTime()+"' where openid='"+openid+"'";
 
 					System.out.println(sql);
 					db.executeUpdate(sql);
@@ -909,8 +866,8 @@ public class MyUtils27 {
 
 		try {
 			sql_data db = new sql_data();
-			String sql = "select  * from daf_cj6 where zsm<>0 and tel = '"+tel+"' order by id desc";
-			// String sql = "select  * from daf_cj6 where tel = '"+tel+"' order by id desc";
+			String sql = "select  * from daf_cj7 where zsm<>0 and tel = '"+tel+"' order by id desc";
+			// String sql = "select  * from daf_cj7 where tel = '"+tel+"' order by id desc";
 			ResultSet rs = db.executeQuery(sql);
 			if (rs.next()) {
 
@@ -994,13 +951,13 @@ public class MyUtils27 {
 	//bz: 1 成功 2 答题超过100000次 3 答题错误
 	public static int DtRl(String openid,String... a){
 		int bz=0;
-		int cs = MyUtils27.GetCsForDt(openid);
+		int cs = MyUtils28.GetCsForDt(openid);
 		if(cs>100000){
 			bz=2;
 		}else{
 
 			//答题错误
-			if(!MyUtils27.DtIsZq(a)){
+			if(!MyUtils28.DtIsZq(a)){
 
 				MysqlDB db2 = new MysqlDB();
 				String sqlcs = "update yqfb_openid set cs=cs+1,fbsj='"+TimeString.nowTime()+"' where openid='"+openid+"'";
@@ -1067,33 +1024,6 @@ public class MyUtils27 {
 
 
 		System.out.println(ct);
-
-	}
-
-	//根据id 获取排名
-	public static int GetPM(String id){
-		int pm =0;
-		try {
-			HashMap<String,Integer> map = new HashMap<String,Integer>();
-
-			sql_data db = new sql_data();
-			String sql ="select * from yqcnwx_szzl order by ps desc";
-			ResultSet rs = db.executeQuery(sql);
-			int i=1;
-
-			while (rs.next()) {
-				map.put(rs.getString("id"), i);
-
-				i++;
-			}
-
-			int obj = map.get(id);
-			pm=new Integer(obj);
-
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return pm;
 
 	}
 
