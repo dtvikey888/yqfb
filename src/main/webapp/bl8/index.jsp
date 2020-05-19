@@ -1,10 +1,9 @@
 <%@ page language="java" import="java.util.*" pageEncoding="gb2312"%>
 <%@page import="com.component.Topay"%>
 <%@page import="org.fjw.weixin.util.MyUtils7"%>
-<%@page import="org.fjw.weixin.util.MyUtils28"%>
 <%@page import="org.fjw.weixin.util.AllValus"%>
 <%@page import="org.liufeng.course.util.ZghTools"%>
-<%@ page import="org.fjw.weixin.util.MyUtils27" %>
+<%@ page import="org.fjw.weixin.util.MyUtils28" %>
 <%
 	//控制时间
 	int kz =0;
@@ -110,7 +109,7 @@ if(twbsession2!=null){
         wx_share_imgUrl="<%=AllValus.ws_img%>";
 
         wx.config({
-                debug: false,
+            debug: false,
             <%=check%>,// 必填，签名，见附录1
             jsApiList: [
             'updateTimelineShareData',
@@ -242,36 +241,24 @@ d{color:#fff;}
 		     // 根据起止时间判断是否关闭窗口 ，弹出提醒窗
 		  // kz=1 开始抽奖(不关) kz=2 抽奖结束(关闭) kz=3 抽奖没开始（关闭）
 		  
-		   if (kz==1){
-		   
-		   
-		  %>
+		   if (kz==1){%>
 		  //alert("开始");
 		  
-		  <%}else if(kz==2){
-		   
-		  
-		  %>
+		  <%}else if(kz==2){%>
 		  
             alert('非常抱歉，答题时间已过。感谢您的关注，请下次再来！');
-            window.location.href="<%=AllValus.errpage4%>";
+            window.location.href="<%=AllValus.errpage5%>";
             
-		  <%}else if(kz==3){
+		  <%}else if(kz==3){%>
 		  
-		  
-		  %>
-		  
-           alert('还没开始呢，"开始答题时间<%=tt1%>"到"<%=tt2%>"！\n欢迎到时候参与！');
-           window.location.href="<%=AllValus.errpage4%>";
+            alert('还没开始呢，"开始答题时间<%=tt1%>"到"<%=tt2%>"！\n欢迎到时候参与！');
+            window.location.href="<%=AllValus.errpage5%>";
           
-		  <%}else{
-		      
-		  
-		   %>
+		  <%}else{%>
 		  
 		     alert('感谢关注！');
            
-		  <%} %>
+		  <%}%>
 
 		</script>
 
@@ -568,7 +555,7 @@ bottom: 10px;
     </script>
 </head>
 <body>
-<%int cs = MyUtils26.GetCsForDt(openid);%>
+<%int cs = MyUtils28.GetCsForDt(openid);%>
 <%if(cs>100000){%>
 <div id="mcover" onClick="weChat()" style="display: block;">
           <img src="js/tip.png"/>
@@ -613,7 +600,7 @@ bottom: 10px;
   <tr>
     <td align="center" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="30">
       <tr>
-        <td colspan="2" align="left"><p><strong><div style="line-height:1.8;text-indent:2em;"><%=AllValus.pw_desc%></div></strong></P></td>
+        <td colspan="2" align="left"><p><strong><div style="line-height:1.8;text-indent:2em;"><%=AllValus.ws_desc%></div></strong></P></td>
         </tr>
       <tr>
         <td height="50" colspan="2">
@@ -833,14 +820,14 @@ bottom: 10px;
     <td height="115" align="center" valign="middle"><table width="95%" height="75" border="0" cellpadding="0" cellspacing="0">
       <tr>
         <td align="center">
-        <%if(!MyUtils27.iscj_pd(openid)){%>
+        <%if(!MyUtils28.iscj_pd(openid)){%>
         <!--  
         <input target="_self" type="image" border="0" name="sub22" src="img/tp3.png" width=100% height=80  onclick="return processForm(this.form);"/>
         -->
        <button onclick="return processForm(this.form);" type="submit" style="width:100%;padding:15px 15px;border-radius:15px; background:#21457B; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">&nbsp;&nbsp;&nbsp;&nbsp;提&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;交&nbsp;&nbsp;&nbsp;&nbsp;</button>
        <p></p>
 		<%}else{ %>
-		 <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#CC0001; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">您已经参与过,<%="您是第"+MyUtils27.GetWs(openid)+"位参与者,"+MyUtils27.zsm(openid) %></button>
+		 <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#CC0001; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">您已经参与过,<%="您是第"+MyUtils28.GetWs(openid)+"位参与者,"+MyUtils28.zsm(openid) %></button>
 		<%} %>
 	   <p></p>
 	<input name="openid" type="hidden" id="openid" value="<%=openid%>"/>	<div></div></td>

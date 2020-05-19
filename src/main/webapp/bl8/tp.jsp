@@ -1,43 +1,19 @@
 <%@ page language="java" import="java.util.*" pageEncoding="gb2312"%>
-<%@page import="org.fjw.weixin.util.MyUtils26"%>
+<%@page import="org.fjw.weixin.util.MyUtils22"%>
 <%@page import="org.fjw.weixin.util.AllValus"%>
 <%
 String openid = request.getParameter("openid");
-String c1 = request.getParameter("c1");
-String c2 = request.getParameter("c2");
-String c3 = request.getParameter("c3");
-String c4 = request.getParameter("c4");
-String c5 = request.getParameter("c5");
-String c6 = request.getParameter("c6");
-String c7 = request.getParameter("c7");
-String c8 = request.getParameter("c8");
-String c9 = request.getParameter("c9");
-String c10 = request.getParameter("c10");
-
-
-//	out.println(c1);
-//	out.println(c2);
-//	out.println(c3);
-//	out.println(c4);
-//	out.println(c5);
-//	out.println(c6);
-//	out.println(c7);
-//	out.println(c8);
-//	out.println(c9);
-//	out.println(c10);
-//	out.println(c11);
-//	out.println(c12);
-//	out.println(c13);
-//	out.println(c14);
-//	out.println(c15);
-//	out.println(c16);
-//	out.println(c17);
-//	out.println(c18);
-//	out.println(c19);
-//	out.println(cs20);
-//	out.close();
-
-int bz=MyUtils26.DtRl(openid,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10);
+int c1 = new Integer(request.getParameter("c1"));
+int c2 = new Integer(request.getParameter("c2"));
+int c3 = new Integer(request.getParameter("c3"));
+int c4 = new Integer(request.getParameter("c4"));
+int c5 = new Integer(request.getParameter("c5"));
+int c6 = new Integer(request.getParameter("c6"));
+int c7 = new Integer(request.getParameter("c7"));
+int c8 = new Integer(request.getParameter("c8"));
+int c9 = new Integer(request.getParameter("c9"));
+int c10 = new Integer(request.getParameter("c10"));
+int bz=MyUtils22.DtRl(openid,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10);
 //out.println(bz);
 //out.close();
 //AACA BBCC AB
