@@ -73,7 +73,7 @@ public class AllValus {
 
     public static String errpage5="http://www.yqrb.com.cn/yqfb/bl8/success.jsp";
 
-    public static String success_lan="您已答对8题（及以上），恭喜您获得抽奖资格，请填写正确的联系方式，以便发放奖励";
+    public static String success_lan="您已答对8题（及以上），恭喜您获得卫生管理员证，请填写正确的联系方式，以便发放证件!";
     public static String csc_lan="答题已经超过100000次，谢谢关注！";
     public static String error_lan="您的答题错误率过高，请重新答题";
     public static String error_lan2="存在相同的手机号码，请重新答题填写不同的号码参与";
@@ -89,6 +89,8 @@ public class AllValus {
     public static String cg_jx="您的编号超过600,木有奖品哦，谢谢参与";
 
     public static String cg_cx="恭喜您获得10元话费奖励，我们会在活动结束后为您充值，谢谢参与";
+
+    public static String cg_cx2="请及时到各辖区卫生监督所领取卫生管理员证，联系方式如下：城区所：城东街道晨曦路111号公共卫生中心大楼（609室、61600276）；柳市所：柳市镇溪桥路温州海关驻乐清办事处大院内一楼（内勤室、61723810）；虹桥所：虹桥镇八村村委楼7楼（内勤室、61315889）；大荆所：大荆镇湖边路38号（内勤室、62238150）。";
 
     //世界新闻出版日转发朋友圈标题等
     public static String daf_title="世界知识产权日知识问答";

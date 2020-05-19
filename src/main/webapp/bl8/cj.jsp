@@ -2,18 +2,15 @@
 <%@ page import="com.component.*"%>
 <%@page import="org.fjw.weixin.util.AllValus"%>
 <%@page import="org.fjw.weixin.util.MyUtils2"%>
-<%@page import="org.fjw.weixin.util.MyUtils22"%>
-<%@page import="org.fjw.weixin.yy.WeixinChaOpenId"%>
-<%@page import="org.liufeng.course.util.AdvancedUtil"%>
 <%
-String urlname ="bl2/cj.jsp";
+String urlname ="bl8/cj.jsp";
 String openid =request.getParameter("openid");
 String check=Topay.WxJsApiCheck4(urlname,openid);
 %>
 <html>
 	<head>
 	
-	 <title><%=AllValus.daf_title %></title>
+	 <title><%=AllValus.ws_title %></title>
 	 
 	<meta name="description" content="">
     <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
@@ -35,8 +32,8 @@ String check=Topay.WxJsApiCheck4(urlname,openid);
 	  <%
 	//控制时间
 	int kz =0;
-	String cc1=AllValus.daf_t1;
-	String cc2=AllValus.daf_t2;
+	String cc1=AllValus.ws_t1;
+	String cc2=AllValus.ws_t2;
     Date c1=MyUtils2.CharDate(cc1);
     Date c2=MyUtils2.CharDate(cc2);
     kz= MyUtils2.TimeKZ(c1,c2);
@@ -48,7 +45,7 @@ String check=Topay.WxJsApiCheck4(urlname,openid);
 	 
 	  <%
 	 //是否已经抽奖
-	 //boolean iscj = MyUtils22.iscj_pd3(tel);
+	 //boolean iscj = MyUtils28.iscj_pd3(tel);
 	 
 	 //中了什么奖
 	 //String zsm = MyUtils21.zsm(openid);
@@ -58,15 +55,15 @@ String check=Topay.WxJsApiCheck4(urlname,openid);
   
 //各个奖项总剩余
 
-int t1 = MyUtils22.sy1(); //一等奖总数剩余名额
-//int t2 = MyUtils22.sy2(); //二等奖总数剩余名额
-//int t3 = MyUtils22.sy3(); //三等奖总数剩余名额
-//int t4 = MyUtils22.sy4();
-//int t5 = MyUtils22.sy5();
+//int t1 = MyUtils28.sy1(); //一等奖总数剩余名额
+//int t2 = MyUtils28.sy2(); //二等奖总数剩余名额
+//int t3 = MyUtils28.sy3(); //三等奖总数剩余名额
+//int t4 = MyUtils28.sy4();
+//int t5 = MyUtils28.sy5();
 
 
 
-System.out.println(t1);
+//System.out.println(t1);
 //System.out.println(t2);
 //System.out.println(t3);
 
@@ -101,32 +98,32 @@ function DataLength(fData)
 		   //隐藏右上角菜单接口
 		   	  wx.hideOptionMenu();
 		   
-		     <%
-		     
-		   //String accessToken = WeixinChaOpenId.GetDBAccessToken(""+AllValus.memo+"");
+		     <%--<%--%>
+		     <%----%>
+		   <%--//String accessToken = WeixinChaOpenId.GetDBAccessToken(""+AllValus.memo+"");--%>
 
-		   %>
+		   <%--%>--%>
 		   
 		   
 
-		   <%
-		   //判断全部名额剩余
-		   //if(t1<0 && t2<0 && t3<0 && t4<0 && t5<0){
-		   if(t1<0){
-		            // 组装文本客服消息
-		 //  String jsonTextMsg =AdvancedUtil.makeTextCustomMessage(openid, "全部奖品已抽完,感谢您对\"中国乐清网\"的关注，请下次再来！");
-		// 发送客服消息
-		 //  AdvancedUtil.sendCustomMessage(accessToken, jsonTextMsg);
-		   
-		   
-		   %>
-		   
-		        alert('全部奖品已抽完,感谢您的关注，请下次再来！');
-                //关闭当前网页窗口接口
-                wx.closeWindow();
-                
-           <%}%>
-     
+		   <%--<%--%>
+		   <%--//判断全部名额剩余--%>
+		   <%--//if(t1<0 && t2<0 && t3<0 && t4<0 && t5<0){--%>
+		   <%--if(t1<0){--%>
+		            <%--// 组装文本客服消息--%>
+		 <%--//  String jsonTextMsg =AdvancedUtil.makeTextCustomMessage(openid, "全部奖品已抽完,感谢您对\"中国乐清网\"的关注，请下次再来！");--%>
+		<%--// 发送客服消息--%>
+		 <%--//  AdvancedUtil.sendCustomMessage(accessToken, jsonTextMsg);--%>
+		   <%----%>
+		   <%----%>
+		   <%--%>--%>
+		   <%----%>
+		        <%--alert('全部奖品已抽完,感谢您的关注，请下次再来！');--%>
+                <%--//关闭当前网页窗口接口--%>
+                <%--wx.closeWindow();--%>
+                <%----%>
+           <%--<%}%>--%>
+     <%----%>
 
 		  <%
 		     // 根据起止时间判断是否关闭窗口 ，弹出提醒窗
@@ -147,7 +144,7 @@ function DataLength(fData)
 		  
 		  %>
 		  
-            alert('非常抱歉，抽奖时间已过。感谢您的关注，请下次再来！');
+            alert('非常抱歉，时间已过。感谢您的关注，请下次再来！');
             //关闭当前网页窗口接口
             wx.closeWindow();
 		 
@@ -160,7 +157,7 @@ function DataLength(fData)
 		  
 		  %>
 		  
-           alert('还没开始呢，"开始抽奖时间<%=cc1%>"到"<%=cc2%>"！\n欢迎到时候参与！');
+           alert('还没开始呢，"开始时间<%=cc1%>"到"<%=cc2%>"！\n欢迎到时候参与！');
            //关闭当前网页窗口接口
            wx.closeWindow();
 		 
@@ -415,7 +412,30 @@ function DataLength(fData)
         <td height="20" bgcolor="#FFFFFF"><input  id="xm" name="xm" type="text" class="input-common" placeholder="姓名" pattern=".{2,}"  maxlength="10"  data-err="请正确填写姓名" value=""></td>
         </tr>
 	  </tbody>
-	
+
+    <tbody id="tbXb">
+    <tr>
+        <td height="20" bgcolor="#FFFFFF">
+            <input type="radio" name="xb" value="男" style="width:55px; height:55px;"/>
+            男
+            <input type="radio" name="xb" value="女" style="width:55px; height:55px;"/>
+            女
+        </td>
+    </tr>
+    </tbody>
+
+
+            <tbody id="tbSno">
+            <tr>
+                <td height="20" bgcolor="#FFFFFF"><input  id="sno" name="sno" type="text" class="input-common" placeholder="身份证号" pattern=".{18,}"  maxlength="20"  data-err="请正确填写身份证号" value=""></td>
+            </tr>
+            </tbody>
+
+            <tbody id="tbDw">
+            <tr>
+                <td height="20" bgcolor="#FFFFFF"><input  id="dw" name="dw" type="text" class="input-common" placeholder="工作单位" pattern=".{2,}"  maxlength="20"  data-err="请正确填写工作单位" value=""></td>
+            </tr>
+            </tbody>
 	  
 	 <tbody id="tbTel">
       <tr>
@@ -438,7 +458,7 @@ function DataLength(fData)
 		else%>
 		-->
           <div class="form-btn">
-  <button type="submit" gaevent="imt/account/address/addBtn" class="btn btn-block" id="btn-login" onClick="document.form1.action='tj.jsp';if(DataLength(form1.xm.value)<2){alert('姓名最少2个字');form1.xm.focus();return false};if(DataLength(form1.tel.value)<2){alert('请填写正确的联系方式');form1.tel.focus();return false};document.form1.submit();">提 交</button>
+  <button type="submit" gaevent="imt/account/address/addBtn" class="btn btn-block" id="btn-login" onClick="document.form1.action='tj.jsp';if(DataLength(form1.xm.value)<2){alert('姓名最少2个字');form1.xm.focus();return false};if(DataLength(form1.sno.value)<18){alert('身份证最少18位');form1.sno.focus();return false};if(DataLength(form1.dw.value)<2){alert('工作单位最少2个字');form1.dw.focus();return false};if(DataLength(form1.tel.value)<2){alert('请填写正确的联系方式');form1.tel.focus();return false};document.form1.submit();">提 交</button>
           </div>
           <!--
 		end if%>

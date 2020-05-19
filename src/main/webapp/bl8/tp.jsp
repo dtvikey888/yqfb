@@ -1,5 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="gb2312"%>
-<%@page import="org.fjw.weixin.util.MyUtils22"%>
+<%@page import="org.fjw.weixin.util.MyUtils28"%>
 <%@page import="org.fjw.weixin.util.AllValus"%>
 <%
 String openid = request.getParameter("openid");
@@ -13,7 +13,7 @@ int c7 = new Integer(request.getParameter("c7"));
 int c8 = new Integer(request.getParameter("c8"));
 int c9 = new Integer(request.getParameter("c9"));
 int c10 = new Integer(request.getParameter("c10"));
-int bz=MyUtils22.DtRl(openid,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10);
+int bz=MyUtils28.DtRl(openid,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10);
 //out.println(bz);
 //out.close();
 //AACA BBCC AB

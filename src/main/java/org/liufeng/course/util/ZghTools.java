@@ -2618,6 +2618,33 @@ public class ZghTools {
 
 	}
 
+	//录入
+	public static void Rlk11(String openid){
+		try {
+
+			ZghTools.ClearNull2(openid);
+
+			sql_data db = new sql_data();
+			String sqlpd = "select * from yqfb_openid2 where openid='"+openid+"'";
+			ResultSet rs = db.executeQuery(sqlpd);
+
+			if (!rs.next()) {
+
+				String sql="INSERT INTO yqfb_openid2(openid,fbsj) values ('"+openid+"','"+TimeString.nowTime()+"')";
+				db.executeInsert(sql);
+				System.out.println(sql);
+
+//				String sql2="INSERT INTO daf_dt(openid,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,fbsj) VALUES('oSX6kjlwIvpFGl2Ws8TN5Ggxd7Ak',1,1,1,1,1,1,1,1,1,1,'2019-08-30 16:21:21')";
+//				db.executeInsert(sql2);
+//				System.out.println(sql2);
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
 
 
 

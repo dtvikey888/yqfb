@@ -16,7 +16,7 @@
 		session.setAttribute("twbsession2",user.getOpenId());
 
 		//Èë¿â
-		ZghTools.Rlk9(user.getOpenId());
+		ZghTools.Rlk11(user.getOpenId());
 
 		//out.println("<script>window.location.href='tea/index.jsp?openid="+user.getOpenId()+"'</script>");
 		//response.setHeader("Refresh","1;url=http://www.yqrb.com.cn/yqvod/bmwj/asp/h5/gt30/test.asp?openid="+openid+"");

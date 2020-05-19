@@ -827,7 +827,7 @@ bottom: 10px;
        <button onclick="return processForm(this.form);" type="submit" style="width:100%;padding:15px 15px;border-radius:15px; background:#21457B; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">&nbsp;&nbsp;&nbsp;&nbsp;提&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;交&nbsp;&nbsp;&nbsp;&nbsp;</button>
        <p></p>
 		<%}else{ %>
-		 <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#CC0001; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">您已经参与过,<%="您是第"+MyUtils28.GetWs(openid)+"位参与者,"+MyUtils28.zsm(openid) %></button>
+		 <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#CC0001; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">您已经通过考试,<%="您是第"+MyUtils28.GetWs(openid)+"位参与者,"+AllValus.cg_cx2%></button>
 		<%} %>
 	   <p></p>
 	<input name="openid" type="hidden" id="openid" value="<%=openid%>"/>	<div></div></td>
