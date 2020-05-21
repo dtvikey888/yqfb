@@ -488,7 +488,7 @@
                                                 java.lang.String strPage;
                                                 int i;
 //设置一页显示的记录数
-                                                intPageSize = 100;
+                                                intPageSize = 200;
 //取得待显示页码
                                                 strPage = request.getParameter("page");
                                                 if(strPage==null){//表明在QueryString中没有page这一个参数，此时显示第一页数据
@@ -577,7 +577,7 @@
                                                             <td><span class="style3 style4"><strong>产品名称：</strong><%=title%></span></td>
                                                         </tr>
                                                         <tr>
-                                                            <td height="32"><span class="style3 style4"><strong>直播价格范围：</strong><%=price%></span></td>
+                                                            <td height="32"><span class="style3 style4"><strong>直播价格：</strong><%=price%></span></td>
                                                         </tr>
                                                     </table></td>
                                                 </tr>

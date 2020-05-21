@@ -541,7 +541,7 @@
                         //location.href="<=AllValus.propath%>bl7/cj2.jsp?tel=<=tel%>&openid="+opp+"&zsm="+zj1+" ";
 
                         var mytzurl="<%=AllValus.propath%>bl7/cj2.jsp?tel=<%=tel%>&openid="+opp+"&zsm="+zj1+" ";
-                        setTimeout("top.location.href = '" + mytzurl + "'",3000);
+                        setTimeout("top.location.href = '" + mytzurl + "'",1000);
                         //var truthBeTold = window.confirm(x);
                         //if (truthBeTold) {
                         //window.alert("欢迎访问我们的 Web 页！");

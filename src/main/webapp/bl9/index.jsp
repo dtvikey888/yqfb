@@ -1,14 +1,14 @@
 <%@ page language="java" import="java.util.*" pageEncoding="gb2312"%>
 <%@page import="com.component.Topay"%>
 <%@page import="org.fjw.weixin.util.MyUtils7"%>
+<%@page import="org.fjw.weixin.util.MyUtils26"%>
 <%@page import="org.fjw.weixin.util.AllValus"%>
 <%@page import="org.liufeng.course.util.ZghTools"%>
-<%@ page import="org.fjw.weixin.util.MyUtils28" %>
 <%
 	//控制时间
 	int kz =0;
-	String tt1=AllValus.ws_t1;
-	String tt2=AllValus.ws_t2;
+	String tt1=AllValus.pw_t1;
+	String tt2=AllValus.pw_t2;
     Date c1=MyUtils7.CharDate(tt1);
     Date c2=MyUtils7.CharDate(tt2);
     kz= MyUtils7.TimeKZ(c1,c2);
@@ -20,9 +20,10 @@
 
 <%
 
-String urlname ="bl8/index.jsp";
+String urlname ="bl5/index.jsp";
 String openid =request.getParameter("openid");
 //out.println("openid="+openid);
+
 
 String from=request.getParameter("from");
 
@@ -39,7 +40,7 @@ if(twbsession2!=null){
       
 
    	      if(from!=null){
-              response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet36&response_type=code&scope=snsapi_base&state=1#wechat_redirect");
+              response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet32&response_type=code&scope=snsapi_base&state=1#wechat_redirect");
 
           }
 
@@ -51,7 +52,7 @@ if(twbsession2!=null){
    			
    			//response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet2&response_type=code&scope=snsapi_base&state=STATE&connect_redirect=1#wechat_redirect");        
 
- 			response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet36&response_type=code&scope=snsapi_base&state=1#wechat_redirect");
+ 			response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet32&response_type=code&scope=snsapi_base&state=1#wechat_redirect");
 
 
 
@@ -61,7 +62,7 @@ if(twbsession2!=null){
    
   		    //还没点要回调
             //response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet2&response_type=code&scope=snsapi_userinfo&state=STATE&connect_redirect=1#wechat_redirect");        
-  			response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet36&response_type=code&scope=snsapi_base&state=1#wechat_redirect");
+  			response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet32&response_type=code&scope=snsapi_base&state=1#wechat_redirect");
 
    }
    
@@ -103,13 +104,13 @@ if(twbsession2!=null){
          * 邮件主题：【微信JS-SDK反馈】具体问题
          * 邮件内容说明：用简明的语言描述问题所在，并交代清楚遇到该问题的场景，可附上截屏图片，微信团队会尽快处理你的反馈。
          */
-        wx_share_title="<%=AllValus.ws_title%>";
-        wx_share_desc="<%=AllValus.ws_desc%>";
-        wx_share_link="<%=AllValus.ws_link%>";
-        wx_share_imgUrl="<%=AllValus.ws_img%>";
+        wx_share_title="<%=AllValus.pw_title%>";
+        wx_share_desc="<%=AllValus.pw_desc%>";
+        wx_share_link="<%=AllValus.pw_link%>";
+        wx_share_imgUrl="<%=AllValus.pw_img%>";
 
         wx.config({
-            debug: false,
+                debug: false,
             <%=check%>,// 必填，签名，见附录1
             jsApiList: [
             'updateTimelineShareData',
@@ -164,7 +165,7 @@ if(twbsession2!=null){
 
 
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
-<title><%=AllValus.ws_title %></title>
+<title><%=AllValus.pw_title %></title>
 <meta name="description" content=""/>
 <meta name="viewport" content="initial-scale=0.3, width=device-width, maximum-scale=0.3, user-scalable=no"/>
 <meta name="viewport" content="initial-scale=0.3,user-scalable=no,maximum-scale=0.3" media="(device-height: 568px)"/>
@@ -241,28 +242,40 @@ d{color:#fff;}
 		     // 根据起止时间判断是否关闭窗口 ，弹出提醒窗
 		  // kz=1 开始抽奖(不关) kz=2 抽奖结束(关闭) kz=3 抽奖没开始（关闭）
 		  
-		   if (kz==1){%>
+		   if (kz==1){
+		   
+		   
+		  %>
 		  //alert("开始");
 		  
-		  <%}else if(kz==2){%>
+		  <%}else if(kz==2){
+		   
+		  
+		  %>
 		  
             alert('非常抱歉，答题时间已过。感谢您的关注，请下次再来！');
-            window.location.href="<%=AllValus.errpage5%>";
+            window.location.href="<%=AllValus.errpage3%>";
             
-		  <%}else if(kz==3){%>
+		  <%}else if(kz==3){
 		  
-            alert('还没开始呢，"开始答题时间<%=tt1%>"到"<%=tt2%>"！\n欢迎到时候参与！');
-            window.location.href="<%=AllValus.errpage5%>";
+		  
+		  %>
+		  
+           alert('还没开始呢，"开始答题时间<%=tt1%>"到"<%=tt2%>"！\n欢迎到时候参与！');
+           window.location.href="<%=AllValus.errpage3%>";
           
-		  <%}else{%>
+		  <%}else{
+		      
+		  
+		   %>
 		  
 		     alert('感谢关注！');
            
-		  <%}%>
+		  <%} %>
 
 		</script>
 
-	    <style>
+	<style>
 			 #mcover2 {
 				position: fixed;
 				top: 0;
@@ -555,7 +568,7 @@ bottom: 10px;
     </script>
 </head>
 <body>
-<%int cs = MyUtils28.GetCsForDt(openid);%>
+<%int cs = MyUtils26.GetCsForDt(openid);%>
 <%if(cs>100000){%>
 <div id="mcover" onClick="weChat()" style="display: block;">
           <img src="js/tip.png"/>
@@ -600,205 +613,214 @@ bottom: 10px;
   <tr>
     <td align="center" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="30">
       <tr>
-        <td colspan="2" align="left"><p><strong><div style="line-height:1.8;text-indent:2em;"><%=AllValus.ws_desc%></div></strong></P></td>
+        <td colspan="2" align="left"><p><strong><div style="line-height:1.8;text-indent:2em;"><%=AllValus.pw_desc%></div></strong></P></td>
         </tr>
       <tr>
         <td height="50" colspan="2">
+		  <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#82CBE8; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">活动奖励</button>
+	      <div align="center" style="margin-top:50px;margin-bottom:25px;line-height:1.8">一等奖10份:  50元移动话费</div>
+	      <div align="center" style="margin-top:25px;margin-bottom:25px;line-height:1.8">二等奖20份:  40元移动话费</div>
+	      <div align="center" style="margin-top:25px;margin-bottom:25px;line-height:1.8">三等奖50份:  20元移动话费</div>
+	      <div align="center" style="margin-top:25px;margin-bottom:50px;line-height:1.8">参与奖120份: 10元移动话费</div>
 	      <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#82CBE8; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">活动规则</button>
-          <div style="margin-top:50px;padding-left:12px;line-height:1.8">1、  共有10题，答对其中8道以上就是过关，然后就可以去监督所领证。</div>
-		  <div style="margin-top:25px;padding-left:12px;margin-bottom:25px;line-height:1.8">2、  参与本次活动手机号仅限参加一次，请实名参与。</div>
-		  <div style="margin-top:25px;padding-left:12px;margin-bottom:50px;line-height:1.8">3、  通过考试者请及时到各辖区卫生监督所领取卫生管理员证，联系方式如下：城区所：城东街道晨曦路111号公共卫生中心大楼（609室、61600276）；柳市所：柳市镇溪桥路温州海关驻乐清办事处大院内一楼（内勤室、61723810）；虹桥所：虹桥镇八村村委楼7楼（内勤室、61315889）；大荆所：大荆镇湖边路38号（内勤室、62238150）。</div>
+          <div style="margin-top:50px;padding-left:12px;line-height:1.8">1、  关注“乐清生态环保”微信公众号方可参与活动。</div>
+          <div style="margin-top:50px;padding-left:12px;line-height:1.8">2、  共有10道排污许可基础题，答对其中8道，即可参与刮刮卡抽奖活动；200份话费奖励发完为止。</div>
+		  <div style="margin-top:25px;padding-left:12px;margin-bottom:25px;line-height:1.8">3、  参与本次活动的手机号码必须为乐清移动用户，每个手机号仅限获奖一次，请实名参与。</div>
+		  <div style="margin-top:25px;padding-left:12px;margin-bottom:50px;line-height:1.8">4、  奖励于活动结束之后统一发放。</div>
 		  <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#82CBE8; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">选择题</button>
         </td>
       </tr>
-
+      
       <tr>
         <td>
-
+        
 	<table width="103%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
       <tbody id="tbName" >
       <tr>
-        <td height="20"><p></p><div style="line-height:1.8"><strong>1、国家卫生计生委新版《公共场所卫生管理条例实施细则》于什么时候开始实施？（    ）</strong></div>
+        <td height="20"><p></p><div style="line-height:1.8"><strong>1、根据《固定污染源排污许可分类管理名录（2019年版）》规定了纳入排污许可管理的固定污染源行业范围和管理类别。排污许可管理分为排污许可重点管理、简化管理和登记管理三种类别。所有纳入《管理名录》的现有排污单位，应于（ ）前申请并取得排污许可证或完成排污登记。</strong></div>
           <p><input type="radio" name="c1" value="1" style="width:55px; height:55px;"/>
-		    A. 2010年5月1日</p>
-          <p>
+		    A. 2020年4月30日</p>
+          <p> 
             <input type="radio" name="c1" value="2" style="width:55px; height:55px;"/>
-            B. 2012年5月1日</p>
+            B. 2020年6月30日</p>
           <p style="line-height:1.8">
             <input type="radio" name="c1" value="3" style="width:55px; height:55px;"/>
-            C. 2016年1月19日</p>
+            C. 2020年8月30日</p>
           <p style="line-height:1.8">
             <input type="radio" name="c1" value="4" style="width:55px; height:55px;"/>
-            D. 2017年12月26日</p>
+            D. 2020年9月30日</p>
           </td>
       </tr>
 	  </tbody>
-
-
+	  
+	  
 	  <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>2、公共场所从业人员体检和健康证的有效时间是:_____</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>2、以下工序（ ）不属于《固定污染源排污许可分类管理名录（2019年版）》中涉及通用工序中的表面处理？</strong></div>
           <p><input type="radio" name="c2" value="1" style="width:55px; height:55px;"/>
-		    A. 半年 </p>
-          <p>
+		    A. 酸洗 </p>
+          <p> 
             <input type="radio" name="c2" value="2" style="width:55px; height:55px;"/>
-            B. 一年</p>
+            B. 抛光</p>
           <p>
             <input type="radio" name="c2" value="3" style="width:55px; height:55px;"/>
-            C. 二年</p>
+            C. 喷涂</p>
            <p>
             <input type="radio" name="c2" value="4" style="width:55px; height:55px;"/>
-            D. 三年</p>
+            D. 烘干</p>
           </td>
       </tr>
 	  </tbody>
-
-
+	  
+	  
 	 <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>3、“公共场所卫生许可证”由_____签发。</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>3、全国排污许可证管理信息平台公开端网址为（ ）？</strong></div>
           <p> <input type="radio" name="c3" value="1" style="width:55px; height:55px;"/>
-		    A. 县级以上卫生防疫站</p>
+		    A. http://permit.mee.gov.cn/</p>
           <p>
             <input type="radio" name="c3" value="2" style="width:55px; height:55px;"/>
-            B. 县级以上卫生行政部门</p>
+            B. http://www.sohu.com.cn/</p>
           <p>
             <input type="radio" name="c3" value="3" style="width:55px; height:55px;"/>
-            C. 市级以上卫生防疫站</p>
+            C. http://www.zjzwfw.gov.cn/</p>
           <p>
             <input type="radio" name="c3" value="4" style="width:55px; height:55px;"/>
-            D. 市级以上工商行政部门</p>
+            D. http://www.wenzhou.gov.cn/</p>
         </td>
       </tr>
 	  </tbody>
-
+	  
 	   <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>4、公共场所不得设置（  ）</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>4、生态环境部部署2020年排污许可证核发覆盖所有固定污染源的工作总目标，开展清理整顿和做好排污许可发证登记工作，通过“摸、排、分、清”四个步骤，首批需要清理整顿33个行业需在 （ ）前完成。</strong></div>
           <p> <input type="radio" name="c4" value="1" style="width:55px; height:55px;"/>
-		    A. 自动售套机</p>
+		    A. 2020年4月30日</p>
           <p>
             <input type="radio" name="c4" value="2" style="width:55px; height:55px;"/>
-            B. 自动售烟机</p>
+            B. 2020年6月30日</p>
           <p>
             <input type="radio" name="c4" value="3" style="width:55px; height:55px;"/>
-            C. 自动饮料售卖机</p>
-
+            C. 2020年8月30日</p>
+          <p>
+            <input type="radio" name="c4" value="4" style="width:55px; height:55px;"/>
+            D. 2020年9月30日</p>
 		   </td>
       </tr>
 	  </tbody>
-
+	  
 	  <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>5、个人卫生四勤是指（  ）</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>5、根据《固定污染源排污许可分类管理名录（2019年版）》规定了纳入排污许可管理的固定污染源行业范围和管理类别。排污许可管理不包含以下哪个类别？</strong></div>
           <p> <input type="radio" name="c5" value="1" style="width:55px; height:55px;"/>
-		    A. 勤剪指甲.勤洗手,勤洗澡.勤理发</p>
+		    A. 重点管理</p>
           <p>
             <input type="radio" name="c5" value="2" style="width:55px; height:55px;"/>
-            B. 勤换衣服.勤洗手,勤洗头.勤理发</p>
+            B. 简化管理</p>
           <p>
             <input type="radio" name="c5" value="3" style="width:55px; height:55px;"/>
-            C. 勤洗手,勤洗头.勤理发,勤剪指甲</p>
+            C. 登记管理</p>
           <p>
             <input type="radio" name="c5" value="4" style="width:55px; height:55px;"/>
-            D. 勤洗头,勤洗澡,勤洗衣服,勤剪指甲</p>
+            D. 行政许可</p>
             </td>
       </tr>
 	  </tbody>
-
+	  
 	  <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>6、禁止吸烟公共场所应该履行哪些职责（ ）</strong></div>
-          <p  style="line-height:1.8"><input type="radio" name="c6" value="1" style="width:55px; height:55px;"/>
-		    A. 公共场所经营者应当设置醒目的禁止吸烟警语和标志</p>
-          <p style="line-height:1.8">
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>6、按照“摸、排、分、清”四项工作任务，完成固定污染源清理整顿、2020年排污许可发证和登记，其中 排 指什么？</strong></div>
+          <p><input type="radio" name="c6" value="1" style="width:55px; height:55px;"/>
+		    A. 摸清底数</p>
+          <p>
             <input type="radio" name="c6" value="2" style="width:55px; height:55px;"/>
-            B. 室外公共场所设置的吸烟区不得位于行人必经的通道上</p>
-          <p style="line-height:1.8">
+            B. 排查无证</p>
+          <p>
             <input type="radio" name="c6" value="3" style="width:55px; height:55px;"/>
-            C. 公共场所经营者应当开展吸烟危害健康的宣传，并配备专（兼）职人员对吸烟者进行劝阻</p>
-          <p style="line-height:1.8">
+            C. 分类处置</p>
+          <p>
             <input type="radio" name="c6" value="4" style="width:55px; height:55px;"/>
-            D. 以上都是</p>
+            D. 整改清零</p>
 		  </td>
       </tr>
 	  </tbody>
-
+	
 
 	 <tbody id="tbName">
       <tr>
-          <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>7、公共场所经营者发生违法行为应当承担的法律责任？（  ）</strong></div>
-          <p style="line-height:1.8"><input type="radio" name="c7" value="1" style="width:55px; height:55px;"/>
-		    A. 公共场所经营者违反《公共场所卫生管理条例实施细则》的有关规定，县级以上卫生行政部门依法责令限期改正，给予警告 </p>
-          <p style="line-height:1.8">
-            <input type="radio" name="c7" value="2" style="width:55px; height:55px;"/>
-            B. 根据情节并可处以三万元以下的罚款</p>
-          <p style="line-height:1.8">
-            <input type="radio" name="c7" value="3" style="width:55px; height:55px;"/>
-            C. 情节严重的，可以依法责令停业整顿，直至吊销卫生许可证</p>
+          <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>7、实行登记管理的排污单位，不需要申请取得排污许可证，应当在全国排污许可证管理信息平台填报排污登记表，以下哪项不需填写？</strong></div>
+          <p><input type="radio" name="c7" value="1" style="width:55px; height:55px;"/>
+		    A. 基本信息 </p>
           <p>
-            <input type="radio" name="c7" value="4" style="width:55px; height:55px;"/>
-            D. 以上都是</p>
+            <input type="radio" name="c7" value="2" style="width:55px; height:55px;"/>
+            B. 污染物排放去向</p>
+          <p>
+            <input type="radio" name="c7" value="3" style="width:55px; height:55px;"/>
+            C. 执行的污染物排放标准及采取的污染防治措施</p>
+              <p>
+                  <input type="radio" name="c7" value="4" style="width:55px; height:55px;"/>
+                  D. 自行监测数据</p>
 		</td>
       </tr>
 	  </tbody>
-
-
+	  
+	  
 	 <tbody id="tbName">
       <tr>
-          <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>8、患有以下哪些疾病的人员在治愈前不得从事直接为顾客服务的工作？</strong></div>
-          <p style="line-height:1.8"> <input type="radio" name="c8" value="1" style="width:55px; height:55px;"/>
-		    A. 痢疾、伤寒、化脓性或渗出性皮肤病</p>
+          <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>8、通用工序中，除纳入重点排污单位名录的，除以天然气或者电为能源的加热炉、热处理炉、干燥炉以外的其他工业炉窑，按《固定污染源排污许可分类管理名录（2019年版）》规定，属于 ()</strong></div>
+          <p> <input type="radio" name="c8" value="1" style="width:55px; height:55px;"/>
+		    A. 重点管理</p>
           <p>
             <input type="radio" name="c8" value="2" style="width:55px; height:55px;"/>
-            B. 甲型病毒性肝炎</p>
+            B. 简化管理</p>
           <p>
             <input type="radio" name="c8" value="3" style="width:55px; height:55px;"/>
-            C. 戊型病毒性肝炎</p>
-          <p>
-            <input type="radio" name="c8" value="4" style="width:55px; height:55px;"/>
-            D. 以上全是</p>
+            C. 登记管理</p>
+              <p>
+                  <input type="radio" name="c8" value="4" style="width:55px; height:55px;"/>
+                  D. 行政许可</p>
        </td>
       </tr>
 	  </tbody>
-
-
-
+	  
+	   
+      
 	 <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>9、公共场所发生危害健康事故时，经营者应当立即处置，防止危害扩大，并及时向县级以上人民政府（  ）部门报告？</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>9、根据《固定污染源排污许可分类管理名录（2019年版）》规定，家具制造业，属于简化管理的范围：除重点管理外年使用 （ ）吨及以上溶剂型涂料或者胶粘剂（含稀释剂、固化剂）的、年使用20吨及以上水性涂料或者胶粘剂的，有磷化表面处理工艺的。</strong></div>
           <p> <input type="radio" name="c9" value="1" style="width:55px; height:55px;"/>
-		    A. 卫生行政</p>
+		    A. 5</p>
           <p>
             <input type="radio" name="c9" value="2" style="width:55px; height:55px;"/>
-            B. 工商管理</p>
+            B. 10</p>
           <p>
             <input type="radio" name="c9" value="3" style="width:55px; height:55px;"/>
-            C. 城市管理与行政执法</p>
+            C. 15</p>
             <p>
              <input type="radio" name="c9" value="4" style="width:55px; height:55px;"/>
-            D. 税务管理</p>
+            D. 20</p>
        </td>
       </tr>
 	  </tbody>
-
-
-
+	  
+	  
+	    
 	 <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>10、公共场所经营者应当加强自身管理，制订卫生检查计划，规定检查时间、项目等，检查服务过程卫生状况并记录，对不符合卫生要求的行为及时制止并提出处理意见。每（     ）月至少有一次全面自查记录。</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>10、根据《固定污染源排污许可分类管理名录（2019年版）》规定，有色金属压延加工行业，有轧制或者退火工艺的，属于（ ）。</strong></div>
           <p> <input type="radio" name="c10" value="1" style="width:55px; height:55px;"/>
-		    A. 1</p>
+		    A. 重点管理</p>
           <p>
             <input type="radio" name="c10" value="2" style="width:55px; height:55px;"/>
-            B. 2</p>
+            B. 简化管理</p>
           <p>
             <input type="radio" name="c10" value="3" style="width:55px; height:55px;"/>
-            C. 3</p>
-          <p>
-            <input type="radio" name="c10" value="4" style="width:55px; height:55px;"/>
-            D. 4</p>
+            C. 登记管理</p>
+            <p>
+                <input type="radio" name="c10" value="4" style="width:55px; height:55px;"/>
+                D. 行政许可</p>
 
+            <div  class="right_top" style="float:right" onClick="window.location.href='memo.jsp'"><img src="img/xxzl2.png" border="0"></div>
        </td>
       </tr>
 	  </tbody>
@@ -820,14 +842,14 @@ bottom: 10px;
     <td height="115" align="center" valign="middle"><table width="95%" height="75" border="0" cellpadding="0" cellspacing="0">
       <tr>
         <td align="center">
-        <%if(!MyUtils28.iscj_pd(openid)){%>
+        <%if(!MyUtils26.iscj_pd(openid)){%>
         <!--  
         <input target="_self" type="image" border="0" name="sub22" src="img/tp3.png" width=100% height=80  onclick="return processForm(this.form);"/>
         -->
        <button onclick="return processForm(this.form);" type="submit" style="width:100%;padding:15px 15px;border-radius:15px; background:#21457B; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">&nbsp;&nbsp;&nbsp;&nbsp;提&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;交&nbsp;&nbsp;&nbsp;&nbsp;</button>
        <p></p>
 		<%}else{ %>
-		 <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#CC0001; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">您已经通过考试,<%="您是第"+MyUtils28.GetWs(openid)+"位参与者"%></button>
+		 <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#CC0001; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">您已经参与过,<%="您是第"+MyUtils26.GetWs(openid)+"位参与者,"+MyUtils26.zsm(openid) %></button>  
 		<%} %>
 	   <p></p>
 	<input name="openid" type="hidden" id="openid" value="<%=openid%>"/>	<div></div></td>

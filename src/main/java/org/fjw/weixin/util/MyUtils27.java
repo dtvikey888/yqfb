@@ -392,6 +392,7 @@ public class MyUtils27 {
 	//第几位参加者
 	public static int GetWs(String openid){
 		int ws = 0;
+		int ws2 = 0;
 		try {
 			MysqlDB db = new MysqlDB();
 			int zloid = ZghTools.GetZlOid2(openid);
@@ -400,12 +401,12 @@ public class MyUtils27 {
 			if (rs.next()) {
 
 				ws = new Integer(rs.getString(1));
-
+				ws2=ws+1000;
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return ws;
+		return ws2;
 	}
 
 	//第几位参加者
@@ -413,7 +414,7 @@ public class MyUtils27 {
 		String ws="";
 
         if(ZghTools.getPs(openid)>0){
-			ws=AllValus.zb_title+",您是第"+MyUtils27.GetWs(openid)+"位助力人";
+			ws=AllValus.zb_title+"您是第"+MyUtils27.GetWs(openid)+"位助力人";
 
 		}else{
 
@@ -467,8 +468,8 @@ public class MyUtils27 {
 						sy=0;
 					}else {
 						//一等奖2
-						if(TimeString.nowTime().indexOf("2020-05-21")!=-1){
-							sy = 1 -zjs;
+						if(TimeString.nowTime().indexOf("2020-05-20")!=-1){
+							sy = 0 -zjs;
 						}else {
 							sy = 0;
 						}
@@ -483,7 +484,7 @@ public class MyUtils27 {
 					}else {
 						//3
 						if(TimeString.nowTime().indexOf("2020-05-20")!=-1){
-							sy = 1 -zjs;
+							sy = 2 -zjs;
 						}else {
 							sy = 0;
 						}
@@ -519,7 +520,7 @@ public class MyUtils27 {
 						if(TimeString.nowTime().indexOf("2020-05-20")!=-1){
 							sy = 50 -zjs;
 						}else if(TimeString.nowTime().indexOf("2020-05-21")!=-1){
-							sy = 50 -zjs;
+							sy = 60 -zjs;
 						}else {
 							sy = 0;
 						}

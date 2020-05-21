@@ -110,7 +110,7 @@ public class AllValus {
     public static String pw_img="http://v.yqcn.com/yqfb/bl5/img/IMG_TOP3.png";
 
     //市长直播带货转发朋友圈标题等
-    public static String zb_title="买买买，一起为乐清加油";
+    public static String zb_title="买买买，一起为乐清加油！";
     public static String zb_desc="为助推乐清经济发展，对冲疫情对经济发展的不良影响，乐清市将开展乐清京东直播节。乐清日报社根据有关情况，策划直播预热活动。一方面可以提前造势，为直播营造良好的氛围。另一方面，可以借助媒体渠道提前与网友进行互动，为直播提供一定的数据参考。";
     public static String zb_link="http://www.yqrb.com.cn/yqfb/bl7/index.jsp";
     public static String zb_img="http://v.yqcn.com/yqfb/bl7/img/logo.png";
@@ -165,10 +165,10 @@ public class AllValus {
 
 
     //市长京东直播奖项
-    public static int  zbjx1 = 1; //价值400元的车载冰箱 2份
-    public static int  zbjx2 = 1; //价值300元华为智慧音响，3份
+    public static int  zbjx1 = 0; //价值400元的车载冰箱 2份
+    public static int  zbjx2 = 2; //价值300元华为智慧音响，3份
     public static int  zbjx3 = 10; //价值100元的充电式电扇，共15台
-    public static int  zbjx4 = 100; //价值20元的雨伞，共110把
+    public static int  zbjx4 = 110; //价值20元的雨伞，共110把
 //   public static int  zbjx5 = 600; //5等奖5 750名
 
 
