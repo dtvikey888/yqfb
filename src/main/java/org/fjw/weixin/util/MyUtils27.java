@@ -401,7 +401,7 @@ public class MyUtils27 {
 			if (rs.next()) {
 
 				ws = new Integer(rs.getString(1));
-				ws2=ws+1000;
+				ws2=ws+4898;
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
