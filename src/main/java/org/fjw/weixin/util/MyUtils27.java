@@ -502,7 +502,7 @@ public class MyUtils27 {
 						if(TimeString.nowTime().indexOf("2020-05-20")!=-1){
 							sy = 5 -zjs;
 						}else if(TimeString.nowTime().indexOf("2020-05-21")!=-1){
-							sy = 5 -zjs;
+							sy = 8 -zjs;
 						}else {
 							sy = 0;
 						}

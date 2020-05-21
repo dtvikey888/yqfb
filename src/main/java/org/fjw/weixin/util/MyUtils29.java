@@ -424,13 +424,9 @@ public class MyUtils29 {
 					if (MyUtils29.GetTotalSY(zsm)<=0) {//比如 一等奖的奖项总数 - 所有中了一等奖的人 <= 0  那么就是说1等奖的所有名额没了,就把标志变为0
 						sy=0;
 					}else {
-						//一等奖10
-						if(TimeString.nowTime().indexOf("2020-05-07")!=-1){
-							sy = 3 -zjs;
-						}else if(TimeString.nowTime().indexOf("2020-05-08")!=-1){
-							sy = 3 -zjs;
-						}else if(TimeString.nowTime().indexOf("2020-05-09")!=-1){
-							sy = 4 -zjs;
+						//一等奖100
+						if(TimeString.nowTime().indexOf("2020-05-21")!=-1){
+							sy = 1 -zjs;
 						}else {
 							sy = 0;
 						}
@@ -443,13 +439,9 @@ public class MyUtils29 {
 					if (MyUtils29.GetTotalSY(zsm)<=0) {//比如 二等奖的奖项总数 - 所有中了二等奖的人 <= 0  那么就是说2等奖的所有名额没了 ,就把标志变为0
 						sy=0;
 					}else {
-						//20
-						if(TimeString.nowTime().indexOf("2020-05-07")!=-1){
-							sy = 7 -zjs;
-						}else if(TimeString.nowTime().indexOf("2020-05-08")!=-1){
-							sy = 6 -zjs;
-						}else if(TimeString.nowTime().indexOf("2020-05-09")!=-1){
-							sy = 7 -zjs;
+						//200
+						if(TimeString.nowTime().indexOf("2020-05-21")!=-1){
+							sy = 1 -zjs;
 						}else {
 							sy = 0;
 						}
@@ -463,13 +455,9 @@ public class MyUtils29 {
 					if (MyUtils29.GetTotalSY(zsm)<=0) {//比如 三等奖的奖项总数 - 所有中了三等奖的人 <= 0  那么就是说3等奖的所有名额没了 ,就把标志变为0
 						sy=0;
 					}else {
-						//3等奖50
-						if(TimeString.nowTime().indexOf("2020-05-07")!=-1){
-							sy = 17 -zjs;
-						}else if(TimeString.nowTime().indexOf("2020-05-08")!=-1){
-							sy = 17 -zjs;
-						}else if(TimeString.nowTime().indexOf("2020-05-09")!=-1){
-							sy = 16 -zjs;
+						//3等奖200
+						if(TimeString.nowTime().indexOf("2020-05-21")!=-1){
+							sy = 1 -zjs;
 						}else {
 							sy = 0;
 						}
@@ -483,13 +471,9 @@ public class MyUtils29 {
 					if (MyUtils29.GetTotalSY(zsm)<=0) {//比如 4等奖的奖项总数 - 所有中了4等奖的人 <= 0  那么就是说4等奖的所有名额没了 ,就把标志变为0
 						sy=0;
 					}else {
-						//4等奖120
-						if(TimeString.nowTime().indexOf("2020-05-07")!=-1){
-							sy = 40 -zjs;
-						}else if(TimeString.nowTime().indexOf("2020-05-08")!=-1){
-							sy = 40 -zjs;
-						}else if(TimeString.nowTime().indexOf("2020-05-09")!=-1){
-							sy = 40 -zjs;
+						//4等奖400
+						if(TimeString.nowTime().indexOf("2020-05-21")!=-1){
+							sy = 1 -zjs;
 						}else {
 							sy = 0;
 						}

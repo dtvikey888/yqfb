@@ -1,12 +1,12 @@
 <%@ page language="java" import="java.util.*" pageEncoding="gb2312"%>
 <%@ page import="com.component.*"%>
-<%@page import="org.fjw.weixin.util.MyUtils26"%>
+<%@page import="org.fjw.weixin.util.MyUtils29"%>
 <%@page import="org.fjw.weixin.util.AllValus"%>
 
 <%
 
 String openid = request.getParameter("openid");
-String urlname = "bl5/cj2.jsp";
+String urlname = "bl9/cj2.jsp";
 
 //String xm = MyUtils2.codetoString(request.getParameter("xm"));
 //String xm = request.getParameter("xm");
@@ -23,13 +23,13 @@ String check=Topay.WxJsApiCheck5(urlname,openid,zsm);
 
  <%
     //这里开始提交用户数据
-    int fhz = MyUtils26.StartCJLR2(tel,openid,zsm);
+    int fhz = MyUtils29.StartCJLR2(tel,openid,zsm);
     //1 已经抽过奖(提交数据失败，然后关闭页面) 2.提交数据成功,然后关闭页面.
   %>
   
    <%
 	 //中了什么奖
-	 String zsm22 = MyUtils26.zsm(openid);
+	 String zsm22 = MyUtils29.zsm(openid);
    %>
 	  
 
@@ -37,7 +37,7 @@ String check=Topay.WxJsApiCheck5(urlname,openid,zsm);
 <html>
 	<head>
 
-    <title><%=AllValus.pw_title %></title>
+    <title><%=AllValus.jk_title %></title>
 	 
 	<meta name="description" content="">
     <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">

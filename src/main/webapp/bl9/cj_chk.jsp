@@ -1,17 +1,17 @@
 <%@ page language="java" import="java.util.*" pageEncoding="gb2312"%>
 <%@ page import="com.component.*"%>
 <%@page import="org.fjw.weixin.util.MyUtils2"%>
-<%@page import="org.fjw.weixin.util.MyUtils26"%>
+<%@page import="org.fjw.weixin.util.MyUtils29"%>
 <%@page import="org.fjw.weixin.util.AllValus"%>
 <%@page import="org.fjw.weixin.util.MathRandom4"%>
 <%
 
 String openid = request.getParameter("openid");
-String urlname = "bl5/cj_chk.jsp";
+String urlname = "bl9/cj_chk.jsp";
 //String xm = MyUtils2.codetoString(request.getParameter("xm"));
 String xm = request.getParameter("xm");
 String tel = request.getParameter("tel");
-String bh = MyUtils26.GetNextBH();
+String bh = MyUtils29.GetNextBH();
 
 System.out.println("openid="+openid);
 System.out.println("urlname="+urlname);
@@ -22,7 +22,7 @@ String check=Topay.WxJsApiCheck3(urlname);
 
  <%
     //这里开始提交用户数据
-    int bz = MyUtils26.StartCJBM(openid,xm,tel,bh);
+    int bz = MyUtils29.StartCJBM(openid,xm,tel,bh);
     //1 已经抽过奖(提交数据失败，然后关闭页面) 2.提交数据成功,留在本页面 就是抽奖页面. 3.已经存在相同手机号
      if(bz==3){
 
@@ -34,7 +34,7 @@ String check=Topay.WxJsApiCheck3(urlname);
 <html>
 	<head>
 
-	 <title><%=AllValus.pw_title %></title>
+	 <title><%=AllValus.jk_title %></title>
 
 	<meta name="description" content="">
     <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
@@ -73,8 +73,8 @@ String check=Topay.WxJsApiCheck3(urlname);
 	 <%
 	//控制时间
 	int kz =0;
-	String cc1=AllValus.pw_t1;
-	String cc2=AllValus.pw_t2;
+	String cc1=AllValus.jk_t1;
+	String cc2=AllValus.jk_t2;
     Date c1=MyUtils2.CharDate(cc1);
     Date c2=MyUtils2.CharDate(cc2);
     kz= MyUtils2.TimeKZ(c1,c2);
@@ -87,18 +87,18 @@ String check=Topay.WxJsApiCheck3(urlname);
 	 <%
 
 	 //中了什么奖
-	// String zsm = MyUtils26.zsm(openid);
+	// String zsm = MyUtils29.zsm(openid);
 	  %>
 
 	   <%
 
 //各个奖项总剩余
 
-int t1 = MyUtils26.sy1(); //一等奖总数剩余名额
-int t2 = MyUtils26.sy2(); //二等奖总数剩余名额
-int t3 = MyUtils26.sy3(); //三等奖总数剩余名额
-int t4 = MyUtils26.sy4(); //四等奖总数剩余名额
-//int t5 = MyUtils26.sy5();
+int t1 = MyUtils29.sy1(); //一等奖总数剩余名额
+int t2 = MyUtils29.sy2(); //二等奖总数剩余名额
+int t3 = MyUtils29.sy3(); //三等奖总数剩余名额
+int t4 = MyUtils29.sy4(); //四等奖总数剩余名额
+//int t5 = MyUtils29.sy5();
 
 
 
@@ -115,11 +115,11 @@ System.out.println(t4);
 
 //各个奖项每天的剩余 <=0 表示没了
 
-int day_sy1 = MyUtils26.TodaySY(1); //一等奖当天剩余名额
-int day_sy2 = MyUtils26.TodaySY(2); //二等奖当天剩余名额
-int day_sy3 = MyUtils26.TodaySY(3); //三等奖当天剩余名额
-int day_sy4 = MyUtils26.TodaySY(4);
-//int day_sy5 = MyUtils26.TodaySY(5);
+int day_sy1 = MyUtils29.TodaySY(1); //一等奖当天剩余名额
+int day_sy2 = MyUtils29.TodaySY(2); //二等奖当天剩余名额
+int day_sy3 = MyUtils29.TodaySY(3); //三等奖当天剩余名额
+int day_sy4 = MyUtils29.TodaySY(4);
+//int day_sy5 = MyUtils29.TodaySY(5);
 
 
 System.out.println(day_sy1);
@@ -285,10 +285,10 @@ System.out.println(day_sy1);
 
 
   <input type="hidden" name="opp" id="opp" value="<%=openid %>">
-  <input type="hidden" name="day_sy1" id="day_sy1" value="<%=day_sy1%>">
-  <input type="hidden" name="day_sy2" id="day_sy2" value="<%=day_sy2%>">
-  <input type="hidden" name="day_sy3" id="day_sy3" value="<%=day_sy3%>">
-  <input type="hidden" name="day_sy4" id="day_sy4" value="<%=day_sy4%>">
+  <input type="text" name="day_sy1" id="day_sy1" value="<%=day_sy1%>">
+  <input type="text" name="day_sy2" id="day_sy2" value="<%=day_sy2%>">
+  <input type="text" name="day_sy3" id="day_sy3" value="<%=day_sy3%>">
+  <input type="text" name="day_sy4" id="day_sy4" value="<%=day_sy4%>">
 
 
   <!--
@@ -353,34 +353,58 @@ switch (num)
 {
 
     case 0:
-        if(day_sy1<=0){
-            num2=4;
-        }else{
+        if(day_sy1>0){
             num2=0;
+        }else if(day_sy2>0){
+            num2=1;
+        }else if(day_sy3>0){
+            num2=2;
+        }else if(day_sy4>0){
+            num2=3;
+        }else{
+            num2=4;
         }
         break;
 
     case 1:
-        if(day_sy2<=0){
-            num2=4;
-        }else{
+        if(day_sy2>0){
             num2=1;
+        }else if(day_sy1>0){
+            num2=0;
+        }else if(day_sy3>0){
+            num2=2;
+        }else if(day_sy4>0){
+            num2=3;
+        }else{
+            num2=4;
         }
         break;
 
     case 2:
-        if(day_sy3<=0){
-            num2=4;
-        }else{
+        if(day_sy3>0){
             num2=2;
+        }else if(day_sy1>0){
+            num2=0;
+        }else if(day_sy2>0){
+            num2=1;
+        }else if(day_sy4>0){
+            num2=3;
+        }else{
+            num2=4;
         }
         break;
 
     case 3:
-        if(day_sy4<=0){
-            num2=4;
-        }else{
+        if(day_sy4>0){
             num2=3;
+        }else if(day_sy1>0){
+            num2=0;
+        }else if(day_sy2>0){
+            num2=1;
+        }else if(day_sy3>0){
+            num2=2;
+        }else{
+            num2=4;
         }
         break;
 
@@ -530,7 +554,7 @@ function bodys(height,width){
 
                     //利用对话框返回的值 （true 或者 false）
 
-                    location.href="<%=AllValus.propath%>bl5/cj2.jsp?tel=<%=tel%>&openid="+opp+"&zsm="+zj1+" ";
+                    location.href="<%=AllValus.propath%>bl9/cj2.jsp?tel=<%=tel%>&openid="+opp+"&zsm="+zj1+" ";
 
                     //var truthBeTold = window.confirm(x);
 					//if (truthBeTold) {

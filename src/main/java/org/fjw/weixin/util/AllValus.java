@@ -125,9 +125,9 @@ public class AllValus {
     public static String ws_link="http://www.yqrb.com.cn/yqfb/bl8/index.jsp";
     public static String ws_img="http://v.yqcn.com/yqfb/bl8/img/IMG_TOP3.png";
 
-    //排污转发朋友圈标题等
-    public static String jk_title="排污许可有奖问答活动";
-    public static String jk_desc="为贯彻落实国家、省、市政府的决策部署，实现固定污染源排污许可全覆盖，帮助大家了解排污许可制相关政策法规和技术规范要求，做好申领登记工作。温州市生态环境局乐清分局开展排污许可发证登记知识问答有奖活动，欢迎广大市民积极参加答题。";
+    //庆祝中国计生协成立40周年转发朋友圈标题等
+    public static String jk_title="庆祝中国计生协成立40周年暨5.29会员活动日答题";
+    public static String jk_desc="庆祝中国计生协成立40周年暨5.29会员活动日答题";
     public static String jk_link="http://www.yqrb.com.cn/yqfb/bl9/index.jsp";
     public static String jk_img="http://v.yqcn.com/yqfb/bl9/img/IMG_TOP3.png";
 
@@ -151,7 +151,7 @@ public class AllValus {
     public static String ws_t1="2020-04-07 00:00:00";
     public static String ws_t2="2028-08-10 00:00:00";
 
-    //健康局抽奖2起止时间 5.7-5.9
+    //庆祝中国计生协成立40周年抽奖起止时间
     public static String jk_t1="2020-04-07 00:00:00";
     public static String jk_t2="2020-08-10 00:00:00";
 
@@ -160,7 +160,6 @@ public class AllValus {
     public static int  lpgg2 = 30; //30话费 30份
     public static int  lpgg3 = 50; //20元话费 50名
     public static int  lpgg4 = 260; //10元话费 210名
-//   public static int  lpgg5 = 600; //5等奖5 750名
 
     //文广新局奖项
     public static int  lptg1 = 0; //特等奖 1名：  价值4999元   华为手机
@@ -175,22 +174,19 @@ public class AllValus {
     public static int  pwjx2 = 20; //40话费 20份
     public static int  pwjx3 = 50; //20元话费 50名
     public static int  pwjx4 = 120; //10元话费 120名
-//   public static int  pwjx5 = 600; //5等奖5 750名
 
 
     //市长京东直播奖项
     public static int  zbjx1 = 0; //价值400元的车载冰箱 2份
     public static int  zbjx2 = 2; //价值300元华为智慧音响，3份
-    public static int  zbjx3 = 10; //价值100元的充电式电扇，共15台
+    public static int  zbjx3 = 13; //价值100元的充电式电扇，共15台
     public static int  zbjx4 = 110; //价值20元的雨伞，共110把
-//   public static int  zbjx5 = 600; //5等奖5 750名
 
-    //健康局2奖项
-    public static int  jkjx1 = 10; //50话费 10份
-    public static int  jkjx2 = 20; //40话费 20份
-    public static int  jkjx3 = 50; //20元话费 50名
-    public static int  jkjx4 = 120; //10元话费 120名
-//   public static int  pwjx5 = 600; //5等奖5 750名
+    //庆祝中国计生协成立40周年奖项
+    public static int  jkjx1 = 1; //20话费 100份
+    public static int  jkjx2 = 1; //15话费 200份
+    public static int  jkjx3 = 1; //10元话费 200名
+    public static int  jkjx4 = 1; //5元话费 400名
 
 
 
