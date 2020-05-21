@@ -1,14 +1,14 @@
-<%@ page language="java" import="java.util.*" pageEncoding="gb2312"%>
+<%@page language="java" import="java.util.*" pageEncoding="gb2312"%>
 <%@page import="com.component.Topay"%>
 <%@page import="org.fjw.weixin.util.MyUtils7"%>
-<%@page import="org.fjw.weixin.util.MyUtils26"%>
+<%@page import="org.fjw.weixin.util.MyUtils29"%>
 <%@page import="org.fjw.weixin.util.AllValus"%>
 <%@page import="org.liufeng.course.util.ZghTools"%>
 <%
 	//控制时间
 	int kz =0;
-	String tt1=AllValus.pw_t1;
-	String tt2=AllValus.pw_t2;
+	String tt1=AllValus.jk_t1;
+	String tt2=AllValus.jk_t2;
     Date c1=MyUtils7.CharDate(tt1);
     Date c2=MyUtils7.CharDate(tt2);
     kz= MyUtils7.TimeKZ(c1,c2);
@@ -20,7 +20,7 @@
 
 <%
 
-String urlname ="bl5/index.jsp";
+String urlname ="bl9/index.jsp";
 String openid =request.getParameter("openid");
 //out.println("openid="+openid);
 
@@ -40,7 +40,7 @@ if(twbsession2!=null){
       
 
    	      if(from!=null){
-              response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet32&response_type=code&scope=snsapi_base&state=1#wechat_redirect");
+              response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet37&response_type=code&scope=snsapi_base&state=1#wechat_redirect");
 
           }
 
@@ -52,7 +52,7 @@ if(twbsession2!=null){
    			
    			//response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet2&response_type=code&scope=snsapi_base&state=STATE&connect_redirect=1#wechat_redirect");        
 
- 			response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet32&response_type=code&scope=snsapi_base&state=1#wechat_redirect");
+ 			response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet37&response_type=code&scope=snsapi_base&state=1#wechat_redirect");
 
 
 
@@ -62,7 +62,7 @@ if(twbsession2!=null){
    
   		    //还没点要回调
             //response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet2&response_type=code&scope=snsapi_userinfo&state=STATE&connect_redirect=1#wechat_redirect");        
-  			response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet32&response_type=code&scope=snsapi_base&state=1#wechat_redirect");
+  			response.setHeader("Refresh","1;url=https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appid+"&redirect_uri=http%3a%2f%2f"+ympath+"%2fyqfb%2fOAuthServlet37&response_type=code&scope=snsapi_base&state=1#wechat_redirect");
 
    }
    
@@ -104,13 +104,13 @@ if(twbsession2!=null){
          * 邮件主题：【微信JS-SDK反馈】具体问题
          * 邮件内容说明：用简明的语言描述问题所在，并交代清楚遇到该问题的场景，可附上截屏图片，微信团队会尽快处理你的反馈。
          */
-        wx_share_title="<%=AllValus.pw_title%>";
-        wx_share_desc="<%=AllValus.pw_desc%>";
-        wx_share_link="<%=AllValus.pw_link%>";
-        wx_share_imgUrl="<%=AllValus.pw_img%>";
+        wx_share_title="<%=AllValus.jk_title%>";
+        wx_share_desc="<%=AllValus.jk_desc%>";
+        wx_share_link="<%=AllValus.jk_link%>";
+        wx_share_imgUrl="<%=AllValus.jk_img%>";
 
         wx.config({
-                debug: false,
+            debug: false,
             <%=check%>,// 必填，签名，见附录1
             jsApiList: [
             'updateTimelineShareData',
@@ -165,7 +165,7 @@ if(twbsession2!=null){
 
 
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
-<title><%=AllValus.pw_title %></title>
+<title><%=AllValus.jk_title %></title>
 <meta name="description" content=""/>
 <meta name="viewport" content="initial-scale=0.3, width=device-width, maximum-scale=0.3, user-scalable=no"/>
 <meta name="viewport" content="initial-scale=0.3,user-scalable=no,maximum-scale=0.3" media="(device-height: 568px)"/>
@@ -254,7 +254,7 @@ d{color:#fff;}
 		  %>
 		  
             alert('非常抱歉，答题时间已过。感谢您的关注，请下次再来！');
-            window.location.href="<%=AllValus.errpage3%>";
+            window.location.href="<%=AllValus.errpage6%>";
             
 		  <%}else if(kz==3){
 		  
@@ -262,7 +262,7 @@ d{color:#fff;}
 		  %>
 		  
            alert('还没开始呢，"开始答题时间<%=tt1%>"到"<%=tt2%>"！\n欢迎到时候参与！');
-           window.location.href="<%=AllValus.errpage3%>";
+           window.location.href="<%=AllValus.errpage6%>";
           
 		  <%}else{
 		      
@@ -568,7 +568,7 @@ bottom: 10px;
     </script>
 </head>
 <body>
-<%int cs = MyUtils26.GetCsForDt(openid);%>
+<%int cs = MyUtils29.GetCsForDt(openid);%>
 <%if(cs>100000){%>
 <div id="mcover" onClick="weChat()" style="display: block;">
           <img src="js/tip.png"/>
@@ -613,7 +613,7 @@ bottom: 10px;
   <tr>
     <td align="center" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="30">
       <tr>
-        <td colspan="2" align="left"><p><strong><div style="line-height:1.8;text-indent:2em;"><%=AllValus.pw_desc%></div></strong></P></td>
+        <td colspan="2" align="left"><p><strong><div style="line-height:1.8;text-indent:2em;"><%=AllValus.jk_desc%></div></strong></P></td>
         </tr>
       <tr>
         <td height="50" colspan="2">
@@ -623,8 +623,7 @@ bottom: 10px;
 	      <div align="center" style="margin-top:25px;margin-bottom:25px;line-height:1.8">三等奖50份:  20元移动话费</div>
 	      <div align="center" style="margin-top:25px;margin-bottom:50px;line-height:1.8">参与奖120份: 10元移动话费</div>
 	      <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#82CBE8; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">活动规则</button>
-          <div style="margin-top:50px;padding-left:12px;line-height:1.8">1、  关注“乐清生态环保”微信公众号方可参与活动。</div>
-          <div style="margin-top:50px;padding-left:12px;line-height:1.8">2、  共有10道排污许可基础题，答对其中8道，即可参与刮刮卡抽奖活动；200份话费奖励发完为止。</div>
+          <div style="margin-top:50px;padding-left:12px;line-height:1.8">1、  共有10道排污许可基础题，答对其中8道，即可参与刮刮卡抽奖活动；200份话费奖励发完为止。</div>
 		  <div style="margin-top:25px;padding-left:12px;margin-bottom:25px;line-height:1.8">3、  参与本次活动的手机号码必须为乐清移动用户，每个手机号仅限获奖一次，请实名参与。</div>
 		  <div style="margin-top:25px;padding-left:12px;margin-bottom:50px;line-height:1.8">4、  奖励于活动结束之后统一发放。</div>
 		  <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#82CBE8; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">选择题</button>
@@ -637,18 +636,15 @@ bottom: 10px;
 	<table width="103%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
       <tbody id="tbName" >
       <tr>
-        <td height="20"><p></p><div style="line-height:1.8"><strong>1、根据《固定污染源排污许可分类管理名录（2019年版）》规定了纳入排污许可管理的固定污染源行业范围和管理类别。排污许可管理分为排污许可重点管理、简化管理和登记管理三种类别。所有纳入《管理名录》的现有排污单位，应于（ ）前申请并取得排污许可证或完成排污登记。</strong></div>
+        <td height="20"><p></p><div style="line-height:1.8"><strong>1、计划生育协会属于什么组织？（  ）</strong></div>
           <p><input type="radio" name="c1" value="1" style="width:55px; height:55px;"/>
-		    A. 2020年4月30日</p>
+		    A. 群团组织</p>
           <p> 
             <input type="radio" name="c1" value="2" style="width:55px; height:55px;"/>
-            B. 2020年6月30日</p>
+            B. 群体组织</p>
           <p style="line-height:1.8">
             <input type="radio" name="c1" value="3" style="width:55px; height:55px;"/>
-            C. 2020年8月30日</p>
-          <p style="line-height:1.8">
-            <input type="radio" name="c1" value="4" style="width:55px; height:55px;"/>
-            D. 2020年9月30日</p>
+            C. 公益组织</p>
           </td>
       </tr>
 	  </tbody>
@@ -656,18 +652,15 @@ bottom: 10px;
 	  
 	  <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>2、以下工序（ ）不属于《固定污染源排污许可分类管理名录（2019年版）》中涉及通用工序中的表面处理？</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>2、计生协的“会员活动日”是每年的（  ）</strong></div>
           <p><input type="radio" name="c2" value="1" style="width:55px; height:55px;"/>
-		    A. 酸洗 </p>
+		    A. 1月29日 </p>
           <p> 
             <input type="radio" name="c2" value="2" style="width:55px; height:55px;"/>
-            B. 抛光</p>
+            B. 3月29日</p>
           <p>
             <input type="radio" name="c2" value="3" style="width:55px; height:55px;"/>
-            C. 喷涂</p>
-           <p>
-            <input type="radio" name="c2" value="4" style="width:55px; height:55px;"/>
-            D. 烘干</p>
+            C. 5月29日</p>
           </td>
       </tr>
 	  </tbody>
@@ -675,72 +668,60 @@ bottom: 10px;
 	  
 	 <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>3、全国排污许可证管理信息平台公开端网址为（ ）？</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>3、今年5月29日是中国计生协成立（  ）周年纪念日，也是计生协第（  ）个“会员活动日”</strong></div>
           <p> <input type="radio" name="c3" value="1" style="width:55px; height:55px;"/>
-		    A. http://permit.mee.gov.cn/</p>
+		    A. 40  22</p>
           <p>
             <input type="radio" name="c3" value="2" style="width:55px; height:55px;"/>
-            B. http://www.sohu.com.cn/</p>
+            B. 38  20</p>
           <p>
             <input type="radio" name="c3" value="3" style="width:55px; height:55px;"/>
-            C. http://www.zjzwfw.gov.cn/</p>
-          <p>
-            <input type="radio" name="c3" value="4" style="width:55px; height:55px;"/>
-            D. http://www.wenzhou.gov.cn/</p>
+            C. 40  20</p>
         </td>
       </tr>
 	  </tbody>
 	  
 	   <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>4、生态环境部部署2020年排污许可证核发覆盖所有固定污染源的工作总目标，开展清理整顿和做好排污许可发证登记工作，通过“摸、排、分、清”四个步骤，首批需要清理整顿33个行业需在 （ ）前完成。</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>4、从国际通用的老龄化标准来看，如果一个国家或地区60岁以上的老年人口，占到了该国家和地区人口总数的（  ），就意味着这个国家和地区的人口整体处于老龄化的阶段。</strong></div>
           <p> <input type="radio" name="c4" value="1" style="width:55px; height:55px;"/>
-		    A. 2020年4月30日</p>
+		    A. 10%</p>
           <p>
             <input type="radio" name="c4" value="2" style="width:55px; height:55px;"/>
-            B. 2020年6月30日</p>
+            B. 15%</p>
           <p>
             <input type="radio" name="c4" value="3" style="width:55px; height:55px;"/>
-            C. 2020年8月30日</p>
-          <p>
-            <input type="radio" name="c4" value="4" style="width:55px; height:55px;"/>
-            D. 2020年9月30日</p>
+            C. 20%</p>
 		   </td>
       </tr>
 	  </tbody>
 	  
 	  <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>5、根据《固定污染源排污许可分类管理名录（2019年版）》规定了纳入排污许可管理的固定污染源行业范围和管理类别。排污许可管理不包含以下哪个类别？</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>5、男、女法定结婚年龄分别是多少？（  ）</strong></div>
           <p> <input type="radio" name="c5" value="1" style="width:55px; height:55px;"/>
-		    A. 重点管理</p>
+		    A. 男20周岁，女20周岁</p>
           <p>
             <input type="radio" name="c5" value="2" style="width:55px; height:55px;"/>
-            B. 简化管理</p>
+            B. 男22周岁，女20周岁</p>
           <p>
             <input type="radio" name="c5" value="3" style="width:55px; height:55px;"/>
-            C. 登记管理</p>
-          <p>
-            <input type="radio" name="c5" value="4" style="width:55px; height:55px;"/>
-            D. 行政许可</p>
+            C. 男21周岁，女20周岁</p>
             </td>
       </tr>
 	  </tbody>
 	  
 	  <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>6、按照“摸、排、分、清”四项工作任务，完成固定污染源清理整顿、2020年排污许可发证和登记，其中 排 指什么？</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>6、两癌筛查指的是（  ）检查。</strong></div>
           <p><input type="radio" name="c6" value="1" style="width:55px; height:55px;"/>
-		    A. 摸清底数</p>
+		    A. 肝癌、乳腺癌</p>
           <p>
             <input type="radio" name="c6" value="2" style="width:55px; height:55px;"/>
-            B. 排查无证</p>
+            B. 肝癌、胃癌</p>
           <p>
             <input type="radio" name="c6" value="3" style="width:55px; height:55px;"/>
-            C. 分类处置</p>
-          <p>
-            <input type="radio" name="c6" value="4" style="width:55px; height:55px;"/>
-            D. 整改清零</p>
+            C. 宫颈癌、乳腺癌</p>
 		  </td>
       </tr>
 	  </tbody>
@@ -748,18 +729,15 @@ bottom: 10px;
 
 	 <tbody id="tbName">
       <tr>
-          <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>7、实行登记管理的排污单位，不需要申请取得排污许可证，应当在全国排污许可证管理信息平台填报排污登记表，以下哪项不需填写？</strong></div>
+          <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>7、有习惯性流产史的夫妇，再次怀孕前应进行遗传咨询。出现不明原因习惯性流产的夫妇双方应做（  ）</strong></div>
           <p><input type="radio" name="c7" value="1" style="width:55px; height:55px;"/>
-		    A. 基本信息 </p>
+		    A. 常规体检 </p>
           <p>
             <input type="radio" name="c7" value="2" style="width:55px; height:55px;"/>
-            B. 污染物排放去向</p>
+            B. 染色体检查</p>
           <p>
             <input type="radio" name="c7" value="3" style="width:55px; height:55px;"/>
-            C. 执行的污染物排放标准及采取的污染防治措施</p>
-              <p>
-                  <input type="radio" name="c7" value="4" style="width:55px; height:55px;"/>
-                  D. 自行监测数据</p>
+            C. B超检查</p>
 		</td>
       </tr>
 	  </tbody>
@@ -767,18 +745,18 @@ bottom: 10px;
 	  
 	 <tbody id="tbName">
       <tr>
-          <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>8、通用工序中，除纳入重点排污单位名录的，除以天然气或者电为能源的加热炉、热处理炉、干燥炉以外的其他工业炉窑，按《固定污染源排污许可分类管理名录（2019年版）》规定，属于 ()</strong></div>
+          <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>8、如何预防新型冠状病毒肺炎？（  ）</strong></div>
           <p> <input type="radio" name="c8" value="1" style="width:55px; height:55px;"/>
-		    A. 重点管理</p>
+		    A. 戴口罩</p>
           <p>
             <input type="radio" name="c8" value="2" style="width:55px; height:55px;"/>
-            B. 简化管理</p>
+            B. 勤洗手</p>
           <p>
             <input type="radio" name="c8" value="3" style="width:55px; height:55px;"/>
-            C. 登记管理</p>
-              <p>
-                  <input type="radio" name="c8" value="4" style="width:55px; height:55px;"/>
-                  D. 行政许可</p>
+            C. 少聚集</p>
+          <p>
+            <input type="radio" name="c8" value="4" style="width:55px; height:55px;"/>
+            D. 以上都是</p>
        </td>
       </tr>
 	  </tbody>
@@ -787,18 +765,15 @@ bottom: 10px;
       
 	 <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>9、根据《固定污染源排污许可分类管理名录（2019年版）》规定，家具制造业，属于简化管理的范围：除重点管理外年使用 （ ）吨及以上溶剂型涂料或者胶粘剂（含稀释剂、固化剂）的、年使用20吨及以上水性涂料或者胶粘剂的，有磷化表面处理工艺的。</strong></div>
-          <p> <input type="radio" name="c9" value="1" style="width:55px; height:55px;"/>
-		    A. 5</p>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>9、世界卫生组织建议每人每天的盐摄入量不应超过多少？（  ）</strong></div>
+          <p><input type="radio" name="c9" value="1" style="width:55px; height:55px;"/>
+		    A. 5克</p>
           <p>
             <input type="radio" name="c9" value="2" style="width:55px; height:55px;"/>
-            B. 10</p>
+            B. 6克</p>
           <p>
             <input type="radio" name="c9" value="3" style="width:55px; height:55px;"/>
-            C. 15</p>
-            <p>
-             <input type="radio" name="c9" value="4" style="width:55px; height:55px;"/>
-            D. 20</p>
+            C. 7克</p>
        </td>
       </tr>
 	  </tbody>
@@ -807,18 +782,15 @@ bottom: 10px;
 	    
 	 <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>10、根据《固定污染源排污许可分类管理名录（2019年版）》规定，有色金属压延加工行业，有轧制或者退火工艺的，属于（ ）。</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>10、爬楼梯有助于孕妇生产吗？（  ）</strong></div>
           <p> <input type="radio" name="c10" value="1" style="width:55px; height:55px;"/>
-		    A. 重点管理</p>
+		    A. 孕妇要避免爬楼梯</p>
           <p>
             <input type="radio" name="c10" value="2" style="width:55px; height:55px;"/>
-            B. 简化管理</p>
+            B. 孕妇要多多爬楼梯</p>
           <p>
             <input type="radio" name="c10" value="3" style="width:55px; height:55px;"/>
-            C. 登记管理</p>
-            <p>
-                <input type="radio" name="c10" value="4" style="width:55px; height:55px;"/>
-                D. 行政许可</p>
+            C. 孕妇适度上楼梯，减少下楼梯</p>
 
             <div  class="right_top" style="float:right" onClick="window.location.href='memo.jsp'"><img src="img/xxzl2.png" border="0"></div>
        </td>
@@ -842,14 +814,14 @@ bottom: 10px;
     <td height="115" align="center" valign="middle"><table width="95%" height="75" border="0" cellpadding="0" cellspacing="0">
       <tr>
         <td align="center">
-        <%if(!MyUtils26.iscj_pd(openid)){%>
+        <%if(!MyUtils29.iscj_pd(openid)){%>
         <!--  
         <input target="_self" type="image" border="0" name="sub22" src="img/tp3.png" width=100% height=80  onclick="return processForm(this.form);"/>
         -->
        <button onclick="return processForm(this.form);" type="submit" style="width:100%;padding:15px 15px;border-radius:15px; background:#21457B; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">&nbsp;&nbsp;&nbsp;&nbsp;提&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;交&nbsp;&nbsp;&nbsp;&nbsp;</button>
        <p></p>
 		<%}else{ %>
-		 <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#CC0001; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">您已经参与过,<%="您是第"+MyUtils26.GetWs(openid)+"位参与者,"+MyUtils26.zsm(openid) %></button>  
+		 <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#CC0001; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">您已经参与过,<%="您是第"+MyUtils29.GetWs(openid)+"位参与者,"+MyUtils29.zsm(openid) %></button>  
 		<%} %>
 	   <p></p>
 	<input name="openid" type="hidden" id="openid" value="<%=openid%>"/>	<div></div></td>

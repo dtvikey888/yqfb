@@ -1,5 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="gb2312"%>
-<%@page import="org.fjw.weixin.util.MyUtils26"%>
+<%@page import="org.fjw.weixin.util.MyUtils29"%>
 <%@page import="org.fjw.weixin.util.AllValus"%>
 <%
 String openid = request.getParameter("openid");
@@ -37,13 +37,13 @@ String c10 = request.getParameter("c10");
 //	out.println(cs20);
 //	out.close();
 
-int bz=MyUtils26.DtRl(openid,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10);
+int bz=MyUtils29.DtRl(openid,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10);
 //out.println(bz);
 //out.close();
 //AACA BBCC AB
 if(bz==1){
 
-	out.print("<script type=\"text/javascript\">alert('"+AllValus.success_lan+"');document.location.href='cj.jsp?openid="+openid+"';</script>");
+	out.print("<script type=\"text/javascript\">alert('"+AllValus.success_lp_lan2+"');document.location.href='cj.jsp?openid="+openid+"';</script>");
 
 }else if(bz==2){
 

@@ -1,13 +1,13 @@
-<%@ page language="java" import="java.util.*" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@page language="java" import="java.util.*" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@page import="com.component.Topay"%>
-<%@ page import="org.fjw.weixin.util.AllValus" %>
+<%@page import="org.fjw.weixin.util.AllValus" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 
     <%
 
-        String urlname ="bl5/memo.jsp";
+        String urlname ="bl9/memo.jsp";
         String check=Topay.WxJsApiCheck3(urlname);
 
     %>
@@ -24,10 +24,10 @@
          * 邮件主题：【微信JS-SDK反馈】具体问题
          * 邮件内容说明：用简明的语言描述问题所在，并交代清楚遇到该问题的场景，可附上截屏图片，微信团队会尽快处理你的反馈。
          */
-        wx_share_title="<%=AllValus.pw_title%>";
-        wx_share_desc="<%=AllValus.pw_desc%>";
-        wx_share_link="<%=AllValus.pw_link%>";
-        wx_share_imgUrl="<%=AllValus.pw_img%>";
+        wx_share_title="<%=AllValus.jk_title%>";
+        wx_share_desc="<%=AllValus.jk_desc%>";
+        wx_share_link="<%=AllValus.jk_link%>";
+        wx_share_imgUrl="<%=AllValus.jk_img%>";
 
         wx.config({
                 debug: false,
@@ -85,7 +85,7 @@
 
 
     <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
-    <title><%=AllValus.pw_title %></title>
+    <title><%=AllValus.jk_title %></title>
     <meta name="description" content=""/>
     <meta name="viewport" content="initial-scale=0.3, width=device-width, maximum-scale=0.3, user-scalable=no"/>
     <meta name="viewport" content="initial-scale=0.3,user-scalable=no,maximum-scale=0.3" media="(device-height: 568px)"/>
@@ -585,9 +585,9 @@
                                     <table width="103%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
                                         <tbody id="tbName" >
                                         <tr>
-                                            <td height="20"><p></p><div style="line-height:1.8"><strong>1、问：根据《固定污染源排污许可分类管理名录（2019年版）》规定了纳入排污许可管理的固定污染源行业范围和管理类别。排污许可管理分为排污许可重点管理、简化管理和登记管理三种类别。所有纳入《管理名录》的现有排污单位，应于什么时候前申请并取得排污许可证或完成排污登记？</strong></div>
+                                            <td height="20"><p></p><div style="line-height:1.8"><strong>1、计划生育协会属于什么组织？（  ）</strong></div>
                                                 <p style="line-height:1.8">
-                                                    答：2020年9月30日前</p>
+                                                    答：群团组织</p>
 
                                             </td>
                                         </tr>
@@ -596,9 +596,9 @@
 
                                         <tbody id="tbName">
                                         <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>2、问：什么工序不属于《固定污染源排污许可分类管理名录（2019年版）》中涉及通用工序中的表面处理？</strong></div>
+                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>2、计生协的“会员活动日”是每年的（  ）。</strong></div>
                                                 <p style="line-height:1.8">
-                                                    答：烘干 </p>
+                                                    答：5月29日 </p>
 
                                             </td>
                                         </tr>
@@ -607,9 +607,9 @@
 
                                         <tbody id="tbName">
                                         <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>3、问：全国排污许可证管理信息平台公开端网址是什么？</strong></div>
+                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>3、今年5月29日是中国计生协成立（  ）周年纪念日，也是计生协第（  ）个“会员活动日”。</strong></div>
                                                 <p style="line-height:1.8">
-                                                    答：http://permit.mee.gov.cn/</p>
+                                                    答：40  22</p>
 
                                             </td>
                                         </tr>
@@ -617,9 +617,9 @@
 
                                         <tbody id="tbName">
                                         <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>4、问：生态环境部部署2020年排污许可证核发覆盖所有固定污染源的工作总目标，开展清理整顿和做好排污许可发证登记工作，通过“摸、排、分、清”四个步骤，首批需要清理整顿33个行业需在什么时候完成？</strong></div>
+                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>4、从国际通用的老龄化标准来看，如果一个国家或地区60岁以上的老年人口，占到了该国家和地区人口总数的（  ），就意味着这个国家和地区的人口整体处于老龄化的阶段。</strong></div>
                                                 <p style="line-height:1.8">
-                                                    答：2020年4月30日前</p>
+                                                    答：10%</p>
 
                                             </td>
                                         </tr>
@@ -627,9 +627,9 @@
 
                                         <tbody id="tbName">
                                         <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>5、问：根据《固定污染源排污许可分类管理名录（2019年版）》规定了纳入排污许可管理的固定污染源行业范围和管理类别。排污许可管理包含哪些？</strong></div>
+                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>5、男、女法定结婚年龄分别是多少？（  ） </strong></div>
                                                 <p style="line-height:1.8">
-                                                    答：包含：重点管理、简化管理、登记管理</p>
+                                                    答：男22周岁，女20周岁</p>
 
                                             </td>
                                         </tr>
@@ -637,20 +637,9 @@
 
                                         <tbody id="tbName">
                                         <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>6、问：按照“摸、排、分、清”四项工作任务，完成固定污染源清理整顿、2020年排污许可发证和登记，其中排指什么？</strong></div>
+                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>6、两癌筛查指的是（  ）检查。</strong></div>
                                                 <p style="line-height:1.8">
-                                                    答：排查无证</p>
-
-                                            </td>
-                                        </tr>
-                                        </tbody>
-
-
-                                        <tbody id="tbName">
-                                        <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>7、问：实行登记管理的排污单位，不需要申请取得排污许可证，应当在全国排污许可证管理信息平台填报排污登记表，哪项不需填写？</strong></div>
-                                                <p style="line-height:1.8">
-                                                    答：自行监测数据</p>
+                                                    答：宫颈癌、乳腺癌</p>
 
                                             </td>
                                         </tr>
@@ -659,21 +648,20 @@
 
                                         <tbody id="tbName">
                                         <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>8、问：通用工序中，除纳入重点排污单位名录的，除以天然气或者电为能源的加热炉、热处理炉、干燥炉以外的其他工业炉窑，按《固定污染源排污许可分类管理名录（2019年版）》规定，属于？</strong></div>
+                                            <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>7、有习惯性流产史的夫妇，再次怀孕前应进行遗传咨询。出现不明原因习惯性流产的夫妇双方应做（  ）</strong></div>
                                                 <p style="line-height:1.8">
-                                                    答：简化管理</p>
+                                                    答：染色体检查</p>
 
                                             </td>
                                         </tr>
                                         </tbody>
 
 
-
                                         <tbody id="tbName">
                                         <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>9、问：根据《固定污染源排污许可分类管理名录（2019年版）》规定，家具制造业，属于简化管理的范围：除重点管理外年使用 多少吨及以上溶剂型涂料或者胶粘剂（含稀释剂、固化剂）的、年使用20吨及以上水性涂料或者胶粘剂的，有磷化表面处理工艺的。</strong></div>
+                                            <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>8、如何预防新型冠状病毒肺炎？（  ）</strong></div>
                                                 <p style="line-height:1.8">
-                                                    答：10吨</p>
+                                                    答：戴口罩、勤洗手、少聚集</p>
 
                                             </td>
                                         </tr>
@@ -683,117 +671,27 @@
 
                                         <tbody id="tbName">
                                         <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>10、问：根据《固定污染源排污许可分类管理名录（2019年版）》规定，有色金属压延加工行业，有轧制或者退火工艺的，属于?</strong></div>
+                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>9、世界卫生组织建议每人每天的盐摄入量不应超过多少？（  ）</strong></div>
                                                 <p style="line-height:1.8">
-                                                    答：简化管理。</p>
+                                                    答：5克</p>
 
                                             </td>
                                         </tr>
                                         </tbody>
+
 
 
                                         <tbody id="tbName">
                                         <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>11、问：什么是排污许可？</strong></div>
+                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>10、爬楼梯有助于孕妇生产吗？（  ）</strong></div>
                                                 <p style="line-height:1.8">
-                                                    答：排污许可是环境管理的一种制度，是指需要向环境排放特定污染物的单位和个人，必须事先向主管机关申请，经批准后才能排放污染物的制度。</p>
-
-                                            </td>
-                                        </tr>
-                                        </tbody>
-
-                                        <tbody id="tbName">
-                                        <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>12、问：为什么要办理排污许可证？</strong></div>
-                                                <p style="line-height:1.8">
-                                                    答：《中华人民共和国环境保护法》第四十五条规定：国家依照法律规定实行排污许可管理制度。实行排污许可管理的企业事业单位和其他生产经营者应当按照排污许可证的要求排放污染物；未取得排污许可证的，不得排放污染物。</p>
-
-                                            </td>
-                                        </tr>
-                                        </tbody>
-
-                                        <tbody id="tbName">
-                                        <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>13、问：哪些单位需要办理排污许可发证登记？</strong></div>
-                                                <p style="line-height:1.8">
-                                                    答：纳入《固定污染源排污许可分类管理名录（2019年版）》的排放大气污染物、水污染物及其他污染物的企事业单位和其他生产经营者。</p>
+                                                    答：孕妇适度上楼梯，减少下楼梯。</p>
 
                                             </td>
                                         </tr>
                                         </tbody>
 
 
-                                        <tbody id="tbName">
-                                        <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>14、哪些企业需要申请排污许可证？哪些企业需要排污登记？</strong></div>
-                                                <p style="line-height:1.8">
-                                                    答：根据《固定污染源排污许可分类管理名录（2019年版）》进行分类判断，根据污染物产生量、排放量、对环境的影响程度等因素，实行排污许可重点管理、简化管理和登记管理。</p>
-
-                                            </td>
-                                        </tr>
-                                        </tbody>
-
-                                        <tbody id="tbName">
-                                        <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>15、问：排污许可证办理时限？</strong></div>
-                                                <p style="line-height:1.8">
-                                                    答：环境保护行政主管部门应当自受理排污许可证申请之日起20个工作日内，依法对申请材料和有关情况进行核实和审查，及时做出颁发或者不予颁发排污许可证的决定。</p>
-
-                                            </td>
-                                        </tr>
-                                        </tbody>
-
-                                        <tbody id="tbName">
-                                        <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>16、属于2019名录中登记管理的企业在平台进行填报后，需要当地生态环境局确认吗？</strong></div>
-                                                <p style="line-height:1.8">
-                                                    答：排污登记采取网上填报方式。排污单位在全国排污许可证管理信息平台（http://permit.mee.gov.cn/permitExt）上填报排污登记表后，自动即时生成登记编号和回执，排污单位可以自行打印留存。即无须当地生态环境局确认。</p>
-
-                                            </td>
-                                        </tr>
-                                        </tbody>
-
-
-                                        <tbody id="tbName">
-                                        <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>17、问：企事业单位未办理排污许可证应受到什么处罚？</strong></div>
-                                                <p style="line-height:1.8">
-                                                    答：《中华人民共和国环境保护法》规定：企业事业单位和其他生产经营者未取得排污许可证排放污染物，被责令停止排污，拒不执行，尚不构成犯罪的，除依照有关法律法规规定予以处罚外，由县级以上人民政府环境保护主管部门或者其他有关部门将案件移送公安机关，对其直接负责的主管人员和其他直接责任人员，处十日以上十五日以下拘留；情节较轻的，处五日以上十日以下拘留。</p>
-
-                                            </td>
-                                        </tr>
-                                        </tbody>
-
-                                        <tbody id="tbName">
-                                        <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>18、对于已登记的排污单位，有效期多久？</strong></div>
-                                                <p style="line-height:1.8">
-                                                    答：自其登记日起5年，满5年的，排污许可证登记信息管理平台会自动发送登记更新信息提醒。</p>
-
-                                            </td>
-                                        </tr>
-                                        </tbody>
-
-
-                                        <tbody id="tbName">
-                                        <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>19、排污许可证的有效期是多长？</strong></div>
-                                                <p style="line-height:1.8">
-                                                    答：排污许可证自作出许可决定之日起生效，首次发放的排污许可证有效期为三年，延续换发的排污许可证有效期为五年.</p>
-
-                                            </td>
-                                        </tr>
-                                        </tbody>
-
-                                        <tbody id="tbName">
-                                        <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>20、请问个体工商户是否应申领排污许可证？</strong></div>
-                                                <p style="line-height:1.8">
-                                                    答：对照《名录》规定的行业类型进行识别。根据《环境保护法》《水污染防治法》《大气污染防治法》及《排污许可管理办法（试行）》等有关要求，如果纳入《名录》中的企业事业单位和其他生产经营者，应当按照规定的时限申请并取得排污许可证；未纳入《名录》的排污单位，暂不需申请排污许可证。</p>
-
-                                            </td>
-                                        </tr>
-                                        </tbody>
 
 
                                     </table>

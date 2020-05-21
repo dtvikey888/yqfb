@@ -2,11 +2,9 @@
 <%@ page import="com.component.*"%>
 <%@page import="org.fjw.weixin.util.AllValus"%>
 <%@page import="org.fjw.weixin.util.MyUtils7"%>
-<%@page import="org.fjw.weixin.util.MyUtils26"%>
-<%@page import="org.fjw.weixin.yy.WeixinChaOpenId"%>
-<%@page import="org.liufeng.course.util.AdvancedUtil"%>
+<%@page import="org.fjw.weixin.util.MyUtils29"%>
 <%
-String urlname ="bl5/cj.jsp";
+String urlname ="bl9/cj.jsp";
 String openid =request.getParameter("openid");
 String check=Topay.WxJsApiCheck4(urlname,openid);
 %>
@@ -14,8 +12,8 @@ String check=Topay.WxJsApiCheck4(urlname,openid);
 <%
     //控制时间
     int kz =0;
-    String tt1=AllValus.pw_t1;
-    String tt2=AllValus.pw_t2;
+    String tt1=AllValus.jk_t1;
+    String tt2=AllValus.jk_t2;
     Date c1=MyUtils7.CharDate(tt1);
     Date c2=MyUtils7.CharDate(tt2);
     kz= MyUtils7.TimeKZ(c1,c2);
@@ -39,10 +37,10 @@ String check=Topay.WxJsApiCheck4(urlname,openid);
              * 邮件主题：【微信JS-SDK反馈】具体问题
              * 邮件内容说明：用简明的语言描述问题所在，并交代清楚遇到该问题的场景，可附上截屏图片，微信团队会尽快处理你的反馈。
              */
-            wx_share_title="<%=AllValus.pw_title%>";
-            wx_share_desc="<%=AllValus.pw_desc%>";
-            wx_share_link="<%=AllValus.pw_link%>";
-            wx_share_imgUrl="<%=AllValus.pw_img%>";
+            wx_share_title="<%=AllValus.jk_title%>";
+            wx_share_desc="<%=AllValus.jk_desc%>";
+            wx_share_link="<%=AllValus.jk_link%>";
+            wx_share_imgUrl="<%=AllValus.jk_img%>";
 
             wx.config({
                     debug: false,
@@ -97,7 +95,7 @@ String check=Topay.WxJsApiCheck4(urlname,openid);
             });
 
         </script>
-	 <title><%=AllValus.pw_title %></title>
+	 <title><%=AllValus.jk_title %></title>
 
 	<meta name="description" content="">
     <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
@@ -133,7 +131,7 @@ String check=Topay.WxJsApiCheck4(urlname,openid);
             %>
 
             alert('非常抱歉，答题时间已过。感谢您的关注，请下次再来！');
-            window.location.href="<%=AllValus.errpage3%>";
+            window.location.href="<%=AllValus.errpage6%>";
 
             <%}else if(kz==3){
 
@@ -141,7 +139,7 @@ String check=Topay.WxJsApiCheck4(urlname,openid);
             %>
 
             alert('还没开始呢，"开始答题时间<%=tt1%>"到"<%=tt2%>"！\n欢迎到时候参与！');
-            window.location.href="<%=AllValus.errpage3%>";
+            window.location.href="<%=AllValus.errpage6%>";
 
             <%}else{
 
@@ -156,11 +154,11 @@ String check=Topay.WxJsApiCheck4(urlname,openid);
 
 <%
 //各个奖项总剩余
-int t1 = MyUtils26.sy1(); //一等奖总数剩余名额
-int t2 = MyUtils26.sy2(); //二等奖总数剩余名额
-int t3 = MyUtils26.sy3(); //三等奖总数剩余名额
-int t4 = MyUtils26.sy4(); //四等奖总数剩余名额
-//int t5 = MyUtils26.sy5();
+int t1 = MyUtils29.sy1(); //一等奖总数剩余名额
+int t2 = MyUtils29.sy2(); //二等奖总数剩余名额
+int t3 = MyUtils29.sy3(); //三等奖总数剩余名额
+int t4 = MyUtils29.sy4(); //四等奖总数剩余名额
+//int t5 = MyUtils29.sy5();
 
 System.out.println(t1);
 System.out.println(t2);

@@ -73,6 +73,8 @@ public class AllValus {
 
     public static String errpage5="http://www.yqrb.com.cn/yqfb/bl8/success.jsp";
 
+    public static String errpage6="http://www.yqrb.com.cn/yqfb/bl9/success.jsp";
+
     public static String success_lan="您已答对8题（及以上），恭喜您获得卫生管理员证，请填写正确的联系方式，以便发放证件!";
     public static String csc_lan="答题已经超过100000次，谢谢关注！";
     public static String error_lan="您的答题错误率过高，请重新答题";
@@ -85,6 +87,8 @@ public class AllValus {
     public static String success_tj="答题正确，填写联系方式!";
     public static String success_tj2="提交用户联系方式完成";
     public static String error_tj="答题正确，填写联系方式!";
+
+    public static String success_lp_lan2="您已答对全部题目，填写正确的联系方式，以便获取奖品!";
 
     public static String cg_jx="您的编号超过600,木有奖品哦，谢谢参与";
 
@@ -121,6 +125,12 @@ public class AllValus {
     public static String ws_link="http://www.yqrb.com.cn/yqfb/bl8/index.jsp";
     public static String ws_img="http://v.yqcn.com/yqfb/bl8/img/IMG_TOP3.png";
 
+    //排污转发朋友圈标题等
+    public static String jk_title="排污许可有奖问答活动";
+    public static String jk_desc="为贯彻落实国家、省、市政府的决策部署，实现固定污染源排污许可全覆盖，帮助大家了解排污许可制相关政策法规和技术规范要求，做好申领登记工作。温州市生态环境局乐清分局开展排污许可发证登记知识问答有奖活动，欢迎广大市民积极参加答题。";
+    public static String jk_link="http://www.yqrb.com.cn/yqfb/bl9/index.jsp";
+    public static String jk_img="http://v.yqcn.com/yqfb/bl9/img/IMG_TOP3.png";
+
     //世界新闻出版日起止时间 4.23-4.27
     public static String daf_t1="2020-04-13 00:00:00";
     public static String daf_t2="2020-04-28 00:00:00";
@@ -140,6 +150,10 @@ public class AllValus {
     //2020公共场所卫生起止时间 5.7-5.9
     public static String ws_t1="2020-04-07 00:00:00";
     public static String ws_t2="2028-08-10 00:00:00";
+
+    //健康局抽奖2起止时间 5.7-5.9
+    public static String jk_t1="2020-04-07 00:00:00";
+    public static String jk_t2="2020-08-10 00:00:00";
 
     //世界新闻出版日奖项
     public static int  lpgg1 = 10; //50话费 10份
@@ -170,6 +184,13 @@ public class AllValus {
     public static int  zbjx3 = 10; //价值100元的充电式电扇，共15台
     public static int  zbjx4 = 110; //价值20元的雨伞，共110把
 //   public static int  zbjx5 = 600; //5等奖5 750名
+
+    //健康局2奖项
+    public static int  jkjx1 = 10; //50话费 10份
+    public static int  jkjx2 = 20; //40话费 20份
+    public static int  jkjx3 = 50; //20元话费 50名
+    public static int  jkjx4 = 120; //10元话费 120名
+//   public static int  pwjx5 = 600; //5等奖5 750名
 
 
 
