@@ -16,7 +16,7 @@ String bh = MyUtils28.GetNextBH();
   
   //String sc="您是第"+MyUtils28.GetWs(openid)+"位参与者,"+AllValus.cg_cx2;
 
-    String sc="您是第"+MyUtils28.GetWs(openid)+"位参与者,";
+    String sc="您是第"+MyUtils28.GetWs(openid)+"位参与者,您已经通过考试！请前去领证！";
 
 if(bz==1){
 

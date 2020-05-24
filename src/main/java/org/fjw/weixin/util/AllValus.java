@@ -78,7 +78,7 @@ public class AllValus {
     public static String success_lan="您已答对8题（及以上），恭喜您获得卫生管理员证，请填写正确的联系方式，以便发放证件!";
     public static String csc_lan="答题已经超过100000次，谢谢关注！";
     public static String error_lan="您的答题错误率过高，请重新答题";
-    public static String error_lan2="存在相同的手机号码，请重新答题填写不同的号码参与";
+    public static String error_lan2="存在相同的手机号码，请填写不同的号码参与";
 
     public static String success_lp_lan="您已答对全部题目，填写正确的联系方式，以便获取奖品!";
     public static String csc_lp_lan="答题已经超过100000次，谢谢关注！";
@@ -152,8 +152,8 @@ public class AllValus {
     public static String ws_t2="2028-08-10 00:00:00";
 
     //庆祝中国计生协成立40周年抽奖起止时间
-    public static String jk_t1="2020-04-07 00:00:00";
-    public static String jk_t2="2020-08-10 00:00:00";
+    public static String jk_t1="2020-05-22 16:00:00";
+    public static String jk_t2="2020-05-25 16:00:00";
 
     //世界新闻出版日奖项
     public static int  lpgg1 = 10; //50话费 10份
@@ -183,10 +183,10 @@ public class AllValus {
     public static int  zbjx4 = 110; //价值20元的雨伞，共110把
 
     //庆祝中国计生协成立40周年奖项
-    public static int  jkjx1 = 1; //20话费 100份
-    public static int  jkjx2 = 1; //15话费 200份
-    public static int  jkjx3 = 1; //10元话费 200名
-    public static int  jkjx4 = 1; //5元话费 400名
+    public static int  jkjx1 = 95; //20话费 100份
+    public static int  jkjx2 = 200; //15话费 200份
+    public static int  jkjx3 = 200; //10元话费 200名
+    public static int  jkjx4 = 400; //5元话费 400名
 
 
 

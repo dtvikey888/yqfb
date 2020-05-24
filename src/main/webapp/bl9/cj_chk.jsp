@@ -285,10 +285,10 @@ System.out.println(day_sy1);
 
 
   <input type="hidden" name="opp" id="opp" value="<%=openid %>">
-  <input type="text" name="day_sy1" id="day_sy1" value="<%=day_sy1%>">
-  <input type="text" name="day_sy2" id="day_sy2" value="<%=day_sy2%>">
-  <input type="text" name="day_sy3" id="day_sy3" value="<%=day_sy3%>">
-  <input type="text" name="day_sy4" id="day_sy4" value="<%=day_sy4%>">
+  <input type="hidden" name="day_sy1" id="day_sy1" value="<%=day_sy1%>">
+  <input type="hidden" name="day_sy2" id="day_sy2" value="<%=day_sy2%>">
+  <input type="hidden" name="day_sy3" id="day_sy3" value="<%=day_sy3%>">
+  <input type="hidden" name="day_sy4" id="day_sy4" value="<%=day_sy4%>">
 
 
   <!--

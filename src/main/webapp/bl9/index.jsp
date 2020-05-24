@@ -87,6 +87,21 @@ if(twbsession2!=null){
     //session.invalidate();
 %>
 
+
+<%
+    //各个奖项总剩余
+    int t1 = MyUtils29.sy1(); //一等奖总数剩余名额
+    int t2 = MyUtils29.sy2(); //二等奖总数剩余名额
+    int t3 = MyUtils29.sy3(); //三等奖总数剩余名额
+    int t4 = MyUtils29.sy4(); //四等奖总数剩余名额
+//int t5 = MyUtils29.sy5();
+
+    System.out.println(t1);
+    System.out.println(t2);
+    System.out.println(t3);
+    System.out.println(t4);
+//System.out.println(t5);
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -618,12 +633,12 @@ bottom: 10px;
       <tr>
         <td height="50" colspan="2">
 		  <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#82CBE8; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">活动奖励</button>
-	      <div align="center" style="margin-top:50px;margin-bottom:25px;line-height:1.8">一等奖10份:  50元移动话费</div>
-	      <div align="center" style="margin-top:25px;margin-bottom:25px;line-height:1.8">二等奖20份:  40元移动话费</div>
-	      <div align="center" style="margin-top:25px;margin-bottom:25px;line-height:1.8">三等奖50份:  20元移动话费</div>
-	      <div align="center" style="margin-top:25px;margin-bottom:50px;line-height:1.8">参与奖120份: 10元移动话费</div>
+	      <div align="center" style="margin-top:50px;margin-bottom:25px;line-height:1.8">一等奖100份:  20元移动话费</div>
+	      <div align="center" style="margin-top:25px;margin-bottom:25px;line-height:1.8">二等奖200份:  15元移动话费</div>
+	      <div align="center" style="margin-top:25px;margin-bottom:25px;line-height:1.8">三等奖200份:  10元移动话费</div>
+	      <div align="center" style="margin-top:25px;margin-bottom:50px;line-height:1.8">参与奖400份:  5元移动话费</div>
 	      <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#82CBE8; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">活动规则</button>
-          <div style="margin-top:50px;padding-left:12px;line-height:1.8">1、  共有10道排污许可基础题，答对其中8道，即可参与刮刮卡抽奖活动；200份话费奖励发完为止。</div>
+          <div style="margin-top:50px;padding-left:12px;line-height:1.8">1、  共有10道基础题，全部答对，即可参与刮刮卡抽奖活动；900份话费奖励发完为止。</div>
 		  <div style="margin-top:25px;padding-left:12px;margin-bottom:25px;line-height:1.8">3、  参与本次活动的手机号码必须为乐清移动用户，每个手机号仅限获奖一次，请实名参与。</div>
 		  <div style="margin-top:25px;padding-left:12px;margin-bottom:50px;line-height:1.8">4、  奖励于活动结束之后统一发放。</div>
 		  <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#82CBE8; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">选择题</button>
@@ -652,15 +667,15 @@ bottom: 10px;
 	  
 	  <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>2、计生协的“会员活动日”是每年的（  ）</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>2、今年5月29日是中国计生协成立（  ）周年纪念日，也是计生协第（  ）个“会员活动日”。  </strong></div>
           <p><input type="radio" name="c2" value="1" style="width:55px; height:55px;"/>
-		    A. 1月29日 </p>
+		    A. 40  22</p>
           <p> 
             <input type="radio" name="c2" value="2" style="width:55px; height:55px;"/>
-            B. 3月29日</p>
+            B. 38  20</p>
           <p>
             <input type="radio" name="c2" value="3" style="width:55px; height:55px;"/>
-            C. 5月29日</p>
+            C. 40  20</p>
           </td>
       </tr>
 	  </tbody>
@@ -668,60 +683,60 @@ bottom: 10px;
 	  
 	 <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>3、今年5月29日是中国计生协成立（  ）周年纪念日，也是计生协第（  ）个“会员活动日”</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>3、从国际通用的老龄化标准来看，如果一个国家或地区60岁以上的老年人口，占到了该国家和地区人口总数的（  ），就意味着这个国家和地区的人口整体处于老龄化的阶段。</strong></div>
           <p> <input type="radio" name="c3" value="1" style="width:55px; height:55px;"/>
-		    A. 40  22</p>
+		    A. 10%</p>
           <p>
             <input type="radio" name="c3" value="2" style="width:55px; height:55px;"/>
-            B. 38  20</p>
+            B. 15%</p>
           <p>
             <input type="radio" name="c3" value="3" style="width:55px; height:55px;"/>
-            C. 40  20</p>
+            C. 20%</p>
         </td>
       </tr>
 	  </tbody>
 	  
 	   <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>4、从国际通用的老龄化标准来看，如果一个国家或地区60岁以上的老年人口，占到了该国家和地区人口总数的（  ），就意味着这个国家和地区的人口整体处于老龄化的阶段。</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>4、男、女法定结婚年龄分别是多少？（  ）</strong></div>
           <p> <input type="radio" name="c4" value="1" style="width:55px; height:55px;"/>
-		    A. 10%</p>
+		    A. 男20周岁，女20周岁</p>
           <p>
             <input type="radio" name="c4" value="2" style="width:55px; height:55px;"/>
-            B. 15%</p>
+            B. 男22周岁，女20周岁</p>
           <p>
             <input type="radio" name="c4" value="3" style="width:55px; height:55px;"/>
-            C. 20%</p>
+            C. 男21周岁，女20周岁</p>
 		   </td>
       </tr>
 	  </tbody>
 	  
 	  <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>5、男、女法定结婚年龄分别是多少？（  ）</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>5、两癌筛查指的是（  ）检查。</strong></div>
           <p> <input type="radio" name="c5" value="1" style="width:55px; height:55px;"/>
-		    A. 男20周岁，女20周岁</p>
+		    A. 肝癌、乳腺癌</p>
           <p>
             <input type="radio" name="c5" value="2" style="width:55px; height:55px;"/>
-            B. 男22周岁，女20周岁</p>
+            B. 肝癌、胃癌</p>
           <p>
             <input type="radio" name="c5" value="3" style="width:55px; height:55px;"/>
-            C. 男21周岁，女20周岁</p>
+            C. 宫颈癌、乳腺癌</p>
             </td>
       </tr>
 	  </tbody>
 	  
 	  <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>6、两癌筛查指的是（  ）检查。</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>6、有习惯性流产史的夫妇，再次怀孕前应进行遗传咨询。出现不明原因习惯性流产的夫妇双方应做（  ）</strong></div>
           <p><input type="radio" name="c6" value="1" style="width:55px; height:55px;"/>
-		    A. 肝癌、乳腺癌</p>
+		    A. 常规体检</p>
           <p>
             <input type="radio" name="c6" value="2" style="width:55px; height:55px;"/>
-            B. 肝癌、胃癌</p>
+            B. 染色体检查</p>
           <p>
             <input type="radio" name="c6" value="3" style="width:55px; height:55px;"/>
-            C. 宫颈癌、乳腺癌</p>
+            C. B超检查</p>
 		  </td>
       </tr>
 	  </tbody>
@@ -729,15 +744,18 @@ bottom: 10px;
 
 	 <tbody id="tbName">
       <tr>
-          <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>7、有习惯性流产史的夫妇，再次怀孕前应进行遗传咨询。出现不明原因习惯性流产的夫妇双方应做（  ）</strong></div>
+          <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>7、如何预防新型冠状病毒肺炎？（  ）</strong></div>
           <p><input type="radio" name="c7" value="1" style="width:55px; height:55px;"/>
-		    A. 常规体检 </p>
+		    A. 戴口罩 </p>
           <p>
             <input type="radio" name="c7" value="2" style="width:55px; height:55px;"/>
-            B. 染色体检查</p>
+            B. 勤洗手</p>
           <p>
             <input type="radio" name="c7" value="3" style="width:55px; height:55px;"/>
-            C. B超检查</p>
+            C. 少聚集</p>
+          <p>
+            <input type="radio" name="c7" value="4" style="width:55px; height:55px;"/>
+            D. 以上都是</p>
 		</td>
       </tr>
 	  </tbody>
@@ -745,18 +763,15 @@ bottom: 10px;
 	  
 	 <tbody id="tbName">
       <tr>
-          <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>8、如何预防新型冠状病毒肺炎？（  ）</strong></div>
+          <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>8、世界卫生组织建议每人每天的盐摄入量不应超过多少？（  ）</strong></div>
           <p> <input type="radio" name="c8" value="1" style="width:55px; height:55px;"/>
-		    A. 戴口罩</p>
+		    A. 5克</p>
           <p>
             <input type="radio" name="c8" value="2" style="width:55px; height:55px;"/>
-            B. 勤洗手</p>
+            B. 6克</p>
           <p>
             <input type="radio" name="c8" value="3" style="width:55px; height:55px;"/>
-            C. 少聚集</p>
-          <p>
-            <input type="radio" name="c8" value="4" style="width:55px; height:55px;"/>
-            D. 以上都是</p>
+            C. 7克</p>
        </td>
       </tr>
 	  </tbody>
@@ -765,15 +780,15 @@ bottom: 10px;
       
 	 <tbody id="tbName">
       <tr>
-        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>9、世界卫生组织建议每人每天的盐摄入量不应超过多少？（  ）</strong></div>
+        <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>9、孕前优生健康体检一般在什么时候进行？（  ）</strong></div>
           <p><input type="radio" name="c9" value="1" style="width:55px; height:55px;"/>
-		    A. 5克</p>
+		    A. 计划孕前2个月</p>
           <p>
             <input type="radio" name="c9" value="2" style="width:55px; height:55px;"/>
-            B. 6克</p>
+            B. 计划孕前4-6个月</p>
           <p>
             <input type="radio" name="c9" value="3" style="width:55px; height:55px;"/>
-            C. 7克</p>
+            C. 计划孕前8个月</p>
        </td>
       </tr>
 	  </tbody>
@@ -791,9 +806,9 @@ bottom: 10px;
           <p>
             <input type="radio" name="c10" value="3" style="width:55px; height:55px;"/>
             C. 孕妇适度上楼梯，减少下楼梯</p>
-
+<!--
             <div  class="right_top" style="float:right" onClick="window.location.href='memo.jsp'"><img src="img/xxzl2.png" border="0"></div>
-       </td>
+     -->  </td>
       </tr>
 	  </tbody>
 	 
@@ -814,15 +829,26 @@ bottom: 10px;
     <td height="115" align="center" valign="middle"><table width="95%" height="75" border="0" cellpadding="0" cellspacing="0">
       <tr>
         <td align="center">
-        <%if(!MyUtils29.iscj_pd(openid)){%>
-        <!--  
-        <input target="_self" type="image" border="0" name="sub22" src="img/tp3.png" width=100% height=80  onclick="return processForm(this.form);"/>
-        -->
-       <button onclick="return processForm(this.form);" type="submit" style="width:100%;padding:15px 15px;border-radius:15px; background:#21457B; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">&nbsp;&nbsp;&nbsp;&nbsp;提&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;交&nbsp;&nbsp;&nbsp;&nbsp;</button>
-       <p></p>
-		<%}else{ %>
-		 <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#CC0001; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">您已经参与过,<%="您是第"+MyUtils29.GetWs(openid)+"位参与者,"+MyUtils29.zsm(openid) %></button>  
-		<%} %>
+
+            <% if(t1<=0 && t2<=0 && t3<=0 && t4<=0){ %>
+
+                <button onclick="WeixinJSBridge.call('closeWindow');" style="width:100%;padding:15px 15px;border-radius:15px; background:#CC0001; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">奖品已抽完<%=MyUtils29.zsm(openid) %></button>
+
+            <%}else{%>
+
+                <%if(!MyUtils29.iscj_pd(openid)){%>
+                <!--
+                <input target="_self" type="image" border="0" name="sub22" src="img/tp3.png" width=100% height=80  onclick="return processForm(this.form);"/>
+                -->
+                <button onclick="return processForm(this.form);" type="submit" style="width:100%;padding:15px 15px;border-radius:15px; background:#21457B; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">&nbsp;&nbsp;&nbsp;&nbsp;提&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;交&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                <p></p>
+                <%}else{ %>
+                <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#CC0001; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">您已经参与过,<%="您是第"+MyUtils29.GetWs(openid)+"位参与者,"+MyUtils29.zsm(openid) %></button>
+                <%} %>
+
+            <%}%>
+
+
 	   <p></p>
 	<input name="openid" type="hidden" id="openid" value="<%=openid%>"/>	<div></div></td>
         </tr>

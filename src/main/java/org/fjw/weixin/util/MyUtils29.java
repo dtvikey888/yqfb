@@ -113,13 +113,13 @@ public class MyUtils29 {
 			}
 
 			if(bz==1){
-				bz2="恭喜您获得50元移动话费,话费将于活动结束后，进行统一充值，敬请留意。";
-			}else if(bz==2){
-				bz2="恭喜您获得40元移动话费,话费将于活动结束后，进行统一充值，敬请留意。";
-			}else if(bz==3){
 				bz2="恭喜您获得20元移动话费,话费将于活动结束后，进行统一充值，敬请留意。";
+			}else if(bz==2){
+				bz2="恭喜您获得15元移动话费,话费将于活动结束后，进行统一充值，敬请留意。";
+			}else if(bz==3){
+				bz2="恭喜您获得10元移动话费,话费将于活动结束后，进行统一充值，敬请留意。";
 			}else if(bz==4){
-				bz2="恭喜你获得10元移动话费,话费将于活动结束后，进行统一充值，敬请留意。";
+				bz2="恭喜你获得5元移动话费,话费将于活动结束后，进行统一充值，敬请留意。";
 			}else if(bz==5){
 				bz2="没中奖,谢谢参与!";
 			}else{
@@ -425,8 +425,8 @@ public class MyUtils29 {
 						sy=0;
 					}else {
 						//一等奖100
-						if(TimeString.nowTime().indexOf("2020-05-21")!=-1){
-							sy = 1 -zjs;
+						if(TimeString.nowTime().indexOf("2020-05-22")!=-1){
+							sy = 95 -zjs;
 						}else {
 							sy = 0;
 						}
@@ -440,8 +440,8 @@ public class MyUtils29 {
 						sy=0;
 					}else {
 						//200
-						if(TimeString.nowTime().indexOf("2020-05-21")!=-1){
-							sy = 1 -zjs;
+						if(TimeString.nowTime().indexOf("2020-05-22")!=-1){
+							sy = 200 -zjs;
 						}else {
 							sy = 0;
 						}
@@ -456,8 +456,8 @@ public class MyUtils29 {
 						sy=0;
 					}else {
 						//3等奖200
-						if(TimeString.nowTime().indexOf("2020-05-21")!=-1){
-							sy = 1 -zjs;
+						if(TimeString.nowTime().indexOf("2020-05-22")!=-1){
+							sy = 200 -zjs;
 						}else {
 							sy = 0;
 						}
@@ -472,8 +472,8 @@ public class MyUtils29 {
 						sy=0;
 					}else {
 						//4等奖400
-						if(TimeString.nowTime().indexOf("2020-05-21")!=-1){
-							sy = 1 -zjs;
+						if(TimeString.nowTime().indexOf("2020-05-22")!=-1){
+							sy = 400 -zjs;
 						}else {
 							sy = 0;
 						}
@@ -905,7 +905,7 @@ public class MyUtils29 {
 //		for (int i : arr1) {
 //			System.out.println(arr1[i]);
 //		}
-		String[] arr2 = {"1","3","1","1","2","3","2","4","1","3"};
+		String[] arr2 = {"1","1","1","2","3","2","4","1","2","3"};
 		for(int i = 0; i < 10; ++i) {
 			if(arr1[i].equals(arr2[i])){
 				System.out.println("same!");

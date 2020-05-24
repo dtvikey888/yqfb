@@ -605,7 +605,7 @@ bottom: 10px;
       <tr>
         <td height="50" colspan="2">
 	      <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#82CBE8; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">活动规则</button>
-          <div style="margin-top:50px;padding-left:12px;line-height:1.8">1、  共有10题，答对其中8道以上就是过关，然后就可以去监督所领证。</div>
+          <div style="margin-top:50px;padding-left:12px;line-height:1.8">1、  共有10题，答对其中8道及以上就是过关，然后就可以去监督所领证。</div>
 		  <div style="margin-top:25px;padding-left:12px;margin-bottom:25px;line-height:1.8">2、  参与本次活动手机号仅限参加一次，请实名参与。</div>
 		  <div style="margin-top:25px;padding-left:12px;margin-bottom:50px;line-height:1.8">3、  通过考试者请及时到各辖区卫生监督所领取卫生管理员证，联系方式如下：城区所：城东街道晨曦路111号公共卫生中心大楼（609室、61600276）；柳市所：柳市镇溪桥路温州海关驻乐清办事处大院内一楼（内勤室、61723810）；虹桥所：虹桥镇八村村委楼7楼（内勤室、61315889）；大荆所：大荆镇湖边路38号（内勤室、62238150）。</div>
 		  <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#82CBE8; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">选择题</button>
@@ -827,7 +827,7 @@ bottom: 10px;
        <button onclick="return processForm(this.form);" type="submit" style="width:100%;padding:15px 15px;border-radius:15px; background:#21457B; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">&nbsp;&nbsp;&nbsp;&nbsp;提&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;交&nbsp;&nbsp;&nbsp;&nbsp;</button>
        <p></p>
 		<%}else{ %>
-		 <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#CC0001; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">您已经通过考试,<%="您是第"+MyUtils28.GetWs(openid)+"位参与者"%></button>
+		 <button onclick="return nosForm(this.form);" type="reset" style="width:100%;padding:15px 15px;border-radius:15px; background:#CC0001; border:0px #555 solid; color:#fff; font-size:55px; font-weight:bold;">您已经通过考试,<%="您是第"+MyUtils28.GetWs(openid)+"位参与者"%>,请前去领证!</button>
 		<%} %>
 	   <p></p>
 	<input name="openid" type="hidden" id="openid" value="<%=openid%>"/>	<div></div></td>

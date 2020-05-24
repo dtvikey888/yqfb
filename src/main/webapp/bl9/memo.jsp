@@ -596,9 +596,9 @@
 
                                         <tbody id="tbName">
                                         <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>2、计生协的“会员活动日”是每年的（  ）。</strong></div>
+                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>2、今年5月29日是中国计生协成立（  ）周年纪念日，也是计生协第（  ）个“会员活动日”。 </strong></div>
                                                 <p style="line-height:1.8">
-                                                    答：5月29日 </p>
+                                                    答：40  22 </p>
 
                                             </td>
                                         </tr>
@@ -607,17 +607,7 @@
 
                                         <tbody id="tbName">
                                         <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>3、今年5月29日是中国计生协成立（  ）周年纪念日，也是计生协第（  ）个“会员活动日”。</strong></div>
-                                                <p style="line-height:1.8">
-                                                    答：40  22</p>
-
-                                            </td>
-                                        </tr>
-                                        </tbody>
-
-                                        <tbody id="tbName">
-                                        <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>4、从国际通用的老龄化标准来看，如果一个国家或地区60岁以上的老年人口，占到了该国家和地区人口总数的（  ），就意味着这个国家和地区的人口整体处于老龄化的阶段。</strong></div>
+                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>3、从国际通用的老龄化标准来看，如果一个国家或地区60岁以上的老年人口，占到了该国家和地区人口总数的（  ），就意味着这个国家和地区的人口整体处于老龄化的阶段。</strong></div>
                                                 <p style="line-height:1.8">
                                                     答：10%</p>
 
@@ -627,7 +617,7 @@
 
                                         <tbody id="tbName">
                                         <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>5、男、女法定结婚年龄分别是多少？（  ） </strong></div>
+                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>4、男、女法定结婚年龄分别是多少？（  ）</strong></div>
                                                 <p style="line-height:1.8">
                                                     答：男22周岁，女20周岁</p>
 
@@ -637,7 +627,7 @@
 
                                         <tbody id="tbName">
                                         <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>6、两癌筛查指的是（  ）检查。</strong></div>
+                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>5、两癌筛查指的是（  ）检查。 </strong></div>
                                                 <p style="line-height:1.8">
                                                     答：宫颈癌、乳腺癌</p>
 
@@ -645,10 +635,9 @@
                                         </tr>
                                         </tbody>
 
-
                                         <tbody id="tbName">
                                         <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>7、有习惯性流产史的夫妇，再次怀孕前应进行遗传咨询。出现不明原因习惯性流产的夫妇双方应做（  ）</strong></div>
+                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>6、有习惯性流产史的夫妇，再次怀孕前应进行遗传咨询。出现不明原因习惯性流产的夫妇双方应做（  ）</strong></div>
                                                 <p style="line-height:1.8">
                                                     答：染色体检查</p>
 
@@ -659,9 +648,20 @@
 
                                         <tbody id="tbName">
                                         <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>8、如何预防新型冠状病毒肺炎？（  ）</strong></div>
+                                            <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>7、如何预防新型冠状病毒肺炎？（  ）</strong></div>
                                                 <p style="line-height:1.8">
                                                     答：戴口罩、勤洗手、少聚集</p>
+
+                                            </td>
+                                        </tr>
+                                        </tbody>
+
+
+                                        <tbody id="tbName">
+                                        <tr>
+                                            <td height="20" bgcolor="#FFFFFF"><p></p><div style="line-height:1.8"><strong>8、世界卫生组织建议每人每天的盐摄入量不应超过多少？（  ）</strong></div>
+                                                <p style="line-height:1.8">
+                                                    答：5克</p>
 
                                             </td>
                                         </tr>
@@ -671,9 +671,9 @@
 
                                         <tbody id="tbName">
                                         <tr>
-                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>9、世界卫生组织建议每人每天的盐摄入量不应超过多少？（  ）</strong></div>
+                                            <td height="20" bgcolor="#FFFFFF"><p><div style="line-height:1.8"><strong>9、孕前优生健康体检一般在什么时候进行？（  ）</strong></div>
                                                 <p style="line-height:1.8">
-                                                    答：5克</p>
+                                                    答：计划孕前4-6个月</p>
 
                                             </td>
                                         </tr>
